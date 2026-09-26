@@ -1,0 +1,6 @@
+EXPORT: 127 robot solids
+EXPORT: stl facets=174216 bbox=(-210.0,-195.0,-0.0)-(228.6,195.0,640.0)
+EXPORT: step head=b'ISO-10303-21;\nHEADER'
+EXPORT: step reimport solids=130
+EXPORT: manifest written (127 objects listed)
+EXPORT: validation PASS

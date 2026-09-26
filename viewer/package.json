@@ -1,0 +1,9 @@
+{
+  "name": "viewer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "three": "^0.170.0"
+  }
+}

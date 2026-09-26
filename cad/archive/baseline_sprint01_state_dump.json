@@ -1,0 +1,10221 @@
+{
+ "master": {
+  "objects": [
+   {
+    "name": "Parameters",
+    "label": "Parameters",
+    "type": "Spreadsheet::Sheet"
+   },
+   {
+    "name": "RobotAssembly",
+    "label": "BIOBUZZ_robot_assembly_rehaul",
+    "type": "App::Part",
+    "bbox": [
+     -228.6,
+     -304.8,
+     -46.0,
+     1088.6,
+     304.8,
+     736.5
+    ],
+    "volume": 374462012.123
+   },
+   {
+    "name": "Origin",
+    "label": "Origin",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis",
+    "label": "X-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis",
+    "label": "Y-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis",
+    "label": "Z-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane",
+    "label": "XY-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane",
+    "label": "XZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane",
+    "label": "YZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin001",
+    "label": "Origin001",
+    "type": "App::Point"
+   },
+   {
+    "name": "CoordRef",
+    "label": "COORD_REF_world_origin_axes",
+    "type": "App::Part",
+    "bbox": [
+     -2.0,
+     -2.0,
+     -2.0,
+     120.0,
+     120.0,
+     120.0
+    ],
+    "volume": 5760.0
+   },
+   {
+    "name": "Origin002",
+    "label": "Origin004",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis001",
+    "label": "X-axis001",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis001",
+    "label": "Y-axis001",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis001",
+    "label": "Z-axis001",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane001",
+    "label": "XY-plane001",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane001",
+    "label": "XZ-plane001",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane001",
+    "label": "YZ-plane001",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin003",
+    "label": "Origin003",
+    "type": "App::Point"
+   },
+   {
+    "name": "ENV_START",
+    "label": "ENV_START_18in_cube_457mm_VERIFIED_R102",
+    "type": "Part::Box",
+    "bbox": [
+     -228.6,
+     -228.6,
+     0.0,
+     228.6,
+     228.6,
+     457.2
+    ],
+    "volume": 95569357.248
+   },
+   {
+    "name": "ENV_EXPANSION",
+    "label": "ENV_EXPANSION_18x24x29in_VERIFIED_R105",
+    "type": "Part::Box",
+    "bbox": [
+     -228.6,
+     -304.8,
+     0.0,
+     228.6,
+     304.8,
+     736.5
+    ],
+    "volume": 205269266.88
+   },
+   {
+    "name": "VOL_DRIVEBASE",
+    "label": "VOL_DRIVEBASE_packaging_420x420x120_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     -210.0,
+     0.0,
+     210.0,
+     210.0,
+     120.0
+    ],
+    "volume": 21168000.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_OUT",
+    "label": "TOOL_FRAME_RAIL_L_OUT_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     116.0,
+     0.0,
+     210.0,
+     164.0,
+     48.0
+    ],
+    "volume": 967680.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_INNER",
+    "label": "TOOL_FRAME_RAIL_L_INNER_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     118.5,
+     2.5,
+     210.0,
+     164.0,
+     45.5
+    ],
+    "volume": 821730.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH00",
+    "label": "TOOL_FRAME_RAIL_L_FH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -170.0,
+     138.0,
+     44.5,
+     -166.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH01",
+    "label": "TOOL_FRAME_RAIL_L_FH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -122.0,
+     138.0,
+     44.5,
+     -118.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH02",
+    "label": "TOOL_FRAME_RAIL_L_FH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -74.0,
+     138.0,
+     44.5,
+     -70.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH03",
+    "label": "TOOL_FRAME_RAIL_L_FH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -26.0,
+     138.0,
+     44.5,
+     -22.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH04",
+    "label": "TOOL_FRAME_RAIL_L_FH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     22.0,
+     138.0,
+     44.5,
+     26.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH05",
+    "label": "TOOL_FRAME_RAIL_L_FH05_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     70.0,
+     138.0,
+     44.5,
+     74.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH06",
+    "label": "TOOL_FRAME_RAIL_L_FH06_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     118.0,
+     138.0,
+     44.5,
+     122.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_FH07",
+    "label": "TOOL_FRAME_RAIL_L_FH07_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     166.0,
+     138.0,
+     44.5,
+     170.0,
+     142.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH00",
+    "label": "TOOL_FRAME_RAIL_L_WH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -182.0,
+     115.0,
+     22.0,
+     -178.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH01",
+    "label": "TOOL_FRAME_RAIL_L_WH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -122.0,
+     115.0,
+     22.0,
+     -118.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH02",
+    "label": "TOOL_FRAME_RAIL_L_WH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -62.0,
+     115.0,
+     22.0,
+     -58.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH03",
+    "label": "TOOL_FRAME_RAIL_L_WH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.0,
+     115.0,
+     22.0,
+     2.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH04",
+    "label": "TOOL_FRAME_RAIL_L_WH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     58.0,
+     115.0,
+     22.0,
+     62.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH05",
+    "label": "TOOL_FRAME_RAIL_L_WH05_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     118.0,
+     115.0,
+     22.0,
+     122.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_WH06",
+    "label": "TOOL_FRAME_RAIL_L_WH06_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     178.0,
+     115.0,
+     22.0,
+     182.0,
+     119.5,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_NOTCH0",
+    "label": "TOOL_FRAME_RAIL_L_NOTCH0_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     132.0,
+     116.0,
+     34.01,
+     148.0,
+     164.0,
+     48.01
+    ],
+    "volume": 10752.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_NOTCH1",
+    "label": "TOOL_FRAME_RAIL_L_NOTCH1_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -148.0,
+     116.0,
+     34.01,
+     -132.0,
+     164.0,
+     48.01
+    ],
+    "volume": 10752.0
+   },
+   {
+    "name": "FRAME_RAIL_L",
+    "label": "FRAME_RAIL_L_1120channel_48mm_open_side_rail_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     -210.0,
+     116.0,
+     0.0,
+     210.0,
+     164.0,
+     48.0
+    ],
+    "volume": 140719.561
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_L_TOOLS",
+    "label": "TOOL_FRAME_RAIL_L_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -210.0,
+     115.0,
+     2.5,
+     210.0,
+     164.0,
+     49.0
+    ],
+    "volume": 844082.23
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_OUT",
+    "label": "TOOL_FRAME_RAIL_R_OUT_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     -164.0,
+     0.0,
+     210.0,
+     -116.0,
+     48.0
+    ],
+    "volume": 967680.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_INNER",
+    "label": "TOOL_FRAME_RAIL_R_INNER_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     -164.0,
+     2.5,
+     210.0,
+     -118.5,
+     45.5
+    ],
+    "volume": 821730.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH00",
+    "label": "TOOL_FRAME_RAIL_R_FH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -170.0,
+     -142.0,
+     44.5,
+     -166.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH01",
+    "label": "TOOL_FRAME_RAIL_R_FH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -122.0,
+     -142.0,
+     44.5,
+     -118.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH02",
+    "label": "TOOL_FRAME_RAIL_R_FH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -74.0,
+     -142.0,
+     44.5,
+     -70.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH03",
+    "label": "TOOL_FRAME_RAIL_R_FH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -26.0,
+     -142.0,
+     44.5,
+     -22.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH04",
+    "label": "TOOL_FRAME_RAIL_R_FH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     22.0,
+     -142.0,
+     44.5,
+     26.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH05",
+    "label": "TOOL_FRAME_RAIL_R_FH05_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     70.0,
+     -142.0,
+     44.5,
+     74.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH06",
+    "label": "TOOL_FRAME_RAIL_R_FH06_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     118.0,
+     -142.0,
+     44.5,
+     122.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_FH07",
+    "label": "TOOL_FRAME_RAIL_R_FH07_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     166.0,
+     -142.0,
+     44.5,
+     170.0,
+     -138.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH00",
+    "label": "TOOL_FRAME_RAIL_R_WH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -182.0,
+     -119.5,
+     22.0,
+     -178.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH01",
+    "label": "TOOL_FRAME_RAIL_R_WH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -122.0,
+     -119.5,
+     22.0,
+     -118.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH02",
+    "label": "TOOL_FRAME_RAIL_R_WH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -62.0,
+     -119.5,
+     22.0,
+     -58.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH03",
+    "label": "TOOL_FRAME_RAIL_R_WH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.0,
+     -119.5,
+     22.0,
+     2.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH04",
+    "label": "TOOL_FRAME_RAIL_R_WH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     58.0,
+     -119.5,
+     22.0,
+     62.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH05",
+    "label": "TOOL_FRAME_RAIL_R_WH05_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     118.0,
+     -119.5,
+     22.0,
+     122.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_WH06",
+    "label": "TOOL_FRAME_RAIL_R_WH06_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     178.0,
+     -119.5,
+     22.0,
+     182.0,
+     -115.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_NOTCH0",
+    "label": "TOOL_FRAME_RAIL_R_NOTCH0_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     132.0,
+     -164.0,
+     34.01,
+     148.0,
+     -116.0,
+     48.01
+    ],
+    "volume": 10752.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_NOTCH1",
+    "label": "TOOL_FRAME_RAIL_R_NOTCH1_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -148.0,
+     -164.0,
+     34.01,
+     -132.0,
+     -116.0,
+     48.01
+    ],
+    "volume": 10752.0
+   },
+   {
+    "name": "FRAME_RAIL_R",
+    "label": "FRAME_RAIL_R_1120channel_48mm_open_side_rail_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     -210.0,
+     -164.0,
+     0.0,
+     210.0,
+     -116.0,
+     48.0
+    ],
+    "volume": 140719.561
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_R_TOOLS",
+    "label": "TOOL_FRAME_RAIL_R_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -210.0,
+     -164.0,
+     2.5,
+     210.0,
+     -115.0,
+     49.0
+    ],
+    "volume": 844082.23
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_OUT",
+    "label": "TOOL_FRAME_RAIL_F_OUT_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     162.0,
+     -116.0,
+     0.0,
+     210.0,
+     116.0,
+     48.0
+    ],
+    "volume": 534528.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_INNER",
+    "label": "TOOL_FRAME_RAIL_F_INNER_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     164.5,
+     -116.0,
+     2.5,
+     210.0,
+     116.0,
+     45.5
+    ],
+    "volume": 453908.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_FH00",
+    "label": "TOOL_FRAME_RAIL_F_FH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     184.0,
+     -76.0,
+     44.5,
+     188.0,
+     -72.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_FH01",
+    "label": "TOOL_FRAME_RAIL_F_FH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     184.0,
+     -28.0,
+     44.5,
+     188.0,
+     -24.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_FH02",
+    "label": "TOOL_FRAME_RAIL_F_FH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     184.0,
+     20.0,
+     44.5,
+     188.0,
+     24.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_FH03",
+    "label": "TOOL_FRAME_RAIL_F_FH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     184.0,
+     68.0,
+     44.5,
+     188.0,
+     72.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_FH04",
+    "label": "TOOL_FRAME_RAIL_F_FH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     184.0,
+     116.0,
+     44.5,
+     188.0,
+     120.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_WH00",
+    "label": "TOOL_FRAME_RAIL_F_WH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     161.0,
+     -88.0,
+     22.0,
+     165.5,
+     -84.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_WH01",
+    "label": "TOOL_FRAME_RAIL_F_WH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     161.0,
+     -28.0,
+     22.0,
+     165.5,
+     -24.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_WH02",
+    "label": "TOOL_FRAME_RAIL_F_WH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     161.0,
+     32.0,
+     22.0,
+     165.5,
+     36.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_WH03",
+    "label": "TOOL_FRAME_RAIL_F_WH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     161.0,
+     92.0,
+     22.0,
+     165.5,
+     96.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "FRAME_RAIL_F",
+    "label": "FRAME_RAIL_F_1120channel_48mm_open_end_rail_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     162.0,
+     -116.0,
+     0.0,
+     210.0,
+     116.0,
+     48.0
+    ],
+    "volume": 80368.673
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_F_TOOLS",
+    "label": "TOOL_FRAME_RAIL_F_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     161.0,
+     -116.0,
+     2.5,
+     210.0,
+     120.0,
+     49.0
+    ],
+    "volume": 454416.938
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_OUT",
+    "label": "TOOL_FRAME_RAIL_B_OUT_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     -116.0,
+     0.0,
+     -162.0,
+     116.0,
+     48.0
+    ],
+    "volume": 534528.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_INNER",
+    "label": "TOOL_FRAME_RAIL_B_INNER_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -210.0,
+     -116.0,
+     2.5,
+     -164.5,
+     116.0,
+     45.5
+    ],
+    "volume": 453908.0
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_FH00",
+    "label": "TOOL_FRAME_RAIL_B_FH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -188.0,
+     -76.0,
+     44.5,
+     -184.0,
+     -72.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_FH01",
+    "label": "TOOL_FRAME_RAIL_B_FH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -188.0,
+     -28.0,
+     44.5,
+     -184.0,
+     -24.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_FH02",
+    "label": "TOOL_FRAME_RAIL_B_FH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -188.0,
+     20.0,
+     44.5,
+     -184.0,
+     24.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_FH03",
+    "label": "TOOL_FRAME_RAIL_B_FH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -188.0,
+     68.0,
+     44.5,
+     -184.0,
+     72.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_FH04",
+    "label": "TOOL_FRAME_RAIL_B_FH04_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -188.0,
+     116.0,
+     44.5,
+     -184.0,
+     120.0,
+     49.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_WH00",
+    "label": "TOOL_FRAME_RAIL_B_WH00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -165.5,
+     -88.0,
+     22.0,
+     -161.0,
+     -84.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_WH01",
+    "label": "TOOL_FRAME_RAIL_B_WH01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -165.5,
+     -28.0,
+     22.0,
+     -161.0,
+     -24.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_WH02",
+    "label": "TOOL_FRAME_RAIL_B_WH02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -165.5,
+     32.0,
+     22.0,
+     -161.0,
+     36.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_WH03",
+    "label": "TOOL_FRAME_RAIL_B_WH03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -165.5,
+     92.0,
+     22.0,
+     -161.0,
+     96.0,
+     26.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "FRAME_RAIL_B",
+    "label": "FRAME_RAIL_B_1120channel_48mm_open_end_rail_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     -210.0,
+     -116.0,
+     0.0,
+     -162.0,
+     116.0,
+     48.0
+    ],
+    "volume": 80368.673
+   },
+   {
+    "name": "TOOL_FRAME_RAIL_B_TOOLS",
+    "label": "TOOL_FRAME_RAIL_B_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -210.0,
+     -116.0,
+     2.5,
+     -161.0,
+     120.0,
+     49.0
+    ],
+    "volume": 454416.938
+   },
+   {
+    "name": "TOOL_BELLY_PAN_BLK",
+    "label": "TOOL_BELLY_PAN_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -162.0,
+     -116.0,
+     2.5,
+     162.0,
+     116.0,
+     5.5
+    ],
+    "volume": 225504.0
+   },
+   {
+    "name": "BELLY_PAN",
+    "label": "BELLY_PAN_3mm_sheet_fillet_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -162.0,
+     -116.0,
+     2.5,
+     162.0,
+     116.0,
+     5.5
+    ],
+    "volume": 225339.186
+   },
+   {
+    "name": "TOOL_REAR_DECK_L_BLK",
+    "label": "TOOL_REAR_DECK_L_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -120.0,
+     55.0,
+     42.5,
+     -15.0,
+     116.0,
+     45.5
+    ],
+    "volume": 19215.0
+   },
+   {
+    "name": "REAR_DECK_L",
+    "label": "REAR_DECK_L_3mm_sheet_fillet_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -120.0,
+     55.0,
+     42.5,
+     -15.0,
+     116.0,
+     45.5
+    ],
+    "volume": 19050.186
+   },
+   {
+    "name": "TOOL_REAR_DECK_R_BLK",
+    "label": "TOOL_REAR_DECK_R_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -120.0,
+     -116.0,
+     42.5,
+     -15.0,
+     -55.0,
+     45.5
+    ],
+    "volume": 19215.0
+   },
+   {
+    "name": "REAR_DECK_R",
+    "label": "REAR_DECK_R_3mm_sheet_fillet_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -120.0,
+     -116.0,
+     42.5,
+     -15.0,
+     -55.0,
+     45.5
+    ],
+    "volume": 19050.186
+   },
+   {
+    "name": "WHEEL_ASSY_FL",
+    "label": "WHEEL_ASSY_FL_mecanum_carrier",
+    "type": "App::Part",
+    "bbox": [
+     92.0,
+     165.0,
+     -0.009,
+     188.0,
+     195.0,
+     96.009
+    ],
+    "volume": 95144.809
+   },
+   {
+    "name": "Origin004",
+    "label": "Origin007",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis002",
+    "label": "X-axis002",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis002",
+    "label": "Y-axis002",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis002",
+    "label": "Z-axis002",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane002",
+    "label": "XY-plane002",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     48.0,
+     1e+100,
+     1e+100,
+     48.0
+    ],
+    "volume": 1.28e+102
+   },
+   {
+    "name": "XZ_Plane002",
+    "label": "XZ-plane002",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane002",
+    "label": "YZ-plane002",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin005",
+    "label": "Origin006",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_FL_BLK",
+    "label": "TOOL_WHEEL_HUB_FL_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -13.0,
+     -10.0,
+     -13.0,
+     13.0,
+     10.0,
+     13.0
+    ],
+    "volume": 10618.583
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_FL_BORE",
+    "label": "TOOL_WHEEL_HUB_FL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.2,
+     -11.0,
+     -4.2,
+     4.2,
+     11.0,
+     4.2
+    ],
+    "volume": 1219.189
+   },
+   {
+    "name": "WHEEL_HUB_FL",
+    "label": "WHEEL_HUB_FL_O26_hub_REXbore_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     127.0,
+     170.0,
+     35.0,
+     153.0,
+     190.0,
+     61.0
+    ],
+    "volume": 9510.229
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_IN_BLK",
+    "label": "TOOL_WHEEL_PLATE_FL_IN_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_IN_BORE",
+    "label": "TOOL_WHEEL_PLATE_FL_IN_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     -16.0,
+     -4.5,
+     4.5,
+     -10.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_IN_BRD",
+    "label": "WHEEL_PLATE_FL_IN_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_FL_IN",
+    "label": "WHEEL_PLATE_FL_IN_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     94.0,
+     165.0,
+     2.0,
+     186.0,
+     169.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_OUT_BLK",
+    "label": "TOOL_WHEEL_PLATE_FL_OUT_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_OUT_BORE",
+    "label": "TOOL_WHEEL_PLATE_FL_OUT_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     10.0,
+     -4.5,
+     4.5,
+     16.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FL_OUT_BRD",
+    "label": "WHEEL_PLATE_FL_OUT_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_FL_OUT",
+    "label": "WHEEL_PLATE_FL_OUT_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     94.0,
+     191.0,
+     2.0,
+     186.0,
+     195.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "ROLLER_FL_00",
+    "label": "ROLLER_FL_00_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     174.0,
+     166.211,
+     34.211,
+     188.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin006",
+    "label": "Origin010",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis003",
+    "label": "X-axis003",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis003",
+    "label": "Y-axis003",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis003",
+    "label": "Z-axis003",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane003",
+    "label": "XY-plane003",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane003",
+    "label": "XZ-plane003",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane003",
+    "label": "YZ-plane003",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin007",
+    "label": "Origin009",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_00_BT",
+    "label": "TOOL_ROLLER_FL_00_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_00_PT",
+    "label": "TOOL_ROLLER_FL_00_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_00_B",
+    "label": "ROLLER_FL_00_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     174.0,
+     166.211,
+     34.211,
+     188.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_01",
+    "label": "ROLLER_FL_01_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     162.647,
+     166.211,
+     60.324,
+     183.693,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin008",
+    "label": "Origin012",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis004",
+    "label": "X-axis004",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis004",
+    "label": "Y-axis004",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis004",
+    "label": "Z-axis004",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane004",
+    "label": "XY-plane004",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "XZ_Plane004",
+    "label": "XZ-plane004",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.347997333357532e+167
+   },
+   {
+    "name": "YZ_Plane004",
+    "label": "YZ-plane004",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin009",
+    "label": "Origin011",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_01_BT",
+    "label": "TOOL_ROLLER_FL_01_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_01_PT",
+    "label": "TOOL_ROLLER_FL_01_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_01_B",
+    "label": "ROLLER_FL_01_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     162.647,
+     166.211,
+     60.324,
+     183.693,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_02",
+    "label": "ROLLER_FL_02_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     139.387,
+     166.211,
+     77.977,
+     165.952,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin010",
+    "label": "Origin015",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis005",
+    "label": "X-axis005",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis005",
+    "label": "Y-axis005",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis005",
+    "label": "Z-axis005",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane005",
+    "label": "XY-plane005",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane005",
+    "label": "XZ-plane005",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane005",
+    "label": "YZ-plane005",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.6175968000290385e+168
+   },
+   {
+    "name": "Origin011",
+    "label": "Origin014",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_02_BT",
+    "label": "TOOL_ROLLER_FL_02_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_02_PT",
+    "label": "TOOL_ROLLER_FL_02_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_02_B",
+    "label": "ROLLER_FL_02_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     139.387,
+     166.211,
+     77.977,
+     165.952,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_03",
+    "label": "ROLLER_FL_03_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     114.048,
+     166.211,
+     77.977,
+     140.613,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin012",
+    "label": "Origin018",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis006",
+    "label": "X-axis006",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis006",
+    "label": "Y-axis006",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis006",
+    "label": "Z-axis006",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane006",
+    "label": "XY-plane006",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.695994666715064e+167
+   },
+   {
+    "name": "XZ_Plane006",
+    "label": "XZ-plane006",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane006",
+    "label": "YZ-plane006",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin013",
+    "label": "Origin017",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_03_BT",
+    "label": "TOOL_ROLLER_FL_03_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_03_PT",
+    "label": "TOOL_ROLLER_FL_03_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_03_B",
+    "label": "ROLLER_FL_03_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     114.048,
+     166.211,
+     77.977,
+     140.613,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_04",
+    "label": "ROLLER_FL_04_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     96.307,
+     166.211,
+     60.324,
+     117.353,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin014",
+    "label": "Origin021",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis007",
+    "label": "X-axis007",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis007",
+    "label": "Y-axis007",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis007",
+    "label": "Z-axis007",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane007",
+    "label": "XY-plane007",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.347997333357532e+167
+   },
+   {
+    "name": "XZ_Plane007",
+    "label": "XZ-plane007",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane007",
+    "label": "YZ-plane007",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin015",
+    "label": "Origin020",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_04_BT",
+    "label": "TOOL_ROLLER_FL_04_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_04_PT",
+    "label": "TOOL_ROLLER_FL_04_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_04_B",
+    "label": "ROLLER_FL_04_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     96.307,
+     166.211,
+     60.324,
+     117.353,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_05",
+    "label": "ROLLER_FL_05_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     92.0,
+     166.211,
+     34.211,
+     106.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin016",
+    "label": "Origin023",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis008",
+    "label": "X-axis008",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis008",
+    "label": "Y-axis008",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis008",
+    "label": "Z-axis008",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane008",
+    "label": "XY-plane008",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "XZ_Plane008",
+    "label": "XZ-plane008",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane008",
+    "label": "YZ-plane008",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin017",
+    "label": "Origin022",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_05_BT",
+    "label": "TOOL_ROLLER_FL_05_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_05_PT",
+    "label": "TOOL_ROLLER_FL_05_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_05_B",
+    "label": "ROLLER_FL_05_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     92.0,
+     166.211,
+     34.211,
+     106.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_06",
+    "label": "ROLLER_FL_06_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     96.307,
+     166.211,
+     12.125,
+     117.353,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin018",
+    "label": "Origin026",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis009",
+    "label": "X-axis009",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis009",
+    "label": "Y-axis009",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis009",
+    "label": "Z-axis009",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane009",
+    "label": "XY-plane009",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+168
+   },
+   {
+    "name": "XZ_Plane009",
+    "label": "XZ-plane009",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "YZ_Plane009",
+    "label": "YZ-plane009",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin019",
+    "label": "Origin025",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_06_BT",
+    "label": "TOOL_ROLLER_FL_06_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_06_PT",
+    "label": "TOOL_ROLLER_FL_06_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_06_B",
+    "label": "ROLLER_FL_06_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     96.307,
+     166.211,
+     12.125,
+     117.353,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_07",
+    "label": "ROLLER_FL_07_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     114.048,
+     166.211,
+     -0.009,
+     140.613,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin020",
+    "label": "Origin029",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis010",
+    "label": "X-axis010",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis010",
+    "label": "Y-axis010",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis010",
+    "label": "Z-axis010",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane010",
+    "label": "XY-plane010",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane010",
+    "label": "XZ-plane010",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.8871962667005447e+168
+   },
+   {
+    "name": "YZ_Plane010",
+    "label": "YZ-plane010",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin021",
+    "label": "Origin028",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_07_BT",
+    "label": "TOOL_ROLLER_FL_07_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_07_PT",
+    "label": "TOOL_ROLLER_FL_07_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_07_B",
+    "label": "ROLLER_FL_07_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     114.048,
+     166.211,
+     -0.009,
+     140.613,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_08",
+    "label": "ROLLER_FL_08_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     139.387,
+     166.211,
+     -0.009,
+     165.952,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin022",
+    "label": "Origin032",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis011",
+    "label": "X-axis011",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis011",
+    "label": "Y-axis011",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis011",
+    "label": "Z-axis011",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane011",
+    "label": "XY-plane011",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane011",
+    "label": "XZ-plane011",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane011",
+    "label": "YZ-plane011",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin023",
+    "label": "Origin031",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_08_BT",
+    "label": "TOOL_ROLLER_FL_08_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_08_PT",
+    "label": "TOOL_ROLLER_FL_08_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_08_B",
+    "label": "ROLLER_FL_08_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     139.387,
+     166.211,
+     -0.009,
+     165.952,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FL_09",
+    "label": "ROLLER_FL_09_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     162.647,
+     166.211,
+     12.125,
+     183.693,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin024",
+    "label": "Origin034",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis012",
+    "label": "X-axis012",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis012",
+    "label": "Y-axis012",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis012",
+    "label": "Z-axis012",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane012",
+    "label": "XY-plane012",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane012",
+    "label": "XZ-plane012",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 4.3135914667441024e+168
+   },
+   {
+    "name": "YZ_Plane012",
+    "label": "YZ-plane012",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin025",
+    "label": "Origin033",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FL_09_BT",
+    "label": "TOOL_ROLLER_FL_09_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FL_09_PT",
+    "label": "TOOL_ROLLER_FL_09_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FL_09_B",
+    "label": "ROLLER_FL_09_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     162.647,
+     166.211,
+     12.125,
+     183.693,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ENV_WHEEL_FL",
+    "label": "ENV_WHEEL_FL_O96x32_roller_envelope_marker",
+    "type": "Part::Box",
+    "bbox": [
+     92.0,
+     164.0,
+     0.0,
+     188.0,
+     196.0,
+     96.0
+    ],
+    "volume": 294912.0
+   },
+   {
+    "name": "MOTOR_FL",
+    "label": "MOTOR_FL_5203YellowJacket_O36_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     122.0,
+     53.5,
+     30.0,
+     158.0,
+     113.5,
+     66.0
+    ],
+    "volume": 61072.561
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_BLK",
+    "label": "TOOL_MOUNT_MOTOR_FL_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     125.0,
+     113.5,
+     33.0,
+     155.0,
+     116.0,
+     63.0
+    ],
+    "volume": 2250.0
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_FIL",
+    "label": "MOUNT_MOTOR_FL_face_plate_30x30_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     125.0,
+     113.5,
+     33.0,
+     155.0,
+     116.0,
+     63.0
+    ],
+    "volume": 2215.664
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_BORE",
+    "label": "TOOL_MOUNT_MOTOR_FL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     135.8,
+     112.5,
+     43.8,
+     144.2,
+     117.0,
+     52.2
+    ],
+    "volume": 249.38
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_B00",
+    "label": "TOOL_MOUNT_MOTOR_FL_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     112.5,
+     37.0,
+     133.0,
+     117.0,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_B01",
+    "label": "TOOL_MOUNT_MOTOR_FL_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     112.5,
+     55.0,
+     133.0,
+     117.0,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_B02",
+    "label": "TOOL_MOUNT_MOTOR_FL_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     112.5,
+     37.0,
+     151.0,
+     117.0,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_B03",
+    "label": "TOOL_MOUNT_MOTOR_FL_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     112.5,
+     55.0,
+     151.0,
+     117.0,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "MOUNT_MOTOR_FL",
+    "label": "MOUNT_MOTOR_FL_face_plate_30x30_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     125.0,
+     113.5,
+     33.0,
+     155.0,
+     116.0,
+     63.0
+    ],
+    "volume": 1951.456
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FL_TOOLS",
+    "label": "TOOL_MOUNT_MOTOR_FL_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     129.0,
+     112.5,
+     37.0,
+     151.0,
+     117.0,
+     59.0
+    ],
+    "volume": 475.574
+   },
+   {
+    "name": "TOOL_BEARING_FL_BLK",
+    "label": "TOOL_BEARING_FL_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     127.0,
+     118.5,
+     35.0,
+     153.0,
+     124.5,
+     61.0
+    ],
+    "volume": 4056.0
+   },
+   {
+    "name": "TOOL_BEARING_FL_FIL",
+    "label": "BEARING_FL_flange_block_26x26_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     127.0,
+     118.5,
+     35.0,
+     153.0,
+     124.5,
+     61.0
+    ],
+    "volume": 3973.593
+   },
+   {
+    "name": "TOOL_BEARING_FL_BORE",
+    "label": "TOOL_BEARING_FL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     135.8,
+     117.5,
+     43.8,
+     144.2,
+     125.5,
+     52.2
+    ],
+    "volume": 443.342
+   },
+   {
+    "name": "TOOL_BEARING_FL_B00",
+    "label": "TOOL_BEARING_FL_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     117.5,
+     37.0,
+     133.0,
+     125.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FL_B01",
+    "label": "TOOL_BEARING_FL_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     117.5,
+     55.0,
+     133.0,
+     125.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FL_B02",
+    "label": "TOOL_BEARING_FL_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     117.5,
+     37.0,
+     151.0,
+     125.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FL_B03",
+    "label": "TOOL_BEARING_FL_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     117.5,
+     55.0,
+     151.0,
+     125.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "BEARING_FL",
+    "label": "BEARING_FL_flange_block_26x26_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     127.0,
+     118.5,
+     35.0,
+     153.0,
+     124.5,
+     61.0
+    ],
+    "volume": 3339.494
+   },
+   {
+    "name": "TOOL_BEARING_FL_TOOLS",
+    "label": "TOOL_BEARING_FL_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     129.0,
+     117.5,
+     37.0,
+     151.0,
+     125.5,
+     59.0
+    ],
+    "volume": 845.465
+   },
+   {
+    "name": "SHAFT_FL",
+    "label": "SHAFT_FL_8mmREX_live_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     136.0,
+     100.0,
+     44.0,
+     144.0,
+     176.0,
+     52.0
+    ],
+    "volume": 3820.177
+   },
+   {
+    "name": "WHEEL_ASSY_FR",
+    "label": "WHEEL_ASSY_FR_mecanum_carrier",
+    "type": "App::Part",
+    "bbox": [
+     92.0,
+     -195.0,
+     -0.009,
+     188.0,
+     -165.0,
+     96.009
+    ],
+    "volume": 95144.809
+   },
+   {
+    "name": "Origin026",
+    "label": "Origin037",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis013",
+    "label": "X-axis013",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis013",
+    "label": "Y-axis013",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis013",
+    "label": "Z-axis013",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane013",
+    "label": "XY-plane013",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     48.0,
+     1e+100,
+     1e+100,
+     48.0
+    ],
+    "volume": 1.28e+102
+   },
+   {
+    "name": "XZ_Plane013",
+    "label": "XZ-plane013",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane013",
+    "label": "YZ-plane013",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin027",
+    "label": "Origin036",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_FR_BLK",
+    "label": "TOOL_WHEEL_HUB_FR_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -13.0,
+     -10.0,
+     -13.0,
+     13.0,
+     10.0,
+     13.0
+    ],
+    "volume": 10618.583
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_FR_BORE",
+    "label": "TOOL_WHEEL_HUB_FR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.2,
+     -11.0,
+     -4.2,
+     4.2,
+     11.0,
+     4.2
+    ],
+    "volume": 1219.189
+   },
+   {
+    "name": "WHEEL_HUB_FR",
+    "label": "WHEEL_HUB_FR_O26_hub_REXbore_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     127.0,
+     -190.0,
+     35.0,
+     153.0,
+     -170.0,
+     61.0
+    ],
+    "volume": 9510.229
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_IN_BLK",
+    "label": "TOOL_WHEEL_PLATE_FR_IN_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_IN_BORE",
+    "label": "TOOL_WHEEL_PLATE_FR_IN_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     -16.0,
+     -4.5,
+     4.5,
+     -10.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_IN_BRD",
+    "label": "WHEEL_PLATE_FR_IN_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_FR_IN",
+    "label": "WHEEL_PLATE_FR_IN_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     94.0,
+     -195.0,
+     2.0,
+     186.0,
+     -191.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_OUT_BLK",
+    "label": "TOOL_WHEEL_PLATE_FR_OUT_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_OUT_BORE",
+    "label": "TOOL_WHEEL_PLATE_FR_OUT_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     10.0,
+     -4.5,
+     4.5,
+     16.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_FR_OUT_BRD",
+    "label": "WHEEL_PLATE_FR_OUT_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_FR_OUT",
+    "label": "WHEEL_PLATE_FR_OUT_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     94.0,
+     -169.0,
+     2.0,
+     186.0,
+     -165.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "ROLLER_FR_00",
+    "label": "ROLLER_FR_00_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     174.0,
+     -193.789,
+     34.211,
+     188.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin028",
+    "label": "Origin040",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis014",
+    "label": "X-axis014",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis014",
+    "label": "Y-axis014",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis014",
+    "label": "Z-axis014",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane014",
+    "label": "XY-plane014",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane014",
+    "label": "XZ-plane014",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane014",
+    "label": "YZ-plane014",
+    "type": "App::Plane",
+    "bbox": [
+     181.0,
+     -1e+100,
+     -1e+100,
+     181.0,
+     1e+100,
+     1e+100
+    ],
+    "volume": 9.578097130411806e+152
+   },
+   {
+    "name": "Origin029",
+    "label": "Origin039",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_00_BT",
+    "label": "TOOL_ROLLER_FR_00_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_00_PT",
+    "label": "TOOL_ROLLER_FR_00_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_00_B",
+    "label": "ROLLER_FR_00_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     174.0,
+     -193.789,
+     34.211,
+     188.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_01",
+    "label": "ROLLER_FR_01_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     162.647,
+     -193.789,
+     60.324,
+     183.693,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin030",
+    "label": "Origin042",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis015",
+    "label": "X-axis015",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis015",
+    "label": "Y-axis015",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis015",
+    "label": "Z-axis015",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane015",
+    "label": "XY-plane015",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane015",
+    "label": "XZ-plane015",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane015",
+    "label": "YZ-plane015",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin031",
+    "label": "Origin041",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_01_BT",
+    "label": "TOOL_ROLLER_FR_01_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_01_PT",
+    "label": "TOOL_ROLLER_FR_01_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_01_B",
+    "label": "ROLLER_FR_01_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     162.647,
+     -193.789,
+     60.324,
+     183.693,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_02",
+    "label": "ROLLER_FR_02_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     139.387,
+     -193.789,
+     77.977,
+     165.952,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin032",
+    "label": "Origin045",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis016",
+    "label": "X-axis016",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis016",
+    "label": "Y-axis016",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis016",
+    "label": "Z-axis016",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane016",
+    "label": "XY-plane016",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 4.0439920000725963e+167
+   },
+   {
+    "name": "XZ_Plane016",
+    "label": "XZ-plane016",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane016",
+    "label": "YZ-plane016",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin033",
+    "label": "Origin044",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_02_BT",
+    "label": "TOOL_ROLLER_FR_02_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_02_PT",
+    "label": "TOOL_ROLLER_FR_02_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_02_B",
+    "label": "ROLLER_FR_02_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     139.387,
+     -193.789,
+     77.977,
+     165.952,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_03",
+    "label": "ROLLER_FR_03_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     114.048,
+     -193.789,
+     77.977,
+     140.613,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin034",
+    "label": "Origin048",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis017",
+    "label": "X-axis017",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis017",
+    "label": "Y-axis017",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis017",
+    "label": "Z-axis017",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane017",
+    "label": "XY-plane017",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane017",
+    "label": "XZ-plane017",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane017",
+    "label": "YZ-plane017",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin035",
+    "label": "Origin047",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_03_BT",
+    "label": "TOOL_ROLLER_FR_03_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_03_PT",
+    "label": "TOOL_ROLLER_FR_03_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_03_B",
+    "label": "ROLLER_FR_03_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     114.048,
+     -193.789,
+     77.977,
+     140.613,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_04",
+    "label": "ROLLER_FR_04_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     96.307,
+     -193.789,
+     60.324,
+     117.353,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin036",
+    "label": "Origin051",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis018",
+    "label": "X-axis018",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis018",
+    "label": "Y-axis018",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis018",
+    "label": "Z-axis018",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane018",
+    "label": "XY-plane018",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane018",
+    "label": "XZ-plane018",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 8.627182933488205e+168
+   },
+   {
+    "name": "YZ_Plane018",
+    "label": "YZ-plane018",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "Origin037",
+    "label": "Origin050",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_04_BT",
+    "label": "TOOL_ROLLER_FR_04_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_04_PT",
+    "label": "TOOL_ROLLER_FR_04_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_04_B",
+    "label": "ROLLER_FR_04_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     96.307,
+     -193.789,
+     60.324,
+     117.353,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_05",
+    "label": "ROLLER_FR_05_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     92.0,
+     -193.789,
+     34.211,
+     106.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin038",
+    "label": "Origin053",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis019",
+    "label": "X-axis019",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis019",
+    "label": "Y-axis019",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis019",
+    "label": "Z-axis019",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane019",
+    "label": "XY-plane019",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane019",
+    "label": "XZ-plane019",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane019",
+    "label": "YZ-plane019",
+    "type": "App::Plane",
+    "bbox": [
+     99.0,
+     -1e+100,
+     -1e+100,
+     99.0,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.1972621413014757e+152
+   },
+   {
+    "name": "Origin039",
+    "label": "Origin052",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_05_BT",
+    "label": "TOOL_ROLLER_FR_05_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_05_PT",
+    "label": "TOOL_ROLLER_FR_05_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_05_B",
+    "label": "ROLLER_FR_05_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     92.0,
+     -193.789,
+     34.211,
+     106.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_06",
+    "label": "ROLLER_FR_06_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     96.307,
+     -193.789,
+     12.125,
+     117.353,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin040",
+    "label": "Origin056",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis020",
+    "label": "X-axis020",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis020",
+    "label": "Y-axis020",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis020",
+    "label": "Z-axis020",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane020",
+    "label": "XY-plane020",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 8.087984000145193e+167
+   },
+   {
+    "name": "XZ_Plane020",
+    "label": "XZ-plane020",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane020",
+    "label": "YZ-plane020",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.1567957333720512e+168
+   },
+   {
+    "name": "Origin041",
+    "label": "Origin055",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_06_BT",
+    "label": "TOOL_ROLLER_FR_06_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_06_PT",
+    "label": "TOOL_ROLLER_FR_06_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_06_B",
+    "label": "ROLLER_FR_06_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     96.307,
+     -193.789,
+     12.125,
+     117.353,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_07",
+    "label": "ROLLER_FR_07_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     114.048,
+     -193.789,
+     -0.009,
+     140.613,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin042",
+    "label": "Origin059",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis021",
+    "label": "X-axis021",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis021",
+    "label": "Y-axis021",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis021",
+    "label": "Z-axis021",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane021",
+    "label": "XY-plane021",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane021",
+    "label": "XZ-plane021",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane021",
+    "label": "YZ-plane021",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin043",
+    "label": "Origin058",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_07_BT",
+    "label": "TOOL_ROLLER_FR_07_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_07_PT",
+    "label": "TOOL_ROLLER_FR_07_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_07_B",
+    "label": "ROLLER_FR_07_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     114.048,
+     -193.789,
+     -0.009,
+     140.613,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_08",
+    "label": "ROLLER_FR_08_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     139.387,
+     -193.789,
+     -0.009,
+     165.952,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin044",
+    "label": "Origin062",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis022",
+    "label": "X-axis022",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis022",
+    "label": "Y-axis022",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis022",
+    "label": "Z-axis022",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane022",
+    "label": "XY-plane022",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.6175968000290385e+168
+   },
+   {
+    "name": "XZ_Plane022",
+    "label": "XZ-plane022",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.1904956667059895e+168
+   },
+   {
+    "name": "YZ_Plane022",
+    "label": "YZ-plane022",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.684996666696915e+167
+   },
+   {
+    "name": "Origin045",
+    "label": "Origin061",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_08_BT",
+    "label": "TOOL_ROLLER_FR_08_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_08_PT",
+    "label": "TOOL_ROLLER_FR_08_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_08_B",
+    "label": "ROLLER_FR_08_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     139.387,
+     -193.789,
+     -0.009,
+     165.952,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_FR_09",
+    "label": "ROLLER_FR_09_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     162.647,
+     -193.789,
+     12.125,
+     183.693,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin046",
+    "label": "Origin064",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis023",
+    "label": "X-axis023",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis023",
+    "label": "Y-axis023",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis023",
+    "label": "Z-axis023",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane023",
+    "label": "XY-plane023",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "XZ_Plane023",
+    "label": "XZ-plane023",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane023",
+    "label": "YZ-plane023",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin047",
+    "label": "Origin063",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_FR_09_BT",
+    "label": "TOOL_ROLLER_FR_09_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_FR_09_PT",
+    "label": "TOOL_ROLLER_FR_09_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_FR_09_B",
+    "label": "ROLLER_FR_09_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     162.647,
+     -193.789,
+     12.125,
+     183.693,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ENV_WHEEL_FR",
+    "label": "ENV_WHEEL_FR_O96x32_roller_envelope_marker",
+    "type": "Part::Box",
+    "bbox": [
+     92.0,
+     -196.0,
+     0.0,
+     188.0,
+     -164.0,
+     96.0
+    ],
+    "volume": 294912.0
+   },
+   {
+    "name": "MOTOR_FR",
+    "label": "MOTOR_FR_5203YellowJacket_O36_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     122.0,
+     -113.5,
+     30.0,
+     158.0,
+     -53.5,
+     66.0
+    ],
+    "volume": 61072.561
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_BLK",
+    "label": "TOOL_MOUNT_MOTOR_FR_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     125.0,
+     -116.0,
+     33.0,
+     155.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 2250.0
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_FIL",
+    "label": "MOUNT_MOTOR_FR_face_plate_30x30_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     125.0,
+     -116.0,
+     33.0,
+     155.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 2215.664
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_BORE",
+    "label": "TOOL_MOUNT_MOTOR_FR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     135.8,
+     -117.0,
+     43.8,
+     144.2,
+     -112.5,
+     52.2
+    ],
+    "volume": 249.38
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_B00",
+    "label": "TOOL_MOUNT_MOTOR_FR_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     -117.0,
+     37.0,
+     133.0,
+     -112.5,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_B01",
+    "label": "TOOL_MOUNT_MOTOR_FR_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     -117.0,
+     55.0,
+     133.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_B02",
+    "label": "TOOL_MOUNT_MOTOR_FR_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     -117.0,
+     37.0,
+     151.0,
+     -112.5,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_B03",
+    "label": "TOOL_MOUNT_MOTOR_FR_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     -117.0,
+     55.0,
+     151.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "MOUNT_MOTOR_FR",
+    "label": "MOUNT_MOTOR_FR_face_plate_30x30_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     125.0,
+     -116.0,
+     33.0,
+     155.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 1951.456
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_FR_TOOLS",
+    "label": "TOOL_MOUNT_MOTOR_FR_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     129.0,
+     -117.0,
+     37.0,
+     151.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 475.574
+   },
+   {
+    "name": "TOOL_BEARING_FR_BLK",
+    "label": "TOOL_BEARING_FR_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     127.0,
+     -124.5,
+     35.0,
+     153.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 4056.0
+   },
+   {
+    "name": "TOOL_BEARING_FR_FIL",
+    "label": "BEARING_FR_flange_block_26x26_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     127.0,
+     -124.5,
+     35.0,
+     153.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 3973.593
+   },
+   {
+    "name": "TOOL_BEARING_FR_BORE",
+    "label": "TOOL_BEARING_FR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     135.8,
+     -125.5,
+     43.8,
+     144.2,
+     -117.5,
+     52.2
+    ],
+    "volume": 443.342
+   },
+   {
+    "name": "TOOL_BEARING_FR_B00",
+    "label": "TOOL_BEARING_FR_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     -125.5,
+     37.0,
+     133.0,
+     -117.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FR_B01",
+    "label": "TOOL_BEARING_FR_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     129.0,
+     -125.5,
+     55.0,
+     133.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FR_B02",
+    "label": "TOOL_BEARING_FR_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     -125.5,
+     37.0,
+     151.0,
+     -117.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_FR_B03",
+    "label": "TOOL_BEARING_FR_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     147.0,
+     -125.5,
+     55.0,
+     151.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "BEARING_FR",
+    "label": "BEARING_FR_flange_block_26x26_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     127.0,
+     -124.5,
+     35.0,
+     153.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 3339.494
+   },
+   {
+    "name": "TOOL_BEARING_FR_TOOLS",
+    "label": "TOOL_BEARING_FR_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     129.0,
+     -125.5,
+     37.0,
+     151.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 845.465
+   },
+   {
+    "name": "SHAFT_FR",
+    "label": "SHAFT_FR_8mmREX_live_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     136.0,
+     -176.0,
+     44.0,
+     144.0,
+     -100.0,
+     52.0
+    ],
+    "volume": 3820.177
+   },
+   {
+    "name": "WHEEL_ASSY_RL",
+    "label": "WHEEL_ASSY_RL_mecanum_carrier",
+    "type": "App::Part",
+    "bbox": [
+     -188.0,
+     165.0,
+     -0.009,
+     -92.0,
+     195.0,
+     96.009
+    ],
+    "volume": 95144.809
+   },
+   {
+    "name": "Origin048",
+    "label": "Origin067",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis024",
+    "label": "X-axis024",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis024",
+    "label": "Y-axis024",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis024",
+    "label": "Z-axis024",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane024",
+    "label": "XY-plane024",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     48.0,
+     1e+100,
+     1e+100,
+     48.0
+    ],
+    "volume": 1.28e+102
+   },
+   {
+    "name": "XZ_Plane024",
+    "label": "XZ-plane024",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane024",
+    "label": "YZ-plane024",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin049",
+    "label": "Origin066",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_RL_BLK",
+    "label": "TOOL_WHEEL_HUB_RL_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -13.0,
+     -10.0,
+     -13.0,
+     13.0,
+     10.0,
+     13.0
+    ],
+    "volume": 10618.583
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_RL_BORE",
+    "label": "TOOL_WHEEL_HUB_RL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.2,
+     -11.0,
+     -4.2,
+     4.2,
+     11.0,
+     4.2
+    ],
+    "volume": 1219.189
+   },
+   {
+    "name": "WHEEL_HUB_RL",
+    "label": "WHEEL_HUB_RL_O26_hub_REXbore_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     -153.0,
+     170.0,
+     35.0,
+     -127.0,
+     190.0,
+     61.0
+    ],
+    "volume": 9510.229
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_IN_BLK",
+    "label": "TOOL_WHEEL_PLATE_RL_IN_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_IN_BORE",
+    "label": "TOOL_WHEEL_PLATE_RL_IN_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     -16.0,
+     -4.5,
+     4.5,
+     -10.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_IN_BRD",
+    "label": "WHEEL_PLATE_RL_IN_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_RL_IN",
+    "label": "WHEEL_PLATE_RL_IN_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     -186.0,
+     165.0,
+     2.0,
+     -94.0,
+     169.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_OUT_BLK",
+    "label": "TOOL_WHEEL_PLATE_RL_OUT_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_OUT_BORE",
+    "label": "TOOL_WHEEL_PLATE_RL_OUT_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     10.0,
+     -4.5,
+     4.5,
+     16.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RL_OUT_BRD",
+    "label": "WHEEL_PLATE_RL_OUT_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_RL_OUT",
+    "label": "WHEEL_PLATE_RL_OUT_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     -186.0,
+     191.0,
+     2.0,
+     -94.0,
+     195.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "ROLLER_RL_00",
+    "label": "ROLLER_RL_00_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -106.0,
+     166.211,
+     34.211,
+     -92.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin050",
+    "label": "Origin070",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis025",
+    "label": "X-axis025",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis025",
+    "label": "Y-axis025",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis025",
+    "label": "Z-axis025",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane025",
+    "label": "XY-plane025",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane025",
+    "label": "XZ-plane025",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane025",
+    "label": "YZ-plane025",
+    "type": "App::Plane",
+    "bbox": [
+     -99.0,
+     -1e+100,
+     -1e+100,
+     -99.0,
+     1e+100,
+     1e+100
+    ],
+    "volume": 9.578097130411806e+152
+   },
+   {
+    "name": "Origin051",
+    "label": "Origin069",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_00_BT",
+    "label": "TOOL_ROLLER_RL_00_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_00_PT",
+    "label": "TOOL_ROLLER_RL_00_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_00_B",
+    "label": "ROLLER_RL_00_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -106.0,
+     166.211,
+     34.211,
+     -92.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_01",
+    "label": "ROLLER_RL_01_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -117.353,
+     166.211,
+     60.324,
+     -96.307,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin052",
+    "label": "Origin073",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis026",
+    "label": "X-axis026",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis026",
+    "label": "Y-axis026",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis026",
+    "label": "Z-axis026",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane026",
+    "label": "XY-plane026",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane026",
+    "label": "XZ-plane026",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane026",
+    "label": "YZ-plane026",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin053",
+    "label": "Origin072",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_01_BT",
+    "label": "TOOL_ROLLER_RL_01_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_01_PT",
+    "label": "TOOL_ROLLER_RL_01_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_01_B",
+    "label": "ROLLER_RL_01_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -117.353,
+     166.211,
+     60.324,
+     -96.307,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_02",
+    "label": "ROLLER_RL_02_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -140.613,
+     166.211,
+     77.977,
+     -114.048,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin054",
+    "label": "Origin075",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis027",
+    "label": "X-axis027",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis027",
+    "label": "Y-axis027",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis027",
+    "label": "Z-axis027",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane027",
+    "label": "XY-plane027",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 4.0439920000725963e+167
+   },
+   {
+    "name": "XZ_Plane027",
+    "label": "XZ-plane027",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane027",
+    "label": "YZ-plane027",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin055",
+    "label": "Origin074",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_02_BT",
+    "label": "TOOL_ROLLER_RL_02_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_02_PT",
+    "label": "TOOL_ROLLER_RL_02_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_02_B",
+    "label": "ROLLER_RL_02_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -140.613,
+     166.211,
+     77.977,
+     -114.048,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_03",
+    "label": "ROLLER_RL_03_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -165.952,
+     166.211,
+     77.977,
+     -139.387,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin056",
+    "label": "Origin078",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis028",
+    "label": "X-axis028",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis028",
+    "label": "Y-axis028",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis028",
+    "label": "Z-axis028",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane028",
+    "label": "XY-plane028",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane028",
+    "label": "XZ-plane028",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane028",
+    "label": "YZ-plane028",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin057",
+    "label": "Origin077",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_03_BT",
+    "label": "TOOL_ROLLER_RL_03_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_03_PT",
+    "label": "TOOL_ROLLER_RL_03_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_03_B",
+    "label": "ROLLER_RL_03_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -165.952,
+     166.211,
+     77.977,
+     -139.387,
+     193.789,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_04",
+    "label": "ROLLER_RL_04_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -183.693,
+     166.211,
+     60.324,
+     -162.647,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin058",
+    "label": "Origin081",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis029",
+    "label": "X-axis029",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis029",
+    "label": "Y-axis029",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis029",
+    "label": "Z-axis029",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane029",
+    "label": "XY-plane029",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane029",
+    "label": "XZ-plane029",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 8.627182933488205e+168
+   },
+   {
+    "name": "YZ_Plane029",
+    "label": "YZ-plane029",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "Origin059",
+    "label": "Origin080",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_04_BT",
+    "label": "TOOL_ROLLER_RL_04_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_04_PT",
+    "label": "TOOL_ROLLER_RL_04_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_04_B",
+    "label": "ROLLER_RL_04_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -183.693,
+     166.211,
+     60.324,
+     -162.647,
+     193.789,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_05",
+    "label": "ROLLER_RL_05_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -188.0,
+     166.211,
+     34.211,
+     -174.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin060",
+    "label": "Origin083",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis030",
+    "label": "X-axis030",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis030",
+    "label": "Y-axis030",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis030",
+    "label": "Z-axis030",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane030",
+    "label": "XY-plane030",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane030",
+    "label": "XZ-plane030",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane030",
+    "label": "YZ-plane030",
+    "type": "App::Plane",
+    "bbox": [
+     -181.0,
+     -1e+100,
+     -1e+100,
+     -181.0,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.1972621413014757e+152
+   },
+   {
+    "name": "Origin061",
+    "label": "Origin082",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_05_BT",
+    "label": "TOOL_ROLLER_RL_05_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_05_PT",
+    "label": "TOOL_ROLLER_RL_05_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_05_B",
+    "label": "ROLLER_RL_05_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -188.0,
+     166.211,
+     34.211,
+     -174.0,
+     193.789,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_06",
+    "label": "ROLLER_RL_06_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -183.693,
+     166.211,
+     12.125,
+     -162.647,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin062",
+    "label": "Origin086",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis031",
+    "label": "X-axis031",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis031",
+    "label": "Y-axis031",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis031",
+    "label": "Z-axis031",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane031",
+    "label": "XY-plane031",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 8.087984000145193e+167
+   },
+   {
+    "name": "XZ_Plane031",
+    "label": "XZ-plane031",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane031",
+    "label": "YZ-plane031",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.1567957333720512e+168
+   },
+   {
+    "name": "Origin063",
+    "label": "Origin085",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_06_BT",
+    "label": "TOOL_ROLLER_RL_06_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_06_PT",
+    "label": "TOOL_ROLLER_RL_06_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_06_B",
+    "label": "ROLLER_RL_06_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -183.693,
+     166.211,
+     12.125,
+     -162.647,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_07",
+    "label": "ROLLER_RL_07_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -165.952,
+     166.211,
+     -0.009,
+     -139.387,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin064",
+    "label": "Origin089",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis032",
+    "label": "X-axis032",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis032",
+    "label": "Y-axis032",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis032",
+    "label": "Z-axis032",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane032",
+    "label": "XY-plane032",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane032",
+    "label": "XZ-plane032",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane032",
+    "label": "YZ-plane032",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin065",
+    "label": "Origin088",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_07_BT",
+    "label": "TOOL_ROLLER_RL_07_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_07_PT",
+    "label": "TOOL_ROLLER_RL_07_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_07_B",
+    "label": "ROLLER_RL_07_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -165.952,
+     166.211,
+     -0.009,
+     -139.387,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_08",
+    "label": "ROLLER_RL_08_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -140.613,
+     166.211,
+     -0.009,
+     -114.048,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin066",
+    "label": "Origin092",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis033",
+    "label": "X-axis033",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis033",
+    "label": "Y-axis033",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis033",
+    "label": "Z-axis033",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane033",
+    "label": "XY-plane033",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.6175968000290385e+168
+   },
+   {
+    "name": "XZ_Plane033",
+    "label": "XZ-plane033",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.1904956667059895e+168
+   },
+   {
+    "name": "YZ_Plane033",
+    "label": "YZ-plane033",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.684996666696915e+167
+   },
+   {
+    "name": "Origin067",
+    "label": "Origin091",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_08_BT",
+    "label": "TOOL_ROLLER_RL_08_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_08_PT",
+    "label": "TOOL_ROLLER_RL_08_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_08_B",
+    "label": "ROLLER_RL_08_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -140.613,
+     166.211,
+     -0.009,
+     -114.048,
+     193.789,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RL_09",
+    "label": "ROLLER_RL_09_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -117.353,
+     166.211,
+     12.125,
+     -96.307,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin068",
+    "label": "Origin094",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis034",
+    "label": "X-axis034",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis034",
+    "label": "Y-axis034",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis034",
+    "label": "Z-axis034",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane034",
+    "label": "XY-plane034",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "XZ_Plane034",
+    "label": "XZ-plane034",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane034",
+    "label": "YZ-plane034",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin069",
+    "label": "Origin093",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RL_09_BT",
+    "label": "TOOL_ROLLER_RL_09_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RL_09_PT",
+    "label": "TOOL_ROLLER_RL_09_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RL_09_B",
+    "label": "ROLLER_RL_09_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -117.353,
+     166.211,
+     12.125,
+     -96.307,
+     193.789,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ENV_WHEEL_RL",
+    "label": "ENV_WHEEL_RL_O96x32_roller_envelope_marker",
+    "type": "Part::Box",
+    "bbox": [
+     -188.0,
+     164.0,
+     0.0,
+     -92.0,
+     196.0,
+     96.0
+    ],
+    "volume": 294912.0
+   },
+   {
+    "name": "MOTOR_RL",
+    "label": "MOTOR_RL_5203YellowJacket_O36_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -158.0,
+     53.5,
+     30.0,
+     -122.0,
+     113.5,
+     66.0
+    ],
+    "volume": 61072.561
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_BLK",
+    "label": "TOOL_MOUNT_MOTOR_RL_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -155.0,
+     113.5,
+     33.0,
+     -125.0,
+     116.0,
+     63.0
+    ],
+    "volume": 2250.0
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_FIL",
+    "label": "MOUNT_MOTOR_RL_face_plate_30x30_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     -155.0,
+     113.5,
+     33.0,
+     -125.0,
+     116.0,
+     63.0
+    ],
+    "volume": 2215.664
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_BORE",
+    "label": "TOOL_MOUNT_MOTOR_RL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.2,
+     112.5,
+     43.8,
+     -135.8,
+     117.0,
+     52.2
+    ],
+    "volume": 249.38
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_B00",
+    "label": "TOOL_MOUNT_MOTOR_RL_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     112.5,
+     37.0,
+     -147.0,
+     117.0,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_B01",
+    "label": "TOOL_MOUNT_MOTOR_RL_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     112.5,
+     55.0,
+     -147.0,
+     117.0,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_B02",
+    "label": "TOOL_MOUNT_MOTOR_RL_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     112.5,
+     37.0,
+     -129.0,
+     117.0,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_B03",
+    "label": "TOOL_MOUNT_MOTOR_RL_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     112.5,
+     55.0,
+     -129.0,
+     117.0,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "MOUNT_MOTOR_RL",
+    "label": "MOUNT_MOTOR_RL_face_plate_30x30_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     -155.0,
+     113.5,
+     33.0,
+     -125.0,
+     116.0,
+     63.0
+    ],
+    "volume": 1951.456
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RL_TOOLS",
+    "label": "TOOL_MOUNT_MOTOR_RL_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -151.0,
+     112.5,
+     37.0,
+     -129.0,
+     117.0,
+     59.0
+    ],
+    "volume": 475.574
+   },
+   {
+    "name": "TOOL_BEARING_RL_BLK",
+    "label": "TOOL_BEARING_RL_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -153.0,
+     118.5,
+     35.0,
+     -127.0,
+     124.5,
+     61.0
+    ],
+    "volume": 4056.0
+   },
+   {
+    "name": "TOOL_BEARING_RL_FIL",
+    "label": "BEARING_RL_flange_block_26x26_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     -153.0,
+     118.5,
+     35.0,
+     -127.0,
+     124.5,
+     61.0
+    ],
+    "volume": 3973.593
+   },
+   {
+    "name": "TOOL_BEARING_RL_BORE",
+    "label": "TOOL_BEARING_RL_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.2,
+     117.5,
+     43.8,
+     -135.8,
+     125.5,
+     52.2
+    ],
+    "volume": 443.342
+   },
+   {
+    "name": "TOOL_BEARING_RL_B00",
+    "label": "TOOL_BEARING_RL_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     117.5,
+     37.0,
+     -147.0,
+     125.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RL_B01",
+    "label": "TOOL_BEARING_RL_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     117.5,
+     55.0,
+     -147.0,
+     125.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RL_B02",
+    "label": "TOOL_BEARING_RL_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     117.5,
+     37.0,
+     -129.0,
+     125.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RL_B03",
+    "label": "TOOL_BEARING_RL_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     117.5,
+     55.0,
+     -129.0,
+     125.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "BEARING_RL",
+    "label": "BEARING_RL_flange_block_26x26_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     -153.0,
+     118.5,
+     35.0,
+     -127.0,
+     124.5,
+     61.0
+    ],
+    "volume": 3339.494
+   },
+   {
+    "name": "TOOL_BEARING_RL_TOOLS",
+    "label": "TOOL_BEARING_RL_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -151.0,
+     117.5,
+     37.0,
+     -129.0,
+     125.5,
+     59.0
+    ],
+    "volume": 845.465
+   },
+   {
+    "name": "SHAFT_RL",
+    "label": "SHAFT_RL_8mmREX_live_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.0,
+     100.0,
+     44.0,
+     -136.0,
+     176.0,
+     52.0
+    ],
+    "volume": 3820.177
+   },
+   {
+    "name": "WHEEL_ASSY_RR",
+    "label": "WHEEL_ASSY_RR_mecanum_carrier",
+    "type": "App::Part",
+    "bbox": [
+     -188.0,
+     -195.0,
+     -0.009,
+     -92.0,
+     -165.0,
+     96.009
+    ],
+    "volume": 95144.809
+   },
+   {
+    "name": "Origin070",
+    "label": "Origin097",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis035",
+    "label": "X-axis035",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis035",
+    "label": "Y-axis035",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis035",
+    "label": "Z-axis035",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane035",
+    "label": "XY-plane035",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     48.0,
+     1e+100,
+     1e+100,
+     48.0
+    ],
+    "volume": 1.28e+102
+   },
+   {
+    "name": "XZ_Plane035",
+    "label": "XZ-plane035",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane035",
+    "label": "YZ-plane035",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin071",
+    "label": "Origin096",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_RR_BLK",
+    "label": "TOOL_WHEEL_HUB_RR_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -13.0,
+     -10.0,
+     -13.0,
+     13.0,
+     10.0,
+     13.0
+    ],
+    "volume": 10618.583
+   },
+   {
+    "name": "TOOL_WHEEL_HUB_RR_BORE",
+    "label": "TOOL_WHEEL_HUB_RR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.2,
+     -11.0,
+     -4.2,
+     4.2,
+     11.0,
+     4.2
+    ],
+    "volume": 1219.189
+   },
+   {
+    "name": "WHEEL_HUB_RR",
+    "label": "WHEEL_HUB_RR_O26_hub_REXbore_VENDOR-PENDING",
+    "type": "Part::Cut",
+    "bbox": [
+     -153.0,
+     -190.0,
+     35.0,
+     -127.0,
+     -170.0,
+     61.0
+    ],
+    "volume": 9510.229
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_IN_BLK",
+    "label": "TOOL_WHEEL_PLATE_RR_IN_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_IN_BORE",
+    "label": "TOOL_WHEEL_PLATE_RR_IN_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     -16.0,
+     -4.5,
+     4.5,
+     -10.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_IN_BRD",
+    "label": "WHEEL_PLATE_RR_IN_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     -15.0,
+     -46.0,
+     46.0,
+     -11.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_RR_IN",
+    "label": "WHEEL_PLATE_RR_IN_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     -186.0,
+     -195.0,
+     2.0,
+     -94.0,
+     -191.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_OUT_BLK",
+    "label": "TOOL_WHEEL_PLATE_RR_OUT_BLK_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26590.44
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_OUT_BORE",
+    "label": "TOOL_WHEEL_PLATE_RR_OUT_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -4.5,
+     10.0,
+     -4.5,
+     4.5,
+     16.0,
+     4.5
+    ],
+    "volume": 381.704
+   },
+   {
+    "name": "TOOL_WHEEL_PLATE_RR_OUT_BRD",
+    "label": "WHEEL_PLATE_RR_OUT_O92_disc_chamfered_UNVERIFIED_bored",
+    "type": "Part::Cut",
+    "bbox": [
+     -46.0,
+     11.0,
+     -46.0,
+     46.0,
+     15.0,
+     46.0
+    ],
+    "volume": 26335.971
+   },
+   {
+    "name": "WHEEL_PLATE_RR_OUT",
+    "label": "WHEEL_PLATE_RR_OUT_O92_disc_chamfered_UNVERIFIED",
+    "type": "Part::Chamfer",
+    "bbox": [
+     -186.0,
+     -169.0,
+     2.0,
+     -94.0,
+     -165.0,
+     94.0
+    ],
+    "volume": 26049.039
+   },
+   {
+    "name": "ROLLER_RR_00",
+    "label": "ROLLER_RR_00_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -106.0,
+     -193.789,
+     34.211,
+     -92.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin072",
+    "label": "Origin100",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis036",
+    "label": "X-axis036",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis036",
+    "label": "Y-axis036",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis036",
+    "label": "Z-axis036",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane036",
+    "label": "XY-plane036",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane036",
+    "label": "XZ-plane036",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane036",
+    "label": "YZ-plane036",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin073",
+    "label": "Origin099",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_00_BT",
+    "label": "TOOL_ROLLER_RR_00_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_00_PT",
+    "label": "TOOL_ROLLER_RR_00_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_00_B",
+    "label": "ROLLER_RR_00_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -106.0,
+     -193.789,
+     34.211,
+     -92.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_01",
+    "label": "ROLLER_RR_01_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -117.353,
+     -193.789,
+     60.324,
+     -96.307,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin074",
+    "label": "Origin103",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis037",
+    "label": "X-axis037",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis037",
+    "label": "Y-axis037",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis037",
+    "label": "Z-axis037",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane037",
+    "label": "XY-plane037",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "XZ_Plane037",
+    "label": "XZ-plane037",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.347997333357532e+167
+   },
+   {
+    "name": "YZ_Plane037",
+    "label": "YZ-plane037",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin075",
+    "label": "Origin102",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_01_BT",
+    "label": "TOOL_ROLLER_RR_01_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_01_PT",
+    "label": "TOOL_ROLLER_RR_01_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_01_B",
+    "label": "ROLLER_RR_01_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -117.353,
+     -193.789,
+     60.324,
+     -96.307,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_02",
+    "label": "ROLLER_RR_02_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -140.613,
+     -193.789,
+     77.977,
+     -114.048,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin076",
+    "label": "Origin105",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis038",
+    "label": "X-axis038",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis038",
+    "label": "Y-axis038",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis038",
+    "label": "Z-axis038",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane038",
+    "label": "XY-plane038",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane038",
+    "label": "XZ-plane038",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane038",
+    "label": "YZ-plane038",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.6175968000290385e+168
+   },
+   {
+    "name": "Origin077",
+    "label": "Origin104",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_02_BT",
+    "label": "TOOL_ROLLER_RR_02_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_02_PT",
+    "label": "TOOL_ROLLER_RR_02_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_02_B",
+    "label": "ROLLER_RR_02_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -140.613,
+     -193.789,
+     77.977,
+     -114.048,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_03",
+    "label": "ROLLER_RR_03_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -165.952,
+     -193.789,
+     77.977,
+     -139.387,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin078",
+    "label": "Origin108",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis039",
+    "label": "X-axis039",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis039",
+    "label": "Y-axis039",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis039",
+    "label": "Z-axis039",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane039",
+    "label": "XY-plane039",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 2.695994666715064e+167
+   },
+   {
+    "name": "XZ_Plane039",
+    "label": "XZ-plane039",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane039",
+    "label": "YZ-plane039",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin079",
+    "label": "Origin107",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_03_BT",
+    "label": "TOOL_ROLLER_RR_03_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_03_PT",
+    "label": "TOOL_ROLLER_RR_03_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_03_B",
+    "label": "ROLLER_RR_03_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -165.952,
+     -193.789,
+     77.977,
+     -139.387,
+     -166.211,
+     96.009
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_04",
+    "label": "ROLLER_RR_04_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -183.693,
+     -193.789,
+     60.324,
+     -162.647,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin080",
+    "label": "Origin111",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis040",
+    "label": "X-axis040",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis040",
+    "label": "Y-axis040",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis040",
+    "label": "Z-axis040",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane040",
+    "label": "XY-plane040",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.347997333357532e+167
+   },
+   {
+    "name": "XZ_Plane040",
+    "label": "XZ-plane040",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane040",
+    "label": "YZ-plane040",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin081",
+    "label": "Origin110",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_04_BT",
+    "label": "TOOL_ROLLER_RR_04_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_04_PT",
+    "label": "TOOL_ROLLER_RR_04_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_04_B",
+    "label": "ROLLER_RR_04_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -183.693,
+     -193.789,
+     60.324,
+     -162.647,
+     -166.211,
+     83.875
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_05",
+    "label": "ROLLER_RR_05_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -188.0,
+     -193.789,
+     34.211,
+     -174.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin082",
+    "label": "Origin114",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis041",
+    "label": "X-axis041",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis041",
+    "label": "Y-axis041",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis041",
+    "label": "Z-axis041",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane041",
+    "label": "XY-plane041",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "XZ_Plane041",
+    "label": "XZ-plane041",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane041",
+    "label": "YZ-plane041",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin083",
+    "label": "Origin113",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_05_BT",
+    "label": "TOOL_ROLLER_RR_05_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_05_PT",
+    "label": "TOOL_ROLLER_RR_05_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_05_B",
+    "label": "ROLLER_RR_05_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -188.0,
+     -193.789,
+     34.211,
+     -174.0,
+     -166.211,
+     61.789
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_06",
+    "label": "ROLLER_RR_06_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -183.693,
+     -193.789,
+     12.125,
+     -162.647,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin084",
+    "label": "Origin116",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis042",
+    "label": "X-axis042",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis042",
+    "label": "Y-axis042",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis042",
+    "label": "Z-axis042",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane042",
+    "label": "XY-plane042",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+168
+   },
+   {
+    "name": "XZ_Plane042",
+    "label": "XZ-plane042",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.0783978666860256e+168
+   },
+   {
+    "name": "YZ_Plane042",
+    "label": "YZ-plane042",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin085",
+    "label": "Origin115",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_06_BT",
+    "label": "TOOL_ROLLER_RR_06_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_06_PT",
+    "label": "TOOL_ROLLER_RR_06_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_06_B",
+    "label": "ROLLER_RR_06_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -183.693,
+     -193.789,
+     12.125,
+     -162.647,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_07",
+    "label": "ROLLER_RR_07_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -165.952,
+     -193.789,
+     -0.009,
+     -139.387,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin086",
+    "label": "Origin119",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis043",
+    "label": "X-axis043",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis043",
+    "label": "Y-axis043",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis043",
+    "label": "Z-axis043",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane043",
+    "label": "XY-plane043",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane043",
+    "label": "XZ-plane043",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 1.8871962667005447e+168
+   },
+   {
+    "name": "YZ_Plane043",
+    "label": "YZ-plane043",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin087",
+    "label": "Origin118",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_07_BT",
+    "label": "TOOL_ROLLER_RR_07_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_07_PT",
+    "label": "TOOL_ROLLER_RR_07_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_07_B",
+    "label": "ROLLER_RR_07_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -165.952,
+     -193.789,
+     -0.009,
+     -139.387,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_08",
+    "label": "ROLLER_RR_08_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -140.613,
+     -193.789,
+     -0.009,
+     -114.048,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin088",
+    "label": "Origin122",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis044",
+    "label": "X-axis044",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis044",
+    "label": "Y-axis044",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis044",
+    "label": "Z-axis044",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane044",
+    "label": "XY-plane044",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane044",
+    "label": "XZ-plane044",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane044",
+    "label": "YZ-plane044",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 5.391989333430128e+167
+   },
+   {
+    "name": "Origin089",
+    "label": "Origin121",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_08_BT",
+    "label": "TOOL_ROLLER_RR_08_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_08_PT",
+    "label": "TOOL_ROLLER_RR_08_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_08_B",
+    "label": "ROLLER_RR_08_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -140.613,
+     -193.789,
+     -0.009,
+     -114.048,
+     -166.211,
+     18.023
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ROLLER_RR_09",
+    "label": "ROLLER_RR_09_slant_frame",
+    "type": "App::Part",
+    "bbox": [
+     -117.353,
+     -193.789,
+     12.125,
+     -96.307,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "Origin090",
+    "label": "Origin124",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis045",
+    "label": "X-axis045",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis045",
+    "label": "Y-axis045",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis045",
+    "label": "Z-axis045",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane045",
+    "label": "XY-plane045",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane045",
+    "label": "XZ-plane045",
+    "type": "App::Plane",
+    "bbox": [
+     -1e+100,
+     -1e+100,
+     -1e+100,
+     1e+100,
+     1e+100,
+     1e+100
+    ],
+    "volume": 4.3135914667441024e+168
+   },
+   {
+    "name": "YZ_Plane045",
+    "label": "YZ-plane045",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin091",
+    "label": "Origin123",
+    "type": "App::Point"
+   },
+   {
+    "name": "TOOL_ROLLER_RR_09_BT",
+    "label": "TOOL_ROLLER_RR_09_BT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -7.0,
+     -10.0,
+     -7.0,
+     7.0,
+     10.0,
+     7.0
+    ],
+    "volume": 3078.761
+   },
+   {
+    "name": "TOOL_ROLLER_RR_09_PT",
+    "label": "TOOL_ROLLER_RR_09_PT_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -2.5,
+     -17.0,
+     -2.5,
+     2.5,
+     17.0,
+     2.5
+    ],
+    "volume": 667.588
+   },
+   {
+    "name": "ROLLER_RR_09_B",
+    "label": "ROLLER_RR_09_B_O14_roller_axle_pin_VENDOR-PENDING",
+    "type": "Part::Fuse",
+    "bbox": [
+     -117.353,
+     -193.789,
+     12.125,
+     -96.307,
+     -166.211,
+     35.676
+    ],
+    "volume": 3353.65
+   },
+   {
+    "name": "ENV_WHEEL_RR",
+    "label": "ENV_WHEEL_RR_O96x32_roller_envelope_marker",
+    "type": "Part::Box",
+    "bbox": [
+     -188.0,
+     -196.0,
+     0.0,
+     -92.0,
+     -164.0,
+     96.0
+    ],
+    "volume": 294912.0
+   },
+   {
+    "name": "MOTOR_RR",
+    "label": "MOTOR_RR_5203YellowJacket_O36_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -158.0,
+     -113.5,
+     30.0,
+     -122.0,
+     -53.5,
+     66.0
+    ],
+    "volume": 61072.561
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_BLK",
+    "label": "TOOL_MOUNT_MOTOR_RR_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -155.0,
+     -116.0,
+     33.0,
+     -125.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 2250.0
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_FIL",
+    "label": "MOUNT_MOTOR_RR_face_plate_30x30_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     -155.0,
+     -116.0,
+     33.0,
+     -125.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 2215.664
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_BORE",
+    "label": "TOOL_MOUNT_MOTOR_RR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.2,
+     -117.0,
+     43.8,
+     -135.8,
+     -112.5,
+     52.2
+    ],
+    "volume": 249.38
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_B00",
+    "label": "TOOL_MOUNT_MOTOR_RR_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     -117.0,
+     37.0,
+     -147.0,
+     -112.5,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_B01",
+    "label": "TOOL_MOUNT_MOTOR_RR_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     -117.0,
+     55.0,
+     -147.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_B02",
+    "label": "TOOL_MOUNT_MOTOR_RR_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     -117.0,
+     37.0,
+     -129.0,
+     -112.5,
+     41.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_B03",
+    "label": "TOOL_MOUNT_MOTOR_RR_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     -117.0,
+     55.0,
+     -129.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 56.549
+   },
+   {
+    "name": "MOUNT_MOTOR_RR",
+    "label": "MOUNT_MOTOR_RR_face_plate_30x30_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     -155.0,
+     -116.0,
+     33.0,
+     -125.0,
+     -113.5,
+     63.0
+    ],
+    "volume": 1951.456
+   },
+   {
+    "name": "TOOL_MOUNT_MOTOR_RR_TOOLS",
+    "label": "TOOL_MOUNT_MOTOR_RR_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -151.0,
+     -117.0,
+     37.0,
+     -129.0,
+     -112.5,
+     59.0
+    ],
+    "volume": 475.574
+   },
+   {
+    "name": "TOOL_BEARING_RR_BLK",
+    "label": "TOOL_BEARING_RR_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -153.0,
+     -124.5,
+     35.0,
+     -127.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 4056.0
+   },
+   {
+    "name": "TOOL_BEARING_RR_FIL",
+    "label": "BEARING_RR_flange_block_26x26_UNVERIFIED_pre_bore",
+    "type": "Part::Fillet",
+    "bbox": [
+     -153.0,
+     -124.5,
+     35.0,
+     -127.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 3973.593
+   },
+   {
+    "name": "TOOL_BEARING_RR_BORE",
+    "label": "TOOL_BEARING_RR_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.2,
+     -125.5,
+     43.8,
+     -135.8,
+     -117.5,
+     52.2
+    ],
+    "volume": 443.342
+   },
+   {
+    "name": "TOOL_BEARING_RR_B00",
+    "label": "TOOL_BEARING_RR_B00_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     -125.5,
+     37.0,
+     -147.0,
+     -117.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RR_B01",
+    "label": "TOOL_BEARING_RR_B01_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -151.0,
+     -125.5,
+     55.0,
+     -147.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RR_B02",
+    "label": "TOOL_BEARING_RR_B02_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     -125.5,
+     37.0,
+     -129.0,
+     -117.5,
+     41.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "TOOL_BEARING_RR_B03",
+    "label": "TOOL_BEARING_RR_B03_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -133.0,
+     -125.5,
+     55.0,
+     -129.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 100.531
+   },
+   {
+    "name": "BEARING_RR",
+    "label": "BEARING_RR_flange_block_26x26_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     -153.0,
+     -124.5,
+     35.0,
+     -127.0,
+     -118.5,
+     61.0
+    ],
+    "volume": 3339.494
+   },
+   {
+    "name": "TOOL_BEARING_RR_TOOLS",
+    "label": "TOOL_BEARING_RR_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     -151.0,
+     -125.5,
+     37.0,
+     -129.0,
+     -117.5,
+     59.0
+    ],
+    "volume": 845.465
+   },
+   {
+    "name": "SHAFT_RR",
+    "label": "SHAFT_RR_8mmREX_live_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -144.0,
+     -176.0,
+     44.0,
+     -136.0,
+     -100.0,
+     52.0
+    ],
+    "volume": 3820.177
+   },
+   {
+    "name": "BATTERY",
+    "label": "BATTERY_180x55x75_on_pan_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -110.0,
+     -113.0,
+     5.5,
+     70.0,
+     -58.0,
+     40.5
+    ],
+    "volume": 346500.0
+   },
+   {
+    "name": "ELECTRONICS",
+    "label": "ELECTRONICS_control_hub_160x55x35_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -120.0,
+     60.0,
+     11.5,
+     40.0,
+     115.0,
+     39.5
+    ],
+    "volume": 246400.0
+   },
+   {
+    "name": "AXIS_X",
+    "label": "AXIS_X_indicator_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     0.0,
+     -2.0,
+     -2.0,
+     120.0,
+     2.0,
+     2.0
+    ],
+    "volume": 1920.0
+   },
+   {
+    "name": "AXIS_Y",
+    "label": "AXIS_Y_indicator_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -2.0,
+     0.0,
+     -2.0,
+     2.0,
+     120.0,
+     2.0
+    ],
+    "volume": 1920.0
+   },
+   {
+    "name": "AXIS_Z",
+    "label": "AXIS_Z_indicator_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -2.0,
+     -2.0,
+     0.0,
+     2.0,
+     2.0,
+     120.0
+    ],
+    "volume": 1920.0
+   },
+   {
+    "name": "VOL_INTAKE",
+    "label": "VOL_INTAKE_reserve_160x326x120_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     68.6,
+     -163.0,
+     0.0,
+     228.6,
+     163.0,
+     120.0
+    ],
+    "volume": 6259200.0
+   },
+   {
+    "name": "VOL_TRANSFER",
+    "label": "VOL_TRANSFER_floor_lane_to_intake_face_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -160.0,
+     -55.0,
+     10.0,
+     68.6,
+     55.0,
+     120.0
+    ],
+    "volume": 2766060.0
+   },
+   {
+    "name": "VOL_SHOOTER",
+    "label": "VOL_SHOOTER_reserve_200x200x250_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -200.0,
+     -100.0,
+     120.0,
+     0.0,
+     100.0,
+     370.0
+    ],
+    "volume": 10000000.0
+   },
+   {
+    "name": "VOL_LIFTER_STOWED",
+    "label": "VOL_LIFTER_STOWED_200x200x150_top_mount_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     20.0,
+     -100.0,
+     120.0,
+     220.0,
+     100.0,
+     270.0
+    ],
+    "volume": 6000000.0
+   },
+   {
+    "name": "VOL_LIFTER_DEPLOYED",
+    "label": "VOL_LIFTER_DEPLOYED_ghost_reach610_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     80.0,
+     -40.0,
+     120.0,
+     160.0,
+     40.0,
+     610.0
+    ],
+    "volume": 3136000.0
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_L_BLK",
+    "label": "TOOL_MECH_INTAKE_CHEEK_L_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     68.6,
+     153.0,
+     0.0,
+     228.6,
+     163.0,
+     120.0
+    ],
+    "volume": 192000.0
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_L_BORE",
+    "label": "TOOL_MECH_INTAKE_CHEEK_L_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     134.5,
+     152.0,
+     42.5,
+     145.5,
+     164.0,
+     53.5
+    ],
+    "volume": 1140.398
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_L_AXLEBORE",
+    "label": "TOOL_MECH_INTAKE_CHEEK_L_AXLEBORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     173.5,
+     152.0,
+     53.5,
+     186.5,
+     164.0,
+     66.5
+    ],
+    "volume": 1592.787
+   },
+   {
+    "name": "MECH_INTAKE_CHEEK_L",
+    "label": "MECH_INTAKE_CHEEK_L_cheek_plate_bored_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     68.6,
+     153.0,
+     0.0,
+     228.6,
+     163.0,
+     120.0
+    ],
+    "volume": 189722.345
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_L_TOOLS",
+    "label": "TOOL_MECH_INTAKE_CHEEK_L_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     134.5,
+     152.0,
+     42.5,
+     186.5,
+     164.0,
+     66.5
+    ],
+    "volume": 2733.186
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_R_BLK",
+    "label": "TOOL_MECH_INTAKE_CHEEK_R_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     68.6,
+     -163.0,
+     0.0,
+     228.6,
+     -153.0,
+     120.0
+    ],
+    "volume": 192000.0
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_R_BORE",
+    "label": "TOOL_MECH_INTAKE_CHEEK_R_BORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     134.5,
+     -164.0,
+     42.5,
+     145.5,
+     -152.0,
+     53.5
+    ],
+    "volume": 1140.398
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_R_AXLEBORE",
+    "label": "TOOL_MECH_INTAKE_CHEEK_R_AXLEBORE_construction_tool",
+    "type": "Part::Cylinder",
+    "bbox": [
+     173.5,
+     -164.0,
+     53.5,
+     186.5,
+     -152.0,
+     66.5
+    ],
+    "volume": 1592.787
+   },
+   {
+    "name": "MECH_INTAKE_CHEEK_R",
+    "label": "MECH_INTAKE_CHEEK_R_cheek_plate_bored_UNVERIFIED",
+    "type": "Part::Cut",
+    "bbox": [
+     68.6,
+     -163.0,
+     0.0,
+     228.6,
+     -153.0,
+     120.0
+    ],
+    "volume": 189722.345
+   },
+   {
+    "name": "TOOL_MECH_INTAKE_CHEEK_R_TOOLS",
+    "label": "TOOL_MECH_INTAKE_CHEEK_R_TOOLS_tool_compound",
+    "type": "Part::Compound",
+    "bbox": [
+     134.5,
+     -164.0,
+     42.5,
+     186.5,
+     -152.0,
+     66.5
+    ],
+    "volume": 2733.186
+   },
+   {
+    "name": "MECH_ROLLER",
+    "label": "MECH_INTAKE_roller_30x306_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     198.6,
+     -153.0,
+     48.0,
+     228.6,
+     153.0,
+     78.0
+    ],
+    "volume": 216298.654
+   },
+   {
+    "name": "TOOL_INTAKE_MOUNT_L_BLK",
+    "label": "TOOL_INTAKE_MOUNT_L_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     190.0,
+     118.5,
+     2.5,
+     210.0,
+     153.0,
+     22.5
+    ],
+    "volume": 13800.0
+   },
+   {
+    "name": "INTAKE_MOUNT_L",
+    "label": "INTAKE_MOUNT_L_frame_bracket_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     190.0,
+     118.5,
+     2.5,
+     210.0,
+     153.0,
+     22.5
+    ],
+    "volume": 13525.31
+   },
+   {
+    "name": "TOOL_INTAKE_MOUNT_R_BLK",
+    "label": "TOOL_INTAKE_MOUNT_R_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     190.0,
+     -153.0,
+     2.5,
+     210.0,
+     -118.5,
+     22.5
+    ],
+    "volume": 13800.0
+   },
+   {
+    "name": "INTAKE_MOUNT_R",
+    "label": "INTAKE_MOUNT_R_frame_bracket_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     190.0,
+     -153.0,
+     2.5,
+     210.0,
+     -118.5,
+     22.5
+    ],
+    "volume": 13525.31
+   },
+   {
+    "name": "MECH_CHANNEL",
+    "label": "MECH_CHANNEL_ball_path_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -150.0,
+     -50.0,
+     15.0,
+     58.6,
+     50.0,
+     115.0
+    ],
+    "volume": 2086000.0
+   },
+   {
+    "name": "TOOL_CHANNEL_SUPP_F_BLK",
+    "label": "TOOL_CHANNEL_SUPP_F_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     43.6,
+     -50.0,
+     5.5,
+     53.6,
+     50.0,
+     15.0
+    ],
+    "volume": 9500.0
+   },
+   {
+    "name": "CHANNEL_SUPP_F",
+    "label": "CHANNEL_SUPP_F_saddle_bracket_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     43.6,
+     -50.0,
+     5.5,
+     53.6,
+     50.0,
+     15.0
+    ],
+    "volume": 9369.522
+   },
+   {
+    "name": "TOOL_CHANNEL_SUPP_B_BLK",
+    "label": "TOOL_CHANNEL_SUPP_B_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -150.0,
+     -50.0,
+     5.5,
+     -140.0,
+     50.0,
+     15.0
+    ],
+    "volume": 9500.0
+   },
+   {
+    "name": "CHANNEL_SUPP_B",
+    "label": "CHANNEL_SUPP_B_saddle_bracket_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -150.0,
+     -50.0,
+     5.5,
+     -140.0,
+     50.0,
+     15.0
+    ],
+    "volume": 9369.522
+   },
+   {
+    "name": "MECH_DIVERTER",
+    "label": "MECH_DIVERTER_paddle_marker_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -158.0,
+     -50.0,
+     55.0,
+     -150.0,
+     50.0,
+     115.0
+    ],
+    "volume": 48000.0
+   },
+   {
+    "name": "DIVERTER_AXLE",
+    "label": "DIVERTER_AXLE_hinge_pin_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -157.0,
+     -58.0,
+     110.0,
+     -151.0,
+     58.0,
+     116.0
+    ],
+    "volume": 3279.823
+   },
+   {
+    "name": "MECH_SHOOTER_BODY",
+    "label": "MECH_SHOOTER_rear_plate_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -190.0,
+     -90.0,
+     130.0,
+     -182.0,
+     90.0,
+     340.0
+    ],
+    "volume": 302400.0
+   },
+   {
+    "name": "MECH_SHOOTER_HOOD",
+    "label": "MECH_SHOOTER_hood_plate_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -190.0,
+     -90.0,
+     340.0,
+     -10.0,
+     90.0,
+     348.0
+    ],
+    "volume": 259200.0
+   },
+   {
+    "name": "TOOL_SHOOTER_FLOOR_BLK",
+    "label": "TOOL_SHOOTER_FLOOR_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -190.0,
+     -90.0,
+     120.0,
+     -10.0,
+     90.0,
+     130.0
+    ],
+    "volume": 324000.0
+   },
+   {
+    "name": "SHOOTER_FLOOR",
+    "label": "SHOOTER_FLOOR_deck_plate_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -190.0,
+     -90.0,
+     120.0,
+     -10.0,
+     90.0,
+     130.0
+    ],
+    "volume": 323862.655
+   },
+   {
+    "name": "TOOL_SHOOTER_SIDE_L_BLK",
+    "label": "TOOL_SHOOTER_SIDE_L_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -182.0,
+     84.0,
+     130.0,
+     -10.0,
+     90.0,
+     340.0
+    ],
+    "volume": 216720.0
+   },
+   {
+    "name": "SHOOTER_SIDE_L",
+    "label": "SHOOTER_SIDE_L_wall_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -182.0,
+     84.0,
+     130.0,
+     -10.0,
+     90.0,
+     340.0
+    ],
+    "volume": 215998.938
+   },
+   {
+    "name": "TOOL_SHOOTER_SIDE_R_BLK",
+    "label": "TOOL_SHOOTER_SIDE_R_BLK_construction_tool",
+    "type": "Part::Box",
+    "bbox": [
+     -182.0,
+     -90.0,
+     130.0,
+     -10.0,
+     -84.0,
+     340.0
+    ],
+    "volume": 216720.0
+   },
+   {
+    "name": "SHOOTER_SIDE_R",
+    "label": "SHOOTER_SIDE_R_wall_UNVERIFIED",
+    "type": "Part::Fillet",
+    "bbox": [
+     -182.0,
+     -90.0,
+     130.0,
+     -10.0,
+     -84.0,
+     340.0
+    ],
+    "volume": 215998.938
+   },
+   {
+    "name": "MECH_FLYWHEEL_L",
+    "label": "MECH_FLYWHEEL_L_72x30_goBILDA-style_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -76.0,
+     50.0,
+     264.0,
+     -4.0,
+     80.0,
+     336.0
+    ],
+    "volume": 122145.122
+   },
+   {
+    "name": "MECH_FLYWHEEL_R",
+    "label": "MECH_FLYWHEEL_R_72x30_goBILDA-style_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -76.0,
+     -80.0,
+     264.0,
+     -4.0,
+     -50.0,
+     336.0
+    ],
+    "volume": 122145.122
+   },
+   {
+    "name": "MECH_LIFTER_STOWED",
+    "label": "MECH_LIFTER_stowed_region_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     160.0,
+     -30.0,
+     120.0,
+     220.0,
+     30.0,
+     270.0
+    ],
+    "volume": 540000.0
+   },
+   {
+    "name": "MECH_STAGE_1",
+    "label": "MECH_STAGE_1_deployed_section_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     82.0,
+     -38.0,
+     120.0,
+     158.0,
+     38.0,
+     340.0
+    ],
+    "volume": 1270720.0
+   },
+   {
+    "name": "MECH_STAGE_2",
+    "label": "MECH_STAGE_2_deployed_section_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     83.0,
+     -37.0,
+     230.0,
+     157.0,
+     37.0,
+     440.0
+    ],
+    "volume": 1149960.0
+   },
+   {
+    "name": "MECH_STAGE_3",
+    "label": "MECH_STAGE_3_deployed_section_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     84.0,
+     -36.0,
+     335.0,
+     156.0,
+     36.0,
+     560.0
+    ],
+    "volume": 1166400.0
+   },
+   {
+    "name": "MECH_CARRIAGE",
+    "label": "MECH_CARRIAGE_stage3_top_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     60.0,
+     -60.0,
+     560.0,
+     180.0,
+     60.0,
+     600.0
+    ],
+    "volume": 576000.0
+   },
+   {
+    "name": "MECH_CRADLE",
+    "label": "MECH_CRADLE_nectar_cup_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     60.0,
+     -60.0,
+     600.05,
+     180.0,
+     60.0,
+     640.05
+    ],
+    "volume": 576000.0
+   },
+   {
+    "name": "PIVOT_MOUNT_L",
+    "label": "PIVOT_MOUNT_L_intake_pivot_boss_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     168.0,
+     133.0,
+     48.0,
+     192.0,
+     153.0,
+     72.0
+    ],
+    "volume": 9047.787
+   },
+   {
+    "name": "PIVOT_MOUNT_R",
+    "label": "PIVOT_MOUNT_R_intake_pivot_boss_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     168.0,
+     -153.0,
+     48.0,
+     192.0,
+     -133.0,
+     72.0
+    ],
+    "volume": 9047.787
+   },
+   {
+    "name": "DIVERTER_HORN",
+    "label": "DIVERTER_HORN_servo_arm_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -184.0,
+     -5.0,
+     85.0,
+     -154.0,
+     5.0,
+     105.0
+    ],
+    "volume": 6000.0
+   },
+   {
+    "name": "STUB_SHAFT_L",
+    "label": "STUB_SHAFT_L_8mmREX_flywheel_shaft_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -44.0,
+     45.0,
+     296.0,
+     -36.0,
+     85.0,
+     304.0
+    ],
+    "volume": 2010.619
+   },
+   {
+    "name": "STUB_SHAFT_R",
+    "label": "STUB_SHAFT_R_8mmREX_flywheel_shaft_VENDOR-PENDING",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -44.0,
+     -85.0,
+     296.0,
+     -36.0,
+     -45.0,
+     304.0
+    ],
+    "volume": 2010.619
+   },
+   {
+    "name": "STAGE_GUIDE_L",
+    "label": "STAGE_GUIDE_L_cascade_guide_block_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     117.0,
+     35.0,
+     325.0,
+     123.0,
+     41.0,
+     345.0
+    ],
+    "volume": 720.0
+   },
+   {
+    "name": "STAGE_GUIDE_R",
+    "label": "STAGE_GUIDE_R_cascade_guide_block_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     117.0,
+     -41.0,
+     325.0,
+     123.0,
+     -35.0,
+     345.0
+    ],
+    "volume": 720.0
+   },
+   {
+    "name": "CRADLE_LIP",
+    "label": "CRADLE_LIP_retention_rim_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     174.0,
+     -60.0,
+     628.0,
+     180.0,
+     60.0,
+     640.0
+    ],
+    "volume": 8640.0
+   },
+   {
+    "name": "ELEC_RAIL_L",
+    "label": "ELEC_RAIL_L_hub_mount_rail_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -110.0,
+     70.0,
+     5.5,
+     30.0,
+     78.0,
+     11.5
+    ],
+    "volume": 6720.0
+   },
+   {
+    "name": "ELEC_RAIL_R",
+    "label": "ELEC_RAIL_R_hub_mount_rail_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -110.0,
+     97.0,
+     5.5,
+     30.0,
+     105.0,
+     11.5
+    ],
+    "volume": 6720.0
+   },
+   {
+    "name": "INTAKE_AXLE",
+    "label": "INTAKE_AXLE_O12_pivot_shaft_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     174.0,
+     -163.5,
+     54.0,
+     186.0,
+     163.5,
+     66.0
+    ],
+    "volume": 36982.829
+   },
+   {
+    "name": "POST_SHOOTER_L",
+    "label": "POST_SHOOTER_L_shooter_upright_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -110.0,
+     70.0,
+     45.5,
+     -90.0,
+     90.0,
+     120.0
+    ],
+    "volume": 29800.0
+   },
+   {
+    "name": "POST_SHOOTER_R",
+    "label": "POST_SHOOTER_R_shooter_upright_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -110.0,
+     -90.0,
+     45.5,
+     -90.0,
+     -70.0,
+     120.0
+    ],
+    "volume": 29800.0
+   },
+   {
+    "name": "LIFTER_PED",
+    "label": "LIFTER_PED_mast_pedestal_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     80.0,
+     -40.0,
+     5.5,
+     160.0,
+     40.0,
+     112.0
+    ],
+    "volume": 681600.0
+   },
+   {
+    "name": "LIFTER_BASE",
+    "label": "LIFTER_BASE_120x120_plate_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     62.0,
+     -58.0,
+     112.0,
+     178.0,
+     58.0,
+     120.0
+    ],
+    "volume": 107648.0
+   },
+   {
+    "name": "REF_HIVE",
+    "label": "REF_HIVE_aim_marker_position_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     1028.6,
+     -30.0,
+     270.0,
+     1088.6,
+     30.0,
+     330.0
+    ],
+    "volume": 216000.0
+   },
+   {
+    "name": "REF_FLOWER",
+    "label": "REF_FLOWER_aim_marker_z546_sec9.7",
+    "type": "Part::Box",
+    "bbox": [
+     180.0,
+     -30.0,
+     541.0,
+     240.0,
+     30.0,
+     551.0
+    ],
+    "volume": 36000.0
+   },
+   {
+    "name": "Envelopes",
+    "label": "GRP_envelopes",
+    "type": "App::Part",
+    "bbox": [
+     -228.6,
+     -304.8,
+     0.0,
+     1088.6,
+     304.8,
+     736.5
+    ],
+    "volume": 351599532.128
+   },
+   {
+    "name": "Origin092",
+    "label": "Origin127",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis046",
+    "label": "X-axis046",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis046",
+    "label": "Y-axis046",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis046",
+    "label": "Z-axis046",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane046",
+    "label": "XY-plane046",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane046",
+    "label": "XZ-plane046",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane046",
+    "label": "YZ-plane046",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin093",
+    "label": "Origin126",
+    "type": "App::Point"
+   },
+   {
+    "name": "Drivebase",
+    "label": "GRP_drivebase",
+    "type": "App::Part",
+    "bbox": [
+     -210.0,
+     -195.0,
+     -0.009,
+     210.0,
+     195.0,
+     96.009
+    ],
+    "volume": 1366930.011
+   },
+   {
+    "name": "Origin094",
+    "label": "Origin130",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis047",
+    "label": "X-axis047",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis047",
+    "label": "Y-axis047",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis047",
+    "label": "Z-axis047",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane047",
+    "label": "XY-plane047",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane047",
+    "label": "XZ-plane047",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane047",
+    "label": "YZ-plane047",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin095",
+    "label": "Origin129",
+    "type": "App::Point"
+   },
+   {
+    "name": "Intake",
+    "label": "GRP_intake",
+    "type": "App::Part",
+    "bbox": [
+     68.6,
+     -163.5,
+     0.0,
+     228.6,
+     163.5,
+     120.0
+    ],
+    "volume": 677872.367
+   },
+   {
+    "name": "Origin096",
+    "label": "Origin133",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis048",
+    "label": "X-axis048",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis048",
+    "label": "Y-axis048",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis048",
+    "label": "Z-axis048",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane048",
+    "label": "XY-plane048",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane048",
+    "label": "XZ-plane048",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane048",
+    "label": "YZ-plane048",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin097",
+    "label": "Origin132",
+    "type": "App::Point"
+   },
+   {
+    "name": "Transfer",
+    "label": "GRP_transfer",
+    "type": "App::Part",
+    "bbox": [
+     -184.0,
+     -58.0,
+     5.5,
+     58.6,
+     58.0,
+     116.0
+    ],
+    "volume": 2162018.867
+   },
+   {
+    "name": "Origin098",
+    "label": "Origin135",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis049",
+    "label": "X-axis049",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis049",
+    "label": "Y-axis049",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis049",
+    "label": "Z-axis049",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane049",
+    "label": "XY-plane049",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane049",
+    "label": "XZ-plane049",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane049",
+    "label": "YZ-plane049",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin099",
+    "label": "Origin134",
+    "type": "App::Point"
+   },
+   {
+    "name": "Shooter",
+    "label": "GRP_shooter",
+    "type": "App::Part",
+    "bbox": [
+     -190.0,
+     -90.0,
+     45.5,
+     -4.0,
+     90.0,
+     348.0
+    ],
+    "volume": 1625372.014
+   },
+   {
+    "name": "Origin100",
+    "label": "Origin138",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis050",
+    "label": "X-axis050",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis050",
+    "label": "Y-axis050",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis050",
+    "label": "Z-axis050",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane050",
+    "label": "XY-plane050",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane050",
+    "label": "XZ-plane050",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane050",
+    "label": "YZ-plane050",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin101",
+    "label": "Origin137",
+    "type": "App::Point"
+   },
+   {
+    "name": "Lifter",
+    "label": "GRP_lifter",
+    "type": "App::Part",
+    "bbox": [
+     60.0,
+     -60.0,
+     5.5,
+     220.0,
+     60.0,
+     640.05
+    ],
+    "volume": 6078408.0
+   },
+   {
+    "name": "Origin102",
+    "label": "Origin141",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis051",
+    "label": "X-axis051",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis051",
+    "label": "Y-axis051",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis051",
+    "label": "Z-axis051",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane051",
+    "label": "XY-plane051",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane051",
+    "label": "XZ-plane051",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane051",
+    "label": "YZ-plane051",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin103",
+    "label": "Origin140",
+    "type": "App::Point"
+   },
+   {
+    "name": "Electronics",
+    "label": "GRP_electronics",
+    "type": "App::Part",
+    "bbox": [
+     -120.0,
+     -113.0,
+     5.5,
+     70.0,
+     115.0,
+     40.5
+    ],
+    "volume": 606340.0
+   },
+   {
+    "name": "Origin104",
+    "label": "Origin144",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis052",
+    "label": "X-axis052",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis052",
+    "label": "Y-axis052",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis052",
+    "label": "Z-axis052",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane052",
+    "label": "XY-plane052",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane052",
+    "label": "XZ-plane052",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane052",
+    "label": "YZ-plane052",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin105",
+    "label": "Origin143",
+    "type": "App::Point"
+   },
+   {
+    "name": "Tools",
+    "label": "GRP_tools",
+    "type": "App::Part",
+    "bbox": [
+     -210.0,
+     -164.0,
+     -46.0,
+     228.6,
+     164.0,
+     340.0
+    ],
+    "volume": 10345538.738
+   },
+   {
+    "name": "Origin106",
+    "label": "Origin146",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis053",
+    "label": "X-axis053",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis053",
+    "label": "Y-axis053",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis053",
+    "label": "Z-axis053",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane053",
+    "label": "XY-plane053",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane053",
+    "label": "XZ-plane053",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane053",
+    "label": "YZ-plane053",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin107",
+    "label": "Origin145",
+    "type": "App::Point"
+   }
+  ],
+  "aliases": {
+   "alias": {
+    "value": "value",
+    "unit": "unit",
+    "status": "status"
+   },
+   "start_cube": {
+    "value": "457.2",
+    "unit": "mm",
+    "status": "VERIFIED"
+   },
+   "expansion_width": {
+    "value": "457.2",
+    "unit": "mm",
+    "status": "VERIFIED"
+   },
+   "expansion_depth": {
+    "value": "609.6",
+    "unit": "mm",
+    "status": "VERIFIED"
+   },
+   "expansion_height": {
+    "value": "736.5",
+    "unit": "mm",
+    "status": "VERIFIED"
+   },
+   "chassis_length": {
+    "value": "420",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_width": {
+    "value": "420",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_height": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "wheel_dia": {
+    "value": "96",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "wheel_width": {
+    "value": "32",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "wheel_x_offset": {
+    "value": "140",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "wheel_y_offset": {
+    "value": "180",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "battery_l": {
+    "value": "180",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "battery_w": {
+    "value": "55",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "battery_h": {
+    "value": "35",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bat_x": {
+    "value": "-110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bat_y": {
+    "value": "-113",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bat_z": {
+    "value": "5.5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_l": {
+    "value": "160",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_w": {
+    "value": "55",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_h": {
+    "value": "28",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_x": {
+    "value": "-120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_y": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "elec_z": {
+    "value": "11.5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "axis_len": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "axis_thk": {
+    "value": "4",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_depth": {
+    "value": "160",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_width": {
+    "value": "326",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_height": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_w": {
+    "value": "110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_h": {
+    "value": "110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_x0": {
+    "value": "-160",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_z": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "plate_thk": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "plate_w": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "div_h": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "shooter_l": {
+    "value": "200",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "shooter_w": {
+    "value": "200",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "shooter_h": {
+    "value": "250",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "shooter_z": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bore": {
+    "value": "100",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "flywheel_dia": {
+    "value": "72",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "flywheel_w": {
+    "value": "30",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "flywheel_x": {
+    "value": "-40",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_dia": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_width": {
+    "value": "306",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_stow_l": {
+    "value": "200",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_stow_w": {
+    "value": "200",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_stow_h": {
+    "value": "150",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_stow_x": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_stow_z": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mast_w": {
+    "value": "80",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_dep_z0": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "reach_z": {
+    "value": "610",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage1_w": {
+    "value": "76",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage1_z1": {
+    "value": "340",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage2_w": {
+    "value": "74",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage2_z0": {
+    "value": "230",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage2_z1": {
+    "value": "440",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage3_w": {
+    "value": "72",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage3_z0": {
+    "value": "335",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stage3_z1": {
+    "value": "560",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "carriage_w": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "carriage_h": {
+    "value": "40",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "cradle_w": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "cradle_h": {
+    "value": "40",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "cradle_z": {
+    "value": "600",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "hive_aim_dist": {
+    "value": "800",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "hive_aim_z": {
+    "value": "300",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "ref_size": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "flower_aim_x": {
+    "value": "180",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "flower_aim_z": {
+    "value": "546",
+    "unit": "mm",
+    "status": "VERIFIED"
+   },
+   "flower_aim_w": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_count": {
+    "value": "10",
+    "unit": "count",
+    "status": "VENDOR-PENDING"
+   },
+   "mec_roll_dia": {
+    "value": "14",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "mec_roll_rad": {
+    "value": "41",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "mec_roll_len": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mec_roll_pitch": {
+    "value": "36",
+    "unit": "deg",
+    "status": "VENDOR-PENDING"
+   },
+   "mec_roll_slant": {
+    "value": "45",
+    "unit": "deg",
+    "status": "UNVERIFIED"
+   },
+   "mec_pin_dia": {
+    "value": "5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mec_pin_len": {
+    "value": "34",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pv_boss_dia": {
+    "value": "24",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pv_boss_len": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pv_boss_x": {
+    "value": "180",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pv_boss_z": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_l": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_w": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_h": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "stub_dia": {
+    "value": "8",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "stub_len": {
+    "value": "40",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "guide_w": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "guide_l": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_h": {
+    "value": "12",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_t": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "erail_l": {
+    "value": "140",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "erail_w": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "erail_h": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "rail_size": {
+    "value": "48",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "rail_wall": {
+    "value": "2.5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "notch_w": {
+    "value": "16",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "notch_d": {
+    "value": "14",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "hole_dia": {
+    "value": "4",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "hole_pitch": {
+    "value": "48",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pan_thk": {
+    "value": "3",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "deck_thk": {
+    "value": "3",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pan_fillet": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "deck_fillet": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "plate_fillet": {
+    "value": "4",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "wplate_dia": {
+    "value": "92",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "wplate_thk": {
+    "value": "4",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "wplate_gap": {
+    "value": "1",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "hub_dia": {
+    "value": "26",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "hub_w": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bore_dia": {
+    "value": "8.4",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "plate_bore": {
+    "value": "9",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "shaft_dia": {
+    "value": "8",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "shaft_len": {
+    "value": "76",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bear_w": {
+    "value": "26",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bear_h": {
+    "value": "26",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bear_t": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bear_bore": {
+    "value": "8.4",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "bear_bolt_d": {
+    "value": "4",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "bear_bolt_off": {
+    "value": "9",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mface_w": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mface_h": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "mface_t": {
+    "value": "2.5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "motor_dia": {
+    "value": "36",
+    "unit": "mm",
+    "status": "VENDOR-PENDING"
+   },
+   "motor_len": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_axle_dia": {
+    "value": "12",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "post_w": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_base_w": {
+    "value": "116",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lifter_ped_w": {
+    "value": "80",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "imount_l": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "imount_h": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "csupp_w": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "csupp_h": {
+    "value": "9.5",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "sfloor_thk": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "sside_thk": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "daxle_dia": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "cheek_bore": {
+    "value": "11",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "axle_bore": {
+    "value": "13",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "intake": {
+  "objects": [
+   {
+    "name": "Parameters",
+    "label": "Parameters",
+    "type": "Spreadsheet::Sheet"
+   },
+   {
+    "name": "IntakeAssembly",
+    "label": "INTAKE_assembly_v01_floor_intake_placeholders",
+    "type": "App::Part",
+    "bbox": [
+     -60.0,
+     -177.0,
+     0.0,
+     160.0,
+     177.0,
+     120.0
+    ],
+    "volume": 9237309.974
+   },
+   {
+    "name": "Origin",
+    "label": "Origin",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis",
+    "label": "X-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis",
+    "label": "Y-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis",
+    "label": "Z-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane",
+    "label": "XY-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane",
+    "label": "XZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane",
+    "label": "YZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin001",
+    "label": "Origin001",
+    "type": "App::Point"
+   },
+   {
+    "name": "CHASSIS_STUB",
+    "label": "CHASSIS_STUB_front_edge_reference_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -60.0,
+     -170.0,
+     30.0,
+     0.0,
+     170.0,
+     70.0
+    ],
+    "volume": 816000.0
+   },
+   {
+    "name": "INTAKE_FRAME",
+    "label": "INTAKE_FRAME_160x326x120_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     0.0,
+     -163.0,
+     0.0,
+     160.0,
+     163.0,
+     120.0
+    ],
+    "volume": 6259200.0
+   },
+   {
+    "name": "THROAT_CLEAR",
+    "label": "THROAT_CLEAR_opening_120x110_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     125.0,
+     -60.0,
+     10.0,
+     160.0,
+     60.0,
+     120.0
+    ],
+    "volume": 462000.0
+   },
+   {
+    "name": "ROLLER_LO",
+    "label": "ROLLER_LO_50x300_intake_roller_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     75.0,
+     -150.0,
+     -0.0,
+     125.0,
+     150.0,
+     50.0
+    ],
+    "volume": 589048.623
+   },
+   {
+    "name": "ROLLER_HI",
+    "label": "ROLLER_HI_50x300_intake_roller_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     75.0,
+     -150.0,
+     70.0,
+     125.0,
+     150.0,
+     120.0
+    ],
+    "volume": 589048.623
+   },
+   {
+    "name": "PIVOT_PLATE_L",
+    "label": "PIVOT_PLATE_L_pivot_plate_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     0.0,
+     163.0,
+     0.0,
+     160.0,
+     171.0,
+     120.0
+    ],
+    "volume": 153600.0
+   },
+   {
+    "name": "PIVOT_PLATE_R",
+    "label": "PIVOT_PLATE_R_pivot_plate_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     0.0,
+     -171.0,
+     0.0,
+     160.0,
+     -163.0,
+     120.0
+    ],
+    "volume": 153600.0
+   },
+   {
+    "name": "PIVOT_BOSS",
+    "label": "PIVOT_BOSS_24x342_hinge_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     3.0,
+     -171.0,
+     48.0,
+     27.0,
+     171.0,
+     72.0
+    ],
+    "volume": 154717.155
+   },
+   {
+    "name": "LIP_RAMP",
+    "label": "LIP_RAMP_mouth_scoop_tilted_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     105.0,
+     -70.0,
+     7.899,
+     154.037,
+     70.0,
+     30.638
+    ],
+    "volume": 42000.0
+   },
+   {
+    "name": "PIVOT_MOUNT_L",
+    "label": "PIVOT_MOUNT_L_cheek_mount_boss_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     3.0,
+     157.0,
+     48.0,
+     27.0,
+     177.0,
+     72.0
+    ],
+    "volume": 9047.787
+   },
+   {
+    "name": "PIVOT_MOUNT_R",
+    "label": "PIVOT_MOUNT_R_cheek_mount_boss_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     3.0,
+     -177.0,
+     48.0,
+     27.0,
+     -157.0,
+     72.0
+    ],
+    "volume": 9047.787
+   }
+  ],
+  "aliases": {
+   "alias": {
+    "value": "value",
+    "unit": "unit",
+    "status": "status"
+   },
+   "intake_width": {
+    "value": "326",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_depth": {
+    "value": "160",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "intake_height": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "throat_clear_w": {
+    "value": "120",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "throat_clear_h": {
+    "value": "110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "throat_depth": {
+    "value": "35",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "throat_z": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_dia": {
+    "value": "50",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_width": {
+    "value": "300",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_x": {
+    "value": "100",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_z1": {
+    "value": "25",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "roller_z2": {
+    "value": "95",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_stub_l": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_stub_w": {
+    "value": "340",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_stub_h": {
+    "value": "40",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "chassis_stub_z": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "plate_thk": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pivot_boss_dia": {
+    "value": "24",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pv_boss_len": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pivot_boss_x": {
+    "value": "15",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "pivot_boss_z": {
+    "value": "60",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_len": {
+    "value": "50",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_w": {
+    "value": "140",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_thk": {
+    "value": "6",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_x": {
+    "value": "105",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_z": {
+    "value": "25",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "lip_ang": {
+    "value": "20",
+    "unit": "deg",
+    "status": "UNVERIFIED"
+   }
+  }
+ },
+ "transfer": {
+  "objects": [
+   {
+    "name": "Parameters",
+    "label": "Parameters",
+    "type": "Spreadsheet::Sheet"
+   },
+   {
+    "name": "TransferAssembly",
+    "label": "TRANSFER_assembly_v01_channel_placeholders",
+    "type": "App::Part",
+    "bbox": [
+     -160.0,
+     -155.0,
+     7.642,
+     180.0,
+     65.0,
+     210.0
+    ],
+    "volume": 5304138.051
+   },
+   {
+    "name": "Origin",
+    "label": "Origin",
+    "type": "App::Origin"
+   },
+   {
+    "name": "X_Axis",
+    "label": "X-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Y_Axis",
+    "label": "Y-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "Z_Axis",
+    "label": "Z-axis",
+    "type": "App::Line"
+   },
+   {
+    "name": "XY_Plane",
+    "label": "XY-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "XZ_Plane",
+    "label": "XZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "YZ_Plane",
+    "label": "YZ-plane",
+    "type": "App::Plane"
+   },
+   {
+    "name": "Origin001",
+    "label": "Origin001",
+    "type": "App::Point"
+   },
+   {
+    "name": "CHANNEL",
+    "label": "CHANNEL_clear_110x110x340_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -160.0,
+     -55.0,
+     10.0,
+     180.0,
+     55.0,
+     120.0
+    ],
+    "volume": 4114000.0
+   },
+   {
+    "name": "GUIDE_L",
+    "label": "GUIDE_L_channel_wall_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -160.0,
+     55.0,
+     10.0,
+     180.0,
+     65.0,
+     120.0
+    ],
+    "volume": 374000.0
+   },
+   {
+    "name": "GUIDE_R",
+    "label": "GUIDE_R_channel_wall_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -160.0,
+     -65.0,
+     10.0,
+     180.0,
+     -55.0,
+     120.0
+    ],
+    "volume": 374000.0
+   },
+   {
+    "name": "ZONE_INLET",
+    "label": "ZONE_INLET_intake_end_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     170.0,
+     -65.0,
+     10.0,
+     180.0,
+     65.0,
+     120.0
+    ],
+    "volume": 143000.0
+   },
+   {
+    "name": "ZONE_OUTLET",
+    "label": "ZONE_OUTLET_scoring_end_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -160.0,
+     -65.0,
+     10.0,
+     -150.0,
+     65.0,
+     120.0
+    ],
+    "volume": 143000.0
+   },
+   {
+    "name": "DIVERTER_AXIS",
+    "label": "DIVERTER_AXIS_hinge_UNVERIFIED",
+    "type": "Part::Cylinder",
+    "bbox": [
+     -158.0,
+     -65.0,
+     57.0,
+     -142.0,
+     65.0,
+     73.0
+    ],
+    "volume": 26138.051
+   },
+   {
+    "name": "DIVERTER_PADDLE",
+    "label": "DIVERTER_PADDLE_flap_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -150.0,
+     -55.0,
+     7.642,
+     -63.496,
+     55.0,
+     71.553
+    ],
+    "volume": 88000.0
+   },
+   {
+    "name": "ROUTE_POLLEN",
+    "label": "ROUTE_POLLEN_to_shooter_up_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -150.0,
+     -10.0,
+     120.0,
+     -140.0,
+     10.0,
+     210.0
+    ],
+    "volume": 18000.0
+   },
+   {
+    "name": "ROUTE_NECTAR",
+    "label": "ROUTE_NECTAR_to_lifter_hopper_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -150.0,
+     -155.0,
+     65.0,
+     -140.0,
+     -65.0,
+     85.0
+    ],
+    "volume": 18000.0
+   },
+   {
+    "name": "DIVERTER_HORN",
+    "label": "DIVERTER_HORN_servo_arm_UNVERIFIED",
+    "type": "Part::Box",
+    "bbox": [
+     -145.0,
+     -5.0,
+     73.0,
+     -115.0,
+     5.0,
+     93.0
+    ],
+    "volume": 6000.0
+   }
+  ],
+  "aliases": {
+   "alias": {
+    "value": "value",
+    "unit": "unit",
+    "status": "status"
+   },
+   "channel_len": {
+    "value": "340",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_w": {
+    "value": "110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_h": {
+    "value": "110",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_x0": {
+    "value": "-160",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "channel_z": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "guide_thk": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "zone_thk": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "diverter_axis_dia": {
+    "value": "16",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "diverter_axis_x": {
+    "value": "-150",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "paddle_len": {
+    "value": "100",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "paddle_thk": {
+    "value": "8",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "paddle_ang": {
+    "value": "35",
+    "unit": "deg",
+    "status": "UNVERIFIED"
+   },
+   "route_len": {
+    "value": "90",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "route_thk": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "route_w": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_l": {
+    "value": "30",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_w": {
+    "value": "10",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   },
+   "horn_h": {
+    "value": "20",
+    "unit": "mm",
+    "status": "UNVERIFIED"
+   }
+  }
+ }
+}

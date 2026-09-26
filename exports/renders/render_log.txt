@@ -1,0 +1,21 @@
+RENDER: front tris=174216 edges=858 aspect=0.685
+RENDER: side tris=174216 edges=989 aspect=0.609
+RENDER: top tris=174216 edges=801 aspect=1.125
+RENDER: iso tris=174216 edges=1479 aspect=0.799
+RENDER: iso projection az=45 el=35.264deg (atan(1/sqrt2)) orthographic
+PNG: front tris=174216 edges=858 -> master_front.png
+PNG: side tris=174216 edges=989 -> master_side.png
+PNG: top tris=174216 edges=801 -> master_top.png
+PNG: iso tris=174216 edges=1479 -> master_iso.png
+PNG: front tris=129060 edges=485 -> drivebase_front.png
+PNG: side tris=129060 edges=597 -> drivebase_side.png
+PNG: top tris=129060 edges=445 -> drivebase_top.png
+PNG: iso tris=129060 edges=769 -> drivebase_iso.png
+PNG: front tris=32464 edges=243 -> intake_front.png
+PNG: side tris=32464 edges=265 -> intake_side.png
+PNG: top tris=32464 edges=260 -> intake_top.png
+PNG: iso tris=32464 edges=436 -> intake_iso.png
+PNG: front tris=7184 edges=104 -> transfer_front.png
+PNG: side tris=7184 edges=94 -> transfer_side.png
+PNG: top tris=7184 edges=85 -> transfer_top.png
+PNG: iso tris=7184 edges=204 -> transfer_iso.png

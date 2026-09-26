@@ -1,0 +1,13 @@
+# FreeCAD backups and per-document private dirs
+*.FCStd1
+*.FCStd2
+*.FCStd*/
+PrivateDir/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS cruft
+Thumbs.db
+desktop.ini

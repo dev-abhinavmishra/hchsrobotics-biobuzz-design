@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIOBUZZ FTC Robot — Interactive Design Review</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%23ffd23f'/></svg>">
+<style>
+  :root {
+    --bg: #0b0e13;
+    --panel: rgba(17, 21, 28, 0.88);
+    --panel-border: rgba(255, 210, 63, 0.14);
+    --accent: #ffd23f;
+    --accent-dim: #8a7521;
+    --text: #dfe3ea;
+    --text-dim: #8b93a3;
+    --mono: 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+
+  .panel {
+    position: absolute; background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 10px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  /* ---- header ---- */
+  #header { top: 14px; left: 50%; transform: translateX(-50%); padding: 9px 22px; text-align: center; z-index: 10; }
+  #header h1 { font-size: 15px; font-weight: 600; letter-spacing: 2.5px; color: var(--accent); }
+  #header h1 span { color: var(--text-dim); font-weight: 400; }
+  #header .sub { font-size: 10.5px; color: var(--text-dim); letter-spacing: 1px; margin-top: 2px; }
+
+  /* ---- left: subsystem tree ---- */
+  #tree { left: 14px; top: 14px; width: 250px; max-height: calc(100% - 160px); display: flex; flex-direction: column; z-index: 10; }
+  .panel-title { padding: 10px 14px 6px; font-size: 10px; font-weight: 700; letter-spacing: 1.8px;
+    color: var(--text-dim); text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .tree-tabs { display: flex; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .tree-tabs div { flex: 1; padding: 8px 0; text-align: center; font-size: 10px; font-weight: 700;
+    letter-spacing: 1.8px; text-transform: uppercase; color: var(--text-dim); cursor: pointer; }
+  .tree-tabs div.active { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+  #tree-list, #parts-list { overflow-y: auto; padding: 6px; }
+  #parts-list { display: none; padding-top: 0; }
+  #parts-search { width: calc(100% - 12px); margin: 6px; padding: 6px 10px; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: var(--text); font-size: 11.5px;
+    font-family: var(--mono); outline: none; }
+  #parts-search:focus { border-color: var(--accent-dim); }
+  .part-group { padding: 7px 9px 3px; font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px;
+    color: var(--accent-dim); text-transform: uppercase; }
+  .part-item { display: flex; align-items: center; gap: 7px; padding: 5px 9px; border-radius: 6px;
+    cursor: pointer; user-select: none; transition: background 0.12s; font-size: 11.5px; }
+  .part-item:hover { background: rgba(255,255,255,0.05); }
+  .part-item.active { background: rgba(255,210,63,0.12); outline: 1px solid rgba(255,210,63,0.3); }
+  .part-item .pq { margin-left: auto; font-size: 9.5px; color: var(--text-dim); font-family: var(--mono); }
+  .part-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .sub-item { display: flex; align-items: center; gap: 8px; padding: 7px 9px; border-radius: 7px;
+    cursor: pointer; user-select: none; transition: background 0.12s; }
+  .sub-item:hover { background: rgba(255,255,255,0.05); }
+  .sub-item.active { background: rgba(255,210,63,0.12); outline: 1px solid rgba(255,210,63,0.3); }
+  .sub-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+  .sub-name { flex: 1; font-size: 12.5px; }
+  .sub-count { font-size: 10px; color: var(--text-dim); font-family: var(--mono); }
+  .sub-eye { opacity: 0.5; font-size: 12px; padding: 2px; }
+  .sub-eye:hover { opacity: 1; }
+  .sub-eye.off { opacity: 0.2; }
+
+  /* ---- right: info card ---- */
+  #info { right: 14px; top: 14px; width: 272px; max-height: calc(100% - 160px); overflow-y: auto; z-index: 10; }
+  #info-body { padding: 12px 14px; }
+  #info h2 { font-size: 14px; margin-bottom: 2px; color: var(--accent); }
+  #info .sub-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+  .spec-row { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 12px; }
+  .spec-row .k { color: var(--text-dim); }
+  .spec-row .v { font-family: var(--mono); font-size: 11px; text-align: right; }
+  #info .notes { margin-top: 10px; font-size: 11.5px; line-height: 1.55; color: #b8bfc9; }
+  #info .hint { margin-top: 12px; font-size: 10.5px; color: var(--text-dim); font-style: italic; }
+  .rel-title { margin-top: 12px; font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px;
+    color: var(--text-dim); text-transform: uppercase; }
+  .rel-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .rel-chip { padding: 4px 8px; border-radius: 5px; background: rgba(255,210,63,0.08);
+    border: 1px solid rgba(255,210,63,0.22); color: var(--text); font-size: 10.5px; cursor: pointer;
+    transition: background 0.12s; }
+  .rel-chip:hover { background: rgba(255,210,63,0.2); color: var(--accent); }
+  .rel-chip .rs { color: var(--accent-dim); font-size: 8.5px; display: block; }
+  .part-nav { display: flex; gap: 6px; margin-top: 12px; }
+  .part-nav button { flex: 1; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text); padding: 5px 0; border-radius: 6px; cursor: pointer; font-size: 11px; }
+  .part-nav button:hover { background: rgba(255,255,255,0.12); }
+
+  /* ---- bottom toolbar ---- */
+  #toolbar { bottom: 14px; left: 50%; transform: translateX(-50%); padding: 10px 14px;
+    display: flex; align-items: center; gap: 8px; z-index: 10; flex-wrap: wrap; justify-content: center; max-width: 92vw; }
+  .tbtn { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: var(--text);
+    padding: 6px 12px; border-radius: 7px; cursor: pointer; font-size: 11.5px; white-space: nowrap;
+    transition: all 0.15s; }
+  .tbtn:hover { background: rgba(255,255,255,0.12); }
+  .tbtn.on { background: rgba(255,210,63,0.18); border-color: var(--accent); color: var(--accent); }
+  .tsep { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 4px; }
+  .slider-wrap { display: flex; align-items: center; gap: 8px; padding: 0 6px; }
+  .slider-wrap label { font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.5px; }
+  input[type=range] { width: 110px; accent-color: var(--accent); cursor: pointer; }
+
+  /* ---- compliance badges ---- */
+  #compliance { bottom: 14px; left: 14px; width: 232px; z-index: 10; padding: 10px 14px; }
+  .badge-row { display: flex; justify-content: space-between; padding: 3.5px 0; font-size: 11px; }
+  .badge-row .k { color: var(--text-dim); }
+  .ok { color: #5fd68a; font-family: var(--mono); font-size: 10.5px; }
+  .warn { color: var(--accent); font-family: var(--mono); font-size: 10.5px; }
+
+  /* ---- part labels ---- */
+  .p-label { background: rgba(10,12,16,0.85); border: 1px solid rgba(255,210,63,0.35); color: var(--text);
+    padding: 3px 8px; border-radius: 5px; font-size: 10.5px; font-family: var(--mono); pointer-events: none;
+    white-space: nowrap; }
+  .p-label b { color: var(--accent); font-weight: 600; }
+  #tooltip { position: absolute; pointer-events: none; background: rgba(10,12,16,0.92);
+    border: 1px solid rgba(255,210,63,0.4); padding: 4px 9px; border-radius: 6px; font-size: 11px;
+    font-family: var(--mono); display: none; z-index: 30; color: var(--accent); }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  #loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px; background: var(--bg); z-index: 100; transition: opacity 0.5s; }
+  #loading .bee { font-size: 34px; animation: pulse 1.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 0.4; transform: scale(0.95);} 50% { opacity: 1; transform: scale(1.05);} }
+  #loading .bar { width: 200px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+  #loading .bar div { height: 100%; width: 40%; background: var(--accent); border-radius: 2px; animation: slide 1s linear infinite; }
+  @keyframes slide { from { transform: translateX(-100%);} to { transform: translateX(500%);} }
+
+  /* ---- match-demo caption ---- */
+  #caption { position: absolute; top: 74px; left: 50%; transform: translate(-50%, -8px);
+    padding: 10px 26px; text-align: center; z-index: 9; opacity: 0; pointer-events: none;
+    transition: opacity 0.4s, transform 0.4s; }
+  #caption.show { opacity: 1; transform: translate(-50%, 0); }
+  #caption b { display: block; font-size: 15px; letter-spacing: 2.5px; color: var(--accent); font-weight: 700; }
+  #caption span { display: block; font-size: 11px; color: var(--text-dim); letter-spacing: 0.6px; margin-top: 3px; }
+  #caption .cam-hint { display: block; font-size: 9.5px; color: var(--accent-dim); margin-top: 5px;
+    font-style: italic; pointer-events: none; }
+  #btn-followcam { position: absolute; top: 118px; left: 50%; transform: translateX(-50%);
+    z-index: 11; display: none; background: rgba(17,21,28,0.88); border: 1px solid rgba(255,210,63,0.4);
+    color: var(--accent); padding: 6px 14px; border-radius: 7px; cursor: pointer; font-size: 11px;
+    backdrop-filter: blur(10px); }
+  #btn-followcam:hover { background: rgba(255,210,63,0.15); }
+  #btn-followcam.show { display: block; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="tooltip"></div>
+<div id="caption" class="panel"></div>
+<button id="btn-followcam">⤾ Resume cinematic camera</button>
+
+<div id="loading"><div class="bee">◍</div><div style="letter-spacing:2px;font-size:12px;color:var(--text-dim)">ASSEMBLING ROBOT</div><div class="bar"><div></div></div></div>
+
+<div id="header" class="panel">
+  <h1>BIOBUZZ <span>·</span> FTC 26-27 <span>·</span> ROBOT DESIGN REVIEW</h1>
+  <div class="sub">18" CUBE START · MECANUM · 360° TURRET LAUNCHER · DEPOSIT LIFT · CLICK ANY PART TO INSPECT</div>
+</div>
+
+<div id="tree" class="panel">
+  <div class="tree-tabs">
+    <div id="tab-subs" class="active">Subsystems</div>
+    <div id="tab-parts">Parts</div>
+  </div>
+  <input id="parts-search" placeholder="filter parts…" style="display:none">
+  <div id="tree-list"></div>
+  <div id="parts-list"></div>
+</div>
+
+<div id="info" class="panel">
+  <div class="panel-title">Inspector</div>
+  <div id="info-body"><div class="hint">Hover to identify parts. Click to inspect. Double-click to zoom. Use the subsystem tree to isolate assemblies.</div></div>
+</div>
+
+<div id="compliance" class="panel">
+  <div class="panel-title" style="padding:0 0 6px">Rule Compliance</div>
+  <div id="compliance-body"></div>
+</div>
+
+<div id="toolbar" class="panel">
+  <div class="slider-wrap"><label>EXPLODE</label><input type="range" id="explode" min="0" max="100" value="0"></div>
+  <div class="tsep"></div>
+  <button class="tbtn" id="btn-anim">▶ Animate</button>
+  <button class="tbtn" id="btn-launch">Launch Demo</button>
+  <button class="tbtn" id="btn-lift">Lift</button>
+  <button class="tbtn" id="btn-demo" style="border-color:rgba(255,210,63,0.5)">⏵ Match Demo</button>
+  <button class="tbtn" id="btn-xray">X-Ray</button>
+  <button class="tbtn" id="btn-labels">Callouts</button>
+  <button class="tbtn" id="btn-cube">Sizing Cube</button>
+  <button class="tbtn" id="btn-field">Field</button>
+  <div class="tsep"></div>
+  <button class="tbtn" id="btn-rot">Auto-Rotate</button>
+  <select id="cam-preset" class="tbtn" style="background:rgba(255,255,255,0.06)">
+    <option value="iso">Iso View</option>
+    <option value="front">Front</option>
+    <option value="side">Side</option>
+    <option value="top">Top</option>
+    <option value="intake">Intake Cam</option>
+    <option value="turret">Turret Cam</option>
+  </select>
+</div>
+
+<script type="importmap">
+{ "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/addons/"
+} }
+</script>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

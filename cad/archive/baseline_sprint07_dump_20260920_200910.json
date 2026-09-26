@@ -1,0 +1,3278 @@
+{
+ "master_robot.FCStd": [
+  {
+   "name": "Parameters",
+   "label": "Parameters",
+   "type": "Spreadsheet::Sheet",
+   "aliases": {
+    "start_cube": {
+     "value": 457.2,
+     "status": "VERIFIED"
+    },
+    "expansion_width": {
+     "value": 457.2,
+     "status": "VERIFIED"
+    },
+    "expansion_depth": {
+     "value": 609.6,
+     "status": "VERIFIED"
+    },
+    "expansion_height": {
+     "value": 736.5,
+     "status": "VERIFIED"
+    },
+    "chassis_length": {
+     "value": 420,
+     "status": "UNVERIFIED"
+    },
+    "chassis_width": {
+     "value": 420,
+     "status": "UNVERIFIED"
+    },
+    "chassis_height": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "wheel_dia": {
+     "value": 96,
+     "status": "VENDOR-PENDING"
+    },
+    "wheel_width": {
+     "value": 32,
+     "status": "VENDOR-PENDING"
+    },
+    "wheel_x_offset": {
+     "value": 170,
+     "status": "UNVERIFIED"
+    },
+    "wheel_y_offset": {
+     "value": 180,
+     "status": "UNVERIFIED"
+    },
+    "battery_l": {
+     "value": 180,
+     "status": "UNVERIFIED"
+    },
+    "battery_w": {
+     "value": 90,
+     "status": "UNVERIFIED"
+    },
+    "battery_h": {
+     "value": 75,
+     "status": "UNVERIFIED"
+    },
+    "bat_x": {
+     "value": -150,
+     "status": "UNVERIFIED"
+    },
+    "bat_y": {
+     "value": -150,
+     "status": "UNVERIFIED"
+    },
+    "bat_z": {
+     "value": 22.5,
+     "status": "UNVERIFIED"
+    },
+    "elec_l": {
+     "value": 160,
+     "status": "UNVERIFIED"
+    },
+    "elec_w": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "elec_h": {
+     "value": 35,
+     "status": "UNVERIFIED"
+    },
+    "elec_x": {
+     "value": -120,
+     "status": "UNVERIFIED"
+    },
+    "elec_y": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "elec_z": {
+     "value": 0,
+     "status": "UNVERIFIED"
+    },
+    "axis_len": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "axis_thk": {
+     "value": 4,
+     "status": "UNVERIFIED"
+    },
+    "intake_depth": {
+     "value": 160,
+     "status": "UNVERIFIED"
+    },
+    "intake_width": {
+     "value": 326,
+     "status": "UNVERIFIED"
+    },
+    "intake_height": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "channel_w": {
+     "value": 110,
+     "status": "UNVERIFIED"
+    },
+    "channel_h": {
+     "value": 110,
+     "status": "UNVERIFIED"
+    },
+    "channel_x0": {
+     "value": -160,
+     "status": "UNVERIFIED"
+    },
+    "channel_z": {
+     "value": 10,
+     "status": "UNVERIFIED"
+    },
+    "plate_thk": {
+     "value": 8,
+     "status": "UNVERIFIED"
+    },
+    "plate_w": {
+     "value": 10,
+     "status": "UNVERIFIED"
+    },
+    "div_h": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "shooter_l": {
+     "value": 200,
+     "status": "UNVERIFIED"
+    },
+    "shooter_w": {
+     "value": 200,
+     "status": "UNVERIFIED"
+    },
+    "shooter_h": {
+     "value": 250,
+     "status": "UNVERIFIED"
+    },
+    "shooter_z": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "bore": {
+     "value": 100,
+     "status": "UNVERIFIED"
+    },
+    "flywheel_dia": {
+     "value": 72,
+     "status": "VENDOR-PENDING"
+    },
+    "flywheel_w": {
+     "value": 30,
+     "status": "VENDOR-PENDING"
+    },
+    "flywheel_x": {
+     "value": -40,
+     "status": "UNVERIFIED"
+    },
+    "roller_dia": {
+     "value": 50,
+     "status": "UNVERIFIED"
+    },
+    "roller_width": {
+     "value": 300,
+     "status": "UNVERIFIED"
+    },
+    "lifter_stow_l": {
+     "value": 200,
+     "status": "UNVERIFIED"
+    },
+    "lifter_stow_w": {
+     "value": 200,
+     "status": "UNVERIFIED"
+    },
+    "lifter_stow_h": {
+     "value": 150,
+     "status": "UNVERIFIED"
+    },
+    "lifter_stow_x": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "lifter_stow_z": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "mast_w": {
+     "value": 80,
+     "status": "UNVERIFIED"
+    },
+    "lifter_dep_z0": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "reach_z": {
+     "value": 610,
+     "status": "UNVERIFIED"
+    },
+    "stage1_w": {
+     "value": 76,
+     "status": "UNVERIFIED"
+    },
+    "stage1_z1": {
+     "value": 340,
+     "status": "UNVERIFIED"
+    },
+    "stage2_w": {
+     "value": 74,
+     "status": "UNVERIFIED"
+    },
+    "stage2_z0": {
+     "value": 230,
+     "status": "UNVERIFIED"
+    },
+    "stage2_z1": {
+     "value": 440,
+     "status": "UNVERIFIED"
+    },
+    "stage3_w": {
+     "value": 72,
+     "status": "UNVERIFIED"
+    },
+    "stage3_z0": {
+     "value": 335,
+     "status": "UNVERIFIED"
+    },
+    "stage3_z1": {
+     "value": 560,
+     "status": "UNVERIFIED"
+    },
+    "carriage_w": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "carriage_h": {
+     "value": 40,
+     "status": "UNVERIFIED"
+    },
+    "cradle_w": {
+     "value": 120,
+     "status": "UNVERIFIED"
+    },
+    "cradle_h": {
+     "value": 40,
+     "status": "UNVERIFIED"
+    },
+    "cradle_z": {
+     "value": 600,
+     "status": "UNVERIFIED"
+    },
+    "hive_aim_dist": {
+     "value": 800,
+     "status": "UNVERIFIED"
+    },
+    "hive_aim_z": {
+     "value": 300,
+     "status": "UNVERIFIED"
+    },
+    "ref_size": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "flower_aim_x": {
+     "value": 180,
+     "status": "UNVERIFIED"
+    },
+    "flower_aim_z": {
+     "value": 546,
+     "status": "VERIFIED"
+    },
+    "flower_aim_w": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "roller_count": {
+     "value": 10,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_dia": {
+     "value": 14,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_rad": {
+     "value": 41,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_len": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "mec_roll_pitch": {
+     "value": 36,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_slant": {
+     "value": 45,
+     "status": "UNVERIFIED"
+    },
+    "pv_boss_dia": {
+     "value": 24,
+     "status": "UNVERIFIED"
+    },
+    "pv_boss_len": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "pv_boss_x": {
+     "value": 84,
+     "status": "UNVERIFIED"
+    },
+    "pv_boss_z": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "horn_l": {
+     "value": 30,
+     "status": "UNVERIFIED"
+    },
+    "horn_w": {
+     "value": 10,
+     "status": "UNVERIFIED"
+    },
+    "horn_h": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "stub_dia": {
+     "value": 8,
+     "status": "VENDOR-PENDING"
+    },
+    "stub_len": {
+     "value": 40,
+     "status": "UNVERIFIED"
+    },
+    "guide_w": {
+     "value": 6,
+     "status": "UNVERIFIED"
+    },
+    "guide_l": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "lip_h": {
+     "value": 12,
+     "status": "UNVERIFIED"
+    },
+    "lip_t": {
+     "value": 6,
+     "status": "UNVERIFIED"
+    },
+    "erail_l": {
+     "value": 140,
+     "status": "UNVERIFIED"
+    },
+    "erail_w": {
+     "value": 8,
+     "status": "UNVERIFIED"
+    },
+    "erail_h": {
+     "value": 6,
+     "status": "UNVERIFIED"
+    },
+    "rail_size": {
+     "value": 48,
+     "status": "VENDOR-PENDING"
+    },
+    "pan_thk": {
+     "value": 3,
+     "status": "UNVERIFIED"
+    },
+    "deck_thk": {
+     "value": 3,
+     "status": "UNVERIFIED"
+    },
+    "wplate_dia": {
+     "value": 92,
+     "status": "UNVERIFIED"
+    },
+    "wplate_thk": {
+     "value": 4,
+     "status": "UNVERIFIED"
+    },
+    "motor_dia": {
+     "value": 36,
+     "status": "VENDOR-PENDING"
+    },
+    "motor_len": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "intake_axle_dia": {
+     "value": 12,
+     "status": "UNVERIFIED"
+    },
+    "post_w": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "lifter_base_w": {
+     "value": 140,
+     "status": "UNVERIFIED"
+    },
+    "lifter_ped_w": {
+     "value": 100,
+     "status": "UNVERIFIED"
+    },
+    "_err": "Invalid cell address or property: A107"
+   }
+  },
+  {
+   "name": "RobotAssembly",
+   "label": "BIOBUZZ_robot_assembly_placeholders",
+   "type": "App::Part",
+   "bbox": [
+    -228.6,
+    -304.8,
+    -0.009,
+    1088.6,
+    304.8,
+    736.5
+   ]
+  },
+  {
+   "name": "Origin",
+   "label": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "label": "X-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "label": "Y-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "label": "Z-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "label": "XY-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "label": "XZ-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "label": "YZ-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "label": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "name": "CoordRef",
+   "label": "COORD_REF_world_origin_axes",
+   "type": "App::Part",
+   "bbox": [
+    -2.0,
+    -2.0,
+    -2.0,
+    120.0,
+    120.0,
+    120.0
+   ]
+  },
+  {
+   "name": "Origin002",
+   "label": "Origin004",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis001",
+   "label": "X-axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis001",
+   "label": "Y-axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis001",
+   "label": "Z-axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane001",
+   "label": "XY-plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane001",
+   "label": "XZ-plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane001",
+   "label": "YZ-plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin003",
+   "label": "Origin003",
+   "type": "App::Point"
+  },
+  {
+   "name": "ENV_START",
+   "label": "ENV_START_18in_cube_457mm_VERIFIED_R102",
+   "type": "Part::Box",
+   "bbox": [
+    -228.6,
+    -228.6,
+    0.0,
+    228.6,
+    228.6,
+    457.2
+   ]
+  },
+  {
+   "name": "ENV_EXPANSION",
+   "label": "ENV_EXPANSION_18x24x29in_VERIFIED_R105",
+   "type": "Part::Box",
+   "bbox": [
+    -228.6,
+    -304.8,
+    0.0,
+    228.6,
+    304.8,
+    736.5
+   ]
+  },
+  {
+   "name": "VOL_DRIVEBASE",
+   "label": "VOL_DRIVEBASE_packaging_420x420x120_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -210.0,
+    -210.0,
+    0.0,
+    210.0,
+    210.0,
+    120.0
+   ]
+  },
+  {
+   "name": "WHEEL_FL",
+   "label": "WHEEL_FL_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    164.0,
+    0.0,
+    218.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_FL",
+   "label": "ENV_WHEEL_FL_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    122.0,
+    164.0,
+    0.0,
+    218.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_FR",
+   "label": "WHEEL_FR_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    -196.0,
+    0.0,
+    218.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_FR",
+   "label": "ENV_WHEEL_FR_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    122.0,
+    -196.0,
+    0.0,
+    218.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_RL",
+   "label": "WHEEL_RL_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    164.0,
+    0.0,
+    -122.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_RL",
+   "label": "ENV_WHEEL_RL_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    -218.0,
+    164.0,
+    0.0,
+    -122.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_RR",
+   "label": "WHEEL_RR_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    -196.0,
+    0.0,
+    -122.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_RR",
+   "label": "ENV_WHEEL_RR_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    -218.0,
+    -196.0,
+    0.0,
+    -122.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ROLLER_FL_00",
+   "label": "ROLLER_FL_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    204.0,
+    167.979,
+    35.979,
+    218.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FL_01",
+   "label": "ROLLER_FL_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    167.979,
+    60.637,
+    213.693,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FL_02",
+   "label": "ROLLER_FL_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    167.979,
+    77.977,
+    194.575,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FL_03",
+   "label": "ROLLER_FL_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    167.979,
+    77.977,
+    169.236,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FL_04",
+   "label": "ROLLER_FL_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    167.979,
+    60.637,
+    147.353,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FL_05",
+   "label": "ROLLER_FL_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    167.979,
+    35.979,
+    136.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FL_06",
+   "label": "ROLLER_FL_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    167.979,
+    12.439,
+    147.353,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FL_07",
+   "label": "ROLLER_FL_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    167.979,
+    -0.009,
+    169.236,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FL_08",
+   "label": "ROLLER_FL_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    167.979,
+    -0.009,
+    194.575,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FL_09",
+   "label": "ROLLER_FL_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    167.979,
+    12.439,
+    213.693,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FR_00",
+   "label": "ROLLER_FR_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    204.0,
+    -192.021,
+    35.979,
+    218.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FR_01",
+   "label": "ROLLER_FR_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    -192.021,
+    60.637,
+    213.693,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FR_02",
+   "label": "ROLLER_FR_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    -192.021,
+    77.977,
+    194.575,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FR_03",
+   "label": "ROLLER_FR_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    -192.021,
+    77.977,
+    169.236,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FR_04",
+   "label": "ROLLER_FR_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    -192.021,
+    60.637,
+    147.353,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FR_05",
+   "label": "ROLLER_FR_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    -192.021,
+    35.979,
+    136.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FR_06",
+   "label": "ROLLER_FR_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    -192.021,
+    12.439,
+    147.353,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FR_07",
+   "label": "ROLLER_FR_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    -192.021,
+    -0.009,
+    169.236,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FR_08",
+   "label": "ROLLER_FR_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    -192.021,
+    -0.009,
+    194.575,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FR_09",
+   "label": "ROLLER_FR_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    -192.021,
+    12.439,
+    213.693,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RL_00",
+   "label": "ROLLER_RL_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -136.0,
+    167.979,
+    35.979,
+    -122.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RL_01",
+   "label": "ROLLER_RL_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    167.979,
+    60.637,
+    -126.307,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RL_02",
+   "label": "ROLLER_RL_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    167.979,
+    77.977,
+    -145.425,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RL_03",
+   "label": "ROLLER_RL_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    167.979,
+    77.977,
+    -170.764,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RL_04",
+   "label": "ROLLER_RL_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    167.979,
+    60.637,
+    -192.647,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RL_05",
+   "label": "ROLLER_RL_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    167.979,
+    35.979,
+    -204.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RL_06",
+   "label": "ROLLER_RL_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    167.979,
+    12.439,
+    -192.647,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RL_07",
+   "label": "ROLLER_RL_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    167.979,
+    -0.009,
+    -170.764,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RL_08",
+   "label": "ROLLER_RL_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    167.979,
+    -0.009,
+    -145.425,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RL_09",
+   "label": "ROLLER_RL_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    167.979,
+    12.439,
+    -126.307,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RR_00",
+   "label": "ROLLER_RR_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -136.0,
+    -192.021,
+    35.979,
+    -122.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RR_01",
+   "label": "ROLLER_RR_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    -192.021,
+    60.637,
+    -126.307,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RR_02",
+   "label": "ROLLER_RR_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    -192.021,
+    77.977,
+    -145.425,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RR_03",
+   "label": "ROLLER_RR_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    -192.021,
+    77.977,
+    -170.764,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RR_04",
+   "label": "ROLLER_RR_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    -192.021,
+    60.637,
+    -192.647,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RR_05",
+   "label": "ROLLER_RR_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    -192.021,
+    35.979,
+    -204.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RR_06",
+   "label": "ROLLER_RR_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    -192.021,
+    12.439,
+    -192.647,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RR_07",
+   "label": "ROLLER_RR_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    -192.021,
+    -0.009,
+    -170.764,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RR_08",
+   "label": "ROLLER_RR_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    -192.021,
+    -0.009,
+    -145.425,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RR_09",
+   "label": "ROLLER_RR_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    -192.021,
+    12.439,
+    -126.307,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "BATTERY",
+   "label": "BATTERY_180x90x75_placeholder_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -150.0,
+    -150.0,
+    22.5,
+    30.0,
+    -60.0,
+    97.5
+   ]
+  },
+  {
+   "name": "ELECTRONICS",
+   "label": "ELECTRONICS_control_hub_160x120x35_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -120.0,
+    60.0,
+    0.0,
+    40.0,
+    180.0,
+    35.0
+   ]
+  },
+  {
+   "name": "AXIS_X",
+   "label": "AXIS_X_indicator_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    0.0,
+    -2.0,
+    -2.0,
+    120.0,
+    2.0,
+    2.0
+   ]
+  },
+  {
+   "name": "AXIS_Y",
+   "label": "AXIS_Y_indicator_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -2.0,
+    0.0,
+    -2.0,
+    2.0,
+    120.0,
+    2.0
+   ]
+  },
+  {
+   "name": "AXIS_Z",
+   "label": "AXIS_Z_indicator_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -2.0,
+    -2.0,
+    0.0,
+    2.0,
+    2.0,
+    120.0
+   ]
+  },
+  {
+   "name": "VOL_INTAKE",
+   "label": "VOL_INTAKE_reserve_160x326x120_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    68.6,
+    -163.0,
+    0.0,
+    228.6,
+    163.0,
+    120.0
+   ]
+  },
+  {
+   "name": "VOL_TRANSFER",
+   "label": "VOL_TRANSFER_floor_lane_to_intake_face_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -160.0,
+    -55.0,
+    10.0,
+    68.6,
+    55.0,
+    120.0
+   ]
+  },
+  {
+   "name": "VOL_SHOOTER",
+   "label": "VOL_SHOOTER_reserve_200x200x250_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -200.0,
+    -100.0,
+    120.0,
+    0.0,
+    100.0,
+    370.0
+   ]
+  },
+  {
+   "name": "VOL_LIFTER_STOWED",
+   "label": "VOL_LIFTER_STOWED_200x200x150_top_mount_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    20.0,
+    -100.0,
+    120.0,
+    220.0,
+    100.0,
+    270.0
+   ]
+  },
+  {
+   "name": "VOL_LIFTER_DEPLOYED",
+   "label": "VOL_LIFTER_DEPLOYED_ghost_reach610_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    80.0,
+    -40.0,
+    120.0,
+    160.0,
+    40.0,
+    610.0
+   ]
+  },
+  {
+   "name": "MECH_INTAKE_CHEEK_L",
+   "label": "MECH_INTAKE_CHEEK_L_cheek_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    68.6,
+    153.0,
+    0.0,
+    228.6,
+    163.0,
+    120.0
+   ]
+  },
+  {
+   "name": "MECH_INTAKE_CHEEK_R",
+   "label": "MECH_INTAKE_CHEEK_R_cheek_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    68.6,
+    -163.0,
+    0.0,
+    228.6,
+    -153.0,
+    120.0
+   ]
+  },
+  {
+   "name": "MECH_ROLLER",
+   "label": "MECH_INTAKE_roller_50x300_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    163.6,
+    -150.0,
+    30.0,
+    213.6,
+    150.0,
+    80.0
+   ]
+  },
+  {
+   "name": "MECH_CHANNEL",
+   "label": "MECH_CHANNEL_ball_path_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -150.0,
+    -50.0,
+    15.0,
+    63.6,
+    50.0,
+    115.0
+   ]
+  },
+  {
+   "name": "MECH_DIVERTER",
+   "label": "MECH_DIVERTER_paddle_marker_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -158.0,
+    -50.0,
+    55.0,
+    -150.0,
+    50.0,
+    115.0
+   ]
+  },
+  {
+   "name": "MECH_SHOOTER_BODY",
+   "label": "MECH_SHOOTER_rear_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -190.0,
+    -90.0,
+    130.0,
+    -182.0,
+    90.0,
+    340.0
+   ]
+  },
+  {
+   "name": "MECH_SHOOTER_HOOD",
+   "label": "MECH_SHOOTER_hood_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -190.0,
+    -90.0,
+    340.0,
+    -10.0,
+    90.0,
+    348.0
+   ]
+  },
+  {
+   "name": "MECH_FLYWHEEL_L",
+   "label": "MECH_FLYWHEEL_L_72x30_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -76.0,
+    50.0,
+    264.0,
+    -4.0,
+    80.0,
+    336.0
+   ]
+  },
+  {
+   "name": "MECH_FLYWHEEL_R",
+   "label": "MECH_FLYWHEEL_R_72x30_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -76.0,
+    -80.0,
+    264.0,
+    -4.0,
+    -50.0,
+    336.0
+   ]
+  },
+  {
+   "name": "MECH_LIFTER_STOWED",
+   "label": "MECH_LIFTER_stowed_region_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    160.0,
+    -30.0,
+    120.0,
+    220.0,
+    30.0,
+    270.0
+   ]
+  },
+  {
+   "name": "MECH_STAGE_1",
+   "label": "MECH_STAGE_1_deployed_section_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    82.0,
+    -38.0,
+    120.0,
+    158.0,
+    38.0,
+    340.0
+   ]
+  },
+  {
+   "name": "MECH_STAGE_2",
+   "label": "MECH_STAGE_2_deployed_section_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    83.0,
+    -37.0,
+    230.0,
+    157.0,
+    37.0,
+    440.0
+   ]
+  },
+  {
+   "name": "MECH_STAGE_3",
+   "label": "MECH_STAGE_3_deployed_section_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    84.0,
+    -36.0,
+    335.0,
+    156.0,
+    36.0,
+    560.0
+   ]
+  },
+  {
+   "name": "MECH_CARRIAGE",
+   "label": "MECH_CARRIAGE_stage3_top_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    60.0,
+    -60.0,
+    560.0,
+    180.0,
+    60.0,
+    600.0
+   ]
+  },
+  {
+   "name": "MECH_CRADLE",
+   "label": "MECH_CRADLE_nectar_cup_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    60.0,
+    -60.0,
+    600.0,
+    180.0,
+    60.0,
+    640.0
+   ]
+  },
+  {
+   "name": "PIVOT_MOUNT_L",
+   "label": "PIVOT_MOUNT_L_intake_pivot_boss_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    72.0,
+    148.0,
+    48.0,
+    96.0,
+    168.0,
+    72.0
+   ]
+  },
+  {
+   "name": "PIVOT_MOUNT_R",
+   "label": "PIVOT_MOUNT_R_intake_pivot_boss_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    72.0,
+    -168.0,
+    48.0,
+    96.0,
+    -148.0,
+    72.0
+   ]
+  },
+  {
+   "name": "DIVERTER_HORN",
+   "label": "DIVERTER_HORN_servo_arm_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -184.0,
+    -5.0,
+    85.0,
+    -154.0,
+    5.0,
+    105.0
+   ]
+  },
+  {
+   "name": "STUB_SHAFT_L",
+   "label": "STUB_SHAFT_L_8mmREX_flywheel_shaft_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -44.0,
+    45.0,
+    296.0,
+    -36.0,
+    85.0,
+    304.0
+   ]
+  },
+  {
+   "name": "STUB_SHAFT_R",
+   "label": "STUB_SHAFT_R_8mmREX_flywheel_shaft_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -44.0,
+    -85.0,
+    296.0,
+    -36.0,
+    -45.0,
+    304.0
+   ]
+  },
+  {
+   "name": "STAGE_GUIDE_L",
+   "label": "STAGE_GUIDE_L_cascade_guide_block_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    117.0,
+    35.0,
+    325.0,
+    123.0,
+    41.0,
+    345.0
+   ]
+  },
+  {
+   "name": "STAGE_GUIDE_R",
+   "label": "STAGE_GUIDE_R_cascade_guide_block_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    117.0,
+    -41.0,
+    325.0,
+    123.0,
+    -35.0,
+    345.0
+   ]
+  },
+  {
+   "name": "CRADLE_LIP",
+   "label": "CRADLE_LIP_retention_rim_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    174.0,
+    -60.0,
+    628.0,
+    180.0,
+    60.0,
+    640.0
+   ]
+  },
+  {
+   "name": "ELEC_RAIL_L",
+   "label": "ELEC_RAIL_L_hub_mount_rail_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -110.0,
+    70.0,
+    0.0,
+    30.0,
+    78.0,
+    6.0
+   ]
+  },
+  {
+   "name": "ELEC_RAIL_R",
+   "label": "ELEC_RAIL_R_hub_mount_rail_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -110.0,
+    162.0,
+    0.0,
+    30.0,
+    170.0,
+    6.0
+   ]
+  },
+  {
+   "name": "FRAME_RAIL_L",
+   "label": "FRAME_RAIL_L_1120channel_side_rail_48mm_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    -210.0,
+    116.0,
+    0.0,
+    210.0,
+    164.0,
+    48.0
+   ]
+  },
+  {
+   "name": "FRAME_RAIL_R",
+   "label": "FRAME_RAIL_R_1120channel_side_rail_48mm_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    -210.0,
+    -164.0,
+    0.0,
+    210.0,
+    -116.0,
+    48.0
+   ]
+  },
+  {
+   "name": "FRAME_RAIL_F",
+   "label": "FRAME_RAIL_F_1120channel_end_rail_48mm_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    162.0,
+    -164.0,
+    0.0,
+    210.0,
+    164.0,
+    48.0
+   ]
+  },
+  {
+   "name": "FRAME_RAIL_B",
+   "label": "FRAME_RAIL_B_1120channel_end_rail_48mm_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    -210.0,
+    -164.0,
+    0.0,
+    -162.0,
+    164.0,
+    48.0
+   ]
+  },
+  {
+   "name": "BELLY_PAN",
+   "label": "BELLY_PAN_3mm_sheet_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -162.0,
+    -116.0,
+    0.0,
+    162.0,
+    116.0,
+    3.0
+   ]
+  },
+  {
+   "name": "REAR_DECK",
+   "label": "REAR_DECK_3mm_sheet_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -147.0,
+    -116.0,
+    45.0,
+    0.0,
+    116.0,
+    48.0
+   ]
+  },
+  {
+   "name": "MOTOR_FL",
+   "label": "MOTOR_FL_5203YellowJacket_O36_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    152.0,
+    104.0,
+    30.0,
+    188.0,
+    164.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_FR",
+   "label": "MOTOR_FR_5203YellowJacket_O36_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    152.0,
+    -164.0,
+    30.0,
+    188.0,
+    -104.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_RL",
+   "label": "MOTOR_RL_5203YellowJacket_O36_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -188.0,
+    104.0,
+    30.0,
+    -152.0,
+    164.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_RR",
+   "label": "MOTOR_RR_5203YellowJacket_O36_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -188.0,
+    -164.0,
+    30.0,
+    -152.0,
+    -104.0,
+    66.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_FL_IN",
+   "label": "WHEEL_PLATE_FL_IN_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    124.0,
+    164.0,
+    2.0,
+    216.0,
+    168.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_FL_OUT",
+   "label": "WHEEL_PLATE_FL_OUT_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    124.0,
+    192.0,
+    2.0,
+    216.0,
+    196.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_FR_IN",
+   "label": "WHEEL_PLATE_FR_IN_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    124.0,
+    -164.0,
+    2.0,
+    216.0,
+    -160.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_FR_OUT",
+   "label": "WHEEL_PLATE_FR_OUT_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    124.0,
+    -196.0,
+    2.0,
+    216.0,
+    -192.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_RL_IN",
+   "label": "WHEEL_PLATE_RL_IN_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -216.0,
+    164.0,
+    2.0,
+    -124.0,
+    168.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_RL_OUT",
+   "label": "WHEEL_PLATE_RL_OUT_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -216.0,
+    192.0,
+    2.0,
+    -124.0,
+    196.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_RR_IN",
+   "label": "WHEEL_PLATE_RR_IN_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -216.0,
+    -164.0,
+    2.0,
+    -124.0,
+    -160.0,
+    94.0
+   ]
+  },
+  {
+   "name": "WHEEL_PLATE_RR_OUT",
+   "label": "WHEEL_PLATE_RR_OUT_O92_disc_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -216.0,
+    -196.0,
+    2.0,
+    -124.0,
+    -192.0,
+    94.0
+   ]
+  },
+  {
+   "name": "INTAKE_AXLE",
+   "label": "INTAKE_AXLE_O12_pivot_shaft_UNVERIFIED",
+   "type": "Part::Cylinder",
+   "bbox": [
+    78.0,
+    -165.0,
+    54.0,
+    90.0,
+    165.0,
+    66.0
+   ]
+  },
+  {
+   "name": "POST_SHOOTER_L",
+   "label": "POST_SHOOTER_L_shooter_upright_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -140.0,
+    70.0,
+    48.0,
+    -120.0,
+    90.0,
+    120.0
+   ]
+  },
+  {
+   "name": "POST_SHOOTER_R",
+   "label": "POST_SHOOTER_R_shooter_upright_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -140.0,
+    -90.0,
+    48.0,
+    -120.0,
+    -70.0,
+    120.0
+   ]
+  },
+  {
+   "name": "LIFTER_PED",
+   "label": "LIFTER_PED_mast_pedestal_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    70.0,
+    -50.0,
+    3.0,
+    170.0,
+    50.0,
+    112.0
+   ]
+  },
+  {
+   "name": "LIFTER_BASE",
+   "label": "LIFTER_BASE_140x140_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    50.0,
+    -70.0,
+    112.0,
+    190.0,
+    70.0,
+    120.0
+   ]
+  },
+  {
+   "name": "REF_HIVE",
+   "label": "REF_HIVE_aim_marker_position_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    1028.6,
+    -30.0,
+    270.0,
+    1088.6,
+    30.0,
+    330.0
+   ]
+  },
+  {
+   "name": "REF_FLOWER",
+   "label": "REF_FLOWER_aim_marker_z546_sec9.7",
+   "type": "Part::Box",
+   "bbox": [
+    180.0,
+    -30.0,
+    541.0,
+    240.0,
+    30.0,
+    551.0
+   ]
+  },
+  {
+   "name": "Envelopes",
+   "label": "GRP_envelopes",
+   "type": "App::Part",
+   "bbox": [
+    -228.6,
+    -304.8,
+    0.0,
+    1088.6,
+    304.8,
+    736.5
+   ]
+  },
+  {
+   "name": "Origin004",
+   "label": "Origin007",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis002",
+   "label": "X-axis002",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis002",
+   "label": "Y-axis002",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis002",
+   "label": "Z-axis002",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane002",
+   "label": "XY-plane002",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane002",
+   "label": "XZ-plane002",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane002",
+   "label": "YZ-plane002",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin005",
+   "label": "Origin006",
+   "type": "App::Point"
+  },
+  {
+   "name": "Drivebase",
+   "label": "GRP_drivebase",
+   "type": "App::Part",
+   "bbox": [
+    -218.0,
+    -196.0,
+    -0.009,
+    218.0,
+    196.0,
+    96.009
+   ]
+  },
+  {
+   "name": "Origin006",
+   "label": "Origin010",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis003",
+   "label": "X-axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis003",
+   "label": "Y-axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis003",
+   "label": "Z-axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane003",
+   "label": "XY-plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane003",
+   "label": "XZ-plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane003",
+   "label": "YZ-plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin007",
+   "label": "Origin009",
+   "type": "App::Point"
+  },
+  {
+   "name": "Intake",
+   "label": "GRP_intake",
+   "type": "App::Part",
+   "bbox": [
+    68.6,
+    -168.0,
+    0.0,
+    228.6,
+    168.0,
+    120.0
+   ]
+  },
+  {
+   "name": "Origin008",
+   "label": "Origin012",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis004",
+   "label": "X-axis004",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis004",
+   "label": "Y-axis004",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis004",
+   "label": "Z-axis004",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane004",
+   "label": "XY-plane004",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane004",
+   "label": "XZ-plane004",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane004",
+   "label": "YZ-plane004",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin009",
+   "label": "Origin011",
+   "type": "App::Point"
+  },
+  {
+   "name": "Transfer",
+   "label": "GRP_transfer",
+   "type": "App::Part",
+   "bbox": [
+    -184.0,
+    -50.0,
+    15.0,
+    63.6,
+    50.0,
+    115.0
+   ]
+  },
+  {
+   "name": "Origin010",
+   "label": "Origin015",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis005",
+   "label": "X-axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis005",
+   "label": "Y-axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis005",
+   "label": "Z-axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane005",
+   "label": "XY-plane005",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane005",
+   "label": "XZ-plane005",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane005",
+   "label": "YZ-plane005",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin011",
+   "label": "Origin014",
+   "type": "App::Point"
+  },
+  {
+   "name": "Shooter",
+   "label": "GRP_shooter",
+   "type": "App::Part",
+   "bbox": [
+    -190.0,
+    -90.0,
+    48.0,
+    -4.0,
+    90.0,
+    348.0
+   ]
+  },
+  {
+   "name": "Origin012",
+   "label": "Origin018",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis006",
+   "label": "X-axis006",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis006",
+   "label": "Y-axis006",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis006",
+   "label": "Z-axis006",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane006",
+   "label": "XY-plane006",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane006",
+   "label": "XZ-plane006",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane006",
+   "label": "YZ-plane006",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin013",
+   "label": "Origin017",
+   "type": "App::Point"
+  },
+  {
+   "name": "Lifter",
+   "label": "GRP_lifter",
+   "type": "App::Part",
+   "bbox": [
+    50.0,
+    -70.0,
+    3.0,
+    220.0,
+    70.0,
+    640.0
+   ]
+  },
+  {
+   "name": "Origin014",
+   "label": "Origin021",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis007",
+   "label": "X-axis007",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis007",
+   "label": "Y-axis007",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis007",
+   "label": "Z-axis007",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane007",
+   "label": "XY-plane007",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane007",
+   "label": "XZ-plane007",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane007",
+   "label": "YZ-plane007",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin015",
+   "label": "Origin020",
+   "type": "App::Point"
+  },
+  {
+   "name": "Electronics",
+   "label": "GRP_electronics",
+   "type": "App::Part",
+   "bbox": [
+    -150.0,
+    -150.0,
+    0.0,
+    40.0,
+    180.0,
+    97.5
+   ]
+  },
+  {
+   "name": "Origin016",
+   "label": "Origin023",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis008",
+   "label": "X-axis008",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis008",
+   "label": "Y-axis008",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis008",
+   "label": "Z-axis008",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane008",
+   "label": "XY-plane008",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane008",
+   "label": "XZ-plane008",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane008",
+   "label": "YZ-plane008",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin017",
+   "label": "Origin022",
+   "type": "App::Point"
+  }
+ ],
+ "drivebase_concept_v01.FCStd": [
+  {
+   "name": "Parameters",
+   "label": "Parameters",
+   "type": "Spreadsheet::Sheet",
+   "aliases": {
+    "chassis_length": {
+     "value": 420,
+     "status": "UNVERIFIED"
+    },
+    "chassis_width": {
+     "value": 420,
+     "status": "UNVERIFIED"
+    },
+    "chassis_thickness": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "chassis_z": {
+     "value": 30,
+     "status": "UNVERIFIED"
+    },
+    "wheel_dia": {
+     "value": 96,
+     "status": "VENDOR-PENDING"
+    },
+    "wheel_width": {
+     "value": 32,
+     "status": "VENDOR-PENDING"
+    },
+    "wheel_x_offset": {
+     "value": 170,
+     "status": "UNVERIFIED"
+    },
+    "wheel_y_offset": {
+     "value": 180,
+     "status": "UNVERIFIED"
+    },
+    "motor_dia": {
+     "value": 36,
+     "status": "VENDOR-PENDING"
+    },
+    "motor_len": {
+     "value": 90,
+     "status": "VENDOR-PENDING"
+    },
+    "rail_len": {
+     "value": 400,
+     "status": "UNVERIFIED"
+    },
+    "rail_w": {
+     "value": 48,
+     "status": "VENDOR-PENDING"
+    },
+    "rail_h": {
+     "value": 48,
+     "status": "VENDOR-PENDING"
+    },
+    "rail_z": {
+     "value": 30,
+     "status": "UNVERIFIED"
+    },
+    "roller_count": {
+     "value": 10,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_dia": {
+     "value": 14,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_rad": {
+     "value": 41,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_len": {
+     "value": 20,
+     "status": "UNVERIFIED"
+    },
+    "mec_roll_pitch": {
+     "value": 36,
+     "status": "VENDOR-PENDING"
+    },
+    "mec_roll_slant": {
+     "value": 45,
+     "status": "UNVERIFIED"
+    },
+    "mount_l": {
+     "value": 40,
+     "status": "UNVERIFIED"
+    },
+    "mount_w": {
+     "value": 60,
+     "status": "UNVERIFIED"
+    },
+    "mount_thk": {
+     "value": 8,
+     "status": "UNVERIFIED"
+    },
+    "mount_z": {
+     "value": 22,
+     "status": "UNVERIFIED"
+    },
+    "_err": "Invalid cell address or property: A26"
+   }
+  },
+  {
+   "name": "DrivebaseAssembly",
+   "label": "DRIVEBASE_assembly_v01_placeholders",
+   "type": "App::Part",
+   "bbox": [
+    -218.0,
+    -210.0,
+    -0.009,
+    218.0,
+    210.0,
+    96.009
+   ]
+  },
+  {
+   "name": "Origin",
+   "label": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "label": "X-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "label": "Y-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "label": "Z-axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "label": "XY-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "label": "XZ-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "label": "YZ-plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "label": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "name": "CHASSIS",
+   "label": "CHASSIS_plate_420x420x20_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -210.0,
+    -210.0,
+    30.0,
+    210.0,
+    210.0,
+    50.0
+   ]
+  },
+  {
+   "name": "WHEEL_FL",
+   "label": "WHEEL_FL_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    164.0,
+    0.0,
+    218.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_FL",
+   "label": "ENV_WHEEL_FL_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    122.0,
+    164.0,
+    0.0,
+    218.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_FR",
+   "label": "WHEEL_FR_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    -196.0,
+    0.0,
+    218.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_FR",
+   "label": "ENV_WHEEL_FR_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    122.0,
+    -196.0,
+    0.0,
+    218.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_RL",
+   "label": "WHEEL_RL_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    164.0,
+    0.0,
+    -122.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_RL",
+   "label": "ENV_WHEEL_RL_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    -218.0,
+    164.0,
+    0.0,
+    -122.0,
+    196.0,
+    96.0
+   ]
+  },
+  {
+   "name": "WHEEL_RR",
+   "label": "WHEEL_RR_96x32_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    -196.0,
+    0.0,
+    -122.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ENV_WHEEL_RR",
+   "label": "ENV_WHEEL_RR_O96x32_roller_envelope_marker",
+   "type": "Part::Box",
+   "bbox": [
+    -218.0,
+    -196.0,
+    0.0,
+    -122.0,
+    -164.0,
+    96.0
+   ]
+  },
+  {
+   "name": "ROLLER_FL_00",
+   "label": "ROLLER_FL_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    204.0,
+    167.979,
+    35.979,
+    218.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FL_01",
+   "label": "ROLLER_FL_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    167.979,
+    60.637,
+    213.693,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FL_02",
+   "label": "ROLLER_FL_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    167.979,
+    77.977,
+    194.575,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FL_03",
+   "label": "ROLLER_FL_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    167.979,
+    77.977,
+    169.236,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FL_04",
+   "label": "ROLLER_FL_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    167.979,
+    60.637,
+    147.353,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FL_05",
+   "label": "ROLLER_FL_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    167.979,
+    35.979,
+    136.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FL_06",
+   "label": "ROLLER_FL_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    167.979,
+    12.439,
+    147.353,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FL_07",
+   "label": "ROLLER_FL_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    167.979,
+    -0.009,
+    169.236,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FL_08",
+   "label": "ROLLER_FL_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    167.979,
+    -0.009,
+    194.575,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FL_09",
+   "label": "ROLLER_FL_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    167.979,
+    12.439,
+    213.693,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FR_00",
+   "label": "ROLLER_FR_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    204.0,
+    -192.021,
+    35.979,
+    218.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FR_01",
+   "label": "ROLLER_FR_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    -192.021,
+    60.637,
+    213.693,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FR_02",
+   "label": "ROLLER_FR_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    -192.021,
+    77.977,
+    194.575,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FR_03",
+   "label": "ROLLER_FR_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    -192.021,
+    77.977,
+    169.236,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_FR_04",
+   "label": "ROLLER_FR_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    -192.021,
+    60.637,
+    147.353,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_FR_05",
+   "label": "ROLLER_FR_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    122.0,
+    -192.021,
+    35.979,
+    136.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_FR_06",
+   "label": "ROLLER_FR_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    126.307,
+    -192.021,
+    12.439,
+    147.353,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_FR_07",
+   "label": "ROLLER_FR_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    145.425,
+    -192.021,
+    -0.009,
+    169.236,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FR_08",
+   "label": "ROLLER_FR_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    170.764,
+    -192.021,
+    -0.009,
+    194.575,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_FR_09",
+   "label": "ROLLER_FR_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    192.647,
+    -192.021,
+    12.439,
+    213.693,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RL_00",
+   "label": "ROLLER_RL_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -136.0,
+    167.979,
+    35.979,
+    -122.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RL_01",
+   "label": "ROLLER_RL_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    167.979,
+    60.637,
+    -126.307,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RL_02",
+   "label": "ROLLER_RL_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    167.979,
+    77.977,
+    -145.425,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RL_03",
+   "label": "ROLLER_RL_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    167.979,
+    77.977,
+    -170.764,
+    192.021,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RL_04",
+   "label": "ROLLER_RL_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    167.979,
+    60.637,
+    -192.647,
+    192.021,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RL_05",
+   "label": "ROLLER_RL_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    167.979,
+    35.979,
+    -204.0,
+    192.021,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RL_06",
+   "label": "ROLLER_RL_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    167.979,
+    12.439,
+    -192.647,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RL_07",
+   "label": "ROLLER_RL_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    167.979,
+    -0.009,
+    -170.764,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RL_08",
+   "label": "ROLLER_RL_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    167.979,
+    -0.009,
+    -145.425,
+    192.021,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RL_09",
+   "label": "ROLLER_RL_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    167.979,
+    12.439,
+    -126.307,
+    192.021,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RR_00",
+   "label": "ROLLER_RR_00_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -136.0,
+    -192.021,
+    35.979,
+    -122.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RR_01",
+   "label": "ROLLER_RR_01_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    -192.021,
+    60.637,
+    -126.307,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RR_02",
+   "label": "ROLLER_RR_02_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    -192.021,
+    77.977,
+    -145.425,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RR_03",
+   "label": "ROLLER_RR_03_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    -192.021,
+    77.977,
+    -170.764,
+    -167.979,
+    96.009
+   ]
+  },
+  {
+   "name": "ROLLER_RR_04",
+   "label": "ROLLER_RR_04_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    -192.021,
+    60.637,
+    -192.647,
+    -167.979,
+    83.561
+   ]
+  },
+  {
+   "name": "ROLLER_RR_05",
+   "label": "ROLLER_RR_05_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -218.0,
+    -192.021,
+    35.979,
+    -204.0,
+    -167.979,
+    60.021
+   ]
+  },
+  {
+   "name": "ROLLER_RR_06",
+   "label": "ROLLER_RR_06_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -213.693,
+    -192.021,
+    12.439,
+    -192.647,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "ROLLER_RR_07",
+   "label": "ROLLER_RR_07_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -194.575,
+    -192.021,
+    -0.009,
+    -170.764,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RR_08",
+   "label": "ROLLER_RR_08_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -169.236,
+    -192.021,
+    -0.009,
+    -145.425,
+    -167.979,
+    18.023
+   ]
+  },
+  {
+   "name": "ROLLER_RR_09",
+   "label": "ROLLER_RR_09_O14_mecanum_goBILDA_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -147.353,
+    -192.021,
+    12.439,
+    -126.307,
+    -167.979,
+    35.363
+   ]
+  },
+  {
+   "name": "MOUNT_MOTOR_FL",
+   "label": "MOUNT_MOTOR_FL_motor_mount_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    150.0,
+    89.0,
+    22.0,
+    190.0,
+    149.0,
+    30.0
+   ]
+  },
+  {
+   "name": "MOUNT_MOTOR_FR",
+   "label": "MOUNT_MOTOR_FR_motor_mount_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    150.0,
+    -149.0,
+    22.0,
+    190.0,
+    -89.0,
+    30.0
+   ]
+  },
+  {
+   "name": "MOUNT_MOTOR_RL",
+   "label": "MOUNT_MOTOR_RL_motor_mount_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -190.0,
+    89.0,
+    22.0,
+    -150.0,
+    149.0,
+    30.0
+   ]
+  },
+  {
+   "name": "MOUNT_MOTOR_RR",
+   "label": "MOUNT_MOTOR_RR_motor_mount_plate_UNVERIFIED",
+   "type": "Part::Box",
+   "bbox": [
+    -190.0,
+    -149.0,
+    22.0,
+    -150.0,
+    -89.0,
+    30.0
+   ]
+  },
+  {
+   "name": "MOTOR_FL",
+   "label": "MOTOR_FL_36x90_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    152.0,
+    74.0,
+    30.0,
+    188.0,
+    164.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_FR",
+   "label": "MOTOR_FR_36x90_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    152.0,
+    -164.0,
+    30.0,
+    188.0,
+    -74.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_RL",
+   "label": "MOTOR_RL_36x90_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -188.0,
+    74.0,
+    30.0,
+    -152.0,
+    164.0,
+    66.0
+   ]
+  },
+  {
+   "name": "MOTOR_RR",
+   "label": "MOTOR_RR_36x90_goBILDA-style_VENDOR-PENDING",
+   "type": "Part::Cylinder",
+   "bbox": [
+    -188.0,
+    -164.0,
+    30.0,
+    -152.0,
+    -74.0,
+    66.0
+   ]
+  },
+  {
+   "name": "RAIL_L",
+   "label": "RAIL_L_U-channel_400x48x48_goBILDA_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    -200.0,
+    162.0,
+    30.0,
+    200.0,
+    210.0,
+    78.0
+   ]
+  },
+  {
+   "name": "RAIL_R",
+   "label": "RAIL_R_U-channel_400x48x48_goBILDA_VENDOR-PENDING",
+   "type": "Part::Box",
+   "bbox": [
+    -200.0,
+    -210.0,
+    30.0,
+    200.0,
+    -162.0,
+    78.0
+   ]
+  }
+ ]
+}

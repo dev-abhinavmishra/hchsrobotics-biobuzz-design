@@ -1,0 +1,18 @@
+PASS A4 counts | 53 objects / 34 solids
+PASS C1-C4 named pairs disjoint | []
+PASS C6 full leaf scan | []
+PASS C5 regression objects | []
+PASS D2 reps inside reserves | []
+PASS D3 bore gap = 100 | inner gap 100.00
+PASS D3 cradle | XY 120x120 ZMin 600.0
+PASS D3 stages nested+ordered
+PASS E1 stowed inside R102 cube | []
+PASS E2 deployed inside R105 | []
+PASS F1 REF_HIVE | XMin 1028.6 z-center 300.0
+PASS F2 REF_FLOWER | z-center 546.0, dist to lifter axis 90.0
+PASS F3 REF_HIVE labeled | REF_HIVE_aim_marker_position_UNVERIFIED
+PASS F3 REF_FLOWER labeled | REF_FLOWER_aim_marker_z546_sec9.7
+PASS P1 intake_width probe | 330.0 -> 396.0
+PASS P2 reach_z probe | 610.0 -> 732.0
+PASS P3 close-no-save hash stable
+RESULT: ALL PASS

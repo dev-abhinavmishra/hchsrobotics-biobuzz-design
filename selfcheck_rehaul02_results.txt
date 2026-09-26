@@ -1,0 +1,47 @@
+PASS ARC sprint-01-state archives present | ['baseline_sprint01_state_dump.json', 'intake_concept_v01_sprint01_state_20260921_090625.FCStd', 'master_robot_sprint01_state_20260921_090625.FCStd', 'transfer_concept_v01_sprint01_state_20260921_090625.FCStd'] sig=True
+PASS MASTER PAR3 expression-bound inputs | []
+PASS MASTER PROV1 provenance + labels | []
+PASS MASTER DAG tools consumed | []
+PASS MASTER ASM1 connectivity | []
+PASS MASTER ASM1 mount chains | []
+PASS MASTER ASM2 undeclared overlaps | []
+PASS MASTER ASM4 coincident pairs all declared | coincident=81 undeclared=[]
+PASS MASTER ENV1' stowed subset ENV_START, deployed subset ENV_EXPANSION | []
+PASS MASTER GEO8' softened-edge enumeration | []
+PASS MASTER GEO-I ball-path flagged conflicts | flagged=['FRAME_RAIL_F', 'LIFTER_PED']
+PASS MASTER GEO-I coaxiality + ball-path clearance | []
+PASS MASTER GEO-T ball-path flagged conflicts | flagged=['FRAME_RAIL_F', 'LIFTER_PED']
+PASS MASTER GEO-T hinge coaxiality + clear section + sweep | []
+PASS MASTER GEO reserves containment (interior parts) | []
+PASS MASTER GUI GuiDocument.xml present
+PASS INTAKE PAR3 expression-bound inputs | []
+PASS INTAKE PROV1 provenance + labels | []
+PASS INTAKE DAG tools consumed | []
+PASS INTAKE ASM1 connectivity | []
+PASS INTAKE ASM1 mount chains | []
+PASS INTAKE ASM2 undeclared overlaps | []
+PASS INTAKE ASM4 coincident pairs all declared | coincident=15 undeclared=[]
+PASS INTAKE GEO8' softened-edge enumeration | []
+PASS INTAKE GEO-I ball-path flagged conflicts | flagged=['LIP_RAMP']
+PASS INTAKE GEO-I coaxiality + ball-path clearance | []
+PASS INTAKE GUI GuiDocument.xml present
+PASS TRANSFER PAR3 expression-bound inputs | []
+PASS TRANSFER PROV1 provenance + labels | []
+PASS TRANSFER DAG tools consumed | []
+PASS TRANSFER ASM1 connectivity | []
+PASS TRANSFER ASM1 mount chains | []
+PASS TRANSFER ASM2 undeclared overlaps | []
+PASS TRANSFER ASM4 coincident pairs all declared | coincident=17 undeclared=[]
+PASS TRANSFER GEO8' softened-edge enumeration | []
+PASS TRANSFER GEO-T ball-path flagged conflicts | flagged=[]
+PASS TRANSFER GEO-T hinge coaxiality + clear section + sweep | []
+PASS TRANSFER GUI GuiDocument.xml present
+PASS MASTER PAR2-I intake_width chain | moved=[] roller_span 304.0->314.0
+PASS MASTER PAR2-T channel_w chain | []
+PASS MASTER PAR4 chamfer survives bump | cheek faces 35 valid=True
+PASS MASTER close-no-save hash stable
+PASS REG drivebase signature identical | []
+PASS REG shooter signature identical | []
+PASS REG lifter signature identical | []
+PASS REG electronics signature identical | []
+RESULT: ALL PASS

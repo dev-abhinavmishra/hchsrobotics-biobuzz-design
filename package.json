@@ -1,0 +1,17 @@
+{
+  "name": "biobuzz-robot",
+  "version": "1.0.0",
+  "description": "BIOBUZZ (FTC 2026-27) robot concept — interactive Three.js design-review app in viewer/, plus a FreeCAD placeholder packaging foundation in cad/ + scripts/freecad/. See README.md.",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "ftc",
+    "biobuzz",
+    "robot",
+    "threejs",
+    "freecad"
+  ],
+  "license": "ISC"
+}

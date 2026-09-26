@@ -1,0 +1,7210 @@
+{
+ "drivebase": [
+  {
+   "name": "Parameters",
+   "type": "Spreadsheet::Sheet"
+  },
+  {
+   "bbox": [
+    -210.0,
+    -196.0,
+    -0.009,
+    210.0,
+    196.0,
+    96.009
+   ],
+   "name": "DrivebaseAssembly",
+   "type": "App::Part",
+   "volume": 2508477.639
+  },
+  {
+   "name": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -210.0,
+    -164.0,
+    -46.0,
+    210.0,
+    164.0,
+    63.0
+   ],
+   "name": "Tools",
+   "type": "App::Part",
+   "volume": 9108135.995
+  },
+  {
+   "name": "Origin002",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis001",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane001",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin003",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -210.0,
+    116.0,
+    0.0,
+    210.0,
+    164.0,
+    48.0
+   ],
+   "name": "TOOL_RAIL_L_OUT",
+   "type": "Part::Box",
+   "volume": 967680.0
+  },
+  {
+   "bbox": [
+    -210.0,
+    118.5,
+    2.5,
+    210.0,
+    164.0,
+    45.5
+   ],
+   "name": "TOOL_RAIL_L_INNER",
+   "type": "Part::Box",
+   "volume": 821730.0
+  },
+  {
+   "bbox": [
+    -170.0,
+    138.0,
+    44.5,
+    -166.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -122.0,
+    138.0,
+    44.5,
+    -118.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -74.0,
+    138.0,
+    44.5,
+    -70.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -26.0,
+    138.0,
+    44.5,
+    -22.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    22.0,
+    138.0,
+    44.5,
+    26.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    70.0,
+    138.0,
+    44.5,
+    74.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH05",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    118.0,
+    138.0,
+    44.5,
+    122.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH06",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    166.0,
+    138.0,
+    44.5,
+    170.0,
+    142.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_FH07",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -182.0,
+    115.0,
+    22.0,
+    -178.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -122.0,
+    115.0,
+    22.0,
+    -118.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -62.0,
+    115.0,
+    22.0,
+    -58.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -2.0,
+    115.0,
+    22.0,
+    2.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    58.0,
+    115.0,
+    22.0,
+    62.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    118.0,
+    115.0,
+    22.0,
+    122.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH05",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    178.0,
+    115.0,
+    22.0,
+    182.0,
+    119.5,
+    26.0
+   ],
+   "name": "TOOL_RAIL_L_WH06",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    132.0,
+    116.0,
+    34.01,
+    148.0,
+    164.0,
+    48.01
+   ],
+   "name": "TOOL_RAIL_L_NOTCH0",
+   "type": "Part::Box",
+   "volume": 10752.0
+  },
+  {
+   "bbox": [
+    -148.0,
+    116.0,
+    34.01,
+    -132.0,
+    164.0,
+    48.01
+   ],
+   "name": "TOOL_RAIL_L_NOTCH1",
+   "type": "Part::Box",
+   "volume": 10752.0
+  },
+  {
+   "bbox": [
+    -210.0,
+    116.0,
+    0.0,
+    210.0,
+    164.0,
+    48.0
+   ],
+   "name": "RAIL_L",
+   "type": "Part::Cut",
+   "volume": 140719.561
+  },
+  {
+   "bbox": [
+    -210.0,
+    115.0,
+    2.5,
+    210.0,
+    164.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_L_TOOLS",
+   "type": "Part::Compound",
+   "volume": 844082.23
+  },
+  {
+   "bbox": [
+    -210.0,
+    -164.0,
+    0.0,
+    210.0,
+    -116.0,
+    48.0
+   ],
+   "name": "TOOL_RAIL_R_OUT",
+   "type": "Part::Box",
+   "volume": 967680.0
+  },
+  {
+   "bbox": [
+    -210.0,
+    -164.0,
+    2.5,
+    210.0,
+    -118.5,
+    45.5
+   ],
+   "name": "TOOL_RAIL_R_INNER",
+   "type": "Part::Box",
+   "volume": 821730.0
+  },
+  {
+   "bbox": [
+    -170.0,
+    -142.0,
+    44.5,
+    -166.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -122.0,
+    -142.0,
+    44.5,
+    -118.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -74.0,
+    -142.0,
+    44.5,
+    -70.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -26.0,
+    -142.0,
+    44.5,
+    -22.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    22.0,
+    -142.0,
+    44.5,
+    26.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    70.0,
+    -142.0,
+    44.5,
+    74.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH05",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    118.0,
+    -142.0,
+    44.5,
+    122.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH06",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    166.0,
+    -142.0,
+    44.5,
+    170.0,
+    -138.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_FH07",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -182.0,
+    -119.5,
+    22.0,
+    -178.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -122.0,
+    -119.5,
+    22.0,
+    -118.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -62.0,
+    -119.5,
+    22.0,
+    -58.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -2.0,
+    -119.5,
+    22.0,
+    2.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    58.0,
+    -119.5,
+    22.0,
+    62.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    118.0,
+    -119.5,
+    22.0,
+    122.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH05",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    178.0,
+    -119.5,
+    22.0,
+    182.0,
+    -115.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_R_WH06",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    132.0,
+    -164.0,
+    34.01,
+    148.0,
+    -116.0,
+    48.01
+   ],
+   "name": "TOOL_RAIL_R_NOTCH0",
+   "type": "Part::Box",
+   "volume": 10752.0
+  },
+  {
+   "bbox": [
+    -148.0,
+    -164.0,
+    34.01,
+    -132.0,
+    -116.0,
+    48.01
+   ],
+   "name": "TOOL_RAIL_R_NOTCH1",
+   "type": "Part::Box",
+   "volume": 10752.0
+  },
+  {
+   "bbox": [
+    -210.0,
+    -164.0,
+    0.0,
+    210.0,
+    -116.0,
+    48.0
+   ],
+   "name": "RAIL_R",
+   "type": "Part::Cut",
+   "volume": 140719.561
+  },
+  {
+   "bbox": [
+    -210.0,
+    -164.0,
+    2.5,
+    210.0,
+    -115.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_R_TOOLS",
+   "type": "Part::Compound",
+   "volume": 844082.23
+  },
+  {
+   "bbox": [
+    162.0,
+    -116.0,
+    0.0,
+    210.0,
+    116.0,
+    48.0
+   ],
+   "name": "TOOL_RAIL_F_OUT",
+   "type": "Part::Box",
+   "volume": 534528.0
+  },
+  {
+   "bbox": [
+    164.5,
+    -116.0,
+    2.5,
+    210.0,
+    116.0,
+    45.5
+   ],
+   "name": "TOOL_RAIL_F_INNER",
+   "type": "Part::Box",
+   "volume": 453908.0
+  },
+  {
+   "bbox": [
+    184.0,
+    -76.0,
+    44.5,
+    188.0,
+    -72.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_FH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    184.0,
+    -28.0,
+    44.5,
+    188.0,
+    -24.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_FH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    184.0,
+    20.0,
+    44.5,
+    188.0,
+    24.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_FH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    184.0,
+    68.0,
+    44.5,
+    188.0,
+    72.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_FH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    184.0,
+    116.0,
+    44.5,
+    188.0,
+    120.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_FH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    161.0,
+    -88.0,
+    22.0,
+    165.5,
+    -84.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_F_WH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    161.0,
+    -28.0,
+    22.0,
+    165.5,
+    -24.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_F_WH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    161.0,
+    32.0,
+    22.0,
+    165.5,
+    36.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_F_WH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    161.0,
+    92.0,
+    22.0,
+    165.5,
+    96.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_F_WH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    162.0,
+    -116.0,
+    0.0,
+    210.0,
+    116.0,
+    48.0
+   ],
+   "name": "RAIL_F",
+   "type": "Part::Cut",
+   "volume": 80368.673
+  },
+  {
+   "bbox": [
+    161.0,
+    -116.0,
+    2.5,
+    210.0,
+    120.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_F_TOOLS",
+   "type": "Part::Compound",
+   "volume": 454416.938
+  },
+  {
+   "bbox": [
+    -210.0,
+    -116.0,
+    0.0,
+    -162.0,
+    116.0,
+    48.0
+   ],
+   "name": "TOOL_RAIL_B_OUT",
+   "type": "Part::Box",
+   "volume": 534528.0
+  },
+  {
+   "bbox": [
+    -210.0,
+    -116.0,
+    2.5,
+    -164.5,
+    116.0,
+    45.5
+   ],
+   "name": "TOOL_RAIL_B_INNER",
+   "type": "Part::Box",
+   "volume": 453908.0
+  },
+  {
+   "bbox": [
+    -188.0,
+    -76.0,
+    44.5,
+    -184.0,
+    -72.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_FH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -188.0,
+    -28.0,
+    44.5,
+    -184.0,
+    -24.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_FH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -188.0,
+    20.0,
+    44.5,
+    -184.0,
+    24.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_FH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -188.0,
+    68.0,
+    44.5,
+    -184.0,
+    72.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_FH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -188.0,
+    116.0,
+    44.5,
+    -184.0,
+    120.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_FH04",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -165.5,
+    -88.0,
+    22.0,
+    -161.0,
+    -84.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_B_WH00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -165.5,
+    -28.0,
+    22.0,
+    -161.0,
+    -24.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_B_WH01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -165.5,
+    32.0,
+    22.0,
+    -161.0,
+    36.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_B_WH02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -165.5,
+    92.0,
+    22.0,
+    -161.0,
+    96.0,
+    26.0
+   ],
+   "name": "TOOL_RAIL_B_WH03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -210.0,
+    -116.0,
+    0.0,
+    -162.0,
+    116.0,
+    48.0
+   ],
+   "name": "RAIL_B",
+   "type": "Part::Cut",
+   "volume": 80368.673
+  },
+  {
+   "bbox": [
+    -210.0,
+    -116.0,
+    2.5,
+    -161.0,
+    120.0,
+    49.0
+   ],
+   "name": "TOOL_RAIL_B_TOOLS",
+   "type": "Part::Compound",
+   "volume": 454416.938
+  },
+  {
+   "bbox": [
+    -162.0,
+    -116.0,
+    2.5,
+    162.0,
+    116.0,
+    5.5
+   ],
+   "name": "TOOL_BELLY_PAN_BLK",
+   "type": "Part::Box",
+   "volume": 225504.0
+  },
+  {
+   "bbox": [
+    -162.0,
+    -116.0,
+    2.5,
+    162.0,
+    116.0,
+    5.5
+   ],
+   "name": "BELLY_PAN",
+   "type": "Part::Fillet",
+   "volume": 225339.186
+  },
+  {
+   "bbox": [
+    92.0,
+    165.0,
+    -0.009,
+    188.0,
+    195.0,
+    96.009
+   ],
+   "name": "WHEEL_ASSY_FL",
+   "type": "App::Part",
+   "volume": 95144.809
+  },
+  {
+   "name": "Origin004",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis002",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis002",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis002",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    48.0,
+    1e+100,
+    1e+100,
+    48.0
+   ],
+   "name": "XY_Plane002",
+   "type": "App::Plane",
+   "volume": 1.28e+102
+  },
+  {
+   "name": "XZ_Plane002",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane002",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin005",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -13.0,
+    -10.0,
+    -13.0,
+    13.0,
+    10.0,
+    13.0
+   ],
+   "name": "TOOL_WHEEL_HUB_FL_BLK",
+   "type": "Part::Cylinder",
+   "volume": 10618.583
+  },
+  {
+   "bbox": [
+    -4.2,
+    -11.0,
+    -4.2,
+    4.2,
+    11.0,
+    4.2
+   ],
+   "name": "TOOL_WHEEL_HUB_FL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 1219.189
+  },
+  {
+   "bbox": [
+    127.0,
+    170.0,
+    35.0,
+    153.0,
+    190.0,
+    61.0
+   ],
+   "name": "WHEEL_HUB_FL",
+   "type": "Part::Cut",
+   "volume": 9510.229
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_IN_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    -16.0,
+    -4.5,
+    4.5,
+    -10.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_IN_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_IN_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    94.0,
+    165.0,
+    2.0,
+    186.0,
+    169.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_FL_IN",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_OUT_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    10.0,
+    -4.5,
+    4.5,
+    16.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_OUT_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FL_OUT_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    94.0,
+    191.0,
+    2.0,
+    186.0,
+    195.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_FL_OUT",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    174.0,
+    166.211,
+    34.211,
+    188.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_FL_00",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin006",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis003",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane003",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin007",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_00_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_00_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    174.0,
+    166.211,
+    34.211,
+    188.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_FL_00_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    162.647,
+    166.211,
+    60.324,
+    183.693,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_FL_01",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin008",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis004",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis004",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis004",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane004",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane004",
+   "type": "App::Plane",
+   "volume": 1.347997333357532e+167
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane004",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin009",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_01_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_01_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    162.647,
+    166.211,
+    60.324,
+    183.693,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_FL_01_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    139.387,
+    166.211,
+    77.977,
+    165.952,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_FL_02",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin010",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis005",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane005",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane005",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane005",
+   "type": "App::Plane",
+   "volume": 1.6175968000290385e+168
+  },
+  {
+   "name": "Origin011",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_02_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_02_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    139.387,
+    166.211,
+    77.977,
+    165.952,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_FL_02_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    114.048,
+    166.211,
+    77.977,
+    140.613,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_FL_03",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin012",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis006",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis006",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis006",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane006",
+   "type": "App::Plane",
+   "volume": 2.695994666715064e+167
+  },
+  {
+   "name": "XZ_Plane006",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane006",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin013",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_03_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_03_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    114.048,
+    166.211,
+    77.977,
+    140.613,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_FL_03_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    96.307,
+    166.211,
+    60.324,
+    117.353,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_FL_04",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin014",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis007",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis007",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis007",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane007",
+   "type": "App::Plane",
+   "volume": 1.347997333357532e+167
+  },
+  {
+   "name": "XZ_Plane007",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane007",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin015",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_04_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_04_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    96.307,
+    166.211,
+    60.324,
+    117.353,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_FL_04_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    92.0,
+    166.211,
+    34.211,
+    106.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_FL_05",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin016",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis008",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis008",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis008",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane008",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "XZ_Plane008",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane008",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin017",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_05_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_05_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    92.0,
+    166.211,
+    34.211,
+    106.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_FL_05_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    96.307,
+    166.211,
+    12.125,
+    117.353,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_FL_06",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin018",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis009",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis009",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis009",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane009",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane009",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "YZ_Plane009",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin019",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_06_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_06_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    96.307,
+    166.211,
+    12.125,
+    117.353,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_FL_06_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    114.048,
+    166.211,
+    -0.009,
+    140.613,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_FL_07",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin020",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis010",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis010",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis010",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane010",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane010",
+   "type": "App::Plane",
+   "volume": 1.8871962667005447e+168
+  },
+  {
+   "name": "YZ_Plane010",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin021",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_07_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_07_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    114.048,
+    166.211,
+    -0.009,
+    140.613,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_FL_07_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    139.387,
+    166.211,
+    -0.009,
+    165.952,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_FL_08",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin022",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis011",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis011",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis011",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane011",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane011",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane011",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin023",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_08_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_08_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    139.387,
+    166.211,
+    -0.009,
+    165.952,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_FL_08_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    162.647,
+    166.211,
+    12.125,
+    183.693,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_FL_09",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin024",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis012",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis012",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis012",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane012",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane012",
+   "type": "App::Plane",
+   "volume": 4.3135914667441024e+168
+  },
+  {
+   "name": "YZ_Plane012",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin025",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FL_09_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FL_09_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    162.647,
+    166.211,
+    12.125,
+    183.693,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_FL_09_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    92.0,
+    164.0,
+    0.0,
+    188.0,
+    196.0,
+    96.0
+   ],
+   "name": "ENV_WHEEL_FL",
+   "type": "Part::Box",
+   "volume": 294912.0
+  },
+  {
+   "bbox": [
+    122.0,
+    53.5,
+    30.0,
+    158.0,
+    113.5,
+    66.0
+   ],
+   "name": "MOTOR_FL",
+   "type": "Part::Cylinder",
+   "volume": 61072.561
+  },
+  {
+   "bbox": [
+    125.0,
+    113.5,
+    33.0,
+    155.0,
+    116.0,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_BLK",
+   "type": "Part::Box",
+   "volume": 2250.0
+  },
+  {
+   "bbox": [
+    125.0,
+    113.5,
+    33.0,
+    155.0,
+    116.0,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_FIL",
+   "type": "Part::Fillet",
+   "volume": 2215.664
+  },
+  {
+   "bbox": [
+    135.8,
+    112.5,
+    43.8,
+    144.2,
+    117.0,
+    52.2
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 249.38
+  },
+  {
+   "bbox": [
+    129.0,
+    112.5,
+    37.0,
+    133.0,
+    117.0,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_B00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    129.0,
+    112.5,
+    55.0,
+    133.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_B01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    147.0,
+    112.5,
+    37.0,
+    151.0,
+    117.0,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_B02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    147.0,
+    112.5,
+    55.0,
+    151.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_B03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    125.0,
+    113.5,
+    33.0,
+    155.0,
+    116.0,
+    63.0
+   ],
+   "name": "MOUNT_MOTOR_FL",
+   "type": "Part::Cut",
+   "volume": 1951.456
+  },
+  {
+   "bbox": [
+    129.0,
+    112.5,
+    37.0,
+    151.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FL_TOOLS",
+   "type": "Part::Compound",
+   "volume": 475.574
+  },
+  {
+   "bbox": [
+    127.0,
+    118.5,
+    35.0,
+    153.0,
+    124.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_FL_BLK",
+   "type": "Part::Box",
+   "volume": 4056.0
+  },
+  {
+   "bbox": [
+    127.0,
+    118.5,
+    35.0,
+    153.0,
+    124.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_FL_FIL",
+   "type": "Part::Fillet",
+   "volume": 3973.593
+  },
+  {
+   "bbox": [
+    135.8,
+    117.5,
+    43.8,
+    144.2,
+    125.5,
+    52.2
+   ],
+   "name": "TOOL_BEARING_FL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 443.342
+  },
+  {
+   "bbox": [
+    129.0,
+    117.5,
+    37.0,
+    133.0,
+    125.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_FL_B00",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    129.0,
+    117.5,
+    55.0,
+    133.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FL_B01",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    147.0,
+    117.5,
+    37.0,
+    151.0,
+    125.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_FL_B02",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    147.0,
+    117.5,
+    55.0,
+    151.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FL_B03",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    127.0,
+    118.5,
+    35.0,
+    153.0,
+    124.5,
+    61.0
+   ],
+   "name": "BEARING_FL",
+   "type": "Part::Cut",
+   "volume": 3339.494
+  },
+  {
+   "bbox": [
+    129.0,
+    117.5,
+    37.0,
+    151.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FL_TOOLS",
+   "type": "Part::Compound",
+   "volume": 845.465
+  },
+  {
+   "bbox": [
+    136.0,
+    100.0,
+    44.0,
+    144.0,
+    176.0,
+    52.0
+   ],
+   "name": "SHAFT_FL",
+   "type": "Part::Cylinder",
+   "volume": 3820.177
+  },
+  {
+   "bbox": [
+    92.0,
+    -195.0,
+    -0.009,
+    188.0,
+    -165.0,
+    96.009
+   ],
+   "name": "WHEEL_ASSY_FR",
+   "type": "App::Part",
+   "volume": 95144.809
+  },
+  {
+   "name": "Origin026",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis013",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis013",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis013",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    48.0,
+    1e+100,
+    1e+100,
+    48.0
+   ],
+   "name": "XY_Plane013",
+   "type": "App::Plane",
+   "volume": 1.28e+102
+  },
+  {
+   "name": "XZ_Plane013",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane013",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin027",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -13.0,
+    -10.0,
+    -13.0,
+    13.0,
+    10.0,
+    13.0
+   ],
+   "name": "TOOL_WHEEL_HUB_FR_BLK",
+   "type": "Part::Cylinder",
+   "volume": 10618.583
+  },
+  {
+   "bbox": [
+    -4.2,
+    -11.0,
+    -4.2,
+    4.2,
+    11.0,
+    4.2
+   ],
+   "name": "TOOL_WHEEL_HUB_FR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 1219.189
+  },
+  {
+   "bbox": [
+    127.0,
+    -190.0,
+    35.0,
+    153.0,
+    -170.0,
+    61.0
+   ],
+   "name": "WHEEL_HUB_FR",
+   "type": "Part::Cut",
+   "volume": 9510.229
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_IN_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    -16.0,
+    -4.5,
+    4.5,
+    -10.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_IN_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_IN_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    94.0,
+    -195.0,
+    2.0,
+    186.0,
+    -191.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_FR_IN",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_OUT_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    10.0,
+    -4.5,
+    4.5,
+    16.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_OUT_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_FR_OUT_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    94.0,
+    -169.0,
+    2.0,
+    186.0,
+    -165.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_FR_OUT",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    174.0,
+    -193.789,
+    34.211,
+    188.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_FR_00",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin028",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis014",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis014",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis014",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane014",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane014",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    181.0,
+    -1e+100,
+    -1e+100,
+    181.0,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane014",
+   "type": "App::Plane",
+   "volume": 9.578097130411806e+152
+  },
+  {
+   "name": "Origin029",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_00_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_00_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    174.0,
+    -193.789,
+    34.211,
+    188.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_FR_00_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    162.647,
+    -193.789,
+    60.324,
+    183.693,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_FR_01",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin030",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis015",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis015",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis015",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane015",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane015",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane015",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin031",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_01_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_01_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    162.647,
+    -193.789,
+    60.324,
+    183.693,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_FR_01_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    139.387,
+    -193.789,
+    77.977,
+    165.952,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_FR_02",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin032",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis016",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis016",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis016",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane016",
+   "type": "App::Plane",
+   "volume": 4.0439920000725963e+167
+  },
+  {
+   "name": "XZ_Plane016",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane016",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin033",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_02_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_02_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    139.387,
+    -193.789,
+    77.977,
+    165.952,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_FR_02_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    114.048,
+    -193.789,
+    77.977,
+    140.613,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_FR_03",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin034",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis017",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis017",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis017",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane017",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane017",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane017",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin035",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_03_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_03_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    114.048,
+    -193.789,
+    77.977,
+    140.613,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_FR_03_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    96.307,
+    -193.789,
+    60.324,
+    117.353,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_FR_04",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin036",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis018",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis018",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis018",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane018",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane018",
+   "type": "App::Plane",
+   "volume": 8.627182933488205e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane018",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "Origin037",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_04_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_04_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    96.307,
+    -193.789,
+    60.324,
+    117.353,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_FR_04_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    92.0,
+    -193.789,
+    34.211,
+    106.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_FR_05",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin038",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis019",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis019",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis019",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane019",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane019",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    99.0,
+    -1e+100,
+    -1e+100,
+    99.0,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane019",
+   "type": "App::Plane",
+   "volume": 1.1972621413014757e+152
+  },
+  {
+   "name": "Origin039",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_05_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_05_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    92.0,
+    -193.789,
+    34.211,
+    106.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_FR_05_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    96.307,
+    -193.789,
+    12.125,
+    117.353,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_FR_06",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin040",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis020",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis020",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis020",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane020",
+   "type": "App::Plane",
+   "volume": 8.087984000145193e+167
+  },
+  {
+   "name": "XZ_Plane020",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane020",
+   "type": "App::Plane",
+   "volume": 2.1567957333720512e+168
+  },
+  {
+   "name": "Origin041",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_06_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_06_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    96.307,
+    -193.789,
+    12.125,
+    117.353,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_FR_06_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    114.048,
+    -193.789,
+    -0.009,
+    140.613,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_FR_07",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin042",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis021",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis021",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis021",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane021",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane021",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane021",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin043",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_07_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_07_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    114.048,
+    -193.789,
+    -0.009,
+    140.613,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_FR_07_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    139.387,
+    -193.789,
+    -0.009,
+    165.952,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_FR_08",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin044",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis022",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis022",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis022",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane022",
+   "type": "App::Plane",
+   "volume": 1.6175968000290385e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane022",
+   "type": "App::Plane",
+   "volume": 2.1904956667059895e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane022",
+   "type": "App::Plane",
+   "volume": 1.684996666696915e+167
+  },
+  {
+   "name": "Origin045",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_08_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_08_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    139.387,
+    -193.789,
+    -0.009,
+    165.952,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_FR_08_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    162.647,
+    -193.789,
+    12.125,
+    183.693,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_FR_09",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin046",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis023",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis023",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis023",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane023",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "XZ_Plane023",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane023",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin047",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_FR_09_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_FR_09_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    162.647,
+    -193.789,
+    12.125,
+    183.693,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_FR_09_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    92.0,
+    -196.0,
+    0.0,
+    188.0,
+    -164.0,
+    96.0
+   ],
+   "name": "ENV_WHEEL_FR",
+   "type": "Part::Box",
+   "volume": 294912.0
+  },
+  {
+   "bbox": [
+    122.0,
+    -113.5,
+    30.0,
+    158.0,
+    -53.5,
+    66.0
+   ],
+   "name": "MOTOR_FR",
+   "type": "Part::Cylinder",
+   "volume": 61072.561
+  },
+  {
+   "bbox": [
+    125.0,
+    -116.0,
+    33.0,
+    155.0,
+    -113.5,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_BLK",
+   "type": "Part::Box",
+   "volume": 2250.0
+  },
+  {
+   "bbox": [
+    125.0,
+    -116.0,
+    33.0,
+    155.0,
+    -113.5,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_FIL",
+   "type": "Part::Fillet",
+   "volume": 2215.664
+  },
+  {
+   "bbox": [
+    135.8,
+    -117.0,
+    43.8,
+    144.2,
+    -112.5,
+    52.2
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 249.38
+  },
+  {
+   "bbox": [
+    129.0,
+    -117.0,
+    37.0,
+    133.0,
+    -112.5,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_B00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    129.0,
+    -117.0,
+    55.0,
+    133.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_B01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    147.0,
+    -117.0,
+    37.0,
+    151.0,
+    -112.5,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_B02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    147.0,
+    -117.0,
+    55.0,
+    151.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_B03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    125.0,
+    -116.0,
+    33.0,
+    155.0,
+    -113.5,
+    63.0
+   ],
+   "name": "MOUNT_MOTOR_FR",
+   "type": "Part::Cut",
+   "volume": 1951.456
+  },
+  {
+   "bbox": [
+    129.0,
+    -117.0,
+    37.0,
+    151.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_FR_TOOLS",
+   "type": "Part::Compound",
+   "volume": 475.574
+  },
+  {
+   "bbox": [
+    127.0,
+    -124.5,
+    35.0,
+    153.0,
+    -118.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_FR_BLK",
+   "type": "Part::Box",
+   "volume": 4056.0
+  },
+  {
+   "bbox": [
+    127.0,
+    -124.5,
+    35.0,
+    153.0,
+    -118.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_FR_FIL",
+   "type": "Part::Fillet",
+   "volume": 3973.593
+  },
+  {
+   "bbox": [
+    135.8,
+    -125.5,
+    43.8,
+    144.2,
+    -117.5,
+    52.2
+   ],
+   "name": "TOOL_BEARING_FR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 443.342
+  },
+  {
+   "bbox": [
+    129.0,
+    -125.5,
+    37.0,
+    133.0,
+    -117.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_FR_B00",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    129.0,
+    -125.5,
+    55.0,
+    133.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FR_B01",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    147.0,
+    -125.5,
+    37.0,
+    151.0,
+    -117.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_FR_B02",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    147.0,
+    -125.5,
+    55.0,
+    151.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FR_B03",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    127.0,
+    -124.5,
+    35.0,
+    153.0,
+    -118.5,
+    61.0
+   ],
+   "name": "BEARING_FR",
+   "type": "Part::Cut",
+   "volume": 3339.494
+  },
+  {
+   "bbox": [
+    129.0,
+    -125.5,
+    37.0,
+    151.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_FR_TOOLS",
+   "type": "Part::Compound",
+   "volume": 845.465
+  },
+  {
+   "bbox": [
+    136.0,
+    -176.0,
+    44.0,
+    144.0,
+    -100.0,
+    52.0
+   ],
+   "name": "SHAFT_FR",
+   "type": "Part::Cylinder",
+   "volume": 3820.177
+  },
+  {
+   "bbox": [
+    -188.0,
+    165.0,
+    -0.009,
+    -92.0,
+    195.0,
+    96.009
+   ],
+   "name": "WHEEL_ASSY_RL",
+   "type": "App::Part",
+   "volume": 95144.809
+  },
+  {
+   "name": "Origin048",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis024",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis024",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis024",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    48.0,
+    1e+100,
+    1e+100,
+    48.0
+   ],
+   "name": "XY_Plane024",
+   "type": "App::Plane",
+   "volume": 1.28e+102
+  },
+  {
+   "name": "XZ_Plane024",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane024",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin049",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -13.0,
+    -10.0,
+    -13.0,
+    13.0,
+    10.0,
+    13.0
+   ],
+   "name": "TOOL_WHEEL_HUB_RL_BLK",
+   "type": "Part::Cylinder",
+   "volume": 10618.583
+  },
+  {
+   "bbox": [
+    -4.2,
+    -11.0,
+    -4.2,
+    4.2,
+    11.0,
+    4.2
+   ],
+   "name": "TOOL_WHEEL_HUB_RL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 1219.189
+  },
+  {
+   "bbox": [
+    -153.0,
+    170.0,
+    35.0,
+    -127.0,
+    190.0,
+    61.0
+   ],
+   "name": "WHEEL_HUB_RL",
+   "type": "Part::Cut",
+   "volume": 9510.229
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_IN_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    -16.0,
+    -4.5,
+    4.5,
+    -10.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_IN_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_IN_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    -186.0,
+    165.0,
+    2.0,
+    -94.0,
+    169.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_RL_IN",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_OUT_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    10.0,
+    -4.5,
+    4.5,
+    16.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_OUT_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RL_OUT_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    -186.0,
+    191.0,
+    2.0,
+    -94.0,
+    195.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_RL_OUT",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -106.0,
+    166.211,
+    34.211,
+    -92.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_RL_00",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin050",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis025",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis025",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis025",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane025",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane025",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -99.0,
+    -1e+100,
+    -1e+100,
+    -99.0,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane025",
+   "type": "App::Plane",
+   "volume": 9.578097130411806e+152
+  },
+  {
+   "name": "Origin051",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_00_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_00_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -106.0,
+    166.211,
+    34.211,
+    -92.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_RL_00_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -117.353,
+    166.211,
+    60.324,
+    -96.307,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_RL_01",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin052",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis026",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis026",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis026",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane026",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane026",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane026",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin053",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_01_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_01_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -117.353,
+    166.211,
+    60.324,
+    -96.307,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_RL_01_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -140.613,
+    166.211,
+    77.977,
+    -114.048,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_RL_02",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin054",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis027",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis027",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis027",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane027",
+   "type": "App::Plane",
+   "volume": 4.0439920000725963e+167
+  },
+  {
+   "name": "XZ_Plane027",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane027",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin055",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_02_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_02_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -140.613,
+    166.211,
+    77.977,
+    -114.048,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_RL_02_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -165.952,
+    166.211,
+    77.977,
+    -139.387,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_RL_03",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin056",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis028",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis028",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis028",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane028",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane028",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane028",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin057",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_03_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_03_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -165.952,
+    166.211,
+    77.977,
+    -139.387,
+    193.789,
+    96.009
+   ],
+   "name": "ROLLER_RL_03_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -183.693,
+    166.211,
+    60.324,
+    -162.647,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_RL_04",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin058",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis029",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis029",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis029",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane029",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane029",
+   "type": "App::Plane",
+   "volume": 8.627182933488205e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane029",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "Origin059",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_04_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_04_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -183.693,
+    166.211,
+    60.324,
+    -162.647,
+    193.789,
+    83.875
+   ],
+   "name": "ROLLER_RL_04_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -188.0,
+    166.211,
+    34.211,
+    -174.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_RL_05",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin060",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis030",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis030",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis030",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane030",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane030",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -181.0,
+    -1e+100,
+    -1e+100,
+    -181.0,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane030",
+   "type": "App::Plane",
+   "volume": 1.1972621413014757e+152
+  },
+  {
+   "name": "Origin061",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_05_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_05_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -188.0,
+    166.211,
+    34.211,
+    -174.0,
+    193.789,
+    61.789
+   ],
+   "name": "ROLLER_RL_05_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -183.693,
+    166.211,
+    12.125,
+    -162.647,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_RL_06",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin062",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis031",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis031",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis031",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane031",
+   "type": "App::Plane",
+   "volume": 8.087984000145193e+167
+  },
+  {
+   "name": "XZ_Plane031",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane031",
+   "type": "App::Plane",
+   "volume": 2.1567957333720512e+168
+  },
+  {
+   "name": "Origin063",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_06_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_06_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -183.693,
+    166.211,
+    12.125,
+    -162.647,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_RL_06_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -165.952,
+    166.211,
+    -0.009,
+    -139.387,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_RL_07",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin064",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis032",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis032",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis032",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane032",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane032",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane032",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin065",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_07_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_07_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -165.952,
+    166.211,
+    -0.009,
+    -139.387,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_RL_07_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -140.613,
+    166.211,
+    -0.009,
+    -114.048,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_RL_08",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin066",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis033",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis033",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis033",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane033",
+   "type": "App::Plane",
+   "volume": 1.6175968000290385e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane033",
+   "type": "App::Plane",
+   "volume": 2.1904956667059895e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane033",
+   "type": "App::Plane",
+   "volume": 1.684996666696915e+167
+  },
+  {
+   "name": "Origin067",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_08_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_08_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -140.613,
+    166.211,
+    -0.009,
+    -114.048,
+    193.789,
+    18.023
+   ],
+   "name": "ROLLER_RL_08_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -117.353,
+    166.211,
+    12.125,
+    -96.307,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_RL_09",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin068",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis034",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis034",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis034",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane034",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "XZ_Plane034",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane034",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin069",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RL_09_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RL_09_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -117.353,
+    166.211,
+    12.125,
+    -96.307,
+    193.789,
+    35.676
+   ],
+   "name": "ROLLER_RL_09_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -188.0,
+    164.0,
+    0.0,
+    -92.0,
+    196.0,
+    96.0
+   ],
+   "name": "ENV_WHEEL_RL",
+   "type": "Part::Box",
+   "volume": 294912.0
+  },
+  {
+   "bbox": [
+    -158.0,
+    53.5,
+    30.0,
+    -122.0,
+    113.5,
+    66.0
+   ],
+   "name": "MOTOR_RL",
+   "type": "Part::Cylinder",
+   "volume": 61072.561
+  },
+  {
+   "bbox": [
+    -155.0,
+    113.5,
+    33.0,
+    -125.0,
+    116.0,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_BLK",
+   "type": "Part::Box",
+   "volume": 2250.0
+  },
+  {
+   "bbox": [
+    -155.0,
+    113.5,
+    33.0,
+    -125.0,
+    116.0,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_FIL",
+   "type": "Part::Fillet",
+   "volume": 2215.664
+  },
+  {
+   "bbox": [
+    -144.2,
+    112.5,
+    43.8,
+    -135.8,
+    117.0,
+    52.2
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 249.38
+  },
+  {
+   "bbox": [
+    -151.0,
+    112.5,
+    37.0,
+    -147.0,
+    117.0,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_B00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -151.0,
+    112.5,
+    55.0,
+    -147.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_B01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -133.0,
+    112.5,
+    37.0,
+    -129.0,
+    117.0,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_B02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -133.0,
+    112.5,
+    55.0,
+    -129.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_B03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -155.0,
+    113.5,
+    33.0,
+    -125.0,
+    116.0,
+    63.0
+   ],
+   "name": "MOUNT_MOTOR_RL",
+   "type": "Part::Cut",
+   "volume": 1951.456
+  },
+  {
+   "bbox": [
+    -151.0,
+    112.5,
+    37.0,
+    -129.0,
+    117.0,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RL_TOOLS",
+   "type": "Part::Compound",
+   "volume": 475.574
+  },
+  {
+   "bbox": [
+    -153.0,
+    118.5,
+    35.0,
+    -127.0,
+    124.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_RL_BLK",
+   "type": "Part::Box",
+   "volume": 4056.0
+  },
+  {
+   "bbox": [
+    -153.0,
+    118.5,
+    35.0,
+    -127.0,
+    124.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_RL_FIL",
+   "type": "Part::Fillet",
+   "volume": 3973.593
+  },
+  {
+   "bbox": [
+    -144.2,
+    117.5,
+    43.8,
+    -135.8,
+    125.5,
+    52.2
+   ],
+   "name": "TOOL_BEARING_RL_BORE",
+   "type": "Part::Cylinder",
+   "volume": 443.342
+  },
+  {
+   "bbox": [
+    -151.0,
+    117.5,
+    37.0,
+    -147.0,
+    125.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_RL_B00",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -151.0,
+    117.5,
+    55.0,
+    -147.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RL_B01",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -133.0,
+    117.5,
+    37.0,
+    -129.0,
+    125.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_RL_B02",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -133.0,
+    117.5,
+    55.0,
+    -129.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RL_B03",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -153.0,
+    118.5,
+    35.0,
+    -127.0,
+    124.5,
+    61.0
+   ],
+   "name": "BEARING_RL",
+   "type": "Part::Cut",
+   "volume": 3339.494
+  },
+  {
+   "bbox": [
+    -151.0,
+    117.5,
+    37.0,
+    -129.0,
+    125.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RL_TOOLS",
+   "type": "Part::Compound",
+   "volume": 845.465
+  },
+  {
+   "bbox": [
+    -144.0,
+    100.0,
+    44.0,
+    -136.0,
+    176.0,
+    52.0
+   ],
+   "name": "SHAFT_RL",
+   "type": "Part::Cylinder",
+   "volume": 3820.177
+  },
+  {
+   "bbox": [
+    -188.0,
+    -195.0,
+    -0.009,
+    -92.0,
+    -165.0,
+    96.009
+   ],
+   "name": "WHEEL_ASSY_RR",
+   "type": "App::Part",
+   "volume": 95144.809
+  },
+  {
+   "name": "Origin070",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis035",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis035",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis035",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    48.0,
+    1e+100,
+    1e+100,
+    48.0
+   ],
+   "name": "XY_Plane035",
+   "type": "App::Plane",
+   "volume": 1.28e+102
+  },
+  {
+   "name": "XZ_Plane035",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane035",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin071",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -13.0,
+    -10.0,
+    -13.0,
+    13.0,
+    10.0,
+    13.0
+   ],
+   "name": "TOOL_WHEEL_HUB_RR_BLK",
+   "type": "Part::Cylinder",
+   "volume": 10618.583
+  },
+  {
+   "bbox": [
+    -4.2,
+    -11.0,
+    -4.2,
+    4.2,
+    11.0,
+    4.2
+   ],
+   "name": "TOOL_WHEEL_HUB_RR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 1219.189
+  },
+  {
+   "bbox": [
+    -153.0,
+    -190.0,
+    35.0,
+    -127.0,
+    -170.0,
+    61.0
+   ],
+   "name": "WHEEL_HUB_RR",
+   "type": "Part::Cut",
+   "volume": 9510.229
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_IN_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    -16.0,
+    -4.5,
+    4.5,
+    -10.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_IN_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    -15.0,
+    -46.0,
+    46.0,
+    -11.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_IN_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    -186.0,
+    -195.0,
+    2.0,
+    -94.0,
+    -191.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_RR_IN",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_OUT_BLK",
+   "type": "Part::Cylinder",
+   "volume": 26590.44
+  },
+  {
+   "bbox": [
+    -4.5,
+    10.0,
+    -4.5,
+    4.5,
+    16.0,
+    4.5
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_OUT_BORE",
+   "type": "Part::Cylinder",
+   "volume": 381.704
+  },
+  {
+   "bbox": [
+    -46.0,
+    11.0,
+    -46.0,
+    46.0,
+    15.0,
+    46.0
+   ],
+   "name": "TOOL_WHEEL_PLATE_RR_OUT_BRD",
+   "type": "Part::Cut",
+   "volume": 26335.971
+  },
+  {
+   "bbox": [
+    -186.0,
+    -169.0,
+    2.0,
+    -94.0,
+    -165.0,
+    94.0
+   ],
+   "name": "WHEEL_PLATE_RR_OUT",
+   "type": "Part::Chamfer",
+   "volume": 26049.039
+  },
+  {
+   "bbox": [
+    -106.0,
+    -193.789,
+    34.211,
+    -92.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_RR_00",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin072",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis036",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis036",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis036",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane036",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane036",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane036",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin073",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_00_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_00_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -106.0,
+    -193.789,
+    34.211,
+    -92.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_RR_00_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -117.353,
+    -193.789,
+    60.324,
+    -96.307,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_RR_01",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin074",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis037",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis037",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis037",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane037",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane037",
+   "type": "App::Plane",
+   "volume": 1.347997333357532e+167
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane037",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin075",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_01_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_01_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -117.353,
+    -193.789,
+    60.324,
+    -96.307,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_RR_01_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -140.613,
+    -193.789,
+    77.977,
+    -114.048,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_RR_02",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin076",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis038",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis038",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis038",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane038",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane038",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane038",
+   "type": "App::Plane",
+   "volume": 1.6175968000290385e+168
+  },
+  {
+   "name": "Origin077",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_02_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_02_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -140.613,
+    -193.789,
+    77.977,
+    -114.048,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_RR_02_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -165.952,
+    -193.789,
+    77.977,
+    -139.387,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_RR_03",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin078",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis039",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis039",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis039",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane039",
+   "type": "App::Plane",
+   "volume": 2.695994666715064e+167
+  },
+  {
+   "name": "XZ_Plane039",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane039",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin079",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_03_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_03_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -165.952,
+    -193.789,
+    77.977,
+    -139.387,
+    -166.211,
+    96.009
+   ],
+   "name": "ROLLER_RR_03_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -183.693,
+    -193.789,
+    60.324,
+    -162.647,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_RR_04",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin080",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis040",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis040",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis040",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane040",
+   "type": "App::Plane",
+   "volume": 1.347997333357532e+167
+  },
+  {
+   "name": "XZ_Plane040",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane040",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin081",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_04_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_04_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -183.693,
+    -193.789,
+    60.324,
+    -162.647,
+    -166.211,
+    83.875
+   ],
+   "name": "ROLLER_RR_04_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -188.0,
+    -193.789,
+    34.211,
+    -174.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_RR_05",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin082",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis041",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis041",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis041",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane041",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "XZ_Plane041",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane041",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin083",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_05_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_05_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -188.0,
+    -193.789,
+    34.211,
+    -174.0,
+    -166.211,
+    61.789
+   ],
+   "name": "ROLLER_RR_05_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -183.693,
+    -193.789,
+    12.125,
+    -162.647,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_RR_06",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin084",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis042",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis042",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis042",
+   "type": "App::Line"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XY_Plane042",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+168
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane042",
+   "type": "App::Plane",
+   "volume": 1.0783978666860256e+168
+  },
+  {
+   "name": "YZ_Plane042",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin085",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_06_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_06_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -183.693,
+    -193.789,
+    12.125,
+    -162.647,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_RR_06_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -165.952,
+    -193.789,
+    -0.009,
+    -139.387,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_RR_07",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin086",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis043",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis043",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis043",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane043",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane043",
+   "type": "App::Plane",
+   "volume": 1.8871962667005447e+168
+  },
+  {
+   "name": "YZ_Plane043",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin087",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_07_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_07_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -165.952,
+    -193.789,
+    -0.009,
+    -139.387,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_RR_07_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -140.613,
+    -193.789,
+    -0.009,
+    -114.048,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_RR_08",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin088",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis044",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis044",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis044",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane044",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane044",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "YZ_Plane044",
+   "type": "App::Plane",
+   "volume": 5.391989333430128e+167
+  },
+  {
+   "name": "Origin089",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_08_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_08_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -140.613,
+    -193.789,
+    -0.009,
+    -114.048,
+    -166.211,
+    18.023
+   ],
+   "name": "ROLLER_RR_08_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -117.353,
+    -193.789,
+    12.125,
+    -96.307,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_RR_09",
+   "type": "App::Part",
+   "volume": 3353.65
+  },
+  {
+   "name": "Origin090",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis045",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis045",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis045",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane045",
+   "type": "App::Plane"
+  },
+  {
+   "bbox": [
+    -1e+100,
+    -1e+100,
+    -1e+100,
+    1e+100,
+    1e+100,
+    1e+100
+   ],
+   "name": "XZ_Plane045",
+   "type": "App::Plane",
+   "volume": 4.3135914667441024e+168
+  },
+  {
+   "name": "YZ_Plane045",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin091",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -7.0,
+    -10.0,
+    -7.0,
+    7.0,
+    10.0,
+    7.0
+   ],
+   "name": "TOOL_ROLLER_RR_09_BT",
+   "type": "Part::Cylinder",
+   "volume": 3078.761
+  },
+  {
+   "bbox": [
+    -2.5,
+    -17.0,
+    -2.5,
+    2.5,
+    17.0,
+    2.5
+   ],
+   "name": "TOOL_ROLLER_RR_09_PT",
+   "type": "Part::Cylinder",
+   "volume": 667.588
+  },
+  {
+   "bbox": [
+    -117.353,
+    -193.789,
+    12.125,
+    -96.307,
+    -166.211,
+    35.676
+   ],
+   "name": "ROLLER_RR_09_B",
+   "type": "Part::Fuse",
+   "volume": 3353.65
+  },
+  {
+   "bbox": [
+    -188.0,
+    -196.0,
+    0.0,
+    -92.0,
+    -164.0,
+    96.0
+   ],
+   "name": "ENV_WHEEL_RR",
+   "type": "Part::Box",
+   "volume": 294912.0
+  },
+  {
+   "bbox": [
+    -158.0,
+    -113.5,
+    30.0,
+    -122.0,
+    -53.5,
+    66.0
+   ],
+   "name": "MOTOR_RR",
+   "type": "Part::Cylinder",
+   "volume": 61072.561
+  },
+  {
+   "bbox": [
+    -155.0,
+    -116.0,
+    33.0,
+    -125.0,
+    -113.5,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_BLK",
+   "type": "Part::Box",
+   "volume": 2250.0
+  },
+  {
+   "bbox": [
+    -155.0,
+    -116.0,
+    33.0,
+    -125.0,
+    -113.5,
+    63.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_FIL",
+   "type": "Part::Fillet",
+   "volume": 2215.664
+  },
+  {
+   "bbox": [
+    -144.2,
+    -117.0,
+    43.8,
+    -135.8,
+    -112.5,
+    52.2
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 249.38
+  },
+  {
+   "bbox": [
+    -151.0,
+    -117.0,
+    37.0,
+    -147.0,
+    -112.5,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_B00",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -151.0,
+    -117.0,
+    55.0,
+    -147.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_B01",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -133.0,
+    -117.0,
+    37.0,
+    -129.0,
+    -112.5,
+    41.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_B02",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -133.0,
+    -117.0,
+    55.0,
+    -129.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_B03",
+   "type": "Part::Cylinder",
+   "volume": 56.549
+  },
+  {
+   "bbox": [
+    -155.0,
+    -116.0,
+    33.0,
+    -125.0,
+    -113.5,
+    63.0
+   ],
+   "name": "MOUNT_MOTOR_RR",
+   "type": "Part::Cut",
+   "volume": 1951.456
+  },
+  {
+   "bbox": [
+    -151.0,
+    -117.0,
+    37.0,
+    -129.0,
+    -112.5,
+    59.0
+   ],
+   "name": "TOOL_MOUNT_MOTOR_RR_TOOLS",
+   "type": "Part::Compound",
+   "volume": 475.574
+  },
+  {
+   "bbox": [
+    -153.0,
+    -124.5,
+    35.0,
+    -127.0,
+    -118.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_RR_BLK",
+   "type": "Part::Box",
+   "volume": 4056.0
+  },
+  {
+   "bbox": [
+    -153.0,
+    -124.5,
+    35.0,
+    -127.0,
+    -118.5,
+    61.0
+   ],
+   "name": "TOOL_BEARING_RR_FIL",
+   "type": "Part::Fillet",
+   "volume": 3973.593
+  },
+  {
+   "bbox": [
+    -144.2,
+    -125.5,
+    43.8,
+    -135.8,
+    -117.5,
+    52.2
+   ],
+   "name": "TOOL_BEARING_RR_BORE",
+   "type": "Part::Cylinder",
+   "volume": 443.342
+  },
+  {
+   "bbox": [
+    -151.0,
+    -125.5,
+    37.0,
+    -147.0,
+    -117.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_RR_B00",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -151.0,
+    -125.5,
+    55.0,
+    -147.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RR_B01",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -133.0,
+    -125.5,
+    37.0,
+    -129.0,
+    -117.5,
+    41.0
+   ],
+   "name": "TOOL_BEARING_RR_B02",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -133.0,
+    -125.5,
+    55.0,
+    -129.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RR_B03",
+   "type": "Part::Cylinder",
+   "volume": 100.531
+  },
+  {
+   "bbox": [
+    -153.0,
+    -124.5,
+    35.0,
+    -127.0,
+    -118.5,
+    61.0
+   ],
+   "name": "BEARING_RR",
+   "type": "Part::Cut",
+   "volume": 3339.494
+  },
+  {
+   "bbox": [
+    -151.0,
+    -125.5,
+    37.0,
+    -129.0,
+    -117.5,
+    59.0
+   ],
+   "name": "TOOL_BEARING_RR_TOOLS",
+   "type": "Part::Compound",
+   "volume": 845.465
+  },
+  {
+   "bbox": [
+    -144.0,
+    -176.0,
+    44.0,
+    -136.0,
+    -100.0,
+    52.0
+   ],
+   "name": "SHAFT_RR",
+   "type": "Part::Cylinder",
+   "volume": 3820.177
+  }
+ ],
+ "electronics": [
+  {
+   "name": "Parameters",
+   "type": "Spreadsheet::Sheet"
+  },
+  {
+   "bbox": [
+    -210.0,
+    -210.0,
+    0.0,
+    210.0,
+    210.0,
+    120.0
+   ],
+   "name": "ElectronicsAssembly",
+   "type": "App::Part",
+   "volume": 23740440.0
+  },
+  {
+   "name": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -210.0,
+    -210.0,
+    0.0,
+    210.0,
+    210.0,
+    120.0
+   ],
+   "name": "CHASSIS_VOL",
+   "type": "Part::Box",
+   "volume": 21168000.0
+  },
+  {
+   "bbox": [
+    -190.0,
+    -45.0,
+    22.5,
+    -10.0,
+    45.0,
+    97.5
+   ],
+   "name": "BATTERY",
+   "type": "Part::Box",
+   "volume": 1215000.0
+  },
+  {
+   "bbox": [
+    40.0,
+    -60.0,
+    42.5,
+    200.0,
+    60.0,
+    77.5
+   ],
+   "name": "HUB_CTRL",
+   "type": "Part::Box",
+   "volume": 672000.0
+  },
+  {
+   "bbox": [
+    -190.0,
+    60.0,
+    42.5,
+    -30.0,
+    180.0,
+    77.5
+   ],
+   "name": "HUB_EXP",
+   "type": "Part::Box",
+   "volume": 672000.0
+  },
+  {
+   "bbox": [
+    50.0,
+    -4.0,
+    38.5,
+    190.0,
+    4.0,
+    44.5
+   ],
+   "name": "ELEC_RAIL_L",
+   "type": "Part::Box",
+   "volume": 6720.0
+  },
+  {
+   "bbox": [
+    -180.0,
+    116.0,
+    38.5,
+    -40.0,
+    124.0,
+    44.5
+   ],
+   "name": "ELEC_RAIL_R",
+   "type": "Part::Box",
+   "volume": 6720.0
+  }
+ ],
+ "lifter": [
+  {
+   "name": "Parameters",
+   "type": "Spreadsheet::Sheet"
+  },
+  {
+   "bbox": [
+    -228.6,
+    -304.8,
+    0.0,
+    228.6,
+    304.8,
+    736.5
+   ],
+   "name": "LifterAssembly",
+   "type": "App::Part",
+   "volume": 314781544.128
+  },
+  {
+   "name": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -228.6,
+    -228.6,
+    0.0,
+    228.6,
+    228.6,
+    457.2
+   ],
+   "name": "ENV_START",
+   "type": "Part::Box",
+   "volume": 95569357.248
+  },
+  {
+   "bbox": [
+    -228.6,
+    -304.8,
+    0.0,
+    228.6,
+    304.8,
+    736.5
+   ],
+   "name": "ENV_EXPANSION",
+   "type": "Part::Box",
+   "volume": 205269266.88
+  },
+  {
+   "bbox": [
+    20.0,
+    -100.0,
+    120.0,
+    220.0,
+    100.0,
+    270.0
+   ],
+   "name": "LIFTER_STOWED",
+   "type": "Part::Box",
+   "volume": 6000000.0
+  },
+  {
+   "bbox": [
+    80.0,
+    -40.0,
+    120.0,
+    160.0,
+    40.0,
+    610.0
+   ],
+   "name": "LIFTER_DEPLOYED",
+   "type": "Part::Box",
+   "volume": 3136000.0
+  },
+  {
+   "bbox": [
+    60.0,
+    -60.0,
+    600.0,
+    180.0,
+    60.0,
+    640.0
+   ],
+   "name": "CRADLE",
+   "type": "Part::Box",
+   "volume": 576000.0
+  },
+  {
+   "bbox": [
+    82.0,
+    -38.0,
+    120.0,
+    158.0,
+    38.0,
+    340.0
+   ],
+   "name": "STAGE_1",
+   "type": "Part::Box",
+   "volume": 1270720.0
+  },
+  {
+   "bbox": [
+    83.0,
+    -37.0,
+    230.0,
+    157.0,
+    37.0,
+    440.0
+   ],
+   "name": "STAGE_2",
+   "type": "Part::Box",
+   "volume": 1149960.0
+  },
+  {
+   "bbox": [
+    84.0,
+    -36.0,
+    335.0,
+    156.0,
+    36.0,
+    560.0
+   ],
+   "name": "STAGE_3",
+   "type": "Part::Box",
+   "volume": 1166400.0
+  },
+  {
+   "bbox": [
+    60.0,
+    -60.0,
+    560.0,
+    180.0,
+    60.0,
+    600.0
+   ],
+   "name": "CARRIAGE",
+   "type": "Part::Box",
+   "volume": 576000.0
+  },
+  {
+   "bbox": [
+    82.0,
+    -38.0,
+    330.0,
+    158.0,
+    38.0,
+    340.0
+   ],
+   "name": "HARD_STOP",
+   "type": "Part::Box",
+   "volume": 57760.0
+  },
+  {
+   "bbox": [
+    117.0,
+    35.0,
+    325.0,
+    123.0,
+    41.0,
+    345.0
+   ],
+   "name": "STAGE_GUIDE_L",
+   "type": "Part::Box",
+   "volume": 720.0
+  },
+  {
+   "bbox": [
+    117.0,
+    -41.0,
+    325.0,
+    123.0,
+    -35.0,
+    345.0
+   ],
+   "name": "STAGE_GUIDE_R",
+   "type": "Part::Box",
+   "volume": 720.0
+  },
+  {
+   "bbox": [
+    174.0,
+    -60.0,
+    628.0,
+    180.0,
+    60.0,
+    640.0
+   ],
+   "name": "CRADLE_LIP",
+   "type": "Part::Box",
+   "volume": 8640.0
+  }
+ ],
+ "shooter": [
+  {
+   "name": "Parameters",
+   "type": "Spreadsheet::Sheet"
+  },
+  {
+   "bbox": [
+    -200.0,
+    -100.0,
+    120.0,
+    160.0,
+    100.0,
+    370.0
+   ],
+   "name": "ShooterAssembly",
+   "type": "App::Part",
+   "volume": 11073551.483
+  },
+  {
+   "name": "Origin",
+   "type": "App::Origin"
+  },
+  {
+   "name": "X_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Y_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "Z_Axis",
+   "type": "App::Line"
+  },
+  {
+   "name": "XY_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "XZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "YZ_Plane",
+   "type": "App::Plane"
+  },
+  {
+   "name": "Origin001",
+   "type": "App::Point"
+  },
+  {
+   "bbox": [
+    -200.0,
+    -100.0,
+    120.0,
+    0.0,
+    100.0,
+    370.0
+   ],
+   "name": "SHOOTER_BODY",
+   "type": "Part::Box",
+   "volume": 10000000.0
+  },
+  {
+   "bbox": [
+    -76.0,
+    50.0,
+    264.0,
+    -4.0,
+    80.0,
+    336.0
+   ],
+   "name": "FLYWHEEL_L",
+   "type": "Part::Cylinder",
+   "volume": 122145.122
+  },
+  {
+   "bbox": [
+    -76.0,
+    -80.0,
+    264.0,
+    -4.0,
+    -50.0,
+    336.0
+   ],
+   "name": "FLYWHEEL_R",
+   "type": "Part::Cylinder",
+   "volume": 122145.122
+  },
+  {
+   "bbox": [
+    -30.0,
+    -55.0,
+    245.0,
+    0.0,
+    55.0,
+    355.0
+   ],
+   "name": "MUZZLE_CLEAR",
+   "type": "Part::Box",
+   "volume": 363000.0
+  },
+  {
+   "bbox": [
+    0.0,
+    -4.0,
+    296.0,
+    160.0,
+    4.0,
+    304.0
+   ],
+   "name": "LAUNCH_DIR",
+   "type": "Part::Box",
+   "volume": 10240.0
+  },
+  {
+   "bbox": [
+    -50.0,
+    -60.0,
+    355.0,
+    0.0,
+    60.0,
+    363.0
+   ],
+   "name": "HOOD",
+   "type": "Part::Box",
+   "volume": 48000.0
+  },
+  {
+   "bbox": [
+    -84.0,
+    -50.0,
+    250.0,
+    -76.0,
+    50.0,
+    350.0
+   ],
+   "name": "BACKSTOP",
+   "type": "Part::Box",
+   "volume": 80000.0
+  },
+  {
+   "bbox": [
+    -200.0,
+    -45.0,
+    130.0,
+    -160.0,
+    45.0,
+    220.0
+   ],
+   "name": "FEED_INLET",
+   "type": "Part::Box",
+   "volume": 324000.0
+  },
+  {
+   "bbox": [
+    -44.0,
+    45.0,
+    296.0,
+    -36.0,
+    85.0,
+    304.0
+   ],
+   "name": "STUB_SHAFT_L",
+   "type": "Part::Cylinder",
+   "volume": 2010.619
+  },
+  {
+   "bbox": [
+    -44.0,
+    -85.0,
+    296.0,
+    -36.0,
+    -45.0,
+    304.0
+   ],
+   "name": "STUB_SHAFT_R",
+   "type": "Part::Cylinder",
+   "volume": 2010.619
+  }
+ ]
+}
