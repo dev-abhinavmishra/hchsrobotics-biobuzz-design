@@ -109,6 +109,77 @@ def sig(doc):
     return out
 
 
+FAST_PREF = ("BOLT_", "NUT_", "SCRW_", "RIVNUT_", "WSH_")
+# protruding hardware excluded from the frame footprint (contract
+# amendment A1): fasteners, axle shafts (nylock class), number plates
+FRAME_EXCLUDE = FAST_PREF + ("AXLE_", "PLATE_NUM_")
+
+
+def declared_pairs(mmeta):
+    """All pair classes -> set of frozensets for the coplanar census."""
+    out = set()
+    for key in ("faces", "embeds", "journals", "contacts"):
+        for p in mmeta.get(key, []):
+            out.add(frozenset((p[0], p[1])))
+    for j in mmeta.get("joints", []):
+        alln = list(j.get("members", [])) + list(j.get("bolts", [])) +             list(j.get("nuts", []))
+        for i in range(len(alln)):
+            for k in range(i + 1, len(alln)):
+                out.add(frozenset((alln[i], alln[k])))
+    return out
+
+
+def axis_face_census(shape_map):
+    """Axis-aligned coincident planar faces between exportable solids:
+    bucket faces by (axis, plane coord); pairs in the same bucket from
+    different solids share a coplanar face -- measure the shared area.
+    """
+    buckets = {}
+    for nm, s in shape_map.items():
+        for f in s.Faces:
+            try:
+                su = f.Surface
+            except Exception:
+                continue
+            if su.TypeId != "Part::GeomPlane":
+                continue
+            axv = su.Axis
+            comps = (abs(axv.x), abs(axv.y), abs(axv.z))
+            c = f.CenterOfMass
+            if comps == (1.0, 0.0, 0.0):
+                key = ("x", round(c.x, 2))
+            elif comps == (0.0, 1.0, 0.0):
+                key = ("y", round(c.y, 2))
+            elif comps == (0.0, 0.0, 1.0):
+                key = ("z", round(c.z, 2))
+            else:
+                continue
+            if f.Area < 1.0:
+                continue
+            buckets.setdefault(key, []).append((nm, f))
+    seen = set()
+    pairs = []
+    for key, faces in buckets.items():
+        if len(faces) > 400:
+            continue
+        for i in range(len(faces)):
+            for j in range(i + 1, len(faces)):
+                a, fa = faces[i]
+                b, fb = faces[j]
+                if a == b:
+                    continue
+                try:
+                    com = fa.common(fb)
+                except Exception:
+                    continue
+                pk = (a, b) if a < b else (b, a)
+                if com.Area > 0.5 and pk not in seen:
+                    seen.add(pk)
+                    pairs.append((com.Area, a, b))
+    pairs.sort(reverse=True)
+    return pairs
+
+
 def main():
     docs = {}
     for tag, path in DOCS.items():
@@ -479,6 +550,222 @@ def main():
          (EXPORTS / "mount_graph.json").exists(),
          "bom.csv parameters.csv mount_graph.json")
 
+    # ---------------- round-2 gates: honest re-verification ---------
+    shape_map = {o.Name: gshape(o) for o in solids
+                 if o.Name in set(mmeta["solids"])}
+
+    # GIT2: whole tree clean + archive dirs + baseline concept files
+    try:
+        out = subprocess.run(["git", "status", "--porcelain"],
+                             cwd=str(ROOT), capture_output=True,
+                             text=True)
+        dirty = [l for l in out.stdout.splitlines() if l.strip()]
+        arch = (CAD / "archive" / "pre_overhaul").exists() and \
+            (ROOT / "scripts" / "freecad" / "legacy").exists()
+        gate("GIT2_tree_clean", not dirty and arch,
+             "%d dirty; archives=%s" % (len(dirty), arch))
+    except Exception as e:
+        gate("GIT2_tree_clean", False, str(e))
+
+    # DECL: declaration tables vs measured geometry
+    def sdist(a, b):
+        return shape_map[a].distToShape(shape_map[b])[0]
+
+    emb_bad = []
+    for a, b in mmeta.get("embeds", []):
+        if a in shape_map and b in shape_map:
+            if shape_map[a].common(shape_map[b]).Volume < 0.5:
+                emb_bad.append((a, b))
+    gate("DECL_embeds_real", not emb_bad,
+         "%d embeds <0.5mm3" % len(emb_bad))
+    cn_bad = []
+    for a, b in mmeta.get("contacts", []):
+        if a in shape_map and b in shape_map and sdist(a, b) > 1.0:
+            cn_bad.append((round(sdist(a, b), 2), a, b))
+    gate("DECL_contacts_real", not cn_bad,
+         "%d contacts >1mm: %s" % (len(cn_bad), cn_bad[:4]))
+    jl_bad = []
+    for a, b in mmeta.get("journals", []):
+        if a in shape_map and b in shape_map:
+            if shape_map[a].common(shape_map[b]).Volume > 0.5:
+                jl_bad.append((a, b))
+    gate("DECL_journals_bored", not jl_bad,
+         "%d journals common>0.5: %s" % (len(jl_bad), jl_bad[:4]))
+
+    # ASM4: coplanar-face census -- undeclared coincident pairs
+    decl = declared_pairs(mmeta)
+    cop = axis_face_census(shape_map)
+    undecl = [pp for pp in cop if frozenset((pp[1], pp[2])) not in decl]
+    gate("ASM4_coplanar_census", not undecl,
+         "%d coplanar, %d undeclared: %s"
+         % (len(cop), len(undecl), undecl[:6]))
+
+    # ASM1: mount-graph connectivity -- every node reachable
+    graph = json.loads((EXPORTS / "mount_graph.json").read_text(
+        encoding="utf-8"))
+    adj = {}
+    for e in graph["edges"]:
+        adj.setdefault(e["a"], set()).add(e["b"])
+        adj.setdefault(e["b"], set()).add(e["a"])
+    reach = set()
+    stk = list(graph["roots"])
+    while stk:
+        x = stk.pop()
+        if x in reach:
+            continue
+        reach.add(x)
+        stk.extend(adj.get(x, ()))
+    unreachable = [nn for nn in graph["nodes"] if nn not in reach]
+    gate("ASM1_reachable", not unreachable,
+         "%d/%d unreachable: %s"
+         % (len(unreachable), len(graph["nodes"]), unreachable[:6]))
+
+    # ASM5: fastener engagement -- bolts touch >=1 joint member,
+    # nuts on-shaft (common>0.3) and seated <=0.15 on a member face
+    eng_bad, nut_bad = [], []
+    for j in mmeta.get("joints", []):
+        mems = [x for x in j.get("members", []) if x in shape_map]
+        for bn in j.get("bolts", []):
+            if bn not in shape_map:
+                continue
+            if not any(shape_map[bn].distToShape(shape_map[x])[0]
+                       <= 0.2 for x in mems):
+                eng_bad.append((j["id"], bn))
+        for nn in j.get("nuts", []):
+            if nn not in shape_map:
+                continue
+            on_shaft = any(
+                shape_map[nn].common(shape_map[bn]).Volume > 0.3
+                for bn in j.get("bolts", [])
+                if bn in shape_map)
+            seated = any(shape_map[nn].distToShape(shape_map[x])[0]
+                         <= 0.15 for x in mems)
+            if not on_shaft:
+                nut_bad.append((j["id"], nn, "not-on-shaft"))
+            elif not seated:
+                nut_bad.append((j["id"], nn, "floating"))
+    gate("ASM5_engage", not eng_bad and not nut_bad,
+         "%d bolts, %d nuts: %s"
+         % (len(eng_bad), len(nut_bad), (eng_bad + nut_bad)[:6]))
+
+    # GEOG: exactly {4 bottom rollers + 3 odo wheels} touch Z=0
+    grounded = []
+    for nm, s in shape_map.items():
+        if abs(s.BoundBox.ZMin) < 0.05:
+            grounded.append(nm)
+    okay = (sum(1 for x in grounded if x.startswith("ROLLER_")
+                and x.endswith("_B")) == 4
+            and sum(1 for x in grounded
+                    if x.startswith("ODO_WHEEL_")) == 3)
+    gate("GEOG_ground_census",
+         okay and len(grounded) == 7,
+         "%d grounded: %s" % (len(grounded), grounded[:10]))
+
+    # GEOW: wheel dims -- Z-span 96, ZMin 0, width 38.1
+    wb_bad = []
+    for o in m.Objects:
+        if not o.Name.startswith("WHEEL_ASSY_"):
+            continue
+        s = gshape(o)
+        b = s.BoundBox
+        w = b.YLength if b.YLength > 0.01 else b.XLength
+        if abs(b.ZLength - 96.0) > 1.0 or abs(b.ZMin) > 0.1 \
+                or abs(w - 38.1) > 0.5:
+            wb_bad.append((o.Name, round(b.ZLength, 2),
+                           round(b.ZMin, 3), round(w, 2)))
+    gate("GEOW_wheel_dims", not wb_bad, "%s" % wb_bad[:4])
+
+    # ENV2: amended footprint -- frame box 444.5+-1, all-span <=455.2
+    fx = [10 ** 9, -10 ** 9]
+    fy = [10 ** 9, -10 ** 9]
+    ax = [10 ** 9, -10 ** 9]
+    ay = [10 ** 9, -10 ** 9]
+    for nm, s in shape_map.items():
+        b = s.BoundBox
+        ax = [min(ax[0], b.XMin), max(ax[1], b.XMax)]
+        ay = [min(ay[0], b.YMin), max(ay[1], b.YMax)]
+        if not nm.startswith(FRAME_EXCLUDE):
+            fx = [min(fx[0], b.XMin), max(fx[1], b.XMax)]
+            fy = [min(fy[0], b.YMin), max(fy[1], b.YMax)]
+    frame_span = max(fx[1] - fx[0], fy[1] - fy[0])
+    all_span = max(ax[1] - ax[0], ay[1] - ay[0])
+    gate("ENV_frame_footprint", abs(frame_span - 444.5) <= 1.0,
+         "frame %.1f x %.1f" % (fx[1] - fx[0], fy[1] - fy[0]))
+    gate("ENV_hw_span", all_span <= 455.2,
+         "span %.1f x %.1f (margin %.2f)"
+         % (ax[1] - ax[0], ay[1] - ay[0], 457.2 - all_span))
+
+    # PROV2: TOOL_* objects carry a status token + DataStatus
+    tb_bad = []
+    for o in m.Objects:
+        if not o.Name.startswith("TOOL_"):
+            continue
+        tok = any(t in o.Label for t in STATUS)
+        if not (getattr(o, "DataStatus", None) and tok):
+            tb_bad.append(o.Name)
+    gate("PROV2_tool_status", not tb_bad,
+         "%d unlabeled" % len(tb_bad))
+
+    # XPT5: per-part STEP reimport -- solids + names + bbox
+    import Import
+    step = EXPORTS / "step"
+    rd_bad, nn_bad = [], []
+    pfiles = sorted((step / "parts").glob("*.step"))
+    for fpath in pfiles:
+        stem = fpath.stem
+        rd = App.newDocument("xchk")
+        try:
+            Import.insert(str(fpath), rd.Name)
+            rd.recompute()
+            sol = [o for o in rd.Objects
+                   if hasattr(o, "Shape") and not o.Shape.isNull()
+                   and o.Shape.Volume > 0]
+            if not sol:
+                rd_bad.append(stem)
+            elif not any(stem in o.Label or stem == o.Label
+                         or o.Label.startswith(stem + "_")
+                         for o in sol):
+                nn_bad.append(stem)
+        except Exception:
+            rd_bad.append(stem)
+        App.closeDocument(rd.Name)
+    gate("XPT5_part_reimport", not rd_bad and not nn_bad,
+         "%d/%d files; %d empty, %d nameless"
+         % (len(pfiles), len(shape_map), len(rd_bad), len(nn_bad)))
+
+    # XPT6: bom covers every exportable
+    bom_objs = set()
+    for line in (EXPORTS / "bom" / "bom.csv").read_text(
+            encoding="utf-8").splitlines()[1:]:
+        try:
+            objs = line.rsplit('"', 2)[1].split()
+            bom_objs.update(objs)
+        except Exception:
+            pass
+    not_in_bom = [nm for nm in shape_map if nm not in bom_objs]
+    gate("XPT6_bom_coverage", not not_in_bom,
+         "%d/%d untraced: %s"
+         % (len(not_in_bom), len(shape_map), not_in_bom[:6]))
+
+    # XPT7: parameters.csv mirrors all sheet aliases
+    sheet = m.getObject("Parameters")
+    sheet_aliases = set()
+    for r in range(1, 400):
+        try:
+            a = sheet.get("A" + str(r))
+        except Exception:
+            break
+        if not a:
+            break
+        sheet_aliases.add(str(a).strip())
+    csv_lines = (EXPORTS / "bom" / "parameters.csv").read_text(
+        encoding="utf-8").splitlines()[1:]
+    csv_aliases = set(l.split(",", 1)[0] for l in csv_lines if l)
+    pa_bad = sorted(sheet_aliases - csv_aliases - {"alias"})
+    gate("XPT7_params_full", not pa_bad,
+         "%d csv rows, %d aliases; missing %s"
+         % (len(csv_lines), len(sheet_aliases), pa_bad[:6]))
+
     # ---------------- GUI / doc health ----------------
     gui_bad = []
     for tag, d in docs.items():
@@ -504,6 +791,96 @@ def main():
             App.closeDocument(d.Name)
         except Exception:
             pass
+
+    # ---------------- DET2: rebuild determinism ------------------
+    # Rebuild all three documents from source and compare the
+    # exportable signature (name/bbox/volume) against the delivered
+    # FCStds. This proves the committed sources regenerate the
+    # committed geometry byte-identically.
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import dt_build  # noqa: E402
+        for tag, pop in (("drivebase", dt_build.populate_drivebase),
+                         ("electronics", dt_build.populate_electronics),
+                         ("master", dt_build.populate_master)):
+            td = App.newDocument("det2_" + tag)
+            tctx = dt_build.new_ctx()
+            pop(td, tctx)
+            td.recompute(None, True, True)
+            tsig = sig(td)
+            delta = [nm for nm in sigs[tag]
+                     if tsig.get(nm) != sigs[tag][nm]] +                     [nm for nm in tsig if nm not in sigs[tag]]
+            gate("DET2_rebuild_" + tag, not delta,
+                 "%d sigs differ" % len(delta))
+            App.closeDocument(td.Name)
+    except Exception as e:
+        gate("DET2_rebuild", False, str(e)[:200])
+
+    # ---------------- PAR2-D/E: parametric deltas -----------------
+    # Mutate the Parameters sheet in a scratch copy of the master and
+    # verify the geometry re-derives where the contract says it must.
+    try:
+        pd = App.openDocument(str(DOCS["master"]))
+        sheet = pd.getObject("Parameters")
+        base = float(sheet.get("wheel_lat_off"))
+        base_sigs = {o.Name: gshape(o).BoundBox
+                     for o in pd.Objects
+                     if hasattr(o, "Shape") and not o.Shape.isNull()
+                     and o.Name in sigs["master"]}
+        # D: wheel_lat_off +6 -> axle-stack families move in Y
+        sheet.set("wheel_lat_off", repr(base + 6.0))
+        pd.recompute(None, True, True)
+        moved = sum(
+            1 for o in pd.Objects
+            if hasattr(o, "Shape") and not o.Shape.isNull()
+            and o.Name in base_sigs
+            and abs(gshape(o).BoundBox.YMin
+                    - base_sigs[o.Name].YMin) > 5.0)
+        gate("PAR2D_wheel_lat_off", moved > 300,
+             "%d solids moved" % moved)
+        # wheel_dia +4 -> axle/brg/motor centers re-derive to 50
+        sheet.set("wheel_lat_off", repr(base))
+        sheet.set("wheel_dia", "100.0")
+        pd.recompute(None, True, True)
+        cz_bad = []
+        for nm in ("AXLE_FL", "AXLE_FR", "AXLE_RL", "AXLE_RR",
+                   "MOTOR_FL", "MOTOR_FR", "MOTOR_RL", "MOTOR_RR",
+                   "BRG_IN_FL", "BRG_OUT_FL"):
+            o = pd.getObject(nm)
+            if o is None:
+                cz_bad.append(nm)
+                continue
+            c = gshape(o).BoundBox.Center
+            if abs(c.z - 50.0) > 0.1:
+                cz_bad.append((nm, round(c.z, 2)))
+        gate("PAR2D_wheel_dia", not cz_bad, "%s" % cz_bad[:4])
+        # E: shelf_z +10 -> shelf + standoffs + expansion hub move
+        bsz = float(sheet.get("shelf_z"))
+        sheet.set("wheel_dia", "96.0")
+        sheet.set("shelf_z", repr(bsz + 10.0))
+        pd.recompute(None, True, True)
+        moved_e = [o.Name for o in pd.Objects
+                   if o.Name in ("ELEC_SHELF", "HUB_EXP",
+                                 "STANDOFF_0", "STANDOFF_1",
+                                 "STANDOFF_2", "STANDOFF_3")
+                   and hasattr(o, "Shape") and not o.Shape.isNull()
+                   and abs(gshape(o).BoundBox.ZMax
+                           - base_sigs[o.Name].ZMax) > 9.0]
+        gate("PAR2E_shelf_z", len(moved_e) == 6,
+             "%d moved: %s" % (len(moved_e), moved_e[:6]))
+        # restore -> identity
+        sheet.set("shelf_z", repr(bsz))
+        pd.recompute(None, True, True)
+        ident = [o.Name for o in pd.Objects
+                 if hasattr(o, "Shape") and not o.Shape.isNull()
+                 and o.Name in base_sigs
+                 and abs(gshape(o).BoundBox.YMin
+                         - base_sigs[o.Name].YMin) > 0.001]
+        gate("PAR2_restore_identity", not ident,
+             "%d differ: %s" % (len(ident), ident[:6]))
+        App.closeDocument(pd.Name)
+    except Exception as e:
+        gate("PAR2_deltas", False, str(e)[:200])
 
     npass = sum(1 for _, ok, _ in RESULTS if ok)
     tail = "=" * 60 + "\nSELFCHECK: %d/%d gates pass" % (

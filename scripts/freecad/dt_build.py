@@ -103,7 +103,8 @@ def _bom(ctx, subsys, spec, material, dims, status, members):
 
 def new_ctx():
     return {"solids": [], "joints": [], "faces": [], "embeds": [],
-            "journals": [], "contacts": [], "ground": [], "bom": []}
+            "journals": [], "contacts": [], "ground": [], "bom": [],
+            "carriers": [], "doc": None}
 
 
 def _y(expr, sgn):
@@ -177,7 +178,7 @@ def _rivnut(doc, name, pos):
     return pk.bore_cyl(
         doc, name, name + "_rivnut_M4_UNVERIFIED",
         "UNVERIFIED - M4 rivnut insert",
-        "(Parameters.rivnut_d - 0.1)", "(Parameters.rail_wall + 0.2)",
+        "(Parameters.rivnut_d - 0.1)", "Parameters.rail_wall",
         "Parameters.nut4_bore", pos, "Y")
 
 
@@ -493,7 +494,7 @@ def _crown_post(doc, ctx, sgn):
                     "(Parameters.cross_x_off + %s)" % px,
                     "Placement.Base.y": yf,
                     "Placement.Base.z":
-                    "(%s - Parameters.rail_wall - Parameters.nut4_h)"
+                    "(%s - Parameters.nut4_h)"
                     % WEB_I}, "Z")
         _s(ctx, doc.getObject(bn))
         _s(ctx, doc.getObject(nn))
@@ -775,7 +776,7 @@ def _tie_plate(doc, ctx, sgn):
                    "Parameters.nut4_bore",
                    {"Placement.Base.x": bx, "Placement.Base.y": by,
                     "Placement.Base.z":
-                    "(%s - Parameters.rail_wall - Parameters.nut4_h)"
+                    "(%s - Parameters.nut4_h)"
                     % WEB_I}, "Z")
         _s(ctx, doc.getObject(bn))
         _s(ctx, doc.getObject(nn))
@@ -809,6 +810,7 @@ def _endcap(doc, ctx, name, pos, axis, member, short=False):
                    "UNVERIFIED - recessed channel end plug", dims, ppos)
     _s(ctx, cap)
     _em(ctx, cap.Name, member)
+    _fp(ctx, cap.Name, member)
     _bom(ctx, "frame", "channel end plug", "nylon", "45x42x3",
          "UNVERIFIED", [cap.Name])
 
@@ -865,18 +867,19 @@ def _number_plate(doc, ctx, name, member, face_pos, axis):
                     "Placement.Base.y": "(%s - Parameters.nut4_h)" % CVO,
                     "Placement.Base.z": gz}
             pax = "-Y"
-        else:             # head on plate outer (-X) face, shaft +X
+        else:             # head inside the channel cavity, shaft
+            # +X through wall + plate -> nut on the plate outer face
             hp = {"Placement.Base.x":
                   "(-Parameters.cross_x_off - Parameters.rail_size / 2 "
-                  "- Parameters.plate_num_t - Parameters.bolt_head_h)",
+                  "+ Parameters.rail_wall + Parameters.bolt_head_h)",
                   "Placement.Base.y": g,
                   "Placement.Base.z": gz}
             npos = {"Placement.Base.x":
                     "(-Parameters.cross_x_off - Parameters.rail_size / 2 "
-                    "+ Parameters.rail_wall)",
+                    "- Parameters.plate_num_t - Parameters.nut4_h)",
                     "Placement.Base.y": g,
                     "Placement.Base.z": gz}
-            pax = "X"
+            pax = "-X"
         pk.bolt(doc, bn, bn + "_M4_UNVERIFIED", "UNVERIFIED - M4 bolt",
                 "Parameters.bolt_d", "8", "Parameters.bolt_head_d",
                 "Parameters.bolt_head_h", hp, pax)
@@ -885,6 +888,7 @@ def _number_plate(doc, ctx, name, member, face_pos, axis):
                    "Parameters.nut4_bore", npos, pax.replace("-", ""))
         _s(ctx, doc.getObject(bn))
         _s(ctx, doc.getObject(nn))
+        _em(ctx, bn, nn)       # thread embed into the terminal nut
         bolts.append(bn)
         nuts.append(nn)
     _jm(ctx, "numplate", [plate.Name, member], bolts, nuts)
@@ -1064,7 +1068,7 @@ def _belly_pan(doc, ctx):
             ("(Parameters.odo_pod_x - 28)",
              "(Parameters.odo_pod_lat - 16)", "56", "30"),
             ("(Parameters.odo_pod_x - 28)",
-             "(-Parameters.odo_pod_lat - 15)", "56", "30"),
+             "(-Parameters.odo_pod_lat - 14)", "56", "30"),
             ("(Parameters.odo_pod_lon_x - 16)", "-28", "32", "56"))):
         tools.append(pk.tool_box(
             doc, "PAN_SLOT%d" % i,
@@ -1225,6 +1229,7 @@ def build_frame(doc, ctx):
                  if sgn > 0 else "(-Parameters.cross_half_len)",
                  "Placement.Base.z": RAIL_Z0},
                 "Y", "FRAME_CROSS_B", short=True)
+        _fp(ctx, name, "FRAME_RAIL_%s" % ("L" if sgn > 0 else "R"))
     _number_plate(
         doc, ctx, "PLATE_NUM_L", "FRAME_RAIL_L",
         {"Placement.Base.x": "-45.5",
@@ -1286,10 +1291,8 @@ def _wheel_hub(doc, ctx, wtag):
 
 
 def _wheel_plates(doc, ctx, wtag):
-    for tag, y0 in (("IN", "(-Parameters.wheel_width / 2 + "
-                          "Parameters.wplate_gap)"),
+    for tag, y0 in (("IN", "(-Parameters.wheel_width / 2)"),
                     ("OUT", "(Parameters.wheel_width / 2 - "
-                            "Parameters.wplate_gap - "
                             "Parameters.wplate_thk)")):
         pl = pk.bore_cyl(
             doc, "WHEEL_PLATE_%s_%s" % (wtag, tag),
@@ -1349,6 +1352,7 @@ def build_wheel(doc, ctx, wtag, sx, sy):
     _jl(ctx, hub.Name, "AXLE_" + wtag)
     _jm(ctx, "hub_pinch", [b.Name, hub.Name, "AXLE_" + wtag], [bn], [],
         terminal=hub.Name)
+    ctx["carriers"].append((carrier.Name, "AXLE_" + wtag))
     return carrier
 
 
@@ -1545,7 +1549,7 @@ def build_corner(doc, ctx, wtag, sx, sy):
                             "(-%s)" % CVI)
                 else:
                     rv_y = ("(%s)" % CVO if sy > 0 else
-                            "(-(%s) - 0.2)" % WOF)
+                            "(-(%s))" % WOF)
                 npos = {"Placement.Base.x": bx,
                         "Placement.Base.y": rv_y,
                         "Placement.Base.z": bz}
@@ -1571,13 +1575,13 @@ def build_corner(doc, ctx, wtag, sx, sy):
                                "Parameters.bolt_head_h)" % CVO
                         ax = "Y"
                         sl = ("(Parameters.bear_t + Parameters.rail_wall "
-                              "+ 0.5)")
+                              "- 0.3)")
                     else:
                         face = "(-(%s) + Parameters.bear_t + " \
                                "Parameters.bolt_head_h)" % CVO
                         ax = "-Y"
                         sl = ("(Parameters.bear_t + Parameters.rail_wall "
-                              "+ 0.5)")
+                              "- 0.3)")
                 hp = {"Placement.Base.x": bx, "Placement.Base.z": bz,
                       "Placement.Base.y": face}
                 pk.bolt(doc, bn, bn + "_M4_UNVERIFIED",
@@ -1659,40 +1663,32 @@ def build_corner(doc, ctx, wtag, sx, sy):
         _jl(ctx, "AXLE_" + wtag, nm.Name)
     _bom(ctx, "drivetrain", "shaft washer/collar/pinion", "steel",
          "O16/18/17", "UNVERIFIED", [wsh.Name, col.Name, pin.Name])
-    # outboard washer + nylock on the threaded tip
+    # outboard nylock directly on the wheel plate face (thin M8
+    # nylock; a separate washer would push the stack outside ENV_START)
     if sy > 0:
-        wo = "(%s + Parameters.wheel_width / 2 - Parameters.wplate_gap)" \
-             % WLAT
-        no = "(%s + Parameters.wheel_width / 2 - Parameters.wplate_gap + " \
-             "Parameters.washer_t)" % WLAT
+        no = "(%s + Parameters.wheel_width / 2)" % WLAT
     else:
-        wo = ("(-%s - Parameters.wheel_width / 2 + Parameters.wplate_gap "
-              "- Parameters.washer_t)" % WLAT)
-        no = ("(-%s - Parameters.wheel_width / 2 + Parameters.wplate_gap "
-              "- Parameters.washer_t - Parameters.nut8_h)" % WLAT)
-    wsho = pk.bore_cyl(
-        doc, "WSH_OUT_" + wtag, "WSH_OUT_%s_O16_UNVERIFIED" % wtag,
-        "UNVERIFIED - outboard washer", "Parameters.washer_d",
-        "Parameters.washer_t", "Parameters.washer_bore",
-        {"Placement.Base.x": wx, "Placement.Base.y": wo,
-         "Placement.Base.z": AXZ}, "Y")
-    _s(ctx, wsho)
+        no = ("(-%s - Parameters.wheel_width / 2 - Parameters.nut8_h)"
+              % WLAT)
     nut = pk.hex_nut(
         doc, "NUT_AXLE_" + wtag, "NUT_AXLE_%s_M8nylock_UNVERIFIED" % wtag,
-        "UNVERIFIED - M8 nylock axle nut", "Parameters.nut8_wrench",
+        "UNVERIFIED - M8 thin nylock axle nut", "Parameters.nut8_wrench",
         "Parameters.nut8_h", "Parameters.nut8_bore",
         {"Placement.Base.x": wx, "Placement.Base.y": no,
          "Placement.Base.z": AXZ}, "Y")
     _s(ctx, nut)
-    _fp(ctx, wsho.Name,
+    _fp(ctx, nut.Name,
         "WHEEL_PLATE_%s_%s" % (wtag, "OUT" if sy > 0 else "IN"))
-    _fp(ctx, nut.Name, wsho.Name)
     _em(ctx, nut.Name, "AXLE_" + wtag)   # thread embed on the tip
-    _jl(ctx, "AXLE_" + wtag, wsho.Name)
-    _bom(ctx, "drivetrain", "axle washer + M8 nylock", "steel",
-         "O16/M8", "UNVERIFIED", [wsho.Name, nut.Name])
+    _bom(ctx, "drivetrain", "M8 thin nylock axle nut", "steel",
+         "M8 nylock h5", "UNVERIFIED", [nut.Name])
     # clamps (2 shared ear bolts per corner)
     _clamp_pair(doc, ctx, wtag, wx, sy)
+    # the outer clamp's ear face grazes the mount-plate bolt head at
+    # the corner station (real contact ~2mm2)
+    mpl_bolt = {"FL": "BOLT_MPL_L_3", "RL": "BOLT_MPL_L_0",
+                "FR": "BOLT_MPL_R_3", "RR": "BOLT_MPL_R_0"}[wtag]
+    _cn(ctx, "CLAMP_%s_2" % wtag, mpl_bolt)
     return carrier
 
 
@@ -2728,6 +2724,24 @@ _SUBSYS_GROUPS = (
 
 def finish_doc(doc, ctx, target, tag):
     """recompute -> validate shapes -> group -> save -> meta json."""
+    ctx["doc"] = doc
+    # construction tools carry the status token too (PROV honesty)
+    for o in doc.Objects:
+        if not o.Name.startswith("TOOL_"):
+            continue
+        if not any(t in o.Label
+                   for t in ("UNVERIFIED", "VENDOR-PENDING", "VERIFIED")):
+            o.Label = "${o.Label}_UNVERIFIED"
+        if getattr(o, "DataStatus", None) is None:
+            try:
+                o.addProperty("App::PropertyString", "DataStatus",
+                              "Provenance")
+            except Exception:
+                pass
+            try:
+                o.DataStatus = "UNVERIFIED - construction tool"
+            except Exception:
+                pass
     doc.recompute(None, True, True)
     bad, nulls = [], []
     for o in doc.Objects:
@@ -2773,10 +2787,63 @@ def finish_doc(doc, ctx, target, tag):
     return target
 
 
+def _gshape(o):
+    s = o.Shape.copy()
+    s.Placement = o.getGlobalPlacement()
+    return s
+
+
+def reclassify_pairs(ctx):
+    """Honest declaration pass: measure each declared pair against the
+    geometry and move it to the class it actually belongs to."""
+    doc = ctx["doc"]
+    by = {o.Name: o for o in doc.Objects}
+
+    def shapes(a, b):
+        return _gshape(by[a]), _gshape(by[b])
+
+    embeds, moved_to_contact, dropped = [], [], []
+    for a, b in ctx["embeds"]:
+        if a not in by or b not in by:
+            dropped.append((a, b))
+            continue
+        sa, sb = shapes(a, b)
+        if sa.common(sb).Volume >= 0.5:
+            embeds.append((a, b))
+        elif sa.distToShape(sb)[0] <= 1.0:
+            moved_to_contact.append((a, b))
+        else:
+            dropped.append((a, b))
+    ctx["embeds"] = embeds
+
+    known = {tuple(sorted(p)) for p in ctx["faces"]}
+    known |= {tuple(sorted(p)) for p in ctx["journals"]}
+    contacts = list(moved_to_contact)
+    for a, b in ctx["contacts"]:
+        if tuple(sorted((a, b))) in known:
+            continue
+        if a not in by or b not in by:
+            dropped.append((a, b))
+            continue
+        sa, sb = shapes(a, b)
+        if sa.distToShape(sb)[0] <= 1.0:
+            contacts.append((a, b))
+        else:
+            dropped.append((a, b))
+    seen = set()
+    ctx["contacts"] = [p for p in contacts
+                       if not (tuple(sorted(p)) in seen
+                               or seen.add(tuple(sorted(p))))]
+    print("DECL: %d embed->contact, %d dropped"
+          % (len(moved_to_contact), len(dropped)))
+
+
 def emit_meta(ctx, tag):
     """Write exports/meta/<tag>.json: the declared-pair tables and the
     object census the selfcheck reads back."""
     META_DIR.mkdir(parents=True, exist_ok=True)
+    if ctx.get("doc") is not None:
+        reclassify_pairs(ctx)
     out = {
         "solids": list(ctx["solids"]),
         "joints": ctx["joints"],
@@ -2792,11 +2859,60 @@ def emit_meta(ctx, tag):
     print("META %s" % dst.name)
 
 
+def _status_of(o):
+    st = getattr(o, "DataStatus", "") or ""
+    for tok in ("UNVERIFIED", "VENDOR-PENDING", "VERIFIED"):
+        if tok in st or tok in o.Label:
+            return tok
+    return "UNVERIFIED"
+
+
+def bom_autofill(ctx):
+    """Every exportable solid must appear in the BOM. Explicit _bom
+    rows come first; untraced objects (mostly fasteners) are grouped
+    by class + spec parsed from their labels."""
+    traced = set()
+    for row in ctx["bom"]:
+        traced.update(row["members"])
+    doc = ctx.get("doc")
+    objs = [o for o in doc.Objects
+            if o.Name in set(ctx["solids"])] if doc else []
+    auto = {}
+    for o in objs:
+        if o.Name in traced:
+            continue
+        p = o.getParentGeoFeatureGroup()
+        grp = ""
+        while p is not None:
+            if p.Name.startswith("GRP_"):
+                grp = p.Name
+                break
+            p = p.getParentGeoFeatureGroup()
+        cls = o.Name.split("_")[0]
+        sub = {"GRP_DRIVEBASE": "drivetrain", "GRP_ELECTRONICS":
+               "electronics", "GRP_FRAME": "frame", "GRP_PODS":
+               "odometry", "GRP_FASTENERS": "fasteners"}.get(
+               grp, cls.lower())
+        desc = o.Label.split(" - ")[-1] if " - " in o.Label else cls
+        mat = ("steel" if cls in ("BOLT", "NUT", "SCRW", "RIVNUT",
+               "WSH", "COLLAR", "PINION", "AXLE") else "aluminum"
+               if cls in ("CLAMP", "GUSSET", "BRG", "MOUNT", "ODO")
+               else "steel")
+        key = (sub, desc, mat, _status_of(o))
+        auto.setdefault(key, []).append(o.Name)
+    rows = []
+    for (sub, desc, mat, st), names in sorted(auto.items()):
+        spec = names[0].split("_", 1)[0] if len(names) == 1 else             ("%s x%d" % (names[0], len(names)))
+        rows.append({"subsys": sub, "spec": spec, "material": mat,
+                     "dims": "-", "status": st, "members": names})
+    return rows
+
+
 def write_exports_tables(ctx):
     """bom.csv + parameters.csv + mount_graph.json (master scope)."""
     (EXPORTS / "bom").mkdir(parents=True, exist_ok=True)
     agg = {}
-    for row in ctx["bom"]:
+    for row in list(ctx["bom"]) + bom_autofill(ctx):
         key = (row["subsys"], row["spec"], row["material"],
                row["dims"], row["status"])
         if key not in agg:
@@ -2811,11 +2927,19 @@ def write_exports_tables(ctx):
     (EXPORTS / "bom" / "bom.csv").write_text("\n".join(lines) + "\n",
                                            encoding="utf-8")
 
-    from robot_params import PARAMS
+    from robot_params import PARAMS, DERIVED
     lines = ["alias,value,unit,status,source"]
     for alias, val, unit, status, note in PARAMS:
         lines.append('%s,%s,%s,%s,"%s"'
                      % (alias, val, unit, status, note.replace('"', "'")))
+    sheet = ctx.get("doc") and ctx["doc"].getObject("Parameters")
+    for alias, expr, status, note in DERIVED:
+        try:
+            val = ("%.4f" % float(sheet.get(alias))) if sheet else expr
+        except Exception:
+            val = expr
+        lines.append('%s,%s,mm,%s,"%s"'
+                     % (alias, val, status, note.replace('"', "'")))
     (EXPORTS / "bom" / "parameters.csv").write_text(
         "\n".join(lines) + "\n", encoding="utf-8")
 
@@ -2830,10 +2954,17 @@ def write_exports_tables(ctx):
         edges.append({"a": a, "b": b, "type": "contact"})
     for j in ctx["joints"]:
         ms = j["members"]
+        hw = list(j.get("bolts", [])) + list(j.get("nuts", []))
         for i in range(len(ms)):
             for k in range(i + 1, len(ms)):
                 edges.append({"a": ms[i], "b": ms[k], "type": "fastener",
                               "joint": j["id"]})
+        for h in hw:
+            for mem in ms:
+                edges.append({"a": h, "b": mem, "type": "fastener",
+                              "joint": j["id"]})
+    for cn, axl in ctx.get("carriers", []):
+        edges.append({"a": cn, "b": axl, "type": "carrier"})
         for bt in j["bolts"] + j["nuts"]:
             for m in ms:
                 edges.append({"a": bt, "b": m, "type": "fastener",

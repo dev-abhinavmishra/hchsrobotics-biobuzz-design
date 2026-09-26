@@ -5,8 +5,11 @@
                                          subsystem documents as compounds
   exports/step/master_robot.step         - full master assembly
 
-Every shape is globalized to world coordinates before export.
-Non-physical references (ENV_*, TOOL_*, App::Part/Origin) are excluded.
+Every shape is globalized to world coordinates. STEP PRODUCT records
+carry the FreeCAD object names: parts export as
+``Import.export([named_object], path)`` so downstream CAD sees real
+part names, not 'Part__FeatureNNN'. Non-physical references (ENV_*,
+TOOL_*, App::Part/Origin) are excluded.
 
 Run:  freecadcmd.exe scripts/freecad/export_step.py
 """
@@ -16,6 +19,7 @@ import traceback
 from pathlib import Path
 
 import FreeCAD as App
+import Import
 import Part  # noqa: F401
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -62,14 +66,15 @@ def exportable(doc):
             and o.Name not in consumed]
 
 
-def global_shape(o):
+def world_object(tmpdoc, o):
+    """Globalized named Part::Feature in tmpdoc: the exported PRODUCT
+    record carries o.Name; the solid sits in world coordinates."""
     s = o.Shape.copy()
     s.Placement = o.getGlobalPlacement()
-    return s
-
-
-def export_step(shapes, dst):
-    Part.makeCompound(shapes).exportStep(str(dst))
+    dup = tmpdoc.addObject("Part::Feature", o.Name)
+    dup.Label = o.Name
+    dup.Shape = s
+    return dup
 
 
 def top_group(o):
@@ -82,6 +87,13 @@ def top_group(o):
     return top
 
 
+def export_objs(objs, tmpdoc, dst):
+    world = [world_object(tmpdoc, o) for o in objs]
+    Import.export(world, str(dst))
+    for w in world:
+        tmpdoc.removeObject(w.Name)
+
+
 def main():
     (STEP / "parts").mkdir(parents=True, exist_ok=True)
     (STEP / "subassembly").mkdir(parents=True, exist_ok=True)
@@ -92,27 +104,27 @@ def main():
     report = {"parts": 0, "subassemblies": [], "master_solids": 0,
               "master_step_reimport": 0, "files": []}
 
+    tmp = App.newDocument("step_world")
     doc = App.openDocument(str(MASTER))
     doc.recompute()
     objs = exportable(doc)
     # per-part files
     for o in objs:
         dst = STEP / "parts" / ("%s.step" % o.Name)
-        export_step([global_shape(o)], dst)
+        export_objs([o], tmp, dst)
         report["parts"] += 1
     # subassembly compounds: GRP_* containers in the master
     groups = [o for o in doc.Objects
               if o.TypeId == "App::Part" and o.Name.startswith("GRP_")]
     for g in groups:
-        leaves = [x for x in exportable(doc)
-                  if top_group(x) is g]
+        leaves = [x for x in objs if top_group(x) is g]
         if leaves:
             dst = STEP / "subassembly" / ("%s.step" % g.Name)
-            export_step([global_shape(x) for x in leaves], dst)
+            export_objs(leaves, tmp, dst)
             report["subassemblies"].append({g.Name: len(leaves)})
     # full master
     mstep = STEP / "master_robot.step"
-    export_step([global_shape(o) for o in objs], mstep)
+    export_objs(objs, tmp, mstep)
     report["master_solids"] = len(objs)
     App.closeDocument(doc.Name)
 
@@ -121,20 +133,23 @@ def main():
         d = App.openDocument(str(path))
         d.recompute()
         sobjs = exportable(d)
-        export_step([global_shape(o) for o in sobjs],
+        export_objs(sobjs, tmp,
                     STEP / "subassembly" / ("%s.step" % name))
         report["subassemblies"].append({name: len(sobjs)})
         App.closeDocument(d.Name)
+    App.closeDocument(tmp.Name)
 
-    # validate: master STEP re-import
+    # validate: master STEP re-import (solids + names)
     rd = App.newDocument("step_reimport")
-    import Import
     Import.insert(str(mstep), rd.Name)
     rd.recompute()
-    report["master_step_reimport"] = sum(
-        1 for o in rd.Objects
-        if hasattr(o, "Shape") and not o.Shape.isNull()
-        and o.Shape.Volume > 0)
+    solids = [o for o in rd.Objects
+              if hasattr(o, "Shape") and not o.Shape.isNull()
+              and o.Shape.Volume > 0]
+    report["master_step_reimport"] = len(solids)
+    report["master_step_named"] = sum(
+        1 for o in solids if not o.Label.startswith(
+            ("Open CASCADE", "Part__")))
     App.closeDocument(rd.Name)
 
     head = open(mstep, "rb").read(20)
@@ -142,9 +157,10 @@ def main():
     report["files"] = sorted(p.name for p in STEP.rglob("*.step"))
     (STEP / "export_step_report.json").write_text(
         json.dumps(report, indent=1), encoding="utf-8")
-    print("STEP parts=%d subassemblies=%s master=%d reimport=%d" % (
-        report["parts"], report["subassemblies"],
-        report["master_solids"], report["master_step_reimport"]))
+    print("STEP parts=%d subassemblies=%s master=%d reimport=%d named=%d"
+          % (report["parts"], report["subassemblies"],
+             report["master_solids"], report["master_step_reimport"],
+             report["master_step_named"]))
 
 
 try:

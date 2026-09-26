@@ -1,33 +1,12 @@
-RENDER: front tris=174216 edges=858 aspect=0.685
-RENDER: side tris=174216 edges=989 aspect=0.609
-RENDER: top tris=174216 edges=801 aspect=1.125
-RENDER: iso tris=174216 edges=1479 aspect=0.799
-RENDER: iso projection az=45 el=35.264deg (atan(1/sqrt2)) orthographic
-PNG: front tris=174216 edges=858 -> master_front.png
-PNG: side tris=174216 edges=989 -> master_side.png
-PNG: top tris=174216 edges=801 -> master_top.png
-PNG: iso tris=174216 edges=1479 -> master_iso.png
-PNG: front tris=129060 edges=485 -> drivebase_front.png
-PNG: side tris=129060 edges=597 -> drivebase_side.png
-PNG: top tris=129060 edges=445 -> drivebase_top.png
-PNG: iso tris=129060 edges=769 -> drivebase_iso.png
-PNG: front tris=32464 edges=243 -> intake_front.png
-PNG: side tris=32464 edges=265 -> intake_side.png
-PNG: top tris=32464 edges=260 -> intake_top.png
-PNG: iso tris=32464 edges=436 -> intake_iso.png
-PNG: front tris=7184 edges=104 -> transfer_front.png
-PNG: side tris=7184 edges=94 -> transfer_side.png
-PNG: top tris=7184 edges=85 -> transfer_top.png
-PNG: iso tris=7184 edges=204 -> transfer_iso.png
-PNG: front tris=752500 edges=3416 -> master_front.png
-PNG: side tris=752500 edges=4436 -> master_side.png
-PNG: top tris=752500 edges=3289 -> master_top.png
-PNG: iso tris=752500 edges=6236 -> master_iso.png
-PNG: front tris=690000 edges=3007 -> drivebase_front.png
-PNG: side tris=690000 edges=3855 -> drivebase_side.png
-PNG: top tris=690000 edges=2907 -> drivebase_top.png
-PNG: iso tris=690000 edges=5474 -> drivebase_iso.png
-PNG: front tris=226224 edges=1194 -> electronics_front.png
-PNG: side tris=226224 edges=1204 -> electronics_side.png
-PNG: top tris=226224 edges=1082 -> electronics_top.png
-PNG: iso tris=226224 edges=1916 -> electronics_iso.png
+PNG: front tris=748396 edges=3438 -> master_front.png
+PNG: side tris=748396 edges=4455 -> master_side.png
+PNG: top tris=748396 edges=3299 -> master_top.png
+PNG: iso tris=748396 edges=6286 -> master_iso.png
+PNG: front tris=685896 edges=3029 -> drivebase_front.png
+PNG: side tris=685896 edges=3874 -> drivebase_side.png
+PNG: top tris=685896 edges=2917 -> drivebase_top.png
+PNG: iso tris=685896 edges=5524 -> drivebase_iso.png
+PNG: front tris=226056 edges=1200 -> electronics_front.png
+PNG: side tris=226056 edges=1207 -> electronics_side.png
+PNG: top tris=226056 edges=1084 -> electronics_top.png
+PNG: iso tris=226056 edges=1918 -> electronics_iso.png

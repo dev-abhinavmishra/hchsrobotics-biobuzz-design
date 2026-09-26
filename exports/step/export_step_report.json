@@ -1,8 +1,8 @@
 {
- "parts": 550,
+ "parts": 546,
  "subassemblies": [
   {
-   "GRP_DRIVEBASE": 102
+   "GRP_DRIVEBASE": 98
   },
   {
    "GRP_FRAME": 37
@@ -17,14 +17,14 @@
    "GRP_FASTENERS": 356
   },
   {
-   "drivebase": 486
+   "drivebase": 482
   },
   {
    "electronics": 109
   }
  ],
- "master_solids": 550,
- "master_step_reimport": 581,
+ "master_solids": 546,
+ "master_step_reimport": 589,
  "files": [
   "AXLE_FL.step",
   "AXLE_FR.step",
@@ -577,12 +577,9 @@
   "WSH_AXLE_FR.step",
   "WSH_AXLE_RL.step",
   "WSH_AXLE_RR.step",
-  "WSH_OUT_FL.step",
-  "WSH_OUT_FR.step",
-  "WSH_OUT_RL.step",
-  "WSH_OUT_RR.step",
   "drivebase.step",
   "electronics.step",
   "master_robot.step"
- ]
+ ],
+ "master_step_named": 589
 }

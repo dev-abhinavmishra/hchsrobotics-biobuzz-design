@@ -272,7 +272,6 @@
   "WSH_AXLE_FL",
   "COLLAR_FL",
   "PINION_FL",
-  "WSH_OUT_FL",
   "NUT_AXLE_FL",
   "CLAMP_FL_2",
   "CLAMP_FL_1",
@@ -326,7 +325,6 @@
   "WSH_AXLE_FR",
   "COLLAR_FR",
   "PINION_FR",
-  "WSH_OUT_FR",
   "NUT_AXLE_FR",
   "CLAMP_FR_2",
   "CLAMP_FR_1",
@@ -380,7 +378,6 @@
   "WSH_AXLE_RL",
   "COLLAR_RL",
   "PINION_RL",
-  "WSH_OUT_RL",
   "NUT_AXLE_RL",
   "CLAMP_RL_2",
   "CLAMP_RL_1",
@@ -434,7 +431,6 @@
   "WSH_AXLE_RR",
   "COLLAR_RR",
   "PINION_RR",
-  "WSH_OUT_RR",
   "NUT_AXLE_RR",
   "CLAMP_RR_2",
   "CLAMP_RR_1",
@@ -602,21 +598,6 @@
  ],
  "edges": [
   {
-   "a": "CROWN_POST_L",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CROWN_L_0",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CROWN_L_1",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CROWN_L_0",
    "b": "NUT_CROWN_L_0",
    "type": "embed"
@@ -624,26 +605,6 @@
   {
    "a": "BOLT_CROWN_L_1",
    "b": "NUT_CROWN_L_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_L_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_L_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_L_2",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_L_3",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -668,26 +629,6 @@
   },
   {
    "a": "BOLT_GUS_L_0_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_L_0_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_L_1_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_L_1_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_L_0_0",
    "b": "NUT_GUS_L_0_0",
    "type": "embed"
   },
@@ -708,42 +649,12 @@
   },
   {
    "a": "BOLT_GUSX_L_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSX_L_1",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSX_L_0",
    "b": "NUT_GUSX_L_0",
    "type": "embed"
   },
   {
    "a": "BOLT_GUSX_L_1",
    "b": "NUT_GUSX_L_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_L_0_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_L_1_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_XL_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_XL_1",
-   "b": "FRAME_CROSS_B",
    "type": "embed"
   },
   {
@@ -768,26 +679,6 @@
   },
   {
    "a": "BOLT_TIE_L_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_L_1",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_L_2",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_L_3",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_L_0",
    "b": "NUT_TIE_L_0",
    "type": "embed"
   },
@@ -807,21 +698,6 @@
    "type": "embed"
   },
   {
-   "a": "CROWN_POST_R",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CROWN_R_0",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CROWN_R_1",
-   "b": "FRAME_CROWN_F",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CROWN_R_0",
    "b": "NUT_CROWN_R_0",
    "type": "embed"
@@ -829,26 +705,6 @@
   {
    "a": "BOLT_CROWN_R_1",
    "b": "NUT_CROWN_R_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_R_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_R_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_R_2",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CPOSTF_R_3",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -873,26 +729,6 @@
   },
   {
    "a": "BOLT_GUS_R_0_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_R_0_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_R_1_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_R_1_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUS_R_0_0",
    "b": "NUT_GUS_R_0_0",
    "type": "embed"
   },
@@ -913,42 +749,12 @@
   },
   {
    "a": "BOLT_GUSX_R_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSX_R_1",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSX_R_0",
    "b": "NUT_GUSX_R_0",
    "type": "embed"
   },
   {
    "a": "BOLT_GUSX_R_1",
    "b": "NUT_GUSX_R_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_R_0_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_R_1_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_XR_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUSU_XR_1",
-   "b": "FRAME_CROSS_B",
    "type": "embed"
   },
   {
@@ -973,26 +779,6 @@
   },
   {
    "a": "BOLT_TIE_R_0",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_R_1",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_R_2",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_R_3",
-   "b": "FRAME_CROSS_B",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_TIE_R_0",
    "b": "NUT_TIE_R_0",
    "type": "embed"
   },
@@ -1013,16 +799,6 @@
   },
   {
    "a": "BOLT_PANB_L0_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L0_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L0_0",
    "b": "NUT_PANB_L0_0",
    "type": "embed"
   },
@@ -1033,22 +809,7 @@
   },
   {
    "a": "BOLT_PANF_L0",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_L0",
    "b": "NUT_PANF_L0",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L1_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L1_1",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -1063,22 +824,7 @@
   },
   {
    "a": "BOLT_PANF_L1",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_L1",
    "b": "NUT_PANF_L1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L2_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_L2_1",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -1093,22 +839,7 @@
   },
   {
    "a": "BOLT_PANF_L2",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_L2",
    "b": "NUT_PANF_L2",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R0_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R0_1",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -1123,22 +854,7 @@
   },
   {
    "a": "BOLT_PANF_R0",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_R0",
    "b": "NUT_PANF_R0",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R1_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R1_1",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -1153,22 +869,7 @@
   },
   {
    "a": "BOLT_PANF_R1",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_R1",
    "b": "NUT_PANF_R1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R2_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANB_R2_1",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -1179,11 +880,6 @@
   {
    "a": "BOLT_PANB_R2_1",
    "b": "NUT_PANB_R2_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PANF_R2",
-   "b": "BELLY_PAN",
    "type": "embed"
   },
   {
@@ -1303,22 +999,22 @@
   },
   {
    "a": "BOLT_NUM_L_0",
-   "b": "FRAME_RAIL_L",
+   "b": "NUT_NUM_L_0",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_L_1",
-   "b": "FRAME_RAIL_L",
+   "b": "NUT_NUM_L_1",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_L_2",
-   "b": "FRAME_RAIL_L",
+   "b": "NUT_NUM_L_2",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_L_3",
-   "b": "FRAME_RAIL_L",
+   "b": "NUT_NUM_L_3",
    "type": "embed"
   },
   {
@@ -1343,22 +1039,22 @@
   },
   {
    "a": "BOLT_NUM_B_0",
-   "b": "FRAME_CROSS_B",
+   "b": "NUT_NUM_B_0",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_B_1",
-   "b": "FRAME_CROSS_B",
+   "b": "NUT_NUM_B_1",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_B_2",
-   "b": "FRAME_CROSS_B",
+   "b": "NUT_NUM_B_2",
    "type": "embed"
   },
   {
    "a": "BOLT_NUM_B_3",
-   "b": "FRAME_CROSS_B",
+   "b": "NUT_NUM_B_3",
    "type": "embed"
   },
   {
@@ -1379,106 +1075,6 @@
   {
    "a": "BOLT_NUM_B_3",
    "b": "NUT_NUM_B_3",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_00_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_00_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_01_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_01_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_02_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_02_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_03_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_03_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_04_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_04_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_05_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_05_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_06_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_06_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_07_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_07_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_08_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_08_B",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_09_B",
-   "b": "WHEEL_PLATE_FL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FL_09_B",
-   "b": "WHEEL_PLATE_FL_OUT",
    "type": "embed"
   },
   {
@@ -1514,26 +1110,6 @@
   {
    "a": "BOLT_BRG_IN_FL_11",
    "b": "NUT_RIV_IN_FL_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FL_00",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FL_01",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FL_10",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FL_11",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -1574,26 +1150,6 @@
   {
    "a": "BOLT_BRG_OUT_FL_11",
    "b": "NUT_RIV_OUT_FL_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FL_00",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FL_01",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FL_10",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FL_11",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -1662,17 +1218,7 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_CLMP_FL_0_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CLMP_FL_0_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CLMP_FL_1_0",
    "b": "FRAME_RAIL_L",
    "type": "embed"
   },
@@ -1699,106 +1245,6 @@
   {
    "a": "BOLT_CLMP_FL_1_1",
    "b": "NUT_CLMP_FL_1_1",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_00_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_00_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_01_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_01_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_02_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_02_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_03_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_03_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_04_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_04_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_05_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_05_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_06_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_06_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_07_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_07_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_08_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_08_B",
-   "b": "WHEEL_PLATE_FR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_09_B",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_FR_09_B",
-   "b": "WHEEL_PLATE_FR_OUT",
    "type": "embed"
   },
   {
@@ -1834,26 +1280,6 @@
   {
    "a": "BOLT_BRG_IN_FR_11",
    "b": "NUT_RIV_IN_FR_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FR_00",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FR_01",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FR_10",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_FR_11",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -1894,26 +1320,6 @@
   {
    "a": "BOLT_BRG_OUT_FR_11",
    "b": "NUT_RIV_OUT_FR_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FR_00",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FR_01",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FR_10",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_FR_11",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -1982,17 +1388,7 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_CLMP_FR_0_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CLMP_FR_0_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CLMP_FR_1_0",
    "b": "FRAME_RAIL_R",
    "type": "embed"
   },
@@ -2019,106 +1415,6 @@
   {
    "a": "BOLT_CLMP_FR_1_1",
    "b": "NUT_CLMP_FR_1_1",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_00_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_00_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_01_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_01_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_02_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_02_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_03_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_03_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_04_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_04_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_05_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_05_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_06_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_06_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_07_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_07_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_08_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_08_B",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_09_B",
-   "b": "WHEEL_PLATE_RL_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RL_09_B",
-   "b": "WHEEL_PLATE_RL_OUT",
    "type": "embed"
   },
   {
@@ -2154,26 +1450,6 @@
   {
    "a": "BOLT_BRG_IN_RL_11",
    "b": "NUT_RIV_IN_RL_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RL_00",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RL_01",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RL_10",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RL_11",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -2214,26 +1490,6 @@
   {
    "a": "BOLT_BRG_OUT_RL_11",
    "b": "NUT_RIV_OUT_RL_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RL_00",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RL_01",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RL_10",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RL_11",
-   "b": "FRAME_RAIL_L",
    "type": "embed"
   },
   {
@@ -2302,17 +1558,7 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_CLMP_RL_0_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CLMP_RL_0_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CLMP_RL_1_0",
    "b": "FRAME_RAIL_L",
    "type": "embed"
   },
@@ -2339,106 +1585,6 @@
   {
    "a": "BOLT_CLMP_RL_1_1",
    "b": "NUT_CLMP_RL_1_1",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_00_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_00_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_01_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_01_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_02_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_02_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_03_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_03_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_04_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_04_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_05_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_05_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_06_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_06_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_07_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_07_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_08_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_08_B",
-   "b": "WHEEL_PLATE_RR_OUT",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_09_B",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "embed"
-  },
-  {
-   "a": "ROLLER_RR_09_B",
-   "b": "WHEEL_PLATE_RR_OUT",
    "type": "embed"
   },
   {
@@ -2474,26 +1620,6 @@
   {
    "a": "BOLT_BRG_IN_RR_11",
    "b": "NUT_RIV_IN_RR_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RR_00",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RR_01",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RR_10",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_IN_RR_11",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -2534,26 +1660,6 @@
   {
    "a": "BOLT_BRG_OUT_RR_11",
    "b": "NUT_RIV_OUT_RR_11",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RR_00",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RR_01",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RR_10",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_BRG_OUT_RR_11",
-   "b": "FRAME_RAIL_R",
    "type": "embed"
   },
   {
@@ -2622,17 +1728,7 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_CLMP_RR_0_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_CLMP_RR_0_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_CLMP_RR_1_0",
    "b": "FRAME_RAIL_R",
    "type": "embed"
   },
@@ -2723,66 +1819,6 @@
   },
   {
    "a": "BOLT_MPL_L_0",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_1",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_2",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_3",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_4",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_5",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_6",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_7",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_8",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_9",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_10",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_11",
-   "b": "FRAME_RAIL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_L_0",
    "b": "NUT_MPL_L_0",
    "type": "embed"
   },
@@ -2903,66 +1939,6 @@
   },
   {
    "a": "BOLT_MPL_R_0",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_1",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_2",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_3",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_4",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_5",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_6",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_7",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_8",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_9",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_10",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_11",
-   "b": "FRAME_RAIL_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_MPL_R_0",
    "b": "NUT_MPL_R_0",
    "type": "embed"
   },
@@ -3033,11 +2009,6 @@
   },
   {
    "a": "ODO_AXLE_LAT_L",
-   "b": "ODO_MOUNT_LAT_L",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LAT_L",
    "b": "BELLY_PAN",
    "type": "embed"
   },
@@ -3054,11 +2025,6 @@
   {
    "a": "NUT_ODO_PIVOT_LAT_L",
    "b": "ODO_PIVOT_LAT_L",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LAT_L",
-   "b": "ODO_MOUNT_LAT_L",
    "type": "embed"
   },
   {
@@ -3087,11 +2053,6 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LAT_L_0",
-   "b": "ODO_MOUNT_LAT_L",
-   "type": "embed"
-  },
-  {
    "a": "SCRW_ENC_LAT_L_1",
    "b": "ODO_ARM_LAT_L",
    "type": "embed"
@@ -3102,22 +2063,12 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LAT_L_1",
-   "b": "ODO_MOUNT_LAT_L",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_ODO_LAT_R_0",
    "b": "ODO_MOUNT_LAT_R",
    "type": "embed"
   },
   {
    "a": "BOLT_ODO_LAT_R_1",
-   "b": "ODO_MOUNT_LAT_R",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LAT_R",
    "b": "ODO_MOUNT_LAT_R",
    "type": "embed"
   },
@@ -3139,11 +2090,6 @@
   {
    "a": "NUT_ODO_PIVOT_LAT_R",
    "b": "ODO_PIVOT_LAT_R",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LAT_R",
-   "b": "ODO_MOUNT_LAT_R",
    "type": "embed"
   },
   {
@@ -3172,11 +2118,6 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LAT_R_0",
-   "b": "ODO_MOUNT_LAT_R",
-   "type": "embed"
-  },
-  {
    "a": "SCRW_ENC_LAT_R_1",
    "b": "ODO_ARM_LAT_R",
    "type": "embed"
@@ -3187,22 +2128,12 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LAT_R_1",
-   "b": "ODO_MOUNT_LAT_R",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_ODO_LON_0",
    "b": "ODO_MOUNT_LON",
    "type": "embed"
   },
   {
    "a": "BOLT_ODO_LON_1",
-   "b": "ODO_MOUNT_LON",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LON",
    "b": "ODO_MOUNT_LON",
    "type": "embed"
   },
@@ -3224,11 +2155,6 @@
   {
    "a": "NUT_ODO_PIVOT_LON",
    "b": "ODO_PIVOT_LON",
-   "type": "embed"
-  },
-  {
-   "a": "ODO_AXLE_LON",
-   "b": "ODO_MOUNT_LON",
    "type": "embed"
   },
   {
@@ -3257,11 +2183,6 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LON_0",
-   "b": "ODO_MOUNT_LON",
-   "type": "embed"
-  },
-  {
    "a": "SCRW_ENC_LON_1",
    "b": "ODO_ARM_LON",
    "type": "embed"
@@ -3272,26 +2193,6 @@
    "type": "embed"
   },
   {
-   "a": "SCRW_ENC_LON_1",
-   "b": "ODO_MOUNT_LON",
-   "type": "embed"
-  },
-  {
-   "a": "BATT_STRAP_0",
-   "b": "BATTERY",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_STRAP_0_0",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_STRAP_0_1",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_STRAP_0_0",
    "b": "NUT_STRAP_0_0",
    "type": "embed"
@@ -3299,21 +2200,6 @@
   {
    "a": "BOLT_STRAP_0_1",
    "b": "NUT_STRAP_0_1",
-   "type": "embed"
-  },
-  {
-   "a": "BATT_STRAP_1",
-   "b": "BATTERY",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_STRAP_1_0",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_STRAP_1_1",
-   "b": "BELLY_PAN",
    "type": "embed"
   },
   {
@@ -3364,16 +2250,6 @@
   {
    "a": "BOLT_SO_T_3",
    "b": "STANDOFF_3",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_SW_0",
-   "b": "BELLY_PAN",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_SW_1",
-   "b": "BELLY_PAN",
    "type": "embed"
   },
   {
@@ -3448,26 +2324,6 @@
   },
   {
    "a": "BOLT_HUB_E_0",
-   "b": "ELEC_SHELF",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_HUB_E_1",
-   "b": "ELEC_SHELF",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_HUB_E_2",
-   "b": "ELEC_SHELF",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_HUB_E_3",
-   "b": "ELEC_SHELF",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_HUB_E_0",
    "b": "NUT_HUB_E_0",
    "type": "embed"
   },
@@ -3489,11 +2345,6 @@
   {
    "a": "WIRE_BATT_SW",
    "b": "BATTERY",
-   "type": "embed"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "HUB_CTRL",
    "type": "embed"
   },
   {
@@ -3832,6 +2683,46 @@
    "type": "face"
   },
   {
+   "a": "ENDCAP_FL",
+   "b": "FRAME_RAIL_L",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_BL",
+   "b": "FRAME_RAIL_L",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_FR",
+   "b": "FRAME_RAIL_R",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_BR",
+   "b": "FRAME_RAIL_R",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_XB_L",
+   "b": "FRAME_CROSS_B",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_XB_L",
+   "b": "FRAME_RAIL_L",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_XB_R",
+   "b": "FRAME_CROSS_B",
+   "type": "face"
+  },
+  {
+   "a": "ENDCAP_XB_R",
+   "b": "FRAME_RAIL_R",
+   "type": "face"
+  },
+  {
    "a": "PLATE_NUM_L",
    "b": "FRAME_RAIL_L",
    "type": "face"
@@ -3877,13 +2768,8 @@
    "type": "face"
   },
   {
-   "a": "WSH_OUT_FL",
-   "b": "WHEEL_PLATE_FL_OUT",
-   "type": "face"
-  },
-  {
    "a": "NUT_AXLE_FL",
-   "b": "WSH_OUT_FL",
+   "b": "WHEEL_PLATE_FL_OUT",
    "type": "face"
   },
   {
@@ -3932,13 +2818,8 @@
    "type": "face"
   },
   {
-   "a": "WSH_OUT_FR",
-   "b": "WHEEL_PLATE_FR_IN",
-   "type": "face"
-  },
-  {
    "a": "NUT_AXLE_FR",
-   "b": "WSH_OUT_FR",
+   "b": "WHEEL_PLATE_FR_IN",
    "type": "face"
   },
   {
@@ -3987,13 +2868,8 @@
    "type": "face"
   },
   {
-   "a": "WSH_OUT_RL",
-   "b": "WHEEL_PLATE_RL_OUT",
-   "type": "face"
-  },
-  {
    "a": "NUT_AXLE_RL",
-   "b": "WSH_OUT_RL",
+   "b": "WHEEL_PLATE_RL_OUT",
    "type": "face"
   },
   {
@@ -4042,13 +2918,8 @@
    "type": "face"
   },
   {
-   "a": "WSH_OUT_RR",
-   "b": "WHEEL_PLATE_RR_IN",
-   "type": "face"
-  },
-  {
    "a": "NUT_AXLE_RR",
-   "b": "WSH_OUT_RR",
+   "b": "WHEEL_PLATE_RR_IN",
    "type": "face"
   },
   {
@@ -4327,11 +3198,6 @@
    "type": "journal"
   },
   {
-   "a": "AXLE_FL",
-   "b": "WSH_OUT_FL",
-   "type": "journal"
-  },
-  {
    "a": "WHEEL_PLATE_FR_IN",
    "b": "AXLE_FR",
    "type": "journal"
@@ -4414,11 +3280,6 @@
   {
    "a": "AXLE_FR",
    "b": "PINION_FR",
-   "type": "journal"
-  },
-  {
-   "a": "AXLE_FR",
-   "b": "WSH_OUT_FR",
    "type": "journal"
   },
   {
@@ -4507,11 +3368,6 @@
    "type": "journal"
   },
   {
-   "a": "AXLE_RL",
-   "b": "WSH_OUT_RL",
-   "type": "journal"
-  },
-  {
    "a": "WHEEL_PLATE_RR_IN",
    "b": "AXLE_RR",
    "type": "journal"
@@ -4597,11 +3453,6 @@
    "type": "journal"
   },
   {
-   "a": "AXLE_RR",
-   "b": "WSH_OUT_RR",
-   "type": "journal"
-  },
-  {
    "a": "ODO_AXLE_LAT_L",
    "b": "ODO_WHEEL_LAT_L",
    "type": "journal"
@@ -4645,6 +3496,1016 @@
    "a": "ODO_PIVOT_LON",
    "b": "ODO_ARM_LON",
    "type": "journal"
+  },
+  {
+   "a": "CROWN_POST_L",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CROWN_L_0",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CROWN_L_1",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_L_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_L_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_L_2",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_L_3",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L_0_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L_0_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L_1_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L_1_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSX_L_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSX_L_1",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_L_1_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_XL_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_XL_1",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TIE_L_2",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TIE_L_3",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "CROWN_POST_R",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CROWN_R_0",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CROWN_R_1",
+   "b": "FRAME_CROWN_F",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_R_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_R_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_R_2",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CPOSTF_R_3",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R_0_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R_0_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R_1_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R_1_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSX_R_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSX_R_1",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_R_1_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_XR_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUSU_XR_1",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TIE_R_2",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TIE_R_3",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L0_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L0_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_L0",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L1_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L1_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_L1",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L2_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_L2_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_L2",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R0_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R0_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_R0",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R1_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R1_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_R1",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R2_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANB_R2_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_PANF_R2",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_L_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_L_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_L_2",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_L_3",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_B_0",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_B_1",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_B_2",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_NUM_B_3",
+   "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_00_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_00_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_01_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_01_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_02_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_02_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_03_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_03_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_04_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_04_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_05_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_05_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_06_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_06_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_07_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_07_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_08_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_08_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_09_B",
+   "b": "WHEEL_PLATE_FL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FL_09_B",
+   "b": "WHEEL_PLATE_FL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_FL_01",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_FL_11",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_FL_01",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_FL_11",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_FL_0_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_FL_1_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_00_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_00_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_01_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_01_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_02_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_02_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_03_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_03_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_04_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_04_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_05_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_05_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_06_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_06_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_07_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_07_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_08_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_08_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_09_B",
+   "b": "WHEEL_PLATE_FR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_FR_09_B",
+   "b": "WHEEL_PLATE_FR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_FR_01",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_FR_11",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_FR_01",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_FR_11",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_FR_0_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_FR_1_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_00_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_00_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_01_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_01_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_02_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_02_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_03_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_03_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_04_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_04_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_05_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_05_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_06_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_06_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_07_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_07_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_08_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_08_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_09_B",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RL_09_B",
+   "b": "WHEEL_PLATE_RL_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_RL_01",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_RL_11",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_RL_01",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_RL_11",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_RL_0_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_RL_1_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_00_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_00_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_01_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_01_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_02_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_02_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_03_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_03_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_04_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_04_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_05_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_05_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_06_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_06_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_07_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_07_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_08_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_08_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_09_B",
+   "b": "WHEEL_PLATE_RR_IN",
+   "type": "contact"
+  },
+  {
+   "a": "ROLLER_RR_09_B",
+   "b": "WHEEL_PLATE_RR_OUT",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_RR_01",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_IN_RR_11",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_RR_01",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_BRG_OUT_RR_11",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_RR_0_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CLMP_RR_1_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_0",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_1",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_2",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_3",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_4",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_5",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_6",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_7",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_8",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_9",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_10",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_L_11",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_0",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_1",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_2",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_3",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_4",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_5",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_6",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_7",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_8",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_9",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_10",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MPL_R_11",
+   "b": "FRAME_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BATT_STRAP_0",
+   "b": "BATTERY",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_STRAP_0_0",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_STRAP_0_1",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BATT_STRAP_1",
+   "b": "BATTERY",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_STRAP_1_0",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_STRAP_1_1",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_SW_0",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_SW_1",
+   "b": "BELLY_PAN",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "contact"
   },
   {
    "a": "NUT_RIV_IN_FL_00",
@@ -4714,6 +4575,11 @@
   {
    "a": "CLAMP_FL_1",
    "b": "MOTOR_FL",
+   "type": "contact"
+  },
+  {
+   "a": "CLAMP_FL_2",
+   "b": "BOLT_MPL_L_3",
    "type": "contact"
   },
   {
@@ -4787,6 +4653,11 @@
    "type": "contact"
   },
   {
+   "a": "CLAMP_FR_2",
+   "b": "BOLT_MPL_R_3",
+   "type": "contact"
+  },
+  {
    "a": "NUT_RIV_IN_RL_00",
    "b": "FRAME_RAIL_L",
    "type": "contact"
@@ -4854,6 +4725,11 @@
   {
    "a": "CLAMP_RL_1",
    "b": "MOTOR_RL",
+   "type": "contact"
+  },
+  {
+   "a": "CLAMP_RL_2",
+   "b": "BOLT_MPL_L_0",
    "type": "contact"
   },
   {
@@ -4927,33 +4803,8 @@
    "type": "contact"
   },
   {
-   "a": "ODO_SPRING_LAT_L",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "ODO_SPRING_LAT_L",
-   "b": "ODO_ARM_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "ODO_SPRING_LAT_R",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "ODO_SPRING_LAT_R",
-   "b": "ODO_ARM_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "ODO_SPRING_LON",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "ODO_SPRING_LON",
-   "b": "ODO_ARM_LON",
+   "a": "CLAMP_RR_2",
+   "b": "BOLT_MPL_R_0",
    "type": "contact"
   },
   {
@@ -4973,11 +4824,6 @@
   },
   {
    "a": "WIRE_MTR_FL",
-   "b": "BOLT_CLMP_FL_1_0",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
    "b": "BOLT_CLMP_FL_0_0",
    "type": "contact"
   },
@@ -4992,18 +4838,8 @@
    "type": "contact"
   },
   {
-   "a": "WIRE_MTR_RL",
-   "b": "BOLT_CLMP_RL_0_0",
-   "type": "contact"
-  },
-  {
    "a": "WIRE_MTR_FR",
    "b": "CLAMP_FR_1",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "BOLT_CLMP_FR_1_0",
    "type": "contact"
   },
   {
@@ -5022,322 +4858,17 @@
    "type": "contact"
   },
   {
-   "a": "WIRE_MTR_RR",
-   "b": "BOLT_CLMP_RR_0_0",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_L",
-   "b": "ODO_MOUNT_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_L",
-   "b": "SCRW_ENC_LAT_L_0",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_R",
-   "b": "ODO_MOUNT_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_R",
-   "b": "SCRW_ENC_LAT_R_0",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "ODO_MOUNT_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "SCRW_ENC_LON_0",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RL",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RR",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_L",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_R",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
    "a": "WIRE_BATT_SW",
    "b": "WIRE_SW_CTRL",
    "type": "contact"
   },
   {
    "a": "WIRE_BATT_SW",
-   "b": "WIRE_HUB_RS485",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
    "b": "WIRE_MTR_FL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_MTR_FR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_HUB_RS485",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_MTR_FL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_MTR_FR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_MTR_FL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_MTR_FR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_MTR_FR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RL",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RL",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RL",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RL",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RR",
-   "b": "WIRE_ENC_LAT_L",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RR",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_RR",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_L",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_L",
-   "b": "WIRE_ENC_LON",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_R",
-   "b": "WIRE_ENC_LON",
    "type": "contact"
   },
   {
    "a": "BATT_STRAP_0",
-   "b": "WIRE_BATT_SW",
-   "type": "contact"
-  },
-  {
-   "a": "BATT_STRAP_1",
    "b": "WIRE_BATT_SW",
    "type": "contact"
   },
@@ -11112,6 +10643,410 @@
    "b": "ELEC_SHELF",
    "type": "fastener",
    "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "WHEEL_ASSY_FL",
+   "b": "AXLE_FL",
+   "type": "carrier"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "WHEEL_ASSY_FR",
+   "b": "AXLE_FR",
+   "type": "carrier"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "WHEEL_ASSY_RL",
+   "b": "AXLE_RL",
+   "type": "carrier"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_0",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_1",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_2",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "HUB_EXP",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "NUT_HUB_E_3",
+   "b": "ELEC_SHELF",
+   "type": "fastener",
+   "joint": "hub_mount"
+  },
+  {
+   "a": "WHEEL_ASSY_RR",
+   "b": "AXLE_RR",
+   "type": "carrier"
   },
   {
    "a": "BOLT_HUB_E_0",

@@ -1,8 +1,8 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
-FILE_NAME('Open CASCADE Shape Model','2026-09-26T13:53:18',('FreeCAD'),(
-    'FreeCAD'),'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
+FILE_NAME('Open CASCADE Shape Model','2026-09-26T16:58:59',('Author'),(
+    ''),'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;
 DATA;
@@ -14,8 +14,7 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Open CASCADE STEP translator 7.8 212',
-  'Open CASCADE STEP translator 7.8 212','',(#8));
+#7 = PRODUCT('BOLT_BRG_OUT_FL_00','BOLT_BRG_OUT_FL_00','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#15),#113);
@@ -33,7 +32,7 @@ DATA;
 #22 = VERTEX_POINT('',#23);
 #23 = CARTESIAN_POINT('',(120.,175.52,39.));
 #24 = VERTEX_POINT('',#25);
-#25 = CARTESIAN_POINT('',(120.,184.52,39.));
+#25 = CARTESIAN_POINT('',(120.,183.72,39.));
 #26 = LINE('',#27,#28);
 #27 = CARTESIAN_POINT('',(120.,175.52,39.));
 #28 = VECTOR('',#29,1.);
@@ -42,7 +41,7 @@ DATA;
 #31 = EDGE_CURVE('',#24,#24,#32,.T.);
 #32 = CIRCLE('',#33,2.);
 #33 = AXIS2_PLACEMENT_3D('',#34,#35,#36);
-#34 = CARTESIAN_POINT('',(118.,184.52,39.));
+#34 = CARTESIAN_POINT('',(118.,183.72,39.));
 #35 = DIRECTION('',(-0.,1.,0.));
 #36 = DIRECTION('',(1.,0.,0.));
 #37 = ORIENTED_EDGE('',*,*,#21,.F.);
@@ -84,7 +83,7 @@ DATA;
 #73 = ORIENTED_EDGE('',*,*,#31,.F.);
 #74 = PLANE('',#75);
 #75 = AXIS2_PLACEMENT_3D('',#76,#77,#78);
-#76 = CARTESIAN_POINT('',(118.,184.52,39.));
+#76 = CARTESIAN_POINT('',(118.,183.72,39.));
 #77 = DIRECTION('',(0.,1.,0.));
 #78 = DIRECTION('',(1.,0.,0.));
 #79 = ADVANCED_FACE('',(#80),#99,.T.);

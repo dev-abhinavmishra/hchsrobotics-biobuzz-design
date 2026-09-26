@@ -12,11 +12,21 @@ representative value, pending purchase/datasheet confirmation (never
 presented as VERIFIED). Aliases are shared across files where they name the
 same quantity.
 
-**Machine-readable summary:** 145 aliases -- 1 VERIFIED, 10
+**Machine-readable summary:** 159 aliases (145 inputs + 14 derived formula rows) -- 1 VERIFIED, 10
 VENDOR-PENDING, 134 UNVERIFIED. Bound expressions on every exportable
 solid reference these aliases via `Parameters.<alias>`; the PAR1/PAR3
 selfcheck gates fail if an alias is missing or a parametric feature is
 left unbound.
+
+**Envelope margin (UNVERIFIED inspection risk):** the frame footprint is
+444.5 mm square; enumerated fastener classes (axle nylocks, plate bolt
+heads/nuts, crown pin hardware, the alliance number plate itself)
+protrude past it -- total model span is 453.7 x 454.5 mm, ~2.7 mm
+clear of the 457.2 mm start cube (contract amendment A1 requires
+>=1 mm per side, prefers >=2 mm). The axle-nut stack is the binding
+surface: if the vendor M8 nylock is taller than the modeled 5.0 mm, or
+the wheel plates sit outboard of wheel_width/2, the margin erodes.
+Check the as-built shaft tip and nut height before competition.
 
 ## Envelope
 
@@ -69,14 +79,14 @@ left unbound.
 | wplate_thk | 4.0 | mm | UNVERIFIED | wheel side plate thickness |
 | wplate_gap | 1.0 | mm | UNVERIFIED | wheel plate standoff inside the envelope face |
 | hub_dia | 26.0 | mm | UNVERIFIED | wheel hub OD |
-| hub_w | 28.1 | mm | UNVERIFIED | wheel hub width spanning the plate inner faces |
+| hub_w | 30.1 | mm | UNVERIFIED | wheel hub width spanning the plate inner faces |
 | hub_hex_af | 8.4 | mm | UNVERIFIED | hub hex bore across-flats; rides 8mm REX flats +0.4 clearance |
 | plate_bore | 10.0 | mm | UNVERIFIED | wheel plate shaft clearance bore |
 | rex_af | 8.0 | mm | VENDOR-PENDING | goBILDA 8mm REX shaft across-flats, series page |
 | rex_crad | 4.62 | mm | VENDOR-PENDING | REX circumradius = af / (2 cos30); corners O9.24 |
 | shaft_len | 100.0 | mm | UNVERIFIED | live axle: socket seat -> outboard tip, viewver stack reconciled |
 | shaft_tip_d | 7.4 | mm | UNVERIFIED | axle outboard tip turned+threaded M8x1.25 for retaining nut |
-| shaft_tip_len | 9.2 | mm | UNVERIFIED | M8 tip: spans out plate bore + washer + nut + margin |
+| shaft_tip_len | 9.2 | mm | UNVERIFIED | M8 tip: spans out plate bore + nut + margin |
 | sock_hex_af | 8.4 | mm | UNVERIFIED | motor output REX socket across-flats (hex bore) |
 | sock_depth | 16.0 | mm | UNVERIFIED | socket bore depth into gearbox face |
 
@@ -101,7 +111,7 @@ left unbound.
 | washer_t | 1.8 | mm | UNVERIFIED | washer thickness |
 | washer_bore | 9.6 | mm | UNVERIFIED | washer bore clears REX circumcircle |
 | nut8_wrench | 13.0 | mm | UNVERIFIED | M8 nylock across-flats |
-| nut8_h | 5.5 | mm | UNVERIFIED | retaining nut height |
+| nut8_h | 5.0 | mm | UNVERIFIED | thin M8 nylock retaining nut height |
 | nut8_bore | 7.0 | mm | UNVERIFIED | nut thread core O7.0 on O7.4 tip = modeled thread interference |
 | nut6_wrench | 10.0 | mm | UNVERIFIED | M6 nut across-flats |
 | nut6_h | 5.0 | mm | UNVERIFIED | M6 nut height |

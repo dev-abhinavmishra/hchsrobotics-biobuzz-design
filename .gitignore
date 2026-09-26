@@ -25,3 +25,6 @@ _smoke01*
 _peek*.txt
 _gusset.txt
 _m_log.txt
+
+_*log.txt
+

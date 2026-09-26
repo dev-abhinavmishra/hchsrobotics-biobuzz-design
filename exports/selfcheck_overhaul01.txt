@@ -1,8 +1,8 @@
-GIT1_sources_committed     PASS 0 uncommitted
+GIT1_sources_committed     FAIL 3 uncommitted
 DET3_name_bbox_volume      PASS 0 mismatches
 PAR1_alias_set             PASS 
 PAR3_bound_expressions     PASS 0 unbound
-PROV1_statuses             PASS {'VERIFIED': 0, 'VENDOR-PENDING': 78, 'UNVERIFIED': 472}; 0 unlabeled
+PROV1_statuses             PASS {'VERIFIED': 0, 'VENDOR-PENDING': 78, 'UNVERIFIED': 468}; 0 unlabeled
 DAG1_pair_refs             PASS 0 dangling refs
 ASM1_group_coverage        PASS 0 ungrouped: []
 FAST1_joints_hardware      PASS 82 joints, 0 bad
@@ -14,10 +14,32 @@ GEO5_motor_axis            PASS []
 ENV_drivebase              PASS 0 outside env
 ENV_electronics            PASS 0 outside env
 ENV_master                 PASS 0 outside env
-XPT1_parts                 PASS 550/550 part files
+XPT1_parts                 PASS 546/546 part files
 XPT2_subassembly           PASS 7 subassembly files
-XPT3_master                PASS 5218367 bytes
+XPT3_master                PASS 6111437 bytes
 XPT4_tables                PASS bom.csv parameters.csv mount_graph.json
+GIT2_tree_clean            FAIL 631 dirty; archives=True
+DECL_embeds_real           PASS 0 embeds <0.5mm3
+DECL_contacts_real         PASS 0 contacts >1mm: []
+DECL_journals_bored        PASS 0 journals common>0.5: []
+ASM4_coplanar_census       PASS 475 coplanar, 0 undeclared: []
+ASM1_reachable             PASS 0/550 unreachable: []
+ASM5_engage                PASS 0 bolts, 0 nuts: []
+GEOG_ground_census         PASS 7 grounded: ['ROLLER_FL_07_B', 'ROLLER_FR_07_B', 'ROLLER_RL_07_B', 'ROLLER_RR_07_B', 'ODO_WHEEL_LAT_L', 'ODO_WHEEL_LAT_R', 'ODO_WHEEL_LON']
+GEOW_wheel_dims            PASS []
+ENV_frame_footprint        PASS frame 444.5 x 444.5
+ENV_hw_span                PASS span 453.7 x 454.5 (margin 2.70)
+PROV2_tool_status          PASS 0 unlabeled
+XPT5_part_reimport         PASS 546/546 files; 0 empty, 0 nameless
+XPT6_bom_coverage          PASS 0/546 untraced: []
+XPT7_params_full           PASS 158 csv rows, 159 aliases; missing []
 GUI1_doc_health            PASS 
+DET2_rebuild_drivebase     PASS 0 sigs differ
+DET2_rebuild_electronics   PASS 0 sigs differ
+DET2_rebuild_master        PASS 0 sigs differ
+PAR2D_wheel_lat_off        PASS 383 solids moved
+PAR2D_wheel_dia            PASS []
+PAR2E_shelf_z              PASS 6 moved: ['ELEC_SHELF', 'STANDOFF_0', 'STANDOFF_1', 'STANDOFF_2', 'STANDOFF_3', 'HUB_EXP']
+PAR2_restore_identity      PASS 0 differ: []
 ============================================================
-SELFCHECK: 21/21 gates pass
+SELFCHECK: 41/43 gates pass

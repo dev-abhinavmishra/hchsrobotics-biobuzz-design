@@ -8,7 +8,7 @@ source of truth; these files are read-only derivatives.
 
 | Path | Contents |
 |---|---|
-| `step/parts/<NAME>.step` | One AP203 STEP per exportable solid (550 files). Each is positioned by its object's global placement — import matches the FCStd exactly. |
+| `step/parts/<NAME>.step` | One AP203 STEP per exportable solid (546 files; the 4 WHEEL_ASSY carriers are document-internal). PRODUCT records carry the FreeCAD object names -- reimported parts come back named, not anonymous Part__Feature blobs. Each is positioned by its object's global placement — import matches the FCStd exactly. |
 | `step/subassembly/GRP_*.step` | Assembly-group STEP files (GRP_DRIVEBASE, GRP_FRAME, GRP_PODS, GRP_ELECTRONICS, GRP_FASTENERS + subsystem slices `drivebase.step`, `electronics.step`). |
 | `step/master_robot.step` | The complete sprint-01 master assembly in one STEP. Reimported and solid-counted as part of the export gate. |
 | `bom/bom.csv` | Bill of materials aggregated across subsystem BOM rows — subsystem, description, material, spec, status, qty, object list. |
@@ -16,7 +16,7 @@ source of truth; these files are read-only derivatives.
 | `mount_graph.json` | The declared pair tables: joints (members + bolts + nuts), faces, embeds, journals, contacts, ground census, BOM rows — what GEO/FAST gates verify. |
 | `meta/<tag>.json` | Same pair tables per document (drivebase / electronics / master). |
 | `renders/*.png` | Shaded orthographic previews (`render_png.py`): front/side/top/iso per document, subsystem palette. |
-| `selfcheck_overhaul01.txt` | Latest gate transcript (21 checks). |
+| `selfcheck_overhaul01.txt` | Latest gate transcript (43 checks). |
 
 ## Status labels
 
@@ -33,3 +33,8 @@ datasheet), `_UNVERIFIED` (assumed). Nothing is unlabeled — PROV1 gate.
   endpoints present in the model.
 - Sprint-02/03 mechanisms (intake, hopper, turret, lift, camera,
   USB loom) are intentionally absent.
+- The frame footprint is 444.5 mm square; enumerated fastener classes
+  protrude up to ~3 mm into the start-cube margin (span 453.7 x
+  454.5 mm, >=2 mm margin). See docs/robot-parameters.md.
+- Older deliverables live under ../cad/archive/ (pre_overhaul FCStds)
+  and ../scripts/freecad/legacy/ (concept scripts).

@@ -1,8 +1,8 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
-FILE_NAME('Open CASCADE Shape Model','2026-09-26T13:53:24',('FreeCAD'),(
-    'FreeCAD'),'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
+FILE_NAME('Open CASCADE Shape Model','2026-09-26T16:59:06',('Author'),(
+    ''),'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;
 DATA;
@@ -14,8 +14,7 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Open CASCADE STEP translator 7.8 483',
-  'Open CASCADE STEP translator 7.8 483','',(#8));
+#7 = PRODUCT('ODO_SPRING_LON','ODO_SPRING_LON','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = SHAPE_REPRESENTATION('',(#11,#15,#210,#360),#413);
@@ -76,7 +75,7 @@ DATA;
 #65 = LINE('',#66,#67);
 #66 = CARTESIAN_POINT('',(-140.4,35.,25.67));
 #67 = VECTOR('',#68,1.);
-#68 = DIRECTION('',(1.,0.,0.));
+#68 = DIRECTION('',(1.,0.,-0.));
 #69 = ORIENTED_EDGE('',*,*,#70,.T.);
 #70 = EDGE_CURVE('',#63,#71,#73,.T.);
 #71 = VERTEX_POINT('',#72);
@@ -131,7 +130,7 @@ DATA;
 #120 = LINE('',#121,#122);
 #121 = CARTESIAN_POINT('',(-140.4,35.,23.67));
 #122 = VECTOR('',#123,1.);
-#123 = DIRECTION('',(1.,0.,0.));
+#123 = DIRECTION('',(1.,0.,-0.));
 #124 = ORIENTED_EDGE('',*,*,#125,.T.);
 #125 = EDGE_CURVE('',#118,#93,#126,.T.);
 #126 = LINE('',#127,#128);

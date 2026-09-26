@@ -118,19 +118,19 @@ def _tool_name(name):
 
 def tool_box(doc, name, dims, pos=None, rot=None):
     return box(doc, _tool_name(name),
-               "%s_construction_tool" % _tool_name(name),
+               "%s_construction_tool_UNVERIFIED" % _tool_name(name),
                "UNVERIFIED - part-kit construction tool", dims, pos, rot)
 
 
 def tool_cyl(doc, name, dims, pos=None, rot=None):
     return cyl(doc, _tool_name(name),
-               "%s_construction_tool" % _tool_name(name),
+               "%s_construction_tool_UNVERIFIED" % _tool_name(name),
                "UNVERIFIED - part-kit construction tool", dims, pos, rot)
 
 
 def tool_compound(doc, name, links):
     o = doc.addObject("Part::Compound", _tool_name(name))
-    stamp(o, "%s_tool_compound" % _tool_name(name),
+    stamp(o, "%s_tool_compound_UNVERIFIED" % _tool_name(name),
           "UNVERIFIED - part-kit tool compound")
     o.Links = links
     return o
@@ -685,7 +685,7 @@ def prism(doc, name, label, status, n, crad, length, pos=None, rot=None,
 
 def tool_prism(doc, name, n, crad, length, pos=None, rot=None):
     return prism(doc, _tool_name(name),
-                 "%s_construction_tool" % _tool_name(name),
+                 "%s_construction_tool_UNVERIFIED" % _tool_name(name),
                  "UNVERIFIED - part-kit construction tool",
                  n, crad, length, pos, rot)
 
@@ -955,10 +955,12 @@ def motor_unit(doc, name, label, status, body_d, body_l, gb_d, gb_l,
                                     sock_depth)
     else:
         sock_y = "(%s - 1)" % face_pos["Placement.Base.y"]
+    sock_pos = dict(face_pos)
+    sock_pos["Placement.Base.y"] = sock_y
     s_sock = tool_prism(
         doc, name + "_SOCK", 6,
         "(%s) / 2 / cos(30 deg)" % sock_af, "(%s) + 2" % sock_depth,
-        {"Placement.Base.y": sock_y},
+        sock_pos,
         axis_rot("Y"))
     taps = []
     for i, (sx, sz) in enumerate(((1, 1), (1, -1), (-1, 1), (-1, -1))):
