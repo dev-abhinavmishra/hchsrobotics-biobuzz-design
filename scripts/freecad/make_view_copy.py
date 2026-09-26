@@ -28,31 +28,28 @@ ROOT = Path(__file__).resolve().parents[2]
 TARGETS = (
     (ROOT / "cad" / "master_robot.FCStd",
      ROOT / "cad" / "master_robot_view.FCStd"),
-    (ROOT / "cad" / "drivebase" / "drivebase_concept_v01.FCStd",
-     ROOT / "cad" / "drivebase" / "drivebase_concept_v01_view.FCStd"),
-    (ROOT / "cad" / "intake" / "intake_concept_v01.FCStd",
-     ROOT / "cad" / "intake" / "intake_concept_v01_view.FCStd"),
-    (ROOT / "cad" / "transfer" / "transfer_concept_v01.FCStd",
-     ROOT / "cad" / "transfer" / "transfer_concept_v01_view.FCStd"),
+    (ROOT / "cad" / "drivebase" / "drivebase.FCStd",
+     ROOT / "cad" / "drivebase" / "drivebase_view.FCStd"),
+    (ROOT / "cad" / "electronics" / "electronics.FCStd",
+     ROOT / "cad" / "electronics" / "electronics_view.FCStd"),
 )
 
 HIDE_PREFIX = ("ENV_", "VOL_", "REF_", "TOOL_")
 
 SUBSYS = (
-    (("FRAME_", "RAIL_", "BELLY_PAN", "REAR_DECK"), "#8b9199"),
-    (("WHEEL_", "ROLLER_"), "#3a3a40"),
-    (("SHAFT_", "BEARING_", "MOUNT_MOTOR_"), "#b8bfc8"),
-    (("MOTOR_",), "#d9a520"),
-    (("BATTERY",), "#2f9e5f"),
-    (("ELECTRONICS", "ELEC_RAIL"), "#e8890c"),
-    (("INTAKE_", "PIVOT_MOUNT", "MECH_INTAKE", "MECH_ROLLER"),
-     "#2f6fd6"),
-    (("CHANNEL_", "DIVERTER_", "MECH_CHANNEL", "MECH_DIVERTER"), "#2aa3a3"),
-    (("MECH_SHOOTER", "MECH_FLYWHEEL", "STUB_SHAFT", "POST_SHOOTER",
-      "SHOOTER_FLOOR", "SHOOTER_SIDE"), "#c23b3b"),
-    (("MECH_LIFTER", "MECH_STAGE", "MECH_CARRIAGE", "MECH_CRADLE",
-      "CRADLE_LIP", "STAGE_GUIDE", "LIFTER_BASE", "LIFTER_PED"),
-     "#8a5fc0"),
+    (("FRAME_", "RAIL_", "BELLY_PAN", "PAN_BRKT_", "TIE_", "GUSSET_",
+      "ENDCAP_", "CROWN_POST_", "PLATE_NUM_", "DECK_"), "#8b9199"),
+    (("WHEEL_HUB_", "WHEEL_PLATE_", "ROLLER_", "WHEEL_ASSY_"),
+     "#3a3a40"),
+    (("AXLE_", "BRG_", "COLLAR_", "WASHER_", "WSH_", "PINION_",
+      "NUT_AXLE_", "MOUNT_PLATE_"), "#b8bfc8"),
+    (("MOTOR_", "CLAMP_"), "#d9a520"),
+    (("ODO_",), "#2f6fd6"),
+    (("BATTERY", "BATT_STRAP"), "#2f9e5f"),
+    (("HUB_", "ELEC_SHELF", "STANDOFF_", "SWITCH_", "MAIN_SWITCH"),
+     "#e8890c"),
+    (("WIRE_", "CLIP_", "ZIP_", "CONN_"), "#c23b3b"),
+    (("BOLT_", "NUT_", "SCRW_", "RIVNUT_"), "#777788"),
 )
 
 # orthographic isometric camera, az=45 el=35.264, fitted to the robot
@@ -98,11 +95,38 @@ def view_provider(name, hidden, color_hex):
             '</ViewProvider>' % (name, len(props), "".join(props)))
 
 
+def _consumed(doc):
+    out = set()
+    def add(x):
+        if x is None or x.Name in out:
+            return
+        out.add(x.Name)
+        for p in ("Links", "Group"):
+            g = getattr(x, p, None)
+            if g is None:
+                continue
+            for y in (g if isinstance(g, (list, tuple)) else (g,)):
+                add(y)
+    for o in doc.Objects:
+        if o.TypeId in ("Part::Fuse", "Part::Cut", "Part::Chamfer",
+                        "Part::Common", "Part::MultiFuse"):
+            for p in ("Base", "Tool", "Shapes"):
+                t = getattr(o, p, None)
+                if t is None:
+                    continue
+                for x in (t if isinstance(t, (list, tuple)) else (t,)):
+                    add(x)
+    return out
+
+
 def build_gui_xml(doc):
     vps = []
     hidden = colored = 0
+    consumed = _consumed(doc)
     for o in doc.Objects:
-        hide = o.Name.startswith(HIDE_PREFIX) or o.TypeId == "App::Origin"
+        hide = (o.Name.startswith(HIDE_PREFIX)
+                or o.TypeId == "App::Origin"
+                or o.Name in consumed)
         col = None if hide else color_for(o.Name)
         if hide:
             hidden += 1

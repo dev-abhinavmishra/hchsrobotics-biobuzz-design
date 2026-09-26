@@ -1,4 +1,4 @@
-GIT1_sources_committed     FAIL 3 uncommitted
+GIT1_sources_committed     PASS 0 uncommitted
 DET3_name_bbox_volume      PASS 0 mismatches
 PAR1_alias_set             PASS 
 PAR3_bound_expressions     PASS 0 unbound
@@ -6,7 +6,7 @@ PROV1_statuses             PASS {'VERIFIED': 0, 'VENDOR-PENDING': 78, 'UNVERIFIE
 DAG1_pair_refs             PASS 0 dangling refs
 ASM1_group_coverage        PASS 0 ungrouped: []
 FAST1_joints_hardware      PASS 82 joints, 0 bad
-GEO1_census                FAIL BOLT_GUS_=8!=16
+GEO1_census                PASS 
 GEO2_undeclared_overlap    PASS 0 pairs >0.5mm3: []
 GEO3_mount_contacts        PASS 0 face pairs >0.1mm gap: []
 GEO4_journal_axis          PASS 0 journal pairs >0.2mm: []
@@ -20,4 +20,4 @@ XPT3_master                PASS 5218367 bytes
 XPT4_tables                PASS bom.csv parameters.csv mount_graph.json
 GUI1_doc_health            PASS 
 ============================================================
-SELFCHECK: 19/21 gates pass
+SELFCHECK: 21/21 gates pass

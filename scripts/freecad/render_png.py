@@ -30,9 +30,8 @@ except Exception:
 
 ROOT = Path(__file__).resolve().parents[2]
 MASTER = ROOT / "cad" / "master_robot.FCStd"
-DRIVEBASE = ROOT / "cad" / "drivebase" / "drivebase_concept_v01.FCStd"
-INTAKE = ROOT / "cad" / "intake" / "intake_concept_v01.FCStd"
-TRANSFER = ROOT / "cad" / "transfer" / "transfer_concept_v01.FCStd"
+DRIVEBASE = ROOT / "cad" / "drivebase" / "drivebase.FCStd"
+ELECTRONICS = ROOT / "cad" / "electronics" / "electronics.FCStd"
 OUT_DIR = ROOT / "exports" / "renders"
 EXCLUDE_PREFIX = ("ENV_", "AXIS_", "REF_", "VOL_", "TOOL_")
 EXCLUDE_TYPES = ("App::Part", "App::Origin")
@@ -42,21 +41,19 @@ MARGIN = 30
 BG = (250, 250, 247)
 
 SUBSYS = (
-    (("FRAME_", "RAIL_", "BELLY_PAN", "REAR_DECK"), "#8b9199"),
-    (("WHEEL_", "ROLLER_"), "#3a3a40"),
-    (("SHAFT_", "BEARING_", "MOUNT_MOTOR_"), "#b8bfc8"),
-    (("MOTOR_",), "#d9a520"),
-    (("BATTERY",), "#2f9e5f"),
-    (("ELECTRONICS", "ELEC_RAIL"), "#e8890c"),
-    (("INTAKE_", "PIVOT_MOUNT", "MECH_INTAKE", "MECH_ROLLER"),
-     "#2f6fd6"),
-    (("CHANNEL_", "DIVERTER_", "MECH_CHANNEL", "MECH_DIVERTER"),
-     "#2aa3a3"),
-    (("MECH_SHOOTER", "MECH_FLYWHEEL", "STUB_SHAFT", "POST_SHOOTER",
-      "SHOOTER_FLOOR", "SHOOTER_SIDE"), "#c23b3b"),
-    (("MECH_LIFTER", "MECH_STAGE", "MECH_CARRIAGE", "MECH_CRADLE",
-      "CRADLE_LIP", "STAGE_GUIDE", "LIFTER_BASE", "LIFTER_PED"),
-     "#8a5fc0"),
+    (("FRAME_", "RAIL_", "BELLY_PAN", "PAN_BRKT_", "TIE_", "GUSSET_",
+      "ENDCAP_", "CROWN_POST_", "PLATE_NUM_", "DECK_"), "#8b9199"),
+    (("WHEEL_HUB_", "WHEEL_PLATE_", "ROLLER_", "WHEEL_ASSY_"),
+     "#3a3a40"),
+    (("AXLE_", "BRG_", "COLLAR_", "WASHER_", "WSH_", "PINION_",
+      "NUT_AXLE_", "MOUNT_PLATE_"), "#b8bfc8"),
+    (("MOTOR_", "CLAMP_"), "#d9a520"),
+    (("ODO_",), "#2f6fd6"),
+    (("BATTERY", "BATT_STRAP"), "#2f9e5f"),
+    (("HUB_", "ELEC_SHELF", "STANDOFF_", "SWITCH_", "MAIN_SWITCH"),
+     "#e8890c"),
+    (("WIRE_", "CLIP_", "ZIP_", "CONN_"), "#c23b3b"),
+    (("BOLT_", "NUT_", "SCRW_", "RIVNUT_"), "#777788"),
 )
 OTHER = "#7a7a80"
 
@@ -90,9 +87,38 @@ VIEWS = {
 }
 
 
+def _consumed(doc):
+    out = set()
+
+    def add(x):
+        if x is None or x.Name in out:
+            return
+        out.add(x.Name)
+        for p in ("Links", "Group"):
+            g = getattr(x, p, None)
+            if g is None:
+                continue
+            for y in (g if isinstance(g, (list, tuple)) else (g,)):
+                add(y)
+
+    for o in doc.Objects:
+        if o.TypeId in ("Part::Fuse", "Part::Cut", "Part::Chamfer",
+                        "Part::Common", "Part::MultiFuse"):
+            for p in ("Base", "Tool", "Shapes"):
+                t = getattr(o, p, None)
+                if t is None:
+                    continue
+                for x in (t if isinstance(t, (list, tuple)) else (t,)):
+                    add(x)
+    return out
+
+
 def exportable(doc):
     out = []
+    consumed = _consumed(doc)
     for o in doc.Objects:
+        if o.Name in consumed:
+            continue
         if not hasattr(o, "Shape") or o.TypeId in EXCLUDE_TYPES \
                 or o.Name.startswith(EXCLUDE_PREFIX):
             continue
@@ -283,7 +309,7 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     log = []
     for src, tag in ((MASTER, "master"), (DRIVEBASE, "drivebase"),
-                     (INTAKE, "intake"), (TRANSFER, "transfer")):
+                     (ELECTRONICS, "electronics")):
         doc = App.openDocument(str(src))
         doc.recompute()
         objs = exportable(doc)
