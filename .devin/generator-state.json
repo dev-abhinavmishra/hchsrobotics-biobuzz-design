@@ -4,7 +4,7 @@
   "sprint": "sprint-01",
   "role": "generator",
   "agent_id": "6185dc6e-e207-4433-bc45-8101c6ae9cbf",
-  "phase": "contract negotiation - v2 revision sent to Evaluator, awaiting verdict",
+  "phase": "eval-round-01 handed off: selfcheck 21/21 pass, STEP+tables+renders committed",
   "contract": {
     "path": "traycer:artifacts/autobuild/cad-overhaul/sprint-01/contract/index.md",
     "version": "v2 proposed (all 7 required + all 7 strengthenings accepted)",
@@ -14,7 +14,11 @@
     "negotiation_exchanges": 3,
     "eval_rounds": 4,
     "restarts": 2,
-    "used": {"negotiation_exchanges": 2, "eval_rounds": 0, "restarts": 0}
+    "used": {
+      "negotiation_exchanges": 2,
+      "eval_rounds": 0,
+      "restarts": 0
+    }
   },
   "peers": {
     "evaluator": "7be4c34c-8a4f-426e-b8b4-9fcc20e70b50",
@@ -25,5 +29,28 @@
   "v2_notes": "eval critique 1: accepted R1-R7 + S1-S7 wholesale. R1 added DECK_L/R+posts at Z=85.3 above motor tops (~67.8) flanking hopper lane; R2 journal pairs = real bores, common~0, enumerated; R3 FAST1 ~180 fastener census with per-joint minimums; R4 typed edges (embed/face/fastener/journal/declared-contact); R7 bolts: real clearance bores in pass-through members, embed only into nut/tapped terminal. Also caught viewer bug: axle 106.68mm ended short of the nylock at +-224.8 - axle lengthened to ~114 so the nut rides the shaft.",
   "toolchain": "freecadcmd.exe v1.1.3 headless; peer messaging via traycer.exe agent send (verified working)",
   "note": "This file was reset for the overhaul run; prior biobuzz-robot-rehaul breadcrumbs live in that epic's history",
-  "updated": "2026-09-25"
+  "updated": "2026-09-26",
+  "build_summary": {
+    "selfcheck": "21/21 gates pass (GIT DET PAR PROV DAG ASM FAST GEO ENV XPT GUI)",
+    "solids": 550,
+    "step_parts": 550,
+    "subassemblies": 7,
+    "undeclared_overlaps": 0,
+    "key_fix": "flange_bearing bore+pilot centered on block (was bored at plate corner, ~18mm off axle axis)",
+    "artifacts": [
+      "exports/step/parts/*.step x550",
+      "exports/step/subassembly/*.step x7",
+      "exports/step/master_robot.step",
+      "exports/bom/bom.csv",
+      "exports/parameters.csv",
+      "exports/mount_graph.json",
+      "exports/renders/*.png x12",
+      "cad/*_view.FCStd x3"
+    ],
+    "commits": [
+      "0c882f2",
+      "96f26be",
+      "600c3d6"
+    ]
+  }
 }
