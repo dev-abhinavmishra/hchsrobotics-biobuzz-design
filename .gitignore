@@ -11,3 +11,17 @@ __pycache__/
 # OS cruft
 Thumbs.db
 desktop.ini
+
+# sprint-01 scratch/patch scripts
+_patch*.py
+_t1.py
+_t1_out.txt
+_diag*.txt
+_m.txt
+_sc.txt
+_b*.txt
+_x1.txt
+_smoke01*
+_peek*.txt
+_gusset.txt
+_m_log.txt
