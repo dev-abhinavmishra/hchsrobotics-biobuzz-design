@@ -28,8 +28,15 @@ import FreeCAD as App
 import Part  # noqa: F401  registers Part::* types
 
 TOOL_PREFIX = "TOOL_"
-_ROT = {"Y": (-90, (1, 0, 0)), "X": (90, (0, 1, 0)), "Z": (0, (0, 0, 1))}
-_AXIS_COMP = {"X": "x", "Y": "y", "Z": "z"}
+
+# roller frame construction angle offset; must match the
+# mec_roll_phase Parameters alias (baked rotation -- not live)
+_PHASE_OFFSET_DEG = 18.0
+_ROT = {"Y": (-90, (1, 0, 0)), "X": (90, (0, 1, 0)), "Z": (0, (0, 0, 1)),
+        "-Y": (90, (1, 0, 0)), "-X": (-90, (0, 1, 0)),
+        "-Z": (180, (1, 0, 0))}
+_AXIS_COMP = {"X": "x", "Y": "y", "Z": "z",
+              "-Y": "y", "-X": "x", "-Z": "z"}
 
 
 def axis_rot(axis):
@@ -576,7 +583,8 @@ def roller_subassy(doc, wtag, idx, pitch_deg, sgn, status, vendor=None):
     frame-local coords; pin ends seat into the wheel face plates.
     """
     name = "ROLLER_%s_%02d" % (wtag, idx)
-    th = math.radians(idx * pitch_deg)
+    th = math.radians(idx * pitch_deg) + math.radians(
+        _PHASE_OFFSET_DEG)
     frm = doc.addObject("App::Part", name)
     stamp(frm, name + "_slant_frame", status)
     frm.Placement.Rotation = App.Rotation(
@@ -586,11 +594,13 @@ def roller_subassy(doc, wtag, idx, pitch_deg, sgn, status, vendor=None):
                       % ("" if sgn > 0 else "-"))
     bind(frm, {
         "Placement.Base.x":
-            "Parameters.mec_roll_rad * cos(%d * Parameters.mec_roll_pitch)"
-            % idx,
+            ("Parameters.mec_roll_rad * cos(%d * "
+             "Parameters.mec_roll_pitch + Parameters.mec_roll_phase)"
+             % idx),
         "Placement.Base.z":
-            "Parameters.mec_roll_rad * sin(%d * Parameters.mec_roll_pitch)"
-            % idx,
+            ("Parameters.mec_roll_rad * sin(%d * "
+             "Parameters.mec_roll_pitch + Parameters.mec_roll_phase)"
+             % idx),
         "Placement.Base.y": "0"})
     body = tool_cyl(doc, name + "_BT",
                     {"Radius": "Parameters.mec_roll_dia / 2",
@@ -653,3 +663,488 @@ def mecanum_wheel(doc, wtag, sgn, status, vendor, pitch_deg,
         group_add(carrier, frm)
         solids.append(fused)
     return carrier, solids
+
+
+# ====================================================================
+# Sprint-01 overhaul extensions
+# ====================================================================
+def prism(doc, name, label, status, n, crad, length, pos=None, rot=None,
+          vendor=None):
+    """Part::Prism (regular n-gon extruded along local +Z).
+    crad/length are expression strings; placements bind as usual."""
+    o = doc.addObject("Part::Prism", name)
+    stamp(o, label, status, vendor)
+    o.Polygon = int(n)
+    bind(o, {"Circumradius": crad, "Height": length})
+    bind(o, pos or {})
+    _bind_zeros(o, pos)
+    if rot is not None:
+        o.Placement.Rotation = rot
+    return o
+
+
+def tool_prism(doc, name, n, crad, length, pos=None, rot=None):
+    return prism(doc, _tool_name(name),
+                 "%s_construction_tool" % _tool_name(name),
+                 "UNVERIFIED - part-kit construction tool",
+                 n, crad, length, pos, rot)
+
+
+def hex_shaft(doc, name, label, status, crad, length, tail_pos, axis="Y",
+              tip_d=None, tip_len=None, vendor=None):
+    """8mm REX-style hex shaft; optional turned/threaded round tip fused
+    on the outboard end. tail_pos = expr map of the prism base corner
+    (min point on `axis`). Returns the fused (or bare) shaft solid."""
+    sh = tool_prism(doc, name + "_HEX", 6, crad, length, tail_pos,
+                    axis_rot(axis))
+    if tip_d is None:
+        return _rename_last(doc, sh, name, label, status, vendor)
+    comp = _AXIS_COMP[axis]
+    tpos = dict(tail_pos)
+    if axis.startswith("-"):
+        tpos["Placement.Base." + comp] = "(%s) - %s" % (
+            tail_pos["Placement.Base." + comp], length)
+    else:
+        tpos["Placement.Base." + comp] = "(%s) + %s" % (
+            tail_pos["Placement.Base." + comp], length)
+    tip = tool_cyl(doc, name + "_TIP",
+                   {"Radius": "(%s) / 2" % tip_d, "Height": tip_len},
+                   tpos, axis_rot(axis))
+    f = fuse(doc, name, label, status, sh, tip)
+    if vendor:
+        f.addProperty("App::PropertyString", "VendorRef", "Vendor",
+                      "vendor reference, pending verification")
+        f.VendorRef = vendor
+    return f
+
+
+def _rename_last(doc, obj, name, label, status, vendor):
+    """Re-stamp an existing tool object under a public name."""
+    obj.Name = name
+    stamp(obj, label, status, vendor)
+    return obj
+
+
+def hex_nut(doc, name, label, status, wrench, h, bore, pos, axis="Y"):
+    """Hex nut (6-gon prism, wrench flats = `wrench` across-flats) with a
+    real thread-core bore. pos = min-corner expr map of the blank."""
+    af_crad = "(%s) / 2 / cos(30 deg)" % wrench
+    blk = tool_prism(doc, name + "_BLK", 6, af_crad, h, pos,
+                     axis_rot(axis))
+    comp = _AXIS_COMP[axis]
+    tpos = dict(pos)
+    tpos["Placement.Base." + comp] = "(%s) - 1" % pos[
+        "Placement.Base." + comp]
+    t = tool_cyl(doc, name + "_BORE",
+                 {"Radius": "(%s) / 2" % bore, "Height": "(%s) + 2" % h},
+                 tpos, axis_rot(axis))
+    return cut(doc, name, label, status, blk, t)
+
+
+def bolt(doc, name, label, status, shaft_d, length, head_d, head_h,
+         pos, axis="Y"):
+    """Button-head bolt pointing along `axis` (+Y/-Y/+Z/-Z): `pos` is the
+    expr map for the HEAD's outer (entry-side) face corner; the shaft
+    runs from the head toward +axis for `length`, so the bolt occupies
+    [head_face, head_face + head_h + length] along axis for +axes and
+    [head_face - head_h - length, head_face] for -axes."""
+    sgn = 1 if not axis.startswith("-") else -1
+    comp = _AXIS_COMP[axis]
+    hpos = dict(pos)
+    spos = dict(pos)
+    if sgn > 0:
+        # head occupies [p, p+head_h]; shaft [p+head_h, p+head_h+len]
+        spos["Placement.Base." + comp] = "(%s) + %s" % (
+            pos["Placement.Base." + comp], head_h)
+    else:
+        # cylinder base extrudes -axis: head [p-head_h, p] (base at p);
+        # shaft [p-head_h-len, p-head_h] (base at p-head_h)
+        hpos["Placement.Base." + comp] = pos["Placement.Base." + comp]
+        spos["Placement.Base." + comp] = "(%s) - %s" % (
+            pos["Placement.Base." + comp], head_h)
+    sh = tool_cyl(doc, name + "_SH",
+                  {"Radius": "(%s) / 2" % shaft_d, "Height": length},
+                  spos, axis_rot(axis))
+    hd = tool_cyl(doc, name + "_HD",
+                  {"Radius": "(%s) / 2" % head_d, "Height": head_h},
+                  hpos, axis_rot(axis))
+    return fuse(doc, name, label, status, sh, hd)
+
+
+def tapped_block(doc, name, label, status, dims, pos, tap_bores=()):
+    """Solid block with blind tap-drill bores (threaded member).
+    tap_bores: iterable of (dia_expr, pos_dict, axis, depth_expr); each
+    is a blind bore into the block face."""
+    if not tap_bores:
+        return box(doc, name, label, status, dims, pos)
+    blk = tool_box(doc, name + "_BLK", dims, pos)
+    tools = [tool_cyl(doc, "%s_TAP%02d" % (name, i),
+                      {"Radius": "(%s) / 2" % dia, "Height": depth},
+                      bp, axis_rot(ax))
+             for i, (dia, bp, ax, depth) in enumerate(tap_bores)]
+    return cut(doc, name, label, status, blk, tools)
+
+
+def channel_open(doc, name, label, status, pos0, L, S, W, axis="X",
+                 wall_rows=(), web_rows=(), bores=()):
+    """Open-down (inverted-Pi) channel along `axis`, square S x S, wall W.
+
+    pos0: (c0, c1, c2) expr strings for the OUTER box min corner.
+    For axis=X the two vertical walls face +/-Y and the web caps the top
+    (+Z); for axis=Y the walls face +/-X. Mouth opens at z0 (down).
+    wall_rows: dicts(count, dia, pitch, start, z) -- hole rows pierced
+        through BOTH side walls (each entry cuts each wall).
+    web_rows: dicts(count, dia, pitch, start, line) -- vertical holes
+        through the top web; `line` = expr for the web-center coord.
+    bores: iterable of (dia_expr, pos_dict, hole_axis, height_expr) --
+        caller-specified extra cuts (axle bores, bolt patterns).
+    """
+    if axis == "X":
+        dims = {"Length": L, "Width": S, "Height": S}
+    else:
+        dims = {"Length": S, "Width": L, "Height": S}
+    pos = {"Placement.Base.x": pos0[0], "Placement.Base.y": pos0[1],
+           "Placement.Base.z": pos0[2]}
+    outer = tool_box(doc, name + "_OUT", dims, pos)
+    tools = []
+    # cavity: side walls + top web survive; mouth opens downward
+    if axis == "X":
+        inner = tool_box(
+            doc, name + "_INNER",
+            {"Length": "(%s) + 2" % L, "Width": "(%s) - 2 * %s" % (S, W),
+             "Height": "(%s) - %s" % (S, W)},
+            {"Placement.Base.x": "(%s) - 1" % pos0[0],
+             "Placement.Base.y": "(%s) + %s" % (pos0[1], W),
+             "Placement.Base.z": pos0[2]})
+    else:
+        inner = tool_box(
+            doc, name + "_INNER",
+            {"Length": "(%s) - 2 * %s" % (S, W), "Width": "(%s) + 2" % L,
+             "Height": "(%s) - %s" % (S, W)},
+            {"Placement.Base.x": "(%s) + %s" % (pos0[0], W),
+             "Placement.Base.y": "(%s) - 1" % pos0[1],
+             "Placement.Base.z": pos0[2]})
+    tools.append(inner)
+    # wall rows: pierce each of the two side walls
+    for r_i, row in enumerate(wall_rows):
+        for i in range(row["count"]):
+            c = "(%s) + %s + %d * %s" % (
+                pos0[0] if axis == "X" else pos0[1],
+                row["start"], i, row["pitch"])
+            for w_i in (0, 1):
+                hp = {"Placement.Base.z": row["z"]}
+                if axis == "X":
+                    hp["Placement.Base.x"] = c
+                    hp["Placement.Base.y"] = (
+                        "(%s) - 1" % pos0[1] if w_i == 0 else
+                        "(%s) + %s - %s - 1" % (pos0[1], S, W))
+                    rot = axis_rot("Y")
+                else:
+                    hp["Placement.Base.y"] = c
+                    hp["Placement.Base.x"] = (
+                        "(%s) - 1" % pos0[0] if w_i == 0 else
+                        "(%s) + %s - %s - 1" % (pos0[0], S, W))
+                    rot = axis_rot("X")
+                tools.append(tool_cyl(
+                    doc, "%s_W%d_%02d_%02d" % (name, r_i, i, w_i),
+                    {"Radius": "(%s) / 2" % row["dia"],
+                     "Height": "(%s) + 2" % W}, hp, rot))
+    # web rows: vertical through the top web
+    for r_i, row in enumerate(web_rows):
+        for i in range(row["count"]):
+            c = "(%s) + %s + %d * %s" % (
+                pos0[0] if axis == "X" else pos0[1],
+                row["start"], i, row["pitch"])
+            hp = {"Placement.Base.z":
+                  "(%s) + %s - %s - 1" % (pos0[2], S, W)}
+            if axis == "X":
+                hp["Placement.Base.x"] = c
+                hp["Placement.Base.y"] = row["line"]
+            else:
+                hp["Placement.Base.x"] = row["line"]
+                hp["Placement.Base.y"] = c
+            tools.append(tool_cyl(
+                doc, "%s_WH%d_%02d" % (name, r_i, i),
+                {"Radius": "(%s) / 2" % row["dia"],
+                 "Height": "(%s) + 2" % W}, hp))
+    for i, (dia, bp, ax, h) in enumerate(bores):
+        tools.append(tool_cyl(doc, "%s_BORE%02d" % (name, i),
+                              {"Radius": "(%s) / 2" % dia, "Height": h},
+                              bp, axis_rot(ax)))
+    return cut(doc, name, label, status, outer, tools)
+
+
+def flange_bearing(doc, name, label, status, w, t, h, bore_d, pilot_d,
+                   pilot_l, pos, axis="Y", bolt_d=None, bolt_off=None,
+                   pilot_dir=1):
+    """Flanged bearing block: plate + pilot boss fused, real through
+    bore, optional 4-hole bolt square. pos = plate min-corner expr map.
+    pilot_dir=+1: pilot extends +axis from the plate's +axis face;
+    -1: pilot extends -axis from the plate's min face (into the wall)."""
+    blk = tool_box(doc, name + "_BLK",
+                   {"Length": w, "Width": t, "Height": h}, pos)
+    comp = _AXIS_COMP[axis]
+    ppos = dict(pos)
+    if pilot_dir > 0:
+        ppos["Placement.Base." + comp] = "(%s) + %s" % (
+            pos["Placement.Base." + comp], t)
+    else:
+        ppos["Placement.Base." + comp] = "(%s) - %s" % (
+            pos["Placement.Base." + comp], pilot_l)
+    boss = tool_cyl(doc, name + "_PILOT",
+                    {"Radius": "(%s) / 2" % pilot_d, "Height": pilot_l},
+                    ppos, axis_rot(axis))
+    body = fuse(doc, _tool_name(name + "_BODY"), label + "_body", status,
+                blk, boss)
+    comp_p = _bolt_tools(doc, name, t, w, h, bolt_d, bolt_off, pos,
+                         axis) if bolt_d and bolt_off else []
+    bpos = dict(pos)
+    if pilot_dir > 0:
+        bpos["Placement.Base." + comp] = "(%s) - 1" % (
+            pos["Placement.Base." + comp])
+    else:
+        bpos["Placement.Base." + comp] = "(%s) - %s - 1" % (
+            pos["Placement.Base." + comp], pilot_l)
+    bore = tool_cyl(doc, name + "_BORE",
+                    {"Radius": "(%s) / 2" % bore_d,
+                     "Height": "(%s) + %s + 2" % (t, pilot_l)},
+                    bpos, axis_rot(axis))
+    return cut(doc, name, label, status, body, [bore] + comp_p)
+
+
+def motor_unit(doc, name, label, status, body_d, body_l, gb_d, gb_l,
+               sock_af, sock_depth, tap_d, tap_depth, tap_off,
+               face_pos, vendor=None, direction=1, tap_off_z=None):
+    """Gearbox motor, single exportable solid: can + gearbox housing
+    fused, real hex socket bore + blind tap-drill holes cut into the
+    face. face_pos = expr map of the FACE PLANE (the mount face);
+    direction=+1: body extends -Y (inboard) from the face;
+    direction=-1: body extends +Y."""
+    comp = "y"
+    if direction > 0:
+        can_y = "(%s - %s - %s)" % (face_pos["Placement.Base.y"],
+                                    gb_l, body_l)
+        gb_y = "(%s - %s)" % (face_pos["Placement.Base.y"], gb_l)
+    else:
+        can_y = "(%s + %s)" % (face_pos["Placement.Base.y"], gb_l)
+        gb_y = face_pos["Placement.Base.y"]
+    can_pos = dict(face_pos)
+    can_pos["Placement.Base.y"] = can_y
+    gb_pos = dict(face_pos)
+    gb_pos["Placement.Base.y"] = gb_y
+    can = tool_cyl(doc, name + "_CAN",
+                   {"Radius": "(%s) / 2" % body_d, "Height": body_l},
+                   can_pos, axis_rot("Y"))
+    gb = tool_cyl(doc, name + "_GB",
+                  {"Radius": "(%s) / 2" % gb_d, "Height": gb_l},
+                  gb_pos, axis_rot("Y"))
+    m = fuse(doc, _tool_name(name + "_BODY"), label + "_body", status,
+             can, gb)
+    # socket bore: hex prism through the face into the gearbox
+    if direction > 0:
+        sock_y = "(%s - %s - 1)" % (face_pos["Placement.Base.y"],
+                                    sock_depth)
+    else:
+        sock_y = "(%s - 1)" % face_pos["Placement.Base.y"]
+    s_sock = tool_prism(
+        doc, name + "_SOCK", 6,
+        "(%s) / 2 / cos(30 deg)" % sock_af, "(%s) + 2" % sock_depth,
+        {"Placement.Base.y": sock_y},
+        axis_rot("Y"))
+    taps = []
+    for i, (sx, sz) in enumerate(((1, 1), (1, -1), (-1, 1), (-1, -1))):
+        if direction > 0:
+            ty = "(%s - %s)" % (face_pos["Placement.Base.y"], tap_depth)
+        else:
+            ty = face_pos["Placement.Base.y"]
+        tp = {"Placement.Base.x":
+              "(%s) + %d * %s" % (face_pos["Placement.Base.x"], sx,
+                                  tap_off),
+              "Placement.Base.y": ty,
+              "Placement.Base.z":
+              "(%s) + %d * %s" % (face_pos["Placement.Base.z"], sz,
+                                  tap_off_z or tap_off)}
+        taps.append(tool_cyl(doc, "%s_TAP%02d" % (name, i),
+                             {"Radius": "(%s) / 2" % tap_d,
+                              "Height": tap_depth}, tp, axis_rot("Y")))
+    f = cut(doc, name, label, status, m, [s_sock] + taps)
+    if vendor:
+        f.addProperty("App::PropertyString", "VendorRef", "Vendor",
+                      "vendor reference, pending verification")
+        f.VendorRef = vendor
+    return f
+
+
+def clamp_block(doc, name, label, status, w, bore_d, ear, bolt_d,
+                center_x, pos_y, center_z, ear_zs=None):
+    """Split-ring motor clamp gripping a Y-axis motor can: block with a
+    through bore Øbore_d centered at (center_x, *, center_z), two ear
+    tabs in X with vertical bolt holes.
+    center_x/center_z: expr strings for the bore axis position;
+    pos_y: expr for the block's min-Y corner."""
+    blk = tool_box(
+        doc, name + "_BLK",
+        {"Length": "2 * %s + %s" % (ear, bore_d),
+         "Width": w, "Height": "(%s) + 10" % bore_d},
+        {"Placement.Base.x": "(%s) - %s - (%s) / 2" % (
+            center_x, ear, bore_d),
+         "Placement.Base.y": pos_y,
+         "Placement.Base.z": "(%s) - (%s) / 2 - 5" % (center_z, bore_d)})
+    bore = tool_cyl(
+        doc, name + "_BORE",
+        {"Radius": "(%s) / 2" % bore_d, "Height": "(%s) + 2" % w},
+        {"Placement.Base.x": center_x,
+         "Placement.Base.y": "(%s) - 1" % pos_y,
+         "Placement.Base.z": center_z}, axis_rot("Y"))
+    tools = [bore]
+    if ear_zs is None:
+        ear_zs = (center_z,)
+    for i, su in enumerate((-1, 1)):
+        for j, ez in enumerate(ear_zs):
+            ep = {"Placement.Base.x":
+                  "(%s) + %d * ((%s) / 2 + (%s) / 2)" % (
+                      center_x, su, bore_d, ear),
+                  "Placement.Base.y": "(%s) - 1" % pos_y,
+                  "Placement.Base.z": ez}
+            tools.append(tool_cyl(doc, "%s_EAR%d_%d" % (name, i, j),
+                                  {"Radius": "(%s) / 2" % bolt_d,
+                                   "Height": "(%s) + 2" % w}, ep,
+                                  axis_rot("Y")))
+    return cut(doc, name, label, status, blk, tools)
+
+
+def standoff_hex(doc, name, label, status, dia, height, pos, tap_d=None,
+                 tap_depth=None):
+    """Hex standoff post; optional blind tap bores on both faces
+    (top and bottom) for machine screws."""
+    af_crad = "(%s) / 2 / cos(30 deg)" % dia
+    if not tap_d:
+        return prism(doc, name, label, status, 6, af_crad, height, pos)
+    blk = tool_prism(doc, name + "_BLK", 6, af_crad, height, pos)
+    tools = []
+    for i, zp in enumerate(("(%s) - 1" % pos["Placement.Base.z"],
+                          "(%s) + %s - (%s) + 1" % (pos["Placement.Base.z"],
+                                                   height, tap_depth))):
+        tp = dict(pos)
+        tp["Placement.Base.z"] = zp
+        tools.append(tool_cyl(doc, "%s_TAP%d" % (name, i),
+                              {"Radius": "(%s) / 2" % tap_d,
+                               "Height": tap_depth}, tp))
+    return cut(doc, name, label, status, blk, tools)
+
+
+def strap_u(doc, name, label, status, strap_w, span_w, h, thk, foot_l,
+            bolt_d, pos):
+    """Battery strap wrapping a pack along Y: top band + two vertical
+    legs + outward foot tabs bolted down. pos = min-corner map of the
+    whole strap footprint INCLUDING the feet tabs; the U-channel legs
+    sit at pos.y+foot_l .. +span_w so the band hugs the pack faces
+    when span_w = pack_w + 2*thk."""
+    py, pz = pos["Placement.Base.y"], pos["Placement.Base.z"]
+    parts = [
+        tool_box(doc, name + "_TOP",
+                 {"Length": strap_w, "Width": span_w, "Height": thk},
+                 {"Placement.Base.x": pos["Placement.Base.x"],
+                  "Placement.Base.y": "(%s) + %s" % (py, foot_l),
+                  "Placement.Base.z": "(%s) + %s - %s" % (pz, h, thk)})]
+    for i in range(2):
+        parts.append(tool_box(
+            doc, "%s_LEG%d" % (name, i),
+            {"Length": strap_w, "Width": thk,
+             "Height": "(%s) - %s" % (h, thk)},
+            {"Placement.Base.x": pos["Placement.Base.x"],
+             "Placement.Base.y":
+             "(%s) + %s + %d * (%s - %s)" % (py, foot_l, i, span_w, thk),
+             "Placement.Base.z": pz}))
+        parts.append(tool_box(
+            doc, "%s_FT%d" % (name, i),
+            {"Length": strap_w, "Width":
+             "(%s) + %s" % (foot_l, thk), "Height": "3"},
+            {"Placement.Base.x": pos["Placement.Base.x"],
+             "Placement.Base.y":
+             ("(%s)" % py if i == 0 else
+              "(%s) + %s + %s - %s" % (py, foot_l, span_w, thk)),
+             "Placement.Base.z": pz}))
+    body = fuse(doc, _tool_name(name + "_B"), label + "_band", status,
+                parts[0], parts[1:])
+    tools = []
+    for i in range(2):
+        bp = {"Placement.Base.x":
+              "(%s) + %s / 2" % (pos["Placement.Base.x"], strap_w),
+              "Placement.Base.y":
+              ("(%s) + %s / 2" % (py, foot_l) if i == 0 else
+               "(%s) + %s + %s + %s / 2" % (py, foot_l, span_w, foot_l)),
+              "Placement.Base.z": "(%s) - 1" % pz}
+        tools.append(tool_cyl(doc, "%s_HOLE%d" % (name, i),
+                              {"Radius": "(%s) / 2" % bolt_d,
+                               "Height": "6"}, bp))
+    return cut(doc, name, label, status, body, tools)
+
+
+def wire_seg(doc, name, label, status, dia, p0, p1):
+    """One wire segment between numeric endpoints -> returns the raw
+    cylinder (caller fuses). Internal helper for wire_bundle()."""
+    import Part as _P
+    v = App.Vector(p1[0] - p0[0], p1[1] - p0[1], p1[2] - p0[2])
+    L = v.Length
+    if L < 1e-6:
+        return None
+    zaxis = App.Vector(0, 0, 1)
+    vv = App.Vector(v)
+    vv.normalize()
+    rot = App.Rotation(zaxis, vv)
+    o = doc.addObject("Part::Cylinder", name)
+    stamp(o, label + "_seg", status)
+    o.Radius = dia / 2.0
+    o.Height = L
+    base = App.Vector(*p0)
+    o.Placement = App.Placement(base, rot)
+    return o
+
+
+def wire_bundle(doc, name, label, status, dia, points):
+    """Fused polyline wire run (numeric points). Wires are harness
+    geometry, not parametric structure; positions bake at build time and
+    the bundle is stamped exportable."""
+    segs = []
+    for i in range(len(points) - 1):
+        s = wire_seg(doc, TOOL_PREFIX + "%s_S%02d" % (name, i),
+                     label, status, dia, points[i], points[i + 1])
+        if s is not None:
+            segs.append(s)
+    if not segs:
+        raise RuntimeError("wire_bundle %s: no segments" % name)
+    if len(segs) == 1:
+        return _rename_last(doc, segs[0], name, label, status, None)
+    return fuse(doc, name, label, status, segs[0], segs[1:])
+
+
+def endcap(doc, name, label, status, S, W, t, pilot, pos, axis="X",
+           bolt_d=None):
+    """Channel end cap: face plate + pilot that nests into the channel
+    mouth (pilot is a declared-contact press fit)."""
+    if axis == "X":
+        dims = {"Length": t, "Width": S, "Height": S}
+        pdims = {"Length": pilot, "Width": "(%s) - 2 * %s - 0.4" % (S, W),
+                 "Height": "(%s) - %s - 0.4" % (S, W)}
+        ppos = {"Placement.Base.x":
+                "(%s) + %s" % (pos["Placement.Base.x"], t),
+                "Placement.Base.y":
+                "(%s) + %s + 0.2" % (pos["Placement.Base.y"], W),
+                "Placement.Base.z":
+                "(%s) + 0.2" % pos["Placement.Base.z"]}
+    else:
+        dims = {"Length": S, "Width": t, "Height": S}
+        pdims = {"Length": "(%s) - 2 * %s - 0.4" % (S, W),
+                 "Width": pilot,
+                 "Height": "(%s) - %s - 0.4" % (S, W)}
+        ppos = {"Placement.Base.x":
+                "(%s) + %s + 0.2" % (pos["Placement.Base.x"], W),
+                "Placement.Base.y":
+                "(%s) + %s" % (pos["Placement.Base.y"], t),
+                "Placement.Base.z":
+                "(%s) + 0.2" % pos["Placement.Base.z"]}
+    face = tool_box(doc, name + "_FACE", dims, pos)
+    pil = tool_box(doc, name + "_PILOT", pdims, ppos)
+    return fuse(doc, name, label, status, face, pil)
+
