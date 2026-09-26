@@ -4,7 +4,7 @@
   "epic": "bf51cb38-0f30-452c-8f41-11e316f984c9",
   "loop": "autobuild/cad-overhaul",
   "sprint": "sprint-01",
-  "phase": "briefed 2026-09-25; awaiting Generator's sprint-01 contract proposal",
+  "phase": "contract locked (v2 ACCEPTED, 2/3 exchanges); awaiting Generator eval-01 handoff",
   "peers": {
     "planner": "e553768c-2349-4857-bad7-4ac43aaa94ed",
     "generator": "6185dc6e-e207-4433-bc45-8101c6ae9cbf"

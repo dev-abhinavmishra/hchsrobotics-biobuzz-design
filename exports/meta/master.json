@@ -1,0 +1,6881 @@
+{
+ "solids": [
+  "FRAME_RAIL_L",
+  "FRAME_RAIL_R",
+  "FRAME_CROSS_B",
+  "FRAME_CROWN_F",
+  "CROWN_POST_L",
+  "BOLT_CROWN_L_0",
+  "NUT_CROWN_L_0",
+  "BOLT_CROWN_L_1",
+  "NUT_CROWN_L_1",
+  "BOLT_CPOSTF_L_0",
+  "NUT_CPOSTF_L_0",
+  "BOLT_CPOSTF_L_1",
+  "NUT_CPOSTF_L_1",
+  "BOLT_CPOSTF_L_2",
+  "NUT_CPOSTF_L_2",
+  "BOLT_CPOSTF_L_3",
+  "NUT_CPOSTF_L_3",
+  "GUSSET_BL",
+  "BOLT_GUS_L_0_0",
+  "NUT_GUS_L_0_0",
+  "BOLT_GUS_L_0_1",
+  "NUT_GUS_L_0_1",
+  "BOLT_GUS_L_1_0",
+  "NUT_GUS_L_1_0",
+  "BOLT_GUS_L_1_1",
+  "NUT_GUS_L_1_1",
+  "BOLT_GUSX_L_0",
+  "NUT_GUSX_L_0",
+  "BOLT_GUSX_L_1",
+  "NUT_GUSX_L_1",
+  "GUSSET_UL",
+  "BOLT_GUSU_L_0_0",
+  "NUT_GUSU_L_0_0",
+  "BOLT_GUSU_L_1_0",
+  "NUT_GUSU_L_1_0",
+  "BOLT_GUSU_XL_0",
+  "NUT_GUSU_XL_0",
+  "BOLT_GUSU_XL_1",
+  "NUT_GUSU_XL_1",
+  "TIE_RB_L",
+  "BOLT_TIE_L_0",
+  "NUT_TIE_L_0",
+  "BOLT_TIE_L_1",
+  "NUT_TIE_L_1",
+  "BOLT_TIE_L_2",
+  "NUT_TIE_L_2",
+  "BOLT_TIE_L_3",
+  "NUT_TIE_L_3",
+  "CROWN_POST_R",
+  "BOLT_CROWN_R_0",
+  "NUT_CROWN_R_0",
+  "BOLT_CROWN_R_1",
+  "NUT_CROWN_R_1",
+  "BOLT_CPOSTF_R_0",
+  "NUT_CPOSTF_R_0",
+  "BOLT_CPOSTF_R_1",
+  "NUT_CPOSTF_R_1",
+  "BOLT_CPOSTF_R_2",
+  "NUT_CPOSTF_R_2",
+  "BOLT_CPOSTF_R_3",
+  "NUT_CPOSTF_R_3",
+  "GUSSET_BR",
+  "BOLT_GUS_R_0_0",
+  "NUT_GUS_R_0_0",
+  "BOLT_GUS_R_0_1",
+  "NUT_GUS_R_0_1",
+  "BOLT_GUS_R_1_0",
+  "NUT_GUS_R_1_0",
+  "BOLT_GUS_R_1_1",
+  "NUT_GUS_R_1_1",
+  "BOLT_GUSX_R_0",
+  "NUT_GUSX_R_0",
+  "BOLT_GUSX_R_1",
+  "NUT_GUSX_R_1",
+  "GUSSET_UR",
+  "BOLT_GUSU_R_0_0",
+  "NUT_GUSU_R_0_0",
+  "BOLT_GUSU_R_1_0",
+  "NUT_GUSU_R_1_0",
+  "BOLT_GUSU_XR_0",
+  "NUT_GUSU_XR_0",
+  "BOLT_GUSU_XR_1",
+  "NUT_GUSU_XR_1",
+  "TIE_RB_R",
+  "BOLT_TIE_R_0",
+  "NUT_TIE_R_0",
+  "BOLT_TIE_R_1",
+  "NUT_TIE_R_1",
+  "BOLT_TIE_R_2",
+  "NUT_TIE_R_2",
+  "BOLT_TIE_R_3",
+  "NUT_TIE_R_3",
+  "BELLY_PAN",
+  "PAN_BRKT_L0",
+  "BOLT_PANB_L0_0",
+  "NUT_PANB_L0_0",
+  "BOLT_PANB_L0_1",
+  "NUT_PANB_L0_1",
+  "BOLT_PANF_L0",
+  "NUT_PANF_L0",
+  "PAN_BRKT_L1",
+  "BOLT_PANB_L1_0",
+  "NUT_PANB_L1_0",
+  "BOLT_PANB_L1_1",
+  "NUT_PANB_L1_1",
+  "BOLT_PANF_L1",
+  "NUT_PANF_L1",
+  "PAN_BRKT_L2",
+  "BOLT_PANB_L2_0",
+  "NUT_PANB_L2_0",
+  "BOLT_PANB_L2_1",
+  "NUT_PANB_L2_1",
+  "BOLT_PANF_L2",
+  "NUT_PANF_L2",
+  "PAN_BRKT_R0",
+  "BOLT_PANB_R0_0",
+  "NUT_PANB_R0_0",
+  "BOLT_PANB_R0_1",
+  "NUT_PANB_R0_1",
+  "BOLT_PANF_R0",
+  "NUT_PANF_R0",
+  "PAN_BRKT_R1",
+  "BOLT_PANB_R1_0",
+  "NUT_PANB_R1_0",
+  "BOLT_PANB_R1_1",
+  "NUT_PANB_R1_1",
+  "BOLT_PANF_R1",
+  "NUT_PANF_R1",
+  "PAN_BRKT_R2",
+  "BOLT_PANB_R2_0",
+  "NUT_PANB_R2_0",
+  "BOLT_PANB_R2_1",
+  "NUT_PANB_R2_1",
+  "BOLT_PANF_R2",
+  "NUT_PANF_R2",
+  "DECK_L",
+  "DECK_POST_L0",
+  "BOLT_DP_B_L0",
+  "BOLT_DP_T_L0",
+  "DECK_POST_L1",
+  "BOLT_DP_B_L1",
+  "BOLT_DP_T_L1",
+  "DECK_POST_L2",
+  "BOLT_DP_B_L2",
+  "BOLT_DP_T_L2",
+  "DECK_POST_L3",
+  "BOLT_DP_B_L3",
+  "BOLT_DP_T_L3",
+  "DECK_R",
+  "DECK_POST_R0",
+  "BOLT_DP_B_R0",
+  "BOLT_DP_T_R0",
+  "DECK_POST_R1",
+  "BOLT_DP_B_R1",
+  "BOLT_DP_T_R1",
+  "DECK_POST_R2",
+  "BOLT_DP_B_R2",
+  "BOLT_DP_T_R2",
+  "DECK_POST_R3",
+  "BOLT_DP_B_R3",
+  "BOLT_DP_T_R3",
+  "ENDCAP_FL",
+  "ENDCAP_BL",
+  "ENDCAP_FR",
+  "ENDCAP_BR",
+  "ENDCAP_XB_L",
+  "ENDCAP_XB_R",
+  "PLATE_NUM_L",
+  "BOLT_NUM_L_0",
+  "NUT_NUM_L_0",
+  "BOLT_NUM_L_1",
+  "NUT_NUM_L_1",
+  "BOLT_NUM_L_2",
+  "NUT_NUM_L_2",
+  "BOLT_NUM_L_3",
+  "NUT_NUM_L_3",
+  "PLATE_NUM_B",
+  "BOLT_NUM_B_0",
+  "NUT_NUM_B_0",
+  "BOLT_NUM_B_1",
+  "NUT_NUM_B_1",
+  "BOLT_NUM_B_2",
+  "NUT_NUM_B_2",
+  "BOLT_NUM_B_3",
+  "NUT_NUM_B_3",
+  "WHEEL_ASSY_FL",
+  "WHEEL_HUB_FL",
+  "WHEEL_PLATE_FL_IN",
+  "WHEEL_PLATE_FL_OUT",
+  "ROLLER_FL_00_B",
+  "ROLLER_FL_01_B",
+  "ROLLER_FL_02_B",
+  "ROLLER_FL_03_B",
+  "ROLLER_FL_04_B",
+  "ROLLER_FL_05_B",
+  "ROLLER_FL_06_B",
+  "ROLLER_FL_07_B",
+  "ROLLER_FL_08_B",
+  "ROLLER_FL_09_B",
+  "BOLT_HUB_FL",
+  "AXLE_FL",
+  "BRG_IN_FL",
+  "BRG_OUT_FL",
+  "NUT_RIV_IN_FL_00",
+  "BOLT_BRG_IN_FL_00",
+  "NUT_RIV_IN_FL_01",
+  "BOLT_BRG_IN_FL_01",
+  "NUT_RIV_IN_FL_10",
+  "BOLT_BRG_IN_FL_10",
+  "NUT_RIV_IN_FL_11",
+  "BOLT_BRG_IN_FL_11",
+  "NUT_RIV_OUT_FL_00",
+  "BOLT_BRG_OUT_FL_00",
+  "NUT_RIV_OUT_FL_01",
+  "BOLT_BRG_OUT_FL_01",
+  "NUT_RIV_OUT_FL_10",
+  "BOLT_BRG_OUT_FL_10",
+  "NUT_RIV_OUT_FL_11",
+  "BOLT_BRG_OUT_FL_11",
+  "MOTOR_FL",
+  "BOLT_MTR_FL_00",
+  "BOLT_MTR_FL_01",
+  "BOLT_MTR_FL_10",
+  "BOLT_MTR_FL_11",
+  "WSH_AXLE_FL",
+  "COLLAR_FL",
+  "PINION_FL",
+  "WSH_OUT_FL",
+  "NUT_AXLE_FL",
+  "CLAMP_FL_2",
+  "CLAMP_FL_1",
+  "BOLT_CLMP_FL_0_0",
+  "NUT_CLMP_FL_0_0",
+  "BOLT_CLMP_FL_0_1",
+  "NUT_CLMP_FL_0_1",
+  "BOLT_CLMP_FL_1_0",
+  "NUT_CLMP_FL_1_0",
+  "BOLT_CLMP_FL_1_1",
+  "NUT_CLMP_FL_1_1",
+  "WHEEL_ASSY_FR",
+  "WHEEL_HUB_FR",
+  "WHEEL_PLATE_FR_IN",
+  "WHEEL_PLATE_FR_OUT",
+  "ROLLER_FR_00_B",
+  "ROLLER_FR_01_B",
+  "ROLLER_FR_02_B",
+  "ROLLER_FR_03_B",
+  "ROLLER_FR_04_B",
+  "ROLLER_FR_05_B",
+  "ROLLER_FR_06_B",
+  "ROLLER_FR_07_B",
+  "ROLLER_FR_08_B",
+  "ROLLER_FR_09_B",
+  "BOLT_HUB_FR",
+  "AXLE_FR",
+  "BRG_IN_FR",
+  "BRG_OUT_FR",
+  "NUT_RIV_IN_FR_00",
+  "BOLT_BRG_IN_FR_00",
+  "NUT_RIV_IN_FR_01",
+  "BOLT_BRG_IN_FR_01",
+  "NUT_RIV_IN_FR_10",
+  "BOLT_BRG_IN_FR_10",
+  "NUT_RIV_IN_FR_11",
+  "BOLT_BRG_IN_FR_11",
+  "NUT_RIV_OUT_FR_00",
+  "BOLT_BRG_OUT_FR_00",
+  "NUT_RIV_OUT_FR_01",
+  "BOLT_BRG_OUT_FR_01",
+  "NUT_RIV_OUT_FR_10",
+  "BOLT_BRG_OUT_FR_10",
+  "NUT_RIV_OUT_FR_11",
+  "BOLT_BRG_OUT_FR_11",
+  "MOTOR_FR",
+  "BOLT_MTR_FR_00",
+  "BOLT_MTR_FR_01",
+  "BOLT_MTR_FR_10",
+  "BOLT_MTR_FR_11",
+  "WSH_AXLE_FR",
+  "COLLAR_FR",
+  "PINION_FR",
+  "WSH_OUT_FR",
+  "NUT_AXLE_FR",
+  "CLAMP_FR_2",
+  "CLAMP_FR_1",
+  "BOLT_CLMP_FR_0_0",
+  "NUT_CLMP_FR_0_0",
+  "BOLT_CLMP_FR_0_1",
+  "NUT_CLMP_FR_0_1",
+  "BOLT_CLMP_FR_1_0",
+  "NUT_CLMP_FR_1_0",
+  "BOLT_CLMP_FR_1_1",
+  "NUT_CLMP_FR_1_1",
+  "WHEEL_ASSY_RL",
+  "WHEEL_HUB_RL",
+  "WHEEL_PLATE_RL_IN",
+  "WHEEL_PLATE_RL_OUT",
+  "ROLLER_RL_00_B",
+  "ROLLER_RL_01_B",
+  "ROLLER_RL_02_B",
+  "ROLLER_RL_03_B",
+  "ROLLER_RL_04_B",
+  "ROLLER_RL_05_B",
+  "ROLLER_RL_06_B",
+  "ROLLER_RL_07_B",
+  "ROLLER_RL_08_B",
+  "ROLLER_RL_09_B",
+  "BOLT_HUB_RL",
+  "AXLE_RL",
+  "BRG_IN_RL",
+  "BRG_OUT_RL",
+  "NUT_RIV_IN_RL_00",
+  "BOLT_BRG_IN_RL_00",
+  "NUT_RIV_IN_RL_01",
+  "BOLT_BRG_IN_RL_01",
+  "NUT_RIV_IN_RL_10",
+  "BOLT_BRG_IN_RL_10",
+  "NUT_RIV_IN_RL_11",
+  "BOLT_BRG_IN_RL_11",
+  "NUT_RIV_OUT_RL_00",
+  "BOLT_BRG_OUT_RL_00",
+  "NUT_RIV_OUT_RL_01",
+  "BOLT_BRG_OUT_RL_01",
+  "NUT_RIV_OUT_RL_10",
+  "BOLT_BRG_OUT_RL_10",
+  "NUT_RIV_OUT_RL_11",
+  "BOLT_BRG_OUT_RL_11",
+  "MOTOR_RL",
+  "BOLT_MTR_RL_00",
+  "BOLT_MTR_RL_01",
+  "BOLT_MTR_RL_10",
+  "BOLT_MTR_RL_11",
+  "WSH_AXLE_RL",
+  "COLLAR_RL",
+  "PINION_RL",
+  "WSH_OUT_RL",
+  "NUT_AXLE_RL",
+  "CLAMP_RL_2",
+  "CLAMP_RL_1",
+  "BOLT_CLMP_RL_0_0",
+  "NUT_CLMP_RL_0_0",
+  "BOLT_CLMP_RL_0_1",
+  "NUT_CLMP_RL_0_1",
+  "BOLT_CLMP_RL_1_0",
+  "NUT_CLMP_RL_1_0",
+  "BOLT_CLMP_RL_1_1",
+  "NUT_CLMP_RL_1_1",
+  "WHEEL_ASSY_RR",
+  "WHEEL_HUB_RR",
+  "WHEEL_PLATE_RR_IN",
+  "WHEEL_PLATE_RR_OUT",
+  "ROLLER_RR_00_B",
+  "ROLLER_RR_01_B",
+  "ROLLER_RR_02_B",
+  "ROLLER_RR_03_B",
+  "ROLLER_RR_04_B",
+  "ROLLER_RR_05_B",
+  "ROLLER_RR_06_B",
+  "ROLLER_RR_07_B",
+  "ROLLER_RR_08_B",
+  "ROLLER_RR_09_B",
+  "BOLT_HUB_RR",
+  "AXLE_RR",
+  "BRG_IN_RR",
+  "BRG_OUT_RR",
+  "NUT_RIV_IN_RR_00",
+  "BOLT_BRG_IN_RR_00",
+  "NUT_RIV_IN_RR_01",
+  "BOLT_BRG_IN_RR_01",
+  "NUT_RIV_IN_RR_10",
+  "BOLT_BRG_IN_RR_10",
+  "NUT_RIV_IN_RR_11",
+  "BOLT_BRG_IN_RR_11",
+  "NUT_RIV_OUT_RR_00",
+  "BOLT_BRG_OUT_RR_00",
+  "NUT_RIV_OUT_RR_01",
+  "BOLT_BRG_OUT_RR_01",
+  "NUT_RIV_OUT_RR_10",
+  "BOLT_BRG_OUT_RR_10",
+  "NUT_RIV_OUT_RR_11",
+  "BOLT_BRG_OUT_RR_11",
+  "MOTOR_RR",
+  "BOLT_MTR_RR_00",
+  "BOLT_MTR_RR_01",
+  "BOLT_MTR_RR_10",
+  "BOLT_MTR_RR_11",
+  "WSH_AXLE_RR",
+  "COLLAR_RR",
+  "PINION_RR",
+  "WSH_OUT_RR",
+  "NUT_AXLE_RR",
+  "CLAMP_RR_2",
+  "CLAMP_RR_1",
+  "BOLT_CLMP_RR_0_0",
+  "NUT_CLMP_RR_0_0",
+  "BOLT_CLMP_RR_0_1",
+  "NUT_CLMP_RR_0_1",
+  "BOLT_CLMP_RR_1_0",
+  "NUT_CLMP_RR_1_0",
+  "BOLT_CLMP_RR_1_1",
+  "NUT_CLMP_RR_1_1",
+  "MOUNT_PLATE_L",
+  "BOLT_MPL_L_0",
+  "NUT_MPL_L_0",
+  "BOLT_MPL_L_1",
+  "NUT_MPL_L_1",
+  "BOLT_MPL_L_2",
+  "NUT_MPL_L_2",
+  "BOLT_MPL_L_3",
+  "NUT_MPL_L_3",
+  "BOLT_MPL_L_4",
+  "NUT_MPL_L_4",
+  "BOLT_MPL_L_5",
+  "NUT_MPL_L_5",
+  "BOLT_MPL_L_6",
+  "NUT_MPL_L_6",
+  "BOLT_MPL_L_7",
+  "NUT_MPL_L_7",
+  "BOLT_MPL_L_8",
+  "NUT_MPL_L_8",
+  "BOLT_MPL_L_9",
+  "NUT_MPL_L_9",
+  "BOLT_MPL_L_10",
+  "NUT_MPL_L_10",
+  "BOLT_MPL_L_11",
+  "NUT_MPL_L_11",
+  "MOUNT_PLATE_R",
+  "BOLT_MPL_R_0",
+  "NUT_MPL_R_0",
+  "BOLT_MPL_R_1",
+  "NUT_MPL_R_1",
+  "BOLT_MPL_R_2",
+  "NUT_MPL_R_2",
+  "BOLT_MPL_R_3",
+  "NUT_MPL_R_3",
+  "BOLT_MPL_R_4",
+  "NUT_MPL_R_4",
+  "BOLT_MPL_R_5",
+  "NUT_MPL_R_5",
+  "BOLT_MPL_R_6",
+  "NUT_MPL_R_6",
+  "BOLT_MPL_R_7",
+  "NUT_MPL_R_7",
+  "BOLT_MPL_R_8",
+  "NUT_MPL_R_8",
+  "BOLT_MPL_R_9",
+  "NUT_MPL_R_9",
+  "BOLT_MPL_R_10",
+  "NUT_MPL_R_10",
+  "BOLT_MPL_R_11",
+  "NUT_MPL_R_11",
+  "ODO_MOUNT_LAT_L",
+  "BOLT_ODO_LAT_L_0",
+  "BOLT_ODO_LAT_L_1",
+  "ODO_ARM_LAT_L",
+  "ODO_WHEEL_LAT_L",
+  "ODO_AXLE_LAT_L",
+  "ODO_PIVOT_LAT_L",
+  "NUT_ODO_AXLE_LAT_L",
+  "NUT_ODO_PIVOT_LAT_L",
+  "ODO_SPRING_LAT_L",
+  "ODO_ENC_LAT_L",
+  "SCRW_ENC_LAT_L_0",
+  "SCRW_ENC_LAT_L_1",
+  "ODO_MOUNT_LAT_R",
+  "BOLT_ODO_LAT_R_0",
+  "BOLT_ODO_LAT_R_1",
+  "ODO_ARM_LAT_R",
+  "ODO_WHEEL_LAT_R",
+  "ODO_AXLE_LAT_R",
+  "ODO_PIVOT_LAT_R",
+  "NUT_ODO_AXLE_LAT_R",
+  "NUT_ODO_PIVOT_LAT_R",
+  "ODO_SPRING_LAT_R",
+  "ODO_ENC_LAT_R",
+  "SCRW_ENC_LAT_R_0",
+  "SCRW_ENC_LAT_R_1",
+  "ODO_MOUNT_LON",
+  "BOLT_ODO_LON_0",
+  "BOLT_ODO_LON_1",
+  "ODO_ARM_LON",
+  "ODO_WHEEL_LON",
+  "ODO_AXLE_LON",
+  "ODO_PIVOT_LON",
+  "NUT_ODO_AXLE_LON",
+  "NUT_ODO_PIVOT_LON",
+  "ODO_SPRING_LON",
+  "ODO_ENC_LON",
+  "SCRW_ENC_LON_0",
+  "SCRW_ENC_LON_1",
+  "BATTERY",
+  "BATT_STRAP_0",
+  "BOLT_STRAP_0_0",
+  "NUT_STRAP_0_0",
+  "BOLT_STRAP_0_1",
+  "NUT_STRAP_0_1",
+  "BATT_STRAP_1",
+  "BOLT_STRAP_1_0",
+  "NUT_STRAP_1_0",
+  "BOLT_STRAP_1_1",
+  "NUT_STRAP_1_1",
+  "ELEC_SHELF",
+  "STANDOFF_0",
+  "BOLT_SO_B_0",
+  "BOLT_SO_T_0",
+  "STANDOFF_1",
+  "BOLT_SO_B_1",
+  "BOLT_SO_T_1",
+  "STANDOFF_2",
+  "BOLT_SO_B_2",
+  "BOLT_SO_T_2",
+  "STANDOFF_3",
+  "BOLT_SO_B_3",
+  "BOLT_SO_T_3",
+  "SWITCH_BRKT",
+  "BOLT_SW_0",
+  "NUT_SW_0",
+  "BOLT_SW_1",
+  "NUT_SW_1",
+  "MAIN_SWITCH",
+  "SCRW_SW_0",
+  "SCRW_SW_1",
+  "HUB_CTRL",
+  "BOLT_HUB_C_0",
+  "NUT_HUB_C_0",
+  "BOLT_HUB_C_1",
+  "NUT_HUB_C_1",
+  "BOLT_HUB_C_2",
+  "NUT_HUB_C_2",
+  "BOLT_HUB_C_3",
+  "NUT_HUB_C_3",
+  "HUB_EXP",
+  "BOLT_HUB_E_0",
+  "NUT_HUB_E_0",
+  "BOLT_HUB_E_1",
+  "NUT_HUB_E_1",
+  "BOLT_HUB_E_2",
+  "NUT_HUB_E_2",
+  "BOLT_HUB_E_3",
+  "NUT_HUB_E_3",
+  "WIRE_BATT_SW",
+  "WIRE_SW_CTRL",
+  "WIRE_HUB_RS485",
+  "WIRE_MTR_FL",
+  "WIRE_MTR_RL",
+  "WIRE_MTR_FR",
+  "WIRE_MTR_RR",
+  "WIRE_ENC_LAT_L",
+  "WIRE_ENC_LAT_R",
+  "WIRE_ENC_LON",
+  "CLIP_0",
+  "CLIP_1",
+  "CLIP_2",
+  "CLIP_3"
+ ],
+ "joints": [
+  {
+   "id": "crown_pin",
+   "members": [
+    "CROWN_POST_L",
+    "FRAME_CROWN_F"
+   ],
+   "bolts": [
+    "BOLT_CROWN_L_0",
+    "BOLT_CROWN_L_1"
+   ],
+   "nuts": [
+    "NUT_CROWN_L_0",
+    "NUT_CROWN_L_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "post_foot",
+   "members": [
+    "CROWN_POST_L",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_CPOSTF_L_0",
+    "BOLT_CPOSTF_L_1",
+    "BOLT_CPOSTF_L_2",
+    "BOLT_CPOSTF_L_3"
+   ],
+   "nuts": [
+    "NUT_CPOSTF_L_0",
+    "NUT_CPOSTF_L_1",
+    "NUT_CPOSTF_L_2",
+    "NUT_CPOSTF_L_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_rail",
+   "members": [
+    "GUSSET_BL",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_GUS_L_0_0",
+    "BOLT_GUS_L_0_1",
+    "BOLT_GUS_L_1_0",
+    "BOLT_GUS_L_1_1"
+   ],
+   "nuts": [
+    "NUT_GUS_L_0_0",
+    "NUT_GUS_L_0_1",
+    "NUT_GUS_L_1_0",
+    "NUT_GUS_L_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_cross",
+   "members": [
+    "GUSSET_BL",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_GUSX_L_0",
+    "BOLT_GUSX_L_1"
+   ],
+   "nuts": [
+    "NUT_GUSX_L_0",
+    "NUT_GUSX_L_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_low",
+   "members": [
+    "GUSSET_UL",
+    "FRAME_RAIL_L",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_GUSU_L_0_0",
+    "BOLT_GUSU_L_1_0",
+    "BOLT_GUSU_XL_0",
+    "BOLT_GUSU_XL_1"
+   ],
+   "nuts": [
+    "NUT_GUSU_L_0_0",
+    "NUT_GUSU_L_1_0",
+    "NUT_GUSU_XL_0",
+    "NUT_GUSU_XL_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "tie_web",
+   "members": [
+    "TIE_RB_L",
+    "FRAME_RAIL_L",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_TIE_L_0",
+    "BOLT_TIE_L_1",
+    "BOLT_TIE_L_2",
+    "BOLT_TIE_L_3"
+   ],
+   "nuts": [
+    "NUT_TIE_L_0",
+    "NUT_TIE_L_1",
+    "NUT_TIE_L_2",
+    "NUT_TIE_L_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "crown_pin",
+   "members": [
+    "CROWN_POST_R",
+    "FRAME_CROWN_F"
+   ],
+   "bolts": [
+    "BOLT_CROWN_R_0",
+    "BOLT_CROWN_R_1"
+   ],
+   "nuts": [
+    "NUT_CROWN_R_0",
+    "NUT_CROWN_R_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "post_foot",
+   "members": [
+    "CROWN_POST_R",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_CPOSTF_R_0",
+    "BOLT_CPOSTF_R_1",
+    "BOLT_CPOSTF_R_2",
+    "BOLT_CPOSTF_R_3"
+   ],
+   "nuts": [
+    "NUT_CPOSTF_R_0",
+    "NUT_CPOSTF_R_1",
+    "NUT_CPOSTF_R_2",
+    "NUT_CPOSTF_R_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_rail",
+   "members": [
+    "GUSSET_BR",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_GUS_R_0_0",
+    "BOLT_GUS_R_0_1",
+    "BOLT_GUS_R_1_0",
+    "BOLT_GUS_R_1_1"
+   ],
+   "nuts": [
+    "NUT_GUS_R_0_0",
+    "NUT_GUS_R_0_1",
+    "NUT_GUS_R_1_0",
+    "NUT_GUS_R_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_cross",
+   "members": [
+    "GUSSET_BR",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_GUSX_R_0",
+    "BOLT_GUSX_R_1"
+   ],
+   "nuts": [
+    "NUT_GUSX_R_0",
+    "NUT_GUSX_R_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "gusset_low",
+   "members": [
+    "GUSSET_UR",
+    "FRAME_RAIL_R",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_GUSU_R_0_0",
+    "BOLT_GUSU_R_1_0",
+    "BOLT_GUSU_XR_0",
+    "BOLT_GUSU_XR_1"
+   ],
+   "nuts": [
+    "NUT_GUSU_R_0_0",
+    "NUT_GUSU_R_1_0",
+    "NUT_GUSU_XR_0",
+    "NUT_GUSU_XR_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "tie_web",
+   "members": [
+    "TIE_RB_R",
+    "FRAME_RAIL_R",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_TIE_R_0",
+    "BOLT_TIE_R_1",
+    "BOLT_TIE_R_2",
+    "BOLT_TIE_R_3"
+   ],
+   "nuts": [
+    "NUT_TIE_R_0",
+    "NUT_TIE_R_1",
+    "NUT_TIE_R_2",
+    "NUT_TIE_R_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_L0",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_PANB_L0_0",
+    "BOLT_PANB_L0_1"
+   ],
+   "nuts": [
+    "NUT_PANB_L0_0",
+    "NUT_PANB_L0_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_L0",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_L0"
+   ],
+   "nuts": [
+    "NUT_PANF_L0"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_L1",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_PANB_L1_0",
+    "BOLT_PANB_L1_1"
+   ],
+   "nuts": [
+    "NUT_PANB_L1_0",
+    "NUT_PANB_L1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_L1",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_L1"
+   ],
+   "nuts": [
+    "NUT_PANF_L1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_L2",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_PANB_L2_0",
+    "BOLT_PANB_L2_1"
+   ],
+   "nuts": [
+    "NUT_PANB_L2_0",
+    "NUT_PANB_L2_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_L2",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_L2"
+   ],
+   "nuts": [
+    "NUT_PANF_L2"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_R0",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_PANB_R0_0",
+    "BOLT_PANB_R0_1"
+   ],
+   "nuts": [
+    "NUT_PANB_R0_0",
+    "NUT_PANB_R0_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_R0",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_R0"
+   ],
+   "nuts": [
+    "NUT_PANF_R0"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_R1",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_PANB_R1_0",
+    "BOLT_PANB_R1_1"
+   ],
+   "nuts": [
+    "NUT_PANB_R1_0",
+    "NUT_PANB_R1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_R1",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_R1"
+   ],
+   "nuts": [
+    "NUT_PANF_R1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_wall",
+   "members": [
+    "PAN_BRKT_R2",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_PANB_R2_0",
+    "BOLT_PANB_R2_1"
+   ],
+   "nuts": [
+    "NUT_PANB_R2_0",
+    "NUT_PANB_R2_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "panbrkt_pan",
+   "members": [
+    "PAN_BRKT_R2",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_PANF_R2"
+   ],
+   "nuts": [
+    "NUT_PANF_R2"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_L0",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_DP_B_L0"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L0"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_L",
+    "DECK_POST_L0"
+   ],
+   "bolts": [
+    "BOLT_DP_T_L0"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L0"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_L1",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_DP_B_L1"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L1"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_L",
+    "DECK_POST_L1"
+   ],
+   "bolts": [
+    "BOLT_DP_T_L1"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L1"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_L2",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_DP_B_L2"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L2"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_L",
+    "DECK_POST_L2"
+   ],
+   "bolts": [
+    "BOLT_DP_T_L2"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L2"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_L3",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_DP_B_L3"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L3"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_L",
+    "DECK_POST_L3"
+   ],
+   "bolts": [
+    "BOLT_DP_T_L3"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_L3"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_R0",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_DP_B_R0"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R0"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_R",
+    "DECK_POST_R0"
+   ],
+   "bolts": [
+    "BOLT_DP_T_R0"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R0"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_R1",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_DP_B_R1"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R1"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_R",
+    "DECK_POST_R1"
+   ],
+   "bolts": [
+    "BOLT_DP_T_R1"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R1"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_R2",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_DP_B_R2"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R2"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_R",
+    "DECK_POST_R2"
+   ],
+   "bolts": [
+    "BOLT_DP_T_R2"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R2"
+  },
+  {
+   "id": "deckpost_web",
+   "members": [
+    "DECK_POST_R3",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_DP_B_R3"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R3"
+  },
+  {
+   "id": "deckpost_panel",
+   "members": [
+    "DECK_R",
+    "DECK_POST_R3"
+   ],
+   "bolts": [
+    "BOLT_DP_T_R3"
+   ],
+   "nuts": [],
+   "terminal": "DECK_POST_R3"
+  },
+  {
+   "id": "numplate",
+   "members": [
+    "PLATE_NUM_L",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_NUM_L_0",
+    "BOLT_NUM_L_1",
+    "BOLT_NUM_L_2",
+    "BOLT_NUM_L_3"
+   ],
+   "nuts": [
+    "NUT_NUM_L_0",
+    "NUT_NUM_L_1",
+    "NUT_NUM_L_2",
+    "NUT_NUM_L_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "numplate",
+   "members": [
+    "PLATE_NUM_B",
+    "FRAME_CROSS_B"
+   ],
+   "bolts": [
+    "BOLT_NUM_B_0",
+    "BOLT_NUM_B_1",
+    "BOLT_NUM_B_2",
+    "BOLT_NUM_B_3"
+   ],
+   "nuts": [
+    "NUT_NUM_B_0",
+    "NUT_NUM_B_1",
+    "NUT_NUM_B_2",
+    "NUT_NUM_B_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_pinch",
+   "members": [
+    "BOLT_HUB_FL",
+    "WHEEL_HUB_FL",
+    "AXLE_FL"
+   ],
+   "bolts": [
+    "BOLT_HUB_FL"
+   ],
+   "nuts": [],
+   "terminal": "WHEEL_HUB_FL"
+  },
+  {
+   "id": "bearing_IN",
+   "members": [
+    "BRG_IN_FL",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_BRG_IN_FL_00",
+    "BOLT_BRG_IN_FL_01",
+    "BOLT_BRG_IN_FL_10",
+    "BOLT_BRG_IN_FL_11"
+   ],
+   "nuts": [
+    "NUT_RIV_IN_FL_00",
+    "NUT_RIV_IN_FL_01",
+    "NUT_RIV_IN_FL_10",
+    "NUT_RIV_IN_FL_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "bearing_OUT",
+   "members": [
+    "BRG_OUT_FL",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_BRG_OUT_FL_00",
+    "BOLT_BRG_OUT_FL_01",
+    "BOLT_BRG_OUT_FL_10",
+    "BOLT_BRG_OUT_FL_11"
+   ],
+   "nuts": [
+    "NUT_RIV_OUT_FL_00",
+    "NUT_RIV_OUT_FL_01",
+    "NUT_RIV_OUT_FL_10",
+    "NUT_RIV_OUT_FL_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "motor_face",
+   "members": [
+    "MOTOR_FL",
+    "MOUNT_PLATE_L"
+   ],
+   "bolts": [
+    "BOLT_MTR_FL_00",
+    "BOLT_MTR_FL_01",
+    "BOLT_MTR_FL_10",
+    "BOLT_MTR_FL_11"
+   ],
+   "nuts": [],
+   "terminal": "MOTOR_FL"
+  },
+  {
+   "id": "clamp_wall",
+   "members": [
+    "CLAMP_FL_2",
+    "CLAMP_FL_1",
+    "MOUNT_PLATE_L",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_CLMP_FL_0_0",
+    "BOLT_CLMP_FL_0_1",
+    "BOLT_CLMP_FL_1_0",
+    "BOLT_CLMP_FL_1_1"
+   ],
+   "nuts": [
+    "NUT_CLMP_FL_0_0",
+    "NUT_CLMP_FL_0_1",
+    "NUT_CLMP_FL_1_0",
+    "NUT_CLMP_FL_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_pinch",
+   "members": [
+    "BOLT_HUB_FR",
+    "WHEEL_HUB_FR",
+    "AXLE_FR"
+   ],
+   "bolts": [
+    "BOLT_HUB_FR"
+   ],
+   "nuts": [],
+   "terminal": "WHEEL_HUB_FR"
+  },
+  {
+   "id": "bearing_IN",
+   "members": [
+    "BRG_IN_FR",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_BRG_IN_FR_00",
+    "BOLT_BRG_IN_FR_01",
+    "BOLT_BRG_IN_FR_10",
+    "BOLT_BRG_IN_FR_11"
+   ],
+   "nuts": [
+    "NUT_RIV_IN_FR_00",
+    "NUT_RIV_IN_FR_01",
+    "NUT_RIV_IN_FR_10",
+    "NUT_RIV_IN_FR_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "bearing_OUT",
+   "members": [
+    "BRG_OUT_FR",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_BRG_OUT_FR_00",
+    "BOLT_BRG_OUT_FR_01",
+    "BOLT_BRG_OUT_FR_10",
+    "BOLT_BRG_OUT_FR_11"
+   ],
+   "nuts": [
+    "NUT_RIV_OUT_FR_00",
+    "NUT_RIV_OUT_FR_01",
+    "NUT_RIV_OUT_FR_10",
+    "NUT_RIV_OUT_FR_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "motor_face",
+   "members": [
+    "MOTOR_FR",
+    "MOUNT_PLATE_R"
+   ],
+   "bolts": [
+    "BOLT_MTR_FR_00",
+    "BOLT_MTR_FR_01",
+    "BOLT_MTR_FR_10",
+    "BOLT_MTR_FR_11"
+   ],
+   "nuts": [],
+   "terminal": "MOTOR_FR"
+  },
+  {
+   "id": "clamp_wall",
+   "members": [
+    "CLAMP_FR_2",
+    "CLAMP_FR_1",
+    "MOUNT_PLATE_R",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_CLMP_FR_0_0",
+    "BOLT_CLMP_FR_0_1",
+    "BOLT_CLMP_FR_1_0",
+    "BOLT_CLMP_FR_1_1"
+   ],
+   "nuts": [
+    "NUT_CLMP_FR_0_0",
+    "NUT_CLMP_FR_0_1",
+    "NUT_CLMP_FR_1_0",
+    "NUT_CLMP_FR_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_pinch",
+   "members": [
+    "BOLT_HUB_RL",
+    "WHEEL_HUB_RL",
+    "AXLE_RL"
+   ],
+   "bolts": [
+    "BOLT_HUB_RL"
+   ],
+   "nuts": [],
+   "terminal": "WHEEL_HUB_RL"
+  },
+  {
+   "id": "bearing_IN",
+   "members": [
+    "BRG_IN_RL",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_BRG_IN_RL_00",
+    "BOLT_BRG_IN_RL_01",
+    "BOLT_BRG_IN_RL_10",
+    "BOLT_BRG_IN_RL_11"
+   ],
+   "nuts": [
+    "NUT_RIV_IN_RL_00",
+    "NUT_RIV_IN_RL_01",
+    "NUT_RIV_IN_RL_10",
+    "NUT_RIV_IN_RL_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "bearing_OUT",
+   "members": [
+    "BRG_OUT_RL",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_BRG_OUT_RL_00",
+    "BOLT_BRG_OUT_RL_01",
+    "BOLT_BRG_OUT_RL_10",
+    "BOLT_BRG_OUT_RL_11"
+   ],
+   "nuts": [
+    "NUT_RIV_OUT_RL_00",
+    "NUT_RIV_OUT_RL_01",
+    "NUT_RIV_OUT_RL_10",
+    "NUT_RIV_OUT_RL_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "motor_face",
+   "members": [
+    "MOTOR_RL",
+    "MOUNT_PLATE_L"
+   ],
+   "bolts": [
+    "BOLT_MTR_RL_00",
+    "BOLT_MTR_RL_01",
+    "BOLT_MTR_RL_10",
+    "BOLT_MTR_RL_11"
+   ],
+   "nuts": [],
+   "terminal": "MOTOR_RL"
+  },
+  {
+   "id": "clamp_wall",
+   "members": [
+    "CLAMP_RL_2",
+    "CLAMP_RL_1",
+    "MOUNT_PLATE_L",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_CLMP_RL_0_0",
+    "BOLT_CLMP_RL_0_1",
+    "BOLT_CLMP_RL_1_0",
+    "BOLT_CLMP_RL_1_1"
+   ],
+   "nuts": [
+    "NUT_CLMP_RL_0_0",
+    "NUT_CLMP_RL_0_1",
+    "NUT_CLMP_RL_1_0",
+    "NUT_CLMP_RL_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_pinch",
+   "members": [
+    "BOLT_HUB_RR",
+    "WHEEL_HUB_RR",
+    "AXLE_RR"
+   ],
+   "bolts": [
+    "BOLT_HUB_RR"
+   ],
+   "nuts": [],
+   "terminal": "WHEEL_HUB_RR"
+  },
+  {
+   "id": "bearing_IN",
+   "members": [
+    "BRG_IN_RR",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_BRG_IN_RR_00",
+    "BOLT_BRG_IN_RR_01",
+    "BOLT_BRG_IN_RR_10",
+    "BOLT_BRG_IN_RR_11"
+   ],
+   "nuts": [
+    "NUT_RIV_IN_RR_00",
+    "NUT_RIV_IN_RR_01",
+    "NUT_RIV_IN_RR_10",
+    "NUT_RIV_IN_RR_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "bearing_OUT",
+   "members": [
+    "BRG_OUT_RR",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_BRG_OUT_RR_00",
+    "BOLT_BRG_OUT_RR_01",
+    "BOLT_BRG_OUT_RR_10",
+    "BOLT_BRG_OUT_RR_11"
+   ],
+   "nuts": [
+    "NUT_RIV_OUT_RR_00",
+    "NUT_RIV_OUT_RR_01",
+    "NUT_RIV_OUT_RR_10",
+    "NUT_RIV_OUT_RR_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "motor_face",
+   "members": [
+    "MOTOR_RR",
+    "MOUNT_PLATE_R"
+   ],
+   "bolts": [
+    "BOLT_MTR_RR_00",
+    "BOLT_MTR_RR_01",
+    "BOLT_MTR_RR_10",
+    "BOLT_MTR_RR_11"
+   ],
+   "nuts": [],
+   "terminal": "MOTOR_RR"
+  },
+  {
+   "id": "clamp_wall",
+   "members": [
+    "CLAMP_RR_2",
+    "CLAMP_RR_1",
+    "MOUNT_PLATE_R",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_CLMP_RR_0_0",
+    "BOLT_CLMP_RR_0_1",
+    "BOLT_CLMP_RR_1_0",
+    "BOLT_CLMP_RR_1_1"
+   ],
+   "nuts": [
+    "NUT_CLMP_RR_0_0",
+    "NUT_CLMP_RR_0_1",
+    "NUT_CLMP_RR_1_0",
+    "NUT_CLMP_RR_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "mplate_rail",
+   "members": [
+    "MOUNT_PLATE_L",
+    "FRAME_RAIL_L"
+   ],
+   "bolts": [
+    "BOLT_MPL_L_0",
+    "BOLT_MPL_L_1",
+    "BOLT_MPL_L_2",
+    "BOLT_MPL_L_3",
+    "BOLT_MPL_L_4",
+    "BOLT_MPL_L_5",
+    "BOLT_MPL_L_6",
+    "BOLT_MPL_L_7",
+    "BOLT_MPL_L_8",
+    "BOLT_MPL_L_9",
+    "BOLT_MPL_L_10",
+    "BOLT_MPL_L_11"
+   ],
+   "nuts": [
+    "NUT_MPL_L_0",
+    "NUT_MPL_L_1",
+    "NUT_MPL_L_2",
+    "NUT_MPL_L_3",
+    "NUT_MPL_L_4",
+    "NUT_MPL_L_5",
+    "NUT_MPL_L_6",
+    "NUT_MPL_L_7",
+    "NUT_MPL_L_8",
+    "NUT_MPL_L_9",
+    "NUT_MPL_L_10",
+    "NUT_MPL_L_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "mplate_rail",
+   "members": [
+    "MOUNT_PLATE_R",
+    "FRAME_RAIL_R"
+   ],
+   "bolts": [
+    "BOLT_MPL_R_0",
+    "BOLT_MPL_R_1",
+    "BOLT_MPL_R_2",
+    "BOLT_MPL_R_3",
+    "BOLT_MPL_R_4",
+    "BOLT_MPL_R_5",
+    "BOLT_MPL_R_6",
+    "BOLT_MPL_R_7",
+    "BOLT_MPL_R_8",
+    "BOLT_MPL_R_9",
+    "BOLT_MPL_R_10",
+    "BOLT_MPL_R_11"
+   ],
+   "nuts": [
+    "NUT_MPL_R_0",
+    "NUT_MPL_R_1",
+    "NUT_MPL_R_2",
+    "NUT_MPL_R_3",
+    "NUT_MPL_R_4",
+    "NUT_MPL_R_5",
+    "NUT_MPL_R_6",
+    "NUT_MPL_R_7",
+    "NUT_MPL_R_8",
+    "NUT_MPL_R_9",
+    "NUT_MPL_R_10",
+    "NUT_MPL_R_11"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_mount",
+   "members": [
+    "ODO_MOUNT_LAT_L",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_ODO_LAT_L_0",
+    "BOLT_ODO_LAT_L_1"
+   ],
+   "nuts": [],
+   "terminal": "ODO_MOUNT_LAT_L"
+  },
+  {
+   "id": "odo_wheelpin",
+   "members": [
+    "ODO_WHEEL_LAT_L",
+    "ODO_ARM_LAT_L",
+    "ODO_MOUNT_LAT_L"
+   ],
+   "bolts": [
+    "ODO_AXLE_LAT_L"
+   ],
+   "nuts": [
+    "NUT_ODO_AXLE_LAT_L"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_pivot",
+   "members": [
+    "ODO_ARM_LAT_L",
+    "ODO_MOUNT_LAT_L"
+   ],
+   "bolts": [
+    "ODO_PIVOT_LAT_L"
+   ],
+   "nuts": [
+    "NUT_ODO_PIVOT_LAT_L"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_mount",
+   "members": [
+    "ODO_MOUNT_LAT_R",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_ODO_LAT_R_0",
+    "BOLT_ODO_LAT_R_1"
+   ],
+   "nuts": [],
+   "terminal": "ODO_MOUNT_LAT_R"
+  },
+  {
+   "id": "odo_wheelpin",
+   "members": [
+    "ODO_WHEEL_LAT_R",
+    "ODO_ARM_LAT_R",
+    "ODO_MOUNT_LAT_R"
+   ],
+   "bolts": [
+    "ODO_AXLE_LAT_R"
+   ],
+   "nuts": [
+    "NUT_ODO_AXLE_LAT_R"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_pivot",
+   "members": [
+    "ODO_ARM_LAT_R",
+    "ODO_MOUNT_LAT_R"
+   ],
+   "bolts": [
+    "ODO_PIVOT_LAT_R"
+   ],
+   "nuts": [
+    "NUT_ODO_PIVOT_LAT_R"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_mount",
+   "members": [
+    "ODO_MOUNT_LON",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_ODO_LON_0",
+    "BOLT_ODO_LON_1"
+   ],
+   "nuts": [],
+   "terminal": "ODO_MOUNT_LON"
+  },
+  {
+   "id": "odo_wheelpin",
+   "members": [
+    "ODO_WHEEL_LON",
+    "ODO_ARM_LON",
+    "ODO_MOUNT_LON"
+   ],
+   "bolts": [
+    "ODO_AXLE_LON"
+   ],
+   "nuts": [
+    "NUT_ODO_AXLE_LON"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "odo_pivot",
+   "members": [
+    "ODO_ARM_LON",
+    "ODO_MOUNT_LON"
+   ],
+   "bolts": [
+    "ODO_PIVOT_LON"
+   ],
+   "nuts": [
+    "NUT_ODO_PIVOT_LON"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "strap_pan",
+   "members": [
+    "BATT_STRAP_0",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_STRAP_0_0",
+    "BOLT_STRAP_0_1"
+   ],
+   "nuts": [
+    "NUT_STRAP_0_0",
+    "NUT_STRAP_0_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "strap_pan",
+   "members": [
+    "BATT_STRAP_1",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_STRAP_1_0",
+    "BOLT_STRAP_1_1"
+   ],
+   "nuts": [
+    "NUT_STRAP_1_0",
+    "NUT_STRAP_1_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "shelf_so",
+   "members": [
+    "ELEC_SHELF",
+    "STANDOFF_0",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_SO_B_0",
+    "BOLT_SO_T_0"
+   ],
+   "nuts": [],
+   "terminal": "STANDOFF_0"
+  },
+  {
+   "id": "shelf_so",
+   "members": [
+    "ELEC_SHELF",
+    "STANDOFF_1",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_SO_B_1",
+    "BOLT_SO_T_1"
+   ],
+   "nuts": [],
+   "terminal": "STANDOFF_1"
+  },
+  {
+   "id": "shelf_so",
+   "members": [
+    "ELEC_SHELF",
+    "STANDOFF_2",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_SO_B_2",
+    "BOLT_SO_T_2"
+   ],
+   "nuts": [],
+   "terminal": "STANDOFF_2"
+  },
+  {
+   "id": "shelf_so",
+   "members": [
+    "ELEC_SHELF",
+    "STANDOFF_3",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_SO_B_3",
+    "BOLT_SO_T_3"
+   ],
+   "nuts": [],
+   "terminal": "STANDOFF_3"
+  },
+  {
+   "id": "switch_brkt",
+   "members": [
+    "SWITCH_BRKT",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_SW_0",
+    "BOLT_SW_1"
+   ],
+   "nuts": [
+    "NUT_SW_0",
+    "NUT_SW_1"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_mount",
+   "members": [
+    "HUB_CTRL",
+    "BELLY_PAN"
+   ],
+   "bolts": [
+    "BOLT_HUB_C_0",
+    "BOLT_HUB_C_1",
+    "BOLT_HUB_C_2",
+    "BOLT_HUB_C_3"
+   ],
+   "nuts": [
+    "NUT_HUB_C_0",
+    "NUT_HUB_C_1",
+    "NUT_HUB_C_2",
+    "NUT_HUB_C_3"
+   ],
+   "terminal": null
+  },
+  {
+   "id": "hub_mount",
+   "members": [
+    "HUB_EXP",
+    "ELEC_SHELF"
+   ],
+   "bolts": [
+    "BOLT_HUB_E_0",
+    "BOLT_HUB_E_1",
+    "BOLT_HUB_E_2",
+    "BOLT_HUB_E_3"
+   ],
+   "nuts": [
+    "NUT_HUB_E_0",
+    "NUT_HUB_E_1",
+    "NUT_HUB_E_2",
+    "NUT_HUB_E_3"
+   ],
+   "terminal": null
+  }
+ ],
+ "faces": [
+  [
+   "FRAME_CROSS_B",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "FRAME_CROSS_B",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "CROWN_POST_L",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "CROWN_POST_L",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "GUSSET_BL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "GUSSET_BL",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "GUSSET_UL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "GUSSET_UL",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "TIE_RB_L",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "TIE_RB_L",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "CROWN_POST_R",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "CROWN_POST_R",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "GUSSET_BR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "GUSSET_BR",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "GUSSET_UR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "GUSSET_UR",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "TIE_RB_R",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "TIE_RB_R",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "PAN_BRKT_L0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "PAN_BRKT_L0",
+   "BELLY_PAN"
+  ],
+  [
+   "PAN_BRKT_L1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "PAN_BRKT_L1",
+   "BELLY_PAN"
+  ],
+  [
+   "PAN_BRKT_L2",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "PAN_BRKT_L2",
+   "BELLY_PAN"
+  ],
+  [
+   "PAN_BRKT_R0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "PAN_BRKT_R0",
+   "BELLY_PAN"
+  ],
+  [
+   "PAN_BRKT_R1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "PAN_BRKT_R1",
+   "BELLY_PAN"
+  ],
+  [
+   "PAN_BRKT_R2",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "PAN_BRKT_R2",
+   "BELLY_PAN"
+  ],
+  [
+   "DECK_POST_L0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "DECK_POST_L0",
+   "DECK_L"
+  ],
+  [
+   "DECK_POST_L1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "DECK_POST_L1",
+   "DECK_L"
+  ],
+  [
+   "DECK_POST_L2",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "DECK_POST_L2",
+   "DECK_L"
+  ],
+  [
+   "DECK_POST_L3",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "DECK_POST_L3",
+   "DECK_L"
+  ],
+  [
+   "DECK_POST_R0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "DECK_POST_R0",
+   "DECK_R"
+  ],
+  [
+   "DECK_POST_R1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "DECK_POST_R1",
+   "DECK_R"
+  ],
+  [
+   "DECK_POST_R2",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "DECK_POST_R2",
+   "DECK_R"
+  ],
+  [
+   "DECK_POST_R3",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "DECK_POST_R3",
+   "DECK_R"
+  ],
+  [
+   "PLATE_NUM_L",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "PLATE_NUM_B",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "WHEEL_HUB_FL",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "WHEEL_HUB_FL",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "BRG_IN_FL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BRG_OUT_FL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "MOTOR_FL",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "WSH_AXLE_FL",
+   "BRG_IN_FL"
+  ],
+  [
+   "COLLAR_FL",
+   "WSH_AXLE_FL"
+  ],
+  [
+   "WSH_OUT_FL",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "NUT_AXLE_FL",
+   "WSH_OUT_FL"
+  ],
+  [
+   "CLAMP_FL_2",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "CLAMP_FL_1",
+   "CLAMP_FL_2"
+  ],
+  [
+   "WHEEL_HUB_FR",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "WHEEL_HUB_FR",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "BRG_IN_FR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BRG_OUT_FR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "MOTOR_FR",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WSH_AXLE_FR",
+   "BRG_IN_FR"
+  ],
+  [
+   "COLLAR_FR",
+   "WSH_AXLE_FR"
+  ],
+  [
+   "WSH_OUT_FR",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "NUT_AXLE_FR",
+   "WSH_OUT_FR"
+  ],
+  [
+   "CLAMP_FR_2",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "CLAMP_FR_1",
+   "CLAMP_FR_2"
+  ],
+  [
+   "WHEEL_HUB_RL",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "WHEEL_HUB_RL",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "BRG_IN_RL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BRG_OUT_RL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "MOTOR_RL",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "WSH_AXLE_RL",
+   "BRG_IN_RL"
+  ],
+  [
+   "COLLAR_RL",
+   "WSH_AXLE_RL"
+  ],
+  [
+   "WSH_OUT_RL",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "NUT_AXLE_RL",
+   "WSH_OUT_RL"
+  ],
+  [
+   "CLAMP_RL_2",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "CLAMP_RL_1",
+   "CLAMP_RL_2"
+  ],
+  [
+   "WHEEL_HUB_RR",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "WHEEL_HUB_RR",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "BRG_IN_RR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BRG_OUT_RR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "MOTOR_RR",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WSH_AXLE_RR",
+   "BRG_IN_RR"
+  ],
+  [
+   "COLLAR_RR",
+   "WSH_AXLE_RR"
+  ],
+  [
+   "WSH_OUT_RR",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "NUT_AXLE_RR",
+   "WSH_OUT_RR"
+  ],
+  [
+   "CLAMP_RR_2",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "CLAMP_RR_1",
+   "CLAMP_RR_2"
+  ],
+  [
+   "MOUNT_PLATE_L",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "MOUNT_PLATE_R",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "ODO_MOUNT_LAT_L",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_ARM_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "ODO_SPRING_LAT_L",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LAT_L",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "ODO_ENC_LAT_L",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "ODO_MOUNT_LAT_R",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_ARM_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "ODO_SPRING_LAT_R",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LAT_R",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "ODO_ENC_LAT_R",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "ODO_MOUNT_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_ARM_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "ODO_SPRING_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LON",
+   "ODO_ARM_LON"
+  ],
+  [
+   "ODO_ENC_LON",
+   "ODO_ARM_LON"
+  ],
+  [
+   "BATTERY",
+   "BELLY_PAN"
+  ],
+  [
+   "BATT_STRAP_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BATT_STRAP_1",
+   "BELLY_PAN"
+  ],
+  [
+   "STANDOFF_0",
+   "BELLY_PAN"
+  ],
+  [
+   "STANDOFF_0",
+   "ELEC_SHELF"
+  ],
+  [
+   "STANDOFF_1",
+   "BELLY_PAN"
+  ],
+  [
+   "STANDOFF_1",
+   "ELEC_SHELF"
+  ],
+  [
+   "STANDOFF_2",
+   "BELLY_PAN"
+  ],
+  [
+   "STANDOFF_2",
+   "ELEC_SHELF"
+  ],
+  [
+   "STANDOFF_3",
+   "BELLY_PAN"
+  ],
+  [
+   "STANDOFF_3",
+   "ELEC_SHELF"
+  ],
+  [
+   "SWITCH_BRKT",
+   "BELLY_PAN"
+  ],
+  [
+   "MAIN_SWITCH",
+   "SWITCH_BRKT"
+  ],
+  [
+   "HUB_CTRL",
+   "BELLY_PAN"
+  ],
+  [
+   "HUB_EXP",
+   "ELEC_SHELF"
+  ],
+  [
+   "CLIP_0",
+   "BELLY_PAN"
+  ],
+  [
+   "CLIP_1",
+   "BELLY_PAN"
+  ],
+  [
+   "CLIP_2",
+   "BELLY_PAN"
+  ],
+  [
+   "CLIP_3",
+   "BELLY_PAN"
+  ]
+ ],
+ "embeds": [
+  [
+   "CROWN_POST_L",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_L_0",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_L_1",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_L_0",
+   "NUT_CROWN_L_0"
+  ],
+  [
+   "BOLT_CROWN_L_1",
+   "NUT_CROWN_L_1"
+  ],
+  [
+   "BOLT_CPOSTF_L_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CPOSTF_L_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CPOSTF_L_2",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CPOSTF_L_3",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CPOSTF_L_0",
+   "NUT_CPOSTF_L_0"
+  ],
+  [
+   "BOLT_CPOSTF_L_1",
+   "NUT_CPOSTF_L_1"
+  ],
+  [
+   "BOLT_CPOSTF_L_2",
+   "NUT_CPOSTF_L_2"
+  ],
+  [
+   "BOLT_CPOSTF_L_3",
+   "NUT_CPOSTF_L_3"
+  ],
+  [
+   "BOLT_GUS_L_0_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_GUS_L_0_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_GUS_L_1_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_GUS_L_0_0",
+   "NUT_GUS_L_0_0"
+  ],
+  [
+   "BOLT_GUS_L_0_1",
+   "NUT_GUS_L_0_1"
+  ],
+  [
+   "BOLT_GUS_L_1_0",
+   "NUT_GUS_L_1_0"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "NUT_GUS_L_1_1"
+  ],
+  [
+   "BOLT_GUSX_L_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSX_L_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSX_L_0",
+   "NUT_GUSX_L_0"
+  ],
+  [
+   "BOLT_GUSX_L_1",
+   "NUT_GUSX_L_1"
+  ],
+  [
+   "BOLT_GUSU_L_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_L_1_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_XL_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_XL_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_L_0_0",
+   "NUT_GUSU_L_0_0"
+  ],
+  [
+   "BOLT_GUSU_L_1_0",
+   "NUT_GUSU_L_1_0"
+  ],
+  [
+   "BOLT_GUSU_XL_0",
+   "NUT_GUSU_XL_0"
+  ],
+  [
+   "BOLT_GUSU_XL_1",
+   "NUT_GUSU_XL_1"
+  ],
+  [
+   "BOLT_TIE_L_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_2",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_3",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_0",
+   "NUT_TIE_L_0"
+  ],
+  [
+   "BOLT_TIE_L_1",
+   "NUT_TIE_L_1"
+  ],
+  [
+   "BOLT_TIE_L_2",
+   "NUT_TIE_L_2"
+  ],
+  [
+   "BOLT_TIE_L_3",
+   "NUT_TIE_L_3"
+  ],
+  [
+   "CROWN_POST_R",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_R_0",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_R_1",
+   "FRAME_CROWN_F"
+  ],
+  [
+   "BOLT_CROWN_R_0",
+   "NUT_CROWN_R_0"
+  ],
+  [
+   "BOLT_CROWN_R_1",
+   "NUT_CROWN_R_1"
+  ],
+  [
+   "BOLT_CPOSTF_R_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CPOSTF_R_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CPOSTF_R_2",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CPOSTF_R_3",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CPOSTF_R_0",
+   "NUT_CPOSTF_R_0"
+  ],
+  [
+   "BOLT_CPOSTF_R_1",
+   "NUT_CPOSTF_R_1"
+  ],
+  [
+   "BOLT_CPOSTF_R_2",
+   "NUT_CPOSTF_R_2"
+  ],
+  [
+   "BOLT_CPOSTF_R_3",
+   "NUT_CPOSTF_R_3"
+  ],
+  [
+   "BOLT_GUS_R_0_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_GUS_R_0_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_GUS_R_1_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_GUS_R_1_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_GUS_R_0_0",
+   "NUT_GUS_R_0_0"
+  ],
+  [
+   "BOLT_GUS_R_0_1",
+   "NUT_GUS_R_0_1"
+  ],
+  [
+   "BOLT_GUS_R_1_0",
+   "NUT_GUS_R_1_0"
+  ],
+  [
+   "BOLT_GUS_R_1_1",
+   "NUT_GUS_R_1_1"
+  ],
+  [
+   "BOLT_GUSX_R_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSX_R_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSX_R_0",
+   "NUT_GUSX_R_0"
+  ],
+  [
+   "BOLT_GUSX_R_1",
+   "NUT_GUSX_R_1"
+  ],
+  [
+   "BOLT_GUSU_R_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_R_1_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_XR_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_XR_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_R_0_0",
+   "NUT_GUSU_R_0_0"
+  ],
+  [
+   "BOLT_GUSU_R_1_0",
+   "NUT_GUSU_R_1_0"
+  ],
+  [
+   "BOLT_GUSU_XR_0",
+   "NUT_GUSU_XR_0"
+  ],
+  [
+   "BOLT_GUSU_XR_1",
+   "NUT_GUSU_XR_1"
+  ],
+  [
+   "BOLT_TIE_R_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_2",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_3",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_0",
+   "NUT_TIE_R_0"
+  ],
+  [
+   "BOLT_TIE_R_1",
+   "NUT_TIE_R_1"
+  ],
+  [
+   "BOLT_TIE_R_2",
+   "NUT_TIE_R_2"
+  ],
+  [
+   "BOLT_TIE_R_3",
+   "NUT_TIE_R_3"
+  ],
+  [
+   "BOLT_PANB_L0_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L0_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L0_0",
+   "NUT_PANB_L0_0"
+  ],
+  [
+   "BOLT_PANB_L0_1",
+   "NUT_PANB_L0_1"
+  ],
+  [
+   "BOLT_PANF_L0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_L0",
+   "NUT_PANF_L0"
+  ],
+  [
+   "BOLT_PANB_L1_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L1_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L1_0",
+   "NUT_PANB_L1_0"
+  ],
+  [
+   "BOLT_PANB_L1_1",
+   "NUT_PANB_L1_1"
+  ],
+  [
+   "BOLT_PANF_L1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_L1",
+   "NUT_PANF_L1"
+  ],
+  [
+   "BOLT_PANB_L2_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L2_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L2_0",
+   "NUT_PANB_L2_0"
+  ],
+  [
+   "BOLT_PANB_L2_1",
+   "NUT_PANB_L2_1"
+  ],
+  [
+   "BOLT_PANF_L2",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_L2",
+   "NUT_PANF_L2"
+  ],
+  [
+   "BOLT_PANB_R0_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R0_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R0_0",
+   "NUT_PANB_R0_0"
+  ],
+  [
+   "BOLT_PANB_R0_1",
+   "NUT_PANB_R0_1"
+  ],
+  [
+   "BOLT_PANF_R0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_R0",
+   "NUT_PANF_R0"
+  ],
+  [
+   "BOLT_PANB_R1_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R1_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R1_0",
+   "NUT_PANB_R1_0"
+  ],
+  [
+   "BOLT_PANB_R1_1",
+   "NUT_PANB_R1_1"
+  ],
+  [
+   "BOLT_PANF_R1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_R1",
+   "NUT_PANF_R1"
+  ],
+  [
+   "BOLT_PANB_R2_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R2_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R2_0",
+   "NUT_PANB_R2_0"
+  ],
+  [
+   "BOLT_PANB_R2_1",
+   "NUT_PANB_R2_1"
+  ],
+  [
+   "BOLT_PANF_R2",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_PANF_R2",
+   "NUT_PANF_R2"
+  ],
+  [
+   "BOLT_DP_B_L0",
+   "DECK_POST_L0"
+  ],
+  [
+   "BOLT_DP_T_L0",
+   "DECK_POST_L0"
+  ],
+  [
+   "BOLT_DP_B_L1",
+   "DECK_POST_L1"
+  ],
+  [
+   "BOLT_DP_T_L1",
+   "DECK_POST_L1"
+  ],
+  [
+   "BOLT_DP_B_L2",
+   "DECK_POST_L2"
+  ],
+  [
+   "BOLT_DP_T_L2",
+   "DECK_POST_L2"
+  ],
+  [
+   "BOLT_DP_B_L3",
+   "DECK_POST_L3"
+  ],
+  [
+   "BOLT_DP_T_L3",
+   "DECK_POST_L3"
+  ],
+  [
+   "BOLT_DP_B_R0",
+   "DECK_POST_R0"
+  ],
+  [
+   "BOLT_DP_T_R0",
+   "DECK_POST_R0"
+  ],
+  [
+   "BOLT_DP_B_R1",
+   "DECK_POST_R1"
+  ],
+  [
+   "BOLT_DP_T_R1",
+   "DECK_POST_R1"
+  ],
+  [
+   "BOLT_DP_B_R2",
+   "DECK_POST_R2"
+  ],
+  [
+   "BOLT_DP_T_R2",
+   "DECK_POST_R2"
+  ],
+  [
+   "BOLT_DP_B_R3",
+   "DECK_POST_R3"
+  ],
+  [
+   "BOLT_DP_T_R3",
+   "DECK_POST_R3"
+  ],
+  [
+   "ENDCAP_FL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "ENDCAP_BL",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "ENDCAP_FR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "ENDCAP_BR",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "ENDCAP_XB_L",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "ENDCAP_XB_R",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_NUM_L_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_NUM_L_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_NUM_L_2",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_NUM_L_3",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_NUM_L_0",
+   "NUT_NUM_L_0"
+  ],
+  [
+   "BOLT_NUM_L_1",
+   "NUT_NUM_L_1"
+  ],
+  [
+   "BOLT_NUM_L_2",
+   "NUT_NUM_L_2"
+  ],
+  [
+   "BOLT_NUM_L_3",
+   "NUT_NUM_L_3"
+  ],
+  [
+   "BOLT_NUM_B_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_NUM_B_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_NUM_B_2",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_NUM_B_3",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_NUM_B_0",
+   "NUT_NUM_B_0"
+  ],
+  [
+   "BOLT_NUM_B_1",
+   "NUT_NUM_B_1"
+  ],
+  [
+   "BOLT_NUM_B_2",
+   "NUT_NUM_B_2"
+  ],
+  [
+   "BOLT_NUM_B_3",
+   "NUT_NUM_B_3"
+  ],
+  [
+   "ROLLER_FL_00_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_00_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_01_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_01_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_02_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_02_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_03_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_03_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_04_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_04_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_05_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_05_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_06_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_06_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_07_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_07_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_08_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_08_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "ROLLER_FL_09_B",
+   "WHEEL_PLATE_FL_IN"
+  ],
+  [
+   "ROLLER_FL_09_B",
+   "WHEEL_PLATE_FL_OUT"
+  ],
+  [
+   "BOLT_HUB_FL",
+   "WHEEL_HUB_FL"
+  ],
+  [
+   "BOLT_HUB_FL",
+   "AXLE_FL"
+  ],
+  [
+   "BOLT_HUB_FL",
+   "WHEEL_HUB_FL"
+  ],
+  [
+   "BOLT_BRG_IN_FL_00",
+   "NUT_RIV_IN_FL_00"
+  ],
+  [
+   "BOLT_BRG_IN_FL_01",
+   "NUT_RIV_IN_FL_01"
+  ],
+  [
+   "BOLT_BRG_IN_FL_10",
+   "NUT_RIV_IN_FL_10"
+  ],
+  [
+   "BOLT_BRG_IN_FL_11",
+   "NUT_RIV_IN_FL_11"
+  ],
+  [
+   "BOLT_BRG_IN_FL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_FL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_FL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_FL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_FL_00",
+   "NUT_RIV_IN_FL_00"
+  ],
+  [
+   "BOLT_BRG_IN_FL_01",
+   "NUT_RIV_IN_FL_01"
+  ],
+  [
+   "BOLT_BRG_IN_FL_10",
+   "NUT_RIV_IN_FL_10"
+  ],
+  [
+   "BOLT_BRG_IN_FL_11",
+   "NUT_RIV_IN_FL_11"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_00",
+   "NUT_RIV_OUT_FL_00"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_01",
+   "NUT_RIV_OUT_FL_01"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_10",
+   "NUT_RIV_OUT_FL_10"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_11",
+   "NUT_RIV_OUT_FL_11"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_00",
+   "NUT_RIV_OUT_FL_00"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_01",
+   "NUT_RIV_OUT_FL_01"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_10",
+   "NUT_RIV_OUT_FL_10"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_11",
+   "NUT_RIV_OUT_FL_11"
+  ],
+  [
+   "BOLT_MTR_FL_00",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_01",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_10",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_11",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_00",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_01",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_10",
+   "MOTOR_FL"
+  ],
+  [
+   "BOLT_MTR_FL_11",
+   "MOTOR_FL"
+  ],
+  [
+   "NUT_AXLE_FL",
+   "AXLE_FL"
+  ],
+  [
+   "BOLT_CLMP_FL_0_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_FL_0_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_FL_1_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_FL_1_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_FL_0_0",
+   "NUT_CLMP_FL_0_0"
+  ],
+  [
+   "BOLT_CLMP_FL_0_1",
+   "NUT_CLMP_FL_0_1"
+  ],
+  [
+   "BOLT_CLMP_FL_1_0",
+   "NUT_CLMP_FL_1_0"
+  ],
+  [
+   "BOLT_CLMP_FL_1_1",
+   "NUT_CLMP_FL_1_1"
+  ],
+  [
+   "ROLLER_FR_00_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_00_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_01_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_01_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_02_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_02_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_03_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_03_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_04_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_04_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_05_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_05_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_06_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_06_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_07_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_07_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_08_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_08_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "ROLLER_FR_09_B",
+   "WHEEL_PLATE_FR_IN"
+  ],
+  [
+   "ROLLER_FR_09_B",
+   "WHEEL_PLATE_FR_OUT"
+  ],
+  [
+   "BOLT_HUB_FR",
+   "WHEEL_HUB_FR"
+  ],
+  [
+   "BOLT_HUB_FR",
+   "AXLE_FR"
+  ],
+  [
+   "BOLT_HUB_FR",
+   "WHEEL_HUB_FR"
+  ],
+  [
+   "BOLT_BRG_IN_FR_00",
+   "NUT_RIV_IN_FR_00"
+  ],
+  [
+   "BOLT_BRG_IN_FR_01",
+   "NUT_RIV_IN_FR_01"
+  ],
+  [
+   "BOLT_BRG_IN_FR_10",
+   "NUT_RIV_IN_FR_10"
+  ],
+  [
+   "BOLT_BRG_IN_FR_11",
+   "NUT_RIV_IN_FR_11"
+  ],
+  [
+   "BOLT_BRG_IN_FR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_FR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_FR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_FR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_FR_00",
+   "NUT_RIV_IN_FR_00"
+  ],
+  [
+   "BOLT_BRG_IN_FR_01",
+   "NUT_RIV_IN_FR_01"
+  ],
+  [
+   "BOLT_BRG_IN_FR_10",
+   "NUT_RIV_IN_FR_10"
+  ],
+  [
+   "BOLT_BRG_IN_FR_11",
+   "NUT_RIV_IN_FR_11"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_00",
+   "NUT_RIV_OUT_FR_00"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_01",
+   "NUT_RIV_OUT_FR_01"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_10",
+   "NUT_RIV_OUT_FR_10"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_11",
+   "NUT_RIV_OUT_FR_11"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_00",
+   "NUT_RIV_OUT_FR_00"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_01",
+   "NUT_RIV_OUT_FR_01"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_10",
+   "NUT_RIV_OUT_FR_10"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_11",
+   "NUT_RIV_OUT_FR_11"
+  ],
+  [
+   "BOLT_MTR_FR_00",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_01",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_10",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_11",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_00",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_01",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_10",
+   "MOTOR_FR"
+  ],
+  [
+   "BOLT_MTR_FR_11",
+   "MOTOR_FR"
+  ],
+  [
+   "NUT_AXLE_FR",
+   "AXLE_FR"
+  ],
+  [
+   "BOLT_CLMP_FR_0_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_FR_0_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_FR_1_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_FR_1_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_FR_0_0",
+   "NUT_CLMP_FR_0_0"
+  ],
+  [
+   "BOLT_CLMP_FR_0_1",
+   "NUT_CLMP_FR_0_1"
+  ],
+  [
+   "BOLT_CLMP_FR_1_0",
+   "NUT_CLMP_FR_1_0"
+  ],
+  [
+   "BOLT_CLMP_FR_1_1",
+   "NUT_CLMP_FR_1_1"
+  ],
+  [
+   "ROLLER_RL_00_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_00_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_01_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_01_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_02_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_02_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_03_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_03_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_04_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_04_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_05_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_05_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_06_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_06_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_07_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_07_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_08_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_08_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "ROLLER_RL_09_B",
+   "WHEEL_PLATE_RL_IN"
+  ],
+  [
+   "ROLLER_RL_09_B",
+   "WHEEL_PLATE_RL_OUT"
+  ],
+  [
+   "BOLT_HUB_RL",
+   "WHEEL_HUB_RL"
+  ],
+  [
+   "BOLT_HUB_RL",
+   "AXLE_RL"
+  ],
+  [
+   "BOLT_HUB_RL",
+   "WHEEL_HUB_RL"
+  ],
+  [
+   "BOLT_BRG_IN_RL_00",
+   "NUT_RIV_IN_RL_00"
+  ],
+  [
+   "BOLT_BRG_IN_RL_01",
+   "NUT_RIV_IN_RL_01"
+  ],
+  [
+   "BOLT_BRG_IN_RL_10",
+   "NUT_RIV_IN_RL_10"
+  ],
+  [
+   "BOLT_BRG_IN_RL_11",
+   "NUT_RIV_IN_RL_11"
+  ],
+  [
+   "BOLT_BRG_IN_RL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_RL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_RL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_RL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_IN_RL_00",
+   "NUT_RIV_IN_RL_00"
+  ],
+  [
+   "BOLT_BRG_IN_RL_01",
+   "NUT_RIV_IN_RL_01"
+  ],
+  [
+   "BOLT_BRG_IN_RL_10",
+   "NUT_RIV_IN_RL_10"
+  ],
+  [
+   "BOLT_BRG_IN_RL_11",
+   "NUT_RIV_IN_RL_11"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_00",
+   "NUT_RIV_OUT_RL_00"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_01",
+   "NUT_RIV_OUT_RL_01"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_10",
+   "NUT_RIV_OUT_RL_10"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_11",
+   "NUT_RIV_OUT_RL_11"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_00",
+   "NUT_RIV_OUT_RL_00"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_01",
+   "NUT_RIV_OUT_RL_01"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_10",
+   "NUT_RIV_OUT_RL_10"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_11",
+   "NUT_RIV_OUT_RL_11"
+  ],
+  [
+   "BOLT_MTR_RL_00",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_01",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_10",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_11",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_00",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_01",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_10",
+   "MOTOR_RL"
+  ],
+  [
+   "BOLT_MTR_RL_11",
+   "MOTOR_RL"
+  ],
+  [
+   "NUT_AXLE_RL",
+   "AXLE_RL"
+  ],
+  [
+   "BOLT_CLMP_RL_0_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_RL_0_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_RL_1_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_RL_1_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_CLMP_RL_0_0",
+   "NUT_CLMP_RL_0_0"
+  ],
+  [
+   "BOLT_CLMP_RL_0_1",
+   "NUT_CLMP_RL_0_1"
+  ],
+  [
+   "BOLT_CLMP_RL_1_0",
+   "NUT_CLMP_RL_1_0"
+  ],
+  [
+   "BOLT_CLMP_RL_1_1",
+   "NUT_CLMP_RL_1_1"
+  ],
+  [
+   "ROLLER_RR_00_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_00_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_01_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_01_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_02_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_02_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_03_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_03_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_04_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_04_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_05_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_05_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_06_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_06_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_07_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_07_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_08_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_08_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "ROLLER_RR_09_B",
+   "WHEEL_PLATE_RR_IN"
+  ],
+  [
+   "ROLLER_RR_09_B",
+   "WHEEL_PLATE_RR_OUT"
+  ],
+  [
+   "BOLT_HUB_RR",
+   "WHEEL_HUB_RR"
+  ],
+  [
+   "BOLT_HUB_RR",
+   "AXLE_RR"
+  ],
+  [
+   "BOLT_HUB_RR",
+   "WHEEL_HUB_RR"
+  ],
+  [
+   "BOLT_BRG_IN_RR_00",
+   "NUT_RIV_IN_RR_00"
+  ],
+  [
+   "BOLT_BRG_IN_RR_01",
+   "NUT_RIV_IN_RR_01"
+  ],
+  [
+   "BOLT_BRG_IN_RR_10",
+   "NUT_RIV_IN_RR_10"
+  ],
+  [
+   "BOLT_BRG_IN_RR_11",
+   "NUT_RIV_IN_RR_11"
+  ],
+  [
+   "BOLT_BRG_IN_RR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_RR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_RR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_RR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_IN_RR_00",
+   "NUT_RIV_IN_RR_00"
+  ],
+  [
+   "BOLT_BRG_IN_RR_01",
+   "NUT_RIV_IN_RR_01"
+  ],
+  [
+   "BOLT_BRG_IN_RR_10",
+   "NUT_RIV_IN_RR_10"
+  ],
+  [
+   "BOLT_BRG_IN_RR_11",
+   "NUT_RIV_IN_RR_11"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_00",
+   "NUT_RIV_OUT_RR_00"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_01",
+   "NUT_RIV_OUT_RR_01"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_10",
+   "NUT_RIV_OUT_RR_10"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_11",
+   "NUT_RIV_OUT_RR_11"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_00",
+   "NUT_RIV_OUT_RR_00"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_01",
+   "NUT_RIV_OUT_RR_01"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_10",
+   "NUT_RIV_OUT_RR_10"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_11",
+   "NUT_RIV_OUT_RR_11"
+  ],
+  [
+   "BOLT_MTR_RR_00",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_01",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_10",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_11",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_00",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_01",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_10",
+   "MOTOR_RR"
+  ],
+  [
+   "BOLT_MTR_RR_11",
+   "MOTOR_RR"
+  ],
+  [
+   "NUT_AXLE_RR",
+   "AXLE_RR"
+  ],
+  [
+   "BOLT_CLMP_RR_0_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_RR_0_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_RR_1_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_RR_1_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_CLMP_RR_0_0",
+   "NUT_CLMP_RR_0_0"
+  ],
+  [
+   "BOLT_CLMP_RR_0_1",
+   "NUT_CLMP_RR_0_1"
+  ],
+  [
+   "BOLT_CLMP_RR_1_0",
+   "NUT_CLMP_RR_1_0"
+  ],
+  [
+   "BOLT_CLMP_RR_1_1",
+   "NUT_CLMP_RR_1_1"
+  ],
+  [
+   "BOLT_MPL_L_0",
+   "NUT_MPL_L_0"
+  ],
+  [
+   "BOLT_MPL_L_1",
+   "NUT_MPL_L_1"
+  ],
+  [
+   "BOLT_MPL_L_2",
+   "NUT_MPL_L_2"
+  ],
+  [
+   "BOLT_MPL_L_3",
+   "NUT_MPL_L_3"
+  ],
+  [
+   "BOLT_MPL_L_4",
+   "NUT_MPL_L_4"
+  ],
+  [
+   "BOLT_MPL_L_5",
+   "NUT_MPL_L_5"
+  ],
+  [
+   "BOLT_MPL_L_6",
+   "NUT_MPL_L_6"
+  ],
+  [
+   "BOLT_MPL_L_7",
+   "NUT_MPL_L_7"
+  ],
+  [
+   "BOLT_MPL_L_8",
+   "NUT_MPL_L_8"
+  ],
+  [
+   "BOLT_MPL_L_9",
+   "NUT_MPL_L_9"
+  ],
+  [
+   "BOLT_MPL_L_10",
+   "NUT_MPL_L_10"
+  ],
+  [
+   "BOLT_MPL_L_11",
+   "NUT_MPL_L_11"
+  ],
+  [
+   "BOLT_MPL_L_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_2",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_3",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_4",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_5",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_6",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_7",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_8",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_9",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MPL_L_0",
+   "NUT_MPL_L_0"
+  ],
+  [
+   "BOLT_MPL_L_1",
+   "NUT_MPL_L_1"
+  ],
+  [
+   "BOLT_MPL_L_2",
+   "NUT_MPL_L_2"
+  ],
+  [
+   "BOLT_MPL_L_3",
+   "NUT_MPL_L_3"
+  ],
+  [
+   "BOLT_MPL_L_4",
+   "NUT_MPL_L_4"
+  ],
+  [
+   "BOLT_MPL_L_5",
+   "NUT_MPL_L_5"
+  ],
+  [
+   "BOLT_MPL_L_6",
+   "NUT_MPL_L_6"
+  ],
+  [
+   "BOLT_MPL_L_7",
+   "NUT_MPL_L_7"
+  ],
+  [
+   "BOLT_MPL_L_8",
+   "NUT_MPL_L_8"
+  ],
+  [
+   "BOLT_MPL_L_9",
+   "NUT_MPL_L_9"
+  ],
+  [
+   "BOLT_MPL_L_10",
+   "NUT_MPL_L_10"
+  ],
+  [
+   "BOLT_MPL_L_11",
+   "NUT_MPL_L_11"
+  ],
+  [
+   "BOLT_MPL_R_0",
+   "NUT_MPL_R_0"
+  ],
+  [
+   "BOLT_MPL_R_1",
+   "NUT_MPL_R_1"
+  ],
+  [
+   "BOLT_MPL_R_2",
+   "NUT_MPL_R_2"
+  ],
+  [
+   "BOLT_MPL_R_3",
+   "NUT_MPL_R_3"
+  ],
+  [
+   "BOLT_MPL_R_4",
+   "NUT_MPL_R_4"
+  ],
+  [
+   "BOLT_MPL_R_5",
+   "NUT_MPL_R_5"
+  ],
+  [
+   "BOLT_MPL_R_6",
+   "NUT_MPL_R_6"
+  ],
+  [
+   "BOLT_MPL_R_7",
+   "NUT_MPL_R_7"
+  ],
+  [
+   "BOLT_MPL_R_8",
+   "NUT_MPL_R_8"
+  ],
+  [
+   "BOLT_MPL_R_9",
+   "NUT_MPL_R_9"
+  ],
+  [
+   "BOLT_MPL_R_10",
+   "NUT_MPL_R_10"
+  ],
+  [
+   "BOLT_MPL_R_11",
+   "NUT_MPL_R_11"
+  ],
+  [
+   "BOLT_MPL_R_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_2",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_3",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_4",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_5",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_6",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_7",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_8",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_9",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MPL_R_0",
+   "NUT_MPL_R_0"
+  ],
+  [
+   "BOLT_MPL_R_1",
+   "NUT_MPL_R_1"
+  ],
+  [
+   "BOLT_MPL_R_2",
+   "NUT_MPL_R_2"
+  ],
+  [
+   "BOLT_MPL_R_3",
+   "NUT_MPL_R_3"
+  ],
+  [
+   "BOLT_MPL_R_4",
+   "NUT_MPL_R_4"
+  ],
+  [
+   "BOLT_MPL_R_5",
+   "NUT_MPL_R_5"
+  ],
+  [
+   "BOLT_MPL_R_6",
+   "NUT_MPL_R_6"
+  ],
+  [
+   "BOLT_MPL_R_7",
+   "NUT_MPL_R_7"
+  ],
+  [
+   "BOLT_MPL_R_8",
+   "NUT_MPL_R_8"
+  ],
+  [
+   "BOLT_MPL_R_9",
+   "NUT_MPL_R_9"
+  ],
+  [
+   "BOLT_MPL_R_10",
+   "NUT_MPL_R_10"
+  ],
+  [
+   "BOLT_MPL_R_11",
+   "NUT_MPL_R_11"
+  ],
+  [
+   "BOLT_ODO_LAT_L_0",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "BOLT_ODO_LAT_L_1",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_PIVOT_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "NUT_ODO_AXLE_LAT_L",
+   "ODO_AXLE_LAT_L"
+  ],
+  [
+   "NUT_ODO_PIVOT_LAT_L",
+   "ODO_PIVOT_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "NUT_ODO_AXLE_LAT_L"
+  ],
+  [
+   "ODO_PIVOT_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "ODO_PIVOT_LAT_L",
+   "NUT_ODO_PIVOT_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_0",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_0",
+   "ODO_ENC_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_0",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_1",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_1",
+   "ODO_ENC_LAT_L"
+  ],
+  [
+   "SCRW_ENC_LAT_L_1",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "BOLT_ODO_LAT_R_0",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "BOLT_ODO_LAT_R_1",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_PIVOT_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "NUT_ODO_AXLE_LAT_R",
+   "ODO_AXLE_LAT_R"
+  ],
+  [
+   "NUT_ODO_PIVOT_LAT_R",
+   "ODO_PIVOT_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "NUT_ODO_AXLE_LAT_R"
+  ],
+  [
+   "ODO_PIVOT_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "ODO_PIVOT_LAT_R",
+   "NUT_ODO_PIVOT_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_0",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_0",
+   "ODO_ENC_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_0",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_1",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_1",
+   "ODO_ENC_LAT_R"
+  ],
+  [
+   "SCRW_ENC_LAT_R_1",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "BOLT_ODO_LON_0",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "BOLT_ODO_LON_1",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_PIVOT_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "NUT_ODO_AXLE_LON",
+   "ODO_AXLE_LON"
+  ],
+  [
+   "NUT_ODO_PIVOT_LON",
+   "ODO_PIVOT_LON"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "NUT_ODO_AXLE_LON"
+  ],
+  [
+   "ODO_PIVOT_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "ODO_PIVOT_LON",
+   "NUT_ODO_PIVOT_LON"
+  ],
+  [
+   "SCRW_ENC_LON_0",
+   "ODO_ARM_LON"
+  ],
+  [
+   "SCRW_ENC_LON_0",
+   "ODO_ENC_LON"
+  ],
+  [
+   "SCRW_ENC_LON_0",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "SCRW_ENC_LON_1",
+   "ODO_ARM_LON"
+  ],
+  [
+   "SCRW_ENC_LON_1",
+   "ODO_ENC_LON"
+  ],
+  [
+   "SCRW_ENC_LON_1",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "BATT_STRAP_0",
+   "BATTERY"
+  ],
+  [
+   "BOLT_STRAP_0_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_STRAP_0_1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_STRAP_0_0",
+   "NUT_STRAP_0_0"
+  ],
+  [
+   "BOLT_STRAP_0_1",
+   "NUT_STRAP_0_1"
+  ],
+  [
+   "BATT_STRAP_1",
+   "BATTERY"
+  ],
+  [
+   "BOLT_STRAP_1_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_STRAP_1_1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_STRAP_1_0",
+   "NUT_STRAP_1_0"
+  ],
+  [
+   "BOLT_STRAP_1_1",
+   "NUT_STRAP_1_1"
+  ],
+  [
+   "BOLT_SO_B_0",
+   "STANDOFF_0"
+  ],
+  [
+   "BOLT_SO_T_0",
+   "STANDOFF_0"
+  ],
+  [
+   "BOLT_SO_B_1",
+   "STANDOFF_1"
+  ],
+  [
+   "BOLT_SO_T_1",
+   "STANDOFF_1"
+  ],
+  [
+   "BOLT_SO_B_2",
+   "STANDOFF_2"
+  ],
+  [
+   "BOLT_SO_T_2",
+   "STANDOFF_2"
+  ],
+  [
+   "BOLT_SO_B_3",
+   "STANDOFF_3"
+  ],
+  [
+   "BOLT_SO_T_3",
+   "STANDOFF_3"
+  ],
+  [
+   "BOLT_SW_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_SW_1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_SW_0",
+   "NUT_SW_0"
+  ],
+  [
+   "BOLT_SW_1",
+   "NUT_SW_1"
+  ],
+  [
+   "SCRW_SW_0",
+   "MAIN_SWITCH"
+  ],
+  [
+   "SCRW_SW_0",
+   "SWITCH_BRKT"
+  ],
+  [
+   "SCRW_SW_1",
+   "MAIN_SWITCH"
+  ],
+  [
+   "SCRW_SW_1",
+   "SWITCH_BRKT"
+  ],
+  [
+   "BOLT_HUB_C_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_2",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_3",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_0",
+   "NUT_HUB_C_0"
+  ],
+  [
+   "BOLT_HUB_C_1",
+   "NUT_HUB_C_1"
+  ],
+  [
+   "BOLT_HUB_C_2",
+   "NUT_HUB_C_2"
+  ],
+  [
+   "BOLT_HUB_C_3",
+   "NUT_HUB_C_3"
+  ],
+  [
+   "BOLT_HUB_E_0",
+   "ELEC_SHELF"
+  ],
+  [
+   "BOLT_HUB_E_1",
+   "ELEC_SHELF"
+  ],
+  [
+   "BOLT_HUB_E_2",
+   "ELEC_SHELF"
+  ],
+  [
+   "BOLT_HUB_E_3",
+   "ELEC_SHELF"
+  ],
+  [
+   "BOLT_HUB_E_0",
+   "NUT_HUB_E_0"
+  ],
+  [
+   "BOLT_HUB_E_1",
+   "NUT_HUB_E_1"
+  ],
+  [
+   "BOLT_HUB_E_2",
+   "NUT_HUB_E_2"
+  ],
+  [
+   "BOLT_HUB_E_3",
+   "NUT_HUB_E_3"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "BATTERY"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "MAIN_SWITCH"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "HUB_EXP"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "ELEC_SHELF"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "MOTOR_FL"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "MOTOR_RL"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "MOTOR_FR"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "MOTOR_RR"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "ODO_ENC_LAT_L"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "HUB_EXP"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "ELEC_SHELF"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "ODO_ENC_LAT_R"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "HUB_EXP"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "ELEC_SHELF"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ODO_ENC_LON"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "HUB_EXP"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ELEC_SHELF"
+  ]
+ ],
+ "journals": [
+  [
+   "WHEEL_PLATE_FL_IN",
+   "AXLE_FL"
+  ],
+  [
+   "WHEEL_PLATE_FL_OUT",
+   "AXLE_FL"
+  ],
+  [
+   "WHEEL_HUB_FL",
+   "AXLE_FL"
+  ],
+  [
+   "AXLE_FL",
+   "BRG_IN_FL"
+  ],
+  [
+   "AXLE_FL",
+   "BRG_OUT_FL"
+  ],
+  [
+   "BOLT_BRG_IN_FL_00",
+   "BRG_IN_FL"
+  ],
+  [
+   "BOLT_BRG_IN_FL_01",
+   "BRG_IN_FL"
+  ],
+  [
+   "BOLT_BRG_IN_FL_10",
+   "BRG_IN_FL"
+  ],
+  [
+   "BOLT_BRG_IN_FL_11",
+   "BRG_IN_FL"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_00",
+   "BRG_OUT_FL"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_01",
+   "BRG_OUT_FL"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_10",
+   "BRG_OUT_FL"
+  ],
+  [
+   "BOLT_BRG_OUT_FL_11",
+   "BRG_OUT_FL"
+  ],
+  [
+   "AXLE_FL",
+   "MOTOR_FL"
+  ],
+  [
+   "AXLE_FL",
+   "WSH_AXLE_FL"
+  ],
+  [
+   "AXLE_FL",
+   "COLLAR_FL"
+  ],
+  [
+   "AXLE_FL",
+   "PINION_FL"
+  ],
+  [
+   "AXLE_FL",
+   "WSH_OUT_FL"
+  ],
+  [
+   "WHEEL_PLATE_FR_IN",
+   "AXLE_FR"
+  ],
+  [
+   "WHEEL_PLATE_FR_OUT",
+   "AXLE_FR"
+  ],
+  [
+   "WHEEL_HUB_FR",
+   "AXLE_FR"
+  ],
+  [
+   "AXLE_FR",
+   "BRG_IN_FR"
+  ],
+  [
+   "AXLE_FR",
+   "BRG_OUT_FR"
+  ],
+  [
+   "BOLT_BRG_IN_FR_00",
+   "BRG_IN_FR"
+  ],
+  [
+   "BOLT_BRG_IN_FR_01",
+   "BRG_IN_FR"
+  ],
+  [
+   "BOLT_BRG_IN_FR_10",
+   "BRG_IN_FR"
+  ],
+  [
+   "BOLT_BRG_IN_FR_11",
+   "BRG_IN_FR"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_00",
+   "BRG_OUT_FR"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_01",
+   "BRG_OUT_FR"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_10",
+   "BRG_OUT_FR"
+  ],
+  [
+   "BOLT_BRG_OUT_FR_11",
+   "BRG_OUT_FR"
+  ],
+  [
+   "AXLE_FR",
+   "MOTOR_FR"
+  ],
+  [
+   "AXLE_FR",
+   "WSH_AXLE_FR"
+  ],
+  [
+   "AXLE_FR",
+   "COLLAR_FR"
+  ],
+  [
+   "AXLE_FR",
+   "PINION_FR"
+  ],
+  [
+   "AXLE_FR",
+   "WSH_OUT_FR"
+  ],
+  [
+   "WHEEL_PLATE_RL_IN",
+   "AXLE_RL"
+  ],
+  [
+   "WHEEL_PLATE_RL_OUT",
+   "AXLE_RL"
+  ],
+  [
+   "WHEEL_HUB_RL",
+   "AXLE_RL"
+  ],
+  [
+   "AXLE_RL",
+   "BRG_IN_RL"
+  ],
+  [
+   "AXLE_RL",
+   "BRG_OUT_RL"
+  ],
+  [
+   "BOLT_BRG_IN_RL_00",
+   "BRG_IN_RL"
+  ],
+  [
+   "BOLT_BRG_IN_RL_01",
+   "BRG_IN_RL"
+  ],
+  [
+   "BOLT_BRG_IN_RL_10",
+   "BRG_IN_RL"
+  ],
+  [
+   "BOLT_BRG_IN_RL_11",
+   "BRG_IN_RL"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_00",
+   "BRG_OUT_RL"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_01",
+   "BRG_OUT_RL"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_10",
+   "BRG_OUT_RL"
+  ],
+  [
+   "BOLT_BRG_OUT_RL_11",
+   "BRG_OUT_RL"
+  ],
+  [
+   "AXLE_RL",
+   "MOTOR_RL"
+  ],
+  [
+   "AXLE_RL",
+   "WSH_AXLE_RL"
+  ],
+  [
+   "AXLE_RL",
+   "COLLAR_RL"
+  ],
+  [
+   "AXLE_RL",
+   "PINION_RL"
+  ],
+  [
+   "AXLE_RL",
+   "WSH_OUT_RL"
+  ],
+  [
+   "WHEEL_PLATE_RR_IN",
+   "AXLE_RR"
+  ],
+  [
+   "WHEEL_PLATE_RR_OUT",
+   "AXLE_RR"
+  ],
+  [
+   "WHEEL_HUB_RR",
+   "AXLE_RR"
+  ],
+  [
+   "AXLE_RR",
+   "BRG_IN_RR"
+  ],
+  [
+   "AXLE_RR",
+   "BRG_OUT_RR"
+  ],
+  [
+   "BOLT_BRG_IN_RR_00",
+   "BRG_IN_RR"
+  ],
+  [
+   "BOLT_BRG_IN_RR_01",
+   "BRG_IN_RR"
+  ],
+  [
+   "BOLT_BRG_IN_RR_10",
+   "BRG_IN_RR"
+  ],
+  [
+   "BOLT_BRG_IN_RR_11",
+   "BRG_IN_RR"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_00",
+   "BRG_OUT_RR"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_01",
+   "BRG_OUT_RR"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_10",
+   "BRG_OUT_RR"
+  ],
+  [
+   "BOLT_BRG_OUT_RR_11",
+   "BRG_OUT_RR"
+  ],
+  [
+   "AXLE_RR",
+   "MOTOR_RR"
+  ],
+  [
+   "AXLE_RR",
+   "WSH_AXLE_RR"
+  ],
+  [
+   "AXLE_RR",
+   "COLLAR_RR"
+  ],
+  [
+   "AXLE_RR",
+   "PINION_RR"
+  ],
+  [
+   "AXLE_RR",
+   "WSH_OUT_RR"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "ODO_WHEEL_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_L",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "ODO_PIVOT_LAT_L",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "ODO_WHEEL_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LAT_R",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "ODO_PIVOT_LAT_R",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "ODO_WHEEL_LON"
+  ],
+  [
+   "ODO_AXLE_LON",
+   "ODO_ARM_LON"
+  ],
+  [
+   "ODO_PIVOT_LON",
+   "ODO_ARM_LON"
+  ]
+ ],
+ "contacts": [
+  [
+   "NUT_RIV_IN_FL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_FL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_FL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_FL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_FL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_FL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_FL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_FL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MTR_FL_00",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_FL_01",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_FL_10",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_FL_11",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "CLAMP_FL_2",
+   "MOTOR_FL"
+  ],
+  [
+   "CLAMP_FL_1",
+   "MOTOR_FL"
+  ],
+  [
+   "NUT_RIV_IN_FR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_FR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_FR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_FR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_FR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_FR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_FR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_FR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MTR_FR_00",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_FR_01",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_FR_10",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_FR_11",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "CLAMP_FR_2",
+   "MOTOR_FR"
+  ],
+  [
+   "CLAMP_FR_1",
+   "MOTOR_FR"
+  ],
+  [
+   "NUT_RIV_IN_RL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_RL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_RL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_IN_RL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_RL_00",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_RL_01",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_RL_10",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "NUT_RIV_OUT_RL_11",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_MTR_RL_00",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_RL_01",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_RL_10",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "BOLT_MTR_RL_11",
+   "MOUNT_PLATE_L"
+  ],
+  [
+   "CLAMP_RL_2",
+   "MOTOR_RL"
+  ],
+  [
+   "CLAMP_RL_1",
+   "MOTOR_RL"
+  ],
+  [
+   "NUT_RIV_IN_RR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_RR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_RR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_IN_RR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_RR_00",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_RR_01",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_RR_10",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "NUT_RIV_OUT_RR_11",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_MTR_RR_00",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_RR_01",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_RR_10",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "BOLT_MTR_RR_11",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "CLAMP_RR_2",
+   "MOTOR_RR"
+  ],
+  [
+   "CLAMP_RR_1",
+   "MOTOR_RR"
+  ],
+  [
+   "ODO_SPRING_LAT_L",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LAT_L",
+   "ODO_ARM_LAT_L"
+  ],
+  [
+   "ODO_SPRING_LAT_R",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LAT_R",
+   "ODO_ARM_LAT_R"
+  ],
+  [
+   "ODO_SPRING_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "ODO_SPRING_LON",
+   "ODO_ARM_LON"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "SWITCH_BRKT"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "SWITCH_BRKT"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "CLAMP_FL_1"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "BOLT_CLMP_FL_1_0"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "BOLT_CLMP_FL_0_0"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "CLAMP_RL_1"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "BOLT_CLMP_RL_1_0"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "BOLT_CLMP_RL_0_0"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "CLAMP_FR_1"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "BOLT_CLMP_FR_1_0"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "BOLT_CLMP_FR_0_0"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "CLAMP_RR_1"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "BOLT_CLMP_RR_1_0"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "BOLT_CLMP_RR_0_0"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "ODO_MOUNT_LAT_L"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "SCRW_ENC_LAT_L_0"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "ODO_MOUNT_LAT_R"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "SCRW_ENC_LAT_R_0"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ODO_MOUNT_LON"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "SCRW_ENC_LON_0"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_SW_CTRL"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_MTR_FL"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_BATT_SW",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_MTR_FL"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_MTR_FL"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_MTR_RL",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "BATT_STRAP_0",
+   "WIRE_BATT_SW"
+  ],
+  [
+   "BATT_STRAP_1",
+   "WIRE_BATT_SW"
+  ]
+ ],
+ "ground": [
+  "ROLLER_FL_00_B",
+  "ROLLER_FL_01_B",
+  "ROLLER_FL_02_B",
+  "ROLLER_FL_03_B",
+  "ROLLER_FL_04_B",
+  "ROLLER_FL_05_B",
+  "ROLLER_FL_06_B",
+  "ROLLER_FL_07_B",
+  "ROLLER_FL_08_B",
+  "ROLLER_FL_09_B",
+  "ROLLER_FR_00_B",
+  "ROLLER_FR_01_B",
+  "ROLLER_FR_02_B",
+  "ROLLER_FR_03_B",
+  "ROLLER_FR_04_B",
+  "ROLLER_FR_05_B",
+  "ROLLER_FR_06_B",
+  "ROLLER_FR_07_B",
+  "ROLLER_FR_08_B",
+  "ROLLER_FR_09_B",
+  "ROLLER_RL_00_B",
+  "ROLLER_RL_01_B",
+  "ROLLER_RL_02_B",
+  "ROLLER_RL_03_B",
+  "ROLLER_RL_04_B",
+  "ROLLER_RL_05_B",
+  "ROLLER_RL_06_B",
+  "ROLLER_RL_07_B",
+  "ROLLER_RL_08_B",
+  "ROLLER_RL_09_B",
+  "ROLLER_RR_00_B",
+  "ROLLER_RR_01_B",
+  "ROLLER_RR_02_B",
+  "ROLLER_RR_03_B",
+  "ROLLER_RR_04_B",
+  "ROLLER_RR_05_B",
+  "ROLLER_RR_06_B",
+  "ROLLER_RR_07_B",
+  "ROLLER_RR_08_B",
+  "ROLLER_RR_09_B",
+  "ODO_WHEEL_LAT_L",
+  "ODO_WHEEL_LAT_R",
+  "ODO_WHEEL_LON"
+ ],
+ "bom": [
+  {
+   "subsys": "frame",
+   "spec": "1120 U-channel 444.5mm",
+   "material": "aluminum",
+   "dims": "444.5x48x48",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "FRAME_RAIL_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "1120 U-channel 444.5mm",
+   "material": "aluminum",
+   "dims": "444.5x48x48",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "FRAME_RAIL_R"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "1120 U-channel crossmember 271.8mm",
+   "material": "aluminum",
+   "dims": "271.8x48x48",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "FRAME_CROSS_B"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "1120 U-channel crown 271.8mm",
+   "material": "aluminum",
+   "dims": "271.8x48x48",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "FRAME_CROWN_F"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "crown riser tongue + foot",
+   "material": "aluminum",
+   "dims": "8x44x115 + 40x40x5",
+   "status": "UNVERIFIED",
+   "members": [
+    "CROWN_POST_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "inside-corner gusset",
+   "material": "aluminum",
+   "dims": "40x40x6",
+   "status": "UNVERIFIED",
+   "members": [
+    "GUSSET_BL"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "low corner gusset",
+   "material": "aluminum",
+   "dims": "35x35x6",
+   "status": "UNVERIFIED",
+   "members": [
+    "GUSSET_UL"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "corner splice plate",
+   "material": "aluminum",
+   "dims": "30x72x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "TIE_RB_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "crown riser tongue + foot",
+   "material": "aluminum",
+   "dims": "8x44x115 + 40x40x5",
+   "status": "UNVERIFIED",
+   "members": [
+    "CROWN_POST_R"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "inside-corner gusset",
+   "material": "aluminum",
+   "dims": "40x40x6",
+   "status": "UNVERIFIED",
+   "members": [
+    "GUSSET_BR"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "low corner gusset",
+   "material": "aluminum",
+   "dims": "35x35x6",
+   "status": "UNVERIFIED",
+   "members": [
+    "GUSSET_UR"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "corner splice plate",
+   "material": "aluminum",
+   "dims": "30x72x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "TIE_RB_R"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "belly pan sheet",
+   "material": "polycarb",
+   "dims": "350x269x2",
+   "status": "UNVERIFIED",
+   "members": [
+    "BELLY_PAN"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_L0"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_L1"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_L2"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_R0"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_R1"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "pan mount L-bracket",
+   "material": "aluminum",
+   "dims": "30x40x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "PAN_BRKT_R2"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck panel",
+   "material": "polycarb",
+   "dims": "294x118x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_L0"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_L1"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_L2"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_L3"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck panel",
+   "material": "polycarb",
+   "dims": "294x118x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_R"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_R0"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_R1"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_R2"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "deck standoff O10 hex",
+   "material": "aluminum",
+   "dims": "O10x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "DECK_POST_R3"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_FL"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_BL"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_FR"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_BR"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_XB_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "channel end plug",
+   "material": "nylon",
+   "dims": "45x42x3",
+   "status": "UNVERIFIED",
+   "members": [
+    "ENDCAP_XB_R"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "alliance number plate",
+   "material": "polycarb",
+   "dims": "91x61x2",
+   "status": "UNVERIFIED",
+   "members": [
+    "PLATE_NUM_L"
+   ]
+  },
+  {
+   "subsys": "frame",
+   "spec": "alliance number plate",
+   "material": "polycarb",
+   "dims": "91x61x2",
+   "status": "UNVERIFIED",
+   "members": [
+    "PLATE_NUM_B"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "8mm REX live axle, M8 tip",
+   "material": "steel",
+   "dims": "L=112",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "AXLE_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_IN_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_OUT_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "5203-class gearbox motor",
+   "material": "motor",
+   "dims": "O36 can / O40 gb",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "MOTOR_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "shaft washer/collar/pinion",
+   "material": "steel",
+   "dims": "O16/18/17",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_AXLE_FL",
+    "COLLAR_FL",
+    "PINION_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "axle washer + M8 nylock",
+   "material": "steel",
+   "dims": "O16/M8",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_OUT_FL",
+    "NUT_AXLE_FL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_FL_2"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_FL_1"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "8mm REX live axle, M8 tip",
+   "material": "steel",
+   "dims": "L=112",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "AXLE_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_IN_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_OUT_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "5203-class gearbox motor",
+   "material": "motor",
+   "dims": "O36 can / O40 gb",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "MOTOR_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "shaft washer/collar/pinion",
+   "material": "steel",
+   "dims": "O16/18/17",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_AXLE_FR",
+    "COLLAR_FR",
+    "PINION_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "axle washer + M8 nylock",
+   "material": "steel",
+   "dims": "O16/M8",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_OUT_FR",
+    "NUT_AXLE_FR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_FR_2"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_FR_1"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "8mm REX live axle, M8 tip",
+   "material": "steel",
+   "dims": "L=112",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "AXLE_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_IN_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_OUT_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "5203-class gearbox motor",
+   "material": "motor",
+   "dims": "O36 can / O40 gb",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "MOTOR_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "shaft washer/collar/pinion",
+   "material": "steel",
+   "dims": "O16/18/17",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_AXLE_RL",
+    "COLLAR_RL",
+    "PINION_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "axle washer + M8 nylock",
+   "material": "steel",
+   "dims": "O16/M8",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_OUT_RL",
+    "NUT_AXLE_RL"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_RL_2"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_RL_1"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "8mm REX live axle, M8 tip",
+   "material": "steel",
+   "dims": "L=112",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "AXLE_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_IN_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "flange bearing block",
+   "material": "aluminum",
+   "dims": "26x26x6 O9.6 bore O15.6 pilot",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BRG_OUT_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "5203-class gearbox motor",
+   "material": "motor",
+   "dims": "O36 can / O40 gb",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "MOTOR_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "shaft washer/collar/pinion",
+   "material": "steel",
+   "dims": "O16/18/17",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_AXLE_RR",
+    "COLLAR_RR",
+    "PINION_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "axle washer + M8 nylock",
+   "material": "steel",
+   "dims": "O16/M8",
+   "status": "UNVERIFIED",
+   "members": [
+    "WSH_OUT_RR",
+    "NUT_AXLE_RR"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_RR_2"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor clamp block",
+   "material": "aluminum",
+   "dims": "O40.5 bore + ears",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLAMP_RR_1"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor mount plate",
+   "material": "aluminum",
+   "dims": "348.5x48.3x3.05",
+   "status": "UNVERIFIED",
+   "members": [
+    "MOUNT_PLATE_L"
+   ]
+  },
+  {
+   "subsys": "drivetrain",
+   "spec": "motor mount plate",
+   "material": "aluminum",
+   "dims": "348.5x48.3x3.05",
+   "status": "UNVERIFIED",
+   "members": [
+    "MOUNT_PLATE_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod mount block",
+   "material": "aluminum",
+   "dims": "16x12x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_MOUNT_LAT_L"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "odo swing arm",
+   "material": "aluminum",
+   "dims": "52x4x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ARM_LAT_L"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "48mm dead wheel",
+   "material": "polyurethane",
+   "dims": "O48x16",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "ODO_WHEEL_LAT_L"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod preload strut",
+   "material": "steel+delrin",
+   "dims": "O8 spring",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_SPRING_LAT_L"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod encoder board",
+   "material": "pcb",
+   "dims": "16x2x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ENC_LAT_L"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod mount block",
+   "material": "aluminum",
+   "dims": "16x12x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_MOUNT_LAT_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "odo swing arm",
+   "material": "aluminum",
+   "dims": "52x4x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ARM_LAT_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "48mm dead wheel",
+   "material": "polyurethane",
+   "dims": "O48x16",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "ODO_WHEEL_LAT_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod preload strut",
+   "material": "steel+delrin",
+   "dims": "O8 spring",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_SPRING_LAT_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod encoder board",
+   "material": "pcb",
+   "dims": "16x2x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ENC_LAT_R"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod mount block",
+   "material": "aluminum",
+   "dims": "16x12x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_MOUNT_LON"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "odo swing arm",
+   "material": "aluminum",
+   "dims": "52x4x20",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ARM_LON"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "48mm dead wheel",
+   "material": "polyurethane",
+   "dims": "O48x16",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "ODO_WHEEL_LON"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod preload strut",
+   "material": "steel+delrin",
+   "dims": "O8 spring",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_SPRING_LON"
+   ]
+  },
+  {
+   "subsys": "odometry",
+   "spec": "pod encoder board",
+   "material": "pcb",
+   "dims": "16x2x12",
+   "status": "UNVERIFIED",
+   "members": [
+    "ODO_ENC_LON"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "3000mAh 12V battery",
+   "material": "battery",
+   "dims": "75x45x22",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "BATTERY"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "battery strap",
+   "material": "nylon",
+   "dims": "wrap",
+   "status": "UNVERIFIED",
+   "members": [
+    "BATT_STRAP_0"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "battery strap",
+   "material": "nylon",
+   "dims": "wrap",
+   "status": "UNVERIFIED",
+   "members": [
+    "BATT_STRAP_1"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "electronics shelf",
+   "material": "polycarb",
+   "dims": "86x128x2",
+   "status": "UNVERIFIED",
+   "members": [
+    "ELEC_SHELF"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "shelf standoff",
+   "material": "aluminum",
+   "dims": "O8x31",
+   "status": "UNVERIFIED",
+   "members": [
+    "STANDOFF_0"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "shelf standoff",
+   "material": "aluminum",
+   "dims": "O8x31",
+   "status": "UNVERIFIED",
+   "members": [
+    "STANDOFF_1"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "shelf standoff",
+   "material": "aluminum",
+   "dims": "O8x31",
+   "status": "UNVERIFIED",
+   "members": [
+    "STANDOFF_2"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "shelf standoff",
+   "material": "aluminum",
+   "dims": "O8x31",
+   "status": "UNVERIFIED",
+   "members": [
+    "STANDOFF_3"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "switch bracket",
+   "material": "aluminum",
+   "dims": "L30x20x24",
+   "status": "UNVERIFIED",
+   "members": [
+    "SWITCH_BRKT"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "main power switch",
+   "material": "switch",
+   "dims": "15x9x13",
+   "status": "UNVERIFIED",
+   "members": [
+    "MAIN_SWITCH"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "REV hub (ctrl)",
+   "material": "hub",
+   "dims": "142x79x29",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "HUB_CTRL"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "REV hub (exp)",
+   "material": "hub",
+   "dims": "142x79x29",
+   "status": "VENDOR-PENDING",
+   "members": [
+    "HUB_EXP"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O4",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_BATT_SW"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O4",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_SW_CTRL"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O3",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_HUB_RS485"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O3",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_MTR_FL"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O3",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_MTR_RL"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O3",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_MTR_FR"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O3",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_MTR_RR"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O1.5",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_ENC_LAT_L"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O1.5",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_ENC_LAT_R"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "wire run",
+   "material": "wire",
+   "dims": "O1.5",
+   "status": "UNVERIFIED",
+   "members": [
+    "WIRE_ENC_LON"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "adhesive cable clip",
+   "material": "nylon",
+   "dims": "12x12x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLIP_0"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "adhesive cable clip",
+   "material": "nylon",
+   "dims": "12x12x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLIP_1"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "adhesive cable clip",
+   "material": "nylon",
+   "dims": "12x12x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLIP_2"
+   ]
+  },
+  {
+   "subsys": "electronics",
+   "spec": "adhesive cable clip",
+   "material": "nylon",
+   "dims": "12x12x4",
+   "status": "UNVERIFIED",
+   "members": [
+    "CLIP_3"
+   ]
+  }
+ ]
+}

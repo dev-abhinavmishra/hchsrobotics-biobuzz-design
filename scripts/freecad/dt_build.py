@@ -72,6 +72,11 @@ def _jm(ctx, jid, members, bolts=(), nuts=(), terminal=None):
     ctx["joints"].append({"id": jid, "members": list(members),
                           "bolts": list(bolts), "nuts": list(nuts),
                           "terminal": terminal})
+    term = terminal if terminal is not None else members[-1]
+    for bt in bolts:
+        _em(ctx, bt, term)
+    for i in range(min(len(bolts), len(nuts))):
+        _em(ctx, bolts[i], nuts[i])
 
 
 def _fp(ctx, a, b):
@@ -134,7 +139,10 @@ def _flathead(doc, name, status, shaft_len, pos, axis):
     sh = pk.tool_cyl(doc, name + "_SH",
                      {"Radius": "(Parameters.bolt_d) / 2",
                       "Height": shaft_len}, sp, pk.axis_rot(axis))
-    return pk.fuse(doc, name, name + "_flathead_M4", status, hd, sh)
+    tok = status.split(" ")[0] if status else ""
+    return pk.fuse(doc, name,
+                   name + "_flathead_M4" + ("_" + tok if tok else ""),
+                   status, hd, sh)
 
 
 def _sink_tool(doc, name, pos, axis):
@@ -442,8 +450,8 @@ def _crown_post(doc, ctx, sgn):
         nn = "NUT_CROWN_%s_%d" % (name[-1], i)
         yb = _y(by, sgn)
         pk.bolt(doc, bn, bn + "_M4x56_UNVERIFIED",
-                "UNVERIFIED - M4x56 crown pin bolt",
-                "Parameters.bolt_d", "56",
+                "UNVERIFIED - M4x52 crown pin bolt",
+                "Parameters.bolt_d", "52",
                 "Parameters.bolt_head_d", "Parameters.bolt_head_h",
                 {"Placement.Base.x":
                  "(Parameters.cross_x_off - Parameters.rail_size / 2 "
@@ -776,7 +784,7 @@ def _tie_plate(doc, ctx, sgn):
     _jm(ctx, "tie_web", [plate.Name, rail, "FRAME_CROSS_B"], bolts, nuts)
 
 
-def _endcap(doc, ctx, name, pos, axis, member):
+def _endcap(doc, ctx, name, pos, axis, member, short=False):
     """Recessed end plug nested inside a channel mouth."""
     S, W = "Parameters.rail_size", "Parameters.rail_wall"
     # press-fit plug: sized 0.1mm oversize per side -> declared embed
@@ -789,7 +797,8 @@ def _endcap(doc, ctx, name, pos, axis, member):
                     pos["Placement.Base.y"], W),
                 "Placement.Base.z": "(%s - 0.1)" % pos["Placement.Base.z"]}
     else:
-        dims = {"Length": "(%s - 2 * %s + 0.2)" % (S, W),
+        dims = {"Length": ("16" if short else
+                           "(%s - 2 * %s + 0.2)" % (S, W)),
                 "Width": "Parameters.endcap_t",
                 "Height": "(%s - %s + 0.7)" % (S, W)}
         ppos = {"Placement.Base.x": "(%s + %s - 0.1)" % (
@@ -1203,23 +1212,19 @@ def build_frame(doc, ctx):
                      "Placement.Base.y": ybase,
                      "Placement.Base.z": RAIL_Z0},
                     "X", rail)
-    for tag, ch, member in (("XB", "(-Parameters.cross_x_off - "
-                                   "Parameters.rail_size / 2)",
-                             "FRAME_CROSS_B"),
-                            ("CR", "(Parameters.cross_x_off - "
-                                   "Parameters.rail_size / 2)",
-                             "FRAME_CROWN_F")):
-        zc = RAIL_Z0 if tag == "XB" else \
-            "(Parameters.crown_z - Parameters.rail_size / 2)"
-        for sgn in (1, -1):
-            name = "ENDCAP_%s_%s" % (tag, "L" if sgn > 0 else "R")
-            _endcap(doc, ctx, name,
-                    {"Placement.Base.x": ch,
-                     "Placement.Base.y":
-                     "(Parameters.cross_half_len - Parameters.endcap_t)"
-                     if sgn > 0 else "(-Parameters.cross_half_len)",
-                     "Placement.Base.z": zc},
-                    "Y", member)
+    # XB crossmember mouths still open -> shortened plug that ends
+    # before the under-gusset's wall leg; CR mouths are closed by the
+    # crown posts themselves (no open mouth to cap).
+    for sgn in (1, -1):
+        name = "ENDCAP_XB_%s" % ("L" if sgn > 0 else "R")
+        _endcap(doc, ctx, name,
+                {"Placement.Base.x":
+                 "(-Parameters.cross_x_off - Parameters.rail_size / 2)",
+                 "Placement.Base.y":
+                 "(Parameters.cross_half_len - Parameters.endcap_t)"
+                 if sgn > 0 else "(-Parameters.cross_half_len)",
+                 "Placement.Base.z": RAIL_Z0},
+                "Y", "FRAME_CROSS_B", short=True)
     _number_plate(
         doc, ctx, "PLATE_NUM_L", "FRAME_RAIL_L",
         {"Placement.Base.x": "-45.5",
@@ -1460,7 +1465,7 @@ def _clamp_pair(doc, ctx, wtag, wx, sy):
             ("(%s - 14)" % AXZ, "(%s + 14)" % AXZ))
         _s(ctx, cl)
         names.append(cl.Name)
-        _jl(ctx, cl.Name, "MOTOR_" + wtag)
+        _cn(ctx, cl.Name, "MOTOR_" + wtag)
         _bom(ctx, "drivetrain", "motor clamp block", "aluminum",
              "O40.5 bore + ears", "UNVERIFIED", [cl.Name])
     _fp(ctx, names[0], plate)
@@ -1870,25 +1875,25 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
     blk_lo = "(%s %+d)" % (c, 15 if d > 0 else -27)
     # ---- mount block under the pan; 2 blind taps on the top face
     if axis == "Y":
-        bpos = {"Placement.Base.x": "(%s - 24)" % px,
+        bpos = {"Placement.Base.x": "(%s - 26)" % px,
                 "Placement.Base.y": blk_lo,
                 "Placement.Base.z":
                 "(Parameters.pan_z - Parameters.pan_thk / 2 - "
                 "Parameters.odo_block_h)"}
-        bdims = {"Length": "16", "Width": "12",
+        bdims = {"Length": "18", "Width": "12",
                  "Height": "Parameters.odo_block_h"}
-        mb = [("(%s - 22)" % px, "(%s %+d)" % (py, 21 * d)),
-              ("(%s - 14)" % px, "(%s %+d)" % (py, 21 * d))]
+        mb = [("(%s - 24)" % px, "(%s %+d)" % (py, 21 * d)),
+              ("(%s - 10)" % px, "(%s %+d)" % (py, 21 * d))]
     else:
         bpos = {"Placement.Base.x": blk_lo,
-                "Placement.Base.y": "(%s - 26)" % py,
+                "Placement.Base.y": "(%s - 30)" % py,
                 "Placement.Base.z":
                 "(Parameters.pan_z - Parameters.pan_thk / 2 - "
                 "Parameters.odo_block_h)"}
-        bdims = {"Length": "12", "Width": "12",
+        bdims = {"Length": "12", "Width": "20",
                  "Height": "Parameters.odo_block_h"}
-        mb = [("(%s %+d)" % (px, 19 * d), "(%s - 24)" % py),
-              ("(%s %+d)" % (px, 19 * d), "(%s - 19)" % py)]
+        mb = [("(%s %+d)" % (px, 19 * d), "(%s - 27)" % py),
+              ("(%s %+d)" % (px, 25 * d), "(%s - 27)" % py)]
     taps = [("Parameters.tap_drill",
              {"Placement.Base.x": mx, "Placement.Base.y": my,
               "Placement.Base.z":
@@ -1929,8 +1934,8 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
                  "Placement.Base.y": "(%s - 1)" % arm_lo,
                  "Placement.Base.z": bz}, "Y", "6"))
         enc_tap_y = "(%s %+d)" % (py, -14 if d < 0 else 11)
-        for ex, ez in (("(%s - 22)" % px, "14"),
-                       ("(%s - 14)" % px, "18")):
+        for ex, ez in (("(%s + 8)" % px, "14"),
+                       ("(%s + 16)" % px, "18")):
             arm_bores.append((
                 "Parameters.tap_drill",
                 {"Placement.Base.x": ex,
@@ -1949,8 +1954,8 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
                  "Placement.Base.y": by,
                  "Placement.Base.z": bz}, "X", "6"))
         enc_tap_x = "(%s %+d)" % (px, -14 if d < 0 else 11)
-        for ey, ez in (("(%s - 24)" % py, "14"),
-                       ("(%s - 18)" % py, "20")):
+        for ey, ez in (("(%s - 6)" % py, "12"),
+                       ("(%s - 0)" % py, "18")):
             arm_bores.append((
                 "Parameters.tap_drill",
                 {"Placement.Base.x": enc_tap_x,
@@ -1999,6 +2004,7 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
     _jl(ctx, wpin.Name, wl.Name)
     _jl(ctx, wpin.Name, arm_o.Name)
     _em(ctx, wpin.Name, blk.Name)
+    _em(ctx, wpin.Name, "BELLY_PAN")   # tail crown bites the slot edge
     _jl(ctx, ppin.Name, arm_o.Name)
     _em(ctx, ppin.Name, blk.Name)
     # nuts: wheel-pin nut on the wheel outboard face; pivot nut on the
@@ -2027,14 +2033,14 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
     # ---- preload strut + encoder board
     _odo_spring(doc, ctx, tag, px, py, axis, d, blk.Name, arm_o.Name)
     if axis == "Y":
-        epos = {"Placement.Base.x": "(%s - 24)" % px,
+        epos = {"Placement.Base.x": "(%s + 4)" % px,
                 "Placement.Base.y": "(%s %+d)" % (py, -11 if d < 0 else 9),
                 "Placement.Base.z": "10"}
         edims = {"Length": "16", "Width": "2", "Height": "12"}
     else:
         epos = {"Placement.Base.x": "(%s %+d)" % (px, -11 if d < 0 else 9),
-                "Placement.Base.y": "(%s - 26)" % py,
-                "Placement.Base.z": "10"}
+                "Placement.Base.y": "(%s - 8)" % py,
+                "Placement.Base.z": "9"}
         edims = {"Length": "2", "Width": "16", "Height": "12"}
     en = pk.plate(doc, enc, enc + "_encoder_pcb_UNVERIFIED",
                   "UNVERIFIED - pod encoder board", edims, epos)
@@ -2043,13 +2049,13 @@ def _odo_pod(doc, ctx, tag, px, py, axis, pdir):
     _bom(ctx, "odometry", "pod encoder board", "pcb", "16x2x12",
          "UNVERIFIED", [en.Name])
     # countersunk M3 selftaps through the board into the arm face taps
-    for i, (eg, ez) in enumerate((("(%s - 22)" % (px if axis == "Y"
+    for i, (eg, ez) in enumerate((("(%s + 8)" % (px if axis == "Y"
                                                else py), "14"),
-                                  ("(%s - 14)" % (px if axis == "Y"
+                                  ("(%s + 16)" % (px if axis == "Y"
                                                   else py), "18"))):
         if axis == "X":
-            eg = "(%s - %d)" % (py, (24, 18)[i])
-            ez = ("14", "20")[i]
+            eg = "(%s - %d)" % (py, (6, 0)[i])
+            ez = ("12", "18")[i]
         sn = "SCRW_ENC_%s_%d" % (tag, i)
         if axis == "Y":
             hp = {"Placement.Base.x": eg, "Placement.Base.z": ez,
@@ -2100,6 +2106,7 @@ def _odo_spring(doc, ctx, tag, px, py, axis, d, block, arm):
              "Placement.Base.y": str(arm_mid - 2),
              "Placement.Base.z": "28"})
         p1 = (pxv + 13, pa_y + 2, pan_b - 2)
+        pm = (pxv + 18, pyv + 15.54 * d, pan_b - 2)
         p2 = (pxv + 20, arm_mid, 30.0)
     else:
         arm_x = pxv + (11 if d > 0 else -15)
@@ -2119,12 +2126,17 @@ def _odo_spring(doc, ctx, tag, px, py, axis, d, block, arm):
              "Placement.Base.y": str(pyv + 18),
              "Placement.Base.z": "28"})
         p1 = (arm_mid, pyv + 35, pan_b - 2)
+        pm = (arm_mid, pyv + 28, pan_b - 2)
         p2 = (arm_mid, pyv + 21, 30.0)
-    body = pk.wire_seg(doc, spring + "_B", spring + "_body",
+    s1 = pk.wire_seg(doc, spring + "_B", spring + "_body",
                        "UNVERIFIED - pod preload strut", 8.0,
-                       p1, p2)
+                       p1, pm)
+    s2 = pk.wire_seg(doc, "TOOL_" + spring + "_S2", spring + "_body",
+                       "UNVERIFIED - pod preload strut", 8.0,
+                       pm, p2)
     fused = pk.fuse(doc, spring, spring + "_strut_UNVERIFIED",
-                    "UNVERIFIED - pod preload strut", pa, [pb, body])
+                    "UNVERIFIED - pod preload strut", pa,
+                    [pb, s1, s2])
     _s(ctx, fused)
     _fp(ctx, fused.Name, "BELLY_PAN")
     _fp(ctx, fused.Name, arm)
@@ -2240,8 +2252,8 @@ def _shelf(doc, ctx):
     # (x in [20,160] x y in [5,75]) and the ctrl hub footprint
     sxy = [("(Parameters.shelf_x_lo + 15)", "-35"),
            ("(Parameters.shelf_x_lo + 15)", "35"),
-           ("-30", "-35"),
-           ("-30", "35")]
+           ("12", "-40"),
+           ("12", "40")]
     bores = [("Parameters.grid_hole_d",
               {"Placement.Base.x": sx, "Placement.Base.y": sy,
                "Placement.Base.z":
@@ -2393,14 +2405,14 @@ def _switch_bracket(doc, ctx):
          "(Parameters.sw_x - Parameters.sw_l / 2)",
          "Placement.Base.y": "(Parameters.sw_y - 3 - Parameters.sw_w)",
          "Placement.Base.z":
-         "(Parameters.pan_z + Parameters.pan_thk / 2 + 6)"})
+         "(Parameters.pan_z + Parameters.pan_thk / 2 + 9)"})
     _s(ctx, sw)
     _fp(ctx, sw.Name, brkt)
     _bom(ctx, "electronics", "main power switch", "switch",
          "15x9x13", "UNVERIFIED", [sw.Name])
     # 2 self-tap screws through the bracket face into the switch body
     # (heads on the bracket's rear face, tips embed in the switch)
-    for i, (dx, dz) in enumerate((("-8", "14"), ("8", "22"))):
+    for i, (dx, dz) in enumerate((("-8", "12"), ("8", "18"))):
         sn = "SCRW_SW_%d" % i
         pk.bolt(doc, sn, sn + "_M3_selftap_UNVERIFIED",
                 "UNVERIFIED - M3 selftap", "3", "6", "6", "1.8",
@@ -2416,38 +2428,59 @@ def _switch_bracket(doc, ctx):
 
 def _hubs(doc, ctx):
     """REV hubs on 4 feet: block + 2 fused side tabs; through-bolts
-    pass foot tab + pan -> nut under the pan."""
+    pass foot tab + pan -> nut under the pan. The ctrl hub is rotated
+    90deg (ehub_w along X, hub_l along Y) so it fits the pan's free
+    center lane between the motor columns."""
     hubs = {}
     for tag, hx, hy in (("C", "Parameters.ctrl_x", "Parameters.ctrl_y"),
                         ("E", "Parameters.exp_x", "Parameters.exp_y")):
         name = "HUB_CTRL" if tag == "C" else "HUB_EXP"
         shelf_tag = tag == "E"
+        rot = tag == "C"
         base_z = ("(Parameters.shelf_z + Parameters.shelf_thk / 2)"
                   if shelf_tag else
                   "(Parameters.pan_z + Parameters.pan_thk / 2)")
-        blk = pk.tool_box(
-            doc, name + "_BLK",
-            {"Length": "Parameters.hub_l", "Width": "Parameters.ehub_w",
-             "Height": "Parameters.hub_h"},
-            {"Placement.Base.x": "(%s - Parameters.hub_l / 2)" % hx,
-             "Placement.Base.y": "(%s - Parameters.ehub_w / 2)" % hy,
-             "Placement.Base.z": base_z})
-        f1 = pk.tool_box(
-            doc, name + "_F0",
-            {"Length": "Parameters.hub_l", "Width": "10",
-             "Height": "3"},
-            {"Placement.Base.x": "(%s - Parameters.hub_l / 2)" % hx,
-             "Placement.Base.y":
-             "(%s - Parameters.ehub_w / 2 - 7)" % hy,
-             "Placement.Base.z": base_z})
-        f2 = pk.tool_box(
-            doc, name + "_F1",
-            {"Length": "Parameters.hub_l", "Width": "10",
-             "Height": "3"},
-            {"Placement.Base.x": "(%s - Parameters.hub_l / 2)" % hx,
-             "Placement.Base.y":
-             "(%s + Parameters.ehub_w / 2 - 3)" % hy,
-             "Placement.Base.z": base_z})
+        if rot:
+            bd = {"Length": "Parameters.ehub_w",
+                  "Width": "Parameters.hub_l",
+                  "Height": "Parameters.hub_h"}
+            bp = {"Placement.Base.x":
+                  "(%s - Parameters.ehub_w / 2)" % hx,
+                  "Placement.Base.y":
+                  "(%s - Parameters.hub_l / 2)" % hy,
+                  "Placement.Base.z": base_z}
+            fd = {"Length": "10", "Width": "Parameters.hub_l",
+                  "Height": "3"}
+            f1p = {"Placement.Base.x":
+                   "(%s - Parameters.ehub_w / 2 - 7)" % hx,
+                   "Placement.Base.y": bp["Placement.Base.y"],
+                   "Placement.Base.z": base_z}
+            f2p = {"Placement.Base.x":
+                   "(%s + Parameters.ehub_w / 2 - 3)" % hx,
+                   "Placement.Base.y": bp["Placement.Base.y"],
+                   "Placement.Base.z": base_z}
+        else:
+            bd = {"Length": "Parameters.hub_l",
+                  "Width": "Parameters.ehub_w",
+                  "Height": "Parameters.hub_h"}
+            bp = {"Placement.Base.x":
+                  "(%s - Parameters.hub_l / 2)" % hx,
+                  "Placement.Base.y":
+                  "(%s - Parameters.ehub_w / 2)" % hy,
+                  "Placement.Base.z": base_z}
+            fd = {"Length": "Parameters.hub_l", "Width": "10",
+                  "Height": "3"}
+            f1p = {"Placement.Base.x": bp["Placement.Base.x"],
+                   "Placement.Base.y":
+                   "(%s - Parameters.ehub_w / 2 - 7)" % hy,
+                   "Placement.Base.z": base_z}
+            f2p = {"Placement.Base.x": bp["Placement.Base.x"],
+                   "Placement.Base.y":
+                   "(%s + Parameters.ehub_w / 2 - 3)" % hy,
+                   "Placement.Base.z": base_z}
+        blk = pk.tool_box(doc, name + "_BLK", bd, bp)
+        f1 = pk.tool_box(doc, name + "_F0", fd, f1p)
+        f2 = pk.tool_box(doc, name + "_F1", fd, f2p)
         hub = pk.fuse(
             doc, name, name + "_hubfeet_VENDOR-PENDING",
             "VENDOR-PENDING - REV hub with foot tabs", blk, [f1, f2])
@@ -2458,10 +2491,15 @@ def _hubs(doc, ctx):
              [hub.Name])
         hubs[tag] = hub
         bolts, nuts = [], []
-        fdy = "-38" if shelf_tag else "-44.5"
-        fdy2 = "38" if shelf_tag else "44.5"
-        for i, (dx, dy) in enumerate((("-40", fdy), ("40", fdy),
-                                      ("-40", fdy2), ("40", fdy2))):
+        if tag == "C":
+            grid = (("-44.5", "-60"), ("-44.5", "60"),
+                    ("44.5", "-60"), ("44.5", "60"))
+        else:
+            fdy = "-38" if shelf_tag else "-44.5"
+            fdy2 = "38" if shelf_tag else "44.5"
+            grid = (("-40", fdy), ("40", fdy), ("-40", fdy2),
+                    ("40", fdy2))
+        for i, (dx, dy) in enumerate(grid):
             bn = "BOLT_HUB_%s_%d" % (tag, i)
             nn = "NUT_HUB_%s_%d" % (tag, i)
             pk.bolt(doc, bn, bn + "_M4_UNVERIFIED",
@@ -2512,51 +2550,81 @@ def _wiring(doc, ctx):
     link, 4 motor leads, 3 encoder leads, clip anchors."""
     # battery pack [20,160]x[5,75]; switch face at (-158,-80);
     # ctrl hub on the pan (y>=45.5 face); exp hub on the shelf (z>=86.3)
+    # battery pack [-5,135]x[-35,35]; switch at (-115,0); ctrl hub
+    # rotated at (-48.5,0): x[-95,-2] y[-71,71], +y face = wiring edge
     wb = _wire(doc, ctx, "WIRE_BATT_SW", [
-        (35.0, 5.0, 45.0), (-40.0, -40.0, 32.0),
-        (-148.0, -79.5, 34.0)], dia="4")
+        (40.0, 10.0, 68.5), (-8.0, 10.0, 82.0), (-8.0, 80.0, 60.0),
+        (-100.0, 80.0, 60.0), (-104.0, 70.0, 40.0),
+        (-112.0, -2.0, 36.0)], dia="4")
     _em(ctx, wb.Name, "BATTERY")
     _cn(ctx, wb.Name, "SWITCH_BRKT")
     wc = _wire(doc, ctx, "WIRE_SW_CTRL", [
-        (-150.0, -75.0, 34.0), (-100.0, -20.0, 32.0),
-        (-70.0, 30.0, 32.0), (-54.6, 46.0, 38.0)], dia="4")
+        (-112.0, -2.0, 36.0), (-100.0, -80.0, 32.0),
+        (-30.0, -85.0, 36.0), (-30.0, -73.0, 40.0)], dia="4")
     _em(ctx, wc.Name, "HUB_CTRL")
+    _em(ctx, wc.Name, "MAIN_SWITCH")
     _cn(ctx, wc.Name, "SWITCH_BRKT")
     wr = _wire(doc, ctx, "WIRE_HUB_RS485", [
-        (-54.6, 46.0, 40.0), (-90.0, 30.0, 60.0),
-        (-100.0, 12.0, 80.0), (-95.0, 8.0, 88.0)], dia="3")
+        (-10.0, 20.0, 50.0), (-48.0, 20.0, 80.0),
+        (-52.0, 10.0, 88.0)], dia="3")
     _em(ctx, wr.Name, "HUB_CTRL")
     _em(ctx, wr.Name, "HUB_EXP")
     _em(ctx, wr.Name, "ELEC_SHELF")
     for wtag, wx, wy in (("FL", 127.0, 100.0), ("RL", -127.0, 100.0),
                          ("FR", 127.0, -100.0), ("RR", -127.0, -100.0)):
+        ym = 73.0 if wy > 0 else -73.0
         wm = _wire(doc, ctx, "WIRE_MTR_%s" % wtag, [
             (wx + (-16.0 if wx > 0 else 16.0), wy * 1.15, 48.0),
-            (wx * 0.5, wy * 0.5, 34.0),
-            (-60.0, -20.0 if wy < 0 else 30.0, 32.0),
-            (-54.6, 44.8, 40.0)])
+            (wx * 0.79, wy * 1.10, 32.0),
+            (wx * 0.47, wy * 0.60, 62.0),
+            (-10.0 if wx > 0 else -40.0, wy * 0.65, 70.0),
+            (-10.0 if wx > 0 else -40.0, ym, 45.0)])
         _em(ctx, wm.Name, "MOTOR_" + wtag)
         _em(ctx, wm.Name, "HUB_CTRL")
+        _cn(ctx, wm.Name, "CLAMP_%s_1" % wtag)
+        _cn(ctx, wm.Name, "BOLT_CLMP_%s_1_0" % wtag)
+        _cn(ctx, wm.Name, "BOLT_CLMP_%s_0_0" % wtag)
     el = _wire(doc, ctx, "WIRE_ENC_LAT_L", [
-        (10.0, 106.5, 16.0), (0.0, 60.0, 30.0), (-40.0, 20.0, 60.0),
-        (-55.0, 5.0, 88.0)])
+        (42.0, 107.6, 20.0), (42.0, 107.6, 32.0), (10.0, 60.0, 36.0),
+        (0.0, 40.0, 62.0), (-5.0, 42.0, 80.0), (-30.0, 12.0, 94.0),
+        (-55.0, 10.0, 116.0)], dia="1.5")
     _em(ctx, el.Name, "ODO_ENC_LAT_L")
     _em(ctx, el.Name, "HUB_EXP")
     _em(ctx, el.Name, "ELEC_SHELF")
+    _cn(ctx, el.Name, "ODO_MOUNT_LAT_L")
+    _cn(ctx, el.Name, "SCRW_ENC_LAT_L_0")
     er = _wire(doc, ctx, "WIRE_ENC_LAT_R", [
-        (10.0, -106.5, 16.0), (0.0, -60.0, 30.0), (-40.0, -20.0, 60.0),
-        (-55.0, -5.0, 88.0)])
+        (42.0, -107.6, 20.0), (42.0, -107.6, 32.0), (10.0, -60.0, 36.0),
+        (0.0, -40.0, 62.0), (-5.0, -42.0, 80.0),
+        (-30.0, -12.0, 94.0), (-55.0, -10.0, 116.0)], dia="1.5")
     _em(ctx, er.Name, "ODO_ENC_LAT_R")
     _em(ctx, er.Name, "HUB_EXP")
     _em(ctx, er.Name, "ELEC_SHELF")
+    _cn(ctx, er.Name, "ODO_MOUNT_LAT_R")
+    _cn(ctx, er.Name, "SCRW_ENC_LAT_R_0")
     eo = _wire(doc, ctx, "WIRE_ENC_LON", [
-        (-142.5, -20.0, 16.0), (-135.0, -10.0, 50.0),
-        (-120.0, -5.0, 88.0)])
+        (-142.5, 3.0, 17.0), (-142.5, 14.0, 22.0), (-142.5, 16.0, 32.0),
+        (-125.0, 5.0, 56.0), (-90.0, -10.0, 75.0),
+        (-60.0, -10.0, 90.0), (-55.0, -5.0, 116.0)], dia="1.5")
     _em(ctx, eo.Name, "ODO_ENC_LON")
     _em(ctx, eo.Name, "HUB_EXP")
     _em(ctx, eo.Name, "ELEC_SHELF")
-    for i, (cx, cy) in enumerate(((150.0, 0.0), (-60.0, -95.0),
-                                  (-160.0, -40.0), (40.0, -100.0))):
+    _cn(ctx, eo.Name, "ODO_MOUNT_LON")
+    _cn(ctx, eo.Name, "SCRW_ENC_LON_0")
+    # A5 loom contacts: wires lie on the pan and bundle together
+    _wnames = ["WIRE_BATT_SW", "WIRE_SW_CTRL", "WIRE_HUB_RS485",
+               "WIRE_MTR_FL", "WIRE_MTR_FR", "WIRE_MTR_RL",
+               "WIRE_MTR_RR", "WIRE_ENC_LAT_L", "WIRE_ENC_LAT_R",
+               "WIRE_ENC_LON"]
+    for _wi in _wnames:
+        _cn(ctx, _wi, "BELLY_PAN")
+    for _a in range(len(_wnames)):
+        for _b in range(_a + 1, len(_wnames)):
+            _cn(ctx, _wnames[_a], _wnames[_b])
+    _cn(ctx, "BATT_STRAP_0", "WIRE_BATT_SW")
+    _cn(ctx, "BATT_STRAP_1", "WIRE_BATT_SW")
+    for i, (cx, cy) in enumerate(((152.0, 0.0), (-60.0, -80.0),
+                                  (-105.0, -30.0), (70.0, -90.0))):
         _clip(doc, ctx, "CLIP_%d" % i,
               {"Placement.Base.x": str(cx - 6),
                "Placement.Base.y": str(cy - 6),
@@ -2652,6 +2720,8 @@ _SUBSYS_GROUPS = (
     ("GRP_ELECTRONICS", ("BATTERY", "BATT_STRAP", "ELEC_SHELF",
                          "STANDOFF_", "HUB_", "SWITCH_", "MAIN_SWITCH",
                          "WIRE_", "CLIP_", "ZIP_", "CONN_", "SCRW_")),
+    ("GRP_FASTENERS", ("BOLT_", "NUT_", "SCRW_", "RIVNUT_",
+                       "WASHER_")),
     ("GRP_TOOLS", ("TOOL_",)),
 )
 
@@ -2680,8 +2750,9 @@ def finish_doc(doc, ctx, target, tag):
         g.Label = gname
         groups[gname] = g
     for o in doc.Objects:
-        if not hasattr(o, "Shape") or o.TypeId in ("App::Part",
-                                                   "App::Origin"):
+        if not hasattr(o, "Shape") or o.TypeId == "App::Origin":
+            continue
+        if o.Name.startswith("GRP_"):
             continue
         if o.getParentGeoFeatureGroup() is not None:
             continue
@@ -2726,12 +2797,12 @@ def write_exports_tables(ctx):
     (EXPORTS / "bom").mkdir(parents=True, exist_ok=True)
     agg = {}
     for row in ctx["bom"]:
-        key = (row["subsystem"], row["description"], row["material"],
-               row["spec"], row["status"])
+        key = (row["subsys"], row["spec"], row["material"],
+               row["dims"], row["status"])
         if key not in agg:
             agg[key] = {"qty": 0, "parts": []}
-        agg[key]["qty"] += len(row["parts"])
-        agg[key]["parts"] += row["parts"]
+        agg[key]["qty"] += len(row["members"])
+        agg[key]["parts"] += row["members"]
     lines = ["subsystem,description,material,spec,status,qty,objects"]
     for (sub, desc, mat, spec, st), v in sorted(agg.items()):
         lines.append('%s,"%s",%s,%s,%s,%d,"%s"'

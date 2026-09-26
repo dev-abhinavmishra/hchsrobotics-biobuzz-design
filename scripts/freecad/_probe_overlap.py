@@ -7,8 +7,16 @@ import dt_build
 
 doc = App.newDocument("probe")
 ctx = dt_build.new_ctx()
-dt_build.populate_drivebase(doc, ctx)
+dt_build.populate_master(doc, ctx)
 doc.recompute(None, True, True)
+for dbg in ("BATTERY", "HUB_EXP", "HUB_CTRL", "CLIP_3", "ELEC_SHELF",
+            "STANDOFF_2", "MOTOR_FR"):
+    o = doc.getObject(dbg)
+    if o is not None:
+        bb = o.Shape.BoundBox
+        print("DBG %-12s X[%.1f,%.1f] Y[%.1f,%.1f] Z[%.1f,%.1f]"
+              % (dbg, bb.XMin, bb.XMax, bb.YMin, bb.YMax,
+                 bb.ZMin, bb.ZMax))
 
 declared = set()
 for a, b in ctx["embeds"] + ctx["faces"] + ctx["contacts"] + ctx["journals"]:
@@ -19,12 +27,24 @@ for j in ctx["joints"]:
         for k in range(i + 1, len(ms)):
             declared.add(frozenset((ms[i], ms[k])))
 
+consumed = set()
+for o in doc.Objects:
+    if o.TypeId in ("Part::Fuse", "Part::Cut", "Part::Chamfer",
+                    "Part::Common", "Part::MultiFuse"):
+        for pp in ("Base", "Tool", "Shapes"):
+            t = getattr(o, pp, None)
+            if t is None:
+                continue
+            for x in (t if isinstance(t, (list, tuple)) else (t,)):
+                if x is not None:
+                    consumed.add(x.Name)
+
 objs = []
 for nm in ctx["solids"]:
-    if nm == "ENV_START":
+    if nm == "ENV_START" or nm in consumed:
         continue
     o = doc.getObject(nm)
-    if o is None:
+    if o is None or o.TypeId == "App::Part":
         continue
     try:
         sh = o.Shape
@@ -33,7 +53,7 @@ for nm in ctx["solids"]:
     if sh is None or sh.isNull() or sh.Volume <= 0:
         continue
     sh2 = sh.copy()
-    sh2.transformShape(o.getGlobalPlacement().toMatrix())
+    sh2.Placement = o.getGlobalPlacement()
     objs.append((nm, sh2))
 print("solids:", len(objs), "declared:", len(declared))
 

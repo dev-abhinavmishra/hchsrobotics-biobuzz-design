@@ -768,6 +768,9 @@ def bolt(doc, name, label, status, shaft_d, length, head_d, head_h,
     hd = tool_cyl(doc, name + "_HD",
                   {"Radius": "(%s) / 2" % head_d, "Height": head_h},
                   hpos, axis_rot(axis))
+    tok = status.split(" ")[0] if status else ""
+    if tok and tok not in label:
+        label = label + "_" + tok
     return fuse(doc, name, label, status, sh, hd)
 
 
@@ -884,7 +887,11 @@ def flange_bearing(doc, name, label, status, w, t, h, bore_d, pilot_d,
     blk = tool_box(doc, name + "_BLK",
                    {"Length": w, "Width": t, "Height": h}, pos)
     comp = _AXIS_COMP[axis]
+    cx = "(%s) + %s / 2" % (pos["Placement.Base.x"], w)
+    cz = "(%s) + %s / 2" % (pos["Placement.Base.z"], h)
     ppos = dict(pos)
+    ppos["Placement.Base.x"] = cx
+    ppos["Placement.Base.z"] = cz
     if pilot_dir > 0:
         ppos["Placement.Base." + comp] = "(%s) + %s" % (
             pos["Placement.Base." + comp], t)
@@ -899,6 +906,8 @@ def flange_bearing(doc, name, label, status, w, t, h, bore_d, pilot_d,
     comp_p = _bolt_tools(doc, name, t, w, h, bolt_d, bolt_off, pos,
                          axis) if bolt_d and bolt_off else []
     bpos = dict(pos)
+    bpos["Placement.Base.x"] = cx
+    bpos["Placement.Base.z"] = cz
     if pilot_dir > 0:
         bpos["Placement.Base." + comp] = "(%s) - 1" % (
             pos["Placement.Base." + comp])
@@ -1094,7 +1103,8 @@ def wire_seg(doc, name, label, status, dia, p0, p1):
     vv.normalize()
     rot = App.Rotation(zaxis, vv)
     o = doc.addObject("Part::Cylinder", name)
-    stamp(o, label + "_seg", status)
+    tok = status.split(" ")[0] if status else ""
+    stamp(o, label + ("_seg_" + tok if tok else "_seg"), status)
     o.Radius = dia / 2.0
     o.Height = L
     base = App.Vector(*p0)
