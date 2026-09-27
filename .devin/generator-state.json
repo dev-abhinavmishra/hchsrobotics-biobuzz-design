@@ -24,7 +24,7 @@
     "evaluator": "7be4c34c-8a4f-426e-b8b4-9fcc20e70b50",
     "planner": "e553768c-2349-4857-bad7-4ac43aaa94ed",
     "planner_response_id": "3c6c0b13-8a70-4ba4-b3f0-302cec4ae172",
-    "evaluator_response_id": "d04a7220-b43c-4ffe-b0d0-9e1ecbb7f701"
+    "evaluator_response_id": "773555cf-9ab7-49e0-9ee7-f717c7422c4a"
   },
   "open_points": "all 5 resolved in v2 (master=sprint-01 solids only; R7 fastener hybrid; wiring subset incl. bom; tightened tolerances; odo wheels ground-contact)",
   "v2_notes": "eval critique 1: accepted R1-R7 + S1-S7 wholesale. R1 added DECK_L/R+posts at Z=85.3 above motor tops (~67.8) flanking hopper lane; R2 journal pairs = real bores, common~0, enumerated; R3 FAST1 ~180 fastener census with per-joint minimums; R4 typed edges (embed/face/fastener/journal/declared-contact); R7 bolts: real clearance bores in pass-through members, embed only into nut/tapped terminal. Also caught viewer bug: axle 106.68mm ended short of the nylock at +-224.8 - axle lengthened to ~114 so the nut rides the shaft.",
