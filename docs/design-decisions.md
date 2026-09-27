@@ -135,3 +135,34 @@ placeholders; statuses stay VENDOR-PENDING (not VERIFIED) until physical
 measurement. The ~1 mm intake-to-wheel clearance is a placeholder-fidelity
 limit, flagged as UNVERIFIED — the real intake design must revisit this
 gap.
+
+## D13 - Viewer deviations corrected during CAD overhaul (sprint-02, UNVERIFIED pending team review)
+
+Two viewer-robot.js fudge geometries turned out to be physically
+impossible once the sprint-02 intake was dimensioned honestly; both were
+corrected in CAD (approved by the planner + evaluator as honest-physics
+corrections):
+
+1. Compliant star roller repositioned (X=133, Z=175, viewer had it at
+   Z~91). At viewer coords the nip surface gap was -10.15 mm (rollers
+   interleaved) and g + 17.8 mm float travel could never reach the
+   91 mm NECTAR requirement. Separately, the under-crown throat is only
+   ~71.8 mm, so the ball path physically must go OVER the crown into the
+   hopper basin; the exit ramp became a THROAT_GUARD deflector.
+2. Counter-rotation via crossed quarter-twist belt + sprung tensioner
+   instead of the viewer's 1:1 24T spur pair -- a rigid gear mesh cannot
+   hold across a 17.8 mm floating shaft (same 'defies physics' class as
+   the original CAD rejection).
+
+Sprint-04 obligation (planner condition): the viewer-consistency pass
+flows these corrections BACK into viewer/js/robot.js so the viewer and
+CAD reconverge -- the artifacts diverge only until sprint-04.
+
+Sprint-03 interface contract (frozen): AXIS_TURRET, REF_DECK_IFACE
+(bolt-circle + bore datum) and REF_DIV_PORT are published as
+non-exportable REF_/AXIS_ datums in the sprint-02 Appendix tables --
+sprint-03 builds against their letter.
+
+Rationale: physical credibility (non-negotiable rubric criterion)
+outranks viewer-matching; the corrections are documented rather than
+silent.
