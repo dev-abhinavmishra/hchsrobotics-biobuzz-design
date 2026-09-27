@@ -769,6 +769,11 @@ def main():
             if not hasattr(o, "Shape") or o.Shape.isNull() \
                     or o.Shape.Volume <= 0:
                 continue
+            # the STEP root product (named after the export doc) is an
+            # assembly wrapper -- skip it, check the leaf products
+            if o.Label == "master_robot" \
+                    and len(getattr(o.Shape, "Solids", [])) > 1:
+                continue
             base = o.Label if o.Label in shape_map else \
                 re.sub(r"_\d+$", "", o.Label)
             if base not in shape_map:

@@ -127,7 +127,7 @@ def main():
     report = {"parts": 0, "subassemblies": [], "master_solids": 0,
               "master_step_reimport": 0, "files": []}
 
-    tmp = App.newDocument("step_world")
+    tmp = App.newDocument("master_robot")
     doc = App.openDocument(str(MASTER))
     doc.recompute()
     objs = exportable(doc)
