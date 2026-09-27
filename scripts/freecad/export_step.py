@@ -66,15 +66,37 @@ def exportable(doc):
             and o.Name not in consumed]
 
 
-def world_object(tmpdoc, o):
-    """Globalized named Part::Feature in tmpdoc: the exported PRODUCT
-    record carries o.Name; the solid sits in world coordinates."""
-    s = o.Shape.copy()
-    s.Placement = o.getGlobalPlacement()
-    dup = tmpdoc.addObject("Part::Feature", o.Name)
-    dup.Label = o.Name
-    dup.Shape = s
+def world_object(tmpdoc, name, shape):
+    """Named Part::Feature in tmpdoc: the exported PRODUCT record
+    carries `name`; the brep already sits in world coordinates."""
+    dup = tmpdoc.addObject("Part::Feature", name)
+    dup.Label = name
+    dup.Placement = App.Placement()
+    dup.Shape = shape
     return dup
+
+
+def world_parts(o):
+    """(name, shape) pairs for export: the brep is transformed to
+    world coordinates (carrier children included). Multi-solid shapes
+    (wire sweeps made of disconnected segments) decompose into named
+    sub-products so nothing reimports as Part__FeatureNNN."""
+    s = o.Shape.copy()
+    # getGlobalPlacement() is the effective transform that puts the
+    # object's local shape into world coords (it already composes the
+    # object's own placement + parents). Setting it on the shape and
+    # running removeSplitter() bakes the Location into the brep
+    # vertices -- a bare Placement on the temp feature is dropped by
+    # the STEP writer (carrier children exported at local coords),
+    # transformGeometry() corrupts shapes with nested Locations.
+    s.Placement = o.getGlobalPlacement()
+    s = s.removeSplitter()
+    s.Placement = App.Placement()
+    sols = s.Solids
+    if len(sols) > 1:
+        return [("%s_%d" % (o.Name, i), so)
+                for i, so in enumerate(sols)]
+    return [(o.Name, s)]
 
 
 def top_group(o):
@@ -88,7 +110,8 @@ def top_group(o):
 
 
 def export_objs(objs, tmpdoc, dst):
-    world = [world_object(tmpdoc, o) for o in objs]
+    world = [world_object(tmpdoc, nm, sh)
+             for o in objs for nm, sh in world_parts(o)]
     Import.export(world, str(dst))
     for w in world:
         tmpdoc.removeObject(w.Name)

@@ -2889,6 +2889,7 @@ def bom_autofill(ctx):
                 break
             p = p.getParentGeoFeatureGroup()
         cls = o.Name.split("_")[0]
+        stem = __import__("re").sub(r"(_\d+)+$", "", o.Name)
         sub = {"GRP_DRIVEBASE": "drivetrain", "GRP_ELECTRONICS":
                "electronics", "GRP_FRAME": "frame", "GRP_PODS":
                "odometry", "GRP_FASTENERS": "fasteners"}.get(
@@ -2898,11 +2899,12 @@ def bom_autofill(ctx):
                "WSH", "COLLAR", "PINION", "AXLE") else "aluminum"
                if cls in ("CLAMP", "GUSSET", "BRG", "MOUNT", "ODO")
                else "steel")
-        key = (sub, desc, mat, _status_of(o))
+        key = (sub, desc, stem, mat, _status_of(o))
         auto.setdefault(key, []).append(o.Name)
     rows = []
-    for (sub, desc, mat, st), names in sorted(auto.items()):
-        spec = names[0].split("_", 1)[0] if len(names) == 1 else             ("%s x%d" % (names[0], len(names)))
+    for (sub, desc, stem, mat, st), names in sorted(auto.items()):
+        spec = ("%s x%d" % (stem, len(names))
+                if len(names) > 1 else stem)
         rows.append({"subsys": sub, "spec": spec, "material": mat,
                      "dims": "-", "status": st, "members": names})
     return rows

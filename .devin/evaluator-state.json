@@ -4,16 +4,17 @@
   "sprint": "sprint-01",
   "role": "evaluator",
   "agent_id": "7be4c34c-8a4f-426e-b8b4-9fcc20e70b50",
-  "phase": "eval-round-01 verdict sent: contract FAIL / rubric FAIL; 12 required changes handed to generator on thread 1f193635",
+  "phase": "eval-round-02 verdict sent: contract FAIL / rubric FAIL — narrowed to XPT1 bbox parity: 56 WHEEL_ASSY-carrier part STEPs in carrier-local coords (<=203.2mm dev) + 11 named products misplaced in master_robot.step (wires/straps/odo spring 3.9-104mm); everything else verified fixed. Round-3 owed on thread d04a7220",
   "contract": {
     "path": "traycer:artifacts/autobuild/cad-overhaul/sprint-01/contract/index.md",
     "version": "v2 accepted",
     "negotiation": "2 exchanges used of 3"
   },
   "eval_rounds": {
-    "used": 1,
+    "used": 2,
     "cap": 4,
-    "round1": "FAIL — gate implements ~60% of contract (no DET1/2, PAR2-D/E, ASM4, real ASM1/ASM5, GEO-G/W, ENV footprint, STEP reimport checks, bom/params content, GIT substance). Geometry: 0 undeclared overlaps but declaration table noisy (157 mistyped embeds, 64 phantom contacts, 4 mistyped journals incl AXLE-MOTOR 360mm3), 5 undeclared coplanar pairs, 16 unseated nuts, footprint 454x457 vs 444.5+/-1, wheel width 36.1 vs 38.1. Exports: STEP names lost (shape-level export), bom misses all 430 fasteners, params.csv misses 14 aliases. Hygiene: dirty tree, no pre_overhaul/legacy dirs, stale 9/21 exports, 2087 unlabeled TOOL. Passes: DET2 rebuild-identical, DET3 master=union, parametric deltas all move, mounts/journals/axle-stacks real."
+    "round1": "FAIL — gate implements ~60% of contract (no DET1/2, PAR2-D/E, ASM4, real ASM1/ASM5, GEO-G/W, ENV footprint, STEP reimport checks, bom/params content, GIT substance). Geometry: 0 undeclared overlaps but declaration table noisy (157 mistyped embeds, 64 phantom contacts, 4 mistyped journals incl AXLE-MOTOR 360mm3), 5 undeclared coplanar pairs, 16 unseated nuts, footprint 454x457 vs 444.5+/-1, wheel width 36.1 vs 38.1. Exports: STEP names lost (shape-level export), bom misses all 430 fasteners, params.csv misses 14 aliases. Hygiene: dirty tree, no pre_overhaul/legacy dirs, stale 9/21 exports, 2087 unlabeled TOOL. Passes: DET2 rebuild-identical, DET3 master=union, parametric deltas all move, mounts/journals/axle-stacks real.",
+    "round2": "FAIL narrowed — 11/12 round-1 findings verified fixed (nuts seated, real motor journal, odo symmetric, wheels 38.10, A1 frame 444.5/total 453.74x454.5, coplanar 0 undeclared, DECL honest, 546 named STEPs, bom 550/550, params 158 rows, mount graph 0 unreach, TOOL labeled, tree clean, DET2+PAR2 reproduce, selfcheck 43 gates now geometry-true and reproduces in my run). New defect: 56 WHEEL_ASSY-carrier part STEPs export carrier-local (dev to 203.2mm, violates XPT1 bbox+-1mm); master_robot.step misplaces WIRE_*x8 + BATT_STRAP_0/1 + ODO_SPRING_LON (3.9-104mm) + ~31 anonymous Part__Feature solids; gate XPT5 lacks bbox check. Quality note: bom catch-all rows x198/x158. Fix: bake world coords into exported breps."
   },
   "amendments": {
     "ENV1_footprint_ruling": "PLANNER RULED (eval-round-01 finding 8) for the Generator: (1) 'footprint 444.5+/-1' describes the structural/chassis envelope only; (2) fastener/hardware protrusions may exceed it iff every exportable stays inside ENV_START with total model-nominal span <=455.2mm (>=1mm/side, prefer >=2mm); (3) protruding fastener classes must be enumerated in contract with max protrusion - no blanket allowance; (4) current 457.1 offenders (NUT_AXLE, BOLT_NUM_B, BOLT_CROWN) must be pulled inboard ~2mm by local means. Grade round 2 against this wording."

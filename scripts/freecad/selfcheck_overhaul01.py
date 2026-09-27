@@ -9,6 +9,7 @@ Exit: 0 if every gate passes, 1 otherwise.
 """
 import json
 import math
+import re
 import subprocess
 import sys
 import traceback
@@ -706,11 +707,25 @@ def main():
     gate("PROV2_tool_status", not tb_bad,
          "%d unlabeled" % len(tb_bad))
 
-    # XPT5: per-part STEP reimport -- solids + names + bbox
+    # XPT5: per-part STEP reimport -- solids + names + WORLD bbox
     import Import
     step = EXPORTS / "step"
-    rd_bad, nn_bad = [], []
+    rd_bad, nn_bad, bb_bad = [], [], []
     pfiles = sorted((step / "parts").glob("*.step"))
+
+    def _ubbox(objs):
+        bb = None
+        for o in objs:
+            b = o.Shape.BoundBox
+            bb = b if bb is None else bb.united(b)
+        return bb
+
+    def _bdev(a, b):
+        return max(
+            abs(a.XMin - b.XMin), abs(a.XMax - b.XMax),
+            abs(a.YMin - b.YMin), abs(a.YMax - b.YMax),
+            abs(a.ZMin - b.ZMin), abs(a.ZMax - b.ZMax))
+
     for fpath in pfiles:
         stem = fpath.stem
         rd = App.newDocument("xchk")
@@ -722,16 +737,53 @@ def main():
                    and o.Shape.Volume > 0]
             if not sol:
                 rd_bad.append(stem)
-            elif not any(stem in o.Label or stem == o.Label
-                         or o.Label.startswith(stem + "_")
-                         for o in sol):
-                nn_bad.append(stem)
+            else:
+                if not any(stem in o.Label or stem == o.Label
+                           or o.Label.startswith(stem + "_")
+                           for o in sol):
+                    nn_bad.append(stem)
+                mb = shape_map.get(stem)
+                if mb is not None:
+                    d = _bdev(_ubbox(sol), mb.BoundBox)
+                    if d > 1.0:
+                        bb_bad.append("%.1f %s" % (d, stem))
         except Exception:
             rd_bad.append(stem)
         App.closeDocument(rd.Name)
-    gate("XPT5_part_reimport", not rd_bad and not nn_bad,
-         "%d/%d files; %d empty, %d nameless"
-         % (len(pfiles), len(shape_map), len(rd_bad), len(nn_bad)))
+    gate("XPT5_part_reimport",
+         not rd_bad and not nn_bad and not bb_bad,
+         "%d/%d files; %d empty, %d nameless, %d bbox>1mm: %s"
+         % (len(pfiles), len(shape_map), len(rd_bad), len(nn_bad),
+            len(bb_bad), bb_bad[:5]))
+
+    # XPT5b: master STEP products sit at world position (carrier
+    # children included). Group reimported products by model base name
+    # (multi-solid wires decompose into NAME_i) and compare union bbox.
+    mp_bad = []
+    rd = App.newDocument("mchk")
+    try:
+        Import.insert(str(step / "master_robot.step"), rd.Name)
+        rd.recompute()
+        groups = {}
+        for o in rd.Objects:
+            if not hasattr(o, "Shape") or o.Shape.isNull() \
+                    or o.Shape.Volume <= 0:
+                continue
+            base = o.Label if o.Label in shape_map else \
+                re.sub(r"_\d+$", "", o.Label)
+            if base not in shape_map:
+                mp_bad.append("?%s" % o.Label)
+                continue
+            groups.setdefault(base, []).append(o)
+        for base, sol in groups.items():
+            d = _bdev(_ubbox(sol), shape_map[base].BoundBox)
+            if d > 1.0:
+                mp_bad.append("%.1f %s" % (d, base))
+    finally:
+        App.closeDocument(rd.Name)
+    gate("XPT5b_master_positions", not mp_bad,
+         "%d products deviate >1mm: %s"
+         % (len(mp_bad), mp_bad[:8]))
 
     # XPT6: bom covers every exportable
     bom_objs = set()
