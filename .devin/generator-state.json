@@ -4,7 +4,7 @@
   "sprint": "sprint-01",
   "role": "generator",
   "agent_id": "6185dc6e-e207-4433-bc45-8101c6ae9cbf",
-  "phase": "eval-round-02 handed off: rework complete, selfcheck 43/43 pass",
+  "phase": "eval-round-02 rework handed off: STEP placement baked, selfcheck 44/44",
   "contract": {
     "path": "traycer:artifacts/autobuild/cad-overhaul/sprint-01/contract/index.md",
     "version": "v2 proposed (all 7 required + all 7 strengthenings accepted)",
@@ -32,13 +32,13 @@
   "note": "This file was reset for the overhaul run; prior biobuzz-robot-rehaul breadcrumbs live in that epic's history",
   "updated": "2026-09-26",
   "build_summary": {
-    "selfcheck": "43/43 gates pass (43 gates incl. declaration honesty, coplanar census, reachability, engagement, STEP reimport names, DET2 rebuild determinism, PAR2-D/E deltas, real GIT)",
+    "selfcheck": "44/44 gates pass (added XPT5 part-bbox census + XPT5b master product positions)",
     "solids": 550,
     "exportable_parts": 546,
     "step_parts": 546,
     "subassemblies": 7,
     "undeclared_overlaps": 0,
-    "step_named_products": 589,
+    "step_named_products": 577,
     "bom_coverage": "546/546 exportable solids traced (incl. auto-filled fastener rows)",
     "parameters_csv": "159/159 aliases (145 inputs + 14 derived)",
     "frame_footprint": "444.5 x 444.5 mm (unchanged)",
@@ -56,8 +56,16 @@
       "TOOL_* stamped; mount graph fastener+carrier edges; XB endcap rail face pair",
       "archive pre_overhaul + legacy dirs; scratch/prototype files purged"
     ],
-    "commit": "96fe578",
-    "key_note": "all eval round-01 required changes implemented or amended (planner A1 footprint ruling applied: frame box kept 444.5, hardware protrudes with >=2mm cube margin)"
+    "commit": "c7467af",
+    "key_note": "all eval round-01 required changes implemented or amended (planner A1 footprint ruling applied: frame box kept 444.5, hardware protrudes with >=2mm cube margin)",
+    "round2_rework": [
+      "world coords baked into brep: s.Placement=getGlobalPlacement() + removeSplitter() (feature placement is dropped by the STEP writer)",
+      "multi-solid wires decompose into named sub-products (WIRE_*_0..) -> 0 anonymous Part__FeatureNNN",
+      "STEP root product named master_robot",
+      "XPT5 gate extended: per-part reimport bbox vs model +-1mm + XPT5b master product positions vs model +-1mm",
+      "bom_autofill groups per name-stem family (BOLT_CROWN_L xN etc), no more x198 catch-alls",
+      "_patch34-38 scratch deleted"
+    ]
   },
   "eval_round_01": {
     "sent": "2026-09-26",
