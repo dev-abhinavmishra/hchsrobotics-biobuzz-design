@@ -133,3 +133,97 @@ GUI (doc health). Current: **21/21 PASS**.
 Intake, hopper, turret/shooter, lift, servos, camera, and USB-loom
 solids are intentionally absent from the master — they belong to
 later sprints. Do not add them.
+
+# Sprint-02 — game-piece path (intake + hopper/feed)
+
+Sprint 02 builds the under-crown ball route on the same frame, shared
+through `dt_path.py` into `cad/intake/intake.FCStd`,
+`cad/hopper/hopper.FCStd`, and `cad/master_robot.FCStd` (DET3 parity).
+Frame convention unchanged (+X forward, +Y left, +Z up; the hopper
+occupies the -X half).
+
+## Intake — over/under dual roller
+
+- `INT_CHEEK_L/R`: cheek plates flush-bolted to the rail inner walls
+  (`cheek_lat_off` 130.5), pivot pins + crown-post lock bolts
+  (`cheek_pivot`/`cheek_lock` joints) — the whole assembly swings
+  between stowed and deployed poses.
+- `ROLLER_LOW`: full-width Ø50.8 ribbed traction roller
+  (`roller_low_r` 25.4) on a wall-borne hex axle, driven from the
+  intake motor through a #25 chain run inside the right rail channel
+  (`SPROCKET_9T`→`SPROCKET_16T`, `MASTER_LINK` clip joint).
+- `ROLLER_TOP`: Ø78.7 compliant star roller (`roller_top_r` 39.35 on a
+  `star_core_r` 22 core) on `FLOAT_SLIDE_*` acetal blocks —
+  `float_travel` 17.8 mm of sprung travel absorbs Ø91 NECTAR.
+  `SPRING_POST_*` Ø8 posts stand on the cheek towers; the
+  `TORSION_SPRING_*` coils wind snug on the exposed post span outboard
+  of the cheek face, leg tips seating into the slide + cheek faces
+  (declared embeds).
+- `BELT_XROLL` crossed quarter-twist belt counter-rotates the star
+  roller off the lower axle — the crossing survives the 17.8 mm float
+  where a rigid spur pair could not. `TENS_ARM` + `TENS_IDLER` ride on
+  the `TENS_POST` pivot; `TENS_SPRING` preloads the arm (coil on the
+  post's exposed span, legs into arm + cheek faces).
+- `THROAT_GUARD`: crown-top deflector into channel nuts.
+- Nip geometry: `nip_rest_gap` ≈ 81.6 ≥ 73.2 for POLLEN at rest, opens
+  ≥ 91 for NECTAR at full float.
+
+## Hopper — inclined magazine + clear feed column
+
+- `HOP_FLOOR`: inclined magazine plate (`hopper_incline` 20°) on
+  wall-side ledges (`hop_ledge_*` joints), descending toward the feed
+  corner. `HOP_APRON` lips under the floor's low edge (declared lap
+  embed). `HOP_CURB` rear curb behind the column mouth.
+- `HOP_WALL_L/R`: 3 mm walls at `hop_wall_y` ±60 bounding the lane.
+  The L wall carries an `R76` notch clearing the +Y port corridor (the
+  Ø93 sphere passes the wall, not just the flange bore).
+- `AGIT_*`: agitator servo at the low corner (`agit_x/y/z`) + paddle
+  + horn; bracket and servo each take 4 screws.
+- `FEED_*`: compliant metering feed wheel (`feed_wheel_r` 40.65) on
+  `FEED_SHAFT` through a wall bearing (`feed_bearing` joint, 4 bolts),
+  1:1 spur drop pair from `FEED_MOTOR` under the incline
+  (`SPUR_FEED_M/W` mesh declared as tooth-envelope embed).
+  `FEED_SCOOP` guide plate at the column mouth.
+- `FEED_COLUMN`: clear Ø110/Ø104 tube on the future turret axis
+  (`column_x` −66), z 88→254, seated on `COL_FLANGE` (trimmed to the
+  column's +X face) bolted through 4 `COL_POST_*` hex standoffs to the
+  belly pan — each post carries a top flange bolt **and** a bottom
+  pan bolt (col_post joints, 2 fasteners each).
+  - `COL_WIN` +X feed window, ≈93+ clear aperture into the hopper
+    lane — the Ø93 ball enters at window level.
+  - `COL_GSLOT` slot in the -Y shell + `COL_GBR` horn bore admit the
+    gate flag's swing.
+  - `COL_PORT` +Y window (the diverter port) over `REF_DIV_PORT`.
+- `GATE_*`: metering gate on the **-Y wall** — servo + 4-bolt bracket
+  + horn through the wall bore — moved off the +Y corridor so the
+  port sphere stays clear. `GATE_FLAG` blades through `COL_GSLOT`
+  into the bore; open/closed sweep poses are real `VOL_GATE_*`
+  probe solids.
+- `DIV_*`: `DIV_BAND` clamp ring on the column (shrink-fit embed,
+  +X arc notched at the window mouth) carrying `DIV_BRKT` + micro
+  `DIV_SERVO` (4 screws) driving `DIV_SHAFT`/`DIV_FLAP`. The flap
+  parks flat on the +Y bore wall **below** the port (VOL_DIV_A) and
+  swings up to seal the straight-through route (VOL_DIV_B);
+  `PORT_FLANGE` bolted collar (bore `div_port_d` 100, ≥93+margin)
+  centered at z 204 on the +Y wall.
+- `SNSR_*`: entry color sensor bracket + lens on the R wall.
+- `VOL_BALL_P/N`, `REF_*`, `AXIS_*`: staged probe + interface datums
+  (export-excluded).
+
+## Ball path (as built, selfcheck-verified)
+
+Ø93 NECTAR spheres at the declared A6 stations clear every static
+solid (`common().Volume` ≤ 0.5 mm³): intake mouth (205,0,80) →
+under-crown (178,0,85) → basin (105,0,155) → incline (62,0,142) →
+lane (40,0,134) → approach (35,0,132) → window throat (−11,0,140) →
+bore rest (…,162, resting on the curb top) → mid (200) → top (240) →
+gate (−66,0,175) → port (−66,52,203) → flange (−66,57,204).
+Swept poses (`VOL_GATE_OPEN/CLOSED`, `VOL_DIV_A/B`) clear statics the
+same way. Moving members are exempt at their rest envelopes per the
+contract's C1 clause.
+
+## Sprint-03 scope guard
+
+Turret/shooter, lift, camera mast, and the +Y chute remain absent —
+`REF_TURRET`/`REF_DECK_IFACE`/`REF_DIV_PORT` datums mark the
+interfaces only.

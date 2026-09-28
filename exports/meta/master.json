@@ -703,6 +703,8 @@
   "AGIT_SERVO",
   "SCRW_AGSV_0",
   "SCRW_AGSV_1",
+  "SCRW_AGSV_2",
+  "SCRW_AGSV_3",
   "AGIT_HORN",
   "AGIT_PADDLE",
   "FEED_WHEEL",
@@ -730,20 +732,30 @@
   "COL_FLANGE",
   "COL_POST_0",
   "BOLT_COL_0",
+  "BOLT_COLB_0",
   "COL_POST_1",
   "BOLT_COL_1",
+  "BOLT_COLB_1",
   "COL_POST_2",
   "BOLT_COL_2",
+  "BOLT_COLB_2",
   "COL_POST_3",
   "BOLT_COL_3",
+  "BOLT_COLB_3",
   "GATE_BRKT",
   "BOLT_GBRK_0",
   "NUT_GBRK_0",
   "BOLT_GBRK_1",
   "NUT_GBRK_1",
+  "BOLT_GBRK_2",
+  "NUT_GBRK_2",
+  "BOLT_GBRK_3",
+  "NUT_GBRK_3",
   "GATE_SERVO",
   "SCRW_GSV_0",
   "SCRW_GSV_1",
+  "SCRW_GSV_2",
+  "SCRW_GSV_3",
   "GATE_HORN",
   "GATE_FLAG",
   "DIV_BAND",
@@ -751,6 +763,12 @@
   "DIV_SERVO",
   "SCRW_DVSV_0",
   "SCRW_DVSV_1",
+  "SCRW_DVSV_2",
+  "SCRW_DVSV_3",
+  "BOLT_DVBR_0",
+  "BOLT_DVBR_1",
+  "BOLT_DVBR_2",
+  "BOLT_DVBR_3",
   "DIV_SHAFT",
   "DIV_FLAP",
   "PORT_FLANGE",
@@ -2452,7 +2470,9 @@
    ],
    "bolts": [
     "SCRW_AGSV_0",
-    "SCRW_AGSV_1"
+    "SCRW_AGSV_1",
+    "SCRW_AGSV_2",
+    "SCRW_AGSV_3"
    ],
    "nuts": [],
    "terminal": "AGIT_BRKT"
@@ -2519,7 +2539,8 @@
     "BELLY_PAN"
    ],
    "bolts": [
-    "BOLT_COL_0"
+    "BOLT_COL_0",
+    "BOLT_COLB_0"
    ],
    "nuts": [],
    "terminal": "COL_POST_0"
@@ -2532,7 +2553,8 @@
     "BELLY_PAN"
    ],
    "bolts": [
-    "BOLT_COL_1"
+    "BOLT_COL_1",
+    "BOLT_COLB_1"
    ],
    "nuts": [],
    "terminal": "COL_POST_1"
@@ -2545,7 +2567,8 @@
     "BELLY_PAN"
    ],
    "bolts": [
-    "BOLT_COL_2"
+    "BOLT_COL_2",
+    "BOLT_COLB_2"
    ],
    "nuts": [],
    "terminal": "COL_POST_2"
@@ -2558,7 +2581,8 @@
     "BELLY_PAN"
    ],
    "bolts": [
-    "BOLT_COL_3"
+    "BOLT_COL_3",
+    "BOLT_COLB_3"
    ],
    "nuts": [],
    "terminal": "COL_POST_3"
@@ -2567,15 +2591,19 @@
    "id": "gate_brkt",
    "members": [
     "GATE_BRKT",
-    "HOP_WALL_L"
+    "HOP_WALL_R"
    ],
    "bolts": [
     "BOLT_GBRK_0",
-    "BOLT_GBRK_1"
+    "BOLT_GBRK_1",
+    "BOLT_GBRK_2",
+    "BOLT_GBRK_3"
    ],
    "nuts": [
     "NUT_GBRK_0",
-    "NUT_GBRK_1"
+    "NUT_GBRK_1",
+    "NUT_GBRK_2",
+    "NUT_GBRK_3"
    ],
    "terminal": null
   },
@@ -2587,10 +2615,27 @@
    ],
    "bolts": [
     "SCRW_GSV_0",
-    "SCRW_GSV_1"
+    "SCRW_GSV_1",
+    "SCRW_GSV_2",
+    "SCRW_GSV_3"
    ],
    "nuts": [],
    "terminal": "GATE_BRKT"
+  },
+  {
+   "id": "div_servo",
+   "members": [
+    "DIV_SERVO",
+    "DIV_BRKT"
+   ],
+   "bolts": [
+    "SCRW_DVSV_0",
+    "SCRW_DVSV_1",
+    "SCRW_DVSV_2",
+    "SCRW_DVSV_3"
+   ],
+   "nuts": [],
+   "terminal": "DIV_BRKT"
   },
   {
    "id": "div_brkt",
@@ -2599,8 +2644,10 @@
     "DIV_BAND"
    ],
    "bolts": [
-    "SCRW_DVSV_0",
-    "SCRW_DVSV_1"
+    "BOLT_DVBR_0",
+    "BOLT_DVBR_1",
+    "BOLT_DVBR_2",
+    "BOLT_DVBR_3"
    ],
    "nuts": [],
    "terminal": "DIV_BAND"
@@ -2609,7 +2656,7 @@
    "id": "div_port_flange",
    "members": [
     "PORT_FLANGE",
-    "HOP_WALL_L"
+    "FEED_COLUMN"
    ],
    "bolts": [
     "BOLT_PORT_0",
@@ -3462,7 +3509,7 @@
   ],
   [
    "GATE_BRKT",
-   "HOP_WALL_L"
+   "HOP_WALL_R"
   ],
   [
    "GATE_SERVO",
@@ -3473,12 +3520,16 @@
    "DIV_BAND"
   ],
   [
+   "DIV_BRKT",
+   "PORT_FLANGE"
+  ],
+  [
    "DIV_SERVO",
    "DIV_BRKT"
   ],
   [
    "PORT_FLANGE",
-   "HOP_WALL_L"
+   "FEED_COLUMN"
   ],
   [
    "SNSR_BRKT",
@@ -5023,6 +5074,46 @@
    "HUB_EXP"
   ],
   [
+   "WIRE_ENC_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "BOLT_MPL_R_3",
+   "INT_MOTOR"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "MOTOR_RL"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ELEC_SHELF"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "SCRW_ENC_LON_1"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ODO_ARM_LON"
+  ],
+  [
+   "INT_CHEEK_L",
+   "FRAME_CROWN_F"
+  ],
+  [
    "FLOAT_PIN_L",
    "FLOAT_SLIDE_L"
   ],
@@ -5031,12 +5122,40 @@
    "INT_CHEEK_L"
   ],
   [
+   "TORSION_SPRING_L",
+   "SPRING_POST_L"
+  ],
+  [
+   "TORSION_SPRING_L",
+   "INT_CHEEK_L"
+  ],
+  [
+   "TORSION_SPRING_L",
+   "FLOAT_SLIDE_L"
+  ],
+  [
+   "INT_CHEEK_R",
+   "FRAME_CROWN_F"
+  ],
+  [
    "FLOAT_PIN_R",
    "FLOAT_SLIDE_R"
   ],
   [
    "SPRING_POST_R",
    "INT_CHEEK_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "SPRING_POST_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "INT_CHEEK_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "FLOAT_SLIDE_R"
   ],
   [
    "JACK_SHAFT",
@@ -5111,6 +5230,10 @@
    "NUT_PIV_L"
   ],
   [
+   "NUT_PIV_L",
+   "INT_BRG_L"
+  ],
+  [
    "PIVOT_PIN_L",
    "NUT_PIV_L"
   ],
@@ -5145,6 +5268,10 @@
   [
    "PIVOT_PIN_R",
    "NUT_PIV_R"
+  ],
+  [
+   "NUT_PIV_R",
+   "INT_BRG_R"
   ],
   [
    "PIVOT_PIN_R",
@@ -5267,6 +5394,18 @@
    "FRAME_RAIL_R"
   ],
   [
+   "CHAIN_25",
+   "SPROCKET_9T"
+  ],
+  [
+   "CHAIN_25",
+   "SPROCKET_16T"
+  ],
+  [
+   "CHAIN_25",
+   "ROLLER_SHAFT"
+  ],
+  [
    "MASTER_LINK",
    "CHAIN_25"
   ],
@@ -5289,6 +5428,22 @@
   [
    "TENS_PIN",
    "TENS_ARM"
+  ],
+  [
+   "BELT_XROLL",
+   "TENS_IDLER"
+  ],
+  [
+   "TENS_SPRING",
+   "TENS_POST"
+  ],
+  [
+   "TENS_SPRING",
+   "TENS_ARM"
+  ],
+  [
+   "TENS_SPRING",
+   "INT_CHEEK_L"
   ],
   [
    "BOLT_THRT_0",
@@ -5323,6 +5478,10 @@
    "NUT_THRT_3"
   ],
   [
+   "HOP_APRON",
+   "HOP_FLOOR"
+  ],
+  [
    "BOLT_HLDG_L_0",
    "HOP_LEDGE_L"
   ],
@@ -5345,10 +5504,6 @@
   [
    "BOLT_HLDG_R_2",
    "HOP_LEDGE_R"
-  ],
-  [
-   "HOP_CURB",
-   "HOP_WALL_L"
   ],
   [
    "HOP_CURB",
@@ -5443,6 +5598,14 @@
    "AGIT_BRKT"
   ],
   [
+   "SCRW_AGSV_2",
+   "AGIT_BRKT"
+  ],
+  [
+   "SCRW_AGSV_3",
+   "AGIT_BRKT"
+  ],
+  [
    "AGIT_HORN",
    "AGIT_SERVO"
   ],
@@ -5491,6 +5654,10 @@
    "FEED_STANDOFF_1"
   ],
   [
+   "SPUR_FEED_W",
+   "SPUR_FEED_M"
+  ],
+  [
    "FEED_SCOOP",
    "HOP_WALL_L"
   ],
@@ -5499,15 +5666,19 @@
    "HOP_WALL_R"
   ],
   [
-   "FEED_WHEEL",
-   "FEED_COLUMN"
-  ],
-  [
    "BOLT_COL_0",
    "COL_FLANGE"
   ],
   [
+   "BOLT_COLB_0",
+   "BELLY_PAN"
+  ],
+  [
    "BOLT_COL_0",
+   "COL_POST_0"
+  ],
+  [
+   "BOLT_COLB_0",
    "COL_POST_0"
   ],
   [
@@ -5515,7 +5686,15 @@
    "COL_FLANGE"
   ],
   [
+   "BOLT_COLB_1",
+   "BELLY_PAN"
+  ],
+  [
    "BOLT_COL_1",
+   "COL_POST_1"
+  ],
+  [
+   "BOLT_COLB_1",
    "COL_POST_1"
   ],
   [
@@ -5523,7 +5702,15 @@
    "COL_FLANGE"
   ],
   [
+   "BOLT_COLB_2",
+   "BELLY_PAN"
+  ],
+  [
    "BOLT_COL_2",
+   "COL_POST_2"
+  ],
+  [
+   "BOLT_COLB_2",
    "COL_POST_2"
   ],
   [
@@ -5531,7 +5718,15 @@
    "COL_FLANGE"
   ],
   [
+   "BOLT_COLB_3",
+   "BELLY_PAN"
+  ],
+  [
    "BOLT_COL_3",
+   "COL_POST_3"
+  ],
+  [
+   "BOLT_COLB_3",
    "COL_POST_3"
   ],
   [
@@ -5543,8 +5738,16 @@
    "NUT_GBRK_1"
   ],
   [
+   "BOLT_GBRK_2",
+   "NUT_GBRK_2"
+  ],
+  [
+   "BOLT_GBRK_3",
+   "NUT_GBRK_3"
+  ],
+  [
    "GATE_SERVO",
-   "HOP_WALL_L"
+   "HOP_WALL_R"
   ],
   [
    "SCRW_GSV_0",
@@ -5552,6 +5755,14 @@
   ],
   [
    "SCRW_GSV_1",
+   "GATE_BRKT"
+  ],
+  [
+   "SCRW_GSV_2",
+   "GATE_BRKT"
+  ],
+  [
+   "SCRW_GSV_3",
    "GATE_BRKT"
   ],
   [
@@ -5563,16 +5774,12 @@
    "GATE_HORN"
   ],
   [
-   "DIV_SERVO",
-   "HOP_WALL_L"
+   "DIV_BAND",
+   "FEED_COLUMN"
   ],
   [
-   "DIV_BRKT",
-   "HOP_WALL_L"
-  ],
-  [
-   "SCRW_DVSV_1",
-   "HOP_WALL_L"
+   "SCRW_DVSV_0",
+   "DIV_BRKT"
   ],
   [
    "SCRW_DVSV_0",
@@ -5580,7 +5787,75 @@
   ],
   [
    "SCRW_DVSV_1",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_1",
    "DIV_BAND"
+  ],
+  [
+   "SCRW_DVSV_2",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_3",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_0",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_1",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_2",
+   "DIV_BRKT"
+  ],
+  [
+   "SCRW_DVSV_3",
+   "DIV_BRKT"
+  ],
+  [
+   "BOLT_DVBR_0",
+   "FEED_COLUMN"
+  ],
+  [
+   "BOLT_DVBR_1",
+   "FEED_COLUMN"
+  ],
+  [
+   "BOLT_DVBR_2",
+   "FEED_COLUMN"
+  ],
+  [
+   "BOLT_DVBR_3",
+   "FEED_COLUMN"
+  ],
+  [
+   "BOLT_DVBR_0",
+   "DIV_BAND"
+  ],
+  [
+   "BOLT_DVBR_1",
+   "DIV_BAND"
+  ],
+  [
+   "SCRW_DVSV_0",
+   "BOLT_DVBR_0"
+  ],
+  [
+   "SCRW_DVSV_1",
+   "BOLT_DVBR_1"
+  ],
+  [
+   "SCRW_DVSV_2",
+   "BOLT_DVBR_2"
+  ],
+  [
+   "SCRW_DVSV_3",
+   "BOLT_DVBR_3"
   ],
   [
    "DIV_SHAFT",
@@ -5589,14 +5864,6 @@
   [
    "DIV_FLAP",
    "DIV_SHAFT"
-  ],
-  [
-   "BOLT_PORT_3",
-   "HOP_WALL_L"
-  ],
-  [
-   "BOLT_PORT_3",
-   "FEED_COLUMN"
   ],
   [
    "BOLT_PORT_0",
@@ -6026,11 +6293,15 @@
   ],
   [
    "GATE_HORN",
-   "HOP_WALL_L"
+   "HOP_WALL_R"
   ],
   [
    "DIV_SHAFT",
    "FEED_COLUMN"
+  ],
+  [
+   "DIV_SHAFT",
+   "DIV_BRKT"
   ]
  ],
  "contacts": [
@@ -6771,6 +7042,14 @@
    "HUB_EXP"
   ],
   [
+   "WIRE_BATT_SW",
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
    "PIVOT_PIN_L",
    "FRAME_RAIL_L"
   ],
@@ -6920,15 +7199,19 @@
   ],
   [
    "BOLT_GBRK_0",
-   "HOP_WALL_L"
+   "HOP_WALL_R"
   ],
   [
    "BOLT_GBRK_1",
-   "HOP_WALL_L"
+   "HOP_WALL_R"
   ],
   [
-   "DIV_SERVO",
-   "DIV_BAND"
+   "BOLT_GBRK_2",
+   "HOP_WALL_R"
+  ],
+  [
+   "BOLT_GBRK_3",
+   "HOP_WALL_R"
   ],
   [
    "NUT_RIV_IN_FL_00",
@@ -7167,30 +7450,6 @@
    "SWITCH_BRKT"
   ],
   [
-   "WIRE_ENC_LON",
-   "BELLY_PAN"
-  ],
-  [
-   "WIRE_BATT_SW",
-   "WIRE_MTR_FR"
-  ],
-  [
-   "WIRE_SW_CTRL",
-   "WIRE_HUB_RS485"
-  ],
-  [
-   "WIRE_HUB_RS485",
-   "WIRE_ENC_LAT_R"
-  ],
-  [
-   "WIRE_MTR_FL",
-   "WIRE_MTR_RL"
-  ],
-  [
-   "WIRE_MTR_FR",
-   "WIRE_MTR_RR"
-  ],
-  [
    "BATT_STRAP_0",
    "WIRE_BATT_SW"
   ],
@@ -7199,56 +7458,12 @@
    "SWITCH_BRKT"
   ],
   [
-   "BOLT_MPL_R_3",
-   "INT_MOTOR"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "MOTOR_RL"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "ELEC_SHELF"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "SCRW_ENC_LON_1"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "ODO_ARM_LON"
-  ],
-  [
-   "INT_CHEEK_L",
-   "FRAME_CROWN_F"
-  ],
-  [
    "FLOAT_SLIDE_L",
    "INT_CHEEK_L"
   ],
   [
-   "TORSION_SPRING_L",
-   "INT_CHEEK_L"
-  ],
-  [
-   "TORSION_SPRING_L",
-   "FLOAT_SLIDE_L"
-  ],
-  [
-   "INT_CHEEK_R",
-   "FRAME_CROWN_F"
-  ],
-  [
    "FLOAT_SLIDE_R",
    "INT_CHEEK_R"
-  ],
-  [
-   "TORSION_SPRING_R",
-   "INT_CHEEK_R"
-  ],
-  [
-   "TORSION_SPRING_R",
-   "FLOAT_SLIDE_R"
   ],
   [
    "NUT_RIV_IL_00",
@@ -7283,56 +7498,8 @@
    "FRAME_RAIL_R"
   ],
   [
-   "NUT_PIV_L",
-   "INT_BRG_L"
-  ],
-  [
-   "NUT_PIV_R",
-   "INT_BRG_R"
-  ],
-  [
-   "CHAIN_25",
-   "SPROCKET_9T"
-  ],
-  [
-   "CHAIN_25",
-   "SPROCKET_16T"
-  ],
-  [
-   "CHAIN_25",
-   "ROLLER_SHAFT"
-  ],
-  [
    "MASTER_LINK",
    "CHAIN_25"
-  ],
-  [
-   "BELT_XROLL",
-   "TENS_IDLER"
-  ],
-  [
-   "TENS_SPRING",
-   "TENS_POST"
-  ],
-  [
-   "TENS_SPRING",
-   "TENS_ARM"
-  ],
-  [
-   "HOP_APRON",
-   "HOP_FLOOR"
-  ],
-  [
-   "SPUR_FEED_W",
-   "SPUR_FEED_M"
-  ],
-  [
-   "GATE_FLAG",
-   "FEED_COLUMN"
-  ],
-  [
-   "DIV_BAND",
-   "FEED_COLUMN"
   ]
  ],
  "ground": [

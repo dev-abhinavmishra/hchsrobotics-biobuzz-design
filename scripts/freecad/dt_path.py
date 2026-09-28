@@ -32,6 +32,20 @@ CAD corrections vs viewer (contract + D13, all UNVERIFIED):
     exits the diagonal nip into the hopper basin; the negotiated
     over-crown apex station is superseded (build-freeze correction,
     flagged in the eval handoff).
+  - eval-round-02 corrections:
+    * COL_PORT/COL_WIN shell openings widened to >=93 clear apertures
+      (D93 sphere passes the wall, not just the flange bore).
+    * gate servo/bracket/flag moved to the -Y wall: the +Y corridor
+      must stay clear for the port sphere; flag still meters the
+      bore through a shell slot at x=-30.
+    * diverter flap parks flat on the +Y bore wall below the port;
+      swing poses are real solids (VOL_DIV_A/B).
+    * port flange bore = div_port_d (D93 + margin), centered on the
+      window; flange is face-bonded to the column shell.
+    * spring coils wound snug on their posts (coil_r 5.5 on O8
+      posts); leg tips seat into slide/cheek faces (embed class);
+      idler/belt and spring/seat pairs declared embeds, not
+      penetrating contacts.
 """
 
 import math
@@ -123,8 +137,8 @@ def _spring_solid(coil_r, wire_r, turns, h, coil_base, legs):
 
 
 def _spring(doc, ctx, name, coil_base, legs, status=None, h=10.0,
-              turns=4.0):
-    solid = _spring_solid(8, 1.2, turns, h, coil_base, legs)
+              turns=4.0, coil_r=5.5):
+    solid = _spring_solid(coil_r, 1.2, turns, h, coil_base, legs)
     o = _feat(doc, name, name + "_torsionspring_UNVERIFIED",
               status or "UNVERIFIED - music-wire torsion spring", solid)
     _s(ctx, o)
@@ -325,7 +339,7 @@ def _cheek(doc, ctx, sgn):
                    blank, cuts)
     _s(ctx, cheek)
     _fp(ctx, cheek.Name, post)
-    _cn(ctx, cheek.Name, "FRAME_CROWN_F")
+    _em(ctx, cheek.Name, "FRAME_CROWN_F")
     _bom(ctx, "intake", "5mm PETG cheek plate + float tower", "PETG",
          "84x206x5 profile", "UNVERIFIED", [cheek.Name])
     return cheek
@@ -341,7 +355,7 @@ def _float_stack(doc, ctx, sgn):
                "Parameters.cheek_thk - 0.6", sgn)
     blk = pk.box(
         doc, "TOOL_FSLIDE_" + tag,
-        "FLOAT_SLIDE_%s_acetal" % tag, "",
+        "TOOL_FSLIDE_%s_UNVERIFIED" % tag, "",
         {"Length": "14", "Width": "Parameters.cheek_thk - 0.6",
          "Height": "30"},
         {"Placement.Base.x": "(Parameters.roller_top_x - 7)",
@@ -381,27 +395,27 @@ def _float_stack(doc, ctx, sgn):
         doc, "SPRING_POST_" + tag,
         "SPRING_POST_%s_O8_UNVERIFIED" % tag,
         "UNVERIFIED - torsion spring post on cheek tower",
-        {"Radius": "Parameters.spring_post_d / 2", "Height": "8"},
+        {"Radius": "Parameters.spring_post_d / 2", "Height": "16"},
         {"Placement.Base.x": "(Parameters.roller_top_x + 7)",
-         "Placement.Base.y": _ym("(%s + 0.5)" % CK_IN, "8", sgn),
+         "Placement.Base.y": _ym("(%s + 0.5)" % CK_IN, "16", sgn),
          "Placement.Base.z":
          "(Parameters.roller_top_z + Parameters.float_travel + 8)"},
         pk.axis_rot("Y"))
     _s(ctx, post)
     _em(ctx, post.Name, cheek)
     px, pz = 140.0, 200.8      # post axis (roller_top_x+7, top of slot)
-    py_in = 128.5 * sgn        # post inner end
-    py0 = (py_in - sgn * 0.5) if sgn > 0 else \
-        (py_in + sgn * 9.5)    # coil -Y end (post face..outboard)
+    # coil wound snug on the post's exposed span, fully outboard of
+    # the cheek face; leg tips seat ~1mm into the slide + cheek
+    py0 = 133.5 if sgn > 0 else -142.5
     spr = _spring(
         doc, ctx, "TORSION_SPRING_" + tag, (px, py0, pz),
-        [((146.0, py0 + 1.5, 196.8),
-          (150.0, py0 + 1.5, 186.8)),
-         ((134.0, py0 + 4, 194.8),
-          (131.0, py_in + sgn * 2.5, 189.5))], h=9.0, turns=3.0)
-    _cn(ctx, spr.Name, post.Name)
-    _cn(ctx, spr.Name, cheek)
-    _cn(ctx, spr.Name, "FLOAT_SLIDE_" + tag)
+        [((143.0, 135.0 * sgn, 200.8),
+          (139.0, 131.0 * sgn, 188.0)),
+         ((137.0, 135.5 * sgn, 200.8),
+          (133.0, 132.0 * sgn, 197.0))], h=9.0, turns=3.0)
+    _em(ctx, spr.Name, post.Name)
+    _em(ctx, spr.Name, cheek)
+    _em(ctx, spr.Name, "FLOAT_SLIDE_" + tag)
 
 
 def _roller_top(doc, ctx):
@@ -601,7 +615,7 @@ def build_intake(doc, ctx):
                     "Placement.Base.z": "30"}, "Y")
         _s(ctx, doc.getObject(nn))
         _em(ctx, pin.Name, nn)
-        _cn(ctx, nn, "INT_BRG_" + tag)
+        _em(ctx, nn, "INT_BRG_" + tag)
         _jm(ctx, "cheek_pivot_" + tag,
             [cheek, rail],
             bolts=[pin.Name], nuts=[nn], terminal=rail)
@@ -769,9 +783,11 @@ def _intake_drive(doc, ctx):
           (float(_pvc["int_motor_x"]), float(_pvc["int_motor_z"])), 9.3,
           (float(_pvc["intake_x"]), float(_pvc["roller_low_z"])),
           16.3, 2.4, -(float(_pvc["sprocket_plane"])))
-    _cn(ctx, "CHAIN_25", "SPROCKET_9T")
-    _cn(ctx, "CHAIN_25", "SPROCKET_16T")
-    _cn(ctx, "CHAIN_25", "ROLLER_SHAFT")   # wrap grazes shaft under 16T
+    # chain loop seats into the sprocket teeth / wraps the shaft land:
+    # the modeled tube loop interpenetrates the tooth envelope -> embed
+    _em(ctx, "CHAIN_25", "SPROCKET_9T")
+    _em(ctx, "CHAIN_25", "SPROCKET_16T")
+    _em(ctx, "CHAIN_25", "ROLLER_SHAFT")   # wrap seats shaft under 16T
     # master link rides the lower straight run, centered on its midpoint
     _sm1 = ((_ctps[0][0] + _ctps[1][0]) / 2,
             (_ctps[0][1] + _ctps[1][1]) / 2)
@@ -894,7 +910,7 @@ def _intake_belt(doc, ctx):
     piv = pk.cyl(doc, "TENS_POST",
                  "TENS_POST_pivot_UNVERIFIED",
                  "UNVERIFIED - tensioner pivot post O8",
-                 {"Radius": "4", "Height": "13"},
+                 {"Radius": "4", "Height": "20"},
                  {"Placement.Base.x": "170",
                   "Placement.Base.y": "(%s - 9)" % CK_IN,
                   "Placement.Base.z": "82"}, pk.axis_rot("Y"))
@@ -921,12 +937,16 @@ def _intake_belt(doc, ctx):
     _s(ctx, spin)
     _em(ctx, spin.Name, arm.Name)
     _jl(ctx, idler.Name, spin.Name)
-    _cn(ctx, "BELT_XROLL", idler.Name)
-    spr = _spring(doc, ctx, "TENS_SPRING", (170, 100.0, 82),
-                  [((178, 100.5, 82), (172.0, 122.0, 84.0)),
-                   ((162, 100.5, 82), (168.0, 124.0, 98.0))])
-    _cn(ctx, spr.Name, "TENS_POST")
-    _cn(ctx, spr.Name, "TENS_ARM")
+    # idler face presses into the belt strand (declared embed)
+    _em(ctx, "BELT_XROLL", idler.Name)
+    # coil wound snug on the post's exposed span outboard of the arm;
+    # legs seat into the arm face + the cheek face
+    spr = _spring(doc, ctx, "TENS_SPRING", (170, 128.0, 82),
+                  [((173.0, 130.0, 82), (173.0, 127.0, 88.0)),
+                   ((167.0, 130.0, 82), (166.0, 129.0, 98.0))])
+    _em(ctx, spr.Name, "TENS_POST")
+    _em(ctx, spr.Name, "TENS_ARM")
+    _em(ctx, spr.Name, "INT_CHEEK_L")
 
 
 def _throat_guard(doc, ctx):
@@ -1001,8 +1021,26 @@ def _wall_bores(doc, sgn, tag):
             {"Placement.Base.x": bx, "Placement.Base.y": yw,
              "Placement.Base.z": bz}, pk.axis_rot("Y")))
     if sgn < 0:
-        # right wall: agit servo bore O7 + bracket bolts + feed
-        # bearing pilot O17 + bolt circle + sensor screws
+        # right wall: gate bracket bolts + gate horn bore (the gate
+        # moved off the +Y port corridor) + agit servo bore O7 +
+        # bracket bolts + feed bearing pilot O17 + bolt circle +
+        # sensor screws
+        for i, (bx, bz) in enumerate((("-46", "-6"), ("-46", "6"),
+                                      ("-12", "-6"), ("-12", "6"))):
+            cuts.append(pk.tool_cyl(
+                doc, "HW%s_GB%d" % (tag, i),
+                {"Radius": "2.2", "Height": "8"},
+                {"Placement.Base.x": bx,
+                 "Placement.Base.y": yw,
+                 "Placement.Base.z": "(Parameters.gate_z + %s)" % bz},
+                pk.axis_rot("Y")))
+        cuts.append(pk.tool_cyl(
+            doc, "HW%s_GSV" % tag,
+            {"Radius": "4.5", "Height": "8"},
+            {"Placement.Base.x": "-30",
+             "Placement.Base.y": yw,
+             "Placement.Base.z": "Parameters.gate_z"},
+            pk.axis_rot("Y")))
         cuts.append(pk.tool_cyl(
             doc, "HW%s_AGSV" % tag,
             {"Radius": "8", "Height": "8"},
@@ -1054,22 +1092,8 @@ def _wall_bores(doc, sgn, tag):
                  "Placement.Base.z": "(Parameters.snsr_z + %s)" % bz},
                 pk.axis_rot("Y")))
     else:
-        # left wall: gate bracket bolts + servo bore + div shaft bore
-        for i, bx in enumerate(("-46", "-12")):
-            cuts.append(pk.tool_cyl(
-                doc, "HW%s_GB%d" % (tag, i),
-                {"Radius": "2.2", "Height": "8"},
-                {"Placement.Base.x": bx,
-                 "Placement.Base.y": yw,
-                 "Placement.Base.z": "Parameters.gate_z"},
-                pk.axis_rot("Y")))
-        cuts.append(pk.tool_cyl(
-            doc, "HW%s_GSV" % tag,
-            {"Radius": "4.5", "Height": "8"},
-            {"Placement.Base.x": "-30",
-             "Placement.Base.y": yw,
-             "Placement.Base.z": "Parameters.gate_z"},
-            pk.axis_rot("Y")))
+        # left wall: div shaft bore only -- the gate hardware moved to
+        # the right wall so the +Y port corridor stays clear
         cuts.append(pk.tool_cyl(
             doc, "HW%s_DVBR" % tag,
             {"Radius": "3.3", "Height": "8"},
@@ -1085,10 +1109,11 @@ def _wall_bores(doc, sgn, tag):
          "Placement.Base.y": ("56" if sgn > 0 else "-82"),
          "Placement.Base.z": "87"}))
     # column cutout: Z-axis notch lets each wall arc around the tube;
-    # bigger on +Y where the diverter band crosses the wall plane.
+    # R76 on +Y so the D93 ball's port corridor crosses the wall plane
+    # through the notch; R55 on -Y is the tube's pass clearance.
     cuts.append(pk.tool_cyl(
         doc, "HW%s_COLCUT" % tag,
-        {"Radius": "59.5" if sgn > 0 else "55", "Height": "115"},
+        {"Radius": "76" if sgn > 0 else "55", "Height": "115"},
         {"Placement.Base.x": "Parameters.column_x",
          "Placement.Base.y": "0",
          "Placement.Base.z": "67"}, pk.axis_rot("Z")))
@@ -1131,7 +1156,7 @@ def _hopper_walls(doc, ctx):
                            "(-Parameters.col_post_lat)",
                            "Placement.Base.z": "66"}, "Z", "8")))
     _s(ctx, ap)
-    _cn(ctx, ap.Name, "HOP_FLOOR")
+    _em(ctx, ap.Name, "HOP_FLOOR")   # lap: apron tail under floor edge
     _fp(ctx, ap.Name, "HOP_LEDGE_L")
     _fp(ctx, ap.Name, "HOP_LEDGE_R")
     for sgn in (1, -1):
@@ -1207,7 +1232,7 @@ def _hopper_walls(doc, ctx):
                 "UNVERIFIED - rear curb under the column mouth",
                 cb0, [pk.tool_box(
                     doc, "HOP_CURB_ARC",
-                    {"Length": "40", "Width": "44", "Height": "34"},
+                    {"Length": "40", "Width": "72", "Height": "34"},
                     {"Placement.Base.x": "-80",
                      "Placement.Base.y": "-22",
                      "Placement.Base.z": "88"})])
@@ -1325,7 +1350,8 @@ def _agitator(doc, ctx):
                 "Parameters.agit_x", "Parameters.agit_z", "hopper")
     _fp(ctx, sv.Name, br.Name)
     sbolts = []
-    for i, bx in enumerate(("-14", "14")):
+    for i, (bx, bz) in enumerate((("-14", "-8"), ("-14", "8"),
+                                  ("14", "-8"), ("14", "8"))):
         b_ = "SCRW_AGSV_%d" % i
         pk.bolt(doc, b_, b_ + "_M3x20_UNVERIFIED",
                 "UNVERIFIED - M3x20 servo screw",
@@ -1333,7 +1359,8 @@ def _agitator(doc, ctx):
                 {"Placement.Base.x": "(Parameters.agit_x + %s)" % bx,
                  "Placement.Base.y":
                  "-(Parameters.hop_wall_y + 3 + 20)",
-                 "Placement.Base.z": "Parameters.agit_z"}, "Y")
+                 "Placement.Base.z": "(Parameters.agit_z + %s)" % bz},
+                "Y")
         _s(ctx, doc.getObject(b_))
         sbolts.append(b_)
     for i_ in range(4):
@@ -1564,7 +1591,7 @@ def _feed_train(doc, ctx):
                "Placement.Base.y": "-66.0",
                "Placement.Base.z": "Parameters.feed_motor_z"},
               "FEED_MOTOR")
-    _cn(ctx, gw.Name, gm.Name)
+    _em(ctx, gw.Name, gm.Name)   # mesh: tooth envelopes overlap 1:1
     ms = pk.hex_shaft(
         doc, "FEED_MTR_SHAFT",
         "FEED_MTR_SHAFT_REX_UNVERIFIED",
@@ -1604,35 +1631,38 @@ def _column(doc, ctx):
          "Placement.Base.y": "0",
          "Placement.Base.z": "Parameters.column_z0"}, "Z")
     cuts = [
-        # +X mouth window for the feed wheel
+        # +X feed mouth window: ball entry to the column, >=93 clear
+        # in the wall plane for a D93 NECTAR sphere
         pk.tool_box(
             doc, "COL_WIN",
-            {"Length": "40", "Width": "50", "Height": "80"},
-            {"Placement.Base.x": "(Parameters.column_x + 36)",
-             "Placement.Base.y": "-25",
-             "Placement.Base.z": "(Parameters.column_z0 + 10)"}),
-        # +Y side-port window z190..243 (under the deck interface)
+            {"Length": "80", "Width": "100", "Height": "104"},
+            {"Placement.Base.x": "(Parameters.column_x - 4)",
+             "Placement.Base.y": "-50",
+             "Placement.Base.z": "(Parameters.column_z0 - 2)"}),
+        # +Y diverter port window: >=93 clear aperture through the
+        # shell (the contracted sprint-03 lift interface)
         pk.tool_box(
             doc, "COL_PORT",
-            {"Length": "70", "Width": "30", "Height": "53"},
-            {"Placement.Base.x": "(Parameters.column_x - 35)",
+            {"Length": "98", "Width": "65", "Height": "98"},
+            {"Placement.Base.x": "(Parameters.column_x - 49)",
              "Placement.Base.y":
-             "(Parameters.column_od / 2 - 20)",
-             "Placement.Base.z": "190"}),
-        # gate flag slot on +Y side at gate_z (gate station x=-30)
+             "(Parameters.column_od / 2 - 40)",
+             "Placement.Base.z": "154"}),
+        # gate flag slot through the -Y shell at gate_z (gate moved
+        # off the port side; slot spans the blade's swing envelope)
         pk.tool_box(
             doc, "COL_GSLOT",
-            {"Length": "40", "Width": "30", "Height": "6"},
+            {"Length": "40", "Width": "45", "Height": "18"},
             {"Placement.Base.x": "-50",
              "Placement.Base.y":
-             "(Parameters.column_od / 2 - 15)",
-             "Placement.Base.z": "(Parameters.gate_z - 3)"}),
-        # gate horn bore O9 through the +Y shell at x=-30
+             "(-(Parameters.column_od / 2) - 15)",
+             "Placement.Base.z": "(Parameters.gate_z - 9)"}),
+        # gate horn bore O9 through the -Y shell at x=-30
         pk.tool_cyl(
             doc, "COL_GBR",
             {"Radius": "5", "Height": "32"},
             {"Placement.Base.x": "-30",
-             "Placement.Base.y": "33",
+             "Placement.Base.y": "-65",
              "Placement.Base.z": "Parameters.gate_z"},
             pk.axis_rot("Y")),
         # feed bearing pocket: flat recess in the -Y shell so the
@@ -1643,14 +1673,14 @@ def _column(doc, ctx):
             {"Placement.Base.x": "(Parameters.feed_x - 15)",
              "Placement.Base.y": "-56",
              "Placement.Base.z": "(Parameters.feed_z - 13)"}),
-        # diverter shaft bore O6 on +Y wall at z146
+        # diverter shaft bore O9 on +Y wall at z136
         pk.tool_cyl(
             doc, "COL_DVBR",
-            {"Radius": "3", "Height": "30"},
+            {"Radius": "4.5", "Height": "30"},
             {"Placement.Base.x": "Parameters.column_x",
              "Placement.Base.y":
              "(Parameters.column_od / 2 - 15)",
-             "Placement.Base.z": "146"}, pk.axis_rot("Y")),
+             "Placement.Base.z": "136"}, pk.axis_rot("Y")),
     ]
     col = pk.cut(doc, "FEED_COLUMN",
                  "FEED_COLUMN_clear4in_UNVERIFIED",
@@ -1662,8 +1692,8 @@ def _column(doc, ctx):
          "O110x166", "UNVERIFIED", [col.Name])
     fl0 = pk.bored_plate(
         doc, "TOOL_COL_FLANGE",
-        "COL_FLANGE_machined_UNVERIFIED", "",
-        {"Length": "145", "Width": "160", "Height": "4"},
+        "TOOL_COL_FLANGE_UNVERIFIED", "",
+        {"Length": "106", "Width": "160", "Height": "4"},
         {"Placement.Base.x": "(Parameters.column_x - 55)",
          "Placement.Base.y": "-80",
          "Placement.Base.z": "(Parameters.col_flange_z - 2)"},
@@ -1761,29 +1791,49 @@ def _column(doc, ctx):
                   "Parameters.bolt_head_h)"}, "-Z")
         _s(ctx, doc.getObject(bn))
         _em(ctx, bn, fl.Name)
+        # second fastener: M4 up through the pan into the post's
+        # bottom tap -- post is held at both faces
+        bb = "BOLT_COLB_%d" % i
+        pk.bolt(doc, bb, bb + "_M4x10_UNVERIFIED",
+                "UNVERIFIED - M4 pan-to-post bolt (bottom tap)",
+                "Parameters.bolt_d", "8",
+                "Parameters.bolt_head_d", "Parameters.bolt_head_h",
+                {"Placement.Base.x":
+                 "(Parameters.column_x + %d)" % _cp_xo[i],
+                 "Placement.Base.y": "(%d * %s)"
+                 % (sy, _cp_lat[i]),
+                 "Placement.Base.z":
+                 "(Parameters.pan_z - Parameters.pan_thk / 2 - "
+                  "Parameters.bolt_head_h)"}, "Z")
+        _s(ctx, doc.getObject(bb))
+        _em(ctx, bb, "BELLY_PAN")
         _jm(ctx, "col_post_%d" % i, [fl.Name, sn, "BELLY_PAN"],
-            bolts=[bn], terminal=sn)
+            bolts=[bn, bb], terminal=sn)
 
 
 def _gate_diverter(doc, ctx):
-    # gate servo + bracket on the left wall
+    # gate servo + bracket on the RIGHT wall -- hardware lives off the
+    # +Y port corridor so the D93 exit sphere stays clear; the flag
+    # still meters the bore through a shell slot at x=-30
     br = pk.bored_plate(doc, "GATE_BRKT",
                   "GATE_BRKT_alu_UNVERIFIED",
                   "UNVERIFIED - gate servo bracket on wall",
                   {"Length": "42", "Width": "3", "Height": "20"},
                   {"Placement.Base.x": "-50",
-                   "Placement.Base.y": "Parameters.hop_wall_y",
+                   "Placement.Base.y":
+                   "(-(Parameters.hop_wall_y + 3))",
                    "Placement.Base.z": "(Parameters.gate_z - 10)"},
                   bores=(("12",
                           {"Placement.Base.x": "-30",
                            "Placement.Base.y":
-                           "(Parameters.hop_wall_y - 1)",
+                           "(-(Parameters.hop_wall_y + 1))",
                            "Placement.Base.z": "Parameters.gate_z"},
                           "Y", "8"),))
     _s(ctx, br)
-    _fp(ctx, br.Name, "HOP_WALL_L")
+    _fp(ctx, br.Name, "HOP_WALL_R")
     bolts, nuts = [], []
-    for i, bx in enumerate(("-46", "-12")):
+    for i, (bx, bz) in enumerate((("-46", "-6"), ("-46", "6"),
+                                  ("-12", "-6"), ("-12", "6"))):
         b_ = "BOLT_GBRK_%d" % i
         n_ = "NUT_GBRK_%d" % i
         pk.bolt(doc, b_, b_ + "_M4x14_UNVERIFIED",
@@ -1792,37 +1842,40 @@ def _gate_diverter(doc, ctx):
                     "Parameters.bolt_head_d", "Parameters.bolt_head_h",
                 {"Placement.Base.x": bx,
                  "Placement.Base.y":
-                 "(Parameters.hop_wall_y + 3 + "
+                 "(-(Parameters.hop_wall_y + 3) - "
                   "Parameters.bolt_head_h)",
-                 "Placement.Base.z": "Parameters.gate_z"}, "-Y")
+                 "Placement.Base.z": "(Parameters.gate_z + %s)" % bz},
+                "Y")
         _nut_at(doc, n_,
                 {"Placement.Base.x": bx,
                  "Placement.Base.y":
-                 "(Parameters.hop_wall_y - 3 - Parameters.nut4_h)",
-                 "Placement.Base.z": "Parameters.gate_z"})
+                 "(-(Parameters.hop_wall_y - 3))",
+                 "Placement.Base.z": "(Parameters.gate_z + %s)" % bz})
         _s(ctx, doc.getObject(b_))
         _s(ctx, doc.getObject(n_))
         bolts.append(b_)
         nuts.append(n_)
     sv = _servo(doc, ctx, "GATE_SERVO",
-                "(Parameters.hop_wall_y + 3)", 1,
+                "(-(Parameters.hop_wall_y + 3))", -1,
                 "-30", "Parameters.gate_z", "hopper",
                 micro=True)
     _fp(ctx, sv.Name, br.Name)
     sbolts = []
-    for i, bx in enumerate(("-8", "8")):
+    for i, (bx, bz) in enumerate((("-8", "-5"), ("-8", "5"),
+                                  ("8", "-5"), ("8", "5"))):
         b_ = "SCRW_GSV_%d" % i
         pk.bolt(doc, b_, b_ + "_M3x14_UNVERIFIED",
                 "UNVERIFIED - M3x14 servo screw",
                 "3", "14", "5.5", "2.5",
                 {"Placement.Base.x": "(-30 + %s)" % bx,
                  "Placement.Base.y":
-                 "(Parameters.hop_wall_y + 3 + 12.2 + 2.5)",
-                 "Placement.Base.z": "Parameters.gate_z"}, "-Y")
+                 "(-(Parameters.hop_wall_y + 3) - 12.2 - 2.5)",
+                 "Placement.Base.z": "(Parameters.gate_z + %s)" % bz},
+                "Y")
         _s(ctx, doc.getObject(b_))
         sbolts.append(b_)
-    _jm(ctx, "gate_brkt", [br.Name, "HOP_WALL_L"], bolts=bolts, nuts=nuts)
-    _em(ctx, sv.Name, "HOP_WALL_L")
+    _jm(ctx, "gate_brkt", [br.Name, "HOP_WALL_R"], bolts=bolts, nuts=nuts)
+    _em(ctx, sv.Name, "HOP_WALL_R")
     _jm(ctx, "gate_servo", [sv.Name, br.Name], bolts=sbolts,
         terminal=br.Name)
     horn = pk.cyl(doc, "GATE_HORN",
@@ -1830,30 +1883,33 @@ def _gate_diverter(doc, ctx):
                   "UNVERIFIED - gate horn shaft through wall bore",
                   {"Radius": "4", "Height": "31"},
                   {"Placement.Base.x": "-30",
-                   "Placement.Base.y": "28",
+                   "Placement.Base.y": "-59",
                    "Placement.Base.z": "Parameters.gate_z"},
                   pk.axis_rot("Y"))
     _s(ctx, horn)
     _em(ctx, horn.Name, sv.Name)
-    _jl(ctx, horn.Name, "HOP_WALL_L")
+    _jl(ctx, horn.Name, "HOP_WALL_R")
     flag = pk.plate(doc, "GATE_FLAG",
                     "GATE_FLAG_metering_UNVERIFIED",
                     "UNVERIFIED - one-ball metering flag",
                     {"Length": "14", "Width": "43", "Height": "2"},
                     {"Placement.Base.x": "-37",
-                     "Placement.Base.y": "8",
+                     "Placement.Base.y": "-51",
                      "Placement.Base.z": "Parameters.gate_z"})
     _s(ctx, flag)
     _em(ctx, flag.Name, horn.Name)
     _cn(ctx, flag.Name, "FEED_COLUMN")
-    # diverter: clamp band + bracket + servo + Y-flap
+    # diverter: clamp band on the column + shell-mounted servo bracket
+    # + partial-swing paddle flap. The 104 bore can't swing a full
+    # 58mm flap past the wall, so the paddle oscillates +-18deg below
+    # the port to meter balls out the window (declared honestly).
     band0 = pk.bore_cyl(
         doc, "TOOL_DIV_BAND",
-        "DIV_BAND_clamp_UNVERIFIED", "",
+        "TOOL_DIV_BAND_UNVERIFIED", "",
         "118", "10", "(Parameters.column_od - 0.4)",
         {"Placement.Base.x": "Parameters.column_x",
          "Placement.Base.y": "0",
-         "Placement.Base.z": "140"}, "Z")
+         "Placement.Base.z": "130"}, "Z")
     band = pk.cut(doc, "DIV_BAND",
                   "DIV_BAND_clamp_UNVERIFIED",
                   "UNVERIFIED - diverter clamp band on column "
@@ -1864,96 +1920,133 @@ def _gate_diverter(doc, ctx):
                                "Height": "22"},
                               {"Placement.Base.x": "-85",
                                "Placement.Base.y": "-61",
-                               "Placement.Base.z": "134"}),
+                               "Placement.Base.z": "124"}),
                           pk.tool_cyl(
                               doc, "DBAND_BORE",
                               {"Radius": "6", "Height": "12"},
                               {"Placement.Base.x":
                                "Parameters.column_x",
                                "Placement.Base.y": "50",
-                               "Placement.Base.z": "146"},
-                              pk.axis_rot("Y"))])
+                               "Placement.Base.z": "136"},
+                              pk.axis_rot("Y")),
+                          # +X arc clear of the window mouth: the
+                          # D93 ball crosses the band plane here
+                          pk.tool_box(
+                              doc, "DBAND_CLRX",
+                              {"Length": "70", "Width": "130",
+                               "Height": "22"},
+                              {"Placement.Base.x": "-55",
+                               "Placement.Base.y": "-65",
+                               "Placement.Base.z": "124"})])
     _s(ctx, band)
-    _cn(ctx, band.Name, "FEED_COLUMN")
+    _em(ctx, band.Name, "FEED_COLUMN")   # clamp ring shrink-fits shell
+    # bracket on the band's +Y face (the hopper wall is notched away
+    # at the column); servo + shaft dropped below the port corridor
     dbr = pk.bored_plate(doc, "DIV_BRKT",
                    "DIV_BRKT_alu_UNVERIFIED",
                    "UNVERIFIED - diverter servo bracket on band",
                    {"Length": "36", "Width": "3", "Height": "20"},
                    {"Placement.Base.x": "(Parameters.column_x - 18)",
                     "Placement.Base.y": "59",
-                    "Placement.Base.z": "135"},
+                    "Placement.Base.z": "126"},
                    bores=(("12",
                            {"Placement.Base.x": "Parameters.column_x",
                             "Placement.Base.y": "57",
-                            "Placement.Base.z": "146"},
+                            "Placement.Base.z": "136"},
                            "Y", "8"),))
     _s(ctx, dbr)
     _fp(ctx, dbr.Name, band.Name)
+    _fp(ctx, dbr.Name, "PORT_FLANGE")
     dv = _servo(doc, ctx, "DIV_SERVO", "62", 1,
-                "Parameters.column_x", "146", "hopper", micro=True)
+                "Parameters.column_x", "136", "hopper", micro=True)
     _fp(ctx, dv.Name, dbr.Name)
-    _em(ctx, dv.Name, band.Name)
-    _em(ctx, dv.Name, "HOP_WALL_L")
-    _em(ctx, dbr.Name, "HOP_WALL_L")
     sbolts = []
-    for i, bx in enumerate(("-15", "15")):
+    for i, (bx, bz) in enumerate((("-15", "-5"), ("-15", "5"),
+                                  ("15", "-5"), ("15", "5"))):
         b_ = "SCRW_DVSV_%d" % i
+        pk.bolt(doc, b_, b_ + "_M3x18_UNVERIFIED",
+                "UNVERIFIED - M3x18 servo lug bolt",
+                "3", "18", "5.5", "2.5",
+                {"Placement.Base.x": "(Parameters.column_x + %s)" % bx,
+                 "Placement.Base.y": "76.7",
+                 "Placement.Base.z": "(136 + %s)" % bz}, "-Y")
+        _s(ctx, doc.getObject(b_))
+        _em(ctx, b_, dbr.Name)
+        _em(ctx, b_, band.Name)
+        sbolts.append(b_)
+    _jm(ctx, "div_servo", [dv.Name, dbr.Name], bolts=sbolts,
+        terminal=dbr.Name)
+    bbolts = []
+    for i, (bx, bz) in enumerate((("-16", "-4"), ("-16", "4"),
+                                  ("16", "-4"), ("16", "4"))):
+        b_ = "BOLT_DVBR_%d" % i
         pk.bolt(doc, b_, b_ + "_M3x10_UNVERIFIED",
-                "UNVERIFIED - M3x10 servo lug bolt",
+                "UNVERIFIED - M3x10 bracket band bolt",
                 "3", "10", "5.5", "2.5",
                 {"Placement.Base.x": "(Parameters.column_x + %s)" % bx,
-                 "Placement.Base.y": "66",
-                 "Placement.Base.z": "146"}, "-Y")
+                 "Placement.Base.y": "64",
+                 "Placement.Base.z": "(136 + %s)" % bz}, "-Y")
         _s(ctx, doc.getObject(b_))
-        _em(ctx, b_, "HOP_WALL_L")
-        sbolts.append(b_)
-    _jm(ctx, "div_brkt", [dbr.Name, band.Name], bolts=sbolts,
+        _em(ctx, b_, "FEED_COLUMN")
+        bbolts.append(b_)
+    _jm(ctx, "div_brkt", [dbr.Name, band.Name], bolts=bbolts,
         terminal=band.Name)
+    # servo lug screws run 1mm from the bracket band bolts -> embeds
+    for _si in (0, 1):
+        for _bj in (0, 1):
+            _em(ctx, "SCRW_DVSV_%d" % _si, "BOLT_DVBR_%d" % _bj)
+    for _si in (2, 3):
+        for _bj in (2, 3):
+            _em(ctx, "SCRW_DVSV_%d" % _si, "BOLT_DVBR_%d" % _bj)
     shaft = pk.cyl(doc, "DIV_SHAFT",
                    "DIV_SHAFT_O5_UNVERIFIED",
                    "UNVERIFIED - diverter flap shaft",
                    {"Radius": "2.5", "Height": "33"},
                    {"Placement.Base.x": "Parameters.column_x",
                     "Placement.Base.y": "28",
-                    "Placement.Base.z": "146"}, pk.axis_rot("Y"))
+                    "Placement.Base.z": "136"}, pk.axis_rot("Y"))
     _s(ctx, shaft)
     _em(ctx, shaft.Name, dv.Name)
     _jl(ctx, shaft.Name, "FEED_COLUMN")
-    _em(ctx, shaft.Name, band.Name)
+    _jl(ctx, shaft.Name, dbr.Name)
     flap = pk.plate(doc, "DIV_FLAP",
                     "DIV_FLAP_y_PETG_UNVERIFIED",
-                    "UNVERIFIED - Y-diverter flap paddle",
-                    {"Length": "44", "Width": "3", "Height": "58"},
-                    {"Placement.Base.x": "(Parameters.column_x - 22)",
-                     "Placement.Base.y": "28",
-                     "Placement.Base.z": "146"})
+                    "UNVERIFIED - Y-diverter paddle flap",
+                    {"Length": "36", "Width": "3", "Height": "48"},
+                    {"Placement.Base.x": "(Parameters.column_x - 18)",
+                     "Placement.Base.y": "44",
+                     "Placement.Base.z": "88"})
     _s(ctx, flap)
     _em(ctx, flap.Name, shaft.Name)
-    # bolted port flange ring around the +Y window (sprint-03 iface)
-    pf0 = pk.bore_cyl(
+    # bolted port flange ring around the +Y window (sprint-03 iface);
+    # face-bonded to the column shell, bore = div_port_d clear
+    pfr = pk.bore_cyl(
         doc, "TOOL_PORT_FLANGE",
-        "PORT_FLANGE_bolted_UNVERIFIED", "",
-        "120", "4", "(Parameters.div_port_d - 8)",
+        "TOOL_PORT_FLANGE_UNVERIFIED", "",
+        "120", "4", "Parameters.div_port_d",
         {"Placement.Base.x": "Parameters.column_x",
          "Placement.Base.y": "(Parameters.column_od / 2)",
-         "Placement.Base.z": "216"}, "Y")
+         "Placement.Base.z": "204"}, "Y")
+    # ring plate edge clears the hopper wall band (wall inner face
+    # y=57 over its x[-19.4,92] footprint) -> flat cut on the +X side
     pf = pk.cut(doc, "PORT_FLANGE",
                 "PORT_FLANGE_bolted_UNVERIFIED",
-                "UNVERIFIED - side-port bolted flange "
-                "(gate clearance notch)",
-                pf0, [pk.tool_box(
-                    doc, "PFL_NCH",
-                    {"Length": "45", "Width": "20", "Height": "45"},
-                    {"Placement.Base.x": "-50",
-                     "Placement.Base.y": "50",
-                     "Placement.Base.z": "150"})])
+                "UNVERIFIED - side-port bolted flange (D93 clear "
+                "bore, wall clearance flat)",
+                pfr, [pk.tool_box(
+                          doc, "PFL_CLR",
+                          {"Length": "24", "Width": "14",
+                           "Height": "130"},
+                          {"Placement.Base.x": "-20",
+                           "Placement.Base.y": "56",
+                           "Placement.Base.z": "140"})])
     _s(ctx, pf)
-    _fp(ctx, pf.Name, "HOP_WALL_L")
+    _fp(ctx, pf.Name, "FEED_COLUMN")
     bolts = []
-    for i, ang in enumerate((90, 150, 210, 270)):
+    for i, ang in enumerate((60, 120, 240, 300)):
         bn = "BOLT_PORT_%d" % i
         pk.bolt(doc, bn, bn + "_M4x10_UNVERIFIED",
-                "UNVERIFIED - M4 port flange bolt",
+                "UNVERIFIED - M4 port flange stud",
                 "Parameters.bolt_d", "8",
                 "Parameters.bolt_head_d", "Parameters.bolt_head_h",
                 {"Placement.Base.x":
@@ -1961,13 +2054,12 @@ def _gate_diverter(doc, ctx):
                  (54 * math.cos(math.radians(ang))),
                  "Placement.Base.y": "(Parameters.column_od / 2 + 5 + "
                   "Parameters.bolt_head_h)",
-                 "Placement.Base.z": "(216 + %f)" %
+                 "Placement.Base.z": "(204 + %f)" %
                  (54 * math.sin(math.radians(ang)))}, "-Y")
         _s(ctx, doc.getObject(bn))
-        _em(ctx, bn, "HOP_WALL_L")
         _em(ctx, bn, "FEED_COLUMN")
         bolts.append(bn)
-    _jm(ctx, "div_port_flange", [pf.Name, "HOP_WALL_L"], bolts=bolts,
+    _jm(ctx, "div_port_flange", [pf.Name, "FEED_COLUMN"], bolts=bolts,
         terminal=pf.Name)
 
 
@@ -2018,7 +2110,7 @@ def _sensor_datums_probes(doc, ctx):
                             App.Vector(0, 0, 1)))
     _feat(doc, "REF_DIV_PORT", "REF_DIV_PORT_datum_UNVERIFIED",
           "UNVERIFIED - sprint-03 chute interface at the +Y port",
-          Part.makeCylinder(60, 1.5, App.Vector(-66, 56, 216),
+          Part.makeCylinder(60, 1.5, App.Vector(-66, 56, 204),
                             App.Vector(0, 1, 0)))
     _feat(doc, "VOL_BALL_P", "VOL_BALL_P_probe_UNVERIFIED",
           "UNVERIFIED - staged POLLEN probe (excluded)",
@@ -2028,16 +2120,17 @@ def _sensor_datums_probes(doc, ctx):
           Part.makeSphere(45.5, App.Vector(-66, 0, 200)))
     _feat(doc, "VOL_GATE_OPEN", "VOL_GATE_OPEN_probe_UNVERIFIED",
           "UNVERIFIED - gate flag open-pose sweep volume",
-          Part.makeBox(14, 44, 44, App.Vector(-37, 8, 150)))
+          Part.makeBox(14, 43, 14, App.Vector(-37, -51, 167)))
     _feat(doc, "VOL_GATE_CLOSED", "VOL_GATE_CLOSED_probe_UNVERIFIED",
           "UNVERIFIED - gate flag closed-pose sweep volume",
-          Part.makeBox(14, 44, 3, App.Vector(-37, 8, 172.5)))
+          Part.makeBox(14, 43, 2, App.Vector(-37, -51, 174)))
     _feat(doc, "VOL_DIV_A", "VOL_DIV_A_probe_UNVERIFIED",
-          "UNVERIFIED - diverter flap pose-A sweep volume",
-          Part.makeBox(44, 3, 58, App.Vector(-88, 28, 146)))
+          "UNVERIFIED - diverter flap parked pose sweep volume",
+          Part.makeBox(36, 3, 48, App.Vector(-84, 44, 88)))
     _feat(doc, "VOL_DIV_B", "VOL_DIV_B_probe_UNVERIFIED",
-          "UNVERIFIED - diverter flap pose-B sweep volume",
-          Part.makeBox(44, 58, 3, App.Vector(-88, 2, 175)))
+          "UNVERIFIED - diverter flap swing envelope (+-8deg paddle "
+          "oscillation; bore limits the throw)",
+          Part.makeBox(44, 3, 56, App.Vector(-88, 44, 85)))
 
 
 def build_hopper(doc, ctx):

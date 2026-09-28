@@ -2266,6 +2266,10 @@
    "NUT_NUM_B_3"
   ],
   [
+   "INT_CHEEK_L",
+   "FRAME_CROWN_F"
+  ],
+  [
    "FLOAT_PIN_L",
    "FLOAT_SLIDE_L"
   ],
@@ -2274,12 +2278,40 @@
    "INT_CHEEK_L"
   ],
   [
+   "TORSION_SPRING_L",
+   "SPRING_POST_L"
+  ],
+  [
+   "TORSION_SPRING_L",
+   "INT_CHEEK_L"
+  ],
+  [
+   "TORSION_SPRING_L",
+   "FLOAT_SLIDE_L"
+  ],
+  [
+   "INT_CHEEK_R",
+   "FRAME_CROWN_F"
+  ],
+  [
    "FLOAT_PIN_R",
    "FLOAT_SLIDE_R"
   ],
   [
    "SPRING_POST_R",
    "INT_CHEEK_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "SPRING_POST_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "INT_CHEEK_R"
+  ],
+  [
+   "TORSION_SPRING_R",
+   "FLOAT_SLIDE_R"
   ],
   [
    "JACK_SHAFT",
@@ -2354,6 +2386,10 @@
    "NUT_PIV_L"
   ],
   [
+   "NUT_PIV_L",
+   "INT_BRG_L"
+  ],
+  [
    "PIVOT_PIN_L",
    "NUT_PIV_L"
   ],
@@ -2388,6 +2424,10 @@
   [
    "PIVOT_PIN_R",
    "NUT_PIV_R"
+  ],
+  [
+   "NUT_PIV_R",
+   "INT_BRG_R"
   ],
   [
    "PIVOT_PIN_R",
@@ -2510,6 +2550,18 @@
    "FRAME_RAIL_R"
   ],
   [
+   "CHAIN_25",
+   "SPROCKET_9T"
+  ],
+  [
+   "CHAIN_25",
+   "SPROCKET_16T"
+  ],
+  [
+   "CHAIN_25",
+   "ROLLER_SHAFT"
+  ],
+  [
    "MASTER_LINK",
    "CHAIN_25"
   ],
@@ -2532,6 +2584,22 @@
   [
    "TENS_PIN",
    "TENS_ARM"
+  ],
+  [
+   "BELT_XROLL",
+   "TENS_IDLER"
+  ],
+  [
+   "TENS_SPRING",
+   "TENS_POST"
+  ],
+  [
+   "TENS_SPRING",
+   "TENS_ARM"
+  ],
+  [
+   "TENS_SPRING",
+   "INT_CHEEK_L"
   ],
   [
    "BOLT_THRT_0",
@@ -2974,36 +3042,12 @@
    "BELT_PUL_TOP"
   ],
   [
-   "INT_CHEEK_L",
-   "FRAME_CROWN_F"
-  ],
-  [
    "FLOAT_SLIDE_L",
    "INT_CHEEK_L"
   ],
   [
-   "TORSION_SPRING_L",
-   "INT_CHEEK_L"
-  ],
-  [
-   "TORSION_SPRING_L",
-   "FLOAT_SLIDE_L"
-  ],
-  [
-   "INT_CHEEK_R",
-   "FRAME_CROWN_F"
-  ],
-  [
    "FLOAT_SLIDE_R",
    "INT_CHEEK_R"
-  ],
-  [
-   "TORSION_SPRING_R",
-   "INT_CHEEK_R"
-  ],
-  [
-   "TORSION_SPRING_R",
-   "FLOAT_SLIDE_R"
   ],
   [
    "NUT_RIV_IL_00",
@@ -3038,40 +3082,8 @@
    "FRAME_RAIL_R"
   ],
   [
-   "NUT_PIV_L",
-   "INT_BRG_L"
-  ],
-  [
-   "NUT_PIV_R",
-   "INT_BRG_R"
-  ],
-  [
-   "CHAIN_25",
-   "SPROCKET_9T"
-  ],
-  [
-   "CHAIN_25",
-   "SPROCKET_16T"
-  ],
-  [
-   "CHAIN_25",
-   "ROLLER_SHAFT"
-  ],
-  [
    "MASTER_LINK",
    "CHAIN_25"
-  ],
-  [
-   "BELT_XROLL",
-   "TENS_IDLER"
-  ],
-  [
-   "TENS_SPRING",
-   "TENS_POST"
-  ],
-  [
-   "TENS_SPRING",
-   "TENS_ARM"
   ]
  ],
  "ground": [],

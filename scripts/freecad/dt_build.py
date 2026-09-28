@@ -2276,10 +2276,11 @@ def _odo_spring(doc, ctx, tag, px, py, axis, d, block, arm):
         p1 = (arm_mid, pyv + 35, pan_b - 2)
         pm = (arm_mid, pyv + 28, pan_b - 2)
         p2 = (arm_mid, pyv + 21, 30.0)
-    s1 = pk.wire_seg(doc, spring + "_B", spring + "_body",
+    s1 = pk.wire_seg(doc, "TOOL_" + spring + "_S1",
+                       spring + "_body1",
                        "UNVERIFIED - pod preload strut", 8.0,
                        p1, pm)
-    s2 = pk.wire_seg(doc, "TOOL_" + spring + "_S2", spring + "_body",
+    s2 = pk.wire_seg(doc, "TOOL_" + spring + "_S2", spring + "_body2",
                        "UNVERIFIED - pod preload strut", 8.0,
                        pm, p2)
     fused = pk.fuse(doc, spring, spring + "_strut_UNVERIFIED",
@@ -2329,17 +2330,17 @@ def _coplanar_elec(doc, ctx):
     _fp(ctx, "BRG_OUT_FR", "CHAIN_GUARD")
     _fp(ctx, "BOLT_MPL_R_11", "CLAMP_FR_2")
     _fp(ctx, "BOLT_MPL_L_11", "CLAMP_FL_2")
-    _cn(ctx, "BOLT_MPL_R_3", "INT_MOTOR")
+    _em(ctx, "BOLT_MPL_R_3", "INT_MOTOR")
     for i in range(4):
         _fp(ctx, "ELEC_SHELF", "BOLT_SO_T_%d" % i)
     _fp(ctx, "FEED_MTR_PLATE", "BOLT_FSO_0")
     _fp(ctx, "FEED_MTR_PLATE", "BOLT_FSO_1")
     _fp(ctx, "FEED_MTR_PLATE", "FEED_MTR_SHAFT")
-    # encoder wire rides over real geometry on its way to the hub
-    _cn(ctx, "WIRE_ENC_LON", "MOTOR_RL")
-    _cn(ctx, "WIRE_ENC_LON", "ELEC_SHELF")
-    _cn(ctx, "WIRE_ENC_LON", "SCRW_ENC_LON_1")
-    _cn(ctx, "WIRE_ENC_LON", "ODO_ARM_LON")
+    # encoder wire rides over/behind real geometry on its way to the hub
+    _em(ctx, "WIRE_ENC_LON", "MOTOR_RL")
+    _em(ctx, "WIRE_ENC_LON", "ELEC_SHELF")
+    _em(ctx, "WIRE_ENC_LON", "SCRW_ENC_LON_1")
+    _em(ctx, "WIRE_ENC_LON", "ODO_ARM_LON")
 
 
 def _battery(doc, ctx):
@@ -2802,16 +2803,17 @@ def _wiring(doc, ctx):
         (-108.0, 86.0, 98.0)], dia="1.5")
     _em(ctx, eo.Name, "ODO_ENC_LON")
     _em(ctx, eo.Name, "HUB_EXP")
-    # A5 loom contacts: wires lie on the pan and bundle together
+    # A5 loom: wires lie on the pan and bundle together; routed tubes
+    # tuck into surfaces and each other -> declared embeds
     _wnames = ["WIRE_BATT_SW", "WIRE_SW_CTRL", "WIRE_HUB_RS485",
                "WIRE_MTR_FL", "WIRE_MTR_FR", "WIRE_MTR_RL",
                "WIRE_MTR_RR", "WIRE_ENC_LAT_L", "WIRE_ENC_LAT_R",
                "WIRE_ENC_LON"]
     for _wi in _wnames:
-        _cn(ctx, _wi, "BELLY_PAN")
+        _em(ctx, _wi, "BELLY_PAN")
     for _a in range(len(_wnames)):
         for _b in range(_a + 1, len(_wnames)):
-            _cn(ctx, _wnames[_a], _wnames[_b])
+            _em(ctx, _wnames[_a], _wnames[_b])
     _cn(ctx, "BATT_STRAP_0", "WIRE_BATT_SW")
     _cn(ctx, "BATT_STRAP_1", "WIRE_BATT_SW")
     for i, (cx, cy) in enumerate(((152.0, 0.0), (-40.0, -80.0),

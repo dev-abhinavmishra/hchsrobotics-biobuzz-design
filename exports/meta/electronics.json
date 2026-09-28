@@ -898,6 +898,26 @@
   [
    "WIRE_ENC_LON",
    "HUB_EXP"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "BELLY_PAN"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_MTR_RR"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ELEC_SHELF"
   ]
  ],
  "journals": [],
@@ -995,32 +1015,16 @@
    "HUB_EXP"
   ],
   [
-   "WIRE_SW_CTRL",
-   "SWITCH_BRKT"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "BELLY_PAN"
-  ],
-  [
    "WIRE_BATT_SW",
    "WIRE_MTR_FR"
-  ],
-  [
-   "WIRE_SW_CTRL",
-   "WIRE_HUB_RS485"
   ],
   [
    "WIRE_HUB_RS485",
    "WIRE_ENC_LAT_R"
   ],
   [
-   "WIRE_MTR_FL",
-   "WIRE_MTR_RL"
-  ],
-  [
-   "WIRE_MTR_FR",
-   "WIRE_MTR_RR"
+   "WIRE_SW_CTRL",
+   "SWITCH_BRKT"
   ],
   [
    "BATT_STRAP_0",
@@ -1029,10 +1033,6 @@
   [
    "BATT_STRAP_0",
    "SWITCH_BRKT"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "ELEC_SHELF"
   ]
  ],
  "ground": [],

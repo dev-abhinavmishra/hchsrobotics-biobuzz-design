@@ -748,6 +748,8 @@
   "AGIT_SERVO",
   "SCRW_AGSV_0",
   "SCRW_AGSV_1",
+  "SCRW_AGSV_2",
+  "SCRW_AGSV_3",
   "AGIT_HORN",
   "AGIT_PADDLE",
   "FEED_WHEEL",
@@ -775,20 +777,30 @@
   "COL_FLANGE",
   "COL_POST_0",
   "BOLT_COL_0",
+  "BOLT_COLB_0",
   "COL_POST_1",
   "BOLT_COL_1",
+  "BOLT_COLB_1",
   "COL_POST_2",
   "BOLT_COL_2",
+  "BOLT_COLB_2",
   "COL_POST_3",
   "BOLT_COL_3",
+  "BOLT_COLB_3",
   "GATE_BRKT",
   "BOLT_GBRK_0",
   "NUT_GBRK_0",
   "BOLT_GBRK_1",
   "NUT_GBRK_1",
+  "BOLT_GBRK_2",
+  "NUT_GBRK_2",
+  "BOLT_GBRK_3",
+  "NUT_GBRK_3",
   "GATE_SERVO",
   "SCRW_GSV_0",
   "SCRW_GSV_1",
+  "SCRW_GSV_2",
+  "SCRW_GSV_3",
   "GATE_HORN",
   "GATE_FLAG",
   "DIV_BAND",
@@ -796,6 +808,12 @@
   "DIV_SERVO",
   "SCRW_DVSV_0",
   "SCRW_DVSV_1",
+  "SCRW_DVSV_2",
+  "SCRW_DVSV_3",
+  "BOLT_DVBR_0",
+  "BOLT_DVBR_1",
+  "BOLT_DVBR_2",
+  "BOLT_DVBR_3",
   "DIV_SHAFT",
   "DIV_FLAP",
   "PORT_FLANGE",
@@ -2725,6 +2743,56 @@
    "type": "embed"
   },
   {
+   "a": "WIRE_ENC_LON",
+   "b": "BELLY_PAN",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_SW_CTRL",
+   "b": "WIRE_HUB_RS485",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_MTR_FL",
+   "b": "WIRE_MTR_RL",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_MTR_FR",
+   "b": "WIRE_MTR_RR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MPL_R_3",
+   "b": "INT_MOTOR",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "MOTOR_RL",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "ELEC_SHELF",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "SCRW_ENC_LON_1",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "ODO_ARM_LON",
+   "type": "embed"
+  },
+  {
+   "a": "INT_CHEEK_L",
+   "b": "FRAME_CROWN_F",
+   "type": "embed"
+  },
+  {
    "a": "FLOAT_PIN_L",
    "b": "FLOAT_SLIDE_L",
    "type": "embed"
@@ -2735,6 +2803,26 @@
    "type": "embed"
   },
   {
+   "a": "TORSION_SPRING_L",
+   "b": "SPRING_POST_L",
+   "type": "embed"
+  },
+  {
+   "a": "TORSION_SPRING_L",
+   "b": "INT_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "TORSION_SPRING_L",
+   "b": "FLOAT_SLIDE_L",
+   "type": "embed"
+  },
+  {
+   "a": "INT_CHEEK_R",
+   "b": "FRAME_CROWN_F",
+   "type": "embed"
+  },
+  {
    "a": "FLOAT_PIN_R",
    "b": "FLOAT_SLIDE_R",
    "type": "embed"
@@ -2742,6 +2830,21 @@
   {
    "a": "SPRING_POST_R",
    "b": "INT_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "TORSION_SPRING_R",
+   "b": "SPRING_POST_R",
+   "type": "embed"
+  },
+  {
+   "a": "TORSION_SPRING_R",
+   "b": "INT_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "TORSION_SPRING_R",
+   "b": "FLOAT_SLIDE_R",
    "type": "embed"
   },
   {
@@ -2835,6 +2938,11 @@
    "type": "embed"
   },
   {
+   "a": "NUT_PIV_L",
+   "b": "INT_BRG_L",
+   "type": "embed"
+  },
+  {
    "a": "PIVOT_PIN_L",
    "b": "NUT_PIV_L",
    "type": "embed"
@@ -2877,6 +2985,11 @@
   {
    "a": "PIVOT_PIN_R",
    "b": "NUT_PIV_R",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_PIV_R",
+   "b": "INT_BRG_R",
    "type": "embed"
   },
   {
@@ -3030,6 +3143,21 @@
    "type": "embed"
   },
   {
+   "a": "CHAIN_25",
+   "b": "SPROCKET_9T",
+   "type": "embed"
+  },
+  {
+   "a": "CHAIN_25",
+   "b": "SPROCKET_16T",
+   "type": "embed"
+  },
+  {
+   "a": "CHAIN_25",
+   "b": "ROLLER_SHAFT",
+   "type": "embed"
+  },
+  {
    "a": "MASTER_LINK",
    "b": "CHAIN_25",
    "type": "embed"
@@ -3057,6 +3185,26 @@
   {
    "a": "TENS_PIN",
    "b": "TENS_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "BELT_XROLL",
+   "b": "TENS_IDLER",
+   "type": "embed"
+  },
+  {
+   "a": "TENS_SPRING",
+   "b": "TENS_POST",
+   "type": "embed"
+  },
+  {
+   "a": "TENS_SPRING",
+   "b": "TENS_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "TENS_SPRING",
+   "b": "INT_CHEEK_L",
    "type": "embed"
   },
   {
@@ -3100,6 +3248,11 @@
    "type": "embed"
   },
   {
+   "a": "HOP_APRON",
+   "b": "HOP_FLOOR",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_HLDG_L_0",
    "b": "HOP_LEDGE_L",
    "type": "embed"
@@ -3127,11 +3280,6 @@
   {
    "a": "BOLT_HLDG_R_2",
    "b": "HOP_LEDGE_R",
-   "type": "embed"
-  },
-  {
-   "a": "HOP_CURB",
-   "b": "HOP_WALL_L",
    "type": "embed"
   },
   {
@@ -3250,6 +3398,16 @@
    "type": "embed"
   },
   {
+   "a": "SCRW_AGSV_2",
+   "b": "AGIT_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_AGSV_3",
+   "b": "AGIT_BRKT",
+   "type": "embed"
+  },
+  {
    "a": "AGIT_HORN",
    "b": "AGIT_SERVO",
    "type": "embed"
@@ -3310,6 +3468,11 @@
    "type": "embed"
   },
   {
+   "a": "SPUR_FEED_W",
+   "b": "SPUR_FEED_M",
+   "type": "embed"
+  },
+  {
    "a": "FEED_SCOOP",
    "b": "HOP_WALL_L",
    "type": "embed"
@@ -3320,17 +3483,22 @@
    "type": "embed"
   },
   {
-   "a": "FEED_WHEEL",
-   "b": "FEED_COLUMN",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_COL_0",
    "b": "COL_FLANGE",
    "type": "embed"
   },
   {
+   "a": "BOLT_COLB_0",
+   "b": "BELLY_PAN",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_COL_0",
+   "b": "COL_POST_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_COLB_0",
    "b": "COL_POST_0",
    "type": "embed"
   },
@@ -3340,7 +3508,17 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_COLB_1",
+   "b": "BELLY_PAN",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_COL_1",
+   "b": "COL_POST_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_COLB_1",
    "b": "COL_POST_1",
    "type": "embed"
   },
@@ -3350,7 +3528,17 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_COLB_2",
+   "b": "BELLY_PAN",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_COL_2",
+   "b": "COL_POST_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_COLB_2",
    "b": "COL_POST_2",
    "type": "embed"
   },
@@ -3360,7 +3548,17 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_COLB_3",
+   "b": "BELLY_PAN",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_COL_3",
+   "b": "COL_POST_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_COLB_3",
    "b": "COL_POST_3",
    "type": "embed"
   },
@@ -3375,8 +3573,18 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_GBRK_2",
+   "b": "NUT_GBRK_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GBRK_3",
+   "b": "NUT_GBRK_3",
+   "type": "embed"
+  },
+  {
    "a": "GATE_SERVO",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "embed"
   },
   {
@@ -3386,6 +3594,16 @@
   },
   {
    "a": "SCRW_GSV_1",
+   "b": "GATE_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_GSV_2",
+   "b": "GATE_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_GSV_3",
    "b": "GATE_BRKT",
    "type": "embed"
   },
@@ -3400,18 +3618,13 @@
    "type": "embed"
   },
   {
-   "a": "DIV_SERVO",
-   "b": "HOP_WALL_L",
+   "a": "DIV_BAND",
+   "b": "FEED_COLUMN",
    "type": "embed"
   },
   {
-   "a": "DIV_BRKT",
-   "b": "HOP_WALL_L",
-   "type": "embed"
-  },
-  {
-   "a": "SCRW_DVSV_1",
-   "b": "HOP_WALL_L",
+   "a": "SCRW_DVSV_0",
+   "b": "DIV_BRKT",
    "type": "embed"
   },
   {
@@ -3421,7 +3634,92 @@
   },
   {
    "a": "SCRW_DVSV_1",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_1",
    "b": "DIV_BAND",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_2",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_3",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_0",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_1",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_2",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_3",
+   "b": "DIV_BRKT",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_0",
+   "b": "FEED_COLUMN",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_1",
+   "b": "FEED_COLUMN",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_2",
+   "b": "FEED_COLUMN",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_3",
+   "b": "FEED_COLUMN",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_0",
+   "b": "DIV_BAND",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_DVBR_1",
+   "b": "DIV_BAND",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_0",
+   "b": "BOLT_DVBR_0",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_1",
+   "b": "BOLT_DVBR_1",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_2",
+   "b": "BOLT_DVBR_2",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_DVSV_3",
+   "b": "BOLT_DVBR_3",
    "type": "embed"
   },
   {
@@ -3432,16 +3730,6 @@
   {
    "a": "DIV_FLAP",
    "b": "DIV_SHAFT",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PORT_3",
-   "b": "HOP_WALL_L",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_PORT_3",
-   "b": "FEED_COLUMN",
    "type": "embed"
   },
   {
@@ -4506,7 +4794,7 @@
   },
   {
    "a": "GATE_BRKT",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "face"
   },
   {
@@ -4520,13 +4808,18 @@
    "type": "face"
   },
   {
+   "a": "DIV_BRKT",
+   "b": "PORT_FLANGE",
+   "type": "face"
+  },
+  {
    "a": "DIV_SERVO",
    "b": "DIV_BRKT",
    "type": "face"
   },
   {
    "a": "PORT_FLANGE",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "face"
   },
   {
@@ -5041,12 +5334,17 @@
   },
   {
    "a": "GATE_HORN",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "journal"
   },
   {
    "a": "DIV_SHAFT",
    "b": "FEED_COLUMN",
+   "type": "journal"
+  },
+  {
+   "a": "DIV_SHAFT",
+   "b": "DIV_BRKT",
    "type": "journal"
   },
   {
@@ -5970,6 +6268,16 @@
    "type": "contact"
   },
   {
+   "a": "WIRE_BATT_SW",
+   "b": "WIRE_MTR_FR",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "WIRE_ENC_LAT_R",
+   "type": "contact"
+  },
+  {
    "a": "PIVOT_PIN_L",
    "b": "FRAME_RAIL_L",
    "type": "contact"
@@ -6156,17 +6464,22 @@
   },
   {
    "a": "BOLT_GBRK_0",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "contact"
   },
   {
    "a": "BOLT_GBRK_1",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "contact"
   },
   {
-   "a": "DIV_SERVO",
-   "b": "DIV_BAND",
+   "a": "BOLT_GBRK_2",
+   "b": "HOP_WALL_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GBRK_3",
+   "b": "HOP_WALL_R",
    "type": "contact"
   },
   {
@@ -6465,36 +6778,6 @@
    "type": "contact"
   },
   {
-   "a": "WIRE_ENC_LON",
-   "b": "BELLY_PAN",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_BATT_SW",
-   "b": "WIRE_MTR_FR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_SW_CTRL",
-   "b": "WIRE_HUB_RS485",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_ENC_LAT_R",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FL",
-   "b": "WIRE_MTR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_MTR_FR",
-   "b": "WIRE_MTR_RR",
-   "type": "contact"
-  },
-  {
    "a": "BATT_STRAP_0",
    "b": "WIRE_BATT_SW",
    "type": "contact"
@@ -6505,68 +6788,13 @@
    "type": "contact"
   },
   {
-   "a": "BOLT_MPL_R_3",
-   "b": "INT_MOTOR",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "MOTOR_RL",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "ELEC_SHELF",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "SCRW_ENC_LON_1",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "ODO_ARM_LON",
-   "type": "contact"
-  },
-  {
-   "a": "INT_CHEEK_L",
-   "b": "FRAME_CROWN_F",
-   "type": "contact"
-  },
-  {
    "a": "FLOAT_SLIDE_L",
    "b": "INT_CHEEK_L",
    "type": "contact"
   },
   {
-   "a": "TORSION_SPRING_L",
-   "b": "INT_CHEEK_L",
-   "type": "contact"
-  },
-  {
-   "a": "TORSION_SPRING_L",
-   "b": "FLOAT_SLIDE_L",
-   "type": "contact"
-  },
-  {
-   "a": "INT_CHEEK_R",
-   "b": "FRAME_CROWN_F",
-   "type": "contact"
-  },
-  {
    "a": "FLOAT_SLIDE_R",
    "b": "INT_CHEEK_R",
-   "type": "contact"
-  },
-  {
-   "a": "TORSION_SPRING_R",
-   "b": "INT_CHEEK_R",
-   "type": "contact"
-  },
-  {
-   "a": "TORSION_SPRING_R",
-   "b": "FLOAT_SLIDE_R",
    "type": "contact"
   },
   {
@@ -6610,68 +6838,8 @@
    "type": "contact"
   },
   {
-   "a": "NUT_PIV_L",
-   "b": "INT_BRG_L",
-   "type": "contact"
-  },
-  {
-   "a": "NUT_PIV_R",
-   "b": "INT_BRG_R",
-   "type": "contact"
-  },
-  {
-   "a": "CHAIN_25",
-   "b": "SPROCKET_9T",
-   "type": "contact"
-  },
-  {
-   "a": "CHAIN_25",
-   "b": "SPROCKET_16T",
-   "type": "contact"
-  },
-  {
-   "a": "CHAIN_25",
-   "b": "ROLLER_SHAFT",
-   "type": "contact"
-  },
-  {
    "a": "MASTER_LINK",
    "b": "CHAIN_25",
-   "type": "contact"
-  },
-  {
-   "a": "BELT_XROLL",
-   "b": "TENS_IDLER",
-   "type": "contact"
-  },
-  {
-   "a": "TENS_SPRING",
-   "b": "TENS_POST",
-   "type": "contact"
-  },
-  {
-   "a": "TENS_SPRING",
-   "b": "TENS_ARM",
-   "type": "contact"
-  },
-  {
-   "a": "HOP_APRON",
-   "b": "HOP_FLOOR",
-   "type": "contact"
-  },
-  {
-   "a": "SPUR_FEED_W",
-   "b": "SPUR_FEED_M",
-   "type": "contact"
-  },
-  {
-   "a": "GATE_FLAG",
-   "b": "FEED_COLUMN",
-   "type": "contact"
-  },
-  {
-   "a": "DIV_BAND",
-   "b": "FEED_COLUMN",
    "type": "contact"
   },
   {
@@ -14367,6 +14535,30 @@
    "joint": "agit_servo"
   },
   {
+   "a": "SCRW_AGSV_2",
+   "b": "AGIT_SERVO",
+   "type": "fastener",
+   "joint": "agit_servo"
+  },
+  {
+   "a": "SCRW_AGSV_2",
+   "b": "AGIT_BRKT",
+   "type": "fastener",
+   "joint": "agit_servo"
+  },
+  {
+   "a": "SCRW_AGSV_3",
+   "b": "AGIT_SERVO",
+   "type": "fastener",
+   "joint": "agit_servo"
+  },
+  {
+   "a": "SCRW_AGSV_3",
+   "b": "AGIT_BRKT",
+   "type": "fastener",
+   "joint": "agit_servo"
+  },
+  {
    "a": "FEED_WALL_BRG",
    "b": "HOP_WALL_R",
    "type": "fastener",
@@ -14547,6 +14739,24 @@
    "joint": "col_post_0"
   },
   {
+   "a": "BOLT_COLB_0",
+   "b": "COL_FLANGE",
+   "type": "fastener",
+   "joint": "col_post_0"
+  },
+  {
+   "a": "BOLT_COLB_0",
+   "b": "COL_POST_0",
+   "type": "fastener",
+   "joint": "col_post_0"
+  },
+  {
+   "a": "BOLT_COLB_0",
+   "b": "BELLY_PAN",
+   "type": "fastener",
+   "joint": "col_post_0"
+  },
+  {
    "a": "COL_FLANGE",
    "b": "COL_POST_1",
    "type": "fastener",
@@ -14578,6 +14788,24 @@
   },
   {
    "a": "BOLT_COL_1",
+   "b": "BELLY_PAN",
+   "type": "fastener",
+   "joint": "col_post_1"
+  },
+  {
+   "a": "BOLT_COLB_1",
+   "b": "COL_FLANGE",
+   "type": "fastener",
+   "joint": "col_post_1"
+  },
+  {
+   "a": "BOLT_COLB_1",
+   "b": "COL_POST_1",
+   "type": "fastener",
+   "joint": "col_post_1"
+  },
+  {
+   "a": "BOLT_COLB_1",
    "b": "BELLY_PAN",
    "type": "fastener",
    "joint": "col_post_1"
@@ -14619,6 +14847,24 @@
    "joint": "col_post_2"
   },
   {
+   "a": "BOLT_COLB_2",
+   "b": "COL_FLANGE",
+   "type": "fastener",
+   "joint": "col_post_2"
+  },
+  {
+   "a": "BOLT_COLB_2",
+   "b": "COL_POST_2",
+   "type": "fastener",
+   "joint": "col_post_2"
+  },
+  {
+   "a": "BOLT_COLB_2",
+   "b": "BELLY_PAN",
+   "type": "fastener",
+   "joint": "col_post_2"
+  },
+  {
    "a": "COL_FLANGE",
    "b": "COL_POST_3",
    "type": "fastener",
@@ -14655,8 +14901,26 @@
    "joint": "col_post_3"
   },
   {
+   "a": "BOLT_COLB_3",
+   "b": "COL_FLANGE",
+   "type": "fastener",
+   "joint": "col_post_3"
+  },
+  {
+   "a": "BOLT_COLB_3",
+   "b": "COL_POST_3",
+   "type": "fastener",
+   "joint": "col_post_3"
+  },
+  {
+   "a": "BOLT_COLB_3",
+   "b": "BELLY_PAN",
+   "type": "fastener",
+   "joint": "col_post_3"
+  },
+  {
    "a": "GATE_BRKT",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "fastener",
    "joint": "gate_brkt"
   },
@@ -14668,7 +14932,7 @@
   },
   {
    "a": "BOLT_GBRK_0",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "fastener",
    "joint": "gate_brkt"
   },
@@ -14680,7 +14944,31 @@
   },
   {
    "a": "BOLT_GBRK_1",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "BOLT_GBRK_2",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "BOLT_GBRK_2",
+   "b": "HOP_WALL_R",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "BOLT_GBRK_3",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "BOLT_GBRK_3",
+   "b": "HOP_WALL_R",
    "type": "fastener",
    "joint": "gate_brkt"
   },
@@ -14692,7 +14980,7 @@
   },
   {
    "a": "NUT_GBRK_0",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
    "type": "fastener",
    "joint": "gate_brkt"
   },
@@ -14704,7 +14992,31 @@
   },
   {
    "a": "NUT_GBRK_1",
-   "b": "HOP_WALL_L",
+   "b": "HOP_WALL_R",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "NUT_GBRK_2",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "NUT_GBRK_2",
+   "b": "HOP_WALL_R",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "NUT_GBRK_3",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_brkt"
+  },
+  {
+   "a": "NUT_GBRK_3",
+   "b": "HOP_WALL_R",
    "type": "fastener",
    "joint": "gate_brkt"
   },
@@ -14739,38 +15051,140 @@
    "joint": "gate_servo"
   },
   {
+   "a": "SCRW_GSV_2",
+   "b": "GATE_SERVO",
+   "type": "fastener",
+   "joint": "gate_servo"
+  },
+  {
+   "a": "SCRW_GSV_2",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_servo"
+  },
+  {
+   "a": "SCRW_GSV_3",
+   "b": "GATE_SERVO",
+   "type": "fastener",
+   "joint": "gate_servo"
+  },
+  {
+   "a": "SCRW_GSV_3",
+   "b": "GATE_BRKT",
+   "type": "fastener",
+   "joint": "gate_servo"
+  },
+  {
+   "a": "DIV_SERVO",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_0",
+   "b": "DIV_SERVO",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_0",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_1",
+   "b": "DIV_SERVO",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_1",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_2",
+   "b": "DIV_SERVO",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_2",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_3",
+   "b": "DIV_SERVO",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
+   "a": "SCRW_DVSV_3",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_servo"
+  },
+  {
    "a": "DIV_BRKT",
    "b": "DIV_BAND",
    "type": "fastener",
    "joint": "div_brkt"
   },
   {
-   "a": "SCRW_DVSV_0",
+   "a": "BOLT_DVBR_0",
    "b": "DIV_BRKT",
    "type": "fastener",
    "joint": "div_brkt"
   },
   {
-   "a": "SCRW_DVSV_0",
+   "a": "BOLT_DVBR_0",
    "b": "DIV_BAND",
    "type": "fastener",
    "joint": "div_brkt"
   },
   {
-   "a": "SCRW_DVSV_1",
+   "a": "BOLT_DVBR_1",
    "b": "DIV_BRKT",
    "type": "fastener",
    "joint": "div_brkt"
   },
   {
-   "a": "SCRW_DVSV_1",
+   "a": "BOLT_DVBR_1",
+   "b": "DIV_BAND",
+   "type": "fastener",
+   "joint": "div_brkt"
+  },
+  {
+   "a": "BOLT_DVBR_2",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_brkt"
+  },
+  {
+   "a": "BOLT_DVBR_2",
+   "b": "DIV_BAND",
+   "type": "fastener",
+   "joint": "div_brkt"
+  },
+  {
+   "a": "BOLT_DVBR_3",
+   "b": "DIV_BRKT",
+   "type": "fastener",
+   "joint": "div_brkt"
+  },
+  {
+   "a": "BOLT_DVBR_3",
    "b": "DIV_BAND",
    "type": "fastener",
    "joint": "div_brkt"
   },
   {
    "a": "PORT_FLANGE",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "fastener",
    "joint": "div_port_flange"
   },
@@ -14782,7 +15196,7 @@
   },
   {
    "a": "BOLT_PORT_0",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "fastener",
    "joint": "div_port_flange"
   },
@@ -14794,7 +15208,7 @@
   },
   {
    "a": "BOLT_PORT_1",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "fastener",
    "joint": "div_port_flange"
   },
@@ -14806,7 +15220,7 @@
   },
   {
    "a": "BOLT_PORT_2",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "fastener",
    "joint": "div_port_flange"
   },
@@ -14818,7 +15232,7 @@
   },
   {
    "a": "BOLT_PORT_3",
-   "b": "HOP_WALL_L",
+   "b": "FEED_COLUMN",
    "type": "fastener",
    "joint": "div_port_flange"
   },

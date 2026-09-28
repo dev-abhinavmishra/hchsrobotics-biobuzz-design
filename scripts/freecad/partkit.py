@@ -521,7 +521,8 @@ def l_bracket(doc, name, label, status, leg_dims, leg_pos, foot_dims,
     foot = tool_box(doc, name + "_FOOT", foot_dims, foot_pos)
     if not bolts:
         return fuse(doc, name, label, status, leg, foot)
-    lsh = fuse(doc, _tool_name(name + "_L"), label, status, leg, foot)
+    lsh = fuse(doc, _tool_name(name + "_L"), label + "_L", status,
+               leg, foot)
     tools = [
         tool_cyl(doc, "%s_B%02d" % (name, i),
                  {"Radius": "(%s) / 2" % dia, "Height": h},
@@ -543,8 +544,8 @@ def ribbed_roller(doc, name, label, status, od, length, bore, pos,
     mecanum carrier frame axes.
     """
     tube_name = _tool_name(name + "_TUBE") if ribs else name
-    tube = bore_cyl(doc, tube_name, label, status, od, length, bore,
-                    pos, "Y")
+    tube = bore_cyl(doc, tube_name, label + "_TUBE" if ribs else label,
+                    status, od, length, bore, pos, "Y")
     if not ribs:
         return tube
     n = int(ribs["count"])
@@ -1121,7 +1122,8 @@ def wire_bundle(doc, name, label, status, dia, points):
     segs = []
     for i in range(len(points) - 1):
         s = wire_seg(doc, TOOL_PREFIX + "%s_S%02d" % (name, i),
-                     label, status, dia, points[i], points[i + 1])
+                     "%s_S%02d" % (label, i), status, dia,
+                     points[i], points[i + 1])
         if s is not None:
             segs.append(s)
     if not segs:

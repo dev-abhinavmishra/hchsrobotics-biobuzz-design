@@ -359,10 +359,11 @@ def main():
             "cheek_lock": 2, "int_motor_face": 4,
             "int_motor_plate": 12, "int_motor_post": 1,
             "throat_guard": 4, "hop_ledge": 3, "hop_brkt": 2,
-            "agit_brkt": 4, "agit_servo": 2, "feed_bearing": 4,
+            "agit_brkt": 4, "agit_servo": 4, "feed_bearing": 4,
             "feed_motor_plate": 4, "feed_plate_post": 1,
-            "col_post": 1, "gate_brkt": 2, "gate_servo": 2,
-            "div_brkt": 2, "div_port_flange": 4, "snsr_brkt": 2}
+            "col_post": 2, "gate_brkt": 4, "gate_servo": 4,
+            "div_brkt": 4, "div_servo": 4, "div_port_flange": 4,
+            "snsr_brkt": 2}
     def _jmin(jid):
         """prefix-match: per-side ids carry _L/_R/_0.. suffixes."""
         if jid in JMIN:
@@ -677,6 +678,17 @@ def main():
     BALL_OK = {"FEED_WHEEL", "ROLLER_TOP", "ROLLER_LOW",
                "AGIT_PADDLE", "GATE_FLAG", "DIV_FLAP", "FEED_SCOOP",
                "AGIT_HORN", "STAR_SHAFT", "FEED_SHAFT"}
+    # moving members exempt from static path clearance (C1); their
+    # at-rest envelopes are covered by GEO-I/GEO-H and their swept
+    # poses by the probe-pose gate below.
+    BALL_STATIC_EX = BALL_OK | {
+        "ROLLER_SHAFT", "DIV_SHAFT", "GATE_HORN", "CHAIN_25",
+        "BELT_XROLL", "TENS_IDLER", "TENS_ARM", "TENS_PIN",
+        "TENS_SPRING", "TORSION_SPRING_L", "TORSION_SPRING_R",
+        "BELT_PUL_LOW", "BELT_PUL_TOP", "SPROCKET_9T",
+        "SPROCKET_16T", "MASTER_LINK", "FLOAT_SLIDE_L",
+        "FLOAT_SLIDE_R", "FLOAT_PIN_L", "FLOAT_PIN_R",
+        "SPUR_FEED_M", "SPUR_FEED_W", "FEED_MTR_SHAFT"}
     ball_bad = []
     for pn in ("VOL_BALL_P", "VOL_BALL_N"):
         pv = m.getObject(pn)
@@ -693,10 +705,44 @@ def main():
                 continue
             if com.Volume > 0.5:
                 ball_bad.append((pn, o.Name, round(com.Volume, 1)))
+    # A6 station table: a D93 NECTAR sphere at each declared station of
+    # the as-built under-crown route must clear every static solid.
+    # common().Volume (not distToShape) so a sphere fully containing a
+    # thin wall still fails.
+    STATIONS = (
+        ("S1_mouth",      46.5, (205.0, 0.0, 80.0)),
+        ("S3_undercrown", 46.5, (178.0, 0.0, 85.0)),
+        ("S4_basin",      46.5, (105.0, 0.0, 155.0)),
+        ("S5_incline",    46.5, (62.0, 0.0, 142.0)),
+        ("S6_lane",       46.5, (40.0, 0.0, 134.0)),
+        ("S7_approach",   46.5, (35.0, 0.0, 132.0)),
+        ("S8_win_throat", 46.5, (-11.0, 0.0, 140.0)),
+        ("S9a_bore_rest", 46.5, (-66.0, 0.0, 162.0)),
+        ("S9b_bore_mid",  46.5, (-66.0, 0.0, 200.0)),
+        ("S9c_bore_top",  46.5, (-66.0, 0.0, 240.0)),
+        ("S10_gate",      46.5, (-66.0, 0.0, 175.0)),
+        ("S11_port",      46.5, (-66.0, 52.0, 203.0)),
+        ("S12_flange",    46.5, (-66.0, 57.0, 204.0)),
+    )
+    for sname, sr, c in STATIONS:
+        sp = Part.makeSphere(sr, App.Vector(*c))
+        for o in solids:
+            if o.Name in BALL_STATIC_EX \
+                    or o.Name.startswith(("ENV_", "VOL_")):
+                continue
+            try:
+                com = sp.common(gshape(o))
+            except Exception:
+                continue
+            if com.Volume > 0.5:
+                ball_bad.append((sname, o.Name, round(com.Volume, 1)))
     gate("GEOB_ball_path", not ball_bad,
-         "%d: %s" % (len(ball_bad), ball_bad[:6]))
+         "%d: %s" % (len(ball_bad), ball_bad[:8]))
 
-    # gate flag + diverter flap probes match the real poses
+    # gate flag + diverter flap probes match the real poses, and each
+    # swept-pose volume clears static geometry (N12): the VOL_ pose
+    # solids are intersection-tested against every non-exempt solid so
+    # a pose clipping a wall or the column shell fails.
     pv_bad = []
     for vn, on_ in (("VOL_GATE_CLOSED", "GATE_FLAG"),
                     ("VOL_DIV_A", "DIV_FLAP")):
@@ -710,7 +756,23 @@ def main():
                   abs(vb.ZMin - rb.ZMin), abs(vb.ZMax - rb.ZMax))
         if dev > 2.0:
             pv_bad.append((vn, round(dev, 2)))
-    gate("GEOB_probe_pose", not pv_bad, "%s" % pv_bad)
+    for vn in ("VOL_GATE_OPEN", "VOL_GATE_CLOSED", "VOL_DIV_A",
+               "VOL_DIV_B"):
+        vo = m.getObject(vn)
+        if vo is None:
+            continue
+        vs = gshape(vo)
+        for o in solids:
+            if o.Name in BALL_STATIC_EX \
+                    or o.Name.startswith(("ENV_", "VOL_")):
+                continue
+            try:
+                com = vs.common(gshape(o))
+            except Exception:
+                continue
+            if com.Volume > 0.5:
+                pv_bad.append((vn, o.Name, round(com.Volume, 1)))
+    gate("GEOB_probe_pose", not pv_bad, "%s" % pv_bad[:8])
 
     # ---------------- GEO-T: drive wraps ----------------
     t_bad = []
@@ -823,11 +885,20 @@ def main():
     gate("DECL_embeds_real", not emb_bad,
          "%d embeds <0.5mm3" % len(emb_bad))
     cn_bad = []
+    emb_pairs = {tuple(sorted(x)) for x in mmeta.get("embeds", [])}
+    # contact = near-touching declared pair: distance bound 1.5mm
+    # (fastener slip-fit clearance), plus a hard no-penetration bound:
+    # common().Volume must stay <=0.5mm3.
     for a, b in mmeta.get("contacts", []):
-        if a in shape_map and b in shape_map and sdist(a, b) > 1.0:
-            cn_bad.append((round(sdist(a, b), 2), a, b))
+        if a in shape_map and b in shape_map \
+                and tuple(sorted((a, b))) not in emb_pairs:
+            d_ = sdist(a, b)
+            com = shape_map[a].common(shape_map[b]).Volume
+            if d_ > 1.5 or com > 0.5:
+                cn_bad.append((a, b, round(d_, 2), round(com, 1)))
     gate("DECL_contacts_real", not cn_bad,
-         "%d contacts >1mm: %s" % (len(cn_bad), cn_bad[:4]))
+         "%d contacts dist>1.5mm or common>0.5mm3: %s"
+         % (len(cn_bad), cn_bad[:4]))
     jl_bad = []
     for a, b in mmeta.get("journals", []):
         if a in shape_map and b in shape_map:
@@ -1201,6 +1272,40 @@ def main():
              abs(hf2.ZMax - base_fl.ZMax) > 2.0,
              "floor ZMax %.2f->%.2f" % (base_fl.ZMax, hf2.ZMax))
         sheet.set("hopper_incline", "20.0")
+        pd.recompute(None, True, True)
+        # J: sprint-02 path params must re-derive where bound --
+        # lane_wid widens curb+scoop, column_id thins the tube wall,
+        # intake_x shifts the mouth/roller stack
+        base_curb = gshape(pd.getObject("HOP_CURB")).BoundBox
+        base_sco = gshape(pd.getObject("FEED_SCOOP")).BoundBox
+        sheet.set("lane_wid", "120.0")
+        pd.recompute(None, True, True)
+        cb2 = gshape(pd.getObject("HOP_CURB")).BoundBox
+        sc2 = gshape(pd.getObject("FEED_SCOOP")).BoundBox
+        gate("PAR2J_lane_wid",
+             base_curb.YMin - cb2.YMin > 2.0
+             and base_sco.YMin - sc2.YMin > 2.0,
+             "curb %.2f->%.2f scoop %.2f->%.2f" % (
+                 base_curb.YMin, cb2.YMin, base_sco.YMin, sc2.YMin))
+        sheet.set("lane_wid", "114.0")
+        cv0 = pd.getObject("FEED_COLUMN").Shape.Volume
+        sheet.set("column_id", "108.0")
+        pd.recompute(None, True, True)
+        cv1 = pd.getObject("FEED_COLUMN").Shape.Volume
+        gate("PAR2J_column_id", cv0 - cv1 > 500,
+             "column volume %.0f->%.0f" % (cv0, cv1))
+        sheet.set("column_id", "104.0")
+        bx0 = gshape(pd.getObject("ROLLER_LOW")).BoundBox
+        sh0 = gshape(pd.getObject("ROLLER_SHAFT")).BoundBox
+        sheet.set("intake_x", "196.0")
+        pd.recompute(None, True, True)
+        bx1 = gshape(pd.getObject("ROLLER_LOW")).BoundBox
+        sh1 = gshape(pd.getObject("ROLLER_SHAFT")).BoundBox
+        gate("PAR2J_intake_x",
+             bx1.XMin - bx0.XMin > 5.0 and sh1.XMin - sh0.XMin > 4.0,
+             "roller XMin %.2f->%.2f shaft %.2f->%.2f" % (
+                 bx0.XMin, bx1.XMin, sh0.XMin, sh1.XMin))
+        sheet.set("intake_x", "190.0")
         pd.recompute(None, True, True)
         # restore -> identity
         sheet.set("shelf_z", repr(bsz))

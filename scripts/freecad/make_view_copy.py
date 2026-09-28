@@ -32,11 +32,22 @@ TARGETS = (
      ROOT / "cad" / "drivebase" / "drivebase_view.FCStd"),
     (ROOT / "cad" / "electronics" / "electronics.FCStd",
      ROOT / "cad" / "electronics" / "electronics_view.FCStd"),
+    (ROOT / "cad" / "intake" / "intake.FCStd",
+     ROOT / "cad" / "intake" / "intake_view.FCStd"),
+    (ROOT / "cad" / "hopper" / "hopper.FCStd",
+     ROOT / "cad" / "hopper" / "hopper_view.FCStd"),
 )
 
 HIDE_PREFIX = ("ENV_", "VOL_", "REF_", "TOOL_")
 
 SUBSYS = (
+    # intake must precede ROLLER_: ROLLER_LOW/TOP/SHAFT are intake
+    (("INT_", "ROLLER_LOW", "ROLLER_TOP", "ROLLER_SHAFT",
+      "STAR_SHAFT", "FLOAT_", "CHAIN_", "BELT_", "SPROCKET_",
+      "MASTER_LINK", "TENS_", "TORSION_", "SPRING_POST", "THROAT_",
+      "JACK_SHAFT"), "#7a4fd6"),
+    (("HOP_", "FEED_", "COL_POST", "COL_FLANGE", "PORT_", "GATE_",
+      "DIV_", "AGIT_", "SNSR_", "SPUR_"), "#3d9e9e"),
     (("FRAME_", "RAIL_", "BELLY_PAN", "PAN_BRKT_", "TIE_", "GUSSET_",
       "ENDCAP_", "CROWN_POST_", "PLATE_NUM_", "DECK_"), "#8b9199"),
     (("WHEEL_HUB_", "WHEEL_PLATE_", "ROLLER_", "WHEEL_ASSY_"),

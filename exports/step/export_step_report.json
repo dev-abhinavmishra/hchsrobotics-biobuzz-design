@@ -1,5 +1,5 @@
 {
- "parts": 758,
+ "parts": 776,
  "subassemblies": [
   {
    "GRP_INTAKE": 34
@@ -17,10 +17,10 @@
    "GRP_PODS": 21
   },
   {
-   "GRP_ELECTRONICS": 42
+   "GRP_ELECTRONICS": 48
   },
   {
-   "GRP_FASTENERS": 482
+   "GRP_FASTENERS": 494
   },
   {
    "drivebase": 482
@@ -32,11 +32,11 @@
    "intake": 339
   },
   {
-   "hopper": 343
+   "hopper": 361
   }
  ],
- "master_solids": 758,
- "master_step_reimport": 823,
+ "master_solids": 776,
+ "master_step_reimport": 842,
  "files": [
   "AGIT_BRKT.step",
   "AGIT_HORN.step",
@@ -121,6 +121,10 @@
   "BOLT_CLMP_RR_0_1.step",
   "BOLT_CLMP_RR_1_0.step",
   "BOLT_CLMP_RR_1_1.step",
+  "BOLT_COLB_0.step",
+  "BOLT_COLB_1.step",
+  "BOLT_COLB_2.step",
+  "BOLT_COLB_3.step",
   "BOLT_COL_0.step",
   "BOLT_COL_1.step",
   "BOLT_COL_2.step",
@@ -153,6 +157,10 @@
   "BOLT_DP_T_R1.step",
   "BOLT_DP_T_R2.step",
   "BOLT_DP_T_R3.step",
+  "BOLT_DVBR_0.step",
+  "BOLT_DVBR_1.step",
+  "BOLT_DVBR_2.step",
+  "BOLT_DVBR_3.step",
   "BOLT_FBRG_00.step",
   "BOLT_FBRG_01.step",
   "BOLT_FBRG_10.step",
@@ -165,6 +173,8 @@
   "BOLT_FSO_1.step",
   "BOLT_GBRK_0.step",
   "BOLT_GBRK_1.step",
+  "BOLT_GBRK_2.step",
+  "BOLT_GBRK_3.step",
   "BOLT_GUSU_L_0_0.step",
   "BOLT_GUSU_L_1_0.step",
   "BOLT_GUSU_R_0_0.step",
@@ -498,6 +508,8 @@
   "NUT_CROWN_R_1.step",
   "NUT_GBRK_0.step",
   "NUT_GBRK_1.step",
+  "NUT_GBRK_2.step",
+  "NUT_GBRK_3.step",
   "NUT_GUSU_L_0_0.step",
   "NUT_GUSU_L_1_0.step",
   "NUT_GUSU_R_0_0.step",
@@ -739,8 +751,12 @@
   "ROLLER_TOP.step",
   "SCRW_AGSV_0.step",
   "SCRW_AGSV_1.step",
+  "SCRW_AGSV_2.step",
+  "SCRW_AGSV_3.step",
   "SCRW_DVSV_0.step",
   "SCRW_DVSV_1.step",
+  "SCRW_DVSV_2.step",
+  "SCRW_DVSV_3.step",
   "SCRW_ENC_LAT_L_0.step",
   "SCRW_ENC_LAT_L_1.step",
   "SCRW_ENC_LAT_R_0.step",
@@ -749,6 +765,8 @@
   "SCRW_ENC_LON_1.step",
   "SCRW_GSV_0.step",
   "SCRW_GSV_1.step",
+  "SCRW_GSV_2.step",
+  "SCRW_GSV_3.step",
   "SCRW_SNSR_0.step",
   "SCRW_SNSR_1.step",
   "SCRW_SW_0.step",
@@ -809,5 +827,5 @@
   "intake.step",
   "master_robot.step"
  ],
- "master_step_named": 823
+ "master_step_named": 842
 }

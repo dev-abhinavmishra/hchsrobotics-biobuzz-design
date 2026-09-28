@@ -217,3 +217,62 @@ Check the as-built shaft tip and nut height before competition.
 | sw_h | 13.0 | mm | UNVERIFIED | switch body height |
 | sw_w | 9.0 | mm | UNVERIFIED | switch body width |
 | wire_d | 3.0 | mm | UNVERIFIED | wire bundle dia |
+
+## Sprint-02: intake + hopper/feed path
+
+| Alias | Value | Unit | Status | Meaning |
+|---|---|---|---|---|
+| intake_x | 190.0 | mm | UNVERIFIED | intake mouth station (viewer front edge) |
+| roller_low_z | 36.8 | mm | UNVERIFIED | lower roller center height |
+| roller_low_r | 25.4 | mm | UNVERIFIED | ribbed traction roller radius (Ø50.8) |
+| roller_len | 255.0 | mm | UNVERIFIED | full-width roller span |
+| roller_top_x | 133.0 | mm | UNVERIFIED | star roller x (corrected: viewer gave -10mm nip gap) |
+| roller_top_z | 175.0 | mm | UNVERIFIED | star roller center height |
+| roller_top_r | 39.35 | mm | UNVERIFIED | star roller outer radius (Ø78.7) |
+| star_core_r | 22.0 | mm | UNVERIFIED | star roller core radius |
+| float_travel | 17.8 | mm | UNVERIFIED | sprung float travel; opens nip >=91 for NECTAR |
+| cheek_lat_off | 130.5 | mm | UNVERIFIED | cheek plate offset: flush on rail inner face |
+| cheek_thk | 5.0 | mm | UNVERIFIED | cheek plate thickness |
+| sprocket_plane | 164.0 | mm | UNVERIFIED | chain run plane (right rail channel) |
+| belt_plane | 155.0 | mm | UNVERIFIED | crossed belt plane (left cheek) |
+| sprocket9_pd | 18.6 | mm | VENDOR-PENDING | 9T #25 sprocket pitch dia |
+| sprocket16_pd | 32.6 | mm | VENDOR-PENDING | 16T #25 sprocket pitch dia |
+| belt_pul_d | 40.0 | mm | UNVERIFIED | crossed-belt pulley dia |
+| spring_post_d | 8.0 | mm | UNVERIFIED | spring post dia; coils wound snug (coil_r 5.5) |
+| int_motor_x | 76.0 | mm | UNVERIFIED | intake motor station |
+| int_motor_z | 43.0 | mm | UNVERIFIED | intake motor axis height (right rail channel) |
+| int_motor_lat | 101.6 | mm | UNVERIFIED | intake motor lateral offset |
+| lane_wid | 114.0 | mm | UNVERIFIED | hopper lane width (curb + scoop widths derive) |
+| hop_wall_y | 60.0 | mm | UNVERIFIED | hopper wall offset |
+| hopper_incline | 20.0 | deg | UNVERIFIED | magazine floor incline toward feed corner |
+| hop_wall_x0 | -73.0 | mm | UNVERIFIED | wall rear edge |
+| hop_wall_x1 | 92.0 | mm | UNVERIFIED | wall front edge |
+| hop_curb_x | -70.0 | mm | UNVERIFIED | rear curb station under column mouth |
+| feed_x | -36.8 | mm | UNVERIFIED | feed wheel center x |
+| feed_z | 130.8 | mm | UNVERIFIED | feed wheel center height |
+| feed_wheel_r | 40.65 | mm | UNVERIFIED | metering wheel radius |
+| feed_wheel_w | 40.0 | mm | UNVERIFIED | metering wheel width |
+| feed_motor_z | 71.1 | mm | UNVERIFIED | feed motor height under incline |
+| feed_motor_lat | 104.0 | mm | UNVERIFIED | feed motor lateral offset |
+| feed_gear_d | 59.8 | mm | UNVERIFIED | 1:1 spur pitch dia |
+| column_x | -66.0 | mm | UNVERIFIED | feed column axis (future turret axis) |
+| column_id | 104.0 | mm | UNVERIFIED | column bore, ~4in clear |
+| column_od | 110.0 | mm | UNVERIFIED | column shell OD |
+| column_z0 | 88.0 | mm | UNVERIFIED | column bottom (flange seat) |
+| column_z1 | 254.0 | mm | UNVERIFIED | column top (deck interface below) |
+| col_flange_z | 90.0 | mm | UNVERIFIED | base flange center |
+| col_post_off | 55.0 | mm | UNVERIFIED | flange post offset along x |
+| col_post_lat | 76.0 | mm | UNVERIFIED | flange post lateral offset |
+| gate_y | 73.7 | mm | UNVERIFIED | gate servo offset magnitude (right/-Y wall; moved off the +Y port corridor) |
+| gate_z | 174.0 | mm | UNVERIFIED | gate servo height / flag sweep station |
+| div_z | 204.0 | mm | UNVERIFIED | diverter port center on the +Y column wall |
+| div_port_d | 100.0 | mm | UNVERIFIED | port flange bore dia; >=93 + sphere margin for NECTAR |
+| agit_x | 66.0 | mm | UNVERIFIED | agitator servo station |
+| agit_y | -73.7 | mm | UNVERIFIED | agitator offset on the right wall |
+| agit_z | 115.6 | mm | UNVERIFIED | agitator servo height |
+| snsr_x | 96.0 | mm | UNVERIFIED | entry color sensor station |
+| snsr_y | -58.0 | mm | UNVERIFIED | sensor offset at hopper entry |
+| snsr_z | 86.0 | mm | UNVERIFIED | sensor height at hopper entry |
+| ball_p_dia | 71.0 | mm | VERIFIED | POLLEN game-piece diameter |
+| ball_n_dia | 91.0 | mm | VERIFIED | NECTAR game-piece diameter |
+| ball_clear | 2.0 | mm | UNVERIFIED | ball-to-wall clearance margin (apertures sized ball_n_dia + margin >=93 clear) |

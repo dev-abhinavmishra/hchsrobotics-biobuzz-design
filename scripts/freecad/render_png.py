@@ -32,6 +32,8 @@ ROOT = Path(__file__).resolve().parents[2]
 MASTER = ROOT / "cad" / "master_robot.FCStd"
 DRIVEBASE = ROOT / "cad" / "drivebase" / "drivebase.FCStd"
 ELECTRONICS = ROOT / "cad" / "electronics" / "electronics.FCStd"
+INTAKE = ROOT / "cad" / "intake" / "intake.FCStd"
+HOPPER = ROOT / "cad" / "hopper" / "hopper.FCStd"
 OUT_DIR = ROOT / "exports" / "renders"
 EXCLUDE_PREFIX = ("ENV_", "AXIS_", "REF_", "VOL_", "TOOL_")
 EXCLUDE_TYPES = ("App::Part", "App::Origin")
@@ -41,6 +43,13 @@ MARGIN = 30
 BG = (250, 250, 247)
 
 SUBSYS = (
+    # intake must precede ROLLER_: ROLLER_LOW/TOP/SHAFT are intake
+    (("INT_", "ROLLER_LOW", "ROLLER_TOP", "ROLLER_SHAFT",
+      "STAR_SHAFT", "FLOAT_", "CHAIN_", "BELT_", "SPROCKET_",
+      "MASTER_LINK", "TENS_", "TORSION_", "SPRING_POST", "THROAT_",
+      "JACK_SHAFT"), "#7a4fd6"),
+    (("HOP_", "FEED_", "COL_POST", "COL_FLANGE", "PORT_", "GATE_",
+      "DIV_", "AGIT_", "SNSR_", "SPUR_"), "#3d9e9e"),
     (("FRAME_", "RAIL_", "BELLY_PAN", "PAN_BRKT_", "TIE_", "GUSSET_",
       "ENDCAP_", "CROWN_POST_", "PLATE_NUM_", "DECK_"), "#8b9199"),
     (("WHEEL_HUB_", "WHEEL_PLATE_", "ROLLER_", "WHEEL_ASSY_"),
@@ -309,7 +318,8 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     log = []
     for src, tag in ((MASTER, "master"), (DRIVEBASE, "drivebase"),
-                     (ELECTRONICS, "electronics")):
+                     (ELECTRONICS, "electronics"), (INTAKE, "intake"),
+                     (HOPPER, "hopper")):
         doc = App.openDocument(str(src))
         doc.recompute()
         objs = exportable(doc)
