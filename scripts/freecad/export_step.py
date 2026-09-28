@@ -29,6 +29,8 @@ MASTER = CAD / "master_robot.FCStd"
 SUBSYS = {
     "drivebase": CAD / "drivebase" / "drivebase.FCStd",
     "electronics": CAD / "electronics" / "electronics.FCStd",
+    "intake": CAD / "intake" / "intake.FCStd",
+    "hopper": CAD / "hopper" / "hopper.FCStd",
 }
 
 EXCLUDE_PREFIX = ("ENV_", "TOOL_", "AXIS_", "REF_", "VOL_")

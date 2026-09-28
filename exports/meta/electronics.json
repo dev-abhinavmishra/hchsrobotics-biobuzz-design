@@ -326,9 +326,8 @@
   {
    "id": "shelf_so",
    "members": [
-    "ELEC_SHELF",
     "STANDOFF_0",
-    "BELLY_PAN"
+    "DECK_L"
    ],
    "bolts": [
     "BOLT_SO_B_0",
@@ -340,9 +339,8 @@
   {
    "id": "shelf_so",
    "members": [
-    "ELEC_SHELF",
     "STANDOFF_1",
-    "BELLY_PAN"
+    "DECK_L"
    ],
    "bolts": [
     "BOLT_SO_B_1",
@@ -354,9 +352,8 @@
   {
    "id": "shelf_so",
    "members": [
-    "ELEC_SHELF",
     "STANDOFF_2",
-    "BELLY_PAN"
+    "DECK_L"
    ],
    "bolts": [
     "BOLT_SO_B_2",
@@ -368,9 +365,8 @@
   {
    "id": "shelf_so",
    "members": [
-    "ELEC_SHELF",
     "STANDOFF_3",
-    "BELLY_PAN"
+    "DECK_L"
    ],
    "bolts": [
     "BOLT_SO_B_3",
@@ -499,31 +495,47 @@
   ],
   [
    "STANDOFF_0",
-   "BELLY_PAN"
+   "DECK_L"
   ],
   [
    "STANDOFF_0",
    "ELEC_SHELF"
   ],
   [
+   "BOLT_SO_T_0",
+   "HUB_EXP"
+  ],
+  [
    "STANDOFF_1",
-   "BELLY_PAN"
+   "DECK_L"
   ],
   [
    "STANDOFF_1",
    "ELEC_SHELF"
   ],
   [
+   "BOLT_SO_B_1",
+   "DECK_POST_L0"
+  ],
+  [
+   "BOLT_DP_T_L0",
+   "STANDOFF_1"
+  ],
+  [
    "STANDOFF_2",
-   "BELLY_PAN"
+   "DECK_L"
   ],
   [
    "STANDOFF_2",
    "ELEC_SHELF"
+  ],
+  [
+   "BOLT_SO_T_2",
+   "HUB_EXP"
   ],
   [
    "STANDOFF_3",
-   "BELLY_PAN"
+   "DECK_L"
   ],
   [
    "STANDOFF_3",
@@ -560,9 +572,73 @@
   [
    "CLIP_3",
    "BELLY_PAN"
+  ],
+  [
+   "BOLT_SO_T_0",
+   "HUB_EXP"
+  ],
+  [
+   "BOLT_SO_T_2",
+   "HUB_EXP"
+  ],
+  [
+   "DECK_POST_L0",
+   "BOLT_SO_B_1"
+  ],
+  [
+   "BOLT_DP_T_L0",
+   "STANDOFF_1"
+  ],
+  [
+   "BRG_OUT_FR",
+   "CHAIN_GUARD"
+  ],
+  [
+   "BOLT_MPL_R_11",
+   "CLAMP_FR_2"
+  ],
+  [
+   "BOLT_MPL_L_11",
+   "CLAMP_FL_2"
+  ],
+  [
+   "ELEC_SHELF",
+   "BOLT_SO_T_0"
+  ],
+  [
+   "ELEC_SHELF",
+   "BOLT_SO_T_1"
+  ],
+  [
+   "ELEC_SHELF",
+   "BOLT_SO_T_2"
+  ],
+  [
+   "ELEC_SHELF",
+   "BOLT_SO_T_3"
+  ],
+  [
+   "FEED_MTR_PLATE",
+   "BOLT_FSO_0"
+  ],
+  [
+   "FEED_MTR_PLATE",
+   "BOLT_FSO_1"
+  ],
+  [
+   "FEED_MTR_PLATE",
+   "FEED_MTR_SHAFT"
   ]
  ],
  "embeds": [
+  [
+   "BOLT_PANB_L0_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L0_1",
+   "FRAME_RAIL_L"
+  ],
   [
    "BOLT_PANB_L0_0",
    "NUT_PANB_L0_0"
@@ -574,6 +650,14 @@
   [
    "BOLT_PANF_L0",
    "NUT_PANF_L0"
+  ],
+  [
+   "BOLT_PANB_L1_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L1_1",
+   "FRAME_RAIL_L"
   ],
   [
    "BOLT_PANB_L1_0",
@@ -589,6 +673,14 @@
   ],
   [
    "BOLT_PANB_L2_0",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L2_1",
+   "FRAME_RAIL_L"
+  ],
+  [
+   "BOLT_PANB_L2_0",
    "NUT_PANB_L2_0"
   ],
   [
@@ -598,6 +690,14 @@
   [
    "BOLT_PANF_L2",
    "NUT_PANF_L2"
+  ],
+  [
+   "BOLT_PANB_R0_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R0_1",
+   "FRAME_RAIL_R"
   ],
   [
    "BOLT_PANB_R0_0",
@@ -613,6 +713,14 @@
   ],
   [
    "BOLT_PANB_R1_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R1_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R1_0",
    "NUT_PANB_R1_0"
   ],
   [
@@ -622,6 +730,14 @@
   [
    "BOLT_PANF_R1",
    "NUT_PANF_R1"
+  ],
+  [
+   "BOLT_PANB_R2_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_PANB_R2_1",
+   "FRAME_RAIL_R"
   ],
   [
    "BOLT_PANB_R2_0",
@@ -709,22 +825,6 @@
   ],
   [
    "BOLT_HUB_C_0",
-   "BELLY_PAN"
-  ],
-  [
-   "BOLT_HUB_C_1",
-   "BELLY_PAN"
-  ],
-  [
-   "BOLT_HUB_C_2",
-   "BELLY_PAN"
-  ],
-  [
-   "BOLT_HUB_C_3",
-   "BELLY_PAN"
-  ],
-  [
-   "BOLT_HUB_C_0",
    "NUT_HUB_C_0"
   ],
   [
@@ -761,6 +861,10 @@
   ],
   [
    "WIRE_SW_CTRL",
+   "HUB_CTRL"
+  ],
+  [
+   "WIRE_SW_CTRL",
    "MAIN_SWITCH"
   ],
   [
@@ -770,10 +874,6 @@
   [
    "WIRE_HUB_RS485",
    "HUB_EXP"
-  ],
-  [
-   "WIRE_HUB_RS485",
-   "ELEC_SHELF"
   ],
   [
    "WIRE_MTR_FL",
@@ -796,95 +896,31 @@
    "HUB_EXP"
   ],
   [
-   "WIRE_ENC_LAT_L",
-   "ELEC_SHELF"
-  ],
-  [
-   "WIRE_ENC_LAT_R",
-   "HUB_EXP"
-  ],
-  [
-   "WIRE_ENC_LAT_R",
-   "ELEC_SHELF"
-  ],
-  [
    "WIRE_ENC_LON",
    "HUB_EXP"
-  ],
-  [
-   "WIRE_ENC_LON",
-   "ELEC_SHELF"
   ]
  ],
  "journals": [],
  "contacts": [
   [
-   "BOLT_PANB_L0_0",
-   "FRAME_RAIL_L"
-  ],
-  [
-   "BOLT_PANB_L0_1",
-   "FRAME_RAIL_L"
-  ],
-  [
    "BOLT_PANF_L0",
    "BELLY_PAN"
-  ],
-  [
-   "BOLT_PANB_L1_0",
-   "FRAME_RAIL_L"
-  ],
-  [
-   "BOLT_PANB_L1_1",
-   "FRAME_RAIL_L"
   ],
   [
    "BOLT_PANF_L1",
    "BELLY_PAN"
   ],
   [
-   "BOLT_PANB_L2_0",
-   "FRAME_RAIL_L"
-  ],
-  [
-   "BOLT_PANB_L2_1",
-   "FRAME_RAIL_L"
-  ],
-  [
    "BOLT_PANF_L2",
    "BELLY_PAN"
-  ],
-  [
-   "BOLT_PANB_R0_0",
-   "FRAME_RAIL_R"
-  ],
-  [
-   "BOLT_PANB_R0_1",
-   "FRAME_RAIL_R"
   ],
   [
    "BOLT_PANF_R0",
    "BELLY_PAN"
   ],
   [
-   "BOLT_PANB_R1_0",
-   "FRAME_RAIL_R"
-  ],
-  [
-   "BOLT_PANB_R1_1",
-   "FRAME_RAIL_R"
-  ],
-  [
    "BOLT_PANF_R1",
    "BELLY_PAN"
-  ],
-  [
-   "BOLT_PANB_R2_0",
-   "FRAME_RAIL_R"
-  ],
-  [
-   "BOLT_PANB_R2_1",
-   "FRAME_RAIL_R"
   ],
   [
    "BOLT_PANF_R2",
@@ -923,6 +959,22 @@
    "BELLY_PAN"
   ],
   [
+   "BOLT_HUB_C_0",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_1",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_2",
+   "BELLY_PAN"
+  ],
+  [
+   "BOLT_HUB_C_3",
+   "BELLY_PAN"
+  ],
+  [
    "BOLT_HUB_E_0",
    "ELEC_SHELF"
   ],
@@ -939,24 +991,48 @@
    "ELEC_SHELF"
   ],
   [
-   "WIRE_BATT_SW",
-   "SWITCH_BRKT"
+   "WIRE_ENC_LAT_R",
+   "HUB_EXP"
   ],
   [
    "WIRE_SW_CTRL",
    "SWITCH_BRKT"
   ],
   [
-   "WIRE_BATT_SW",
-   "WIRE_SW_CTRL"
+   "WIRE_ENC_LON",
+   "BELLY_PAN"
   ],
   [
    "WIRE_BATT_SW",
-   "WIRE_MTR_FL"
+   "WIRE_MTR_FR"
+  ],
+  [
+   "WIRE_SW_CTRL",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_MTR_FL",
+   "WIRE_MTR_RL"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_MTR_RR"
   ],
   [
    "BATT_STRAP_0",
    "WIRE_BATT_SW"
+  ],
+  [
+   "BATT_STRAP_0",
+   "SWITCH_BRKT"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ELEC_SHELF"
   ]
  ],
  "ground": [],
