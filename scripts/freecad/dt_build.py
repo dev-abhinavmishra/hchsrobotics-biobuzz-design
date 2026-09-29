@@ -321,6 +321,13 @@ def _rail_bore_specs(sgn):
         for bx in ("150", "158", "166", "174", "182", "190", "198",
                    "206", "214"):
             holes.append(("14", bx, "Parameters.belt_plane", "web"))
+        # sprint-03: lift base + rail-foot bolts through the top web
+        # (stations dodge the TIE_RB_L bolts + web grid row y160)
+        for bx, by_ in (("-181", "142"), ("-181", "178"),
+                        ("-145", "142"), ("-145", "178"),
+                        ("-172", "143"), ("-172", "149"),
+                        ("-172", "176"), ("-172", "182")):
+            holes.append(("Parameters.grid_hole_d", bx, by_, "web"))
     return holes
 
 
@@ -1217,6 +1224,31 @@ def _deck(doc, ctx):
                    "(Parameters.deck_z - Parameters.deck_thk / 2 - 1)"},
                   "Z", "Parameters.deck_thk + 2")
                  for px in ("-150", "-60", "30", "110")]
+        # sprint-03: tower foot/cap/gusset-foot bolt rows
+        if sgn > 0:
+            tw_rows = (
+                (("-160", "-124", "-88", "-52"),
+                 "(Parameters.tower_lat_off - 5.8)"),
+                (("-168", "-156", "-18", "-10"),
+                 "(Parameters.tower_lat_off - 22.8)"),
+                (("-172", "-158", "-22", "-8"),
+                 "(Parameters.tower_lat_off - 12.8)"))
+        else:
+            tw_rows = (
+                (("-160", "-140", "-124", "-88"),
+                 "-(Parameters.tower_lat_off - 5.8)"),
+                (("-160", "-140", "-124", "-88"),
+                 "-(Parameters.tower_lat_off - 22.8)"),
+                (("-172", "-158", "-22", "-8"),
+                 "-(Parameters.tower_lat_off - 12.8)"))
+        for xs, wy_ in tw_rows:
+            for px in xs:
+                bores.append((
+                    "Parameters.grid_hole_d",
+                    {"Placement.Base.x": px, "Placement.Base.y": wy_,
+                     "Placement.Base.z":
+                     "(Parameters.deck_z - Parameters.deck_thk / 2 - 1)"},
+                    "Z", "Parameters.deck_thk + 2"))
         tools = []
         if sgn > 0:
             # shelf-riser bottom bolts through the L deck
@@ -2883,7 +2915,7 @@ def populate_electronics(doc, ctx):
 
 
 def populate_master(doc, ctx):
-    """Full assembly for master_robot.FCStd (sprint-01 + sprint-02)."""
+    """Full assembly for master_robot.FCStd (sprints 01-03)."""
     ctx["sheet"] = _sheet(doc)
     build_frame(doc, ctx)
     build_drivetrain(doc, ctx)
@@ -2893,6 +2925,16 @@ def populate_master(doc, ctx):
         import dt_path
         dt_path.build_intake(doc, ctx)
         dt_path.build_hopper(doc, ctx)
+    except ImportError:
+        pass
+    try:
+        import dt_turret
+        dt_turret.build_turret(doc, ctx)
+    except ImportError:
+        pass
+    try:
+        import dt_lift
+        dt_lift.build_lift(doc, ctx)
     except ImportError:
         pass
     _env(doc, ctx)
@@ -2924,6 +2966,18 @@ _SUBSYS_GROUPS = (
     ("GRP_HOPPER", ("HOP_", "AGIT_", "FEED_", "COL_", "GATE_", "DIV_",
                     "PORT_", "SNSR_", "SPUR_")),
     ("GRP_PODS", ("ODO_",)),
+    ("GRP_TURRET", ("TOWER_", "TURRET_DECK", "LAZY_SUSAN_",
+                    "YAW_SERVO", "YAW_TRAY", "YAW_PINION",
+                    "YAW_SHAFT", "HALL_")),
+    ("GRP_TURRET_ROT", ("TURRET_PLATE", "TURRET_TOP_BRACE", "RING_",
+                        "LAUNCH_", "FLY_", "FLYWHEEL_", "HOOD_",
+                        "NIP_", "VSN_", "CAM_MOUNT", "CAM_LED",
+                        "YAW_MAGNET", "WIRE_FLY_", "WIRE_HOOD_",
+                        "WIRE_CAM_")),
+    ("GRP_LIFT", ("LIFT_", "S1_", "S2_", "CRADLE_", "TILT_",
+                  "LOAD_CHUTE", "CHUTE_", "WINCH_", "ROPE_",
+                  "STOP_COLLAR_", "WIRE_WINCH", "WIRE_TILT",
+                  "WIRE_YAW_SV")),
     ("GRP_ELECTRONICS", ("BATTERY", "BATT_STRAP", "ELEC_SHELF",
                          "STANDOFF_", "HUB_", "SWITCH_", "MAIN_SWITCH",
                          "WIRE_", "CLIP_", "ZIP_", "CONN_", "SCRW_")),
@@ -3105,8 +3159,9 @@ def bom_autofill(ctx):
         sub = {"GRP_DRIVEBASE": "drivetrain", "GRP_ELECTRONICS":
                "electronics", "GRP_FRAME": "frame", "GRP_PODS":
                "odometry", "GRP_INTAKE": "intake", "GRP_HOPPER":
-               "hopper", "GRP_FASTENERS": "fasteners"}.get(
-               grp, cls.lower())
+               "hopper", "GRP_TURRET": "turret", "GRP_TURRET_ROT":
+               "turret", "GRP_LIFT": "lift", "GRP_FASTENERS":
+               "fasteners"}.get(grp, cls.lower())
         desc = o.Label.split(" - ")[-1] if " - " in o.Label else cls
         mat = ("steel" if cls in ("BOLT", "NUT", "SCRW", "RIVNUT",
                "WSH", "COLLAR", "PINION", "AXLE") else "aluminum"
