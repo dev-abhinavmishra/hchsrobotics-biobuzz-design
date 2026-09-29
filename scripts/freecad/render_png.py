@@ -34,6 +34,8 @@ DRIVEBASE = ROOT / "cad" / "drivebase" / "drivebase.FCStd"
 ELECTRONICS = ROOT / "cad" / "electronics" / "electronics.FCStd"
 INTAKE = ROOT / "cad" / "intake" / "intake.FCStd"
 HOPPER = ROOT / "cad" / "hopper" / "hopper.FCStd"
+TURRET = ROOT / "cad" / "turret" / "turret.FCStd"
+LIFT = ROOT / "cad" / "lift" / "lift.FCStd"
 OUT_DIR = ROOT / "exports" / "renders"
 EXCLUDE_PREFIX = ("ENV_", "AXIS_", "REF_", "VOL_", "TOOL_")
 EXCLUDE_TYPES = ("App::Part", "App::Origin")
@@ -61,6 +63,13 @@ SUBSYS = (
     (("BATTERY", "BATT_STRAP"), "#2f9e5f"),
     (("HUB_", "ELEC_SHELF", "STANDOFF_", "SWITCH_", "MAIN_SWITCH"),
      "#e8890c"),
+    (("TURRET_PLATE", "TURRET_TOP_BRACE", "RING_", "LAUNCH_",
+      "FLY_", "FLYWHEEL_", "HOOD", "NIP_", "VSN_", "CAM_"),
+     "#d63384"),
+    (("TOWER_", "TURRET_DECK", "LAZY_SUSAN_", "YAW_", "HALL_"),
+     "#4169a8"),
+    (("LIFT_", "S1_", "S2_", "CRADLE_", "TILT_", "WINCH_",
+      "ROPE_", "STOP_COLLAR_", "LOAD_CHUTE", "CHUTE_"), "#5f8d3e"),
     (("WIRE_", "CLIP_", "ZIP_", "CONN_"), "#c23b3b"),
     (("BOLT_", "NUT_", "SCRW_", "RIVNUT_"), "#777788"),
 )
@@ -319,7 +328,8 @@ def main():
     log = []
     for src, tag in ((MASTER, "master"), (DRIVEBASE, "drivebase"),
                      (ELECTRONICS, "electronics"), (INTAKE, "intake"),
-                     (HOPPER, "hopper")):
+                     (HOPPER, "hopper"), (TURRET, "turret"),
+                     (LIFT, "lift")):
         doc = App.openDocument(str(src))
         doc.recompute()
         objs = exportable(doc)

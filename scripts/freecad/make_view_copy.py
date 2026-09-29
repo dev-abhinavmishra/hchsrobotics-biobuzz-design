@@ -36,6 +36,10 @@ TARGETS = (
      ROOT / "cad" / "intake" / "intake_view.FCStd"),
     (ROOT / "cad" / "hopper" / "hopper.FCStd",
      ROOT / "cad" / "hopper" / "hopper_view.FCStd"),
+    (ROOT / "cad" / "turret" / "turret.FCStd",
+     ROOT / "cad" / "turret" / "turret_view.FCStd"),
+    (ROOT / "cad" / "lift" / "lift.FCStd",
+     ROOT / "cad" / "lift" / "lift_view.FCStd"),
 )
 
 HIDE_PREFIX = ("ENV_", "VOL_", "REF_", "TOOL_")
@@ -59,6 +63,13 @@ SUBSYS = (
     (("BATTERY", "BATT_STRAP"), "#2f9e5f"),
     (("HUB_", "ELEC_SHELF", "STANDOFF_", "SWITCH_", "MAIN_SWITCH"),
      "#e8890c"),
+    (("TURRET_PLATE", "TURRET_TOP_BRACE", "RING_", "LAUNCH_",
+      "FLY_", "FLYWHEEL_", "HOOD", "NIP_", "VSN_", "CAM_"),
+     "#d63384"),
+    (("TOWER_", "TURRET_DECK", "LAZY_SUSAN_", "YAW_", "HALL_"),
+     "#4169a8"),
+    (("LIFT_", "S1_", "S2_", "CRADLE_", "TILT_", "WINCH_",
+      "ROPE_", "STOP_COLLAR_", "LOAD_CHUTE", "CHUTE_"), "#5f8d3e"),
     (("WIRE_", "CLIP_", "ZIP_", "CONN_"), "#c23b3b"),
     (("BOLT_", "NUT_", "SCRW_", "RIVNUT_"), "#777788"),
 )

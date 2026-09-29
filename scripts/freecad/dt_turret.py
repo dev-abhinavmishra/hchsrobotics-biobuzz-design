@@ -26,8 +26,9 @@ numbers are in robot_params.py + docs/robot-parameters.md):
     would interpenetrate the column top (z<=254), the ring gear and
     the susan races. Raised to clear the whole static stack while
     keeping the cheek/bearing/hood geometry coherent.
-  * hood_piv_z 321 -> 346 (predecessor pin): z321 sat inside the
-    flywheel disc.
+  * hood_piv_z 321 -> 359: z321 sat inside the flywheel disc; with
+    the wheels at z308.5 their top is 352.95, so the pivot rides at
+    359 (pin surface 2mm clear) and the cheeks grow to z379.
 """
 
 import math
@@ -681,7 +682,7 @@ def _cheek(doc, ctx, sgn):
     ch = pk.tool_box(
         doc, "TOOL_%s_PL" % nm,
         {"Length": "76", "Width": "Parameters.cheek_thk",
-         "Height": "91"},
+         "Height": "112"},
         {"Placement.Base.x": "-110",
          "Placement.Base.y":
          ("(Parameters.cheek_lat - Parameters.cheek_thk / 2)" if sgn > 0
@@ -738,12 +739,12 @@ def _cheek(doc, ctx, sgn):
          ("(Parameters.cheek_lat - Parameters.cheek_thk / 2 - 1)"
           if sgn > 0 else
           "(-(Parameters.cheek_lat) - Parameters.cheek_thk / 2 - 1)"),
-         "Placement.Base.z": "353"},
+         "Placement.Base.z": "370"},
         pk.axis_rot("Y")))
     ck = pk.cut(doc, nm, nm + "_5mm_petg_UNVERIFIED",
                 "UNVERIFIED - launcher cheek 5mm PETG", body, tools)
     _s(ctx, ck)
-    _bom(ctx, "turret", "launcher cheek 5mm PETG", "petg", "76x5x91",
+    _bom(ctx, "turret", "launcher cheek 5mm PETG", "petg", "76x5x112",
          "UNVERIFIED", [ck.Name])
     _fp(ctx, ck.Name, "TURRET_PLATE")
     bolts, nuts = [], []
@@ -1005,22 +1006,22 @@ def _fly_assy(doc, ctx, sgn):
 def _hood(doc, ctx):
     """HOOD shell + ears (baked fuse), pivot pins through both cheeks,
     collars, HOOD_SERVO on cheek R, HOOD_LINK pushrod, VOL probes."""
-    shell = Part.makeBox(86, 96, 2, App.Vector(-118, -48, 356))
-    lip = Part.makeBox(30, 96, 3, App.Vector(-32, -48, 353))
-    lip.rotate(App.Vector(-32, -48, 353), App.Vector(0, 1, 0), 25)
+    shell = Part.makeBox(86, 96, 2, App.Vector(-118, -48, 369))
+    lip = Part.makeBox(30, 96, 3, App.Vector(-32, -48, 366))
+    lip.rotate(App.Vector(-32, -48, 366), App.Vector(0, 1, 0), 25)
     solid = shell.fuse(lip)
     for sgn in (1, -1):
         strap = Part.makeBox(30, 29, 2.5,
                              App.Vector(-115, 45 if sgn > 0 else -74,
-                                        355.5))
+                                        368.5))
         ear = Part.makeBox(30, 5, 30,
-                           App.Vector(-115, 69 if sgn > 0 else -74, 331))
+                           App.Vector(-115, 69 if sgn > 0 else -74, 344))
         ebore = Part.makeCylinder(
-            4.2, 8, App.Vector(-100.3, 68 if sgn > 0 else -75, 346),
+            4.2, 8, App.Vector(-100.3, 68 if sgn > 0 else -75, 359),
             App.Vector(0, 1, 0))
         ear = ear.cut(ebore)
         pin = Part.makeCylinder(
-            1.6, 3.4, App.Vector(-93, 74 if sgn > 0 else -77.4, 338),
+            1.6, 3.4, App.Vector(-93, 74 if sgn > 0 else -77.4, 351),
             App.Vector(0, 1, 0))
         ear = ear.fuse(pin)
         solid = solid.fuse(strap).fuse(ear)
@@ -1076,12 +1077,12 @@ def _hood(doc, ctx):
     sb = pk.tool_box(doc, "TOOL_HSV_BODY",
                      {"Length": "23", "Width": "12", "Height": "30"},
                      {"Placement.Base.x": "-95", "Placement.Base.y": "-81",
-                      "Placement.Base.z": "315"})
+                      "Placement.Base.z": "328"})
     horn = pk.tool_cyl(doc, "TOOL_HSV_HORN",
                        {"Radius": "4", "Height": "4"},
                        {"Placement.Base.x": "-84",
                         "Placement.Base.y": "-83",
-                        "Placement.Base.z": "344"},
+                        "Placement.Base.z": "357"},
                        pk.axis_rot("Y"))
     hsv = pk.fuse(doc, "HOOD_SERVO", "HOOD_SERVO_micro_UNVERIFIED",
                   "UNVERIFIED - hood servo micro", sb, [horn])
@@ -1090,8 +1091,8 @@ def _hood(doc, ctx):
          "VENDOR-PENDING", [hsv.Name])
     _fp(ctx, hsv.Name, "LAUNCH_CHEEK_R")
     bolts = []
-    for i, (px, pz) in enumerate((("-91", "321"), ("-77", "321"),
-                                  ("-91", "339"), ("-77", "339"))):
+    for i, (px, pz) in enumerate((("-91", "334"), ("-77", "334"),
+                                  ("-91", "352"), ("-77", "352"))):
         bn = "SCRW_HSV_%d" % i
         _screw(doc, ctx, bn,
                {"Placement.Base.x": px, "Placement.Base.y": "-81",
@@ -1101,8 +1102,8 @@ def _hood(doc, ctx):
     _jm(ctx, "hood_servo", [hsv.Name, "LAUNCH_CHEEK_R"], bolts,
         terminal="LAUNCH_CHEEK_R")
     # pushrod: baked link from horn tip to the ear pin boss
-    p0 = App.Vector(-84, -83, 344)
-    p1 = App.Vector(-93, -75.5, 338)
+    p0 = App.Vector(-84, -83, 357)
+    p1 = App.Vector(-93, -75.5, 351)
     d = p1 - p0
     link = Part.makeCylinder(1.6, d.Length + 6, p0 - d * 0.25, d)
     lk = _feat(doc, "HOOD_LINK", "HOOD_LINK_pushrod_UNVERIFIED",
@@ -1111,9 +1112,10 @@ def _hood(doc, ctx):
     _em(ctx, lk.Name, hsv.Name)
     _em(ctx, lk.Name, hd.Name)
     # hood pose probes (non-exportable volumes)
-    vlo = Part.makeBox(88, 100, 6, App.Vector(-120, -50, 350))
-    vhi = vlo.copy()
-    vhi.rotate(App.Vector(-100.3, 0, 346), App.Vector(0, 1, 0), -35)
+    vlo = Part.makeBox(88, 100, 6, App.Vector(-120, -50, 363))
+    vhi = vlo.transformGeometry(App.Placement(
+        App.Vector(0, 0, 0), App.Rotation(App.Vector(0, 1, 0), -35),
+        App.Vector(-100.3, 0, 359)).toMatrix())
     _feat(doc, "VOL_HOOD_LO", "VOL_HOOD_LO_probe_UNVERIFIED",
           "UNVERIFIED - hood closed-pose probe", vlo)
     _feat(doc, "VOL_HOOD_HI", "VOL_HOOD_HI_probe_UNVERIFIED",
@@ -1167,7 +1169,7 @@ def _extras(doc, ctx):
                 "UNVERIFIED - cheek top brace PETG",
                 {"Length": "8", "Width": "128", "Height": "4.5"},
                 {"Placement.Base.x": "-108", "Placement.Base.y": "-64",
-                 "Placement.Base.z": "350.5"})
+                 "Placement.Base.z": "368"})
     _s(ctx, br)
     _bom(ctx, "turret", "cheek top brace PETG", "petg", "8x128x4.5",
          "UNVERIFIED", [br.Name])
@@ -1181,14 +1183,14 @@ def _extras(doc, ctx):
                    "Placement.Base.y":
                    "(Parameters.cheek_lat + Parameters.cheek_thk / 2 + "
                     "Parameters.bolt_head_h)",
-                   "Placement.Base.z": "353"}
+                   "Placement.Base.z": "370"}
             ax = "-Y"
         else:
             pos = {"Placement.Base.x": "-104",
                    "Placement.Base.y":
                    "(-(Parameters.cheek_lat) - Parameters.cheek_thk / 2 "
                     "- Parameters.bolt_head_h)",
-                   "Placement.Base.z": "353"}
+                   "Placement.Base.z": "370"}
             ax = "Y"
         _bolt(doc, ctx, bn, pos, ax, "8")
         bolts.append(bn)

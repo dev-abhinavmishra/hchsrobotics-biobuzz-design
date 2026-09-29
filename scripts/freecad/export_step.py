@@ -31,6 +31,8 @@ SUBSYS = {
     "electronics": CAD / "electronics" / "electronics.FCStd",
     "intake": CAD / "intake" / "intake.FCStd",
     "hopper": CAD / "hopper" / "hopper.FCStd",
+    "turret": CAD / "turret" / "turret.FCStd",
+    "lift": CAD / "lift" / "lift.FCStd",
 }
 
 EXCLUDE_PREFIX = ("ENV_", "TOOL_", "AXIS_", "REF_", "VOL_")

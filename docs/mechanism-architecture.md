@@ -215,15 +215,83 @@ occupies the -X half).
 Ø93 NECTAR spheres at the declared A6 stations clear every static
 solid (`common().Volume` ≤ 0.5 mm³): intake mouth (205,0,80) →
 under-crown (178,0,85) → basin (105,0,155) → incline (62,0,142) →
-lane (40,0,134) → approach (35,0,132) → window throat (−11,0,140) →
+lane (40,0,134) → approach (35,0,132) → window throat (10,0,125 —
+re-sited per sprint-03 pin C4; (10,0,128) grazed the scoop) →
 bore rest (…,162, resting on the curb top) → mid (200) → top (240) →
 gate (−66,0,175) → port (−66,52,203) → flange (−66,57,204).
 Swept poses (`VOL_GATE_OPEN/CLOSED`, `VOL_DIV_A/B`) clear statics the
 same way. Moving members are exempt at their rest envelopes per the
 contract's C1 clause.
 
-## Sprint-03 scope guard
+# Sprint-03 — turret, launcher, flower lift
 
-Turret/shooter, lift, camera mast, and the +Y chute remain absent —
-`REF_TURRET`/`REF_DECK_IFACE`/`REF_DIV_PORT` datums mark the
-interfaces only.
+## Turret — lazy-susan yaw over the feed column
+
+Static stack on the sprint-01 deck panels: `TOWER_L/R` 3 mm polycarb
+risers (y ±130.8, z 86.8→244) with `TOWER_GUS_*` braces →
+`TURRET_DECK` (4 mm, z244–248, Ø114 bore on the turret axis
+x −66 y 0) → `LAZY_SUSAN_LO`/`HI` split races (z248–256.5, declared
+race-pair contact is the real load path) → `RING_GEAR` (72T, PD
+121.9, external teeth, z256.5–263) → `TURRET_PLATE` (Ø170 × 4,
+z263–267, Ø114 bore + scallops) carrying the rotating launcher stack
+(`GRP_TURRET_ROT`).
+
+Yaw drive: `YAW_SERVO` under the deck at (−66,−72.8) on `YAW_TRAY`,
+`YAW_SHAFT` through the deck bore to `YAW_PINION` (14T, PD 23.7) —
+external mesh at the pinned 72.8 mm center distance (internal mesh
+rejected: the feed column occupies the inner radius). `HALL_SNSR` on
+the deck rim + `YAW_MAGNET` in the plate rim index the rotation.
+
+## Launcher — dual counter-rotating Ø88.9 flywheels
+
+`LAUNCH_CHEEK_L/R` at y ±66.5 carry `FLYWHEEL_L/R` (Ø88.9 compliant,
+face gap 73.7 → ~19% NECTAR compression) on `FLY_SHAFT_*` +
+`FLY_BRG_*` bearings, driven by `FLY_MOTOR_L/R` 5203-class cans
+(journal chain: motor stub → shaft → cheek bearing → hub clamp).
+Axis at (−80, ·, 308.5) — raised from the viewer's 292 so the wheel
+bottom (264.05) clears the column top and susan/ring stack.
+
+`HOOD` (2 mm alu) pivots on `HOOD_PIV_L/R` Ø8 bearings through both
+cheeks at z 359 (the viewer's 321 sat inside the wheel disc; 359
+clears the raised wheel top 352.95). `HOOD_SERVO` + `HOOD_LINK`
+pushrod articulate the exit angle; `VOL_HOOD_LO/HI` swept-pose probes
+are selfchecked. `NIP_BACKPLATE` rotates with the turret and feeds
+the column-top ball into the nip. `TURRET_TOP_BRACE` ties the cheek
+tops; `VSN_CAM` + `CAM_LED` ride the plate rim; turret wiring is
+baked service loops in the annular gap r55–80 below the plate.
+`VOL_YAW_0..3` swept-yaw probes (r105 rim markers at 4 angles) clear
+all statics.
+
+## Flower lift — two-stage cascade mast on the left rail
+
+`LIFT_BASE` (3 mm, z 63.75 rail top) carries `LIFT_RAIL_L/R`
+(14 mm slides, ~269 tall, y 144/180) tied by `LIFT_TOP_TIE` (~334)
+with `STOP_COLLAR_L/R` hard stops at z ~326 (R105/G416). Stage-1
+`LIFT_S1_BAR_L/R` + `S1_TRUCK_*` blocks + `S1_TIE`; stage-2
+`LIFT_S2_BAR` + trucks + `S2_TIE`. `LIFT_WINCH` + `WINCH_SPOOL`
+drive the rigging; `ROPE_DYNEEMA` bakes the winch → top pulley →
+stage-1 dead-end → traveling `LIFT_PULLEY` (2× rate) → stage-2 tie
+run. `CRADLE_ARM` cantilevers `CRADLE_CUP` (Ø110 shell, Ø99 bore,
+`CRADLE_FOAM` liner) on `CRADLE_PIV`; `TILT_SERVO` tips ~65° at full
+extension. Deployed probes `VOL_S1_DEP`/`VOL_S2_DEP`/`VOL_CRADLE_DEP`
+sit inside the R105 envelope (609.6 × 736.5).
+
+## Load chute — diverter port → cradle bowl
+
+`LOAD_CHUTE` is a 97 mm-wide two-leg tray centered on the pinned path
+(−66,56,204) → (−96,115,168) → (−127,178,140) — leg-1 28.5°, leg-2
+~20.3° (both ≥ 20°). `CHUTE_LIP_*` side lips flank each leg. The
+socket tip sits inside the Ø100 port bore; `CHUTE_PORT_EAR` welds to
+the port-flange face beside the bore (2 bolts into the ring annulus)
+and the tray passes the `TOWER_L` slot on a `CHUTE_TOWER_PAD` strap
+(2 bolts + nuts through the riser). The leg-2 west lip is notched
+where it crosses the riser sheet.
+
+## Ball path — launch + return (S13–S17, all Ø93)
+
+S13 column-top exit (−66,0,254) → S14 nip throat (−80,0,308.5; nip
+faces exempt per C1) → S15 chute leg-1 and S16 chute leg-2 — ball
+centers derived from the built bed normals (+46.5·n̂ per pin C5) →
+S17 cradle bowl. The chute carries no fasteners or lips across the
+ball channel; swept-probe gates cover hood poses and deployed
+stages.

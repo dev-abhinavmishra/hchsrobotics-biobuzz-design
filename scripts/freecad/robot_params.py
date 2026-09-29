@@ -395,8 +395,12 @@ PARAMS = [
      "launcher cheek plate offset (viewer 2.62in)"),
     ("fly_axis_x", -80.0, "mm", "UNVERIFIED",
      "flywheel axis station (viewer -3.15in rel axis)"),
-    ("fly_axis_z", 292.0, "mm", "UNVERIFIED",
-     "flywheel axis height over the resolved stack (plate top +25)"),
+    ("fly_axis_z", 308.5, "mm", "UNVERIFIED",
+     "flywheel axis height -- raised 292->308.5: wheel r44.45 at 292 "
+     "dipped to z247.5 and interpenetrated the column top (z254), the "
+     "susan races and the ring gear; at 308.5 the wheel bottom 264.05 "
+     "clears the static stack and grazes only the plate-top band "
+     "(relieved by the plate scallops)"),
     ("fly_d", 88.9, "mm", "VENDOR-PENDING",
      "flywheel OD 3.5in compliant (alu hub + urethane band)"),
     ("fly_w", 18.3, "mm", "UNVERIFIED", "flywheel face width"),
@@ -405,10 +409,12 @@ PARAMS = [
     ("nip_gap", 73.7, "mm", "UNVERIFIED",
      "flywheel face-to-face gap -> ~19% NECTAR compression"),
     ("hood_piv_x", -100.3, "mm", "UNVERIFIED", "hood pivot station"),
-    ("hood_piv_z", 346.0, "mm", "UNVERIFIED",
-     "hood pivot axis height -- D3-E+: raised above the flywheel top "
-     "arc (336.4); the viewer's z321 pivot sat INSIDE the wheel disc "
-     "(r35.4 vs O44.5) and the axle would pierce both wheels"),
+    ("hood_piv_z", 359.0, "mm", "UNVERIFIED",
+     "hood pivot axis height -- D3-E+: the viewer's z321 pivot sat "
+     "INSIDE the wheel disc (r35.4 vs O44.5) and the axle would pierce "
+     "both wheels; 346 cleared the z292 wheel top (336.4) but with "
+     "fly_axis_z 308.5 the wheel top is 352.95 -> pivot 359 keeps the "
+     "O8 pin 2mm clear of the rim"),
     ("hood_piv_d", 8.0, "mm", "UNVERIFIED", "hood pivot axle dia"),
     ("cam_x", -8.0, "mm", "UNVERIFIED",
      "vision camera station on the plate (on-plate bracket keeps the "

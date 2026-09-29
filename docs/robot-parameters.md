@@ -276,3 +276,59 @@ Check the as-built shaft tip and nut height before competition.
 | ball_p_dia | 71.0 | mm | VERIFIED | POLLEN game-piece diameter |
 | ball_n_dia | 91.0 | mm | VERIFIED | NECTAR game-piece diameter |
 | ball_clear | 2.0 | mm | UNVERIFIED | ball-to-wall clearance margin (apertures sized ball_n_dia + margin >=93 clear) |
+
+## Sprint-03: turret + launcher + flower lift
+
+| Alias | Value | Unit | Status | Meaning |
+|---|---|---|---|---|
+| tower_lat_off | 130.8 | mm | UNVERIFIED | tower riser plate center offset (viewer 5.15in) |
+| tower_thk | 3.0 | mm | UNVERIFIED | polycarb tower riser sheet |
+| tower_x0 | -176.0 | mm | UNVERIFIED | tower riser rear edge |
+| tower_x1 | 0.0 | mm | UNVERIFIED | tower riser front edge |
+| tower_z1 | 244.0 | mm | UNVERIFIED | tower top edge = turret deck underside |
+| turret_deck_z0 | 244.0 | mm | UNVERIFIED | turret deck plate bottom |
+| turret_deck_t | 4.0 | mm | UNVERIFIED | PETG turret deck sheet |
+| deck_bore_d | 114.0 | mm | UNVERIFIED | deck/plate center bore, clears column_od 110 +4 |
+| yaw_off | 72.8 | mm | UNVERIFIED | yaw pinion center distance = (ring_pd + pinion_pd)/2 external mesh |
+| susan_d | 132.0 | mm | VENDOR-PENDING | lazy-susan race OD 5.2in nominal |
+| susan_bore_d | 116.0 | mm | UNVERIFIED | susan center opening (clears column_od 110) |
+| susan_race_h | 4.25 | mm | UNVERIFIED | one race height; pair stacks 8.5 (z248-256.5) |
+| ring_pd | 121.9 | mm | VENDOR-PENDING | 72T ring gear pitch dia, external teeth |
+| ring_od | 128.8 | mm | UNVERIFIED | ring gear outer tip dia |
+| pinion_pd | 23.7 | mm | VENDOR-PENDING | 14T brass yaw pinion pitch dia |
+| pinion_od | 27.8 | mm | UNVERIFIED | pinion tip dia |
+| yaw_shaft_d | 8.0 | mm | UNVERIFIED | yaw pinion REX shaft |
+| plate_od | 170.0 | mm | UNVERIFIED | rotating turret plate dia (viewer 6.7in) |
+| plate_z | 265.0 | mm | UNVERIFIED | rotating plate center z (plate z263-267) |
+| plate_t | 4.0 | mm | UNVERIFIED | acetal turret plate |
+| cheek_lat | 66.5 | mm | UNVERIFIED | launcher cheek plate offset |
+| fly_axis_x | -80.0 | mm | UNVERIFIED | flywheel axis station (viewer -3.15in rel axis) |
+| fly_axis_z | 308.5 | mm | UNVERIFIED | flywheel axis height — raised 292->308.5: wheels at 292 interpenetrated column top/susan/ring; 308.5 clears the static stack |
+| fly_d | 88.9 | mm | VENDOR-PENDING | flywheel OD 3.5in compliant |
+| fly_w | 18.3 | mm | UNVERIFIED | flywheel face width |
+| fly_motor_d | 36.0 | mm | VENDOR-PENDING | 5203-class motor can dia |
+| nip_gap | 73.7 | mm | UNVERIFIED | flywheel face gap -> ~19% NECTAR compression |
+| hood_piv_x | -100.3 | mm | UNVERIFIED | hood pivot station |
+| hood_piv_z | 359.0 | mm | UNVERIFIED | hood pivot height — viewer z321 sat inside the wheel disc; 359 clears wheel top 352.95 |
+| hood_piv_d | 8.0 | mm | UNVERIFIED | hood pivot axle dia |
+| cam_x | -8.0 | mm | UNVERIFIED | vision camera station on the plate rim |
+| cam_z | 286.0 | mm | UNVERIFIED | camera body height |
+| magnet_r | 78.7 | mm | UNVERIFIED | yaw index magnet radius on plate rim |
+| lift_x | -185.4 | mm | UNVERIFIED | mast center station on the left rail |
+| lift_y0 | 144.0 | mm | UNVERIFIED | inner guide rail offset (corrected onto rail flange) |
+| lift_y1 | 180.0 | mm | UNVERIFIED | outer guide rail offset |
+| lift_z0 | 63.8 | mm | UNVERIFIED | mast base z = rail top flange face |
+| lift_rail_len | 269.0 | mm | UNVERIFIED | fixed slide-rail length — z64..333 |
+| slide_sec | 14.0 | mm | UNVERIFIED | slide extrusion section |
+| s1_len | 239.0 | mm | UNVERIFIED | stage-1 slide bar length |
+| s2_len | 218.0 | mm | UNVERIFIED | stage-2 slide bar length |
+| mast_top_z | 330.0 | mm | UNVERIFIED | mast top tie z (as-built ~334 with tie block) |
+| stop_z | 326.0 | mm | UNVERIFIED | hard-stop collar z — caps stage-1 inside R105 |
+| cradle_x | -127.0 | mm | UNVERIFIED | cradle pivot station (viewer 5.0in fwd of mast) |
+| cradle_y | 178.0 | mm | UNVERIFIED | cradle pivot offset |
+| cradle_z | 140.0 | mm | UNVERIFIED | cradle bowl park height (FC3 drop) |
+| cradle_id | 99.0 | mm | UNVERIFIED | cradle cup bore — D91 + 2x3 foam + clearance |
+| deploy_z | 566.0 | mm | UNVERIFIED | deployed cradle rim height inside R105 736.5 |
+| rope_d | 1.5 | mm | UNVERIFIED | dyneema lift line |
+| winch_z | 50.8 | mm | UNVERIFIED | winch servo height |
+| chute_w | 97.0 | mm | UNVERIFIED | load-chute tray inner width (D93 + margin) |

@@ -745,50 +745,60 @@ def _chute(doc, ctx):
     d2, w2, n2, L2 = _frame_for(p1, p2)
     r1 = App.Rotation(d1, w1, n1, "XYZ")
     r2 = App.Rotation(d2, w2, n2, "XYZ")
-    l1 = _oriented_box(L1, CHUTE_W, 4, p0, r1)
-    l2 = _oriented_box(L2, CHUTE_W, 4, p1, r2)
+    # bed centered on the path line: local w spans -48.5..+48.5
+    o1 = App.Vector(*p0) + w1 * (-CHUTE_W / 2)
+    o2 = App.Vector(*p1) + w2 * (-CHUTE_W / 2)
+    l1 = _oriented_box(L1, CHUTE_W, 4,
+                       (o1.x, o1.y, o1.z), r1)
+    l2 = _oriented_box(L2, CHUTE_W, 4,
+                       (o2.x, o2.y, o2.z), r2)
     tray = l1.fuse(l2)
-    # taper the last 12mm of the outlet to 90 so the tip fits the
-    # cradle bore (cup bore O99 at (cradle_x+5, cradle_z+3))
+    # taper the last 16mm of the outlet to ~70 wide so the tip drops
+    # inside the cradle rim (cup bore O99 at (cradle_x+5, cradle_z+3))
     for sgn in (1, -1):
-        wedge = Part.makeBox(16, 8, 10)
-        cor = (App.Vector(*p2) - d2 * 14 + w2 * (41 if sgn > 0 else -53)
+        wedge = Part.makeBox(20, 25, 12)
+        cor = (App.Vector(*p2) - d2 * 16 + w2 * (35 if sgn > 0 else -60)
                - n2 * 2)
         wedge.Placement = App.Placement(cor, r2)
         tray = tray.cut(wedge)
     tray = tray.removeSplitter()
     ch = _feat(doc, "LOAD_CHUTE", "LOAD_CHUTE_petg_UNVERIFIED",
-               "UNVERIFIED - load chute two-leg tray (28.5/21.3 deg)",
+               "UNVERIFIED - load chute two-leg tray (28.5/21.8 deg)",
                tray)
     _s(ctx, ch)
     _bom(ctx, "lift", "load chute tray 4mm PETG", "petg",
          "two-leg 97 wide", "UNVERIFIED", [ch.Name])
     _cn(ctx, ch.Name, "PORT_FLANGE")
-    _cn(ctx, ch.Name, "TOWER_L")
-    # lips on both bed edges, each leg; lip R2 carries the tower ear
+    _cn(ctx, ch.Name, "FEED_COLUMN")
+    # side lips flank each leg's bed edges; the tips start 3mm down-
+    # slope so they stay outside the port window corner, and the
+    # leg-2 west lip carries a notch where it passes TOWER_L
     lip_objs = []
     for sgn, side in ((1, "L"), (-1, "R")):
         for li, (p_s, d_, w_, n_, L_, r_) in enumerate(
                 ((p0, d1, w1, n1, L1, r1), (p1, d2, w2, n2, L2, r2))):
-            lb = Part.makeBox(L_, 3, 14)
-            edge = (App.Vector(*p_s) + w_ * (48.5 if sgn > 0 else -51.5)
-                    + n_ * 4)
-            lb.Placement = App.Placement(edge, r_)
+            lb = Part.makeBox(L_ - 3, 3, 14)
+            edge = (App.Vector(*p_s) + d_ * 3
+                    + w_ * (48.5 if sgn > 0 else -51.5) + n_ * 4)
+            lb = lb.transformGeometry(
+                App.Placement(edge, r_).toMatrix())
+            if side == "L" and li == 1:
+                # TOWER_L wall band in lip travel u ~[39.9,46.0]:
+                # notch u 38..48 clears the 3mm riser sheet
+                ntool = Part.makeBox(10, 6, 18)
+                ntool = ntool.transformGeometry(App.Placement(
+                    edge + d_ * 38 + w_ * (-1.5) + n_ * (-2),
+                    r_).toMatrix())
+                lb = lb.cut(ntool).removeSplitter()
             nm = "CHUTE_LIP_%s%d" % (side, li + 1)
-            if side == "R" and li == 1:
-                # ear reaching the tower wall outer face east of the
-                # slot (slot ends x-48; wall face y132.3)
-                ear = Part.makeBox(34, 17.7, 16, App.Vector(-64, 132.3,
-                                                            152))
-                lb = lb.fuse(ear).removeSplitter()
             lo = _feat(doc, nm, nm + "_UNVERIFIED",
                        "UNVERIFIED - chute side lip", lb)
             lip_objs.append((lo, p_s, d_, w_, n_, L_))
             _s(ctx, lo)
-            _em(ctx, lo.Name, ch.Name)
+            _fp(ctx, lo.Name, ch.Name)
     _bom(ctx, "lift", "chute side lips", "petg", "3x14",
          "UNVERIFIED", [o[0].Name for o in lip_objs])
-    # 2 screws per lip into the tray bed (-n direction ~ -Z)
+    # 2 screws per lip down into the tray bed (~ -n direction)
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate((0.3, 0.7)):
@@ -800,39 +810,63 @@ def _chute(doc, ctx):
                    {"Placement.Base.x": "%.1f" % pt.x,
                     "Placement.Base.y": "%.1f" % pt.y,
                     "Placement.Base.z": "%.1f" % (pt.z + 2.0)},
-                   "-Z", "10")
+                   "-Z", "12")
             lip_bolts.append(bn)
-    # port-flange ear: fused plate on the flange -Y face welded to the
-    # tray start; 2 bolts on the ring annulus (r52 from (-66,204))
-    ear = Part.makeBox(66, 8, 16, App.Vector(-122, 50, 192))
-    pfl_b = []
-    for i, pz in enumerate(("195", "211")):
-        bn = "BOLT_CHP_%d" % i
-        _bolt(doc, ctx, bn,
-              {"Placement.Base.x": "-118", "Placement.Base.y": "48.6",
-               "Placement.Base.z": pz},
-              "Y", "8")
-        pfl_b.append(bn)
-    # the ear itself joins the tray solid via weld (declared embed)
+    # port ear: welded pad on the flange +Y face where the leg-1 west
+    # lip exits the port mouth (x~-122 at y59); 2 bolts into the
+    # flange ring annulus (r50..60)
+    ear = Part.makeBox(8, 6, 10, App.Vector(-124, 59, 190))
     ear_o = _feat(doc, "CHUTE_PORT_EAR", "CHUTE_PORT_EAR_UNVERIFIED",
                   "UNVERIFIED - chute port mounting ear", ear)
     _s(ctx, ear_o)
-    _em(ctx, ear_o.Name, ch.Name)
+    _cn(ctx, ear_o.Name, "CHUTE_LIP_L1")
     _fp(ctx, ear_o.Name, "PORT_FLANGE")
-    _jm(ctx, "chute_mount", [ch.Name, ear_o.Name, "PORT_FLANGE",
-                             "TOWER_L"], lip_bolts + pfl_b, (),
-        "PORT_FLANGE")
-    # tower slot bolts: wall inner face -> lip R2 ear
-    tb = []
-    for i, px in enumerate(("-44", "-36")):
-        bn = "BOLT_CHT_%d" % i
+    pfl_b = []
+    for i, pz in enumerate(("193", "198")):
+        bn = "BOLT_CHP_%d" % i
         _bolt(doc, ctx, bn,
-              {"Placement.Base.x": px, "Placement.Base.y": "126.9",
-               "Placement.Base.z": "161"},
-              "Y", "8")
+              {"Placement.Base.x": "-120.5",
+               "Placement.Base.y": "67.4",
+               "Placement.Base.z": pz},
+              "-Y", "10")
+        pfl_b.append(bn)
+    _jm(ctx, "chute_lips",
+        [o[0].Name for o in lip_objs] + [ch.Name],
+        lip_bolts, (), ch.Name)
+    _jm(ctx, "chute_mount", [ear_o.Name, "CHUTE_LIP_L1", ch.Name,
+                             "PORT_FLANGE"],
+        pfl_b, (), "PORT_FLANGE")
+    # tower pad: strap on the riser outer face west of the slot
+    # (slot x-158..-48); the leg-2 west lip resumes outboard of the
+    # wall and contacts the pad edge; 2 bolts + nuts through the riser
+    pad = Part.makeBox(23, 8.7, 20, App.Vector(-175, 132.3, 148))
+    pd_o = _feat(doc, "CHUTE_TOWER_PAD", "CHUTE_TOWER_PAD_UNVERIFIED",
+                 "UNVERIFIED - chute tower-slot strap", pad)
+    _s(ctx, pd_o)
+    _fp(ctx, pd_o.Name, "TOWER_L")
+    _cn(ctx, pd_o.Name, "CHUTE_LIP_L2")
+    tb, tn = [], []
+    for i, px in enumerate(("-173", "-167")):
+        bn = "BOLT_CHT_%d" % i
+        nn = "NUT_CHT_%d" % i
+        _bolt(doc, ctx, bn,
+              {"Placement.Base.x": px, "Placement.Base.y": "143.4",
+               "Placement.Base.z": "158"},
+              "-Y", "16")
+        pk.hex_nut(
+            doc, nn, nn + "_M4_UNVERIFIED",
+            "UNVERIFIED - M4 nylock",
+            "Parameters.nut4_wrench", "Parameters.nut4_h",
+            "Parameters.nut4_bore",
+            {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
+             "Placement.Base.y": "(129.3 - Parameters.nut4_h)",
+             "Placement.Base.z": "(158 - Parameters.nut4_wrench / 2)"},
+            "Y")
+        _s(ctx, doc.getObject(nn))
         tb.append(bn)
-    lip_r2 = [o[0].Name for o in lip_objs if o[0].Name == "CHUTE_LIP_R2"]
-    _jm(ctx, "chute_tower", lip_r2 + ["TOWER_L"], tb, (), "TOWER_L")
+        tn.append(nn)
+    _jm(ctx, "chute_tower", [pd_o.Name, "CHUTE_LIP_L2", "TOWER_L"],
+        tb, tn, "TOWER_L")
 
 
 # ======================================================================
