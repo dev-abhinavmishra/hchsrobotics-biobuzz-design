@@ -1,5 +1,48 @@
 # Change log - BIOBUZZ-Robot
 
+## 2026-09-30 - Overhaul sprint-03: turret + lift integrated assembly, 73/73 gates
+
+Sprint-03 of the parametric overhaul (`autobuild/cad-overhaul`): full
+physically-coherent turret, launcher, and two-stage flower lift on the
+shared `partkit`/`Parameters` vocabulary, integrated into
+`master_robot.FCStd` (1093 solids, 5035 objects).
+
+- **Turret/launcher** - external yaw-ring mesh, literal deck/Susan/ring-
+  gear/plate Z-stack, tower port + shelf window, launcher flywheels +
+  hood, feed column, motor saddle, yaw tray - all expression-bound.
+- **Flower lift** - two-stage mast with trucks/pads/ties, winch +
+  Dyneema rope rig (baked two-run), cradle + tilt, and the LOAD_CHUTE
+  two-leg tray (both legs >20deg slope, side lips, cradle-bowl dip).
+- **Parametric propagation** - `tower_z1`, `plate_z`, `stop_z` are now
+  derived formulas, so `turret_deck_z0` moves the whole turret stack
+  (4/4 objects) and `lift_rail_len` moves rail + top tie + mast-top
+  hardware. `ROPE_GUIDE` bound to `stop_z + 4`.
+- **Declarations** - every intentional embed/contact/journal declared:
+  165 fastener joints, 916 coplanar-face pairs, rope-wrap and
+  wire-harness passes (`WIRE_*`/`ROPE_*` exempt from PAR3), truck/rail
+  contacts, nut seats; stale `ROLLER_RL_*` bare-name refs removed.
+- **Hub relocation** - `HUB_EXP` moved to the right frame rail outer
+  face to clear the pinned S17 seat ball while still contacting
+  `FRAME_RAIL_R`.
+- **Exports** - 1089 part STEP files, 16 subassembly files,
+  `master_robot.step` (reimport verified, 0 products deviate >1 mm),
+  bom.csv/parameters.csv/mount_graph.json, per-subsystem meta JSON,
+  view copies, PNG renders.
+- **Selfchecks** - reports now buffered to a temp file and moved into
+  `exports/` at completion so `GIT2_tree_clean` measures a genuinely
+  clean tree instead of the check's own output.
+  `selfcheck_overhaul02.py` GEOB exemption list synced with the
+  sprint-03 launch/return path surfaces the ball intentionally rides.
+
+Verification (`freecadcmd.exe scripts/freecad/selfcheck_overhaul0N.py`):
+
+- `selfcheck_overhaul03.py`: **73/73 gates PASS** - GIT/DET/PAR/PROV/
+  DAG/ASM/FAST/GEO/ENV/XPT/GUI + GEO-I/H/B/T + GEOT-yaw/susan/sweep +
+  GEOL + PAR3 (turret-z 4/4, nip gap, lift rail+tie) + DET2
+  determinism (all 7 docs rebuild bit-identical).
+- `selfcheck_overhaul01.py`: **45/45 gates PASS**.
+- `selfcheck_overhaul02.py`: **61/61 gates PASS**.
+
 ## 2026-09-24 - Final audit + repo cleanup
 
 - **Final CAD audit** — `selfcheck_rehaul02.py` re-run headless against the
