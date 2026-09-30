@@ -1,5 +1,5 @@
 SAVED lift.FCStd: objects=1821 solids=353
-DECL: 93 embed->contact, 46 dropped
+DECL: 93 embed->contact, 44 dropped
 META lift.json
 FreeCAD 1.1.3, Libs: 1.1.3R20260725 (Git shallow)
 (C) 2001-2026 FreeCAD contributors

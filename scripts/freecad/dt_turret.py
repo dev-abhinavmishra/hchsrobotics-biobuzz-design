@@ -45,6 +45,9 @@ from dt_path import _feat
 # -- expression aliases -------------------------------------------------
 AXX = "Parameters.column_x"          # -66 : turret yaw axis x
 DTOP = "(Parameters.deck_z + Parameters.deck_thk / 2)"      # 86.8
+# tower column base: the whole riser column translates with
+# turret_deck_z0 so the mast module is parametric in z
+TWZ0 = "(Parameters.turret_deck_z0 - Parameters.tower_span)"  # 86.8
 DZ = "Parameters.turret_deck_z0"                            # 244
 DT = "Parameters.turret_deck_t"                             # 4
 DTP = "(%s + %s)" % (DZ, DT)                                # 248
@@ -97,10 +100,10 @@ def _tower(doc, ctx, sgn):
         doc, "%s_LEG" % nm,
         {"Length": "(Parameters.tower_x1 - Parameters.tower_x0)",
          "Width": "Parameters.tower_thk",
-         "Height": "(Parameters.tower_z1 - %s)" % DTOP},
+         "Height": "(Parameters.tower_z1 - %s)" % TWZ0},
         {"Placement.Base.x": "Parameters.tower_x0",
          "Placement.Base.y": "(%s - Parameters.tower_thk / 2)" % lat,
-         "Placement.Base.z": DTOP})
+         "Placement.Base.z": TWZ0})
     # foot + cap share the same inboard footprint (leg-inner-face -24)
     fy0 = ("(%s - Parameters.tower_thk / 2 - 24)" % lat if sgn > 0
            else "(%s - Parameters.tower_thk / 2)" % lat)
@@ -111,7 +114,7 @@ def _tower(doc, ctx, sgn):
                        {"Length": fl, "Width": fw, "Height": "3"},
                        {"Placement.Base.x": fx,
                         "Placement.Base.y": fy0,
-                        "Placement.Base.z": DTOP})
+                        "Placement.Base.z": TWZ0})
     cap = pk.tool_box(doc, "%s_CAP" % nm,
                       {"Length": fl, "Width": fw, "Height": "3"},
                       {"Placement.Base.x": fx,
@@ -142,7 +145,7 @@ def _tower(doc, ctx, sgn):
         tools.append(pk.tool_cyl(
             doc, "%s_FB%d" % (nm, i), {"Radius": "2.4", "Height": "5"},
             {"Placement.Base.x": px, "Placement.Base.y": fby,
-             "Placement.Base.z": "(%s - 1)" % DTOP}))
+             "Placement.Base.z": "(%s - 1)" % TWZ0}))
     # cap bolt clearance bores (through the top cap flange)
     for i, (px, py) in enumerate(cbs):
         tools.append(pk.tool_cyl(

@@ -283,7 +283,7 @@ def _rails(doc, ctx):
                       "12", "3", "8",
                       {"Placement.Base.x": "-186",
                        "Placement.Base.y": "170",
-                       "Placement.Base.z": "330"},
+                       "Placement.Base.z": "(Parameters.stop_z + 4)"},
                       "Y")
     _s(ctx, eye)
     _fp(ctx, eye.Name, tie.Name)
@@ -1000,9 +1000,7 @@ def build_lift(doc, ctx):
                  ("SCRW_CHL_3_2", "CRADLE_CUP"),
                  ("WHEEL_PLATE_RL_IN", "CRADLE_CUP"),
                  ("WHEEL_ASSY_RL", "CRADLE_CUP"),
-                 ("ROLLER_RL_01", "CRADLE_CUP"),
                  ("ROLLER_RL_01_B", "CRADLE_CUP"),
-                 ("ROLLER_RL_02", "CRADLE_CUP"),
                  ("ROLLER_RL_02_B", "CRADLE_CUP"),
                  ("ROPE_GUIDE", "STOP_COLLAR_R"),
                  ("ROPE_GUIDE", "BOLT_SC_R0"),

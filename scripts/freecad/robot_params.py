@@ -363,8 +363,8 @@ PARAMS = [
     ("tower_x0", -176.0, "mm", "UNVERIFIED",
      "tower riser rear edge (deck panel edge x-174 + margin)"),
     ("tower_x1", 0.0, "mm", "UNVERIFIED", "tower riser front edge"),
-    ("tower_z1", 244.0, "mm", "UNVERIFIED",
-     "tower top edge = turret deck underside"),
+    ("tower_span", 157.2, "mm", "UNVERIFIED",
+     "tower riser column span (frame deck top to turret deck underside)"),
     ("turret_deck_z0", 244.0, "mm", "UNVERIFIED",
      "turret deck plate bottom -- REF_DECK_IFACE + 1"),
     ("turret_deck_t", 4.0, "mm", "UNVERIFIED", "PETG turret deck sheet"),
@@ -391,9 +391,6 @@ PARAMS = [
     # ---- sprint-03: launcher (rotating) -----------------------------------
     ("plate_od", 170.0, "mm", "UNVERIFIED",
      "rotating turret plate dia (viewer 6.7in)"),
-    ("plate_z", 265.0, "mm", "UNVERIFIED",
-     "rotating plate center z -- FC2 stack: susan top 256.5 + ring 6.5 "
-     "+ plate 4 -> plate z263-267"),
     ("plate_t", 4.0, "mm", "UNVERIFIED", "acetal turret plate"),
     ("cheek_lat", 66.5, "mm", "UNVERIFIED",
      "launcher cheek plate offset (viewer 2.62in)"),
@@ -443,8 +440,7 @@ PARAMS = [
     ("s2_len", 218.0, "mm", "UNVERIFIED",
      "stage-2 slide bar length (viewer 8.6in)"),
     ("mast_top_z", 330.0, "mm", "UNVERIFIED", "mast top tie z"),
-    ("stop_z", 326.0, "mm", "UNVERIFIED",
-     "hard-stop collar z -- caps stage-1 inside R105 (G416)"),
+
     ("cradle_x", -127.0, "mm", "UNVERIFIED",
      "cradle pivot station (viewer 5.0in fwd of mast)"),
     ("cradle_y", 178.0, "mm", "UNVERIFIED", "cradle pivot offset"),
@@ -509,6 +505,17 @@ DERIVED = [
      "((roller_top_x - intake_x)^2 + (roller_top_z - roller_low_z)^2)"
      "^(1/2) - roller_low_r - roller_top_r",
      "UNVERIFIED", "alias: surface gap along the roller nip line"),
+    ("tower_z1", "turret_deck_z0", "UNVERIFIED",
+     "alias: tower top = turret deck underside"),
+    ("plate_z",
+     "turret_deck_z0 + turret_deck_t + 2 * susan_race_h + 6.5 + "
+     "plate_t / 2",
+     "UNVERIFIED",
+     "alias: plate center z = susan top 256.5 + ring 6.5 + plate/2"),
+    ("stop_z",
+     "rail_elev_z + rail_size / 2 + 3 + lift_rail_len - 9.75",
+     "UNVERIFIED",
+     "alias: hard-stop collar z = rail top - 9.75"),
 
 ]
 
