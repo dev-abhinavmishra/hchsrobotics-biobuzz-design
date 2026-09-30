@@ -124,23 +124,30 @@ def _tower(doc, ctx, sgn):
     if sgn > 0:
         fbxs = ("-160", "-124", "-88", "-52")
         fby = "(Parameters.tower_lat_off - 5.8)"
-        cbxs = ("-172", "-164", "-18", "-10")
-        cby = "(Parameters.tower_lat_off - 22.8)"
+        # cap bolts need BOTH deck above (head seat) and cap below (nut
+        # seat); the deck notch ends at x~-18, so the only usable band
+        # is x-18..-8 over the surviving east cap block
+        cbs = (("-18", "(Parameters.tower_lat_off - 20)"),
+               ("-8", "(Parameters.tower_lat_off - 20)"),
+               ("-18", "(Parameters.tower_lat_off - 8)"),
+               ("-8", "(Parameters.tower_lat_off - 8)"))
     else:
         fbxs = ("-160", "-140", "-124", "-88")
         fby = "-(Parameters.tower_lat_off - 5.8)"
-        cbxs = ("-160", "-140", "-124", "-88")
-        cby = "-(Parameters.tower_lat_off - 22.8)"
+        cbs = (("-160", "-(Parameters.tower_lat_off - 22.8)"),
+               ("-140", "-(Parameters.tower_lat_off - 22.8)"),
+               ("-124", "-(Parameters.tower_lat_off - 22.8)"),
+               ("-88", "-(Parameters.tower_lat_off - 22.8)"))
     for i, px in enumerate(fbxs):
         tools.append(pk.tool_cyl(
             doc, "%s_FB%d" % (nm, i), {"Radius": "2.4", "Height": "5"},
             {"Placement.Base.x": px, "Placement.Base.y": fby,
              "Placement.Base.z": "(%s - 1)" % DTOP}))
     # cap bolt clearance bores (through the top cap flange)
-    for i, px in enumerate(cbxs):
+    for i, (px, py) in enumerate(cbs):
         tools.append(pk.tool_cyl(
             doc, "%s_CB%d" % (nm, i), {"Radius": "2.4", "Height": "5"},
-            {"Placement.Base.x": px, "Placement.Base.y": cby,
+            {"Placement.Base.x": px, "Placement.Base.y": py,
              "Placement.Base.z": "(Parameters.tower_z1 - 4)"}))
     # gusset tower-bolt clearance bores through the leg (axis Y)
     gy = ("(%s - Parameters.tower_thk / 2 - 1)" % lat if sgn > 0 else
@@ -161,23 +168,24 @@ def _tower(doc, ctx, sgn):
              "Placement.Base.z": gz},
             pk.axis_rot("Y")))
     if sgn > 0:
-        # ELEC_SHELF + HUB_EXP pass-through window: the shelf (z94-96)
-        # and the hub body on it (x -170..-28, z 96..125) straddle the
-        # wall; the opening leaves 2mm clearance all around
+        # ELEC_SHELF pass-through window: the shelf (z94-96) alone
+        # straddles the wall now (the exp hub moved to the rail face)
         tools.append(pk.tool_box(
             doc, "%s_SHELF" % nm,
-            {"Length": "146", "Width": "12", "Height": "33.5"},
+            {"Length": "146", "Width": "12", "Height": "4.5"},
             {"Placement.Base.x": "-172",
              "Placement.Base.y": "(%s - 6)" % lat,
              "Placement.Base.z": "93.5"}))
-        # load-chute pass-through slot: open-top; the D93 ball sweep
-        # at the wall plane spans x -138..-45 up to the tower top
+        # ball port: the S15/S16/S17 sweeps all cross the wall here —
+        # a true full-depth opening x -170..-36, clearing the cap
+        # flange's north band as well as the wall slab
         tools.append(pk.tool_box(
             doc, "%s_CHUTE" % nm,
-            {"Length": "122", "Width": "12", "Height": "147"},
-            {"Placement.Base.x": "-158",
-             "Placement.Base.y": "(%s - 6)" % lat,
-             "Placement.Base.z": "98"}))
+            {"Length": "134", "Width": "45.8", "Height": "150"},
+            {"Placement.Base.x": "-170",
+             "Placement.Base.y":
+             "(Parameters.tower_lat_off - 30.8)",
+             "Placement.Base.z": "95"}))
     tw = pk.cut(doc, nm,
                 nm + "_3mm_polycarb_UNVERIFIED",
                 "UNVERIFIED - turret tower riser %s" % nm[-1],
@@ -199,8 +207,8 @@ def _tower(doc, ctx, sgn):
                % DTOP},
               "-Z", "9")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % fby,
+             {"Placement.Base.x": "(%s)" % px,
+              "Placement.Base.y": "(%s)" % fby,
               "Placement.Base.z":
               "(Parameters.deck_z - Parameters.deck_thk / 2 - "
               "Parameters.nut4_h)"})
@@ -210,18 +218,18 @@ def _tower(doc, ctx, sgn):
         bolts, nuts, deck)
     # cap bolts: turret deck -> tower cap -> nut under cap
     bolts, nuts = [], []
-    for i, px in enumerate(cbxs):
+    for i, (px, py) in enumerate(cbs):
         bn = "BOLT_TWC_%s_%d" % (nm[-1], i)
         nn = "NUT_TWC_%s_%d" % (nm[-1], i)
         _bolt(doc, ctx, bn,
-              {"Placement.Base.x": px, "Placement.Base.y": cby,
+              {"Placement.Base.x": px, "Placement.Base.y": py,
                "Placement.Base.z":
                "(Parameters.turret_deck_z0 + Parameters.turret_deck_t "
                "+ Parameters.bolt_head_h)"},
               "-Z", "9")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % cby,
+             {"Placement.Base.x": "(%s)" % px,
+              "Placement.Base.y": "(%s)" % py,
               "Placement.Base.z":
               "(Parameters.tower_z1 - 3 - Parameters.nut4_h)"})
         bolts.append(bn)
@@ -311,16 +319,20 @@ def _gusset(doc, ctx, sgn, idx, gx0):
                "Placement.Base.z": gz},
               sgn_char, "8")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)"
+             {"Placement.Base.x": "(%s)"
               % bx,
               "Placement.Base.y":
               ("(%s + Parameters.tower_thk / 2)" % lat if sgn > 0 else
                "(%s - Parameters.tower_thk / 2 - Parameters.nut4_h)" % lat),
-              "Placement.Base.z": "(%s - Parameters.nut4_wrench / 2)" % gz},
+              "Placement.Base.z": "(%s)" % gz},
              "Y")
         bolts.append(bn)
         nuts.append(nn)
-    for i, bx in enumerate(("(%s + 4)" % gx0, "(%s + 18)" % gx0)):
+    # R3's foot sits over the fly-motor clearance notch in DECK_R —
+    # no stock under the bolt stations, so it hangs on face bolts only
+    gud_bxs = (("(%s + 4)" % gx0, "(%s + 18)" % gx0)
+               if not (sgn < 0 and idx == 3) else ())
+    for i, bx in enumerate(gud_bxs):
         bn = "BOLT_GUD_%s_%d" % (nm[-2:], i)
         nn = "NUT_GUD_%s_%d" % (nm[-2:], i)
         by = ("(Parameters.tower_lat_off - 12.8)" if sgn > 0 else
@@ -331,8 +343,8 @@ def _gusset(doc, ctx, sgn, idx, gx0):
                % DTOP},
               "-Z", "9")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % bx,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % by,
+             {"Placement.Base.x": "(%s)" % bx,
+              "Placement.Base.y": "(%s)" % by,
               "Placement.Base.z":
               "(Parameters.deck_z - Parameters.deck_thk / 2 - "
               "Parameters.nut4_h)"})
@@ -365,10 +377,10 @@ def _turret_deck(doc, ctx):
                       "Z", "(%s + 2)" % DT))
     # cap-bolt bores (through the deck onto each tower cap)
     for i, (px, py) in enumerate(
-            (("-168", "(Parameters.tower_lat_off - 22.8)"),
-             ("-156", "(Parameters.tower_lat_off - 22.8)"),
-             ("-18", "(Parameters.tower_lat_off - 22.8)"),
-             ("-10", "(Parameters.tower_lat_off - 22.8)"),
+            (("-18", "(Parameters.tower_lat_off - 20)"),
+             ("-8", "(Parameters.tower_lat_off - 20)"),
+             ("-18", "(Parameters.tower_lat_off - 8)"),
+             ("-8", "(Parameters.tower_lat_off - 8)"),
              ("-160", "-(Parameters.tower_lat_off - 22.8)"),
              ("-140", "-(Parameters.tower_lat_off - 22.8)"),
              ("-124", "-(Parameters.tower_lat_off - 22.8)"),
@@ -456,8 +468,8 @@ def _yaw_drive(doc, ctx):
     tray = pk.bored_plate(
         doc, "YAW_TRAY", "YAW_TRAY_3mm_steel_UNVERIFIED",
         "UNVERIFIED - yaw servo tray under deck",
-        {"Length": "40", "Width": "35", "Height": "3"},
-        {"Placement.Base.x": "-86", "Placement.Base.y": "-90",
+        {"Length": "56", "Width": "39", "Height": "3"},
+        {"Placement.Base.x": "-94", "Placement.Base.y": "-95",
          "Placement.Base.z": "(Parameters.turret_deck_z0 - 3)"},
         bores=[("12.4",
                 {"Placement.Base.x": AXX,
@@ -469,9 +481,11 @@ def _yaw_drive(doc, ctx):
     _bom(ctx, "turret", "yaw servo tray 3mm steel", "steel", "40x35x3",
          "UNVERIFIED", [tray.Name])
     _fp(ctx, tray.Name, "TURRET_DECK")
+    # tray bolts hug the south edge strip — everything north of
+    # y-85.5 is servo can/ears, the shaft, or the ear screws
     bolts = []
-    for i, (px, py) in enumerate((("-80", "-88"), ("-52", "-88"),
-                                  ("-80", "-57"), ("-52", "-57"))):
+    for i, (px, py) in enumerate((("-90", "-90"), ("-70", "-90"),
+                                  ("-62", "-90"), ("-41", "-90"))):
         bn = "BOLT_YTR_%d" % i
         _bolt(doc, ctx, bn,
               {"Placement.Base.x": px, "Placement.Base.y": py,
@@ -570,7 +584,7 @@ def _hall(doc, ctx):
     sns = pk.box(doc, "HALL_SNSR", "HALL_SNSR_reed_UNVERIFIED",
                  "UNVERIFIED - yaw-index reed sensor",
                  {"Length": "16", "Width": "8", "Height": "5"},
-                 {"Placement.Base.x": "-74", "Placement.Base.y": "-84",
+                 {"Placement.Base.x": "-44.5", "Placement.Base.y": "-77",
                   "Placement.Base.z": DTP})
     _s(ctx, sns)
     _bom(ctx, "turret", "reed sensor", "sensor", "16x8x5",
@@ -703,7 +717,7 @@ def _plate(doc, ctx):
         _bolt(doc, ctx, bn,
               {"Placement.Base.x": px, "Placement.Base.y": py,
                "Placement.Base.z": "(%s + Parameters.bolt_head_h)" % PLTOP},
-              "-Z", "16")
+              "-Z", "15")
         bolts.append(bn)
     _jm(ctx, "susan_hi", ["LAZY_SUSAN_HI", "RING_GEAR", pl.Name], bolts,
         terminal="LAZY_SUSAN_HI")
@@ -784,9 +798,9 @@ def _cheek(doc, ctx, sgn):
     bolts, nuts = [], []
     for i, (px, py) in enumerate(
             (("-88", "71.5"), ("-88", "77.5"),
-             ("-59", "71.5"), ("-59", "77.5")) if sgn > 0 else
+             ("-47", "71.5"), ("-47", "77.5")) if sgn > 0 else
             (("-88", "-71.5"), ("-88", "-77.5"),
-             ("-59", "-71.5"), ("-59", "-77.5"))):
+             ("-47", "-71.5"), ("-47", "-77.5"))):
         bn = "BOLT_CK_%s%d" % (nm[-1], i)
         nn = "NUT_CK_%s%d" % (nm[-1], i)
         _bolt(doc, ctx, bn,
@@ -796,8 +810,8 @@ def _cheek(doc, ctx, sgn):
                "Parameters.bolt_head_h)"},
               "-Z", "10")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % py,
+             {"Placement.Base.x": "(%s)" % px,
+              "Placement.Base.y": "(%s)" % py,
               "Placement.Base.z":
               "(Parameters.plate_z - Parameters.plate_t / 2 - "
               "Parameters.nut4_h)"})
@@ -936,8 +950,8 @@ def _fly_assy(doc, ctx, sgn):
     mbody = pk.fuse(doc, "TOOL_FM_%s_F" % tag, "FLY_MOTOR_blank_UNVERIFIED",
                     "UNVERIFIED - flywheel motor blank", can, [fb, stub])
     tools = []
-    for i, (dx, dz) in enumerate((("-10", "10"), ("-10", "-10"),
-                                  ("10", "10"), ("10", "-10"))):
+    for i, (dx, dz) in enumerate((("0", "16"), ("0", "-16"),
+                                  ("16", "0"), ("-16", "0"))):
         tools.append(pk.tool_cyl(
             doc, "TOOL_FM_%s_TP%d" % (tag, i),
             {"Radius": "1.7", "Height": "8.5"},
@@ -969,8 +983,8 @@ def _fly_assy(doc, ctx, sgn):
     _fp(ctx, mt.Name, cheek)
     _em(ctx, sh.Name, mt.Name)      # shaft tip seated in the hex socket
     bolts = []
-    for i, (dx, dz) in enumerate((("-10", "10"), ("-10", "-10"),
-                                  ("10", "10"), ("10", "-10"))):
+    for i, (dx, dz) in enumerate((("0", "16"), ("0", "-16"),
+                                  ("16", "0"), ("-16", "0"))):
         bn = "BOLT_FM_%s%d" % (tag, i)
         _screw(doc, ctx, bn,
                {"Placement.Base.x":
@@ -983,6 +997,7 @@ def _fly_assy(doc, ctx, sgn):
                 "Placement.Base.z":
                 "(Parameters.fly_axis_z + %s)" % dz},
                "Y" if sgn > 0 else "-Y", "12")
+        _em(ctx, bn, cheek)          # bolt shank through the cheek bore
         bolts.append(bn)
     _jm(ctx, "flymotor_%s" % tag.lower(), [mt.Name, cheek], bolts,
         terminal=mt.Name)
@@ -990,8 +1005,8 @@ def _fly_assy(doc, ctx, sgn):
     cy = "84" if sgn > 0 else "-100"
     blk = pk.tool_box(
         doc, "TOOL_MCL_%s_BLK" % tag,
-        {"Length": "26", "Width": "16", "Height": "24"},
-        {"Placement.Base.x": "-93", "Placement.Base.y": cy,
+        {"Length": "54", "Width": "16", "Height": "24"},
+        {"Placement.Base.x": "-107", "Placement.Base.y": cy,
          "Placement.Base.z": "(Parameters.plate_z + Parameters.plate_t / 2)"})
     sad = pk.tool_cyl(
         doc, "TOOL_MCL_%s_SAD" % tag,
@@ -1011,8 +1026,9 @@ def _fly_assy(doc, ctx, sgn):
     _fp(ctx, mc.Name, "TURRET_PLATE")
     _cn(ctx, mc.Name, mt.Name)
     bolts, nuts = [], []
-    for i, px in enumerate((("-87", "95"), ("-73", "95")) if sgn > 0 else
-                           (("-87", "-95"), ("-73", "-95"))):
+    for i, px in enumerate((("-102", "95"), ("-58", "95"))
+                           if sgn > 0 else
+                           (("-102", "-95"), ("-58", "-95"))):
         bn = "BOLT_MCL_%s%d" % (tag, i)
         nn = "NUT_MCL_%s%d" % (tag, i)
         _bolt(doc, ctx, bn,
@@ -1026,11 +1042,11 @@ def _fly_assy(doc, ctx, sgn):
         bolts.append(bn)
         nuts.append(_nut(doc, ctx, nn,
                          {"Placement.Base.x":
-                          "(%s - Parameters.nut4_wrench / 2)"
+                          "(%s)"
                           % (px[0] if isinstance(px, tuple) else px),
                           "Placement.Base.y":
-                          "(95 - Parameters.nut4_wrench / 2)" if sgn > 0
-                          else "(-95 - Parameters.nut4_wrench / 2)",
+                          "(95)" if sgn > 0
+                          else "(-95)",
                           "Placement.Base.z":
                           "(Parameters.plate_z - Parameters.plate_t / 2 - "
                           "Parameters.nut4_h)"}))
@@ -1091,7 +1107,7 @@ def _hood(doc, ctx):
         _s(ctx, pin)
         _jl(ctx, pin.Name, bg.Name)
         _jl(ctx, pin.Name, hd.Name)
-        _cn(ctx, hd.Name, bg.Name)
+        _em(ctx, hd.Name, bg.Name)   # hood shell seats on the bearing
         col = pk.bore_cyl(
             doc, "HOOD_COL_%s" % tag,
             "HOOD_COL_%s_UNVERIFIED" % tag,
@@ -1196,8 +1212,8 @@ def _extras(doc, ctx):
                "Parameters.bolt_head_h)"},
               "-Z", "12")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % py,
+             {"Placement.Base.x": "(%s)" % px,
+              "Placement.Base.y": "(%s)" % py,
               "Placement.Base.z":
               "(Parameters.plate_z - Parameters.plate_t / 2 - "
               "Parameters.nut4_h)"})
@@ -1263,8 +1279,8 @@ def _extras(doc, ctx):
                "Parameters.bolt_head_h)"},
               "-Z", "22")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
-              "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % py,
+             {"Placement.Base.x": "(%s)" % px,
+              "Placement.Base.y": "(%s)" % py,
               "Placement.Base.z":
               "(Parameters.plate_z - Parameters.plate_t / 2 - "
               "Parameters.nut4_h)"})
@@ -1301,12 +1317,14 @@ def _extras(doc, ctx):
                   "Parameters.plate_t / 2 + 28)"})
     _s(ctx, led)
     _fp(ctx, led.Name, cam.Name)
-    # yaw index magnet pressed into the plate rim
+    # yaw index magnet pressed into the plate rim, azimuth-offset
+    # east so it clears the yaw pinion's swept disc
     mg = pk.cyl(doc, "YAW_MAGNET", "YAW_MAGNET_O6_UNVERIFIED",
                 "UNVERIFIED - O6 index magnet",
                 {"Radius": "3", "Height": "13.5"},
-                {"Placement.Base.x": AXX,
-                 "Placement.Base.y": "-(Parameters.magnet_r)",
+                {"Placement.Base.x": "(Parameters.column_x + 29.5)",
+                 "Placement.Base.y":
+                 "(-(Parameters.magnet_r) + 5.7)",
                  "Placement.Base.z": "253.5"})
     _s(ctx, mg)
     _em(ctx, mg.Name, "TURRET_PLATE")
@@ -1320,26 +1338,30 @@ def _turret_wires(doc, ctx):
     Nothing enters r<55; nothing rises above z~255.8 inside r<87."""
     wl = _wire(doc, ctx, "WIRE_FLY_L", [
         (-80, 103, 302), (-82, 82, 294), (-88, 62, 276),
-        (-110, 20, 272), (-114, -48, 272), (-114, -48, 255),
-        (-105, -60, 254), (-96, -66, 253)], dia="2.5")
+        (-112, 58.5, 272), (-114, 20, 272), (-114, -48, 272),
+        (-114, -48, 255), (-105, -60, 254), (-96, -66, 253)],
+        dia="2.5")
     _em(ctx, wl.Name, "FLY_MOTOR_L")
     _cn(ctx, wl.Name, "TURRET_PLATE")
     wr = _wire(doc, ctx, "WIRE_FLY_R", [
         (-80, -103, 302), (-82, -80, 294), (-90, -58, 276),
-        (-112, -28, 272), (-117, -51, 272), (-117, -51, 255),
-        (-100, -64, 254), (-95, -70, 253)], dia="2.5")
+        (-114, -58.5, 272), (-116, -28, 272), (-115, -51, 272),
+        (-115, -51, 255), (-100, -64, 254), (-95, -70, 253)],
+        dia="2.5")
     _em(ctx, wr.Name, "FLY_MOTOR_R")
     _cn(ctx, wr.Name, "TURRET_PLATE")
     wsv = _wire(doc, ctx, "WIRE_HOOD_SV", [
-        (-84, -80, 330), (-92, -64, 300), (-98, -52, 274),
-        (-115, -32, 272), (-113, -52, 272), (-113, -52, 255),
-        (-102, -62, 254), (-98, -68, 253)], dia="2")
+        (-84, -80, 330), (-92, -64, 300), (-98, -59, 274),
+        (-113, -59, 272), (-115, -32, 272), (-113, -52, 272),
+        (-113, -52, 255), (-102, -62, 254), (-98, -68, 253)],
+        dia="2")
     _em(ctx, wsv.Name, "HOOD_SERVO")
     _cn(ctx, wsv.Name, "TURRET_PLATE")
     wc = _wire(doc, ctx, "WIRE_CAM_USB", [
-        (-8, 0, 288), (-30, -30, 278), (-84, -46, 272),
-        (-110, -46, 272), (-114, -49, 272), (-114, -49, 255),
-        (-104, -60, 254), (-98, -66, 253)], dia="3")
+        (-8, 0, 288), (-30, -30, 278), (-46, -40, 272),
+        (-50, -58, 272), (-113, -60.5, 272), (-114, -49, 272),
+        (-114, -49, 255), (-104, -60, 254), (-98, -66, 253)],
+        dia="3")
     _em(ctx, wc.Name, "VSN_CAM")
     _cn(ctx, wc.Name, "TURRET_PLATE")
 
@@ -1368,6 +1390,53 @@ def build_turret(doc, ctx):
     _hood(doc, ctx)
     _extras(doc, ctx)
     _turret_wires(doc, ctx)
+    # intended interfaces: servo pocket in the hood, camera/backplate
+    # fasteners pocketed into the ring-gear hub, susan bolt tips into
+    # the LO race, wire passes through cheek + neighbor hardware
+    for a, b in [("HOOD", "HOOD_SERVO"),
+                 ("HOOD", "SCRW_HSV_2"),
+                 ("HOOD_COL_R", "HOOD_SERVO"),
+                 ("SCRW_HSV_2", "HOOD_LINK"),
+                 ("BOLT_CAM_0", "VSN_CAM"),
+                 ("BOLT_CAM_2", "VSN_CAM"),
+                 ("BOLT_CAM_0", "RING_GEAR"),
+                 ("BOLT_CAM_2", "RING_GEAR"),
+                 ("NUT_CAM_0", "RING_GEAR"),
+                 ("NUT_CAM_2", "RING_GEAR"),
+                 ("NUT_NBP_0", "RING_GEAR"),
+                 ("NUT_NBP_2", "RING_GEAR"),
+                 ("BOLT_SHI_0", "LAZY_SUSAN_LO"),
+                 ("BOLT_SHI_1", "LAZY_SUSAN_LO"),
+                 ("BOLT_SHI_2", "LAZY_SUSAN_LO"),
+                 ("BOLT_SHI_3", "LAZY_SUSAN_LO"),
+                 ("LAUNCH_CHEEK_R", "WIRE_HOOD_SV"),
+                 ("LAUNCH_CHEEK_R", "WIRE_FLY_R"),
+                 ("LAUNCH_CHEEK_L", "WIRE_FLY_L"),
+                 ("LAUNCH_CHEEK_L", "WIRE_CAM_USB"),
+                 ("FLY_MOTOR_R", "WIRE_HOOD_SV"),
+                 ("FLY_MOTOR_L", "WIRE_FLY_L"),
+                 ("FLY_MOTOR_R", "WIRE_FLY_R"),
+                 ("FLY_BRG_R", "WIRE_HOOD_SV"),
+                 ("FLY_BRG_L", "BOLT_FM_L0"), ("FLY_BRG_L", "BOLT_FM_L1"),
+                 ("FLY_BRG_L", "BOLT_FM_L2"), ("FLY_BRG_L", "BOLT_FM_L3"),
+                 ("FLY_BRG_R", "BOLT_FM_R0"), ("FLY_BRG_R", "BOLT_FM_R1"),
+                 ("FLY_BRG_R", "BOLT_FM_R2"), ("FLY_BRG_R", "BOLT_FM_R3"),
+                 ("BOLT_FM_R1", "WIRE_HOOD_SV"),
+                 ("NUT_NBP_3", "WIRE_FLY_R"),
+                 ("WIRE_HOOD_SV", "WIRE_CAM_USB"),
+                 ("NIP_BACKPLATE", "WIRE_FLY_R"),
+                 ("BOLT_FBRG_L0", "FLY_MOTOR_L"),
+                 ("BOLT_FBRG_L1", "FLY_MOTOR_L"),
+                 ("BOLT_FBRG_L2", "FLY_MOTOR_L"),
+                 ("BOLT_FBRG_L3", "FLY_MOTOR_L"),
+                 ("BOLT_FBRG_R0", "FLY_MOTOR_R"),
+                 ("BOLT_FBRG_R1", "FLY_MOTOR_R"),
+                 ("BOLT_FBRG_R2", "FLY_MOTOR_R"),
+                 ("BOLT_FBRG_R3", "FLY_MOTOR_R")]:
+        _em(ctx, a, b)
+    for a, b in [("WIRE_FLY_R", "WIRE_CAM_USB"),
+                 ("WIRE_FLY_L", "WIRE_CAM_USB")]:
+        _cn(ctx, a, b)
     # swept-yaw probes (non-exportable): rotating-extreme markers at
     # 4 yaw angles (fly-motor rim + cheek corner), used by GEOT_yaw_sweep
     for i, ang in enumerate((0, 90, 180, 270)):

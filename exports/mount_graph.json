@@ -891,10 +891,6 @@
   "NUT_GUS_R3_0",
   "BOLT_GUS_R3_1",
   "NUT_GUS_R3_1",
-  "BOLT_GUD_R3_0",
-  "NUT_GUD_R3_0",
-  "BOLT_GUD_R3_1",
-  "NUT_GUD_R3_1",
   "TURRET_DECK",
   "LAZY_SUSAN_LO",
   "LAZY_SUSAN_HI",
@@ -983,9 +979,11 @@
   "HOOD_PIV_L",
   "HOOD_PIN_L",
   "HOOD_COL_L",
+  "SCRW_HCOL_L",
   "HOOD_PIV_R",
   "HOOD_PIN_R",
   "HOOD_COL_R",
+  "SCRW_HCOL_R",
   "HOOD_SERVO",
   "SCRW_HSV_0",
   "SCRW_HSV_1",
@@ -1089,12 +1087,11 @@
   "BOLT_S2TIE_0",
   "BOLT_S2TIE_1",
   "BOLT_S2TIE_2",
-  "BOLT_S2TIE_3",
   "CRADLE_ARM",
   "BOLT_CARM_0",
   "BOLT_CARM_1",
-  "BOLT_CARM_2",
-  "BOLT_CARM_3",
+  "SCRW_CARM_0",
+  "SCRW_CARM_1",
   "CRADLE_CUP",
   "CRADLE_FOAM",
   "CRADLE_PIV",
@@ -1125,11 +1122,11 @@
   "SCRW_CHL_0_0",
   "SCRW_CHL_0_1",
   "SCRW_CHL_1_0",
-  "SCRW_CHL_1_1",
   "SCRW_CHL_2_0",
   "SCRW_CHL_2_1",
   "SCRW_CHL_3_0",
   "SCRW_CHL_3_1",
+  "SCRW_CHL_3_2",
   "CHUTE_PORT_EAR",
   "BOLT_CHP_0",
   "BOLT_CHP_1",
@@ -1981,6 +1978,41 @@
   {
    "a": "BOLT_NUM_B_3",
    "b": "NUT_NUM_B_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_L_0",
+   "b": "TOWER_GUS_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_L_0",
+   "b": "BOLT_GUS_L0_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_R_0",
+   "b": "TOWER_GUS_R2",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_GUS_L_1_1",
+   "b": "BOLT_LRF_L0",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_GUS_L_1_1",
+   "b": "NUT_LRF_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L_1_1",
+   "b": "BOLT_LRF_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L_1_1",
+   "b": "NUT_LRF_L0",
    "type": "embed"
   },
   {
@@ -2950,6 +2982,26 @@
   },
   {
    "a": "BOLT_HUB_E_0",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_HUB_E_1",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_HUB_E_2",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_HUB_E_3",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_HUB_E_0",
    "b": "NUT_HUB_E_0",
    "type": "embed"
   },
@@ -3049,6 +3101,81 @@
    "type": "embed"
   },
   {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "HUB_EXP",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "BATTERY",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "HOP_WALL_L",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "BATT_STRAP_0",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "INT_MOTOR",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "MOUNT_PLATE_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "BOLT_IMP_3",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "MOUNT_PLATE_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "MOUNT_PLATE_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LON",
+   "b": "FEED_STANDOFF_0",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "FRAME_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "MOUNT_PLATE_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "SPUR_FEED_M",
+   "type": "embed"
+  },
+  {
    "a": "WIRE_ENC_LON",
    "b": "ODO_ENC_LON",
    "type": "embed"
@@ -3065,7 +3192,22 @@
   },
   {
    "a": "WIRE_SW_CTRL",
-   "b": "WIRE_HUB_RS485",
+   "b": "WIRE_ENC_LAT_L",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "WIRE_ENC_LAT_L",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "WIRE_ENC_LAT_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HUB_RS485",
+   "b": "WIRE_ENC_LON",
    "type": "embed"
   },
   {
@@ -3079,18 +3221,23 @@
    "type": "embed"
   },
   {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "WIRE_ENC_LAT_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_L",
+   "b": "WIRE_ENC_LON",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_ENC_LAT_R",
+   "b": "WIRE_ENC_LON",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_MPL_R_3",
    "b": "INT_MOTOR",
-   "type": "embed"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "MOTOR_RL",
-   "type": "embed"
-  },
-  {
-   "a": "WIRE_ENC_LON",
-   "b": "ELEC_SHELF",
    "type": "embed"
   },
   {
@@ -4159,6 +4306,16 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_GUS_L0_0",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_GUD_L0_1",
    "b": "TOWER_L",
    "type": "embed"
@@ -4239,16 +4396,6 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_GUD_R3_0",
-   "b": "TOWER_R",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUD_R3_1",
-   "b": "TOWER_R",
-   "type": "embed"
-  },
-  {
    "a": "BOLT_GUS_R3_0",
    "b": "NUT_GUS_R3_0",
    "type": "embed"
@@ -4256,16 +4403,6 @@
   {
    "a": "BOLT_GUS_R3_1",
    "b": "NUT_GUS_R3_1",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUD_R3_0",
-   "b": "NUT_GUD_R3_0",
-   "type": "embed"
-  },
-  {
-   "a": "BOLT_GUD_R3_1",
-   "b": "NUT_GUD_R3_1",
    "type": "embed"
   },
   {
@@ -4384,6 +4521,16 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_CK_L2",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_L3",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_CK_L0",
    "b": "NUT_CK_L0",
    "type": "embed"
@@ -4401,6 +4548,16 @@
   {
    "a": "BOLT_CK_L3",
    "b": "NUT_CK_L3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R2",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R3",
+   "b": "TURRET_PLATE",
    "type": "embed"
   },
   {
@@ -4459,6 +4616,36 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_FM_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_L0",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_L1",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_MCL_L0",
    "b": "NUT_MCL_L0",
    "type": "embed"
@@ -4504,6 +4691,56 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_FM_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R0",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R1",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R2",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FM_R3",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_R0",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_R1",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_MCL_R0",
    "b": "NUT_MCL_R0",
    "type": "embed"
@@ -4514,8 +4751,28 @@
    "type": "embed"
   },
   {
+   "a": "HOOD",
+   "b": "HOOD_PIV_L",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HCOL_L",
+   "b": "HOOD_COL_L",
+   "type": "embed"
+  },
+  {
    "a": "HOOD_PIN_L",
    "b": "HOOD_COL_L",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD",
+   "b": "HOOD_PIV_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HCOL_R",
+   "b": "HOOD_COL_R",
    "type": "embed"
   },
   {
@@ -4624,6 +4881,41 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_CAM_0",
+   "b": "NUT_CAM_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_1",
+   "b": "NUT_CAM_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "NUT_CAM_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_3",
+   "b": "NUT_CAM_3",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CAM_0",
+   "b": "CAM_MOUNT",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CAM_1",
+   "b": "CAM_MOUNT",
+   "type": "embed"
+  },
+  {
+   "a": "YAW_MAGNET",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
    "a": "WIRE_FLY_L",
    "b": "FLY_MOTOR_L",
    "type": "embed"
@@ -4641,6 +4933,126 @@
   {
    "a": "WIRE_CAM_USB",
    "b": "VSN_CAM",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD",
+   "b": "HOOD_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD",
+   "b": "SCRW_HSV_2",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD_COL_R",
+   "b": "HOOD_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HSV_2",
+   "b": "HOOD_LINK",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_0",
+   "b": "VSN_CAM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "VSN_CAM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_0",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_CAM_0",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_CAM_2",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_NBP_0",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_NBP_2",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_0",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_1",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_2",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_3",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "LAUNCH_CHEEK_R",
+   "b": "WIRE_HOOD_SV",
+   "type": "embed"
+  },
+  {
+   "a": "LAUNCH_CHEEK_R",
+   "b": "WIRE_FLY_R",
+   "type": "embed"
+  },
+  {
+   "a": "LAUNCH_CHEEK_L",
+   "b": "WIRE_FLY_L",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_MOTOR_R",
+   "b": "WIRE_HOOD_SV",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_MOTOR_L",
+   "b": "WIRE_FLY_L",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_MOTOR_R",
+   "b": "WIRE_FLY_R",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_BRG_R",
+   "b": "WIRE_HOOD_SV",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HOOD_SV",
+   "b": "WIRE_CAM_USB",
    "type": "embed"
   },
   {
@@ -4684,6 +5096,16 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_LRF_L0",
+   "b": "NUT_LRF_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "NUT_LRF_L1",
+   "type": "embed"
+  },
+  {
    "a": "BOLT_LRF_R0",
    "b": "LIFT_BASE",
    "type": "embed"
@@ -4691,6 +5113,16 @@
   {
    "a": "BOLT_LRF_R1",
    "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "NUT_LRF_R0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "NUT_LRF_R1",
    "type": "embed"
   },
   {
@@ -4804,6 +5236,16 @@
    "type": "embed"
   },
   {
+   "a": "S1_PPIN",
+   "b": "LIFT_S1_BAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "S1_PPIN",
+   "b": "LIFT_S1_BAR_R",
+   "type": "embed"
+  },
+  {
    "a": "SCRW_S2T_0_0",
    "b": "LIFT_S2_BAR",
    "type": "embed"
@@ -4839,7 +5281,7 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_S2TIE_3",
+   "a": "CRADLE_ARM",
    "b": "LIFT_S2_TIE",
    "type": "embed"
   },
@@ -4854,12 +5296,12 @@
    "type": "embed"
   },
   {
-   "a": "BOLT_CARM_2",
+   "a": "SCRW_CARM_0",
    "b": "CRADLE_ARM",
    "type": "embed"
   },
   {
-   "a": "BOLT_CARM_3",
+   "a": "SCRW_CARM_1",
    "b": "CRADLE_ARM",
    "type": "embed"
   },
@@ -4875,7 +5317,7 @@
   },
   {
    "a": "CRADLE_PIV",
-   "b": "CRADLE_ARM",
+   "b": "CRADLE_FOAM",
    "type": "embed"
   },
   {
@@ -4950,6 +5392,21 @@
   },
   {
    "a": "ROPE_DYNEEMA",
+   "b": "LIFT_TOP_PULLEY",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_PULLEY",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
    "b": "LIFT_S1_TIE",
    "type": "embed"
   },
@@ -4959,33 +5416,48 @@
    "type": "embed"
   },
   {
+   "a": "LOAD_CHUTE",
+   "b": "PORT_FLANGE",
+   "type": "embed"
+  },
+  {
+   "a": "LOAD_CHUTE",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "LOAD_CHUTE",
+   "b": "CRADLE_FOAM",
+   "type": "embed"
+  },
+  {
    "a": "SCRW_CHL_0_0",
-   "b": "LOAD_CHUTE",
+   "b": "CHUTE_LIP_L1",
    "type": "embed"
   },
   {
    "a": "SCRW_CHL_0_1",
-   "b": "LOAD_CHUTE",
+   "b": "CHUTE_LIP_L1",
    "type": "embed"
   },
   {
    "a": "SCRW_CHL_1_0",
-   "b": "LOAD_CHUTE",
-   "type": "embed"
-  },
-  {
-   "a": "SCRW_CHL_1_1",
-   "b": "LOAD_CHUTE",
+   "b": "CHUTE_LIP_L2",
    "type": "embed"
   },
   {
    "a": "SCRW_CHL_2_0",
-   "b": "LOAD_CHUTE",
+   "b": "CHUTE_LIP_R1",
    "type": "embed"
   },
   {
    "a": "SCRW_CHL_2_1",
-   "b": "LOAD_CHUTE",
+   "b": "CHUTE_LIP_R1",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CHUTE_LIP_R2",
    "type": "embed"
   },
   {
@@ -4995,6 +5467,41 @@
   },
   {
    "a": "SCRW_CHL_3_1",
+   "b": "CHUTE_LIP_R2",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "CHUTE_LIP_R2",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "CHUTE_LIP_L1",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
    "b": "LOAD_CHUTE",
    "type": "embed"
   },
@@ -5034,13 +5541,128 @@
    "type": "embed"
   },
   {
+   "a": "WIRE_WINCH",
+   "b": "WIRE_TILT_SV",
+   "type": "embed"
+  },
+  {
    "a": "WIRE_TILT_SV",
    "b": "TILT_SERVO",
    "type": "embed"
   },
   {
+   "a": "WIRE_TILT_SV",
+   "b": "CRADLE_PIV",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_TILT_SV",
+   "b": "FRAME_RAIL_L",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_TILT_SV",
+   "b": "LIFT_RAIL_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_TILT_SV",
+   "b": "MOUNT_PLATE_L",
+   "type": "embed"
+  },
+  {
    "a": "WIRE_YAW_SV",
    "b": "YAW_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_YAW_SV",
+   "b": "MOTOR_RR",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_YAW_SV",
+   "b": "DECK_R",
+   "type": "embed"
+  },
+  {
+   "a": "CHUTE_LIP_R2",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "WHEEL_ASSY_RL",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "ROLLER_RL_01",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "ROLLER_RL_01_B",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "ROLLER_RL_02",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "ROLLER_RL_02_B",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_GUIDE",
+   "b": "STOP_COLLAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_R0",
+   "b": "ROPE_GUIDE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_R1",
+   "b": "ROPE_GUIDE",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_LRF_R1",
+   "b": "WHEEL_PLATE_RL_IN",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_CLMP_RL_0_1",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "NUT_CLMP_RL_0_1",
+   "b": "NUT_LB_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CLMP_RL_0_1",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S2TIE_1",
+   "b": "ROPE_DYNEEMA",
+   "type": "embed"
+  },
+  {
+   "a": "FRAME_RAIL_R",
+   "b": "WIRE_ENC_LAT_L",
    "type": "embed"
   },
   {
@@ -5634,11 +6256,6 @@
    "type": "face"
   },
   {
-   "a": "BOLT_SO_T_0",
-   "b": "HUB_EXP",
-   "type": "face"
-  },
-  {
    "a": "STANDOFF_1",
    "b": "DECK_L",
    "type": "face"
@@ -5649,16 +6266,6 @@
    "type": "face"
   },
   {
-   "a": "BOLT_SO_B_1",
-   "b": "DECK_POST_L0",
-   "type": "face"
-  },
-  {
-   "a": "BOLT_DP_T_L0",
-   "b": "STANDOFF_1",
-   "type": "face"
-  },
-  {
    "a": "STANDOFF_2",
    "b": "DECK_L",
    "type": "face"
@@ -5666,11 +6273,6 @@
   {
    "a": "STANDOFF_2",
    "b": "ELEC_SHELF",
-   "type": "face"
-  },
-  {
-   "a": "BOLT_SO_T_2",
-   "b": "HUB_EXP",
    "type": "face"
   },
   {
@@ -5700,7 +6302,7 @@
   },
   {
    "a": "HUB_EXP",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "face"
   },
   {
@@ -5721,26 +6323,6 @@
   {
    "a": "CLIP_3",
    "b": "BELLY_PAN",
-   "type": "face"
-  },
-  {
-   "a": "BOLT_SO_T_0",
-   "b": "HUB_EXP",
-   "type": "face"
-  },
-  {
-   "a": "BOLT_SO_T_2",
-   "b": "HUB_EXP",
-   "type": "face"
-  },
-  {
-   "a": "DECK_POST_L0",
-   "b": "BOLT_SO_B_1",
-   "type": "face"
-  },
-  {
-   "a": "BOLT_DP_T_L0",
-   "b": "STANDOFF_1",
    "type": "face"
   },
   {
@@ -6200,7 +6782,7 @@
   },
   {
    "a": "LAZY_SUSAN_HI",
-   "b": "TURRET_PLATE",
+   "b": "RING_GEAR",
    "type": "face"
   },
   {
@@ -6211,6 +6793,11 @@
   {
    "a": "LAUNCH_CHEEK_R",
    "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "FLY_CLAMP_L",
+   "b": "FLYWHEEL_L",
    "type": "face"
   },
   {
@@ -6226,6 +6813,11 @@
   {
    "a": "FLY_MCLAMP_L",
    "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "FLY_CLAMP_R",
+   "b": "FLYWHEEL_R",
    "type": "face"
   },
   {
@@ -7014,6 +7606,26 @@
    "type": "journal"
   },
   {
+   "a": "WHEEL_ASSY_FL",
+   "b": "AXLE_FL",
+   "type": "journal"
+  },
+  {
+   "a": "WHEEL_ASSY_FR",
+   "b": "AXLE_FR",
+   "type": "journal"
+  },
+  {
+   "a": "WHEEL_ASSY_RL",
+   "b": "AXLE_RL",
+   "type": "journal"
+  },
+  {
+   "a": "WHEEL_ASSY_RR",
+   "b": "AXLE_RR",
+   "type": "journal"
+  },
+  {
    "a": "CROWN_POST_L",
    "b": "FRAME_CROWN_F",
    "type": "contact"
@@ -7321,6 +7933,16 @@
   {
    "a": "BOLT_NUM_B_3",
    "b": "FRAME_CROSS_B",
+   "type": "contact"
+  },
+  {
+   "a": "GUSSET_BL",
+   "b": "NUT_LRF_L0",
+   "type": "contact"
+  },
+  {
+   "a": "FRAME_CROSS_B",
+   "b": "NUT_LRF_L0",
    "type": "contact"
   },
   {
@@ -7909,38 +8531,23 @@
    "type": "contact"
   },
   {
-   "a": "BOLT_HUB_E_0",
-   "b": "ELEC_SHELF",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_HUB_E_1",
-   "b": "ELEC_SHELF",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_HUB_E_2",
-   "b": "ELEC_SHELF",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_HUB_E_3",
-   "b": "ELEC_SHELF",
-   "type": "contact"
-  },
-  {
-   "a": "WIRE_ENC_LAT_R",
-   "b": "HUB_EXP",
-   "type": "contact"
-  },
-  {
    "a": "WIRE_BATT_SW",
    "b": "WIRE_MTR_FR",
    "type": "contact"
   },
   {
-   "a": "WIRE_HUB_RS485",
-   "b": "WIRE_ENC_LAT_R",
+   "a": "WIRE_SW_CTRL",
+   "b": "WIRE_HUB_RS485",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_MTR_FR",
+   "b": "WIRE_ENC_LON",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_MTR_RR",
+   "b": "WIRE_ENC_LON",
    "type": "contact"
   },
   {
@@ -8229,16 +8836,6 @@
    "type": "contact"
   },
   {
-   "a": "BOLT_GUS_L0_0",
-   "b": "TOWER_L",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_GUS_L0_1",
-   "b": "TOWER_L",
-   "type": "contact"
-  },
-  {
    "a": "BOLT_GUD_L0_0",
    "b": "TOWER_L",
    "type": "contact"
@@ -8289,16 +8886,6 @@
    "type": "contact"
   },
   {
-   "a": "BOLT_CK_L2",
-   "b": "TURRET_PLATE",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_CK_L3",
-   "b": "TURRET_PLATE",
-   "type": "contact"
-  },
-  {
    "a": "BOLT_CK_R0",
    "b": "TURRET_PLATE",
    "type": "contact"
@@ -8309,33 +8896,23 @@
    "type": "contact"
   },
   {
-   "a": "BOLT_CK_R2",
-   "b": "TURRET_PLATE",
+   "a": "BOLT_FM_L0",
+   "b": "FLY_MOTOR_L",
    "type": "contact"
   },
   {
-   "a": "BOLT_CK_R3",
-   "b": "TURRET_PLATE",
+   "a": "BOLT_FM_L1",
+   "b": "FLY_MOTOR_L",
    "type": "contact"
   },
   {
-   "a": "BOLT_MCL_L0",
-   "b": "TURRET_PLATE",
+   "a": "BOLT_FM_L2",
+   "b": "FLY_MOTOR_L",
    "type": "contact"
   },
   {
-   "a": "BOLT_MCL_L1",
-   "b": "TURRET_PLATE",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_MCL_R0",
-   "b": "TURRET_PLATE",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_MCL_R1",
-   "b": "TURRET_PLATE",
+   "a": "BOLT_FM_L3",
+   "b": "FLY_MOTOR_L",
    "type": "contact"
   },
   {
@@ -8349,13 +8926,48 @@
    "type": "contact"
   },
   {
-   "a": "VSN_CAM",
-   "b": "CAM_MOUNT",
+   "a": "NIP_BACKPLATE",
+   "b": "WIRE_FLY_R",
    "type": "contact"
   },
   {
-   "a": "YAW_MAGNET",
-   "b": "TURRET_PLATE",
+   "a": "BOLT_FBRG_L0",
+   "b": "FLY_MOTOR_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_L1",
+   "b": "FLY_MOTOR_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_L2",
+   "b": "FLY_MOTOR_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_L3",
+   "b": "FLY_MOTOR_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_R0",
+   "b": "FLY_MOTOR_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_R1",
+   "b": "FLY_MOTOR_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_R2",
+   "b": "FLY_MOTOR_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_FBRG_R3",
+   "b": "FLY_MOTOR_R",
    "type": "contact"
   },
   {
@@ -8366,26 +8978,6 @@
   {
    "a": "BOLT_LB_3",
    "b": "FRAME_RAIL_L",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_LRF_L0",
-   "b": "NUT_LRF_L0",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_LRF_L1",
-   "b": "NUT_LRF_L1",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_LRF_R0",
-   "b": "NUT_LRF_R0",
-   "type": "contact"
-  },
-  {
-   "a": "BOLT_LRF_R1",
-   "b": "NUT_LRF_R1",
    "type": "contact"
   },
   {
@@ -8406,6 +8998,146 @@
   {
    "a": "CRADLE_COL_1",
    "b": "CRADLE_PIV",
+   "type": "contact"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_ARM",
+   "type": "contact"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "BOLT_S2TIE_2",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "LOAD_CHUTE",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "LOAD_CHUTE",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "LOAD_CHUTE",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "LOAD_CHUTE",
+   "type": "contact"
+  },
+  {
+   "a": "ROPE_GUIDE",
+   "b": "BOLT_SC_R0",
+   "type": "contact"
+  },
+  {
+   "a": "CRADLE_ARM",
+   "b": "CRADLE_COL_0",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_RAIL_R",
+   "b": "ROPE_GUIDE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TIE_L_1",
+   "b": "LIFT_BASE",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "STOP_COLLAR_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "STOP_COLLAR_R",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "BOLT_SC_L0",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "BOLT_SC_L1",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "BOLT_SC_R0",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "BOLT_SC_R1",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CARM_0",
+   "b": "LIFT_S2_BAR",
+   "type": "contact"
+  },
+  {
+   "a": "SCRW_CARM_1",
+   "b": "LIFT_S2_BAR",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "LIFT_S1_TIE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_IMP_6",
+   "b": "WIRE_ENC_LAT_R",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_FL_IN",
+   "b": "WHEEL_ASSY_FL",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_FL_OUT",
+   "b": "WHEEL_ASSY_FL",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_FR_IN",
+   "b": "WHEEL_ASSY_FR",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_FR_OUT",
+   "b": "WHEEL_ASSY_FR",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_RL_IN",
+   "b": "WHEEL_ASSY_RL",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_RL_OUT",
+   "b": "WHEEL_ASSY_RL",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_RR_IN",
+   "b": "WHEEL_ASSY_RR",
+   "type": "contact"
+  },
+  {
+   "a": "WHEEL_PLATE_RR_OUT",
+   "b": "WHEEL_ASSY_RR",
    "type": "contact"
   },
   {
@@ -8804,6 +9536,16 @@
    "type": "contact"
   },
   {
+   "a": "WIRE_FLY_R",
+   "b": "WIRE_CAM_USB",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_FLY_L",
+   "b": "WIRE_CAM_USB",
+   "type": "contact"
+  },
+  {
    "a": "LIFT_BASE",
    "b": "TIE_RB_L",
    "type": "contact"
@@ -8849,43 +9591,18 @@
    "type": "contact"
   },
   {
-   "a": "ROPE_DYNEEMA",
-   "b": "LIFT_TOP_PULLEY",
-   "type": "contact"
-  },
-  {
-   "a": "ROPE_DYNEEMA",
-   "b": "LIFT_PULLEY",
-   "type": "contact"
-  },
-  {
-   "a": "ROPE_DYNEEMA",
-   "b": "ROPE_GUIDE",
-   "type": "contact"
-  },
-  {
-   "a": "LOAD_CHUTE",
-   "b": "PORT_FLANGE",
-   "type": "contact"
-  },
-  {
-   "a": "CHUTE_PORT_EAR",
-   "b": "CHUTE_LIP_L1",
-   "type": "contact"
-  },
-  {
    "a": "CHUTE_TOWER_PAD",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "contact"
   },
   {
    "a": "WIRE_WINCH",
-   "b": "LIFT_BASE",
+   "b": "MOUNT_PLATE_L",
    "type": "contact"
   },
   {
-   "a": "WIRE_TILT_SV",
-   "b": "CRADLE_ARM",
+   "a": "NUT_CLMP_RL_1_1",
+   "b": "WIRE_TILT_SV",
    "type": "contact"
   },
   {
@@ -14560,7 +15277,7 @@
   },
   {
    "a": "HUB_EXP",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14572,7 +15289,7 @@
   },
   {
    "a": "BOLT_HUB_E_0",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14584,7 +15301,7 @@
   },
   {
    "a": "BOLT_HUB_E_1",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14596,7 +15313,7 @@
   },
   {
    "a": "BOLT_HUB_E_2",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14608,7 +15325,7 @@
   },
   {
    "a": "BOLT_HUB_E_3",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14620,7 +15337,7 @@
   },
   {
    "a": "NUT_HUB_E_0",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14632,7 +15349,7 @@
   },
   {
    "a": "NUT_HUB_E_1",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14644,7 +15361,7 @@
   },
   {
    "a": "NUT_HUB_E_2",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -14656,7 +15373,7 @@
   },
   {
    "a": "NUT_HUB_E_3",
-   "b": "ELEC_SHELF",
+   "b": "FRAME_RAIL_R",
    "type": "fastener",
    "joint": "hub_mount"
   },
@@ -18285,42 +19002,6 @@
    "joint": "gusset_r3"
   },
   {
-   "a": "BOLT_GUD_R3_0",
-   "b": "TOWER_GUS_R3",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "BOLT_GUD_R3_0",
-   "b": "TOWER_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "BOLT_GUD_R3_0",
-   "b": "DECK_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "BOLT_GUD_R3_1",
-   "b": "TOWER_GUS_R3",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "BOLT_GUD_R3_1",
-   "b": "TOWER_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "BOLT_GUD_R3_1",
-   "b": "DECK_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
    "a": "NUT_GUS_R3_0",
    "b": "TOWER_GUS_R3",
    "type": "fastener",
@@ -18352,42 +19033,6 @@
   },
   {
    "a": "NUT_GUS_R3_1",
-   "b": "DECK_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_0",
-   "b": "TOWER_GUS_R3",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_0",
-   "b": "TOWER_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_0",
-   "b": "DECK_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_1",
-   "b": "TOWER_GUS_R3",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_1",
-   "b": "TOWER_R",
-   "type": "fastener",
-   "joint": "gusset_r3"
-  },
-  {
-   "a": "NUT_GUD_R3_1",
    "b": "DECK_R",
    "type": "fastener",
    "joint": "gusset_r3"
@@ -18610,6 +19255,18 @@
   },
   {
    "a": "LAZY_SUSAN_HI",
+   "b": "RING_GEAR",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "LAZY_SUSAN_HI",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "RING_GEAR",
    "b": "TURRET_PLATE",
    "type": "fastener",
    "joint": "susan_hi"
@@ -18617,6 +19274,12 @@
   {
    "a": "BOLT_SHI_0",
    "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_0",
+   "b": "RING_GEAR",
    "type": "fastener",
    "joint": "susan_hi"
   },
@@ -18629,6 +19292,12 @@
   {
    "a": "BOLT_SHI_1",
    "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_1",
+   "b": "RING_GEAR",
    "type": "fastener",
    "joint": "susan_hi"
   },
@@ -18641,6 +19310,12 @@
   {
    "a": "BOLT_SHI_2",
    "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_2",
+   "b": "RING_GEAR",
    "type": "fastener",
    "joint": "susan_hi"
   },
@@ -18653,6 +19328,12 @@
   {
    "a": "BOLT_SHI_3",
    "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_3",
+   "b": "RING_GEAR",
    "type": "fastener",
    "joint": "susan_hi"
   },
@@ -19209,6 +19890,18 @@
    "joint": "hood_piv_l"
   },
   {
+   "a": "SCRW_HCOL_L",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "SCRW_HCOL_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
    "a": "HOOD_COL_L",
    "b": "HOOD",
    "type": "fastener",
@@ -19234,6 +19927,18 @@
   },
   {
    "a": "HOOD_PIN_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "SCRW_HCOL_R",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "SCRW_HCOL_R",
    "b": "LAUNCH_CHEEK_R",
    "type": "fastener",
    "joint": "hood_piv_r"
@@ -19561,6 +20266,36 @@
    "b": "TURRET_PLATE",
    "type": "fastener",
    "joint": "cam_mount"
+  },
+  {
+   "a": "VSN_CAM",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_body"
+  },
+  {
+   "a": "SCRW_CAM_0",
+   "b": "VSN_CAM",
+   "type": "fastener",
+   "joint": "cam_body"
+  },
+  {
+   "a": "SCRW_CAM_0",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_body"
+  },
+  {
+   "a": "SCRW_CAM_1",
+   "b": "VSN_CAM",
+   "type": "fastener",
+   "joint": "cam_body"
+  },
+  {
+   "a": "SCRW_CAM_1",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_body"
   },
   {
    "a": "LIFT_BASE",
@@ -20595,18 +21330,6 @@
    "joint": "s2_tie"
   },
   {
-   "a": "BOLT_S2TIE_3",
-   "b": "LIFT_S2_TIE",
-   "type": "fastener",
-   "joint": "s2_tie"
-  },
-  {
-   "a": "BOLT_S2TIE_3",
-   "b": "LIFT_S2_BAR",
-   "type": "fastener",
-   "joint": "s2_tie"
-  },
-  {
    "a": "CRADLE_ARM",
    "b": "LIFT_S2_TIE",
    "type": "fastener",
@@ -20637,25 +21360,25 @@
    "joint": "cradle_arm"
   },
   {
-   "a": "BOLT_CARM_2",
+   "a": "SCRW_CARM_0",
    "b": "CRADLE_ARM",
    "type": "fastener",
    "joint": "cradle_arm"
   },
   {
-   "a": "BOLT_CARM_2",
+   "a": "SCRW_CARM_0",
    "b": "LIFT_S2_TIE",
    "type": "fastener",
    "joint": "cradle_arm"
   },
   {
-   "a": "BOLT_CARM_3",
+   "a": "SCRW_CARM_1",
    "b": "CRADLE_ARM",
    "type": "fastener",
    "joint": "cradle_arm"
   },
   {
-   "a": "BOLT_CARM_3",
+   "a": "SCRW_CARM_1",
    "b": "LIFT_S2_TIE",
    "type": "fastener",
    "joint": "cradle_arm"
@@ -20739,6 +21462,18 @@
    "joint": "lift_winch"
   },
   {
+   "a": "LIFT_WINCH",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
    "a": "BOLT_LW_0",
    "b": "LIFT_WINCH",
    "type": "fastener",
@@ -20747,6 +21482,12 @@
   {
    "a": "BOLT_LW_0",
    "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_0",
+   "b": "FRAME_RAIL_L",
    "type": "fastener",
    "joint": "lift_winch"
   },
@@ -20763,6 +21504,12 @@
    "joint": "lift_winch"
   },
   {
+   "a": "BOLT_LW_1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
    "a": "BOLT_LW_2",
    "b": "LIFT_WINCH",
    "type": "fastener",
@@ -20771,6 +21518,12 @@
   {
    "a": "BOLT_LW_2",
    "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_2",
+   "b": "FRAME_RAIL_L",
    "type": "fastener",
    "joint": "lift_winch"
   },
@@ -20787,6 +21540,12 @@
    "joint": "lift_winch"
   },
   {
+   "a": "BOLT_LW_3",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
    "a": "NUT_LW_0",
    "b": "LIFT_WINCH",
    "type": "fastener",
@@ -20795,6 +21554,12 @@
   {
    "a": "NUT_LW_0",
    "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_0",
+   "b": "FRAME_RAIL_L",
    "type": "fastener",
    "joint": "lift_winch"
   },
@@ -20811,6 +21576,12 @@
    "joint": "lift_winch"
   },
   {
+   "a": "NUT_LW_1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
    "a": "NUT_LW_2",
    "b": "LIFT_WINCH",
    "type": "fastener",
@@ -20823,6 +21594,12 @@
    "joint": "lift_winch"
   },
   {
+   "a": "NUT_LW_2",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
    "a": "NUT_LW_3",
    "b": "LIFT_WINCH",
    "type": "fastener",
@@ -20831,6 +21608,12 @@
   {
    "a": "NUT_LW_3",
    "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_3",
+   "b": "FRAME_RAIL_L",
    "type": "fastener",
    "joint": "lift_winch"
   },
@@ -20985,36 +21768,6 @@
    "joint": "chute_lips"
   },
   {
-   "a": "SCRW_CHL_1_1",
-   "b": "CHUTE_LIP_L1",
-   "type": "fastener",
-   "joint": "chute_lips"
-  },
-  {
-   "a": "SCRW_CHL_1_1",
-   "b": "CHUTE_LIP_L2",
-   "type": "fastener",
-   "joint": "chute_lips"
-  },
-  {
-   "a": "SCRW_CHL_1_1",
-   "b": "CHUTE_LIP_R1",
-   "type": "fastener",
-   "joint": "chute_lips"
-  },
-  {
-   "a": "SCRW_CHL_1_1",
-   "b": "CHUTE_LIP_R2",
-   "type": "fastener",
-   "joint": "chute_lips"
-  },
-  {
-   "a": "SCRW_CHL_1_1",
-   "b": "LOAD_CHUTE",
-   "type": "fastener",
-   "joint": "chute_lips"
-  },
-  {
    "a": "SCRW_CHL_2_0",
    "b": "CHUTE_LIP_L1",
    "type": "fastener",
@@ -21130,6 +21883,36 @@
   },
   {
    "a": "SCRW_CHL_3_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_2",
    "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_lips"
@@ -21220,7 +22003,7 @@
   },
   {
    "a": "CHUTE_TOWER_PAD",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21231,7 +22014,7 @@
    "joint": "chute_tower"
   },
   {
-   "a": "CHUTE_LIP_L2",
+   "a": "LOAD_CHUTE",
    "b": "TOWER_L",
    "type": "fastener",
    "joint": "chute_tower"
@@ -21244,7 +22027,7 @@
   },
   {
    "a": "BOLT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21262,7 +22045,7 @@
   },
   {
    "a": "BOLT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21280,7 +22063,7 @@
   },
   {
    "a": "NUT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21298,7 +22081,7 @@
   },
   {
    "a": "NUT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21321,7 +22104,7 @@
   },
   {
    "a": "BOLT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21339,7 +22122,7 @@
   },
   {
    "a": "BOLT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21357,7 +22140,7 @@
   },
   {
    "a": "NUT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21375,7 +22158,7 @@
   },
   {
    "a": "NUT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21398,7 +22181,7 @@
   },
   {
    "a": "BOLT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21416,7 +22199,7 @@
   },
   {
    "a": "BOLT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21434,7 +22217,7 @@
   },
   {
    "a": "NUT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21452,7 +22235,7 @@
   },
   {
    "a": "NUT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21475,7 +22258,7 @@
   },
   {
    "a": "BOLT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21493,7 +22276,7 @@
   },
   {
    "a": "BOLT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21511,7 +22294,7 @@
   },
   {
    "a": "NUT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21529,7 +22312,7 @@
   },
   {
    "a": "NUT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21552,7 +22335,7 @@
   },
   {
    "a": "BOLT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21570,7 +22353,7 @@
   },
   {
    "a": "BOLT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21588,7 +22371,7 @@
   },
   {
    "a": "NUT_CHT_0",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },
@@ -21606,7 +22389,7 @@
   },
   {
    "a": "NUT_CHT_1",
-   "b": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
    "type": "fastener",
    "joint": "chute_tower"
   },

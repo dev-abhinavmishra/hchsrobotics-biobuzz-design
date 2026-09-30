@@ -5652,6 +5652,54 @@
    "FRAME_CROSS_B"
   ],
   [
+   "BOLT_TWF_L_0",
+   "TOWER_GUS_L0"
+  ],
+  [
+   "BOLT_TWF_L_0",
+   "BOLT_GUS_L0_1"
+  ],
+  [
+   "BOLT_TWF_R_0",
+   "TOWER_GUS_R2"
+  ],
+  [
+   "BOLT_TWF_R_0",
+   "NUT_GUD_R2_1"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "BOLT_LRF_L0"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "NUT_LRF_L0"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "NUT_LRF_L1"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "BOLT_LRF_L0"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "NUT_LRF_L0"
+  ],
+  [
+   "GUSSET_BL",
+   "NUT_LRF_L0"
+  ],
+  [
+   "FRAME_CROSS_B",
+   "NUT_LRF_L0"
+  ],
+  [
+   "FEED_MOTOR",
+   "NUT_GUD_R3_0"
+  ],
+  [
    "BOLT_BRG_IN_FL_00",
    "FRAME_RAIL_L"
   ],

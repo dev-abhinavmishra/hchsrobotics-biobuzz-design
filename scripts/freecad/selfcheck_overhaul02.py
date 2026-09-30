@@ -288,8 +288,8 @@ def main():
 
     unbound = []
     for o in solids:
-        if o.Name.startswith("WIRE_"):
-            continue          # harness geometry bakes at build time
+        if o.Name.startswith(("WIRE_", "ROPE_")):
+            continue          # harness/rigging bakes at build time
         if not bound_tree(o):
             unbound.append(o.Name)
     gate("PAR3_bound_expressions",
@@ -1234,14 +1234,20 @@ def main():
         sheet.set("shelf_z", repr(bsz + 10.0))
         pd.recompute(None, True, True)
         moved_e = [o.Name for o in pd.Objects
-                   if o.Name in ("ELEC_SHELF", "HUB_EXP",
+                   if o.Name in ("ELEC_SHELF",
                                  "STANDOFF_0", "STANDOFF_1",
                                  "STANDOFF_2", "STANDOFF_3")
                    and hasattr(o, "Shape") and not o.Shape.isNull()
                    and abs(gshape(o).BoundBox.ZMax
                            - base_sigs[o.Name].ZMax) > 9.0]
-        gate("PAR2E_shelf_z", len(moved_e) == 6,
+        gate("PAR2E_shelf_z", len(moved_e) == 5,
              "%d moved: %s" % (len(moved_e), moved_e[:6]))
+        # HUB_EXP is rail-face mounted (S17 clearance) and must NOT
+        # track shelf_z
+        gate("PAR2E_hub_static",
+             abs(gshape(pd.getObject("HUB_EXP")).BoundBox.ZMax
+                 - base_sigs["HUB_EXP"].ZMax) < 0.01,
+             "exp hub drifted with shelf_z")
         # I: roller_top_z +5 -> star roller, slides, shaft, pulley,
         # belt move in Z; ROLLER_TOP ZMin must track +4..+6
         base_belt = gshape(pd.getObject("BELT_XROLL")).BoundBox

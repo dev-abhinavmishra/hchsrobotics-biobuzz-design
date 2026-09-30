@@ -1,5 +1,5 @@
 {
- "parts": 1092,
+ "parts": 1089,
  "subassemblies": [
   {
    "GRP_INTAKE": 34
@@ -20,16 +20,16 @@
    "GRP_TURRET": 14
   },
   {
-   "GRP_TURRET_ROT": 34
+   "GRP_TURRET_ROT": 35
   },
   {
    "GRP_LIFT": 45
   },
   {
-   "GRP_ELECTRONICS": 82
+   "GRP_ELECTRONICS": 86
   },
   {
-   "GRP_FASTENERS": 682
+   "GRP_FASTENERS": 675
   },
   {
    "drivebase": 482
@@ -44,14 +44,14 @@
    "hopper": 361
   },
   {
-   "turret": 432
+   "turret": 430
   },
   {
-   "lift": 354
+   "lift": 353
   }
  ],
- "master_solids": 1092,
- "master_step_reimport": 1207,
+ "master_solids": 1089,
+ "master_step_reimport": 1222,
  "files": [
   "AGIT_BRKT.step",
   "AGIT_HORN.step",
@@ -110,8 +110,6 @@
   "BOLT_CAM_3.step",
   "BOLT_CARM_0.step",
   "BOLT_CARM_1.step",
-  "BOLT_CARM_2.step",
-  "BOLT_CARM_3.step",
   "BOLT_CGRD_0.step",
   "BOLT_CGRD_1.step",
   "BOLT_CHEEK_L_0.step",
@@ -232,8 +230,6 @@
   "BOLT_GUD_L1_1.step",
   "BOLT_GUD_R2_0.step",
   "BOLT_GUD_R2_1.step",
-  "BOLT_GUD_R3_0.step",
-  "BOLT_GUD_R3_1.step",
   "BOLT_GUSU_L_0_0.step",
   "BOLT_GUSU_L_1_0.step",
   "BOLT_GUSU_R_0_0.step",
@@ -423,7 +419,6 @@
   "BOLT_S2TIE_0.step",
   "BOLT_S2TIE_1.step",
   "BOLT_S2TIE_2.step",
-  "BOLT_S2TIE_3.step",
   "BOLT_SC_L0.step",
   "BOLT_SC_L1.step",
   "BOLT_SC_R0.step",
@@ -733,8 +728,6 @@
   "NUT_GUD_L1_1.step",
   "NUT_GUD_R2_0.step",
   "NUT_GUD_R2_1.step",
-  "NUT_GUD_R3_0.step",
-  "NUT_GUD_R3_1.step",
   "NUT_GUSU_L_0_0.step",
   "NUT_GUSU_L_1_0.step",
   "NUT_GUSU_R_0_0.step",
@@ -1028,14 +1021,16 @@
   "SCRW_AGSV_3.step",
   "SCRW_CAM_0.step",
   "SCRW_CAM_1.step",
+  "SCRW_CARM_0.step",
+  "SCRW_CARM_1.step",
   "SCRW_CHL_0_0.step",
   "SCRW_CHL_0_1.step",
   "SCRW_CHL_1_0.step",
-  "SCRW_CHL_1_1.step",
   "SCRW_CHL_2_0.step",
   "SCRW_CHL_2_1.step",
   "SCRW_CHL_3_0.step",
   "SCRW_CHL_3_1.step",
+  "SCRW_CHL_3_2.step",
   "SCRW_DVSV_0.step",
   "SCRW_DVSV_1.step",
   "SCRW_DVSV_2.step",
@@ -1050,6 +1045,8 @@
   "SCRW_GSV_1.step",
   "SCRW_GSV_2.step",
   "SCRW_GSV_3.step",
+  "SCRW_HCOL_L.step",
+  "SCRW_HCOL_R.step",
   "SCRW_HSV_0.step",
   "SCRW_HSV_1.step",
   "SCRW_HSV_2.step",
@@ -1163,5 +1160,5 @@
   "master_robot.step",
   "turret.step"
  ],
- "master_step_named": 1207
+ "master_step_named": 1222
 }

@@ -301,10 +301,6 @@
   "NUT_GUS_R3_0",
   "BOLT_GUS_R3_1",
   "NUT_GUS_R3_1",
-  "BOLT_GUD_R3_0",
-  "NUT_GUD_R3_0",
-  "BOLT_GUD_R3_1",
-  "NUT_GUD_R3_1",
   "TURRET_DECK",
   "LAZY_SUSAN_LO",
   "LAZY_SUSAN_HI",
@@ -1300,15 +1296,11 @@
    ],
    "bolts": [
     "BOLT_GUS_R3_0",
-    "BOLT_GUS_R3_1",
-    "BOLT_GUD_R3_0",
-    "BOLT_GUD_R3_1"
+    "BOLT_GUS_R3_1"
    ],
    "nuts": [
     "NUT_GUS_R3_0",
-    "NUT_GUS_R3_1",
-    "NUT_GUD_R3_0",
-    "NUT_GUD_R3_1"
+    "NUT_GUS_R3_1"
    ],
    "terminal": "TOWER_R"
   },
@@ -2690,6 +2682,18 @@
   ],
   [
    "BOLT_TWF_L_0",
+   "TOWER_GUS_L0"
+  ],
+  [
+   "BOLT_TWF_L_0",
+   "BOLT_GUS_L0_1"
+  ],
+  [
+   "BOLT_TWF_R_0",
+   "TOWER_GUS_R2"
+  ],
+  [
+   "BOLT_TWF_L_0",
    "NUT_TWF_L_0"
   ],
   [
@@ -2825,28 +2829,12 @@
    "NUT_GUD_R2_1"
   ],
   [
-   "BOLT_GUD_R3_0",
-   "TOWER_R"
-  ],
-  [
-   "BOLT_GUD_R3_1",
-   "TOWER_R"
-  ],
-  [
    "BOLT_GUS_R3_0",
    "NUT_GUS_R3_0"
   ],
   [
    "BOLT_GUS_R3_1",
    "NUT_GUS_R3_1"
-  ],
-  [
-   "BOLT_GUD_R3_0",
-   "NUT_GUD_R3_0"
-  ],
-  [
-   "BOLT_GUD_R3_1",
-   "NUT_GUD_R3_1"
   ],
   [
    "BOLT_SLO_0",
@@ -2941,6 +2929,14 @@
    "LAZY_SUSAN_HI"
   ],
   [
+   "BOLT_CK_L2",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CK_L3",
+   "TURRET_PLATE"
+  ],
+  [
    "BOLT_CK_L0",
    "NUT_CK_L0"
   ],
@@ -2955,6 +2951,14 @@
   [
    "BOLT_CK_L3",
    "NUT_CK_L3"
+  ],
+  [
+   "BOLT_CK_R2",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CK_R3",
+   "TURRET_PLATE"
   ],
   [
    "BOLT_CK_R0",
@@ -3001,6 +3005,30 @@
    "FLY_MOTOR_L"
   ],
   [
+   "BOLT_FM_L0",
+   "LAUNCH_CHEEK_L"
+  ],
+  [
+   "BOLT_FM_L1",
+   "LAUNCH_CHEEK_L"
+  ],
+  [
+   "BOLT_FM_L2",
+   "LAUNCH_CHEEK_L"
+  ],
+  [
+   "BOLT_FM_L3",
+   "LAUNCH_CHEEK_L"
+  ],
+  [
+   "BOLT_MCL_L0",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_MCL_L1",
+   "TURRET_PLATE"
+  ],
+  [
    "BOLT_MCL_L0",
    "NUT_MCL_L0"
   ],
@@ -3038,6 +3066,22 @@
   ],
   [
    "BOLT_FM_R0",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "BOLT_FM_R1",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "BOLT_FM_R2",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "BOLT_FM_R3",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "BOLT_FM_R0",
    "FLY_MOTOR_R"
   ],
   [
@@ -3054,11 +3098,23 @@
   ],
   [
    "BOLT_MCL_R0",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_MCL_R1",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_MCL_R0",
    "NUT_MCL_R0"
   ],
   [
    "BOLT_MCL_R1",
    "NUT_MCL_R1"
+  ],
+  [
+   "HOOD",
+   "HOOD_PIV_L"
   ],
   [
    "SCRW_HCOL_L",
@@ -3067,6 +3123,10 @@
   [
    "HOOD_PIN_L",
    "HOOD_COL_L"
+  ],
+  [
+   "HOOD",
+   "HOOD_PIV_R"
   ],
   [
    "SCRW_HCOL_R",
@@ -3181,6 +3241,10 @@
    "CAM_MOUNT"
   ],
   [
+   "YAW_MAGNET",
+   "TURRET_PLATE"
+  ],
+  [
    "WIRE_FLY_L",
    "FLY_MOTOR_L"
   ],
@@ -3195,6 +3259,102 @@
   [
    "WIRE_CAM_USB",
    "VSN_CAM"
+  ],
+  [
+   "HOOD",
+   "HOOD_SERVO"
+  ],
+  [
+   "HOOD",
+   "SCRW_HSV_2"
+  ],
+  [
+   "HOOD_COL_R",
+   "HOOD_SERVO"
+  ],
+  [
+   "SCRW_HSV_2",
+   "HOOD_LINK"
+  ],
+  [
+   "BOLT_CAM_0",
+   "VSN_CAM"
+  ],
+  [
+   "BOLT_CAM_2",
+   "VSN_CAM"
+  ],
+  [
+   "BOLT_CAM_0",
+   "RING_GEAR"
+  ],
+  [
+   "BOLT_CAM_2",
+   "RING_GEAR"
+  ],
+  [
+   "NUT_CAM_0",
+   "RING_GEAR"
+  ],
+  [
+   "NUT_CAM_2",
+   "RING_GEAR"
+  ],
+  [
+   "NUT_NBP_0",
+   "RING_GEAR"
+  ],
+  [
+   "NUT_NBP_2",
+   "RING_GEAR"
+  ],
+  [
+   "BOLT_SHI_0",
+   "LAZY_SUSAN_LO"
+  ],
+  [
+   "BOLT_SHI_1",
+   "LAZY_SUSAN_LO"
+  ],
+  [
+   "BOLT_SHI_2",
+   "LAZY_SUSAN_LO"
+  ],
+  [
+   "BOLT_SHI_3",
+   "LAZY_SUSAN_LO"
+  ],
+  [
+   "LAUNCH_CHEEK_R",
+   "WIRE_HOOD_SV"
+  ],
+  [
+   "LAUNCH_CHEEK_R",
+   "WIRE_FLY_R"
+  ],
+  [
+   "LAUNCH_CHEEK_L",
+   "WIRE_FLY_L"
+  ],
+  [
+   "FLY_MOTOR_R",
+   "WIRE_HOOD_SV"
+  ],
+  [
+   "FLY_MOTOR_L",
+   "WIRE_FLY_L"
+  ],
+  [
+   "FLY_MOTOR_R",
+   "WIRE_FLY_R"
+  ],
+  [
+   "FLY_BRG_R",
+   "WIRE_HOOD_SV"
+  ],
+  [
+   "WIRE_HOOD_SV",
+   "WIRE_CAM_USB"
   ]
  ],
  "journals": [
@@ -3589,27 +3749,11 @@
    "TURRET_PLATE"
   ],
   [
-   "BOLT_CK_L2",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_CK_L3",
-   "TURRET_PLATE"
-  ],
-  [
    "BOLT_CK_R0",
    "TURRET_PLATE"
   ],
   [
    "BOLT_CK_R1",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_CK_R2",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_CK_R3",
    "TURRET_PLATE"
   ],
   [
@@ -3629,22 +3773,6 @@
    "FLY_MOTOR_L"
   ],
   [
-   "BOLT_MCL_L0",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_MCL_L1",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_MCL_R0",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_MCL_R1",
-   "TURRET_PLATE"
-  ],
-  [
    "HOOD_PIN_L",
    "LAUNCH_CHEEK_L"
   ],
@@ -3653,8 +3781,40 @@
    "LAUNCH_CHEEK_R"
   ],
   [
-   "YAW_MAGNET",
-   "TURRET_PLATE"
+   "NIP_BACKPLATE",
+   "WIRE_FLY_R"
+  ],
+  [
+   "BOLT_FBRG_L0",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FBRG_L1",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FBRG_L2",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FBRG_L3",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FBRG_R0",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FBRG_R1",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FBRG_R2",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FBRG_R3",
+   "FLY_MOTOR_R"
   ],
   [
    "LAZY_SUSAN_LO",
@@ -3673,16 +3833,8 @@
    "FLY_MOTOR_R"
   ],
   [
-   "HOOD",
-   "HOOD_PIV_L"
-  ],
-  [
    "HOOD_COL_L",
    "HOOD"
-  ],
-  [
-   "HOOD",
-   "HOOD_PIV_R"
   ],
   [
    "HOOD_COL_R",
@@ -3691,6 +3843,14 @@
   [
    "YAW_MAGNET",
    "HALL_SNSR"
+  ],
+  [
+   "WIRE_FLY_R",
+   "WIRE_CAM_USB"
+  ],
+  [
+   "WIRE_FLY_L",
+   "WIRE_CAM_USB"
   ]
  ],
  "ground": [],
@@ -4363,12 +4523,92 @@
    "FRAME_CROSS_B"
   ],
   [
+   "BOLT_TWF_R_0",
+   "NUT_GUD_R2_1"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "BOLT_LRF_L0"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "NUT_LRF_L0"
+  ],
+  [
+   "NUT_GUS_L_1_1",
+   "NUT_LRF_L1"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "BOLT_LRF_L0"
+  ],
+  [
+   "BOLT_GUS_L_1_1",
+   "NUT_LRF_L0"
+  ],
+  [
+   "GUSSET_BL",
+   "NUT_LRF_L0"
+  ],
+  [
+   "FRAME_CROSS_B",
+   "NUT_LRF_L0"
+  ],
+  [
+   "FEED_MOTOR",
+   "NUT_GUD_R3_0"
+  ],
+  [
    "SCRW_HCOL_L",
    "LAUNCH_CHEEK_L"
   ],
   [
    "SCRW_HCOL_R",
    "LAUNCH_CHEEK_R"
+  ],
+  [
+   "LAUNCH_CHEEK_L",
+   "WIRE_CAM_USB"
+  ],
+  [
+   "FLY_BRG_L",
+   "BOLT_FM_L0"
+  ],
+  [
+   "FLY_BRG_L",
+   "BOLT_FM_L1"
+  ],
+  [
+   "FLY_BRG_L",
+   "BOLT_FM_L2"
+  ],
+  [
+   "FLY_BRG_L",
+   "BOLT_FM_L3"
+  ],
+  [
+   "FLY_BRG_R",
+   "BOLT_FM_R0"
+  ],
+  [
+   "FLY_BRG_R",
+   "BOLT_FM_R1"
+  ],
+  [
+   "FLY_BRG_R",
+   "BOLT_FM_R2"
+  ],
+  [
+   "FLY_BRG_R",
+   "BOLT_FM_R3"
+  ],
+  [
+   "BOLT_FM_R1",
+   "WIRE_HOOD_SV"
+  ],
+  [
+   "NUT_NBP_3",
+   "WIRE_FLY_R"
   ],
   [
    "WIRE_FLY_L",
