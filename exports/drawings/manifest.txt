@@ -9,7 +9,7 @@ drivebase | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -> d
 drivebase | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> drivebase_BOLT_GUS_L_0_0.svg
 drivebase | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> drivebase_BOLT_GUSX_L_0.svg
 drivebase | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> drivebase_GUSSET_UL.svg
-drivebase | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> drivebase_TIE_RB_L.svg
+drivebase | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> drivebase_TIE_RB_L.svg
 drivebase | BOLT_TIE_L_0                 qty=30  plate=False 7.0x7.0x14.0 -> drivebase_BOLT_TIE_L_0.svg
 drivebase | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> drivebase_BELLY_PAN.svg
 drivebase | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> drivebase_PAN_BRKT_L0.svg
@@ -75,8 +75,8 @@ electronics | HUB_EXP                      qty=1   plate=False 142.0x74.0x29.0 -
 electronics | WIRE_BATT_SW                 qty=1   plate=False 27.8x31.5x22.3 -> electronics_WIRE_BATT_SW.svg
 electronics | WIRE_SW_CTRL                 qty=1   plate=False 112.5x36.3x23.9 -> electronics_WIRE_SW_CTRL.svg
 electronics | WIRE_HUB_RS485               qty=1   plate=False 88.3x122.4x52.8 -> electronics_WIRE_HUB_RS485.svg
-electronics | WIRE_MTR_FL                  qty=2   plate=True  222.8x74.9x15.0 -> electronics_WIRE_MTR_FL.svg
-electronics | WIRE_MTR_RL                  qty=2   plate=True  124.0x74.9x15.0 -> electronics_WIRE_MTR_RL.svg
+electronics | WIRE_MTR_FL                  qty=2   plate=False 222.8x74.9x15.0 -> electronics_WIRE_MTR_FL.svg
+electronics | WIRE_MTR_RL                  qty=2   plate=False 124.0x74.9x15.0 -> electronics_WIRE_MTR_RL.svg
 electronics | WIRE_ENC_LAT_L               qty=1   plate=False 215.7x29.1x80.7 -> electronics_WIRE_ENC_LAT_L.svg
 electronics | WIRE_ENC_LAT_R               qty=1   plate=False 256.4x183.7x80.8 -> electronics_WIRE_ENC_LAT_R.svg
 electronics | WIRE_ENC_LON                 qty=1   plate=False 43.7x88.9x84.3 -> electronics_WIRE_ENC_LON.svg
@@ -92,7 +92,7 @@ hopper | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -> hopp
 hopper | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> hopper_BOLT_GUS_L_0_0.svg
 hopper | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> hopper_BOLT_GUSX_L_0.svg
 hopper | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> hopper_GUSSET_UL.svg
-hopper | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> hopper_TIE_RB_L.svg
+hopper | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> hopper_TIE_RB_L.svg
 hopper | BOLT_TIE_L_0                 qty=28  plate=False 7.0x7.0x14.0 -> hopper_BOLT_TIE_L_0.svg
 hopper | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> hopper_BELLY_PAN.svg
 hopper | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> hopper_PAN_BRKT_L0.svg
@@ -160,7 +160,7 @@ intake | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -> inta
 intake | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> intake_BOLT_GUS_L_0_0.svg
 intake | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> intake_BOLT_GUSX_L_0.svg
 intake | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> intake_GUSSET_UL.svg
-intake | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> intake_TIE_RB_L.svg
+intake | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> intake_TIE_RB_L.svg
 intake | BOLT_TIE_L_0                 qty=26  plate=False 7.0x7.0x14.0 -> intake_BOLT_TIE_L_0.svg
 intake | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> intake_BELLY_PAN.svg
 intake | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> intake_PAN_BRKT_L0.svg
@@ -195,11 +195,11 @@ intake | INT_MOTOR                    qty=1   plate=False 30.0x60.0x30.0 -> inta
 intake | BOLT_IMP_0                   qty=8   plate=False 7.0x18.0x7.0 -> intake_BOLT_IMP_0.svg
 intake | SPROCKET_9T                  qty=1   plate=False 22.6x6.0x22.6 -> intake_SPROCKET_9T.svg
 intake | SPROCKET_16T                 qty=1   plate=True  36.6x6.0x36.6 -> intake_SPROCKET_16T.svg
-intake | CHAIN_25                     qty=1   plate=True  125.8x4.8x37.4 -> intake_CHAIN_25.svg
+intake | CHAIN_25                     qty=1   plate=False 125.8x4.8x37.4 -> intake_CHAIN_25.svg
 intake | MASTER_LINK                  qty=1   plate=False 8.0x4.0x5.0 -> intake_MASTER_LINK.svg
-intake | CHAIN_GUARD                  qty=1   plate=True  145.0x2.0x42.0 -> intake_CHAIN_GUARD.svg
-intake | BELT_PUL_LOW                 qty=2   plate=True  44.0x8.0x44.0 -> intake_BELT_PUL_LOW.svg
-intake | BELT_XROLL                   qty=1   plate=True  112.8x5.6x194.0 -> intake_BELT_XROLL.svg
+intake | CHAIN_GUARD                  qty=1   plate=False 145.0x2.0x42.0 -> intake_CHAIN_GUARD.svg
+intake | BELT_PUL_LOW                 qty=2   plate=False 44.0x8.0x44.0 -> intake_BELT_PUL_LOW.svg
+intake | BELT_XROLL                   qty=1   plate=False 112.8x5.6x194.0 -> intake_BELT_XROLL.svg
 intake | TENS_ARM                     qty=1   plate=False 16.0x5.0x38.0 -> intake_TENS_ARM.svg
 intake | TENS_IDLER                   qty=1   plate=False 30.0x8.0x30.0 -> intake_TENS_IDLER.svg
 intake | TENS_PIN                     qty=1   plate=False 8.0x53.0x8.0 -> intake_TENS_PIN.svg
@@ -216,7 +216,7 @@ lift | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -> lift_G
 lift | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> lift_BOLT_GUS_L_0_0.svg
 lift | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> lift_BOLT_GUSX_L_0.svg
 lift | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> lift_GUSSET_UL.svg
-lift | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> lift_TIE_RB_L.svg
+lift | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> lift_TIE_RB_L.svg
 lift | BOLT_TIE_L_0                 qty=34  plate=False 7.0x7.0x14.0 -> lift_BOLT_TIE_L_0.svg
 lift | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> lift_BELLY_PAN.svg
 lift | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> lift_PAN_BRKT_L0.svg
@@ -241,7 +241,7 @@ lift | LIFT_TOP_TIE                 qty=1   plate=False 39.0x22.0x19.0 -> lift_L
 lift | BOLT_LTT_L0                  qty=4   plate=False 7.0x21.0x7.0 -> lift_BOLT_LTT_L0.svg
 lift | LIFT_TPIN                    qty=2   plate=False 6.0x14.0x6.0 -> lift_LIFT_TPIN.svg
 lift | LIFT_TOP_PULLEY              qty=1   plate=True  20.0x5.0x20.0 -> lift_LIFT_TOP_PULLEY.svg
-lift | ROPE_GUIDE                   qty=1   plate=True  12.0x3.0x12.0 -> lift_ROPE_GUIDE.svg
+lift | ROPE_GUIDE                   qty=1   plate=False 12.0x3.0x12.0 -> lift_ROPE_GUIDE.svg
 lift | STOP_COLLAR_L                qty=2   plate=False 19.9x16.0x8.0 -> lift_STOP_COLLAR_L.svg
 lift | BOLT_SC_L0                   qty=4   plate=False 7.0x19.0x7.0 -> lift_BOLT_SC_L0.svg
 lift | LIFT_S1_TRUCK_L0             qty=4   plate=False 13.0x4.0x20.0 -> lift_LIFT_S1_TRUCK_L0.svg
@@ -263,7 +263,7 @@ lift | SCRW_TSV_0                   qty=12  plate=False 18.0x5.5x5.5 -> lift_SCR
 lift | LIFT_WINCH                   qty=1   plate=False 22.0x20.0x68.8 -> lift_LIFT_WINCH.svg
 lift | WINCH_DPIN                   qty=1   plate=False 6.0x16.0x6.0 -> lift_WINCH_DPIN.svg
 lift | WINCH_SPOOL                  qty=1   plate=False 22.0x11.0x22.0 -> lift_WINCH_SPOOL.svg
-lift | ROPE_DYNEEMA                 qty=1   plate=True  56.0x9.5x204.2 -> lift_ROPE_DYNEEMA.svg
+lift | ROPE_DYNEEMA                 qty=1   plate=False 56.0x9.5x204.2 -> lift_ROPE_DYNEEMA.svg
 lift | LOAD_CHUTE                   qty=1   plate=False 132.1x159.2x87.4 -> lift_LOAD_CHUTE.svg
 lift | CHUTE_LIP_L1                 qty=2   plate=False 38.5x99.7x74.2 -> lift_CHUTE_LIP_L1.svg
 lift | CHUTE_LIP_L2                 qty=2   plate=False 23.0x33.5x30.5 -> lift_CHUTE_LIP_L2.svg
@@ -284,7 +284,7 @@ turret | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -> turr
 turret | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> turret_BOLT_GUS_L_0_0.svg
 turret | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> turret_BOLT_GUSX_L_0.svg
 turret | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> turret_GUSSET_UL.svg
-turret | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> turret_TIE_RB_L.svg
+turret | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> turret_TIE_RB_L.svg
 turret | BOLT_TIE_L_0                 qty=38  plate=False 7.0x7.0x14.0 -> turret_BOLT_TIE_L_0.svg
 turret | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> turret_BELLY_PAN.svg
 turret | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> turret_PAN_BRKT_L0.svg
@@ -359,7 +359,7 @@ master_robot | GUSSET_BL                    qty=2   plate=False 35.0x39.0x35.0 -
 master_robot | BOLT_GUS_L_0_0               qty=12  plate=False 7.0x18.5x7.0 -> master_robot_BOLT_GUS_L_0_0.svg
 master_robot | BOLT_GUSX_L_0                qty=8   plate=False 14.7x7.0x7.0 -> master_robot_BOLT_GUSX_L_0.svg
 master_robot | GUSSET_UL                    qty=2   plate=True  35.0x39.0x8.0 -> master_robot_GUSSET_UL.svg
-master_robot | TIE_RB_L                     qty=2   plate=True  30.0x72.0x3.0 -> master_robot_TIE_RB_L.svg
+master_robot | TIE_RB_L                     qty=2   plate=False 30.0x72.0x3.0 -> master_robot_TIE_RB_L.svg
 master_robot | BOLT_TIE_L_0                 qty=74  plate=False 7.0x7.0x14.0 -> master_robot_BOLT_TIE_L_0.svg
 master_robot | BELLY_PAN                    qty=1   plate=True  328.8x264.0x2.0 -> master_robot_BELLY_PAN.svg
 master_robot | PAN_BRKT_L0                  qty=6   plate=True  28.0x43.5x9.2 -> master_robot_PAN_BRKT_L0.svg
@@ -417,8 +417,8 @@ master_robot | HUB_EXP                      qty=1   plate=False 142.0x74.0x29.0 
 master_robot | WIRE_BATT_SW                 qty=1   plate=False 27.8x31.5x22.3 -> master_robot_WIRE_BATT_SW.svg
 master_robot | WIRE_SW_CTRL                 qty=1   plate=False 112.5x36.3x23.9 -> master_robot_WIRE_SW_CTRL.svg
 master_robot | WIRE_HUB_RS485               qty=1   plate=False 88.3x122.4x52.8 -> master_robot_WIRE_HUB_RS485.svg
-master_robot | WIRE_MTR_FL                  qty=2   plate=True  222.8x74.9x15.0 -> master_robot_WIRE_MTR_FL.svg
-master_robot | WIRE_MTR_RL                  qty=2   plate=True  124.0x74.9x15.0 -> master_robot_WIRE_MTR_RL.svg
+master_robot | WIRE_MTR_FL                  qty=2   plate=False 222.8x74.9x15.0 -> master_robot_WIRE_MTR_FL.svg
+master_robot | WIRE_MTR_RL                  qty=2   plate=False 124.0x74.9x15.0 -> master_robot_WIRE_MTR_RL.svg
 master_robot | WIRE_ENC_LAT_L               qty=1   plate=False 215.7x29.1x80.7 -> master_robot_WIRE_ENC_LAT_L.svg
 master_robot | WIRE_ENC_LAT_R               qty=1   plate=False 256.4x183.7x80.8 -> master_robot_WIRE_ENC_LAT_R.svg
 master_robot | WIRE_ENC_LON                 qty=1   plate=False 43.7x88.9x84.3 -> master_robot_WIRE_ENC_LON.svg
@@ -440,11 +440,11 @@ master_robot | INT_MOTOR                    qty=2   plate=False 30.0x60.0x30.0 -
 master_robot | BOLT_IMP_0                   qty=8   plate=False 7.0x18.0x7.0 -> master_robot_BOLT_IMP_0.svg
 master_robot | SPROCKET_9T                  qty=1   plate=False 22.6x6.0x22.6 -> master_robot_SPROCKET_9T.svg
 master_robot | SPROCKET_16T                 qty=1   plate=True  36.6x6.0x36.6 -> master_robot_SPROCKET_16T.svg
-master_robot | CHAIN_25                     qty=1   plate=True  125.8x4.8x37.4 -> master_robot_CHAIN_25.svg
+master_robot | CHAIN_25                     qty=1   plate=False 125.8x4.8x37.4 -> master_robot_CHAIN_25.svg
 master_robot | MASTER_LINK                  qty=1   plate=False 8.0x4.0x5.0 -> master_robot_MASTER_LINK.svg
-master_robot | CHAIN_GUARD                  qty=1   plate=True  145.0x2.0x42.0 -> master_robot_CHAIN_GUARD.svg
-master_robot | BELT_PUL_LOW                 qty=2   plate=True  44.0x8.0x44.0 -> master_robot_BELT_PUL_LOW.svg
-master_robot | BELT_XROLL                   qty=1   plate=True  112.8x5.6x194.0 -> master_robot_BELT_XROLL.svg
+master_robot | CHAIN_GUARD                  qty=1   plate=False 145.0x2.0x42.0 -> master_robot_CHAIN_GUARD.svg
+master_robot | BELT_PUL_LOW                 qty=2   plate=False 44.0x8.0x44.0 -> master_robot_BELT_PUL_LOW.svg
+master_robot | BELT_XROLL                   qty=1   plate=False 112.8x5.6x194.0 -> master_robot_BELT_XROLL.svg
 master_robot | TENS_ARM                     qty=1   plate=False 16.0x5.0x38.0 -> master_robot_TENS_ARM.svg
 master_robot | TENS_IDLER                   qty=1   plate=False 30.0x8.0x30.0 -> master_robot_TENS_IDLER.svg
 master_robot | TENS_PIN                     qty=1   plate=False 8.0x53.0x8.0 -> master_robot_TENS_PIN.svg
@@ -544,7 +544,7 @@ master_robot | LIFT_TOP_TIE                 qty=1   plate=False 39.0x22.0x19.0 -
 master_robot | BOLT_LTT_L0                  qty=4   plate=False 7.0x21.0x7.0 -> master_robot_BOLT_LTT_L0.svg
 master_robot | LIFT_TPIN                    qty=2   plate=False 6.0x14.0x6.0 -> master_robot_LIFT_TPIN.svg
 master_robot | LIFT_TOP_PULLEY              qty=1   plate=True  20.0x5.0x20.0 -> master_robot_LIFT_TOP_PULLEY.svg
-master_robot | ROPE_GUIDE                   qty=1   plate=True  12.0x3.0x12.0 -> master_robot_ROPE_GUIDE.svg
+master_robot | ROPE_GUIDE                   qty=1   plate=False 12.0x3.0x12.0 -> master_robot_ROPE_GUIDE.svg
 master_robot | STOP_COLLAR_L                qty=2   plate=False 19.9x16.0x8.0 -> master_robot_STOP_COLLAR_L.svg
 master_robot | BOLT_SC_L0                   qty=4   plate=False 7.0x19.0x7.0 -> master_robot_BOLT_SC_L0.svg
 master_robot | LIFT_S1_TRUCK_L0             qty=4   plate=False 13.0x4.0x20.0 -> master_robot_LIFT_S1_TRUCK_L0.svg
@@ -563,7 +563,7 @@ master_robot | TILT_SERVO                   qty=1   plate=False 10.0x14.0x12.0 -
 master_robot | LIFT_WINCH                   qty=1   plate=False 22.0x20.0x68.8 -> master_robot_LIFT_WINCH.svg
 master_robot | WINCH_DPIN                   qty=1   plate=False 6.0x16.0x6.0 -> master_robot_WINCH_DPIN.svg
 master_robot | WINCH_SPOOL                  qty=1   plate=False 22.0x11.0x22.0 -> master_robot_WINCH_SPOOL.svg
-master_robot | ROPE_DYNEEMA                 qty=1   plate=True  56.0x9.5x204.2 -> master_robot_ROPE_DYNEEMA.svg
+master_robot | ROPE_DYNEEMA                 qty=1   plate=False 56.0x9.5x204.2 -> master_robot_ROPE_DYNEEMA.svg
 master_robot | LOAD_CHUTE                   qty=1   plate=False 132.1x159.2x87.4 -> master_robot_LOAD_CHUTE.svg
 master_robot | CHUTE_LIP_L1                 qty=2   plate=False 38.5x99.7x74.2 -> master_robot_CHUTE_LIP_L1.svg
 master_robot | CHUTE_LIP_L2                 qty=2   plate=False 23.0x33.5x30.5 -> master_robot_CHUTE_LIP_L2.svg

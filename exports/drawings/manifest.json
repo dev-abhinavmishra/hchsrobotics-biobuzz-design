@@ -4,43 +4,43 @@
   "drivebase": {
    "fcstd": "cad/drivebase/drivebase.FCStd",
    "parts": 56,
-   "plates": 19,
+   "plates": 18,
    "errors": 0
   },
   "electronics": {
    "fcstd": "cad/electronics/electronics.FCStd",
    "parts": 27,
-   "plates": 6,
+   "plates": 4,
    "errors": 0
   },
   "hopper": {
    "fcstd": "cad/hopper/hopper.FCStd",
    "parts": 68,
-   "plates": 30,
+   "plates": 29,
    "errors": 0
   },
   "intake": {
    "fcstd": "cad/intake/intake.FCStd",
    "parts": 56,
-   "plates": 20,
+   "plates": 15,
    "errors": 0
   },
   "lift": {
    "fcstd": "cad/lift/lift.FCStd",
    "parts": 68,
-   "plates": 20,
+   "plates": 17,
    "errors": 0
   },
   "turret": {
    "fcstd": "cad/turret/turret.FCStd",
    "parts": 75,
-   "plates": 24,
+   "plates": 23,
    "errors": 0
   },
   "master_robot": {
    "fcstd": "cad/master_robot.FCStd",
    "parts": 224,
-   "plates": 68,
+   "plates": 59,
    "errors": 0
   }
  },
@@ -436,7 +436,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -445,7 +445,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/drivebase_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/drivebase_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/drivebase_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "drivebase",
@@ -2176,7 +2176,7 @@
    "label": "WIRE_MTR_FL_wirerun_UNVERIFIED",
    "material": "wire",
    "status": "UNVERIFIED - wire run",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     222.78,
     74.91,
@@ -2185,7 +2185,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/electronics_WIRE_MTR_FL.svg",
    "sheet_pdf": "exports/drawings/electronics_WIRE_MTR_FL.pdf",
-   "dxf": "exports/drawings/dxf/electronics_WIRE_MTR_FL.dxf"
+   "dxf": null
   },
   {
    "doc": "electronics",
@@ -2198,7 +2198,7 @@
    "label": "WIRE_MTR_RL_wirerun_UNVERIFIED",
    "material": "wire",
    "status": "UNVERIFIED - wire run",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     123.96,
     74.91,
@@ -2207,7 +2207,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/electronics_WIRE_MTR_RL.svg",
    "sheet_pdf": "exports/drawings/electronics_WIRE_MTR_RL.pdf",
-   "dxf": "exports/drawings/dxf/electronics_WIRE_MTR_RL.dxf"
+   "dxf": null
   },
   {
    "doc": "electronics",
@@ -2699,7 +2699,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -2708,7 +2708,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/hopper_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/hopper_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/hopper_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "hopper",
@@ -4420,7 +4420,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -4429,7 +4429,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/intake_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/intake_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/intake_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "intake",
@@ -5275,7 +5275,7 @@
    "label": "CHAIN_25_rollerchain_VENDOR-PENDING",
    "material": "steel",
    "status": "VENDOR-PENDING - #25 steel roller chain",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     125.83,
     4.8,
@@ -5284,7 +5284,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/intake_CHAIN_25.svg",
    "sheet_pdf": "exports/drawings/intake_CHAIN_25.pdf",
-   "dxf": "exports/drawings/dxf/intake_CHAIN_25.dxf"
+   "dxf": null
   },
   {
    "doc": "intake",
@@ -5317,7 +5317,7 @@
    "label": "CHAIN_GUARD_2mm_UNVERIFIED",
    "material": "polycarb",
    "status": "UNVERIFIED - chain run guard plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     145.0,
     2.0,
@@ -5326,7 +5326,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/intake_CHAIN_GUARD.svg",
    "sheet_pdf": "exports/drawings/intake_CHAIN_GUARD.pdf",
-   "dxf": "exports/drawings/dxf/intake_CHAIN_GUARD.dxf"
+   "dxf": null
   },
   {
    "doc": "intake",
@@ -5339,7 +5339,7 @@
    "label": "BELT_PUL_LOW_HTD_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - HTD pulley on traction shaft",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     44.0,
     8.0,
@@ -5348,7 +5348,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/intake_BELT_PUL_LOW.svg",
    "sheet_pdf": "exports/drawings/intake_BELT_PUL_LOW.pdf",
-   "dxf": "exports/drawings/dxf/intake_BELT_PUL_LOW.dxf"
+   "dxf": null
   },
   {
    "doc": "intake",
@@ -5360,7 +5360,7 @@
    "label": "BELT_XROLL_crossedHTD_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - crossed HTD belt (counter-rotation)",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     112.77,
     5.6,
@@ -5369,7 +5369,7 @@
    "scale": 0.2,
    "sheet_svg": "exports/drawings/intake_BELT_XROLL.svg",
    "sheet_pdf": "exports/drawings/intake_BELT_XROLL.pdf",
-   "dxf": "exports/drawings/dxf/intake_BELT_XROLL.dxf"
+   "dxf": null
   },
   {
    "doc": "intake",
@@ -5873,7 +5873,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -5882,7 +5882,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/lift_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/lift_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/lift_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "lift",
@@ -6494,7 +6494,7 @@
    "label": "ROPE_GUIDE_eyelet_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - rope guide eyelet",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     12.0,
     3.0,
@@ -6503,7 +6503,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/lift_ROPE_GUIDE.svg",
    "sheet_pdf": "exports/drawings/lift_ROPE_GUIDE.pdf",
-   "dxf": "exports/drawings/dxf/lift_ROPE_GUIDE.dxf"
+   "dxf": null
   },
   {
    "doc": "lift",
@@ -6987,7 +6987,7 @@
    "label": "ROPE_DYNEEMA_UNVERIFIED",
    "material": "dyneema",
    "status": "UNVERIFIED - dyneema lift line (2-run cascade)",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     55.95,
     9.5,
@@ -6996,7 +6996,7 @@
    "scale": 0.2,
    "sheet_svg": "exports/drawings/lift_ROPE_DYNEEMA.svg",
    "sheet_pdf": "exports/drawings/lift_ROPE_DYNEEMA.pdf",
-   "dxf": "exports/drawings/dxf/lift_ROPE_DYNEEMA.dxf"
+   "dxf": null
   },
   {
    "doc": "lift",
@@ -7621,7 +7621,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -7630,7 +7630,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/turret_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/turret_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/turret_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "turret",
@@ -9663,7 +9663,7 @@
    "label": "TIE_RB_L_splice_30x72x3_UNVERIFIED",
    "material": "aluminum",
    "status": "UNVERIFIED - top-web splice plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     30.0,
     72.0,
@@ -9672,7 +9672,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/master_robot_TIE_RB_L.svg",
    "sheet_pdf": "exports/drawings/master_robot_TIE_RB_L.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_TIE_RB_L.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11307,7 +11307,7 @@
    "label": "WIRE_MTR_FL_wirerun_UNVERIFIED",
    "material": "wire",
    "status": "UNVERIFIED - wire run",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     222.78,
     74.91,
@@ -11316,7 +11316,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/master_robot_WIRE_MTR_FL.svg",
    "sheet_pdf": "exports/drawings/master_robot_WIRE_MTR_FL.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_WIRE_MTR_FL.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11329,7 +11329,7 @@
    "label": "WIRE_MTR_RL_wirerun_UNVERIFIED",
    "material": "wire",
    "status": "UNVERIFIED - wire run",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     123.96,
     74.91,
@@ -11338,7 +11338,7 @@
    "scale": 0.5,
    "sheet_svg": "exports/drawings/master_robot_WIRE_MTR_RL.svg",
    "sheet_pdf": "exports/drawings/master_robot_WIRE_MTR_RL.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_WIRE_MTR_RL.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11819,7 +11819,7 @@
    "label": "CHAIN_25_rollerchain_VENDOR-PENDING",
    "material": "steel",
    "status": "VENDOR-PENDING - #25 steel roller chain",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     125.83,
     4.8,
@@ -11828,7 +11828,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/master_robot_CHAIN_25.svg",
    "sheet_pdf": "exports/drawings/master_robot_CHAIN_25.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_CHAIN_25.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11861,7 +11861,7 @@
    "label": "CHAIN_GUARD_2mm_UNVERIFIED",
    "material": "polycarb",
    "status": "UNVERIFIED - chain run guard plate",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     145.0,
     2.0,
@@ -11870,7 +11870,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/master_robot_CHAIN_GUARD.svg",
    "sheet_pdf": "exports/drawings/master_robot_CHAIN_GUARD.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_CHAIN_GUARD.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11883,7 +11883,7 @@
    "label": "BELT_PUL_LOW_HTD_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - HTD pulley on traction shaft",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     44.0,
     8.0,
@@ -11892,7 +11892,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/master_robot_BELT_PUL_LOW.svg",
    "sheet_pdf": "exports/drawings/master_robot_BELT_PUL_LOW.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_BELT_PUL_LOW.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -11904,7 +11904,7 @@
    "label": "BELT_XROLL_crossedHTD_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - crossed HTD belt (counter-rotation)",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     112.77,
     5.6,
@@ -11913,7 +11913,7 @@
    "scale": 0.2,
    "sheet_svg": "exports/drawings/master_robot_BELT_XROLL.svg",
    "sheet_pdf": "exports/drawings/master_robot_BELT_XROLL.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_BELT_XROLL.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -14108,7 +14108,7 @@
    "label": "ROPE_GUIDE_eyelet_UNVERIFIED",
    "material": "steel",
    "status": "UNVERIFIED - rope guide eyelet",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     12.0,
     3.0,
@@ -14117,7 +14117,7 @@
    "scale": 1,
    "sheet_svg": "exports/drawings/master_robot_ROPE_GUIDE.svg",
    "sheet_pdf": "exports/drawings/master_robot_ROPE_GUIDE.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_ROPE_GUIDE.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",
@@ -14517,7 +14517,7 @@
    "label": "ROPE_DYNEEMA_UNVERIFIED",
    "material": "dyneema",
    "status": "UNVERIFIED - dyneema lift line (2-run cascade)",
-   "plate": true,
+   "plate": false,
    "bbox_mm": [
     55.95,
     9.5,
@@ -14526,7 +14526,7 @@
    "scale": 0.2,
    "sheet_svg": "exports/drawings/master_robot_ROPE_DYNEEMA.svg",
    "sheet_pdf": "exports/drawings/master_robot_ROPE_DYNEEMA.pdf",
-   "dxf": "exports/drawings/dxf/master_robot_ROPE_DYNEEMA.dxf"
+   "dxf": null
   },
   {
    "doc": "master_robot",

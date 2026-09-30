@@ -89,6 +89,9 @@ def sheet_one(doc, doc_tag, group, meta_fields, out_dir, dxf_dir):
                   if len(names) > 1 else meta["label"][:60],
                   "MATERIAL": meta["material"], "SPEC": meta["spec"],
                   "QTY": str(len(names)), "REV": dk.REV,
+                  "SCALE": dk.scale_text(dk.estimate_scale(shape)),
+                  "SHEET": "%d/%d" % (meta["_sheet_no"],
+                                      meta["_sheet_cnt"]),
                   "DOC": doc_tag, "STATUS": meta["status"]}
         page, views = dk.make_page(doc, o, tag, fields)
         for vn, *_ in dk.VIEWS:
@@ -120,16 +123,16 @@ def process_doc(doc_tag, fcstd_path, bom, plates_only, max_n, log):
     doc.recompute()
     objs = dk.exportable(doc)
     groups = dk.group_identical(objs)
+    todo = [g for g in groups
+            if not plates_only
+            or dk.is_plate(g["objects"][0].Name, g["shape"])]
+    if max_n is not None:
+        todo = todo[:max_n]
     entries = []
-    made = 0
-    for g in groups:
+    for made, g in enumerate(todo):
         o = g["objects"][0]
-        if plates_only and not dk.is_plate(o.Name, g["shape"]):
-            continue
-        if max_n is not None and made >= max_n:
-            break
         g["_sheet_no"] = made + 1
-        g["_sheet_cnt"] = len(groups)
+        g["_sheet_cnt"] = len(todo)
         try:
             meta, plate, svg, pdf, dxf, scale = sheet_one(
                 doc, doc_tag, g, bom, OUT, DXF_DIR)
@@ -147,7 +150,6 @@ def process_doc(doc_tag, fcstd_path, bom, plates_only, max_n, log):
                 "sheet_pdf": str(pdf.relative_to(ROOT)),
                 "dxf": str(dxf.relative_to(ROOT)) if dxf else None,
             })
-            made += 1
             line = ("%s | %-28s qty=%-3d plate=%-5s %sx%sx%s -> %s"
                     % (doc_tag, o.Name[:28], len(g["objects"]), plate,
                        round(b.XLength, 1), round(b.YLength, 1),
@@ -170,6 +172,11 @@ def main():
     docs_filter, plates_only, max_n = parse_env()
     OUT.mkdir(parents=True, exist_ok=True)
     DXF_DIR.mkdir(parents=True, exist_ok=True)
+    # drop stale outputs so parts that disappeared or stopped
+    # qualifying as plates do not leave orphan manufacturing files
+    for stale in list(OUT.glob("*.pdf")) + list(OUT.glob("*.svg")) \
+            + list(DXF_DIR.glob("*.dxf")):
+        stale.unlink()
     bom = dk.load_bom(BOM_CSV)
     manifest = {"generated_by": "make_drawings.py", "docs": {},
                 "parts": []}
@@ -200,6 +207,8 @@ def main():
              sum(1 for e in manifest["parts"] if e.get("dxf")),
              n_err, OUT))
     sys.stdout.flush()
+    # an incomplete run is a failed run: batch jobs read the exit code
+    sys.exit(1 if n_err else 0)
 
 
 try:

@@ -69,10 +69,13 @@ PLATE_NAME_RE = re.compile(
     r"(deck|plate|pan|cheek|brkt|bracket|shelf|panel|wall|flange|"
     r"disc|disk|shim|spacer|gusset|brace|mount|frame|cover|lid|"
     r"faceplate|skid|bumper|apron|board|sheet)", re.IGNORECASE)
-# fasteners are never "plates" even when their head geometry is disc-like
+# fasteners are never "plates" even when their head geometry is
+# disc-like, and neither are thin flexible parts (belts, cables, chain)
+# whose bounding box alone would pass the thin+wide test
 PLATE_EXCLUDE_RE = re.compile(
     r"^(BOLT|NUT|SCRW|WSH|RIVET|RIVNUT|BHCS|SBHCS|SHCS|FHCS|SETSCR|"
-    r"HEXNUT|LOCKNUT|STANDOFF)_", re.IGNORECASE)
+    r"HEXNUT|LOCKNUT|STANDOFF|BELT|CABLE|CHAIN|ROPE|WIRE|SPRING|"
+    r"ELASTIC|STRAP|TUBE|HOSE|ZIP|TIE)_", re.IGNORECASE)
 
 # material fallback when bom.csv has no line for the object (mirrors
 # dt_build.bom_autofill's class-prefix table)
@@ -144,11 +147,15 @@ def world_shape(o):
 # part grouping + metadata
 # --------------------------------------------------------------------
 def signature(shape):
-    """Dedup key: sorted bbox extents + volume, rounded to 0.1 mm."""
+    """Dedup key: sorted bbox extents + volume + topo counts, all
+    rounded to 0.1 mm. Face/edge counts keep parts with the same
+    envelope but different holes/profiles on separate sheets;
+    mirrored pairs still share a sheet intentionally (one flat
+    profile, cut once and flipped)."""
     b = shape.BoundBox
     dims = (b.XLength, b.YLength, b.ZLength)
     return tuple(sorted(round(d, 1) for d in dims)) + (
-        round(shape.Volume, 1),)
+        round(shape.Volume, 1), len(shape.Faces), len(shape.Edges))
 
 
 def group_identical(objs):
@@ -405,7 +412,9 @@ def flat_profile_dxf(shape):
     n = largest_planar_normal(shape)
     rot = App.Rotation(n, App.Vector(0, 0, 1))
     s = shape.copy()
-    s.Placement = App.Placement(App.Vector(), rot)
+    # premultiply the alignment rotation onto the part's own placement
+    # so a plate mounted at an angle still lands flat on the XY plane
+    s.Placement = App.Placement(App.Vector(), rot) * s.Placement
     b = s.BoundBox
     s.translate(App.Vector(-b.XMin, -b.YMin, -b.ZMin))
     body = TechDraw.projectToDXF(s, App.Vector(0, 0, 1), "ALGO")
@@ -519,7 +528,27 @@ def _nice_scale(raw):
 
 
 def scale_text(s):
-    return ("%g:1" % s) if s >= 1 else ("1:%g" % round(1.0 / s))
+    # %g keeps fractional ratios honest (1/0.4 -> "1:2.5", not "1:2")
+    return ("%g:1" % s) if s >= 1 else ("1:%g" % (1.0 / s))
+
+
+# world-axis indexes each view's projected width/height read from
+_VIEW_AXES = {"FRONT": (0, 2), "TOP": (0, 1), "RIGHT": (1, 2)}
+
+
+def estimate_scale(shape):
+    """Sheet scale predicted from the part's projected bboxes, same
+    fit math compose_sheet_svg applies to real view extents. Close
+    enough for the in-document template's SCALE field."""
+    b = shape.BoundBox
+    d = (b.XLength, b.YLength, b.ZLength)
+    fit = float("inf")
+    for vn, *_ in VIEWS:
+        w = max(d[_VIEW_AXES[vn][0]], 0.1)
+        h = max(d[_VIEW_AXES[vn][1]], 0.1)
+        cx0, cy0, cx1, cy1 = VIEW_CELLS[vn]
+        fit = min(fit, (cx1 - cx0 - 16) / w, (cy1 - cy0 - 28) / h)
+    return _nice_scale(fit if fit != float("inf") else 1.0)
 
 
 def compose_sheet_svg(part_svg_by_view, extents, meta, doc_tag, qty):
