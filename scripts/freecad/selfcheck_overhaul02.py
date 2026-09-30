@@ -13,6 +13,7 @@ import math
 import re
 import subprocess
 import sys
+import tempfile
 import traceback
 from pathlib import Path
 
@@ -57,8 +58,9 @@ EXCLUDE_TYPES = ("App::Part", "App::Origin", "Spreadsheet::Sheet",
                  "App::DocumentObjectGroup")
 
 RESULTS = []
-LOG = open(ROOT / "exports" / "selfcheck_overhaul02.txt", "w",
-           encoding="utf-8")
+LOG_PATH = ROOT / "exports" / "selfcheck_overhaul02.txt"
+LOG_TMP = Path(tempfile.gettempdir()) / "selfcheck_overhaul02.txt"
+LOG = open(LOG_TMP, "w", encoding="utf-8")
 
 
 def gate(tag, ok, detail=""):
@@ -1333,6 +1335,7 @@ def main():
     print(tail)
     LOG.write(tail + "\n")
     LOG.close()
+    LOG_TMP.replace(LOG_PATH)
     if npass != len(RESULTS):
         sys.exit(1)
 
