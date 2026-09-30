@@ -690,7 +690,17 @@ def main():
         "BELT_PUL_LOW", "BELT_PUL_TOP", "SPROCKET_9T",
         "SPROCKET_16T", "MASTER_LINK", "FLOAT_SLIDE_L",
         "FLOAT_SLIDE_R", "FLOAT_PIN_L", "FLOAT_PIN_R",
-        "SPUR_FEED_M", "SPUR_FEED_W", "FEED_MTR_SHAFT"}
+        "SPUR_FEED_M", "SPUR_FEED_W", "FEED_MTR_SHAFT",
+        # sprint-03 launch/return path surfaces (C1 nip faces,
+        # chute bed/lips, cradle pocket, hood/nip-throat guides)
+        "FLYWHEEL_L", "FLYWHEEL_R", "FLY_SHAFT_L", "FLY_SHAFT_R",
+        "FLY_CLAMP_L", "FLY_CLAMP_R", "NIP_BACKPLATE",
+        "TURRET_PLATE", "HOOD", "HOOD_PIV_L", "HOOD_PIV_R",
+        "HOOD_COL_L", "HOOD_COL_R",
+        "LOAD_CHUTE", "CHUTE_LIP_L1", "CHUTE_LIP_L2",
+        "CHUTE_LIP_R1", "CHUTE_LIP_R2",
+        "CRADLE_CUP", "CRADLE_FOAM", "CRADLE_PIV",
+        "CRADLE_COL_0", "CRADLE_COL_1"}
     ball_bad = []
     for pn in ("VOL_BALL_P", "VOL_BALL_N"):
         pv = m.getObject(pn)
