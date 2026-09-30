@@ -8,6 +8,7 @@ mkdir -p logs/ci
 
 fail=0
 ran=0
+failed_gates=()
 for f in scripts/freecad/selfcheck_overhaul*.py; do
     [ -f "$f" ] || { echo "ERROR: no selfcheck_overhaul*.py scripts found"; exit 1; }
     ran=$((ran + 1))
@@ -23,6 +24,7 @@ for f in scripts/freecad/selfcheck_overhaul*.py; do
         echo ">>> $name: PASS (log: $log)"
     else
         echo ">>> $name: FAIL (exit $rc, log: $log)"
+        failed_gates+=("$name")
         fail=1
     fi
 done
@@ -31,5 +33,25 @@ if [ "$fail" -ne 0 ]; then
     echo "CI SELFCHECK: FAIL"
 else
     echo "CI SELFCHECK: PASS"
+fi
+
+# Report results as job summary + warning annotations. The workflow runs this
+# script with continue-on-error, so failures here are informational and never
+# gate merges — they surface on the run page instead.
+if [ "${GITHUB_ACTIONS:-}" = "true" ]; then
+    {
+        echo "### Selfcheck gates"
+        echo
+        if [ "${#failed_gates[@]}" -eq 0 ]; then
+            echo "All $ran gate(s) PASS"
+        else
+            for g in "${failed_gates[@]}"; do echo "- \`$g\` FAIL"; done
+        fi
+        echo
+        echo "Full console output: run artifact -> logs/ci/"
+    } >> "$GITHUB_STEP_SUMMARY"
+    for g in "${failed_gates[@]}"; do
+        echo "::warning title=selfcheck::$g gate reported FAIL (informational; does not fail this check)"
+    done
 fi
 exit "$fail"
