@@ -34,7 +34,7 @@ XPT1_parts                 PASS 1089/1089 part files
 XPT2_subassembly           PASS 16 subassembly files
 XPT3_master                PASS 13878798 bytes
 XPT4_tables                PASS bom.csv parameters.csv mount_graph.json
-GIT2_tree_clean            FAIL 1 dirty; archives=True
+GIT2_tree_clean            PASS 0 dirty; archives=True
 DECL_embeds_real           PASS 0 embeds <0.5mm3
 DECL_contacts_real         PASS 0 contacts dist>1.5mm or common>0.5mm3: []
 DECL_journals_bored        PASS 0 journals common>0.5: []
@@ -72,4 +72,4 @@ PAR3_nip_gap               PASS wheel YMax 55.15->57.15
 PAR3_lift_rail_len         PASS rail ZMax 335.8->345.8 tie 334.0->344.0
 PAR2_restore_identity      PASS 0 differ: []
 ============================================================
-SELFCHECK: 72/73 gates pass
+SELFCHECK: 73/73 gates pass
