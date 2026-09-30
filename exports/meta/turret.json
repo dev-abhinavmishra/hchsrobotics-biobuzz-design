@@ -393,9 +393,11 @@
   "HOOD_PIV_L",
   "HOOD_PIN_L",
   "HOOD_COL_L",
+  "SCRW_HCOL_L",
   "HOOD_PIV_R",
   "HOOD_PIN_R",
   "HOOD_COL_R",
+  "SCRW_HCOL_R",
   "HOOD_SERVO",
   "SCRW_HSV_0",
   "SCRW_HSV_1",
@@ -1374,6 +1376,7 @@
    "id": "susan_hi",
    "members": [
     "LAZY_SUSAN_HI",
+    "RING_GEAR",
     "TURRET_PLATE"
    ],
    "bolts": [
@@ -1518,21 +1521,34 @@
    "terminal": "TURRET_PLATE"
   },
   {
-   "id": "hood_piv",
+   "id": "hood_piv_l",
    "members": [
     "HOOD",
-    "LAUNCH_CHEEK_L",
-    "LAUNCH_CHEEK_R"
+    "LAUNCH_CHEEK_L"
    ],
    "bolts": [
     "HOOD_PIN_L",
-    "HOOD_PIN_R"
+    "SCRW_HCOL_L"
    ],
    "nuts": [
-    "HOOD_COL_L",
+    "HOOD_COL_L"
+   ],
+   "terminal": "LAUNCH_CHEEK_L"
+  },
+  {
+   "id": "hood_piv_r",
+   "members": [
+    "HOOD",
+    "LAUNCH_CHEEK_R"
+   ],
+   "bolts": [
+    "HOOD_PIN_R",
+    "SCRW_HCOL_R"
+   ],
+   "nuts": [
     "HOOD_COL_R"
    ],
-   "terminal": null
+   "terminal": "LAUNCH_CHEEK_R"
   },
   {
    "id": "hood_servo",
@@ -1602,6 +1618,19 @@
     "NUT_CAM_3"
    ],
    "terminal": "TURRET_PLATE"
+  },
+  {
+   "id": "cam_body",
+   "members": [
+    "VSN_CAM",
+    "CAM_MOUNT"
+   ],
+   "bolts": [
+    "SCRW_CAM_0",
+    "SCRW_CAM_1"
+   ],
+   "nuts": [],
+   "terminal": "CAM_MOUNT"
   }
  ],
  "faces": [
@@ -1907,7 +1936,7 @@
   ],
   [
    "LAZY_SUSAN_HI",
-   "TURRET_PLATE"
+   "RING_GEAR"
   ],
   [
    "LAUNCH_CHEEK_L",
@@ -1916,6 +1945,10 @@
   [
    "LAUNCH_CHEEK_R",
    "TURRET_PLATE"
+  ],
+  [
+   "FLY_CLAMP_L",
+   "FLYWHEEL_L"
   ],
   [
    "FLY_BRG_L",
@@ -1928,6 +1961,10 @@
   [
    "FLY_MCLAMP_L",
    "TURRET_PLATE"
+  ],
+  [
+   "FLY_CLAMP_R",
+   "FLYWHEEL_R"
   ],
   [
    "FLY_BRG_R",
@@ -2716,6 +2753,14 @@
    "NUT_TWC_R_3"
   ],
   [
+   "BOLT_GUS_L0_0",
+   "TOWER_L"
+  ],
+  [
+   "BOLT_GUS_L0_1",
+   "TOWER_L"
+  ],
+  [
    "BOLT_GUD_L0_1",
    "TOWER_L"
   ],
@@ -2992,6 +3037,22 @@
    "FLY_MOTOR_R"
   ],
   [
+   "BOLT_FM_R0",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FM_R1",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FM_R2",
+   "FLY_MOTOR_R"
+  ],
+  [
+   "BOLT_FM_R3",
+   "FLY_MOTOR_R"
+  ],
+  [
    "BOLT_MCL_R0",
    "NUT_MCL_R0"
   ],
@@ -3000,12 +3061,36 @@
    "NUT_MCL_R1"
   ],
   [
+   "SCRW_HCOL_L",
+   "HOOD_COL_L"
+  ],
+  [
    "HOOD_PIN_L",
    "HOOD_COL_L"
   ],
   [
+   "SCRW_HCOL_R",
+   "HOOD_COL_R"
+  ],
+  [
    "HOOD_PIN_R",
    "HOOD_COL_R"
+  ],
+  [
+   "SCRW_HSV_0",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "SCRW_HSV_1",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "SCRW_HSV_2",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "SCRW_HSV_3",
+   "LAUNCH_CHEEK_R"
   ],
   [
    "HOOD_LINK",
@@ -3054,6 +3139,46 @@
   [
    "BOLT_TBR_1",
    "TURRET_TOP_BRACE"
+  ],
+  [
+   "BOLT_CAM_0",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CAM_1",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CAM_2",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CAM_3",
+   "TURRET_PLATE"
+  ],
+  [
+   "BOLT_CAM_0",
+   "NUT_CAM_0"
+  ],
+  [
+   "BOLT_CAM_1",
+   "NUT_CAM_1"
+  ],
+  [
+   "BOLT_CAM_2",
+   "NUT_CAM_2"
+  ],
+  [
+   "BOLT_CAM_3",
+   "NUT_CAM_3"
+  ],
+  [
+   "SCRW_CAM_0",
+   "CAM_MOUNT"
+  ],
+  [
+   "SCRW_CAM_1",
+   "CAM_MOUNT"
   ],
   [
    "WIRE_FLY_L",
@@ -3424,14 +3549,6 @@
    "TOWER_R"
   ],
   [
-   "BOLT_GUS_L0_0",
-   "TOWER_L"
-  ],
-  [
-   "BOLT_GUS_L0_1",
-   "TOWER_L"
-  ],
-  [
    "BOLT_GUD_L0_0",
    "TOWER_L"
   ],
@@ -3496,6 +3613,22 @@
    "TURRET_PLATE"
   ],
   [
+   "BOLT_FM_L0",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FM_L1",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FM_L2",
+   "FLY_MOTOR_L"
+  ],
+  [
+   "BOLT_FM_L3",
+   "FLY_MOTOR_L"
+  ],
+  [
    "BOLT_MCL_L0",
    "TURRET_PLATE"
   ],
@@ -3520,18 +3653,6 @@
    "LAUNCH_CHEEK_R"
   ],
   [
-   "BOLT_CAM_1",
-   "TURRET_PLATE"
-  ],
-  [
-   "BOLT_CAM_3",
-   "TURRET_PLATE"
-  ],
-  [
-   "VSN_CAM",
-   "CAM_MOUNT"
-  ],
-  [
    "YAW_MAGNET",
    "TURRET_PLATE"
   ],
@@ -3552,8 +3673,16 @@
    "FLY_MOTOR_R"
   ],
   [
+   "HOOD",
+   "HOOD_PIV_L"
+  ],
+  [
    "HOOD_COL_L",
    "HOOD"
+  ],
+  [
+   "HOOD",
+   "HOOD_PIV_R"
   ],
   [
    "HOOD_COL_R",
@@ -4061,7 +4190,7 @@
    "subsys": "turret",
    "spec": "launcher cheek 5mm PETG",
    "material": "petg",
-   "dims": "76x5x91",
+   "dims": "76x5x112",
    "status": "UNVERIFIED",
    "members": [
     "LAUNCH_CHEEK_L"
@@ -4071,7 +4200,7 @@
    "subsys": "turret",
    "spec": "launcher cheek 5mm PETG",
    "material": "petg",
-   "dims": "76x5x91",
+   "dims": "76x5x112",
    "status": "UNVERIFIED",
    "members": [
     "LAUNCH_CHEEK_R"
@@ -4207,5 +4336,55 @@
     "WIRE_CAM_USB"
    ]
   }
+ ],
+ "dropped": [
+  [
+   "BOLT_GUSU_L_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_R_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "SCRW_HCOL_L",
+   "LAUNCH_CHEEK_L"
+  ],
+  [
+   "SCRW_HCOL_R",
+   "LAUNCH_CHEEK_R"
+  ],
+  [
+   "WIRE_FLY_L",
+   "TURRET_PLATE"
+  ],
+  [
+   "WIRE_FLY_R",
+   "TURRET_PLATE"
+  ],
+  [
+   "WIRE_HOOD_SV",
+   "TURRET_PLATE"
+  ],
+  [
+   "WIRE_CAM_USB",
+   "TURRET_PLATE"
+  ]
  ]
 }

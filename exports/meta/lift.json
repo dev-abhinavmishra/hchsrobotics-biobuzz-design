@@ -343,11 +343,14 @@
   "SCRW_CHL_2_1",
   "SCRW_CHL_3_0",
   "SCRW_CHL_3_1",
+  "CHUTE_PORT_EAR",
   "BOLT_CHP_0",
   "BOLT_CHP_1",
-  "CHUTE_PORT_EAR",
+  "CHUTE_TOWER_PAD",
   "BOLT_CHT_0",
+  "NUT_CHT_0",
   "BOLT_CHT_1",
+  "NUT_CHT_1",
   "WIRE_WINCH",
   "WIRE_TILT_SV",
   "WIRE_YAW_SV"
@@ -1343,12 +1346,13 @@
    "terminal": "LIFT_BASE"
   },
   {
-   "id": "chute_mount",
+   "id": "chute_lips",
    "members": [
-    "LOAD_CHUTE",
-    "CHUTE_PORT_EAR",
-    "PORT_FLANGE",
-    "TOWER_L"
+    "CHUTE_LIP_L1",
+    "CHUTE_LIP_L2",
+    "CHUTE_LIP_R1",
+    "CHUTE_LIP_R2",
+    "LOAD_CHUTE"
    ],
    "bolts": [
     "SCRW_CHL_0_0",
@@ -1358,7 +1362,20 @@
     "SCRW_CHL_2_0",
     "SCRW_CHL_2_1",
     "SCRW_CHL_3_0",
-    "SCRW_CHL_3_1",
+    "SCRW_CHL_3_1"
+   ],
+   "nuts": [],
+   "terminal": "LOAD_CHUTE"
+  },
+  {
+   "id": "chute_mount",
+   "members": [
+    "CHUTE_PORT_EAR",
+    "CHUTE_LIP_L1",
+    "LOAD_CHUTE",
+    "PORT_FLANGE"
+   ],
+   "bolts": [
     "BOLT_CHP_0",
     "BOLT_CHP_1"
    ],
@@ -1368,14 +1385,18 @@
   {
    "id": "chute_tower",
    "members": [
-    "CHUTE_LIP_R2",
+    "CHUTE_TOWER_PAD",
+    "LOAD_CHUTE",
     "TOWER_L"
    ],
    "bolts": [
     "BOLT_CHT_0",
     "BOLT_CHT_1"
    ],
-   "nuts": [],
+   "nuts": [
+    "NUT_CHT_0",
+    "NUT_CHT_1"
+   ],
    "terminal": "TOWER_L"
   }
  ],
@@ -1701,8 +1722,28 @@
    "LIFT_BASE"
   ],
   [
+   "CHUTE_LIP_L1",
+   "LOAD_CHUTE"
+  ],
+  [
+   "CHUTE_LIP_L2",
+   "LOAD_CHUTE"
+  ],
+  [
+   "CHUTE_LIP_R1",
+   "LOAD_CHUTE"
+  ],
+  [
+   "CHUTE_LIP_R2",
+   "LOAD_CHUTE"
+  ],
+  [
    "CHUTE_PORT_EAR",
    "PORT_FLANGE"
+  ],
+  [
+   "CHUTE_TOWER_PAD",
+   "TOWER_L"
   ]
  ],
  "embeds": [
@@ -2411,12 +2452,28 @@
    "LIFT_BASE"
   ],
   [
+   "BOLT_LRF_L0",
+   "NUT_LRF_L0"
+  ],
+  [
+   "BOLT_LRF_L1",
+   "NUT_LRF_L1"
+  ],
+  [
    "BOLT_LRF_R0",
    "LIFT_BASE"
   ],
   [
    "BOLT_LRF_R1",
    "LIFT_BASE"
+  ],
+  [
+   "BOLT_LRF_R0",
+   "NUT_LRF_R0"
+  ],
+  [
+   "BOLT_LRF_R1",
+   "NUT_LRF_R1"
   ],
   [
    "BOLT_LTT_L0",
@@ -2539,6 +2596,10 @@
    "LIFT_S2_TIE"
   ],
   [
+   "CRADLE_ARM",
+   "LIFT_S2_TIE"
+  ],
+  [
    "BOLT_CARM_0",
    "CRADLE_ARM"
   ],
@@ -2564,7 +2625,7 @@
   ],
   [
    "CRADLE_PIV",
-   "CRADLE_ARM"
+   "CRADLE_FOAM"
   ],
   [
    "SCRW_TSV_0",
@@ -2624,15 +2685,27 @@
   ],
   [
    "ROPE_DYNEEMA",
-   "LIFT_S1_TIE"
+   "LIFT_TOP_TIE"
   ],
   [
    "ROPE_DYNEEMA",
-   "LIFT_S2_TIE"
+   "LIFT_S1_TIE"
   ],
   [
-   "CHUTE_PORT_EAR",
+   "SCRW_CHL_1_0",
    "LOAD_CHUTE"
+  ],
+  [
+   "SCRW_CHL_3_0",
+   "LOAD_CHUTE"
+  ],
+  [
+   "BOLT_CHT_0",
+   "NUT_CHT_0"
+  ],
+  [
+   "BOLT_CHT_1",
+   "NUT_CHT_1"
   ],
   [
    "WIRE_WINCH",
@@ -2923,22 +2996,6 @@
    "FRAME_RAIL_L"
   ],
   [
-   "BOLT_LRF_L0",
-   "NUT_LRF_L0"
-  ],
-  [
-   "BOLT_LRF_L1",
-   "NUT_LRF_L1"
-  ],
-  [
-   "BOLT_LRF_R0",
-   "NUT_LRF_R0"
-  ],
-  [
-   "BOLT_LRF_R1",
-   "NUT_LRF_R1"
-  ],
-  [
    "STOP_COLLAR_L",
    "LIFT_RAIL_L"
   ],
@@ -2955,24 +3012,32 @@
    "CRADLE_PIV"
   ],
   [
+   "CRADLE_PIV",
+   "CRADLE_ARM"
+  ],
+  [
+   "ROPE_DYNEEMA",
+   "LIFT_S2_TIE"
+  ],
+  [
+   "SCRW_CHL_0_0",
+   "LOAD_CHUTE"
+  ],
+  [
+   "SCRW_CHL_0_1",
+   "LOAD_CHUTE"
+  ],
+  [
+   "SCRW_CHL_2_0",
+   "LOAD_CHUTE"
+  ],
+  [
+   "SCRW_CHL_2_1",
+   "LOAD_CHUTE"
+  ],
+  [
    "LIFT_BASE",
    "TIE_RB_L"
-  ],
-  [
-   "LIFT_S1_TRUCK_L0",
-   "LIFT_RAIL_L"
-  ],
-  [
-   "LIFT_S1_TRUCK_L1",
-   "LIFT_RAIL_L"
-  ],
-  [
-   "LIFT_S1_TRUCK_R0",
-   "LIFT_RAIL_R"
-  ],
-  [
-   "LIFT_S1_TRUCK_R1",
-   "LIFT_RAIL_R"
   ],
   [
    "LIFT_S2_TRUCK_0",
@@ -2999,16 +3064,16 @@
    "LIFT_PULLEY"
   ],
   [
-   "ROPE_DYNEEMA",
-   "ROPE_GUIDE"
+   "CHUTE_PORT_EAR",
+   "CHUTE_LIP_L1"
+  ],
+  [
+   "CHUTE_TOWER_PAD",
+   "LOAD_CHUTE"
   ],
   [
    "WIRE_WINCH",
    "LIFT_BASE"
-  ],
-  [
-   "WIRE_TILT_SV",
-   "CRADLE_ARM"
   ]
  ],
  "ground": [],
@@ -3517,7 +3582,7 @@
    "subsys": "lift",
    "spec": "stage-2 bar",
    "material": "aluminum",
-   "dims": "6x16x218",
+   "dims": "7.9x16x218",
    "status": "UNVERIFIED",
    "members": [
     "LIFT_S2_BAR"
@@ -3656,5 +3721,87 @@
     "WIRE_YAW_SV"
    ]
   }
+ ],
+ "dropped": [
+  [
+   "BOLT_GUSU_L_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_L_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_GUSU_R_0_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_0",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "BOLT_TIE_R_1",
+   "FRAME_CROSS_B"
+  ],
+  [
+   "SCRW_CHL_1_1",
+   "LOAD_CHUTE"
+  ],
+  [
+   "SCRW_CHL_3_1",
+   "LOAD_CHUTE"
+  ],
+  [
+   "BOLT_CHP_0",
+   "PORT_FLANGE"
+  ],
+  [
+   "BOLT_CHP_1",
+   "PORT_FLANGE"
+  ],
+  [
+   "BOLT_CHT_0",
+   "TOWER_L"
+  ],
+  [
+   "BOLT_CHT_1",
+   "TOWER_L"
+  ],
+  [
+   "WIRE_YAW_SV",
+   "YAW_SERVO"
+  ],
+  [
+   "LIFT_S1_TRUCK_L0",
+   "LIFT_RAIL_L"
+  ],
+  [
+   "LIFT_S1_TRUCK_L1",
+   "LIFT_RAIL_L"
+  ],
+  [
+   "LIFT_S1_TRUCK_R0",
+   "LIFT_RAIL_R"
+  ],
+  [
+   "LIFT_S1_TRUCK_R1",
+   "LIFT_RAIL_R"
+  ],
+  [
+   "ROPE_DYNEEMA",
+   "ROPE_GUIDE"
+  ],
+  [
+   "LOAD_CHUTE",
+   "PORT_FLANGE"
+  ],
+  [
+   "LOAD_CHUTE",
+   "FEED_COLUMN"
+  ]
  ]
 }

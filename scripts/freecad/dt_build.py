@@ -321,12 +321,14 @@ def _rail_bore_specs(sgn):
         for bx in ("150", "158", "166", "174", "182", "190", "198",
                    "206", "214"):
             holes.append(("14", bx, "Parameters.belt_plane", "web"))
-        # sprint-03: lift base + rail-foot bolts through the top web
-        # (stations dodge the TIE_RB_L bolts + web grid row y160)
-        for bx, by_ in (("-181", "142"), ("-181", "178"),
+        # sprint-03: lift base + rail-foot + winch bolts through the
+        # top web (stations match BOLT_LB_*, BOLT_LRF_*, BOLT_LW_*)
+        for bx, by_ in (("-160", "140"), ("-160", "180"),
                         ("-145", "142"), ("-145", "178"),
-                        ("-172", "143"), ("-172", "149"),
-                        ("-172", "176"), ("-172", "182")):
+                        ("-172", "140"), ("-172", "148"),
+                        ("-172", "176"), ("-172", "182"),
+                        ("-152", "158"), ("-152", "166"),
+                        ("-140", "158"), ("-140", "166")):
             holes.append(("Parameters.grid_hole_d", bx, by_, "web"))
     return holes
 
@@ -2970,7 +2972,7 @@ _SUBSYS_GROUPS = (
                     "YAW_SERVO", "YAW_TRAY", "YAW_PINION",
                     "YAW_SHAFT", "HALL_")),
     ("GRP_TURRET_ROT", ("TURRET_PLATE", "TURRET_TOP_BRACE", "RING_",
-                        "LAUNCH_", "FLY_", "FLYWHEEL_", "HOOD_",
+                        "LAUNCH_", "FLY_", "FLYWHEEL_", "HOOD",
                         "NIP_", "VSN_", "CAM_MOUNT", "CAM_LED",
                         "YAW_MAGNET", "WIRE_FLY_", "WIRE_HOOD_",
                         "WIRE_CAM_")),
@@ -3100,6 +3102,7 @@ def reclassify_pairs(ctx):
     ctx["contacts"] = [p for p in contacts
                        if not (tuple(sorted(p)) in seen
                                or seen.add(tuple(sorted(p))))]
+    ctx["dropped"] = dropped
     print("DECL: %d embed->contact, %d dropped"
           % (len(moved_to_contact), len(dropped)))
 
@@ -3119,6 +3122,7 @@ def emit_meta(ctx, tag):
         "contacts": ctx["contacts"],
         "ground": ctx["ground"],
         "bom": ctx["bom"],
+        "dropped": ctx.get("dropped", []),
     }
     dst = META_DIR / ("%s.json" % tag)
     dst.write_text(json.dumps(out, indent=1), encoding="utf-8")

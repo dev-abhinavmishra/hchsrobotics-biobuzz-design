@@ -52,9 +52,11 @@ LX = "Parameters.lift_x"
 Y0 = "Parameters.lift_y0"   # 144 -> post L  y137..151, inner face 151
 Y1 = "Parameters.lift_y1"   # 180 -> post R  y173..187, inner face 173
 
-# chute polyline (ball-path bed line -- S15/S16 ride +46.5 normals)
-CHUTE_PTS = ((-66.0, 56.0, 204.0), (-96.0, 115.0, 168.0),
-             (-118.0, 178.0, 142.0))
+# chute polyline (ball-path bed line -- S15/S16 ride +46.5 normals).
+# leg1 dives 32.6deg from the port so the D93 sphere clears the tower
+# slot top at the wall crossing; leg2 dives 31deg under the cup mouth.
+CHUTE_PTS = ((-66.0, 56.0, 204.0), (-100.0, 150.0, 140.0),
+             (-118.0, 178.0, 120.0))
 CHUTE_W = 97.0
 
 
@@ -88,14 +90,15 @@ def _screw(doc, ctx, name, pos, axis, length="8"):
 def _base(doc, ctx):
     blk = pk.tool_box(
         doc, "TOOL_LBASE_BLK",
-        {"Length": "43", "Width": "48", "Height": "3"},
+        {"Length": "51", "Width": "48", "Height": "3"},
         {"Placement.Base.x": "-183", "Placement.Base.y": "137",
          "Placement.Base.z": WEB_TOP})
-    # notch the west edge clear of TIE_RB_L (tie x -213.1..-183.1)
+    # notch the west edge clear of TIE_RB_L's east edge
+    # (tie x -213.1..-183.1 vs base x -183..; 0.1mm overlap trimmed)
     notch = pk.tool_box(
         doc, "TOOL_LBASE_NT",
-        {"Length": "10", "Width": "30", "Height": "7"},
-        {"Placement.Base.x": "-186", "Placement.Base.y": "136",
+        {"Length": "3.5", "Width": "30", "Height": "7"},
+        {"Placement.Base.x": "-184.5", "Placement.Base.y": "136",
          "Placement.Base.z": "(%s - 2)" % WEB_TOP})
     base = pk.cut(doc, "LIFT_BASE", "LIFT_BASE_3mm_alu_UNVERIFIED",
                   "UNVERIFIED - lift base plate 3mm alu (notch clears "
@@ -138,12 +141,13 @@ def _rails(doc, ctx):
              "Placement.Base.z": BASE_TOP})
         tools = []
         if sgn > 0:
-            # pocket clears the TIE_RB_L bolt head at (-184.1, 152)
+            # pocket clears the TIE_RB_L bolt head at (-184.1, 152):
+            # head O7x4 tops at z70.75
             tools.append(pk.tool_box(
                 doc, "TOOL_LR_L_PK",
-                {"Length": "14", "Width": "7.5", "Height": "4"},
+                {"Length": "14", "Width": "14", "Height": "5.5"},
                 {"Placement.Base.x": "-193",
-                 "Placement.Base.y": "145",
+                 "Placement.Base.y": "143",
                  "Placement.Base.z": "(%s - 1)" % BASE_TOP}))
         if tools:
             post = pk.cut(doc, "LIFT_RAIL_%s" % tag,
@@ -187,7 +191,7 @@ def _rails(doc, ctx):
                   {"Placement.Base.x": "-172", "Placement.Base.y": py,
                    "Placement.Base.z":
                    "(%s + 3 + Parameters.bolt_head_h)" % BASE_TOP},
-                  "-Z", "9")
+                  "-Z", "12")
             _nut(doc, ctx, nn,
                  "(-172 - Parameters.nut4_wrench / 2)",
                  "(%s - Parameters.nut4_wrench / 2)" % py,
@@ -203,13 +207,15 @@ def _rails(doc, ctx):
         {"Length": "17", "Width": "22", "Height": "8"},
         {"Placement.Base.x": "-194", "Placement.Base.y": "151",
          "Placement.Base.z": "(Parameters.stop_z)"})
+    # clevis ears protrude EAST of the tie face so the top pulley
+    # clears both the tie body and the traveling pulley below
     ears = []
     for y0 in ("157", "166"):
         ears.append(pk.tool_box(
             doc, "TOOL_LTT_EAR%s" % y0,
-            {"Length": "6", "Width": "2", "Height": "10"},
-            {"Placement.Base.x": "-189", "Placement.Base.y": y0,
-             "Placement.Base.z": "(Parameters.stop_z - 9)"}))
+            {"Length": "25", "Width": "2", "Height": "10"},
+            {"Placement.Base.x": "-180", "Placement.Base.y": y0,
+             "Placement.Base.z": "(Parameters.stop_z - 11)"}))
     tie = pk.fuse(doc, "LIFT_TOP_TIE", "LIFT_TOP_TIE_UNVERIFIED",
                   "UNVERIFIED - mast top tie + pulley ears", tblk, ears)
     _s(ctx, tie)
@@ -232,11 +238,11 @@ def _rails(doc, ctx):
         bolts.append(bn)
     _jm(ctx, "lift_top_tie", [tie.Name, "LIFT_RAIL_L", "LIFT_RAIL_R"],
         bolts, terminal=tie.Name)
-    # static top pulley on a pin between the tie ears
+    # static top pulley on a pin between the east clevis ears
     pin = pk.cyl(doc, "LIFT_TPIN", "LIFT_TPIN_O6_UNVERIFIED",
                  "UNVERIFIED - top pulley pin O6",
-                 {"Radius": "3", "Height": "12"},
-                 {"Placement.Base.x": "-186", "Placement.Base.y": "157",
+                 {"Radius": "3", "Height": "14"},
+                 {"Placement.Base.x": "-156", "Placement.Base.y": "157",
                   "Placement.Base.z": "(Parameters.stop_z - 4.5)"},
                  pk.axis_rot("Y"))
     _s(ctx, pin)
@@ -244,9 +250,9 @@ def _rails(doc, ctx):
     pul = pk.bore_cyl(doc, "LIFT_TOP_PULLEY",
                       "LIFT_TOP_PULLEY_O20_UNVERIFIED",
                       "UNVERIFIED - top rope pulley O20",
-                      "20", "6.5", "6.5",
-                      {"Placement.Base.x": "-186",
-                       "Placement.Base.y": "159.5",
+                      "20", "5", "6.5",
+                      {"Placement.Base.x": "-156",
+                       "Placement.Base.y": "160",
                        "Placement.Base.z": "(Parameters.stop_z - 4.5)"},
                       "Y")
     _s(ctx, pul)
@@ -309,30 +315,19 @@ def _stage1(doc, ctx):
         blade = "LIFT_S1_BAR_%s" % tag
         for zi, z0 in enumerate(("80", "104")):
             nm = "LIFT_S1_TRUCK_%s%d" % (tag, zi)
+            # flat delrin slide pad filling the post-to-blade gap
+            # (post inner faces y151/y173; blade faces y155/y169);
+            # x-extent stays inside the rail pair footprint
             if sgn > 0:
-                pady = "(%s + 7)" % cy          # 151..155
-                wy_ = "(%s - 7)" % cy           # wings cover post y-ext
+                pady = "(%s + 14)" % cy         # 151..155
             else:
-                pady = "(%s - 11)" % cy         # 169..173
-                wy_ = "(%s - 11)" % cy          # 169..187
-            pad = pk.tool_box(
-                doc, "TOOL_%s_PAD" % nm,
-                {"Length": "15", "Width": "4", "Height": "20"},
-                {"Placement.Base.x": "-193", "Placement.Base.y": pady,
+                pady = "(%s - 18)" % cy         # 169..173
+            tr = pk.box(
+                doc, nm, nm + "_delrin_UNVERIFIED",
+                "UNVERIFIED - stage-1 slide pad (on post inner face)",
+                {"Length": "13", "Width": "4", "Height": "20"},
+                {"Placement.Base.x": "-192.4", "Placement.Base.y": pady,
                  "Placement.Base.z": z0})
-            wing_w = pk.tool_box(
-                doc, "TOOL_%s_WW" % nm,
-                {"Length": "5", "Width": "18", "Height": "20"},
-                {"Placement.Base.x": "-197.4", "Placement.Base.y": wy_,
-                 "Placement.Base.z": z0})
-            wing_e = pk.tool_box(
-                doc, "TOOL_%s_WE" % nm,
-                {"Length": "4.4", "Width": "18", "Height": "20"},
-                {"Placement.Base.x": "-178.4", "Placement.Base.y": wy_,
-                 "Placement.Base.z": z0})
-            tr = pk.fuse(doc, nm, nm + "_delrin_UNVERIFIED",
-                         "UNVERIFIED - stage-1 slide truck (C-wrap on "
-                         "post)", pad, [wing_w, wing_e])
             _s(ctx, tr)
             rail = "LIFT_RAIL_%s" % tag
             _cn(ctx, tr.Name, rail)
@@ -341,13 +336,13 @@ def _stage1(doc, ctx):
             for bi, bz in enumerate(("8", "16")):
                 bn = "SCRW_S1T_%s%d_%d" % (tag, zi, bi)
                 if sgn > 0:
-                    pos = {"Placement.Base.x": "-188",
-                           "Placement.Base.y": "(%s + 17.5)" % cy,
+                    pos = {"Placement.Base.x": "-186",
+                           "Placement.Base.y": "(%s + 24.5)" % cy,
                            "Placement.Base.z": "(%s + %s)" % (z0, bz)}
                     ax = "-Y"
                 else:
-                    pos = {"Placement.Base.x": "-182",
-                           "Placement.Base.y": "(%s - 17.5)" % cy,
+                    pos = {"Placement.Base.x": "-186",
+                           "Placement.Base.y": "(%s - 24.5)" % cy,
                            "Placement.Base.z": "(%s + %s)" % (z0, bz)}
                     ax = "Y"
                 _screw(doc, ctx, bn, pos, ax, "8")
@@ -373,15 +368,15 @@ def _stage1(doc, ctx):
         _s(ctx, bl)
         _bom(ctx, "lift", "stage-1 slide blade 10mm", "aluminum",
              "10x4.5x239", "UNVERIFIED", [bl.Name])
-        _cn(ctx, bl.Name, "LIFT_RAIL_%s" % tag)
-    # tie across the blade tops (blades z74..313)
+    # tie across the blade tops (blades z74..313); clevis ears hang
+    # BELOW the tie bottom so the traveling pulley clears the top tie
     ears = []
     for y0 in ("157", "166"):
         ears.append(pk.tool_box(
             doc, "TOOL_S1T_EAR%s" % y0,
-            {"Length": "6", "Width": "2", "Height": "8"},
-            {"Placement.Base.x": "-189", "Placement.Base.y": y0,
-             "Placement.Base.z": "321"}))
+            {"Length": "6", "Width": "2", "Height": "18"},
+            {"Placement.Base.x": "-191.5", "Placement.Base.y": y0,
+             "Placement.Base.z": "297"}))
     tblk = pk.tool_box(
         doc, "TOOL_S1T_BLK",
         {"Length": "12", "Width": "18", "Height": "8"},
@@ -409,18 +404,18 @@ def _stage1(doc, ctx):
         bolts, terminal=tie.Name)
     pin = pk.cyl(doc, "S1_PPIN", "S1_PPIN_O6_UNVERIFIED",
                  "UNVERIFIED - traveling pulley pin O6",
-                 {"Radius": "3", "Height": "12"},
-                 {"Placement.Base.x": "-186", "Placement.Base.y": "157",
-                  "Placement.Base.z": "324"},
+                 {"Radius": "3", "Height": "14"},
+                 {"Placement.Base.x": "-188.5", "Placement.Base.y": "157",
+                  "Placement.Base.z": "302"},
                  pk.axis_rot("Y"))
     _s(ctx, pin)
     _em(ctx, pin.Name, tie.Name)
     pul = pk.bore_cyl(doc, "LIFT_PULLEY", "LIFT_PULLEY_O20_UNVERIFIED",
                       "UNVERIFIED - traveling pulley O20",
-                      "20", "6.5", "6.5",
-                      {"Placement.Base.x": "-186",
-                       "Placement.Base.y": "159.5",
-                       "Placement.Base.z": "324"},
+                      "20", "4", "6.5",
+                      {"Placement.Base.x": "-188.5",
+                       "Placement.Base.y": "160",
+                       "Placement.Base.z": "302"},
                       "Y")
     _s(ctx, pul)
     _bom(ctx, "lift", "traveling pulley O20", "delrin", "O20x6.5",
@@ -434,15 +429,13 @@ def _stage1(doc, ctx):
 def _stage2(doc, ctx):
     bar = pk.box(doc, "LIFT_S2_BAR", "LIFT_S2_BAR_UNVERIFIED",
                  "UNVERIFIED - stage-2 slide bar",
-                 {"Length": "6", "Width": "16",
+                 {"Length": "7.9", "Width": "16",
                   "Height": "Parameters.s2_len"},
-                 {"Placement.Base.x": "-175.8", "Placement.Base.y": "154",
+                 {"Placement.Base.x": "-177.7", "Placement.Base.y": "154",
                   "Placement.Base.z": "82"})
     _s(ctx, bar)
-    _bom(ctx, "lift", "stage-2 bar", "aluminum", "6x16x218",
+    _bom(ctx, "lift", "stage-2 bar", "aluminum", "7.9x16x218",
          "UNVERIFIED", [bar.Name])
-    _cn(ctx, bar.Name, "LIFT_S1_BAR_L")
-    _cn(ctx, bar.Name, "LIFT_S1_BAR_R")
     for zi, z0 in enumerate(("88", "112")):
         nm = "LIFT_S2_TRUCK_%d" % zi
         plug = pk.tool_box(
@@ -452,7 +445,7 @@ def _stage2(doc, ctx):
              "Placement.Base.z": z0})
         flng = pk.tool_box(
             doc, "TOOL_%s_FLNG" % nm,
-            {"Length": "4", "Width": "18", "Height": "20"},
+            {"Length": "2.1", "Width": "18", "Height": "20"},
             {"Placement.Base.x": "-179.8", "Placement.Base.y": "153",
              "Placement.Base.z": z0})
         tr = pk.fuse(doc, nm, nm + "_delrin_UNVERIFIED",
@@ -469,7 +462,7 @@ def _stage2(doc, ctx):
                    {"Placement.Base.x": "-167.8",
                     "Placement.Base.y": by_,
                     "Placement.Base.z": "(%s + 10)" % z0},
-                   "-X", "10")
+                   "-X", "11")
             bolts.append(bn)
         _jm(ctx, "s2truck_%d" % zi, [tr.Name, bar.Name,
                                      "LIFT_S1_BAR_L", "LIFT_S1_BAR_R"],
@@ -500,14 +493,20 @@ def _stage2(doc, ctx):
 # cradle arm + cup + tilt (top-rim hinge pin drive)
 # ======================================================================
 def _cradle(doc, ctx):
+    # arm = tab on the S2 tie + 3.6mm riser plate hugging the bar's
+    # east face + top bar spanning west to the journal ear column.
+    # The ear (x -186..-178, y184..200 -- north of the rail pair's
+    # y<=180 band) carries the pin journal; the whole frame stays west
+    # of the S16 D93 ball sweep (ball west reach ~x-163).
     tab = Part.makeBox(10, 16, 5, App.Vector(-172, 160, 308))
-    # arm plate from the tab down to the pivot pad
-    L = 127.0
-    plate = Part.makeBox(L, 16, 5)
-    plate.rotate(App.Vector(0, 0, 0), App.Vector(0, 1, 0), 69.7)
-    plate.translate(App.Vector(-166, 161, 309))
-    pad = Part.makeBox(20, 18, 12, App.Vector(-132, 168, 184))
-    arm = tab.fuse(plate).fuse(pad).removeSplitter()
+    plate = Part.makeBox(3.6, 10, 129, App.Vector(-169.6, 164, 185))
+    top = Part.makeBox(20.6, 24, 8, App.Vector(-186, 172, 306))
+    ear = Part.makeBox(8, 16, 126, App.Vector(-186, 184, 188))
+    arm = tab.fuse(plate).fuse(top).fuse(ear).removeSplitter()
+    # pin journal bore O8.6 along X through the ear column
+    jbore = Part.makeCylinder(4.3, 36, App.Vector(-190, 190, 194),
+                              App.Vector(1, 0, 0))
+    arm = arm.cut(jbore).removeSplitter()
     ao = _feat(doc, "CRADLE_ARM", "CRADLE_ARM_alu_UNVERIFIED",
                "UNVERIFIED - cradle cantilever arm (tab on S2 tie)",
                arm)
@@ -515,6 +514,8 @@ def _cradle(doc, ctx):
     _bom(ctx, "lift", "cradle arm", "aluminum", "cantilever",
          "UNVERIFIED", [ao.Name])
     _fp(ctx, ao.Name, "LIFT_S2_TIE")
+    # riser plate edge embeds 2.6mm into the tie east face
+    _em(ctx, ao.Name, "LIFT_S2_TIE")
     bolts = []
     for i, (px, py) in enumerate((("-169", "164"), ("-169", "172"),
                                   ("-164", "164"), ("-164", "172"))):
@@ -570,47 +571,63 @@ def _cradle(doc, ctx):
          "UNVERIFIED", [foam.Name])
     _em(ctx, foam.Name, cup.Name)
     # hinge pin along X across the shell top strips; journals in the
-    # arm pad; horn disk on the +x end couples the tilt servo
+    # arm ear bore; tilt servo horn engages the west overhang
     pin = pk.cyl(doc, "CRADLE_PIV", "CRADLE_PIV_O8_UNVERIFIED",
                  "UNVERIFIED - cradle hinge pin O8 (welded to cup)",
-                 {"Radius": "4", "Height": "57"},
-                 {"Placement.Base.x": "-148",
-                  "Placement.Base.y": "(Parameters.cradle_y + 5)",
-                  "Placement.Base.z": "(Parameters.cradle_z + 51)"},
+                 {"Radius": "4", "Height": "110"},
+                 {"Placement.Base.x": "-194",
+                  "Placement.Base.y": "(Parameters.cradle_y + 12)",
+                  "Placement.Base.z": "(Parameters.cradle_z + 54)"},
                  pk.axis_rot("X"))
     _s(ctx, pin)
     _em(ctx, pin.Name, cup.Name)
+    _em(ctx, pin.Name, foam.Name)
     _jl(ctx, pin.Name, ao.Name)
-    for i, px in enumerate(("-153", "-94")):
+    # retaining collars flank the ear/plate journals
+    for i, px in enumerate(("-178", "-165.4")):
         col = pk.bore_cyl(doc, "CRADLE_COL_%d" % i,
                           "CRADLE_COL_%d_UNVERIFIED" % i,
                           "UNVERIFIED - hinge pin collar",
                           "14", "5", "8.5",
                           {"Placement.Base.x": px,
                            "Placement.Base.y":
-                           "(Parameters.cradle_y + 5)",
+                           "(Parameters.cradle_y + 12)",
                            "Placement.Base.z":
-                           "(Parameters.cradle_z + 51)"},
+                           "(Parameters.cradle_z + 54)"},
                           "X")
         _s(ctx, col)
         _em(ctx, col.Name, pin.Name)
     _jm(ctx, "cradle_piv", [cup.Name, ao.Name], [pin.Name], (),
         terminal=ao.Name)
-    # tilt servo on the arm pad east face; horn bore journals the pin
-    can = pk.box(doc, "TOOL_TSV_CAN",
-                 "TILT_SERVO_can_UNVERIFIED",
-                 "UNVERIFIED - tilt servo can",
-                 {"Length": "12", "Width": "14", "Height": "16"},
-                 {"Placement.Base.x": "-112", "Placement.Base.y": "170",
-                  "Placement.Base.z": "183"})
-    horn = pk.bore_cyl(
+    # tilt servo: can face-mounted on the ear west face, pin blind-
+    # pocketed through the can bore, horn boss bored onto the pin end
+    cblk = pk.tool_box(
+        doc, "TOOL_TSV_CAN",
+        {"Length": "10", "Width": "14", "Height": "12"},
+        {"Placement.Base.x": "-196", "Placement.Base.y": "184",
+         "Placement.Base.z": "188"})
+    cbore = pk.tool_cyl(
+        doc, "TOOL_TSV_CB", {"Radius": "4.3", "Height": "12"},
+        {"Placement.Base.x": "-197",
+         "Placement.Base.y": "(Parameters.cradle_y + 12)",
+         "Placement.Base.z": "(Parameters.cradle_z + 54)"},
+        pk.axis_rot("X"))
+    can = pk.cut(doc, "TOOL_TSV_CB2", "TSV_can_UNVERIFIED",
+                 "UNVERIFIED - tilt servo can (pin pocket)", cblk,
+                 [cbore])
+    hblk = pk.tool_box(
         doc, "TOOL_TSV_HRN",
-        "TILT_SERVO_horn_UNVERIFIED",
-        "UNVERIFIED - tilt servo horn boss", "14", "5", "8.5",
-        {"Placement.Base.x": "-103",
-         "Placement.Base.y": "(Parameters.cradle_y + 5)",
-         "Placement.Base.z": "(Parameters.cradle_z + 51)"},
-        "X")
+        {"Length": "6", "Width": "12", "Height": "12"},
+        {"Placement.Base.x": "-194", "Placement.Base.y": "184",
+         "Placement.Base.z": "188"})
+    hbore = pk.tool_cyl(
+        doc, "TOOL_TSV_HB", {"Radius": "4.15", "Height": "8"},
+        {"Placement.Base.x": "-195",
+         "Placement.Base.y": "(Parameters.cradle_y + 12)",
+         "Placement.Base.z": "(Parameters.cradle_z + 54)"},
+        pk.axis_rot("X"))
+    horn = pk.cut(doc, "TOOL_TSV_HBN", "TSV_horn_UNVERIFIED",
+                  "UNVERIFIED - tilt servo horn boss", hblk, [hbore])
     sv = pk.fuse(doc, "TILT_SERVO", "TILT_SERVO_micro_UNVERIFIED",
                  "UNVERIFIED - cradle tilt servo (pin drive)",
                  can, [horn])
@@ -620,13 +637,13 @@ def _cradle(doc, ctx):
     _fp(ctx, sv.Name, ao.Name)
     _jl(ctx, pin.Name, sv.Name)
     bolts = []
-    for i, (py, pz) in enumerate((("172", "186"), ("182", "186"),
-                                  ("172", "193"), ("182", "193"))):
+    for i, (py, pz) in enumerate((("185", "190"), ("185.5", "199"),
+                                  ("196", "190.5"), ("196.5", "199"))):
         bn = "SCRW_TSV_%d" % i
         _screw(doc, ctx, bn,
-               {"Placement.Base.x": "-134.4", "Placement.Base.y": py,
+               {"Placement.Base.x": "-198", "Placement.Base.y": py,
                 "Placement.Base.z": pz},
-               "X", "24")
+               "X", "16")
         bolts.append(bn)
     _jm(ctx, "tilt_servo", [sv.Name, ao.Name], bolts,
         terminal=ao.Name)
@@ -636,17 +653,18 @@ def _cradle(doc, ctx):
 # winch + rope rig
 # ======================================================================
 def _winch(doc, ctx):
+    # winch body east of the stage-2 bar sweep (bar face -169.8)
     blk = pk.tool_box(
         doc, "TOOL_LW_BLK",
         {"Length": "22", "Width": "20", "Height": "Parameters.winch_z"},
-        {"Placement.Base.x": "-176", "Placement.Base.y": "150",
+        {"Placement.Base.x": "-158", "Placement.Base.y": "150",
          "Placement.Base.z": BASE_TOP})
     ears = []
     for y0 in ("152", "166"):
         ears.append(pk.tool_box(
             doc, "TOOL_LW_EAR%s" % y0,
-            {"Length": "16", "Width": "2", "Height": "9"},
-            {"Placement.Base.x": "-173", "Placement.Base.y": y0,
+            {"Length": "16", "Width": "2", "Height": "18"},
+            {"Placement.Base.x": "-155", "Placement.Base.y": y0,
              "Placement.Base.z":
              "(%s + Parameters.winch_z)" % BASE_TOP}))
     wb = pk.fuse(doc, "LIFT_WINCH", "LIFT_WINCH_CRservo_UNVERIFIED",
@@ -657,8 +675,8 @@ def _winch(doc, ctx):
          "VENDOR-PENDING", [wb.Name])
     _fp(ctx, wb.Name, "LIFT_BASE")
     bolts, nuts = [], []
-    for i, (px, py) in enumerate((("-170", "158"), ("-170", "166"),
-                                  ("-158", "158"), ("-158", "166"))):
+    for i, (px, py) in enumerate((("-152", "158"), ("-152", "166"),
+                                  ("-140", "158"), ("-140", "166"))):
         bn = "BOLT_LW_%d" % i
         nn = "NUT_LW_%d" % i
         _bolt(doc, ctx, bn,
@@ -676,31 +694,40 @@ def _winch(doc, ctx):
     pin = pk.cyl(doc, "WINCH_DPIN", "WINCH_DPIN_O6_UNVERIFIED",
                  "UNVERIFIED - winch drum pin O6",
                  {"Radius": "3", "Height": "16"},
-                 {"Placement.Base.x": "-165", "Placement.Base.y": "152",
+                 {"Placement.Base.x": "-147", "Placement.Base.y": "152",
                   "Placement.Base.z":
-                  "(%s + Parameters.winch_z + 4)" % BASE_TOP},
+                  "(%s + Parameters.winch_z + 12)" % BASE_TOP},
                  pk.axis_rot("Y"))
     _s(ctx, pin)
     _em(ctx, pin.Name, wb.Name)
     spool = pk.bore_cyl(
         doc, "WINCH_SPOOL", "WINCH_SPOOL_O22_UNVERIFIED",
         "UNVERIFIED - winch drum O22", "22", "11", "6.5",
-        {"Placement.Base.x": "-165", "Placement.Base.y": "154.5",
+        {"Placement.Base.x": "-147", "Placement.Base.y": "154.5",
          "Placement.Base.z":
-         "(%s + Parameters.winch_z + 4)" % BASE_TOP},
+         "(%s + Parameters.winch_z + 12)" % BASE_TOP},
         "Y")
     _s(ctx, spool)
     _bom(ctx, "lift", "winch drum O22", "aluminum", "O22x11",
          "UNVERIFIED", [spool.Name])
     _jl(ctx, spool.Name, pin.Name)
     # baked dyneema rig: run A winch->top pulley->S1 dead-end;
-    # run B top-tie anchor->traveling pulley->S2 tie dead-end
-    pts_a = [(-165, 160, 130), (-174, 161, 220), (-186, 162, 312),
-             (-186, 162, 331), (-188, 163, 320), (-188, 163, 315)]
+    # run B top-tie anchor->traveling pulley->S2 tie dead-end.
+    # wrap vertices sit on an r11 circle around each O20 pulley so
+    # the O1.5 rope (inner surface r10.25) grazes the groove.
+    pts_a = [(-147, 160, 129), (-148, 161, 240),
+             (-146.5, 162, 315.0), (-145, 162, 321.5),
+             (-148.2, 162, 329.3), (-156, 162, 332.5),
+             (-163.8, 162, 329.3), (-167.5, 162, 321.5),
+             (-163.8, 162, 313.7), (-166, 168, 311),
+             (-182, 168, 315)]
     ra = pk.wire_bundle(doc, "TOOL_ROPE_A", "TOOL_ROPE_A_UNVERIFIED",
                         "UNVERIFIED - rope run A", 1.5, pts_a)
-    pts_b = [(-183, 170, 329), (-186, 165, 332), (-186, 165, 336),
-             (-181, 166, 330), (-173, 166, 305)]
+    pts_b = [(-193, 168, 332),
+             (-198.0, 162, 307.5), (-199.5, 162, 302),
+             (-196.3, 162, 293.7), (-188.5, 162, 291),
+             (-180.7, 162, 293.7), (-177.5, 162, 302),
+             (-172, 166, 304)]
     rb = pk.wire_bundle(doc, "TOOL_ROPE_B", "TOOL_ROPE_B_UNVERIFIED",
                         "UNVERIFIED - rope run B", 1.5, pts_b)
     rope = pk.fuse(doc, "ROPE_DYNEEMA", "ROPE_DYNEEMA_UNVERIFIED",
@@ -712,6 +739,7 @@ def _winch(doc, ctx):
     _em(ctx, rope.Name, "WINCH_SPOOL")
     _cn(ctx, rope.Name, "LIFT_TOP_PULLEY")
     _cn(ctx, rope.Name, "LIFT_PULLEY")
+    _em(ctx, rope.Name, "LIFT_TOP_TIE")
     _em(ctx, rope.Name, "LIFT_S1_TIE")
     _em(ctx, rope.Name, "LIFT_S2_TIE")
     _cn(ctx, rope.Name, "ROPE_GUIDE")
@@ -771,25 +799,16 @@ def _chute(doc, ctx):
     _cn(ctx, ch.Name, "PORT_FLANGE")
     _cn(ctx, ch.Name, "FEED_COLUMN")
     # side lips flank each leg's bed edges; the tips start 3mm down-
-    # slope so they stay outside the port window corner, and the
-    # leg-2 west lip carries a notch where it passes TOWER_L
+    # slope so they stay outside the port window corner
     lip_objs = []
     for sgn, side in ((1, "L"), (-1, "R")):
         for li, (p_s, d_, w_, n_, L_, r_) in enumerate(
                 ((p0, d1, w1, n1, L1, r1), (p1, d2, w2, n2, L2, r2))):
             lb = Part.makeBox(L_ - 3, 3, 14)
             edge = (App.Vector(*p_s) + d_ * 3
-                    + w_ * (48.5 if sgn > 0 else -51.5) + n_ * 4)
+                    + w_ * (45.5 if sgn > 0 else -48.5) + n_ * 4)
             lb = lb.transformGeometry(
                 App.Placement(edge, r_).toMatrix())
-            if side == "L" and li == 1:
-                # TOWER_L wall band in lip travel u ~[39.9,46.0]:
-                # notch u 38..48 clears the 3mm riser sheet
-                ntool = Part.makeBox(10, 6, 18)
-                ntool = ntool.transformGeometry(App.Placement(
-                    edge + d_ * 38 + w_ * (-1.5) + n_ * (-2),
-                    r_).toMatrix())
-                lb = lb.cut(ntool).removeSplitter()
             nm = "CHUTE_LIP_%s%d" % (side, li + 1)
             lo = _feat(doc, nm, nm + "_UNVERIFIED",
                        "UNVERIFIED - chute side lip", lb)
@@ -798,19 +817,20 @@ def _chute(doc, ctx):
             _fp(ctx, lo.Name, ch.Name)
     _bom(ctx, "lift", "chute side lips", "petg", "3x14",
          "UNVERIFIED", [o[0].Name for o in lip_objs])
-    # 2 screws per lip down into the tray bed (~ -n direction)
+    # 2 screws per lip: -Z through the lip into the bed (lips stand on
+    # the bed top at the outer edge, w +-45.5..48.5 -> screw at +-47)
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate((0.3, 0.7)):
             pt = (App.Vector(*p_s) + d_ * (L_ * t) + w_ *
-                  (50 if lo.Name.endswith("L1") or lo.Name.endswith("L2")
-                   else -50) + n_ * 13)
+                  (47 if lo.Name.endswith("L1") or lo.Name.endswith("L2")
+                   else -47) + n_ * 18)
             bn = "SCRW_CHL_%d_%d" % (i, j)
             _screw(doc, ctx, bn,
                    {"Placement.Base.x": "%.1f" % pt.x,
                     "Placement.Base.y": "%.1f" % pt.y,
                     "Placement.Base.z": "%.1f" % (pt.z + 2.0)},
-                   "-Z", "12")
+                   "-Z", "16")
             lip_bolts.append(bn)
     # port ear: welded pad on the flange +Y face where the leg-1 west
     # lip exits the port mouth (x~-122 at y59); 2 bolts into the
@@ -836,22 +856,23 @@ def _chute(doc, ctx):
     _jm(ctx, "chute_mount", [ear_o.Name, "CHUTE_LIP_L1", ch.Name,
                              "PORT_FLANGE"],
         pfl_b, (), "PORT_FLANGE")
-    # tower pad: strap on the riser outer face west of the slot
-    # (slot x-158..-48); the leg-2 west lip resumes outboard of the
-    # wall and contacts the pad edge; 2 bolts + nuts through the riser
-    pad = Part.makeBox(23, 8.7, 20, App.Vector(-175, 132.3, 148))
+    # tower pad: sill strap inside the slot opening, standing on the
+    # riser's lower lip and carrying the tray bottom as it passes the
+    # wall (bed bottom ~z147 at y~140, x~-95); 2 bolts + nuts through
+    # the riser below the slot
+    pad = Part.makeBox(14, 8.7, 60, App.Vector(-102, 132.3, 86.5))
     pd_o = _feat(doc, "CHUTE_TOWER_PAD", "CHUTE_TOWER_PAD_UNVERIFIED",
-                 "UNVERIFIED - chute tower-slot strap", pad)
+                 "UNVERIFIED - chute tower-slot sill strap", pad)
     _s(ctx, pd_o)
     _fp(ctx, pd_o.Name, "TOWER_L")
-    _cn(ctx, pd_o.Name, "CHUTE_LIP_L2")
+    _cn(ctx, pd_o.Name, "LOAD_CHUTE")
     tb, tn = [], []
-    for i, px in enumerate(("-173", "-167")):
+    for i, px in enumerate(("-100", "-94")):
         bn = "BOLT_CHT_%d" % i
         nn = "NUT_CHT_%d" % i
         _bolt(doc, ctx, bn,
               {"Placement.Base.x": px, "Placement.Base.y": "143.4",
-               "Placement.Base.z": "158"},
+               "Placement.Base.z": "93"},
               "-Y", "16")
         pk.hex_nut(
             doc, nn, nn + "_M4_UNVERIFIED",
@@ -860,12 +881,12 @@ def _chute(doc, ctx):
             "Parameters.nut4_bore",
             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
              "Placement.Base.y": "(129.3 - Parameters.nut4_h)",
-             "Placement.Base.z": "(158 - Parameters.nut4_wrench / 2)"},
+             "Placement.Base.z": "(93 - Parameters.nut4_wrench / 2)"},
             "Y")
         _s(ctx, doc.getObject(nn))
         tb.append(bn)
         tn.append(nn)
-    _jm(ctx, "chute_tower", [pd_o.Name, "CHUTE_LIP_L2", "TOWER_L"],
+    _jm(ctx, "chute_tower", [pd_o.Name, "LOAD_CHUTE", "TOWER_L"],
         tb, tn, "TOWER_L")
 
 
@@ -874,16 +895,15 @@ def _chute(doc, ctx):
 # ======================================================================
 def _lift_wires(doc, ctx):
     ww = _wire(doc, ctx, "WIRE_WINCH", [
-        (-172, 155, 72), (-160, 140, 68), (-148, 128, 60),
+        (-147, 160, 90), (-150, 140, 68), (-148, 128, 60),
         (-136, 112, 50), (-118, 96, 46), (-100, 84, 46)], dia="2")
     _em(ctx, ww.Name, "LIFT_WINCH")
     _cn(ctx, ww.Name, "LIFT_BASE")
     wt = _wire(doc, ctx, "WIRE_TILT_SV", [
-        (-106, 177, 190), (-128, 176, 240), (-170, 170, 300),
-        (-180, 168, 330), (-160, 150, 80), (-120, 110, 50),
+        (-192, 191, 194), (-200, 196, 160), (-200, 192, 110),
+        (-190, 184, 80), (-150, 168, 74), (-118, 120, 60),
         (-100, 86, 46)], dia="2")
     _em(ctx, wt.Name, "TILT_SERVO")
-    _cn(ctx, wt.Name, "CRADLE_ARM")
     wy_ = _wire(doc, ctx, "WIRE_YAW_SV", [
         (-66, -80, 214), (-84, -72, 180), (-112, -62, 150),
         (-132, -60, 100), (-124, -78, 62), (-104, -84, 46),
@@ -907,7 +927,7 @@ def build_lift(doc, ctx):
           Part.makeBox(14, 18, 8, App.Vector(-191, 153, 501)))
     _feat(doc, "VOL_S2_DEP", "VOL_S2_DEP_probe_UNVERIFIED",
           "UNVERIFIED - stage-2 deployed tip probe",
-          Part.makeBox(10, 18, 8, App.Vector(-177, 153, 640)))
+          Part.makeBox(10, 18, 8, App.Vector(-177, 153, 502)))
     _feat(doc, "VOL_CRADLE_DEP", "VOL_CRADLE_DEP_probe_UNVERIFIED",
           "UNVERIFIED - cradle deployed rim probe",
           Part.makeSphere(46.5, App.Vector(-122, 183, 540)))

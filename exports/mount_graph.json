@@ -824,7 +824,323 @@
   "SNSR_BRKT",
   "SNSR_COLOR",
   "SCRW_SNSR_0",
-  "SCRW_SNSR_1"
+  "SCRW_SNSR_1",
+  "TOWER_L",
+  "BOLT_TWF_L_0",
+  "NUT_TWF_L_0",
+  "BOLT_TWF_L_1",
+  "NUT_TWF_L_1",
+  "BOLT_TWF_L_2",
+  "NUT_TWF_L_2",
+  "BOLT_TWF_L_3",
+  "NUT_TWF_L_3",
+  "BOLT_TWC_L_0",
+  "NUT_TWC_L_0",
+  "BOLT_TWC_L_1",
+  "NUT_TWC_L_1",
+  "BOLT_TWC_L_2",
+  "NUT_TWC_L_2",
+  "BOLT_TWC_L_3",
+  "NUT_TWC_L_3",
+  "TOWER_R",
+  "BOLT_TWF_R_0",
+  "NUT_TWF_R_0",
+  "BOLT_TWF_R_1",
+  "NUT_TWF_R_1",
+  "BOLT_TWF_R_2",
+  "NUT_TWF_R_2",
+  "BOLT_TWF_R_3",
+  "NUT_TWF_R_3",
+  "BOLT_TWC_R_0",
+  "NUT_TWC_R_0",
+  "BOLT_TWC_R_1",
+  "NUT_TWC_R_1",
+  "BOLT_TWC_R_2",
+  "NUT_TWC_R_2",
+  "BOLT_TWC_R_3",
+  "NUT_TWC_R_3",
+  "TOWER_GUS_L0",
+  "BOLT_GUS_L0_0",
+  "NUT_GUS_L0_0",
+  "BOLT_GUS_L0_1",
+  "NUT_GUS_L0_1",
+  "BOLT_GUD_L0_0",
+  "NUT_GUD_L0_0",
+  "BOLT_GUD_L0_1",
+  "NUT_GUD_L0_1",
+  "TOWER_GUS_L1",
+  "BOLT_GUS_L1_0",
+  "NUT_GUS_L1_0",
+  "BOLT_GUS_L1_1",
+  "NUT_GUS_L1_1",
+  "BOLT_GUD_L1_0",
+  "NUT_GUD_L1_0",
+  "BOLT_GUD_L1_1",
+  "NUT_GUD_L1_1",
+  "TOWER_GUS_R2",
+  "BOLT_GUS_R2_0",
+  "NUT_GUS_R2_0",
+  "BOLT_GUS_R2_1",
+  "NUT_GUS_R2_1",
+  "BOLT_GUD_R2_0",
+  "NUT_GUD_R2_0",
+  "BOLT_GUD_R2_1",
+  "NUT_GUD_R2_1",
+  "TOWER_GUS_R3",
+  "BOLT_GUS_R3_0",
+  "NUT_GUS_R3_0",
+  "BOLT_GUS_R3_1",
+  "NUT_GUS_R3_1",
+  "BOLT_GUD_R3_0",
+  "NUT_GUD_R3_0",
+  "BOLT_GUD_R3_1",
+  "NUT_GUD_R3_1",
+  "TURRET_DECK",
+  "LAZY_SUSAN_LO",
+  "LAZY_SUSAN_HI",
+  "BOLT_SLO_0",
+  "BOLT_SLO_1",
+  "BOLT_SLO_2",
+  "BOLT_SLO_3",
+  "YAW_TRAY",
+  "BOLT_YTR_0",
+  "BOLT_YTR_1",
+  "BOLT_YTR_2",
+  "BOLT_YTR_3",
+  "YAW_SERVO",
+  "SCRW_YSV_0",
+  "SCRW_YSV_1",
+  "SCRW_YSV_2",
+  "SCRW_YSV_3",
+  "YAW_SHAFT",
+  "YAW_PINION",
+  "HALL_SNSR",
+  "RING_GEAR",
+  "BOLT_RING_0",
+  "BOLT_RING_1",
+  "BOLT_RING_2",
+  "BOLT_RING_3",
+  "TURRET_PLATE",
+  "BOLT_SHI_0",
+  "BOLT_SHI_1",
+  "BOLT_SHI_2",
+  "BOLT_SHI_3",
+  "LAUNCH_CHEEK_L",
+  "BOLT_CK_L0",
+  "NUT_CK_L0",
+  "BOLT_CK_L1",
+  "NUT_CK_L1",
+  "BOLT_CK_L2",
+  "NUT_CK_L2",
+  "BOLT_CK_L3",
+  "NUT_CK_L3",
+  "LAUNCH_CHEEK_R",
+  "BOLT_CK_R0",
+  "NUT_CK_R0",
+  "BOLT_CK_R1",
+  "NUT_CK_R1",
+  "BOLT_CK_R2",
+  "NUT_CK_R2",
+  "BOLT_CK_R3",
+  "NUT_CK_R3",
+  "FLYWHEEL_L",
+  "FLY_CLAMP_L",
+  "FLY_SHAFT_L",
+  "FLY_BRG_L",
+  "BOLT_FBRG_L0",
+  "BOLT_FBRG_L1",
+  "BOLT_FBRG_L2",
+  "BOLT_FBRG_L3",
+  "FLY_MOTOR_L",
+  "BOLT_FM_L0",
+  "BOLT_FM_L1",
+  "BOLT_FM_L2",
+  "BOLT_FM_L3",
+  "FLY_MCLAMP_L",
+  "BOLT_MCL_L0",
+  "NUT_MCL_L0",
+  "BOLT_MCL_L1",
+  "NUT_MCL_L1",
+  "FLYWHEEL_R",
+  "FLY_CLAMP_R",
+  "FLY_SHAFT_R",
+  "FLY_BRG_R",
+  "BOLT_FBRG_R0",
+  "BOLT_FBRG_R1",
+  "BOLT_FBRG_R2",
+  "BOLT_FBRG_R3",
+  "FLY_MOTOR_R",
+  "BOLT_FM_R0",
+  "BOLT_FM_R1",
+  "BOLT_FM_R2",
+  "BOLT_FM_R3",
+  "FLY_MCLAMP_R",
+  "BOLT_MCL_R0",
+  "NUT_MCL_R0",
+  "BOLT_MCL_R1",
+  "NUT_MCL_R1",
+  "HOOD",
+  "HOOD_PIV_L",
+  "HOOD_PIN_L",
+  "HOOD_COL_L",
+  "HOOD_PIV_R",
+  "HOOD_PIN_R",
+  "HOOD_COL_R",
+  "HOOD_SERVO",
+  "SCRW_HSV_0",
+  "SCRW_HSV_1",
+  "SCRW_HSV_2",
+  "SCRW_HSV_3",
+  "HOOD_LINK",
+  "NIP_BACKPLATE",
+  "BOLT_NBP_0",
+  "NUT_NBP_0",
+  "BOLT_NBP_1",
+  "NUT_NBP_1",
+  "BOLT_NBP_2",
+  "NUT_NBP_2",
+  "BOLT_NBP_3",
+  "NUT_NBP_3",
+  "TURRET_TOP_BRACE",
+  "BOLT_TBR_0",
+  "BOLT_TBR_1",
+  "CAM_MOUNT",
+  "BOLT_CAM_0",
+  "NUT_CAM_0",
+  "BOLT_CAM_1",
+  "NUT_CAM_1",
+  "BOLT_CAM_2",
+  "NUT_CAM_2",
+  "BOLT_CAM_3",
+  "NUT_CAM_3",
+  "VSN_CAM",
+  "SCRW_CAM_0",
+  "SCRW_CAM_1",
+  "CAM_LED",
+  "YAW_MAGNET",
+  "WIRE_FLY_L",
+  "WIRE_FLY_R",
+  "WIRE_HOOD_SV",
+  "WIRE_CAM_USB",
+  "LIFT_BASE",
+  "BOLT_LB_0",
+  "NUT_LB_0",
+  "BOLT_LB_1",
+  "NUT_LB_1",
+  "BOLT_LB_2",
+  "NUT_LB_2",
+  "BOLT_LB_3",
+  "NUT_LB_3",
+  "LIFT_RAIL_L",
+  "LIFT_FOOT_L",
+  "BOLT_LRF_L0",
+  "NUT_LRF_L0",
+  "BOLT_LRF_L1",
+  "NUT_LRF_L1",
+  "LIFT_RAIL_R",
+  "LIFT_FOOT_R",
+  "BOLT_LRF_R0",
+  "NUT_LRF_R0",
+  "BOLT_LRF_R1",
+  "NUT_LRF_R1",
+  "LIFT_TOP_TIE",
+  "BOLT_LTT_L0",
+  "BOLT_LTT_L1",
+  "BOLT_LTT_R0",
+  "BOLT_LTT_R1",
+  "LIFT_TPIN",
+  "LIFT_TOP_PULLEY",
+  "ROPE_GUIDE",
+  "STOP_COLLAR_L",
+  "BOLT_SC_L0",
+  "BOLT_SC_L1",
+  "STOP_COLLAR_R",
+  "BOLT_SC_R0",
+  "BOLT_SC_R1",
+  "LIFT_S1_TRUCK_L0",
+  "SCRW_S1T_L0_0",
+  "SCRW_S1T_L0_1",
+  "LIFT_S1_TRUCK_L1",
+  "SCRW_S1T_L1_0",
+  "SCRW_S1T_L1_1",
+  "LIFT_S1_BAR_L",
+  "LIFT_S1_TRUCK_R0",
+  "SCRW_S1T_R0_0",
+  "SCRW_S1T_R0_1",
+  "LIFT_S1_TRUCK_R1",
+  "SCRW_S1T_R1_0",
+  "SCRW_S1T_R1_1",
+  "LIFT_S1_BAR_R",
+  "LIFT_S1_TIE",
+  "BOLT_S1TIE_0",
+  "BOLT_S1TIE_1",
+  "BOLT_S1TIE_2",
+  "BOLT_S1TIE_3",
+  "S1_PPIN",
+  "LIFT_PULLEY",
+  "LIFT_S2_BAR",
+  "LIFT_S2_TRUCK_0",
+  "SCRW_S2T_0_0",
+  "SCRW_S2T_0_1",
+  "LIFT_S2_TRUCK_1",
+  "SCRW_S2T_1_0",
+  "SCRW_S2T_1_1",
+  "LIFT_S2_TIE",
+  "BOLT_S2TIE_0",
+  "BOLT_S2TIE_1",
+  "BOLT_S2TIE_2",
+  "BOLT_S2TIE_3",
+  "CRADLE_ARM",
+  "BOLT_CARM_0",
+  "BOLT_CARM_1",
+  "BOLT_CARM_2",
+  "BOLT_CARM_3",
+  "CRADLE_CUP",
+  "CRADLE_FOAM",
+  "CRADLE_PIV",
+  "CRADLE_COL_0",
+  "CRADLE_COL_1",
+  "TILT_SERVO",
+  "SCRW_TSV_0",
+  "SCRW_TSV_1",
+  "SCRW_TSV_2",
+  "SCRW_TSV_3",
+  "LIFT_WINCH",
+  "BOLT_LW_0",
+  "NUT_LW_0",
+  "BOLT_LW_1",
+  "NUT_LW_1",
+  "BOLT_LW_2",
+  "NUT_LW_2",
+  "BOLT_LW_3",
+  "NUT_LW_3",
+  "WINCH_DPIN",
+  "WINCH_SPOOL",
+  "ROPE_DYNEEMA",
+  "LOAD_CHUTE",
+  "CHUTE_LIP_L1",
+  "CHUTE_LIP_L2",
+  "CHUTE_LIP_R1",
+  "CHUTE_LIP_R2",
+  "SCRW_CHL_0_0",
+  "SCRW_CHL_0_1",
+  "SCRW_CHL_1_0",
+  "SCRW_CHL_1_1",
+  "SCRW_CHL_2_0",
+  "SCRW_CHL_2_1",
+  "SCRW_CHL_3_0",
+  "SCRW_CHL_3_1",
+  "CHUTE_PORT_EAR",
+  "BOLT_CHP_0",
+  "BOLT_CHP_1",
+  "CHUTE_TOWER_PAD",
+  "BOLT_CHT_0",
+  "NUT_CHT_0",
+  "BOLT_CHT_1",
+  "NUT_CHT_1",
+  "WIRE_WINCH",
+  "WIRE_TILT_SV",
+  "WIRE_YAW_SV"
  ],
  "edges": [
   {
@@ -3763,6 +4079,971 @@
    "type": "embed"
   },
   {
+   "a": "BOLT_TWF_L_0",
+   "b": "NUT_TWF_L_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_L_1",
+   "b": "NUT_TWF_L_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_L_2",
+   "b": "NUT_TWF_L_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_L_3",
+   "b": "NUT_TWF_L_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_L_0",
+   "b": "NUT_TWC_L_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_L_1",
+   "b": "NUT_TWC_L_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_L_2",
+   "b": "NUT_TWC_L_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_L_3",
+   "b": "NUT_TWC_L_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_R_0",
+   "b": "NUT_TWF_R_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_R_1",
+   "b": "NUT_TWF_R_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_R_2",
+   "b": "NUT_TWF_R_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWF_R_3",
+   "b": "NUT_TWF_R_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_R_0",
+   "b": "NUT_TWC_R_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_R_1",
+   "b": "NUT_TWC_R_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_R_2",
+   "b": "NUT_TWC_R_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TWC_R_3",
+   "b": "NUT_TWC_R_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L0_1",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L0_0",
+   "b": "NUT_GUS_L0_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "NUT_GUS_L0_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L0_0",
+   "b": "NUT_GUD_L0_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L0_1",
+   "b": "NUT_GUD_L0_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L1_0",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L1_1",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L1_0",
+   "b": "NUT_GUS_L1_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_L1_1",
+   "b": "NUT_GUS_L1_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L1_0",
+   "b": "NUT_GUD_L1_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_L1_1",
+   "b": "NUT_GUD_L1_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R2_1",
+   "b": "TOWER_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_R2_0",
+   "b": "NUT_GUS_R2_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_R2_1",
+   "b": "NUT_GUS_R2_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R2_0",
+   "b": "NUT_GUD_R2_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R2_1",
+   "b": "NUT_GUD_R2_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R3_0",
+   "b": "TOWER_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R3_1",
+   "b": "TOWER_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_R3_0",
+   "b": "NUT_GUS_R3_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUS_R3_1",
+   "b": "NUT_GUS_R3_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R3_0",
+   "b": "NUT_GUD_R3_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_GUD_R3_1",
+   "b": "NUT_GUD_R3_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SLO_0",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SLO_1",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SLO_2",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SLO_3",
+   "b": "LAZY_SUSAN_LO",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_YTR_0",
+   "b": "TURRET_DECK",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_YTR_1",
+   "b": "TURRET_DECK",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_YTR_2",
+   "b": "TURRET_DECK",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_YTR_3",
+   "b": "TURRET_DECK",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_YSV_0",
+   "b": "YAW_TRAY",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_YSV_1",
+   "b": "YAW_TRAY",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_YSV_2",
+   "b": "YAW_TRAY",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_YSV_3",
+   "b": "YAW_TRAY",
+   "type": "embed"
+  },
+  {
+   "a": "YAW_SHAFT",
+   "b": "YAW_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "YAW_PINION",
+   "b": "YAW_SHAFT",
+   "type": "embed"
+  },
+  {
+   "a": "YAW_PINION",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_RING_0",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_RING_1",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_RING_2",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_RING_3",
+   "b": "RING_GEAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_0",
+   "b": "LAZY_SUSAN_HI",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_1",
+   "b": "LAZY_SUSAN_HI",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_2",
+   "b": "LAZY_SUSAN_HI",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SHI_3",
+   "b": "LAZY_SUSAN_HI",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_L0",
+   "b": "NUT_CK_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_L1",
+   "b": "NUT_CK_L1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_L2",
+   "b": "NUT_CK_L2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_L3",
+   "b": "NUT_CK_L3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R0",
+   "b": "NUT_CK_R0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R1",
+   "b": "NUT_CK_R1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R2",
+   "b": "NUT_CK_R2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CK_R3",
+   "b": "NUT_CK_R3",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_L",
+   "b": "FLYWHEEL_L",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_L",
+   "b": "FLY_CLAMP_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_L",
+   "b": "FLY_MOTOR_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_L0",
+   "b": "NUT_MCL_L0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_L1",
+   "b": "NUT_MCL_L1",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_R",
+   "b": "FLYWHEEL_R",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_R",
+   "b": "FLY_CLAMP_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_FBRG_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "FLY_SHAFT_R",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_R0",
+   "b": "NUT_MCL_R0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_MCL_R1",
+   "b": "NUT_MCL_R1",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "HOOD_COL_L",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "HOOD_COL_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HSV_0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HSV_1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HSV_2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_HSV_3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD_LINK",
+   "b": "HOOD_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "HOOD_LINK",
+   "b": "HOOD",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_0",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_1",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_2",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_3",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_0",
+   "b": "NUT_NBP_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_1",
+   "b": "NUT_NBP_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_2",
+   "b": "NUT_NBP_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_NBP_3",
+   "b": "NUT_NBP_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TBR_0",
+   "b": "TURRET_TOP_BRACE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_TBR_1",
+   "b": "TURRET_TOP_BRACE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_0",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_1",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CAM_3",
+   "b": "TURRET_PLATE",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_FLY_L",
+   "b": "FLY_MOTOR_L",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_FLY_R",
+   "b": "FLY_MOTOR_R",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_HOOD_SV",
+   "b": "HOOD_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_CAM_USB",
+   "b": "VSN_CAM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_0",
+   "b": "FRAME_RAIL_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_1",
+   "b": "FRAME_RAIL_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_0",
+   "b": "NUT_LB_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_1",
+   "b": "NUT_LB_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_2",
+   "b": "NUT_LB_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LB_3",
+   "b": "NUT_LB_3",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_L0",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_L1",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_R0",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LTT_R1",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "LIFT_TPIN",
+   "b": "LIFT_TOP_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SC_L0",
+   "b": "STOP_COLLAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SC_L1",
+   "b": "STOP_COLLAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SC_R0",
+   "b": "STOP_COLLAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_SC_R1",
+   "b": "STOP_COLLAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_L0_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_L0_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_L1_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_L1_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_R0_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_R0_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_R1_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S1T_R1_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S1TIE_0",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S1TIE_1",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S1TIE_2",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S1TIE_3",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "S1_PPIN",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S2T_0_0",
+   "b": "LIFT_S2_BAR",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S2T_0_1",
+   "b": "LIFT_S2_BAR",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S2T_1_0",
+   "b": "LIFT_S2_BAR",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_S2T_1_1",
+   "b": "LIFT_S2_BAR",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S2TIE_0",
+   "b": "LIFT_S2_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S2TIE_1",
+   "b": "LIFT_S2_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S2TIE_2",
+   "b": "LIFT_S2_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_S2TIE_3",
+   "b": "LIFT_S2_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CARM_0",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CARM_1",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CARM_2",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CARM_3",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "CRADLE_FOAM",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_CUP",
+   "type": "embed"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_TSV_0",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_TSV_1",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_TSV_2",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_TSV_3",
+   "b": "CRADLE_ARM",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_0",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_1",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_2",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_3",
+   "b": "LIFT_BASE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_0",
+   "b": "NUT_LW_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_1",
+   "b": "NUT_LW_1",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_2",
+   "b": "NUT_LW_2",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_LW_3",
+   "b": "NUT_LW_3",
+   "type": "embed"
+  },
+  {
+   "a": "WINCH_DPIN",
+   "b": "LIFT_WINCH",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "WINCH_SPOOL",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_S1_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_S2_TIE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "LOAD_CHUTE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHP_0",
+   "b": "PORT_FLANGE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHP_1",
+   "b": "PORT_FLANGE",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHT_0",
+   "b": "NUT_CHT_0",
+   "type": "embed"
+  },
+  {
+   "a": "BOLT_CHT_1",
+   "b": "NUT_CHT_1",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_WINCH",
+   "b": "LIFT_WINCH",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_TILT_SV",
+   "b": "TILT_SERVO",
+   "type": "embed"
+  },
+  {
+   "a": "WIRE_YAW_SV",
+   "b": "YAW_SERVO",
+   "type": "embed"
+  },
+  {
    "a": "FRAME_CROSS_B",
    "b": "FRAME_RAIL_L",
    "type": "face"
@@ -4833,6 +6114,321 @@
    "type": "face"
   },
   {
+   "a": "TOWER_L",
+   "b": "DECK_L",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_L",
+   "b": "TURRET_DECK",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_R",
+   "b": "DECK_R",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_R",
+   "b": "TURRET_DECK",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_L0",
+   "b": "TOWER_L",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_L0",
+   "b": "DECK_L",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_L1",
+   "b": "TOWER_L",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_L1",
+   "b": "DECK_L",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_R2",
+   "b": "TOWER_R",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_R2",
+   "b": "DECK_R",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_R3",
+   "b": "TOWER_R",
+   "type": "face"
+  },
+  {
+   "a": "TOWER_GUS_R3",
+   "b": "DECK_R",
+   "type": "face"
+  },
+  {
+   "a": "LAZY_SUSAN_LO",
+   "b": "TURRET_DECK",
+   "type": "face"
+  },
+  {
+   "a": "YAW_TRAY",
+   "b": "TURRET_DECK",
+   "type": "face"
+  },
+  {
+   "a": "YAW_SERVO",
+   "b": "YAW_TRAY",
+   "type": "face"
+  },
+  {
+   "a": "HALL_SNSR",
+   "b": "TURRET_DECK",
+   "type": "face"
+  },
+  {
+   "a": "RING_GEAR",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "LAZY_SUSAN_HI",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "LAUNCH_CHEEK_L",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "LAUNCH_CHEEK_R",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "FLY_BRG_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "face"
+  },
+  {
+   "a": "FLY_MOTOR_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "face"
+  },
+  {
+   "a": "FLY_MCLAMP_L",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "FLY_BRG_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "face"
+  },
+  {
+   "a": "FLY_MOTOR_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "face"
+  },
+  {
+   "a": "FLY_MCLAMP_R",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "HOOD_PIV_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "face"
+  },
+  {
+   "a": "HOOD_PIV_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "face"
+  },
+  {
+   "a": "HOOD_SERVO",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "face"
+  },
+  {
+   "a": "NIP_BACKPLATE",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "TURRET_TOP_BRACE",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "face"
+  },
+  {
+   "a": "TURRET_TOP_BRACE",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "face"
+  },
+  {
+   "a": "CAM_MOUNT",
+   "b": "TURRET_PLATE",
+   "type": "face"
+  },
+  {
+   "a": "VSN_CAM",
+   "b": "CAM_MOUNT",
+   "type": "face"
+  },
+  {
+   "a": "CAM_LED",
+   "b": "VSN_CAM",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "FRAME_RAIL_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_RAIL_L",
+   "b": "LIFT_BASE",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_RAIL_L",
+   "b": "TIE_RB_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_FOOT_L",
+   "b": "LIFT_BASE",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_RAIL_R",
+   "b": "LIFT_BASE",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_RAIL_R",
+   "b": "TIE_RB_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_FOOT_R",
+   "b": "LIFT_BASE",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "LIFT_RAIL_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "LIFT_RAIL_R",
+   "type": "face"
+  },
+  {
+   "a": "ROPE_GUIDE",
+   "b": "LIFT_TOP_TIE",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TIE",
+   "b": "LIFT_S1_BAR_L",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S1_TIE",
+   "b": "LIFT_S1_BAR_R",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S2_BAR",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S2_BAR",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_S2_TIE",
+   "b": "LIFT_S2_BAR",
+   "type": "face"
+  },
+  {
+   "a": "CRADLE_ARM",
+   "b": "LIFT_S2_TIE",
+   "type": "face"
+  },
+  {
+   "a": "TILT_SERVO",
+   "b": "CRADLE_ARM",
+   "type": "face"
+  },
+  {
+   "a": "LIFT_WINCH",
+   "b": "LIFT_BASE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "LOAD_CHUTE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_LIP_R1",
+   "b": "LOAD_CHUTE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_LIP_R2",
+   "b": "LOAD_CHUTE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "PORT_FLANGE",
+   "type": "face"
+  },
+  {
+   "a": "CHUTE_TOWER_PAD",
+   "b": "TOWER_L",
+   "type": "face"
+  },
+  {
    "a": "WHEEL_PLATE_FL_IN",
    "b": "AXLE_FL",
    "type": "journal"
@@ -5345,6 +6941,76 @@
   {
    "a": "DIV_SHAFT",
    "b": "DIV_BRKT",
+   "type": "journal"
+  },
+  {
+   "a": "YAW_SHAFT",
+   "b": "TURRET_DECK",
+   "type": "journal"
+  },
+  {
+   "a": "FLY_SHAFT_L",
+   "b": "FLY_BRG_L",
+   "type": "journal"
+  },
+  {
+   "a": "FLY_SHAFT_R",
+   "b": "FLY_BRG_R",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "HOOD_PIV_L",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "HOOD",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "HOOD_PIV_R",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "HOOD",
+   "type": "journal"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "journal"
+  },
+  {
+   "a": "LIFT_TOP_PULLEY",
+   "b": "LIFT_TPIN",
+   "type": "journal"
+  },
+  {
+   "a": "LIFT_PULLEY",
+   "b": "S1_PPIN",
+   "type": "journal"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_ARM",
+   "type": "journal"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "TILT_SERVO",
+   "type": "journal"
+  },
+  {
+   "a": "WINCH_SPOOL",
+   "b": "WINCH_DPIN",
    "type": "journal"
   },
   {
@@ -6483,6 +8149,266 @@
    "type": "contact"
   },
   {
+   "a": "BOLT_TWF_L_0",
+   "b": "DECK_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_L_1",
+   "b": "DECK_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_L_2",
+   "b": "DECK_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_L_3",
+   "b": "DECK_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_L_0",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_L_1",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_L_2",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_L_3",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_R_0",
+   "b": "DECK_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_R_1",
+   "b": "DECK_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_R_2",
+   "b": "DECK_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWF_R_3",
+   "b": "DECK_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_R_0",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_R_1",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_R_2",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_TWC_R_3",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L0_0",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUD_L0_0",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L1_0",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_L1_1",
+   "b": "TOWER_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R2_0",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R2_1",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUD_R2_0",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R3_0",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_GUS_R3_1",
+   "b": "TOWER_R",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_L0",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_L1",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_L2",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_L3",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_R0",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_R1",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_R2",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_CK_R3",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MCL_L0",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MCL_L1",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MCL_R0",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_MCL_R1",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "contact"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "contact"
+  },
+  {
+   "a": "VSN_CAM",
+   "b": "CAM_MOUNT",
+   "type": "contact"
+  },
+  {
+   "a": "YAW_MAGNET",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LB_2",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LB_3",
+   "b": "FRAME_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "NUT_LRF_L0",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "NUT_LRF_L1",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "NUT_LRF_R0",
+   "type": "contact"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "NUT_LRF_R1",
+   "type": "contact"
+  },
+  {
+   "a": "STOP_COLLAR_L",
+   "b": "LIFT_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "STOP_COLLAR_R",
+   "b": "LIFT_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "CRADLE_COL_0",
+   "b": "CRADLE_PIV",
+   "type": "contact"
+  },
+  {
+   "a": "CRADLE_COL_1",
+   "b": "CRADLE_PIV",
+   "type": "contact"
+  },
+  {
    "a": "NUT_RIV_IN_FL_00",
    "b": "FRAME_RAIL_L",
    "type": "contact"
@@ -6840,6 +8766,126 @@
   {
    "a": "MASTER_LINK",
    "b": "CHAIN_25",
+   "type": "contact"
+  },
+  {
+   "a": "LAZY_SUSAN_LO",
+   "b": "LAZY_SUSAN_HI",
+   "type": "contact"
+  },
+  {
+   "a": "YAW_PINION",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
+   "a": "FLY_MCLAMP_L",
+   "b": "FLY_MOTOR_L",
+   "type": "contact"
+  },
+  {
+   "a": "FLY_MCLAMP_R",
+   "b": "FLY_MOTOR_R",
+   "type": "contact"
+  },
+  {
+   "a": "HOOD_COL_L",
+   "b": "HOOD",
+   "type": "contact"
+  },
+  {
+   "a": "HOOD_COL_R",
+   "b": "HOOD",
+   "type": "contact"
+  },
+  {
+   "a": "YAW_MAGNET",
+   "b": "HALL_SNSR",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "TIE_RB_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "contact"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "contact"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_TOP_PULLEY",
+   "type": "contact"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "LIFT_PULLEY",
+   "type": "contact"
+  },
+  {
+   "a": "ROPE_DYNEEMA",
+   "b": "ROPE_GUIDE",
+   "type": "contact"
+  },
+  {
+   "a": "LOAD_CHUTE",
+   "b": "PORT_FLANGE",
+   "type": "contact"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "CHUTE_LIP_L1",
+   "type": "contact"
+  },
+  {
+   "a": "CHUTE_TOWER_PAD",
+   "b": "CHUTE_LIP_L2",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_WINCH",
+   "b": "LIFT_BASE",
+   "type": "contact"
+  },
+  {
+   "a": "WIRE_TILT_SV",
+   "b": "CRADLE_ARM",
    "type": "contact"
   },
   {
@@ -15291,45 +17337,4053 @@
    "joint": "snsr_brkt"
   },
   {
+   "a": "TOWER_L",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_2",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_2",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_3",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "BOLT_TWF_L_3",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_2",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_2",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_3",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "NUT_TWF_L_3",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "tower_l"
+  },
+  {
+   "a": "TURRET_DECK",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_2",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "BOLT_TWC_L_3",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_2",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "NUT_TWC_L_3",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "tdeck_l"
+  },
+  {
+   "a": "TOWER_R",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_2",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_2",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_3",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "BOLT_TWF_R_3",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_2",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_2",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_3",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "NUT_TWF_R_3",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "tower_r"
+  },
+  {
+   "a": "TURRET_DECK",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_2",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "BOLT_TWC_R_3",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_2",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "NUT_TWC_R_3",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "tdeck_r"
+  },
+  {
+   "a": "TOWER_GUS_L0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "TOWER_GUS_L0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "TOWER_L",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_0",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUS_L0_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_0",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_1",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "BOLT_GUD_L0_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_0",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_1",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUS_L0_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_0",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_1",
+   "b": "TOWER_GUS_L0",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "NUT_GUD_L0_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l0"
+  },
+  {
+   "a": "TOWER_GUS_L1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "TOWER_GUS_L1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "TOWER_L",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_0",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_1",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUS_L1_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_0",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_1",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "BOLT_GUD_L1_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_0",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_1",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUS_L1_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_0",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_0",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_1",
+   "b": "TOWER_GUS_L1",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "NUT_GUD_L1_1",
+   "b": "DECK_L",
+   "type": "fastener",
+   "joint": "gusset_l1"
+  },
+  {
+   "a": "TOWER_GUS_R2",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "TOWER_GUS_R2",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "TOWER_R",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_0",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_1",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUS_R2_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_0",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_1",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "BOLT_GUD_R2_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_0",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_1",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUS_R2_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_0",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_1",
+   "b": "TOWER_GUS_R2",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "NUT_GUD_R2_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r2"
+  },
+  {
+   "a": "TOWER_GUS_R3",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "TOWER_GUS_R3",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "TOWER_R",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_0",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_1",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUS_R3_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_0",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_1",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "BOLT_GUD_R3_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_0",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_1",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUS_R3_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_0",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_0",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_0",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_1",
+   "b": "TOWER_GUS_R3",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_1",
+   "b": "TOWER_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "NUT_GUD_R3_1",
+   "b": "DECK_R",
+   "type": "fastener",
+   "joint": "gusset_r3"
+  },
+  {
+   "a": "LAZY_SUSAN_LO",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_0",
+   "b": "LAZY_SUSAN_LO",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_1",
+   "b": "LAZY_SUSAN_LO",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_2",
+   "b": "LAZY_SUSAN_LO",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_3",
+   "b": "LAZY_SUSAN_LO",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "BOLT_SLO_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "susan_lo"
+  },
+  {
+   "a": "YAW_TRAY",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_0",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_0",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_1",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_1",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_2",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_2",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_3",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "BOLT_YTR_3",
+   "b": "TURRET_DECK",
+   "type": "fastener",
+   "joint": "yaw_tray"
+  },
+  {
+   "a": "YAW_SERVO",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_0",
+   "b": "YAW_SERVO",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_0",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_1",
+   "b": "YAW_SERVO",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_1",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_2",
+   "b": "YAW_SERVO",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_2",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_3",
+   "b": "YAW_SERVO",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "SCRW_YSV_3",
+   "b": "YAW_TRAY",
+   "type": "fastener",
+   "joint": "yaw_servo"
+  },
+  {
+   "a": "RING_GEAR",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_0",
+   "b": "RING_GEAR",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_1",
+   "b": "RING_GEAR",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_2",
+   "b": "RING_GEAR",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_3",
+   "b": "RING_GEAR",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "BOLT_RING_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "ring_gear"
+  },
+  {
+   "a": "LAZY_SUSAN_HI",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_0",
+   "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_1",
+   "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_2",
+   "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_3",
+   "b": "LAZY_SUSAN_HI",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "BOLT_SHI_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "susan_hi"
+  },
+  {
+   "a": "LAUNCH_CHEEK_L",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "BOLT_CK_L3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "NUT_CK_L3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_l"
+  },
+  {
+   "a": "LAUNCH_CHEEK_R",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "BOLT_CK_R3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "NUT_CK_R3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cheek_r"
+  },
+  {
+   "a": "FLY_BRG_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L0",
+   "b": "FLY_BRG_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L1",
+   "b": "FLY_BRG_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L2",
+   "b": "FLY_BRG_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L3",
+   "b": "FLY_BRG_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "BOLT_FBRG_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flybrg_l"
+  },
+  {
+   "a": "FLY_MOTOR_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L0",
+   "b": "FLY_MOTOR_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L1",
+   "b": "FLY_MOTOR_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L2",
+   "b": "FLY_MOTOR_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L2",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L3",
+   "b": "FLY_MOTOR_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "BOLT_FM_L3",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "flymotor_l"
+  },
+  {
+   "a": "FLY_MCLAMP_L",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "BOLT_MCL_L0",
+   "b": "FLY_MCLAMP_L",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "BOLT_MCL_L0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "BOLT_MCL_L1",
+   "b": "FLY_MCLAMP_L",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "BOLT_MCL_L1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "NUT_MCL_L0",
+   "b": "FLY_MCLAMP_L",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "NUT_MCL_L0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "NUT_MCL_L1",
+   "b": "FLY_MCLAMP_L",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "NUT_MCL_L1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_l"
+  },
+  {
+   "a": "FLY_BRG_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R0",
+   "b": "FLY_BRG_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R1",
+   "b": "FLY_BRG_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R2",
+   "b": "FLY_BRG_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R3",
+   "b": "FLY_BRG_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "BOLT_FBRG_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flybrg_r"
+  },
+  {
+   "a": "FLY_MOTOR_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R0",
+   "b": "FLY_MOTOR_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R1",
+   "b": "FLY_MOTOR_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R2",
+   "b": "FLY_MOTOR_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R3",
+   "b": "FLY_MOTOR_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "BOLT_FM_R3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "flymotor_r"
+  },
+  {
+   "a": "FLY_MCLAMP_R",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "BOLT_MCL_R0",
+   "b": "FLY_MCLAMP_R",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "BOLT_MCL_R0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "BOLT_MCL_R1",
+   "b": "FLY_MCLAMP_R",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "BOLT_MCL_R1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "NUT_MCL_R0",
+   "b": "FLY_MCLAMP_R",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "NUT_MCL_R0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "NUT_MCL_R1",
+   "b": "FLY_MCLAMP_R",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "NUT_MCL_R1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "mclamp_r"
+  },
+  {
+   "a": "HOOD",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "HOOD_PIN_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "HOOD_COL_L",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "HOOD_COL_L",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "hood_piv_l"
+  },
+  {
+   "a": "HOOD",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "HOOD_PIN_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "HOOD_COL_R",
+   "b": "HOOD",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "HOOD_COL_R",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_piv_r"
+  },
+  {
+   "a": "HOOD_SERVO",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_0",
+   "b": "HOOD_SERVO",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_1",
+   "b": "HOOD_SERVO",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_2",
+   "b": "HOOD_SERVO",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_2",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_3",
+   "b": "HOOD_SERVO",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "SCRW_HSV_3",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "hood_servo"
+  },
+  {
+   "a": "NIP_BACKPLATE",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_0",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_1",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_2",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_3",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "BOLT_NBP_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_0",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_1",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_2",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_3",
+   "b": "NIP_BACKPLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "NUT_NBP_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "nip_backplate"
+  },
+  {
+   "a": "TURRET_TOP_BRACE",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "TURRET_TOP_BRACE",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "LAUNCH_CHEEK_L",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_0",
+   "b": "TURRET_TOP_BRACE",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_0",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_0",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_1",
+   "b": "TURRET_TOP_BRACE",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_1",
+   "b": "LAUNCH_CHEEK_L",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "BOLT_TBR_1",
+   "b": "LAUNCH_CHEEK_R",
+   "type": "fastener",
+   "joint": "top_brace"
+  },
+  {
+   "a": "CAM_MOUNT",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_0",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_1",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_3",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "BOLT_CAM_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_0",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_0",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_1",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_1",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_2",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_2",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_3",
+   "b": "CAM_MOUNT",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "NUT_CAM_3",
+   "b": "TURRET_PLATE",
+   "type": "fastener",
+   "joint": "cam_mount"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_2",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_2",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_3",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "BOLT_LB_3",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_2",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_2",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_3",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "NUT_LB_3",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_base"
+  },
+  {
+   "a": "LIFT_FOOT_L",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_FOOT_L",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_FOOT_L",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_RAIL_L",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_RAIL_L",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "LIFT_FOOT_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "LIFT_FOOT_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "BOLT_LRF_L1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L0",
+   "b": "LIFT_FOOT_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L1",
+   "b": "LIFT_FOOT_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "NUT_LRF_L1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_l"
+  },
+  {
+   "a": "LIFT_FOOT_R",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_FOOT_R",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_FOOT_R",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_RAIL_R",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_RAIL_R",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_BASE",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "LIFT_FOOT_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "LIFT_FOOT_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "BOLT_LRF_R1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R0",
+   "b": "LIFT_FOOT_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R0",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R1",
+   "b": "LIFT_FOOT_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "NUT_LRF_R1",
+   "b": "FRAME_RAIL_L",
+   "type": "fastener",
+   "joint": "rail_foot_r"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "LIFT_TOP_TIE",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "LIFT_RAIL_L",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L0",
+   "b": "LIFT_TOP_TIE",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L1",
+   "b": "LIFT_TOP_TIE",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_L1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R0",
+   "b": "LIFT_TOP_TIE",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R1",
+   "b": "LIFT_TOP_TIE",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "BOLT_LTT_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "lift_top_tie"
+  },
+  {
+   "a": "STOP_COLLAR_L",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "collar_l"
+  },
+  {
+   "a": "BOLT_SC_L0",
+   "b": "STOP_COLLAR_L",
+   "type": "fastener",
+   "joint": "collar_l"
+  },
+  {
+   "a": "BOLT_SC_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "collar_l"
+  },
+  {
+   "a": "BOLT_SC_L1",
+   "b": "STOP_COLLAR_L",
+   "type": "fastener",
+   "joint": "collar_l"
+  },
+  {
+   "a": "BOLT_SC_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "collar_l"
+  },
+  {
+   "a": "STOP_COLLAR_R",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "collar_r"
+  },
+  {
+   "a": "BOLT_SC_R0",
+   "b": "STOP_COLLAR_R",
+   "type": "fastener",
+   "joint": "collar_r"
+  },
+  {
+   "a": "BOLT_SC_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "collar_r"
+  },
+  {
+   "a": "BOLT_SC_R1",
+   "b": "STOP_COLLAR_R",
+   "type": "fastener",
+   "joint": "collar_r"
+  },
+  {
+   "a": "BOLT_SC_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "collar_r"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "LIFT_S1_BAR_L",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_0",
+   "b": "LIFT_S1_TRUCK_L0",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_1",
+   "b": "LIFT_S1_TRUCK_L0",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "SCRW_S1T_L0_1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l0"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_L1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "LIFT_S1_BAR_L",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_0",
+   "b": "LIFT_S1_TRUCK_L1",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_0",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_1",
+   "b": "LIFT_S1_TRUCK_L1",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "SCRW_S1T_L1_1",
+   "b": "LIFT_RAIL_L",
+   "type": "fastener",
+   "joint": "s1truck_l1"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "LIFT_S1_BAR_R",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_0",
+   "b": "LIFT_S1_TRUCK_R0",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_1",
+   "b": "LIFT_S1_TRUCK_R0",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "SCRW_S1T_R0_1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r0"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "LIFT_S1_TRUCK_R1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "LIFT_S1_BAR_R",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_0",
+   "b": "LIFT_S1_TRUCK_R1",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_0",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_1",
+   "b": "LIFT_S1_TRUCK_R1",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "SCRW_S1T_R1_1",
+   "b": "LIFT_RAIL_R",
+   "type": "fastener",
+   "joint": "s1truck_r1"
+  },
+  {
+   "a": "LIFT_S1_TIE",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "LIFT_S1_TIE",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "LIFT_S1_BAR_L",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_0",
+   "b": "LIFT_S1_TIE",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_1",
+   "b": "LIFT_S1_TIE",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_2",
+   "b": "LIFT_S1_TIE",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_2",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_2",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_3",
+   "b": "LIFT_S1_TIE",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_3",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "BOLT_S1TIE_3",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s1_tie"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S2_BAR",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S2_BAR",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S1_BAR_L",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_0",
+   "b": "LIFT_S2_TRUCK_0",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_0",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_1",
+   "b": "LIFT_S2_TRUCK_0",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_1",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "SCRW_S2T_0_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_0"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S2_TRUCK_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S2_BAR",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S2_BAR",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S1_BAR_L",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_0",
+   "b": "LIFT_S2_TRUCK_1",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_0",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_0",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_0",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_1",
+   "b": "LIFT_S2_TRUCK_1",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_1",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_1",
+   "b": "LIFT_S1_BAR_L",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "SCRW_S2T_1_1",
+   "b": "LIFT_S1_BAR_R",
+   "type": "fastener",
+   "joint": "s2truck_1"
+  },
+  {
+   "a": "LIFT_S2_TIE",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_0",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_0",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_1",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_1",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_2",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_2",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_3",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "BOLT_S2TIE_3",
+   "b": "LIFT_S2_BAR",
+   "type": "fastener",
+   "joint": "s2_tie"
+  },
+  {
+   "a": "CRADLE_ARM",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_0",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_0",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_1",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_1",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_2",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_2",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_3",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "BOLT_CARM_3",
+   "b": "LIFT_S2_TIE",
+   "type": "fastener",
+   "joint": "cradle_arm"
+  },
+  {
+   "a": "CRADLE_CUP",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_piv"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_CUP",
+   "type": "fastener",
+   "joint": "cradle_piv"
+  },
+  {
+   "a": "CRADLE_PIV",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "cradle_piv"
+  },
+  {
+   "a": "TILT_SERVO",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_0",
+   "b": "TILT_SERVO",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_0",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_1",
+   "b": "TILT_SERVO",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_1",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_2",
+   "b": "TILT_SERVO",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_2",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_3",
+   "b": "TILT_SERVO",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "SCRW_TSV_3",
+   "b": "CRADLE_ARM",
+   "type": "fastener",
+   "joint": "tilt_servo"
+  },
+  {
+   "a": "LIFT_WINCH",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_0",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_1",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_2",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_2",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_3",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "BOLT_LW_3",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_0",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_0",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_1",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_1",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_2",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_2",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_3",
+   "b": "LIFT_WINCH",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "NUT_LW_3",
+   "b": "LIFT_BASE",
+   "type": "fastener",
+   "joint": "lift_winch"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L2",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L2",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_L2",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_R1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_R1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_LIP_R2",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_0",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_0_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_0",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_1_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_0",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_2_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_0",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "CHUTE_LIP_R1",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "CHUTE_LIP_R2",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "SCRW_CHL_3_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_lips"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "CHUTE_PORT_EAR",
+   "b": "PORT_FLANGE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "CHUTE_LIP_L1",
+   "b": "PORT_FLANGE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "LOAD_CHUTE",
+   "b": "PORT_FLANGE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_0",
+   "b": "CHUTE_PORT_EAR",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_0",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_0",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_0",
+   "b": "PORT_FLANGE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_1",
+   "b": "CHUTE_PORT_EAR",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_1",
+   "b": "CHUTE_LIP_L1",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_1",
+   "b": "LOAD_CHUTE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "BOLT_CHP_1",
+   "b": "PORT_FLANGE",
+   "type": "fastener",
+   "joint": "chute_mount"
+  },
+  {
+   "a": "CHUTE_TOWER_PAD",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "CHUTE_TOWER_PAD",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "CHUTE_LIP_L2",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
    "a": "WHEEL_ASSY_FL",
    "b": "AXLE_FL",
    "type": "carrier"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
   },
   {
    "a": "WHEEL_ASSY_FR",
@@ -15337,40 +21391,76 @@
    "type": "carrier"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
   },
   {
    "a": "WHEEL_ASSY_RL",
@@ -15378,40 +21468,76 @@
    "type": "carrier"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
   },
   {
    "a": "WHEEL_ASSY_RR",
@@ -15419,40 +21545,76 @@
    "type": "carrier"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_0",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_0",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_0",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_COLOR",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "SNSR_BRKT",
+   "a": "BOLT_CHT_1",
+   "b": "CHUTE_LIP_L2",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
   },
   {
-   "a": "SCRW_SNSR_1",
-   "b": "HOP_WALL_R",
+   "a": "BOLT_CHT_1",
+   "b": "TOWER_L",
    "type": "fastener",
-   "joint": "snsr_brkt"
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_0",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_TOWER_PAD",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "CHUTE_LIP_L2",
+   "type": "fastener",
+   "joint": "chute_tower"
+  },
+  {
+   "a": "NUT_CHT_1",
+   "b": "TOWER_L",
+   "type": "fastener",
+   "joint": "chute_tower"
   }
  ]
 }

@@ -124,7 +124,7 @@ def _tower(doc, ctx, sgn):
     if sgn > 0:
         fbxs = ("-160", "-124", "-88", "-52")
         fby = "(Parameters.tower_lat_off - 5.8)"
-        cbxs = ("-168", "-156", "-18", "-10")
+        cbxs = ("-172", "-164", "-18", "-10")
         cby = "(Parameters.tower_lat_off - 22.8)"
     else:
         fbxs = ("-160", "-140", "-124", "-88")
@@ -145,8 +145,14 @@ def _tower(doc, ctx, sgn):
     # gusset tower-bolt clearance bores through the leg (axis Y)
     gy = ("(%s - Parameters.tower_thk / 2 - 1)" % lat if sgn > 0 else
           "(%s - Parameters.tower_thk / 2 - 1)" % lat)
-    for i, (gx, gz) in enumerate((("-170.5", "104"), ("-170.5", "120"),
-                                  ("-20.5", "104"), ("-20.5", "120"))):
+    if sgn > 0:
+        # west gusset bolts sit in the sill below the hub window
+        gbs = (("-170.5", "90"), ("-162", "90"),
+               ("-20.5", "104"), ("-20.5", "120"))
+    else:
+        gbs = (("-170.5", "104"), ("-170.5", "120"),
+               ("-20.5", "104"), ("-20.5", "120"))
+    for i, (gx, gz) in enumerate(gbs):
         tools.append(pk.tool_cyl(
             doc, "%s_GB%d" % (nm, i), {"Radius": "2.4",
                                        "Height": "5"},
@@ -155,17 +161,20 @@ def _tower(doc, ctx, sgn):
              "Placement.Base.z": gz},
             pk.axis_rot("Y")))
     if sgn > 0:
-        # ELEC_SHELF pass-through slot (shelf x -165..-30, z 94..96)
+        # ELEC_SHELF + HUB_EXP pass-through window: the shelf (z94-96)
+        # and the hub body on it (x -170..-28, z 96..125) straddle the
+        # wall; the opening leaves 2mm clearance all around
         tools.append(pk.tool_box(
             doc, "%s_SHELF" % nm,
-            {"Length": "137", "Width": "12", "Height": "5.5"},
-            {"Placement.Base.x": "-166",
+            {"Length": "146", "Width": "12", "Height": "33.5"},
+            {"Placement.Base.x": "-172",
              "Placement.Base.y": "(%s - 6)" % lat,
-             "Placement.Base.z": "92.5"}))
-        # load-chute pass-through slot (ball sweep x -150..-52, z 98..214)
+             "Placement.Base.z": "93.5"}))
+        # load-chute pass-through slot: open-top; the D93 ball sweep
+        # at the wall plane spans x -138..-45 up to the tower top
         tools.append(pk.tool_box(
             doc, "%s_CHUTE" % nm,
-            {"Length": "110", "Width": "12", "Height": "116"},
+            {"Length": "122", "Width": "12", "Height": "147"},
             {"Placement.Base.x": "-158",
              "Placement.Base.y": "(%s - 6)" % lat,
              "Placement.Base.z": "98"}))
@@ -249,7 +258,16 @@ def _gusset(doc, ctx, sgn, idx, gx0):
                    nm + "_blank_UNVERIFIED",
                    "UNVERIFIED - gusset blank", leg, [foot])
     tools = []
-    if sgn > 0:
+    if sgn > 0 and idx == 0:
+        # hub pass-through notch in the leg (tower window x -172..-26,
+        # z 93.5..127): the surviving west spine is x -176..-170
+        tools.append(pk.tool_box(
+            doc, "%s_HUB" % nm,
+            {"Length": "20", "Width": "6", "Height": "33.5"},
+            {"Placement.Base.x": "(%s + 6)" % gx0,
+             "Placement.Base.y": "(%s - 6)" % lat,
+             "Placement.Base.z": "93.5"}))
+    elif sgn > 0:
         # shelf slot: keep a 10 mm side strip, open notch on the east edge
         tools.append(pk.tool_box(
             doc, "%s_SHELF" % nm,
@@ -257,13 +275,18 @@ def _gusset(doc, ctx, sgn, idx, gx0):
             {"Placement.Base.x": "(%s + 10)" % gx0,
              "Placement.Base.y": "(%s - 6)" % lat,
              "Placement.Base.z": "92.5"}))
-        # tower-bolt clearance bores (axis Y)
+    # tower-bolt clearance bores (axis Y); the L0 column sits in the
+    # sill below the hub window
     gy = ("(%s - Parameters.tower_thk / 2 - 4)" % lat if sgn > 0 else
           "(%s + Parameters.tower_thk / 2 - 1)" % lat)
-    for i, gz in enumerate(("104", "120")):
+    if sgn > 0 and idx == 0:
+        tb_ = (("(%s + 5.5)" % gx0, "90"), ("(%s + 14)" % gx0, "90"))
+    else:
+        tb_ = (("(%s + 5.5)" % gx0, "104"), ("(%s + 5.5)" % gx0, "120"))
+    for i, (bx, gz) in enumerate(tb_):
         tools.append(pk.tool_cyl(
             doc, "%s_TB%d" % (nm, i), {"Radius": "2.4", "Height": "6"},
-            {"Placement.Base.x": "(%s + 5.5)" % gx0,
+            {"Placement.Base.x": bx,
              "Placement.Base.y": gy,
              "Placement.Base.z": gz},
             pk.axis_rot("Y")))
@@ -274,12 +297,12 @@ def _gusset(doc, ctx, sgn, idx, gx0):
     _fp(ctx, g.Name, tower)
     _fp(ctx, g.Name, deck)
     bolts, nuts = [], []
-    for i, gz in enumerate(("104", "120")):
+    for i, (bx, gz) in enumerate(tb_):
         bn = "BOLT_GUS_%s_%d" % (nm[-2:], i)
         nn = "NUT_GUS_%s_%d" % (nm[-2:], i)
         sgn_char = "Y" if sgn > 0 else "-Y"
         _bolt(doc, ctx, bn,
-              {"Placement.Base.x": "(%s + 5.5)" % gx0,
+              {"Placement.Base.x": bx,
                "Placement.Base.y":
                ("(%s - Parameters.tower_thk / 2 - 3 - "
                  "Parameters.bolt_head_h)" % lat if sgn > 0 else
@@ -288,8 +311,8 @@ def _gusset(doc, ctx, sgn, idx, gx0):
                "Placement.Base.z": gz},
               sgn_char, "8")
         _nut(doc, ctx, nn,
-             {"Placement.Base.x": "(%s + 5.5 - Parameters.nut4_wrench / 2)"
-              % gx0,
+             {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)"
+              % bx,
               "Placement.Base.y":
               ("(%s + Parameters.tower_thk / 2)" % lat if sgn > 0 else
                "(%s - Parameters.tower_thk / 2 - Parameters.nut4_h)" % lat),
@@ -380,13 +403,24 @@ def _turret_deck(doc, ctx):
 def _susan(doc, ctx):
     """Split lazy-susan races: LO bolted to the deck, HI bolted to the
     rotating plate; the race pair contact is the real load path."""
-    lo = pk.bore_cyl(doc, "LAZY_SUSAN_LO",
-                     "LAZY_SUSAN_LO_132x116_UNVERIFIED",
-                     "UNVERIFIED - lazy susan lower race",
-                     "Parameters.susan_d", "Parameters.susan_race_h",
-                     "Parameters.susan_bore_d",
-                     {"Placement.Base.x": AXX, "Placement.Base.y": "0",
-                      "Placement.Base.z": DTP}, "Z")
+    lo0 = pk.bore_cyl(doc, "TOOL_SUSAN_LO0",
+                      "LAZY_SUSAN_LO_blank_UNVERIFIED",
+                      "UNVERIFIED - lazy susan lower race blank",
+                      "Parameters.susan_d", "Parameters.susan_race_h",
+                      "Parameters.susan_bore_d",
+                      {"Placement.Base.x": AXX, "Placement.Base.y": "0",
+                       "Placement.Base.z": DTP}, "Z")
+    # ball-exit relief: the D93 sphere caps at S11/S12 (center z203-204)
+    # graze the race bore rim on the +Y side down to z~250; notch the
+    # annulus inner edge there, clear of the four race-bolt seats
+    nch = pk.tool_box(doc, "TOOL_SUSAN_LO_NCH",
+                      {"Length": "70", "Width": "45", "Height": "6"},
+                      {"Placement.Base.x": "-101",
+                       "Placement.Base.y": "30",
+                       "Placement.Base.z": "246"})
+    lo = pk.cut(doc, "LAZY_SUSAN_LO",
+                "LAZY_SUSAN_LO_132x116_UNVERIFIED",
+                "UNVERIFIED - lazy susan lower race", lo0, [nch])
     _s(ctx, lo)
     hi = pk.bore_cyl(doc, "LAZY_SUSAN_HI",
                      "LAZY_SUSAN_HI_132x116_UNVERIFIED",
@@ -660,7 +694,7 @@ def _plate(doc, ctx):
     _s(ctx, pl)
     _bom(ctx, "turret", "turret plate 4mm acetal", "acetal",
          "O170x4 + tabs", "UNVERIFIED", [pl.Name])
-    # susan-HI bolts (down through plate into the race top)
+    # susan-HI bolts (down through plate + ring gear into the race top)
     bolts = []
     for i, (px, py) in enumerate((("-9.71", "32.5"), ("-122.29", "32.5"),
                                   ("-122.29", "-32.5"),
@@ -669,11 +703,11 @@ def _plate(doc, ctx):
         _bolt(doc, ctx, bn,
               {"Placement.Base.x": px, "Placement.Base.y": py,
                "Placement.Base.z": "(%s + Parameters.bolt_head_h)" % PLTOP},
-              "-Z", "12")
+              "-Z", "16")
         bolts.append(bn)
-    _jm(ctx, "susan_hi", ["LAZY_SUSAN_HI", pl.Name], bolts,
+    _jm(ctx, "susan_hi", ["LAZY_SUSAN_HI", "RING_GEAR", pl.Name], bolts,
         terminal="LAZY_SUSAN_HI")
-    _fp(ctx, "LAZY_SUSAN_HI", pl.Name)
+    _fp(ctx, "LAZY_SUSAN_HI", "RING_GEAR")
     return pl
 
 
@@ -825,6 +859,7 @@ def _fly_assy(doc, ctx, sgn):
           else "(-(Parameters.nip_gap / 2) - Parameters.fly_w)"),
          "Placement.Base.z": "Parameters.fly_axis_z"}, "Y")
     _s(ctx, cl)
+    _fp(ctx, cl.Name, wh.Name)
     # shaft: wheel bore -> bearing -> cheek clearance -> motor socket
     shy = "44" if sgn > 0 else "-67"
     sh = pk.cyl(doc, "FLY_SHAFT_%s" % tag,
@@ -901,8 +936,8 @@ def _fly_assy(doc, ctx, sgn):
     mbody = pk.fuse(doc, "TOOL_FM_%s_F" % tag, "FLY_MOTOR_blank_UNVERIFIED",
                     "UNVERIFIED - flywheel motor blank", can, [fb, stub])
     tools = []
-    for i, (dx, dz) in enumerate((("-15", "15"), ("-15", "-15"),
-                                  ("15", "15"), ("15", "-15"))):
+    for i, (dx, dz) in enumerate((("-10", "10"), ("-10", "-10"),
+                                  ("10", "10"), ("10", "-10"))):
         tools.append(pk.tool_cyl(
             doc, "TOOL_FM_%s_TP%d" % (tag, i),
             {"Radius": "1.7", "Height": "8.5"},
@@ -934,8 +969,8 @@ def _fly_assy(doc, ctx, sgn):
     _fp(ctx, mt.Name, cheek)
     _em(ctx, sh.Name, mt.Name)      # shaft tip seated in the hex socket
     bolts = []
-    for i, (dx, dz) in enumerate((("-15", "15"), ("-15", "-15"),
-                                  ("15", "15"), ("15", "-15"))):
+    for i, (dx, dz) in enumerate((("-10", "10"), ("-10", "-10"),
+                                  ("10", "10"), ("10", "-10"))):
         bn = "BOLT_FM_%s%d" % (tag, i)
         _screw(doc, ctx, bn,
                {"Placement.Base.x":
@@ -947,7 +982,7 @@ def _fly_assy(doc, ctx, sgn):
                  "+ 2.0)"),
                 "Placement.Base.z":
                 "(Parameters.fly_axis_z + %s)" % dz},
-               "Y" if sgn > 0 else "-Y", "8")
+               "Y" if sgn > 0 else "-Y", "12")
         bolts.append(bn)
     _jm(ctx, "flymotor_%s" % tag.lower(), [mt.Name, cheek], bolts,
         terminal=mt.Name)
@@ -960,14 +995,14 @@ def _fly_assy(doc, ctx, sgn):
          "Placement.Base.z": "(Parameters.plate_z + Parameters.plate_t / 2)"})
     sad = pk.tool_cyl(
         doc, "TOOL_MCL_%s_SAD" % tag,
-        {"Radius": "(Parameters.fly_motor_d / 2 + 0.5)", "Height": "28"},
-        {"Placement.Base.x": "-94",
+        {"Radius": "(Parameters.fly_motor_d / 2 + 0.5)", "Height": "20"},
+        {"Placement.Base.x": "Parameters.fly_axis_x",
          "Placement.Base.y":
-         ("(Parameters.cheek_lat + Parameters.cheek_thk / 2 + 18)"
+         ("(Parameters.cheek_lat + Parameters.cheek_thk / 2 + 13)"
           if sgn > 0 else
-          "(-(Parameters.cheek_lat) - Parameters.cheek_thk / 2 - 18)"),
+          "(-(Parameters.cheek_lat) - Parameters.cheek_thk / 2 - 33)"),
          "Placement.Base.z": "Parameters.fly_axis_z"},
-        pk.axis_rot("X"))
+        pk.axis_rot("Y"))
     mc = pk.cut(doc, "FLY_MCLAMP_%s" % tag,
                 "FLY_MCLAMP_%s_saddle_UNVERIFIED" % tag,
                 "UNVERIFIED - motor saddle clamp block",
@@ -1031,7 +1066,6 @@ def _hood(doc, ctx):
     _s(ctx, hd)
     _bom(ctx, "turret", "launch hood 2mm alu", "aluminum", "shell",
          "UNVERIFIED", [hd.Name])
-    bolts, nuts = [], []
     for sgn in (1, -1):
         tag = "L" if sgn > 0 else "R"
         bg = pk.flange_bearing(
@@ -1057,6 +1091,7 @@ def _hood(doc, ctx):
         _s(ctx, pin)
         _jl(ctx, pin.Name, bg.Name)
         _jl(ctx, pin.Name, hd.Name)
+        _cn(ctx, hd.Name, bg.Name)
         col = pk.bore_cyl(
             doc, "HOOD_COL_%s" % tag,
             "HOOD_COL_%s_UNVERIFIED" % tag,
@@ -1067,12 +1102,20 @@ def _hood(doc, ctx):
              "Placement.Base.z": "Parameters.hood_piv_z"}, "Y")
         _s(ctx, col)
         _cn(ctx, col.Name, hd.Name)
-        bolts.append(pin.Name)
-        nuts.append(col.Name)
         _em(ctx, pin.Name, cheek)
         _jl(ctx, pin.Name, cheek)
-    _jm(ctx, "hood_piv", [hd.Name, "LAUNCH_CHEEK_L", "LAUNCH_CHEEK_R"],
-        bolts, nuts, None)
+        # collar set screw: radial screw through the collar wall into
+        # the pin -- the clamp element that makes the collar real
+        sn_ = "SCRW_HCOL_%s" % tag
+        _screw(doc, ctx, sn_,
+               {"Placement.Base.x": "Parameters.hood_piv_x",
+                "Placement.Base.y": "76.5" if sgn > 0 else "-76.5",
+                "Placement.Base.z":
+                "(Parameters.hood_piv_z + 7 + 2)"},
+               "-Z", "8")
+        _em(ctx, sn_, col.Name)
+        _jm(ctx, "hood_piv_%s" % tag.lower(), [hd.Name, cheek],
+            [pin.Name, sn_], [col.Name], cheek)
     # hood servo on cheek R outer face + pushrod to the ear pin
     sb = pk.tool_box(doc, "TOOL_HSV_BODY",
                      {"Length": "23", "Width": "12", "Height": "30"},
@@ -1097,7 +1140,7 @@ def _hood(doc, ctx):
         _screw(doc, ctx, bn,
                {"Placement.Base.x": px, "Placement.Base.y": "-81",
                 "Placement.Base.z": pz},
-               "Y", "6")
+               "Y", "12")
         bolts.append(bn)
     _jm(ctx, "hood_servo", [hsv.Name, "LAUNCH_CHEEK_R"], bolts,
         terminal="LAUNCH_CHEEK_R")
@@ -1163,13 +1206,14 @@ def _extras(doc, ctx):
     _jm(ctx, "nip_backplate", [bp.Name, "TURRET_PLATE"], bolts, nuts,
         "TURRET_PLATE")
 
-    # top brace between the cheeks
+    # top brace between the cheeks -- parked at the east end, above the
+    # hood shell (z<=371) and clear of the hood sweep probes
     br = pk.box(doc, "TURRET_TOP_BRACE",
                 "TURRET_TOP_BRACE_petg_UNVERIFIED",
                 "UNVERIFIED - cheek top brace PETG",
                 {"Length": "8", "Width": "128", "Height": "4.5"},
-                {"Placement.Base.x": "-108", "Placement.Base.y": "-64",
-                 "Placement.Base.z": "368"})
+                {"Placement.Base.x": "-46", "Placement.Base.y": "-64",
+                 "Placement.Base.z": "372.5"})
     _s(ctx, br)
     _bom(ctx, "turret", "cheek top brace PETG", "petg", "8x128x4.5",
          "UNVERIFIED", [br.Name])
@@ -1179,35 +1223,37 @@ def _extras(doc, ctx):
     for i, sgn in enumerate((1, -1)):
         bn = "BOLT_TBR_%d" % i
         if sgn > 0:
-            pos = {"Placement.Base.x": "-104",
+            pos = {"Placement.Base.x": "-42",
                    "Placement.Base.y":
                    "(Parameters.cheek_lat + Parameters.cheek_thk / 2 + "
                     "Parameters.bolt_head_h)",
-                   "Placement.Base.z": "370"}
+                   "Placement.Base.z": "374.5"}
             ax = "-Y"
         else:
-            pos = {"Placement.Base.x": "-104",
+            pos = {"Placement.Base.x": "-42",
                    "Placement.Base.y":
                    "(-(Parameters.cheek_lat) - Parameters.cheek_thk / 2 "
                     "- Parameters.bolt_head_h)",
-                   "Placement.Base.z": "370"}
+                   "Placement.Base.z": "374.5"}
             ax = "Y"
-        _bolt(doc, ctx, bn, pos, ax, "8")
+        _bolt(doc, ctx, bn, pos, ax, "10")
         bolts.append(bn)
     _jm(ctx, "top_brace", [br.Name, "LAUNCH_CHEEK_L", "LAUNCH_CHEEK_R"],
         bolts, terminal=br.Name)
 
-    # camera + mount + LED
+    # camera + mount + LED; the mount post + bolt grid sit EAST of the
+    # plate bore (bore edge ~x-9.6 at y+-8) so all four bolts land on
+    # the plate annulus; the camera body cantilevers back to cam_x
     mnt = pk.box(doc, "CAM_MOUNT", "CAM_MOUNT_post_UNVERIFIED",
                  "UNVERIFIED - camera mount post",
                  {"Length": "23", "Width": "20", "Height": "14"},
-                 {"Placement.Base.x": "-24", "Placement.Base.y": "-10",
+                 {"Placement.Base.x": "-6", "Placement.Base.y": "-10",
                   "Placement.Base.z": PLTOP})
     _s(ctx, mnt)
     _fp(ctx, mnt.Name, "TURRET_PLATE")
     bolts, nuts = [], []
-    for i, (px, py) in enumerate((("-20", "8"), ("-5", "8"),
-                                  ("-20", "-8"), ("-5", "-8"))):
+    for i, (px, py) in enumerate((("-3", "6"), ("12", "6"),
+                                  ("-3", "-6"), ("12", "-6"))):
         bn = "BOLT_CAM_%d" % i
         nn = "NUT_CAM_%d" % i
         _bolt(doc, ctx, bn,
@@ -1215,7 +1261,7 @@ def _extras(doc, ctx):
                "Placement.Base.z":
                "(Parameters.plate_z + Parameters.plate_t / 2 + 14 + "
                "Parameters.bolt_head_h)"},
-              "-Z", "16")
+              "-Z", "22")
         _nut(doc, ctx, nn,
              {"Placement.Base.x": "(%s - Parameters.nut4_wrench / 2)" % px,
               "Placement.Base.y": "(%s - Parameters.nut4_wrench / 2)" % py,
@@ -1236,11 +1282,17 @@ def _extras(doc, ctx):
     _bom(ctx, "turret", "USB camera module", "camera", "28x28x14",
          "VENDOR-PENDING", [cam.Name])
     _fp(ctx, cam.Name, mnt.Name)
-    for i, (px, pz) in enumerate((("-14", "284"), ("-4", "284"))):
-        _screw(doc, ctx, "SCRW_CAM_%d" % i,
-               {"Placement.Base.x": px, "Placement.Base.y": "-10",
-                "Placement.Base.z": pz}, "Y", "4")
-    _em(ctx, cam.Name, mnt.Name)
+    bolts = []
+    for i, px in enumerate(("-4", "4")):
+        bn = "SCRW_CAM_%d" % i
+        _screw(doc, ctx, bn,
+               {"Placement.Base.x": px, "Placement.Base.y": "0",
+                "Placement.Base.z":
+                "(Parameters.plate_z + Parameters.plate_t / 2 + 28)"},
+               "-Z", "16")
+        bolts.append(bn)
+    _jm(ctx, "cam_body", [cam.Name, mnt.Name], bolts,
+        terminal=mnt.Name)
     led = pk.box(doc, "CAM_LED", "CAM_LED_chip_UNVERIFIED",
                  "UNVERIFIED - camera illuminator LED",
                  {"Length": "6", "Width": "4", "Height": "2"},
