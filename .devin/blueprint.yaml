@@ -1,0 +1,34 @@
+# https://docs.devin.ai/onboard-devin/environment-yaml
+# Repo blueprint: installs FreeCAD 1.1.4 headless — every
+# scripts/freecad/*.py builder/check/drawing script runs under freecadcmd.
+initialize:
+  - name: install FreeCAD 1.1.4 AppImage
+    run: |
+      mkdir -p "$HOME/opt" && cd "$HOME/opt"
+      curl -fsSL -o FreeCAD.AppImage \
+        https://github.com/FreeCAD/FreeCAD/releases/download/1.1.4/FreeCAD_1.1.4-Linux-x86_64-py311.AppImage
+      chmod +x FreeCAD.AppImage
+      ./FreeCAD.AppImage --appimage-extract >/dev/null
+      "$HOME/opt/squashfs-root/AppRun" freecadcmd --version
+knowledge:
+  - name: freecad
+    contents: |
+      # headless runner — do NOT use -c inline code (crashes); run script files
+      ~/opt/squashfs-root/AppRun freecadcmd scripts/freecad/<script>.py
+      # inside scripts: reuse QtCore.QCoreApplication.instance(); freecadcmd owns it
+  - name: build
+    contents: |
+      # subsystem docs + master: build_<drivebase|electronics|hopper|intake|lift|turret|master_robot>.py
+      ~/opt/squashfs-root/AppRun freecadcmd scripts/freecad/build_drivebase.py
+  - name: test
+    contents: |
+      # gate scripts print PASS/FAIL and exit non-zero on failure
+      ~/opt/squashfs-root/AppRun freecadcmd scripts/freecad/selfcheck_overhaul03.py
+  - name: drawings
+    contents: |
+      # env selectors: DRAWINGS_DOCS=..., DRAWINGS_MAX=N, DRAWINGS_PLATES_ONLY=1
+      ~/opt/squashfs-root/AppRun freecadcmd scripts/freecad/make_drawings.py
+  - name: lint
+    contents: |
+      # no linter configured; stdlib + FreeCAD-bundled modules only
+      python3 -m py_compile scripts/freecad/*.py
