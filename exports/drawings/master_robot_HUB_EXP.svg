@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210"><rect x="0" y="0" width="297" height="210" fill="#ffffff"/><rect x="6" y="6" width="285" height="198" fill="none" stroke="#000" stroke-width="0.5"/><g transform="translate(92.50 123.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -71 -14.5 L 71 -14.5 " />
+<path id= "2" d=" M -71 14.5 L 71 14.5 " />
+<path id= "3" d=" M 71 14.5 L 71 -14.5 " />
+<path id= "4" d=" M -71 14.5 L -71 -14.5 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -71 -14.5 L 71 -14.5 " />
+<path id= "2" d=" M -71 14.5 L 71 14.5 " />
+<path id= "3" d=" M 71 14.5 L 71 -14.5 " />
+<path id= "4" d=" M -71 14.5 L -71 -14.5 " />
+</g>
+</g><line x1="57.00" y1="137.45" x2="128.00" y2="137.45" stroke="#1a5276" stroke-width="0.25"/><path d="M 57.00 137.45 L 58.60 136.90 L 58.60 138.00 z" fill="#1a5276"/><path d="M 128.00 137.45 L 126.40 136.90 L 126.40 138.00 z" fill="#1a5276"/><text x="92.50" y="136.55" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">142</text><line x1="48.80" y1="115.75" x2="48.80" y2="130.25" stroke="#1a5276" stroke-width="0.25"/><path d="M 48.80 115.75 L 48.25 117.35 L 49.35 117.35 z" fill="#1a5276"/><path d="M 48.80 130.25 L 48.25 128.65 L 49.35 128.65 z" fill="#1a5276"/><text x="47.90" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 47.90 123.00)">29</text><text x="92.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">FRONT</text><g transform="translate(92.50 47.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -71 37 L -71 -37 " />
+<path id= "2" d=" M -71 -37 L 71 -37 " />
+<path id= "3" d=" M 71 37 L 71 -37 " />
+<path id= "4" d=" M -71 37 L 71 37 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -71 -37 L 71 -37 " />
+<path id= "2" d=" M -71 37 L 71 37 " />
+<path id= "3" d=" M -71 37 L -71 -37 " />
+<path id= "4" d=" M 71 37 L 71 -37 " />
+</g>
+</g><line x1="57.00" y1="72.70" x2="128.00" y2="72.70" stroke="#1a5276" stroke-width="0.25"/><path d="M 57.00 72.70 L 58.60 72.15 L 58.60 73.25 z" fill="#1a5276"/><path d="M 128.00 72.70 L 126.40 72.15 L 126.40 73.25 z" fill="#1a5276"/><text x="92.50" y="71.80" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">142</text><line x1="48.80" y1="28.50" x2="48.80" y2="65.50" stroke="#1a5276" stroke-width="0.25"/><path d="M 48.80 28.50 L 48.25 30.10 L 49.35 30.10 z" fill="#1a5276"/><path d="M 48.80 65.50 L 48.25 63.90 L 49.35 63.90 z" fill="#1a5276"/><text x="47.90" y="47.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 47.90 47.00)">74</text><text x="92.5" y="79.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">TOP</text><g transform="translate(233.50 123.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -37 -14.5 L 37 -14.5 " />
+<path id= "2" d=" M 37 14.5 L 37 -14.5 " />
+<path id= "3" d=" M -37 14.5 L -37 -14.5 " />
+<path id= "4" d=" M -37 14.5 L 37 14.5 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -37 -14.5 L 37 -14.5 " />
+<path id= "2" d=" M 37 14.5 L 37 -14.5 " />
+<path id= "3" d=" M -37 14.5 L -37 -14.5 " />
+<path id= "4" d=" M -37 14.5 L 37 14.5 " />
+</g>
+</g><line x1="215.00" y1="137.45" x2="252.00" y2="137.45" stroke="#1a5276" stroke-width="0.25"/><path d="M 215.00 137.45 L 216.60 136.90 L 216.60 138.00 z" fill="#1a5276"/><path d="M 252.00 137.45 L 250.40 136.90 L 250.40 138.00 z" fill="#1a5276"/><text x="233.50" y="136.55" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">74</text><line x1="206.80" y1="115.75" x2="206.80" y2="130.25" stroke="#1a5276" stroke-width="0.25"/><path d="M 206.80 115.75 L 206.25 117.35 L 207.35 117.35 z" fill="#1a5276"/><path d="M 206.80 130.25 L 206.25 128.65 L 207.35 128.65 z" fill="#1a5276"/><text x="205.90" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 205.90 123.00)">29</text><text x="233.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">RIGHT SIDE</text><text x="10" y="196.0" font-size="2.8" font-family="sans-serif" fill="#333">ALL DIMENSIONS IN MILLIMETERS  |  THIRD-ANGLE PROJECTION  |  views carry overall extent callouts</text><text x="10" y="200.2" font-size="2.8" font-family="sans-serif" fill="#8a2b2b">PROTOTYPE / VERIFY BEFORE MANUFACTURING</text><rect x="195.0" y="160.0" width="96.0" height="44.0" fill="none" stroke="#000" stroke-width="0.5"/><line x1="195.0" y1="174.0" x2="291.0" y2="174.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="182.0" x2="291.0" y2="182.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="190.0" x2="291.0" y2="190.0" stroke="#000" stroke-width="0.3"/><text x="197.0" y="164.0" font-size="2.0" fill="#555" font-family="sans-serif" text-anchor="start">PART</text><text x="197.0" y="171.0" font-size="4.2" fill="#000" font-family="sans-serif" text-anchor="start" font-weight="bold">HUB_EXP</text><text x="197.0" y="179.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">MATERIAL: hub   SPEC: 142x79x29</text><text x="197.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">QTY 1</text><text x="219.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">REV A</text><text x="237.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">SCALE 1:2</text><text x="197.0" y="195.0" font-size="2.6" fill="#000" font-family="sans-serif" text-anchor="start">BIOBUZZ FTC  |  master_robot  |  SHEET 66/224  |  VENDOR-PENDING - REV hub</text></svg>

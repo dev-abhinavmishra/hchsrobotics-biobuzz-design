@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210"><rect x="0" y="0" width="297" height="210" fill="#ffffff"/><rect x="6" y="6" width="285" height="198" fill="none" stroke="#000" stroke-width="0.5"/><g transform="translate(92.50 123.00) scale(1.0000 -1.0000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M 4.62 0 L 2.31 4.00104 " />
+<path id= "2" d=" M 2.31 -4.00104 L 4.62 8.88178e-16 " />
+<path id= "3" d=" M 2.31 4.00104 L -2.31 4.00104 " />
+<path id= "4" d=" M -2.31 4.00104 L -4.62 1.77636e-15 " />
+<path id= "5" d=" M -4.62 1.78e-15 L -2.31 -4.00104 " />
+<path id= "6" d=" M -2.31 -4.00104 L 2.31 -4.00104 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M 4.62 0 L 2.31 4.00104 " />
+<path id= "2" d=" M 2.31 -4.00104 L 4.62 8.88178e-16 " />
+<path id= "3" d=" M 2.31 4.00104 L -2.31 4.00104 " />
+<path id= "4" d=" M -2.31 -4.00104 L 2.31 -4.00104 " />
+<path id= "5" d=" M -2.31 4.00104 L -4.62 1.77636e-15 " />
+<path id= "6" d=" M -4.62 1.78e-15 L -2.31 -4.00104 " />
+<circle cx ="0" cy ="0" r ="3.7" /><circle cx ="0" cy ="0" r ="3.7" /></g>
+</g><line x1="87.88" y1="134.20" x2="97.12" y2="134.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 87.88 134.20 L 89.48 133.65 L 89.48 134.75 z" fill="#1a5276"/><path d="M 97.12 134.20 L 95.52 133.65 L 95.52 134.75 z" fill="#1a5276"/><text x="92.50" y="133.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">9.2</text><line x1="79.68" y1="119.00" x2="79.68" y2="127.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 79.68 119.00 L 79.13 120.60 L 80.23 120.60 z" fill="#1a5276"/><path d="M 79.68 127.00 L 79.13 125.40 L 80.23 125.40 z" fill="#1a5276"/><text x="78.78" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 78.78 123.00)">8</text><text x="92.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">FRONT</text><g transform="translate(92.50 47.00) scale(1.0000 -1.0000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M 4.62 7.5 L 4.62 -6.5 " />
+<path id= "2" d=" M 2.31 7.5 L 2.31 -6.5 " />
+<path id= "3" d=" M 2.31 7.5 L 4.62 7.5 " />
+<path id= "4" d=" M 2.31 -6.5 L 4.62 -6.5 " />
+<path id= "5" d=" M -4.62 7.5 L -2.31 7.5 " />
+<path id= "6" d=" M -2.31 7.5 L 2.31 7.5 " />
+<path id= "7" d=" M -2.31 -6.5 L 2.31 -6.5 " />
+<path id= "8" d=" M -4.62 -6.5 L -2.31 -6.5 " />
+<path id= "9" d=" M -2.31 7.5 L -2.31 -6.5 " />
+<path id= "10" d=" M -4.62 7.5 L -4.62 -6.5 " />
+<path id= "11" d=" M 3.7 -6.5 L 3.7 -7.5 " />
+<path d="M-3.7, -7.5 L-3.60723, -7.5  L-3.33358, -7.5  L-2.89278, -7.5  L-2.30691, -7.5  L-1.60537, -7.5  L-0.823327, -7.5  L-6.66134e-16, -7.5  L0.823327, -7.5  L1.60537, -7.5  L2.30691, -7.5  L2.89278, -7.5  L3.33358, -7.5  L3.60723, -7.5  L3.7, -7.5 " /><path id= "1" d=" M -3.7 -7.5 L -3.7 -6.5 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M 2.31 7.5 L 2.31 -6.5 " />
+<path id= "2" d=" M 4.62 7.5 L 2.31 7.5 " />
+<path id= "3" d=" M 4.62 -6.5 L 2.31 -6.5 " />
+<path id= "4" d=" M -2.31 7.5 L -2.31 -6.5 " />
+<path id= "5" d=" M 2.31 7.5 L -2.31 7.5 " />
+<path id= "6" d=" M 2.31 -6.5 L -2.31 -6.5 " />
+<path id= "7" d=" M -2.31 7.5 L -4.62 7.5 " />
+<path id= "8" d=" M -2.31 -6.5 L -4.62 -6.5 " />
+<path d="M4.65037, -6.5 L2.30691, -6.5  L1.60537, -6.5  L0.823327, -6.5  L2.22045e-16, -6.5  L-0.823327, -6.5  L-1.60537, -6.5  L-2.30691, -6.5  L-2.89278, -6.5  L-3.33358, -6.5  L-3.60723, -6.5  L-3.7, -6.5 " /><path d="M-4.65037, -6.5 L-2.30691, -6.5  L-1.60537, -6.5  L-0.823327, -6.5  L-6.66134e-16, -6.5  L0.823327, -6.5  L1.60537, -6.5  L2.30691, -6.5  L2.89278, -6.5  L3.33358, -6.5  L3.60723, -6.5  L3.7, -6.5 " /><path d="M3.7, -7.5 L3.60723, -7.5  L3.33358, -7.5  L2.89278, -7.5  L2.30691, -7.5  L1.60537, -7.5  L0.823327, -7.5  L2.22045e-16, -7.5  L-0.823327, -7.5  L-1.60537, -7.5  L-2.30691, -7.5  L-2.89278, -7.5  L-3.33358, -7.5  L-3.60723, -7.5  L-3.7, -7.5 " /></g>
+</g><line x1="87.88" y1="61.70" x2="97.12" y2="61.70" stroke="#1a5276" stroke-width="0.25"/><path d="M 87.88 61.70 L 89.48 61.15 L 89.48 62.25 z" fill="#1a5276"/><path d="M 97.12 61.70 L 95.52 61.15 L 95.52 62.25 z" fill="#1a5276"/><text x="92.50" y="60.80" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">9.2</text><line x1="79.68" y1="39.50" x2="79.68" y2="54.50" stroke="#1a5276" stroke-width="0.25"/><path d="M 79.68 39.50 L 79.13 41.10 L 80.23 41.10 z" fill="#1a5276"/><path d="M 79.68 54.50 L 79.13 52.90 L 80.23 52.90 z" fill="#1a5276"/><text x="78.78" y="47.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 78.78 47.00)">15</text><text x="92.5" y="79.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">TOP</text><g transform="translate(233.50 123.00) scale(1.0000 -1.0000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -7.5 0 L 6.5 0 " />
+<path id= "2" d=" M -7.5 4.00104 L 6.5 4.00104 " />
+<path id= "3" d=" M -7.5 0 L -7.5 4.00104 " />
+<path id= "4" d=" M 6.5 0 L 6.5 4.00104 " />
+<path id= "5" d=" M -7.5 -4.00104 L 6.5 -4.00104 " />
+<path id= "6" d=" M -7.5 -4.00104 L -7.5 8.88178e-16 " />
+<path id= "7" d=" M 6.5 -4.00104 L 6.5 8.88178e-16 " />
+<path d="M7.5, 0 L7.5, 0.414269  L7.5, 0.823327  L7.5, 1.22203  L7.5, 1.60537  L7.5, 1.96852  L7.5, 2.30691  L7.5, 2.6163  L7.5, 2.89278  L7.5, 3.13288  L7.5, 3.33358  L7.5, 3.49237  L7.5, 3.60723  L7.5, 3.67674  L7.5, 3.7 " /><path d="M7.5, -3.7 Q7.5, -3.68837 7.5, -3.67674  Q7.5, -3.64198 7.5, -3.60723  Q7.5, -3.5498 7.5, -3.49237  Q7.5, -3.41298 7.5, -3.33358  Q7.5, -3.23323 7.5, -3.13288  Q7.5, -3.01283 7.5, -2.89278  Q7.5, -2.75454 7.5, -2.6163  Q7.5, -2.4616 7.5, -2.30691  Q7.5, -2.13772 7.5, -1.96852  Q7.5, -1.78694 7.5, -1.60537  Q7.5, -1.4137 7.5, -1.22203  Q7.5, -1.02268 7.5, -0.823327  Q7.5, -0.415729 7.5, -8.88178e-16 " /><path id= "1" d=" M 7.5 -3.7 L 6.5 -3.7 " />
+<path id= "2" d=" M 7.5 3.7 L 6.5 3.7 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -7.5 4.00104 L 6.5 4.00104 " />
+<path id= "2" d=" M -7.5 4.00104 L -7.5 1.77636e-15 " />
+<path id= "3" d=" M -7.5 1.78e-15 L -7.5 -4.00104 " />
+<path id= "4" d=" M 6.5 4.00104 L 6.5 1.77636e-15 " />
+<path id= "5" d=" M 6.5 1.78e-15 L 6.5 -4.00104 " />
+<path d="M6.5, 0 L6.5, 0.414269  L6.5, 0.823327  L6.5, 1.22203  L6.5, 1.60537  L6.5, 1.96852  L6.5, 2.30691  L6.5, 2.6163  L6.5, 2.89278  L6.5, 3.13288  L6.5, 3.33358  L6.5, 3.49237  L6.5, 3.60723  L6.5, 3.67674  L6.5, 3.7 " /><path d="M6.5, 5.76329 L6.5, -0.823327  L6.5, -1.60537  L6.5, -2.30691  L6.5, -2.89278  L6.5, -3.33358  L6.5, -3.60723  L6.5, -3.7 " /><path d="M6.5, -3.7 Q6.5, -3.68837 6.5, -3.67674  Q6.5, -3.64198 6.5, -3.60723  Q6.5, -3.5498 6.5, -3.49237  Q6.5, -3.41298 6.5, -3.33358  Q6.5, -3.23323 6.5, -3.13288  Q6.5, -3.01283 6.5, -2.89278  Q6.5, -2.75454 6.5, -2.6163  Q6.5, -2.4616 6.5, -2.30691  Q6.5, -2.13772 6.5, -1.96852  Q6.5, -1.78694 6.5, -1.60537  Q6.5, -1.4137 6.5, -1.22203  Q6.5, -1.02268 6.5, -0.823327  Q6.5, -0.415729 6.5, -8.88178e-16 " /><path id= "9" d=" M -7.5 -4.00104 L 6.5 -4.00104 " />
+<path id= "10" d=" M -7.5 1.78e-15 L 6.5 1.78e-15 " />
+<path d="M7.5, 3.7 L7.5, 3.60723  L7.5, 3.33358  L7.5, 2.89278  L7.5, 2.30691  L7.5, 1.60537  L7.5, 0.823327  L7.5, 4.44089e-16  L7.5, -0.823327  L7.5, -1.60537  L7.5, -2.30691  L7.5, -2.89278  L7.5, -3.33358  L7.5, -3.60723  L7.5, -3.7 " /></g>
+</g><line x1="226.00" y1="134.20" x2="241.00" y2="134.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 226.00 134.20 L 227.60 133.65 L 227.60 134.75 z" fill="#1a5276"/><path d="M 241.00 134.20 L 239.40 133.65 L 239.40 134.75 z" fill="#1a5276"/><text x="233.50" y="133.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">15</text><line x1="217.80" y1="119.00" x2="217.80" y2="127.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 217.80 119.00 L 217.25 120.60 L 218.35 120.60 z" fill="#1a5276"/><path d="M 217.80 127.00 L 217.25 125.40 L 218.35 125.40 z" fill="#1a5276"/><text x="216.90" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 216.90 123.00)">8</text><text x="233.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">RIGHT SIDE</text><text x="10" y="196.0" font-size="2.8" font-family="sans-serif" fill="#333">ALL DIMENSIONS IN MILLIMETERS  |  THIRD-ANGLE PROJECTION  |  views carry overall extent callouts</text><text x="10" y="200.2" font-size="2.8" font-family="sans-serif" fill="#8a2b2b">PROTOTYPE / VERIFY BEFORE MANUFACTURING</text><rect x="195.0" y="160.0" width="96.0" height="44.0" fill="none" stroke="#000" stroke-width="0.5"/><line x1="195.0" y1="174.0" x2="291.0" y2="174.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="182.0" x2="291.0" y2="182.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="190.0" x2="291.0" y2="190.0" stroke="#000" stroke-width="0.3"/><text x="197.0" y="164.0" font-size="2.0" fill="#555" font-family="sans-serif" text-anchor="start">PART</text><text x="197.0" y="171.0" font-size="4.0" fill="#000" font-family="sans-serif" text-anchor="start" font-weight="bold">FEED_MTR_SHAFT</text><text x="197.0" y="179.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">MATERIAL: steel   SPEC: -</text><text x="197.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">QTY 1</text><text x="219.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">REV A</text><text x="237.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">SCALE 1:1</text><text x="197.0" y="195.0" font-size="2.6" fill="#000" font-family="sans-serif" text-anchor="start">BIOBUZZ FTC  |  hopper  |  SHEET 49/68  |  UNVERIFIED - feed motor </text></svg>

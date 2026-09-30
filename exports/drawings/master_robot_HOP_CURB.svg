@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210"><rect x="0" y="0" width="297" height="210" fill="#ffffff"/><rect x="6" y="6" width="285" height="198" fill="none" stroke="#000" stroke-width="0.5"/><g transform="translate(92.50 123.00) scale(0.2500 -0.2500)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -1.5 12 L -1.5 -12 " />
+<path id= "2" d=" M -1.5 -12 L 1.5 -12 " />
+<path id= "3" d=" M -1.5 12 L 1.5 12 " />
+<path id= "4" d=" M 1.5 12 L 1.5 -12 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -1.5 12 L -1.5 -12 " />
+<path id= "2" d=" M 1.5 -12 L -1.5 -12 " />
+<path id= "3" d=" M 1.5 12 L -1.5 12 " />
+<path id= "4" d=" M 1.5 12 L 1.5 -12 " />
+<path id= "5" d=" M -1.5 12 L -1.5 -12 " />
+<path id= "6" d=" M -1.5 12 L -1.5 -12 " />
+<path id= "7" d=" M -1.5 -12 L 1.5 -12 " />
+<path id= "8" d=" M 1.5 -12 L -1.5 -12 " />
+<path id= "9" d=" M -1.5 12 L 1.5 12 " />
+<path id= "10" d=" M 1.5 12 L 1.5 -12 " />
+<path id= "11" d=" M 1.5 12 L -1.5 12 " />
+<path id= "12" d=" M 1.5 12 L 1.5 -12 " />
+</g>
+</g><line x1="92.12" y1="133.20" x2="92.88" y2="133.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 92.12 133.20 L 93.72 132.65 L 93.72 133.75 z" fill="#1a5276"/><path d="M 92.88 133.20 L 91.28 132.65 L 91.28 133.75 z" fill="#1a5276"/><text x="92.50" y="132.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">3</text><line x1="83.92" y1="120.00" x2="83.92" y2="126.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 83.92 120.00 L 83.38 121.60 L 84.47 121.60 z" fill="#1a5276"/><path d="M 83.92 126.00 L 83.38 124.40 L 84.47 124.40 z" fill="#1a5276"/><text x="83.02" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 83.02 123.00)">24</text><text x="92.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">FRONT</text><g transform="translate(92.50 47.00) scale(0.2500 -0.2500)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -1.5 60 L -1.5 26.5 " />
+<path id= "2" d=" M 1.5 26.5 L -1.5 26.5 " />
+<path id= "3" d=" M 1.5 60 L 1.5 26.5 " />
+<path id= "4" d=" M -1.5 60 L 1.5 60 " />
+<path id= "5" d=" M -1.5 -45.5 L -1.5 -60 " />
+<path id= "6" d=" M -1.5 -60 L 1.5 -60 " />
+<path id= "7" d=" M 1.5 -45.5 L 1.5 -60 " />
+<path id= "8" d=" M 1.5 -45.5 L -1.5 -45.5 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -1.5 60 L -1.5 26.5 " />
+<path id= "2" d=" M 1.5 26.5 L -1.5 26.5 " />
+<path id= "3" d=" M 1.5 60 L 1.5 26.5 " />
+<path id= "4" d=" M -1.5 60 L 1.5 60 " />
+<path id= "5" d=" M -1.5 -45.5 L -1.5 -60 " />
+<path id= "6" d=" M -1.5 -60 L 1.5 -60 " />
+<path id= "7" d=" M 1.5 -45.5 L 1.5 -60 " />
+<path id= "8" d=" M 1.5 -45.5 L -1.5 -45.5 " />
+</g>
+</g><line x1="92.12" y1="69.20" x2="92.88" y2="69.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 92.12 69.20 L 93.72 68.65 L 93.72 69.75 z" fill="#1a5276"/><path d="M 92.88 69.20 L 91.28 68.65 L 91.28 69.75 z" fill="#1a5276"/><text x="92.50" y="68.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">3</text><line x1="83.92" y1="32.00" x2="83.92" y2="62.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 83.92 32.00 L 83.38 33.60 L 84.47 33.60 z" fill="#1a5276"/><path d="M 83.92 62.00 L 83.38 60.40 L 84.47 60.40 z" fill="#1a5276"/><text x="83.02" y="47.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 83.02 47.00)">120</text><text x="92.5" y="79.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">TOP</text><g transform="translate(233.50 123.00) scale(0.2500 -0.2500)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -60 -12 L -26.5 -12 " />
+<path id= "2" d=" M -26.5 12 L -26.5 -12 " />
+<path id= "3" d=" M -60 12 L -26.5 12 " />
+<path id= "4" d=" M -60 12 L -60 -12 " />
+<path id= "5" d=" M 45.5 -12 L 60 -12 " />
+<path id= "6" d=" M 60 12 L 60 -12 " />
+<path id= "7" d=" M 45.5 12 L 60 12 " />
+<path id= "8" d=" M 45.5 12 L 45.5 -12 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -60 -12 L -26.5 -12 " />
+<path id= "2" d=" M -26.5 12 L -26.5 -12 " />
+<path id= "3" d=" M -60 12 L -26.5 12 " />
+<path id= "4" d=" M -60 12 L -60 -12 " />
+<path id= "5" d=" M 45.5 -12 L 60 -12 " />
+<path id= "6" d=" M 60 12 L 60 -12 " />
+<path id= "7" d=" M 45.5 12 L 60 12 " />
+<path id= "8" d=" M 45.5 12 L 45.5 -12 " />
+</g>
+</g><line x1="218.50" y1="133.20" x2="248.50" y2="133.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 218.50 133.20 L 220.10 132.65 L 220.10 133.75 z" fill="#1a5276"/><path d="M 248.50 133.20 L 246.90 132.65 L 246.90 133.75 z" fill="#1a5276"/><text x="233.50" y="132.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">120</text><line x1="210.30" y1="120.00" x2="210.30" y2="126.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 210.30 120.00 L 209.75 121.60 L 210.85 121.60 z" fill="#1a5276"/><path d="M 210.30 126.00 L 209.75 124.40 L 210.85 124.40 z" fill="#1a5276"/><text x="209.40" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 209.40 123.00)">24</text><text x="233.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">RIGHT SIDE</text><text x="10" y="196.0" font-size="2.8" font-family="sans-serif" fill="#333">ALL DIMENSIONS IN MILLIMETERS  |  THIRD-ANGLE PROJECTION  |  views carry overall extent callouts</text><text x="10" y="200.2" font-size="2.8" font-family="sans-serif" fill="#8a2b2b">PROTOTYPE / VERIFY BEFORE MANUFACTURING</text><rect x="195.0" y="160.0" width="96.0" height="44.0" fill="none" stroke="#000" stroke-width="0.5"/><line x1="195.0" y1="174.0" x2="291.0" y2="174.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="182.0" x2="291.0" y2="182.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="190.0" x2="291.0" y2="190.0" stroke="#000" stroke-width="0.3"/><text x="197.0" y="164.0" font-size="2.0" fill="#555" font-family="sans-serif" text-anchor="start">PART</text><text x="197.0" y="171.0" font-size="4.2" fill="#000" font-family="sans-serif" text-anchor="start" font-weight="bold">HOP_CURB</text><text x="197.0" y="179.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">MATERIAL: steel   SPEC: -</text><text x="197.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">QTY 1</text><text x="219.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">REV A</text><text x="237.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">SCALE 1:4</text><text x="197.0" y="195.0" font-size="2.6" fill="#000" font-family="sans-serif" text-anchor="start">BIOBUZZ FTC  |  master_robot  |  SHEET 109/224  |  UNVERIFIED - rear curb u</text></svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210"><rect x="0" y="0" width="297" height="210" fill="#ffffff"/><rect x="6" y="6" width="285" height="198" fill="none" stroke="#000" stroke-width="0.5"/><g transform="translate(92.50 123.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -47.5 20 L -47.5 -20 " />
+<path id= "2" d=" M 47.5 20 L 47.5 -20 " />
+<path id= "3" d=" M -47.5 20 L 47.5 20 " />
+<path id= "4" d=" M -47.5 -20 L 47.5 -20 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -47.5 20 L -47.5 -20 " />
+<path id= "2" d=" M 47.5 20 L 47.5 -20 " />
+<path id= "3" d=" M -47.5 20 L 47.5 20 " />
+<path id= "4" d=" M -47.5 -20 L 47.5 -20 " />
+</g>
+</g><line x1="68.75" y1="140.20" x2="116.25" y2="140.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 68.75 140.20 L 70.35 139.65 L 70.35 140.75 z" fill="#1a5276"/><path d="M 116.25 140.20 L 114.65 139.65 L 114.65 140.75 z" fill="#1a5276"/><text x="92.50" y="139.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">95</text><line x1="60.55" y1="113.00" x2="60.55" y2="133.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 60.55 113.00 L 60.00 114.60 L 61.10 114.60 z" fill="#1a5276"/><path d="M 60.55 133.00 L 60.00 131.40 L 61.10 131.40 z" fill="#1a5276"/><text x="59.65" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 59.65 123.00)">40</text><text x="92.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">FRONT</text><g transform="translate(92.50 47.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -47.5 32.5 L -47.5 -32.5 " />
+<path id= "2" d=" M 47.5 32.5 L 47.5 -32.5 " />
+<path id= "3" d=" M -47.5 32.5 L 47.5 32.5 " />
+<path id= "4" d=" M -47.5 -32.5 L 47.5 -32.5 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -47.5 32.5 L -47.5 -32.5 " />
+<path id= "2" d=" M 47.5 32.5 L 47.5 -32.5 " />
+<path id= "3" d=" M -47.5 32.5 L 47.5 32.5 " />
+<path id= "4" d=" M -47.5 -32.5 L 47.5 -32.5 " />
+</g>
+</g><line x1="68.75" y1="70.45" x2="116.25" y2="70.45" stroke="#1a5276" stroke-width="0.25"/><path d="M 68.75 70.45 L 70.35 69.90 L 70.35 71.00 z" fill="#1a5276"/><path d="M 116.25 70.45 L 114.65 69.90 L 114.65 71.00 z" fill="#1a5276"/><text x="92.50" y="69.55" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">95</text><line x1="60.55" y1="30.75" x2="60.55" y2="63.25" stroke="#1a5276" stroke-width="0.25"/><path d="M 60.55 30.75 L 60.00 32.35 L 61.10 32.35 z" fill="#1a5276"/><path d="M 60.55 63.25 L 60.00 61.65 L 61.10 61.65 z" fill="#1a5276"/><text x="59.65" y="47.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 59.65 47.00)">65</text><text x="92.5" y="79.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">TOP</text><g transform="translate(233.50 123.00) scale(0.5000 -0.5000)"><g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.7" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -32.5 20 L -32.5 -20 " />
+<path id= "2" d=" M -32.5 -20 L 32.5 -20 " />
+<path id= "3" d=" M 32.5 20 L 32.5 -20 " />
+<path id= "4" d=" M -32.5 20 L 32.5 20 " />
+</g>
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="0.35" stroke-dasharray="2.4 1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+<path id= "1" d=" M -32.5 20 L -32.5 -20 " />
+<path id= "2" d=" M -32.5 -20 L 32.5 -20 " />
+<path id= "3" d=" M 32.5 20 L 32.5 -20 " />
+<path id= "4" d=" M -32.5 20 L 32.5 20 " />
+</g>
+</g><line x1="217.25" y1="140.20" x2="249.75" y2="140.20" stroke="#1a5276" stroke-width="0.25"/><path d="M 217.25 140.20 L 218.85 139.65 L 218.85 140.75 z" fill="#1a5276"/><path d="M 249.75 140.20 L 248.15 139.65 L 248.15 140.75 z" fill="#1a5276"/><text x="233.50" y="139.30" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif">65</text><line x1="209.05" y1="113.00" x2="209.05" y2="133.00" stroke="#1a5276" stroke-width="0.25"/><path d="M 209.05 113.00 L 208.50 114.60 L 209.60 114.60 z" fill="#1a5276"/><path d="M 209.05 133.00 L 208.50 131.40 L 209.60 131.40 z" fill="#1a5276"/><text x="208.15" y="123.00" font-size="3.2" fill="#1a5276" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 208.15 123.00)">40</text><text x="233.5" y="157.4" font-size="3.4" font-family="sans-serif" fill="#000" text-anchor="middle">RIGHT SIDE</text><text x="10" y="196.0" font-size="2.8" font-family="sans-serif" fill="#333">ALL DIMENSIONS IN MILLIMETERS  |  THIRD-ANGLE PROJECTION  |  views carry overall extent callouts</text><text x="10" y="200.2" font-size="2.8" font-family="sans-serif" fill="#8a2b2b">PROTOTYPE / VERIFY BEFORE MANUFACTURING</text><rect x="195.0" y="160.0" width="96.0" height="44.0" fill="none" stroke="#000" stroke-width="0.5"/><line x1="195.0" y1="174.0" x2="291.0" y2="174.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="182.0" x2="291.0" y2="182.0" stroke="#000" stroke-width="0.3"/><line x1="195.0" y1="190.0" x2="291.0" y2="190.0" stroke="#000" stroke-width="0.3"/><text x="197.0" y="164.0" font-size="2.0" fill="#555" font-family="sans-serif" text-anchor="start">PART</text><text x="197.0" y="171.0" font-size="4.2" fill="#000" font-family="sans-serif" text-anchor="start" font-weight="bold">BATTERY</text><text x="197.0" y="179.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">MATERIAL: battery   SPEC: 75x45x22</text><text x="197.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">QTY 1</text><text x="219.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">REV A</text><text x="237.0" y="187.5" font-size="2.8" fill="#000" font-family="sans-serif" text-anchor="start">SCALE 1:2</text><text x="197.0" y="195.0" font-size="2.6" fill="#000" font-family="sans-serif" text-anchor="start">BIOBUZZ FTC  |  electronics  |  SHEET 8/27  |  VENDOR-PENDING - 3000mAh</text></svg>
