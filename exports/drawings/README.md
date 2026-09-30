@@ -15,6 +15,10 @@ for the environment-variable selectors).
 - `manifest.json` — machine-readable per-part report (doc, qty, bbox,
   material, plate flag, output paths).
 - `manifest.txt` — the same per-part list as printed on stdout.
+- `sample/` — a few representative sheets + DXFs kept in-repo for
+  review. The full per-run output (~1,150 sheet files + ~190 DXFs,
+  ~140 MB) is gitignored; regenerate it any time with the command
+  above.
 
 Regenerate after any geometry change; the part list is enumerated from
 the documents, not hardcoded.

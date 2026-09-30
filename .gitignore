@@ -33,3 +33,10 @@ exports/selfcheck_overhaul01.txt
 
 
 exports/selfcheck_overhaul02.txt
+
+# generated drawing outputs — regenerated per run; only sample/ is committed
+exports/drawings/*
+!exports/drawings/README.md
+!exports/drawings/manifest.json
+!exports/drawings/manifest.txt
+!exports/drawings/sample/
