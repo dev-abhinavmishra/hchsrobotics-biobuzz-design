@@ -35,9 +35,8 @@ else
     echo "CI SELFCHECK: PASS"
 fi
 
-# Report results as job summary + warning annotations. The workflow runs this
-# script with continue-on-error, so failures here are informational and never
-# gate merges — they surface on the run page instead.
+# Report results as job summary + error annotations, then exit non-zero so a
+# failing gate fails the check.
 if [ "${GITHUB_ACTIONS:-}" = "true" ]; then
     {
         echo "### Selfcheck gates"
@@ -51,7 +50,7 @@ if [ "${GITHUB_ACTIONS:-}" = "true" ]; then
         echo "Full console output: run artifact -> logs/ci/"
     } >> "$GITHUB_STEP_SUMMARY"
     for g in "${failed_gates[@]}"; do
-        echo "::warning title=selfcheck::$g gate reported FAIL (informational; does not fail this check)"
+        echo "::error title=selfcheck::$g gate reported FAIL"
     done
 fi
 exit "$fail"

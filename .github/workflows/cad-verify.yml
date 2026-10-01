@@ -1,9 +1,8 @@
 name: cad-verify
 
 # Rebuilds every parametric FreeCAD subsystem doc + the master assembly and
-# runs the selfcheck_overhaul* gate scripts. Gate results are reported as
-# warning annotations + job summary (informational — they do not fail the
-# check); toolchain/build failures still fail it.
+# runs the selfcheck_overhaul* gate scripts. Any gate failure fails the
+# check; results are also reported as annotations + a job summary.
 on:
   push:
     branches: [main]
@@ -89,11 +88,10 @@ jobs:
             commit -qm "ci: regenerated cad artifacts" || echo "nothing new to commit"
           git status --porcelain
 
-      - name: Run all selfcheck_overhaul gates (informational)
-        # Gate failures are reported via warning annotations + the job summary
-        # and artifact, not the check result — the gates are red on main while
-        # the build sprint is in flight, so they must not block merges.
-        continue-on-error: true
+      - name: Run all selfcheck_overhaul gates
+        # A failing gate exits non-zero and fails the check — these are the
+        # repo's regression contract. Results also land in the job summary,
+        # error annotations, and the uploaded artifact.
         run: bash scripts/validation/ci_selfcheck.sh
 
       - name: Upload selfcheck output + exports
