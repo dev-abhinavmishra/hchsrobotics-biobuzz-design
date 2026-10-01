@@ -1,5 +1,47 @@
 # Change log - BIOBUZZ-Robot
 
+## 2026-10-01 - Sprint-04: viewer synced to as-built CAD, drawing pipeline + CI merged
+
+Sprint-04 (`cloud/sprint-04`): the Three.js viewer now mirrors the built
+CAD instead of the pre-overhaul sketch, the engineering-drawing pipeline
+(PR #2) and the `cad-verify` GitHub Actions gate (PR #1) are merged, and
+all three selfcheck suites stay green on this state (45/45, 61/61,
+73/73 under FreeCAD 1.1.3).
+
+- **Viewer as-built pass** — `viewer/js/robot.js` rewritten against the
+  real FCStd geometry (world-bbox census of ~570 placed parts): external
+  yaw ring mesh (72T ring on the turret outer rim, 14T pinion at 72.8 mm
+  c.d., yaw servo at -Y of the turret axis), split lazy-susan races with
+  the resolved z-stack (deck 244-248 / susan 248-256.5 / ring 256.5-263 /
+  plate 263-267), two-leg LOAD_CHUTE (28.5deg + 21.8deg legs from the
+  column port to the cradle), cradle bore Ø99 parked at z~140,
+  electronics expansion hub on the right rail outer face, rail-mounted
+  cross-drive belt intake, full fastener detail, windowed feed column
+  (feed/gate/port cutouts), mast trucks/ties/feet/DPIN/rope guide, and
+  corrected hopper incline/ledges/brackets. `main.js`/`demo.js`
+  coordinates, labels, and anim paths resynced; deviations the viewer
+  cannot express (e.g. modeled ring/sprocket tooth profiles) are noted
+  in-code. Envelope still reads 17.5 x 17.5 x 14.9 in.
+- **Drawing pipeline merged** (PR #2) — `drawing_kit.py` +
+  `make_drawings.py` re-run on the final geometry: 574 unique parts ->
+  574 dimensioned A4 sheets (PDF + SVG), 165 plate DXF profiles,
+  manifest refreshed.
+- **cad-verify workflow merged** (PR #1) — every push to main rebuilds
+  all 7 docs + runs the three gate suites on a cached FreeCAD 1.1.3
+  install; the check fails if any gate fails. CI-local commit excludes
+  `logs/` and the selfcheck transcripts so `GIT2_tree_clean` measures a
+  genuinely clean tree; `PYTHONUNBUFFERED` keeps the gate table in the
+  console log (freecadcmd's exit path can drop buffered stdout).
+- **Docs** — README quickstart/exports/layout refreshed (legacy
+  `build_*_concept` scripts removed from the instructions),
+  `exports/README.md` updated for as-built counts (1089 STEP parts,
+  16 subassemblies, drawings dir).
+
+Verification (`freecadcmd scripts/freecad/selfcheck_overhaul0N.py` on
+this branch, FreeCAD 1.1.3): 45/45, 61/61, 73/73 PASS; viewer rendered
+and inspected headless + live (iso/side presets); `cad-verify` check
+green on the sprint-04 PR.
+
 ## 2026-09-30 - Overhaul sprint-03: turret + lift integrated assembly, 73/73 gates
 
 Sprint-03 of the parametric overhaul (`autobuild/cad-overhaul`): full
