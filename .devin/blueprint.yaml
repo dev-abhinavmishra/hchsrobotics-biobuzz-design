@@ -33,3 +33,7 @@ knowledge:
     contents: |
       # no linter configured; stdlib + FreeCAD-bundled modules only
       python3 -m py_compile scripts/freecad/*.py
+  - name: viewer
+    contents: |
+      # static Three.js viewer, no deps/FreeCAD needed; no-store server on :8017
+      python3 viewer/serve.py   # open http://127.0.0.1:8017/ (SwiftShader flags if headless)
