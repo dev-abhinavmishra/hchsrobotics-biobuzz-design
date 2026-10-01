@@ -78,8 +78,11 @@ jobs:
           # FCStd/exports are byte-different every run, so snapshot them in a
           # CI-local commit (never pushed). selfcheck_overhaul03.txt is tracked
           # but is always mid-rewrite during its own run, so it is untracked +
-          # excluded here and ships as a build artifact instead.
+          # excluded here and ships as a build artifact instead. logs/ci/
+          # console captures are written mid-run after this commit, so logs/
+          # is excluded too or the GIT2_tree_clean gate sees a dirty tree.
           echo 'exports/selfcheck_overhaul*.txt' >> .git/info/exclude
+          echo 'logs/' >> .git/info/exclude
           if git ls-files --error-unmatch exports/selfcheck_overhaul03.txt > /dev/null 2>&1; then
             git rm -q --cached exports/selfcheck_overhaul03.txt
           fi
@@ -91,7 +94,11 @@ jobs:
       - name: Run all selfcheck_overhaul gates
         # A failing gate exits non-zero and fails the check — these are the
         # repo's regression contract. Results also land in the job summary,
-        # error annotations, and the uploaded artifact.
+        # error annotations, and the uploaded artifact. PYTHONUNBUFFERED so
+        # the gate table reaches the console log (freecadcmd's exit path can
+        # otherwise drop buffered stdout).
+        env:
+          PYTHONUNBUFFERED: "1"
         run: bash scripts/validation/ci_selfcheck.sh
 
       - name: Upload selfcheck output + exports
