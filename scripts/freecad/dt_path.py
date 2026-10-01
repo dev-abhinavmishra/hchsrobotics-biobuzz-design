@@ -2039,11 +2039,18 @@ def _gate_diverter(doc, ctx):
                            "Height": "130"},
                           {"Placement.Base.x": "-20",
                            "Placement.Base.y": "56",
-                           "Placement.Base.z": "140"})])
+                           "Placement.Base.z": "140"}),
+                      pk.tool_box(
+                          doc, "PFL_TOP",
+                          {"Length": "132", "Width": "8",
+                           "Height": "28"},
+                          {"Placement.Base.x": "-132",
+                           "Placement.Base.y": "54",
+                           "Placement.Base.z": "243.5"})])
     _s(ctx, pf)
     _fp(ctx, pf.Name, "FEED_COLUMN")
     bolts = []
-    for i, ang in enumerate((60, 120, 240, 300)):
+    for i, ang in enumerate((200, 225, 315, 340)):
         bn = "BOLT_PORT_%d" % i
         pk.bolt(doc, bn, bn + "_M4x10_UNVERIFIED",
                 "UNVERIFIED - M4 port flange stud",
@@ -2052,7 +2059,7 @@ def _gate_diverter(doc, ctx):
                 {"Placement.Base.x":
                  "(Parameters.column_x + %f)" %
                  (54 * math.cos(math.radians(ang))),
-                 "Placement.Base.y": "(Parameters.column_od / 2 + 5 + "
+                 "Placement.Base.y": "(Parameters.column_od / 2 + 2.5 + "
                   "Parameters.bolt_head_h)",
                  "Placement.Base.z": "(204 + %f)" %
                  (54 * math.sin(math.radians(ang)))}, "-Y")

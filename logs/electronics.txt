@@ -1,5 +1,5 @@
-SAVED electronics.FCStd: objects=906 solids=109
-DECL: 25 embed->contact, 81 dropped
+SAVED electronics.FCStd: objects=907 solids=109
+DECL: 22 embed->contact, 73 dropped
 META electronics.json
 FreeCAD 1.1.3, Libs: 1.1.3R20260725 (Git shallow)
 (C) 2001-2026 FreeCAD contributors

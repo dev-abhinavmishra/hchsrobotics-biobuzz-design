@@ -13,6 +13,7 @@ import math
 import re
 import subprocess
 import sys
+import tempfile
 import traceback
 from pathlib import Path
 
@@ -57,8 +58,9 @@ EXCLUDE_TYPES = ("App::Part", "App::Origin", "Spreadsheet::Sheet",
                  "App::DocumentObjectGroup")
 
 RESULTS = []
-LOG = open(ROOT / "exports" / "selfcheck_overhaul02.txt", "w",
-           encoding="utf-8")
+LOG_PATH = ROOT / "exports" / "selfcheck_overhaul02.txt"
+LOG_TMP = Path(tempfile.gettempdir()) / "selfcheck_overhaul02.txt"
+LOG = open(LOG_TMP, "w", encoding="utf-8")
 
 
 def gate(tag, ok, detail=""):
@@ -288,8 +290,8 @@ def main():
 
     unbound = []
     for o in solids:
-        if o.Name.startswith("WIRE_"):
-            continue          # harness geometry bakes at build time
+        if o.Name.startswith(("WIRE_", "ROPE_")):
+            continue          # harness/rigging bakes at build time
         if not bound_tree(o):
             unbound.append(o.Name)
     gate("PAR3_bound_expressions",
@@ -688,7 +690,17 @@ def main():
         "BELT_PUL_LOW", "BELT_PUL_TOP", "SPROCKET_9T",
         "SPROCKET_16T", "MASTER_LINK", "FLOAT_SLIDE_L",
         "FLOAT_SLIDE_R", "FLOAT_PIN_L", "FLOAT_PIN_R",
-        "SPUR_FEED_M", "SPUR_FEED_W", "FEED_MTR_SHAFT"}
+        "SPUR_FEED_M", "SPUR_FEED_W", "FEED_MTR_SHAFT",
+        # sprint-03 launch/return path surfaces (C1 nip faces,
+        # chute bed/lips, cradle pocket, hood/nip-throat guides)
+        "FLYWHEEL_L", "FLYWHEEL_R", "FLY_SHAFT_L", "FLY_SHAFT_R",
+        "FLY_CLAMP_L", "FLY_CLAMP_R", "NIP_BACKPLATE",
+        "TURRET_PLATE", "HOOD", "HOOD_PIV_L", "HOOD_PIV_R",
+        "HOOD_COL_L", "HOOD_COL_R",
+        "LOAD_CHUTE", "CHUTE_LIP_L1", "CHUTE_LIP_L2",
+        "CHUTE_LIP_R1", "CHUTE_LIP_R2",
+        "CRADLE_CUP", "CRADLE_FOAM", "CRADLE_PIV",
+        "CRADLE_COL_0", "CRADLE_COL_1"}
     ball_bad = []
     for pn in ("VOL_BALL_P", "VOL_BALL_N"):
         pv = m.getObject(pn)
@@ -1234,14 +1246,20 @@ def main():
         sheet.set("shelf_z", repr(bsz + 10.0))
         pd.recompute(None, True, True)
         moved_e = [o.Name for o in pd.Objects
-                   if o.Name in ("ELEC_SHELF", "HUB_EXP",
+                   if o.Name in ("ELEC_SHELF",
                                  "STANDOFF_0", "STANDOFF_1",
                                  "STANDOFF_2", "STANDOFF_3")
                    and hasattr(o, "Shape") and not o.Shape.isNull()
                    and abs(gshape(o).BoundBox.ZMax
                            - base_sigs[o.Name].ZMax) > 9.0]
-        gate("PAR2E_shelf_z", len(moved_e) == 6,
+        gate("PAR2E_shelf_z", len(moved_e) == 5,
              "%d moved: %s" % (len(moved_e), moved_e[:6]))
+        # HUB_EXP is rail-face mounted (S17 clearance) and must NOT
+        # track shelf_z
+        gate("PAR2E_hub_static",
+             abs(gshape(pd.getObject("HUB_EXP")).BoundBox.ZMax
+                 - base_sigs["HUB_EXP"].ZMax) < 0.01,
+             "exp hub drifted with shelf_z")
         # I: roller_top_z +5 -> star roller, slides, shaft, pulley,
         # belt move in Z; ROLLER_TOP ZMin must track +4..+6
         base_belt = gshape(pd.getObject("BELT_XROLL")).BoundBox
@@ -1327,6 +1345,7 @@ def main():
     print(tail)
     LOG.write(tail + "\n")
     LOG.close()
+    LOG_TMP.replace(LOG_PATH)
     if npass != len(RESULTS):
         sys.exit(1)
 

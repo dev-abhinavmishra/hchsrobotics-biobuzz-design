@@ -209,8 +209,9 @@ Check the as-built shaft tip and nut height before competition.
 | hub_h | 29.0 | mm | UNVERIFIED | REV hub 1.15in tall |
 | ctrl_x | -48.5 | mm | UNVERIFIED | viewer ctrl hub station |
 | ctrl_y | 0.0 | mm | UNVERIFIED | viewer ctrl hub offset |
-| exp_x | -75.0 | mm | UNVERIFIED | exp hub mirrored L/R |
-| exp_y | 0.0 | mm | UNVERIFIED | exp hub offset |
+| exp_x | 0.0 | mm | UNVERIFIED | exp hub center on R rail out-face |
+| exp_y | -201.52 | mm | UNVERIFIED | exp hub block center; flange lands on R rail out-wall |
+| ehub_z | 3.0 | mm | UNVERIFIED | exp hub base elevation on rail face |
 | sw_x | -115.0 | mm | UNVERIFIED | main switch station |
 | sw_y | 0.0 | mm | UNVERIFIED | main switch offset |
 | sw_l | 15.0 | mm | UNVERIFIED | switch body length |
@@ -330,5 +331,5 @@ Check the as-built shaft tip and nut height before competition.
 | cradle_id | 99.0 | mm | UNVERIFIED | cradle cup bore — D91 + 2x3 foam + clearance |
 | deploy_z | 566.0 | mm | UNVERIFIED | deployed cradle rim height inside R105 736.5 |
 | rope_d | 1.5 | mm | UNVERIFIED | dyneema lift line |
-| winch_z | 50.8 | mm | UNVERIFIED | winch servo height |
+| winch_z | 18.0 | mm | UNVERIFIED | winch block height (low-profile for S17) |
 | chute_w | 97.0 | mm | UNVERIFIED | load-chute tray inner width (D93 + margin) |

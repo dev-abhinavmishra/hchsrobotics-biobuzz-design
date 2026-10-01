@@ -256,7 +256,8 @@ def _rail_bore_specs(sgn):
             holes.append(("Parameters.grid_hole_d", gx, gz, "out"))
     # web bores (through the top web, Z axis): deck posts + crown post
     # feet + tie plate bolts
-    for px in ("-150", "-60", "30", "110"):
+    for px in (("-124", "-60", "30", "110") if sgn > 0
+               else ("-150", "-60", "30", "110")):
         holes.append(("Parameters.grid_hole_d", px,
                       _y(RL, sgn), "web"))
     for py in (("-8", "16") if sgn > 0 else ("8", "-16")):
@@ -1220,12 +1221,16 @@ def _deck(doc, ctx):
         else:
             y0 = "-(%s)" % WOF
         lat = _y(RL, sgn)
+        # L-side post 0 shifts east (x-124) to clear the lift-winch
+        # bay; the R side keeps the original -150 station
+        pxs = ("-124", "-60", "30", "110") if sgn > 0 else \
+            ("-150", "-60", "30", "110")
         bores = [("Parameters.grid_hole_d",
                   {"Placement.Base.x": px, "Placement.Base.y": lat,
                    "Placement.Base.z":
                    "(Parameters.deck_z - Parameters.deck_thk / 2 - 1)"},
                   "Z", "Parameters.deck_thk + 2")
-                 for px in ("-150", "-60", "30", "110")]
+                 for px in pxs]
         # sprint-03: tower foot/cap/gusset-foot bolt rows
         if sgn > 0:
             tw_rows = (
@@ -1253,18 +1258,38 @@ def _deck(doc, ctx):
                     "Z", "Parameters.deck_thk + 2"))
         tools = []
         if sgn > 0:
-            # shelf-riser bottom bolts through the L deck
-            for sx in ("(Parameters.shelf_x_lo + 10)",
-                       "(Parameters.shelf_x_hi - 10)"):
-                for sy in ("(Parameters.shelf_y_lo + 8)",
-                           "(Parameters.shelf_y_hi - 8)"):
-                    bores.append((
-                        "Parameters.grid_hole_d",
-                        {"Placement.Base.x": sx, "Placement.Base.y": sy,
-                         "Placement.Base.z":
-                         "(Parameters.deck_z - Parameters.deck_thk / 2 "
-                         "- 1)"},
-                        "Z", "Parameters.deck_thk + 2"))
+            # shelf-riser bottom bolts through the L deck (standoff 1
+            # sits at x-110, east of the winch bay slot)
+            for sx, sy in (("(Parameters.shelf_x_lo + 10)",
+                            "(Parameters.shelf_y_lo + 8)"),
+                           ("(Parameters.shelf_x_lo + 55)",
+                            "(Parameters.shelf_y_hi - 8)"),
+                           ("(Parameters.shelf_x_hi - 10)",
+                            "(Parameters.shelf_y_lo + 8)"),
+                           ("(Parameters.shelf_x_hi - 10)",
+                            "(Parameters.shelf_y_hi - 8)")):
+                bores.append((
+                    "Parameters.grid_hole_d",
+                    {"Placement.Base.x": sx, "Placement.Base.y": sy,
+                     "Placement.Base.z":
+                     "(Parameters.deck_z - Parameters.deck_thk / 2 "
+                     "- 1)"},
+                    "Z", "Parameters.deck_thk + 2"))
+            # lift-winch bay: drum/ears/pin/rope pass through the deck
+            tools.append(pk.tool_box(
+                doc, "TOOL_%s_WB" % name,
+                {"Length": "30", "Width": "28", "Height": "8"},
+                {"Placement.Base.x": "-162",
+                 "Placement.Base.y": "146",
+                 "Placement.Base.z": "80"}))
+            # stage-2 lift bar deploys through the deck west of the
+            # winch bay (bar face -169.8..-177.7)
+            tools.append(pk.tool_box(
+                doc, "TOOL_%s_S2" % name,
+                {"Length": "11", "Width": "23", "Height": "8"},
+                {"Placement.Base.x": "-179",
+                 "Placement.Base.y": "150",
+                 "Placement.Base.z": "80"}))
         else:
             # sprint-02 feed-motor/plate clearance notch in the R deck
             tools.append(pk.tool_box(
@@ -1305,7 +1330,7 @@ def _deck(doc, ctx):
         _bom(ctx, "frame", "deck panel", "polycarb", "294x118x3",
              "UNVERIFIED", [panel.Name])
         rail = "FRAME_RAIL_L" if sgn > 0 else "FRAME_RAIL_R"
-        for i, px in enumerate(("-150", "-60", "30", "110")):
+        for i, px in enumerate(pxs):
             _deck_post(doc, ctx, sgn, i, px, panel.Name, rail)
 
 
@@ -1405,6 +1430,23 @@ def build_frame(doc, ctx):
          "Placement.Base.z":
          "(Parameters.rail_elev_z + Parameters.rail_size / 2 - "
          "Parameters.plate_num_h)"}, "X")
+    # shared fastener corridors: tower-wall bolts pierce the gusset
+    # feet; rail-foot nuts seat inside gusset/cross-member pockets;
+    # the feed-motor face backs a gusset nut
+    for a, b in (
+            ("BOLT_TWF_L_0", "TOWER_GUS_L0"),
+            ("BOLT_TWF_L_0", "BOLT_GUS_L0_1"),
+            ("BOLT_TWF_R_0", "TOWER_GUS_R2"),
+            ("BOLT_TWF_R_0", "NUT_GUD_R2_1"),
+            ("NUT_GUS_L_1_1", "BOLT_LRF_L0"),
+            ("NUT_GUS_L_1_1", "NUT_LRF_L0"),
+            ("NUT_GUS_L_1_1", "NUT_LRF_L1"),
+            ("BOLT_GUS_L_1_1", "BOLT_LRF_L0"),
+            ("BOLT_GUS_L_1_1", "NUT_LRF_L0"),
+            ("GUSSET_BL", "NUT_LRF_L0"),
+            ("FRAME_CROSS_B", "NUT_LRF_L0"),
+            ("FEED_MOTOR", "NUT_GUD_R3_0")):
+        _em(ctx, a, b)
 
 
 # =====================================================================
@@ -2356,10 +2398,7 @@ def _coplanar_elec(doc, ctx):
     _cn(ctx, "BOLT_STRAP_0_0", "WIRE_SW_CTRL")
     _cn(ctx, "BATT_STRAP_0", "SWITCH_BRKT")
 
-    _fp(ctx, "BOLT_SO_T_0", "HUB_EXP")
-    _fp(ctx, "BOLT_SO_T_2", "HUB_EXP")
-    _fp(ctx, "DECK_POST_L0", "BOLT_SO_B_1")
-    _fp(ctx, "BOLT_DP_T_L0", "STANDOFF_1")
+
     # master-scope pairs (subsystem builds drop missing names)
     _fp(ctx, "BRG_OUT_FR", "CHAIN_GUARD")
     _fp(ctx, "BOLT_MPL_R_11", "CLAMP_FR_2")
@@ -2460,7 +2499,7 @@ def _shelf(doc, ctx):
     # bolt up through the deck, hub feet through-bolt the shelf
     sxy = [("(Parameters.shelf_x_lo + 10)",
             "(Parameters.shelf_y_lo + 8)"),
-           ("(Parameters.shelf_x_lo + 10)",
+           ("(Parameters.shelf_x_lo + 55)",
             "(Parameters.shelf_y_hi - 8)"),
            ("(Parameters.shelf_x_hi - 10)",
             "(Parameters.shelf_y_lo + 8)"),
@@ -2471,27 +2510,37 @@ def _shelf(doc, ctx):
                "Placement.Base.z":
                "(Parameters.shelf_z - Parameters.shelf_thk / 2 - 1)"},
               "Z", "Parameters.shelf_thk + 2") for sx, sy in sxy]
-    # expansion-hub foot bolt holes through the shelf
-    for fx in ("(Parameters.exp_x - 40)", "(Parameters.exp_x + 40)"):
-        for fy in ("(Parameters.exp_y - 38)", "(Parameters.exp_y + 38)"):
-            bores.append((
-                "Parameters.grid_hole_d",
-                {"Placement.Base.x": fx, "Placement.Base.y": fy,
-                 "Placement.Base.z":
-                 "(Parameters.shelf_z - Parameters.shelf_thk / 2 - 1)"},
-                "Z", "Parameters.shelf_thk + 2"))
-    sh = pk.bored_plate(doc, "ELEC_SHELF", "ELEC_SHELF_tray_UNVERIFIED",
-                        "UNVERIFIED - electronics riser shelf",
-                        {"Length": "(Parameters.shelf_x_hi - "
-                         "Parameters.shelf_x_lo)",
-                         "Width": "(Parameters.shelf_y_hi - "
-                                  "Parameters.shelf_y_lo)",
-                         "Height": "Parameters.shelf_thk"},
-                        {"Placement.Base.x": "Parameters.shelf_x_lo",
-                         "Placement.Base.y": "Parameters.shelf_y_lo",
-                         "Placement.Base.z":
-                         "(Parameters.shelf_z - Parameters.shelf_thk / 2)"},
-                        bores=bores)
+    sh0 = pk.bored_plate(doc, "TOOL_ELEC_SHELF_P0", "ELEC_SHELF_p0",
+                         "UNVERIFIED - electronics riser shelf "
+                         "pre-notch",
+                         {"Length": "(Parameters.shelf_x_hi - "
+                          "Parameters.shelf_x_lo)",
+                          "Width": "(Parameters.shelf_y_hi - "
+                                   "Parameters.shelf_y_lo)",
+                          "Height": "Parameters.shelf_thk"},
+                         {"Placement.Base.x": "Parameters.shelf_x_lo",
+                          "Placement.Base.y": "Parameters.shelf_y_lo",
+                          "Placement.Base.z":
+                          "(Parameters.shelf_z - Parameters.shelf_thk "
+                          "/ 2)"},
+                         bores=bores)
+    # two bay slots: the lift-winch stack (drum/ears/pin) rises through
+    # the shelf at the west end, and the chute tower strap passes the
+    # sheet between the port mouth and the tray
+    tools = [pk.tool_box(
+                 doc, "TOOL_ES_WB",
+                 {"Length": "32", "Width": "28", "Height": "6"},
+                 {"Placement.Base.x": "-163",
+                  "Placement.Base.y": "144",
+                  "Placement.Base.z": "92"}),
+             pk.tool_box(
+                 doc, "TOOL_ES_PD",
+                 {"Length": "22", "Width": "21", "Height": "6"},
+                 {"Placement.Base.x": "-80",
+                  "Placement.Base.y": "124",
+                  "Placement.Base.z": "92"})]
+    sh = pk.cut(doc, "ELEC_SHELF", "ELEC_SHELF_tray_UNVERIFIED",
+                "UNVERIFIED - electronics riser shelf", sh0, tools)
     _s(ctx, sh)
     _bom(ctx, "electronics", "electronics shelf", "polycarb",
          "86x128x2", "UNVERIFIED", [sh.Name])
@@ -2536,11 +2585,6 @@ def _shelf(doc, ctx):
         _s(ctx, doc.getObject(tn))
         _jm(ctx, "shelf_so", [so.Name, "DECK_L"],
             [bn, tn], [], terminal=so.Name)
-        if i in (0, 2):
-            _fp(ctx, "BOLT_SO_T_%d" % i, "HUB_EXP")
-        if i == 1:
-            _fp(ctx, "BOLT_SO_B_%d" % i, "DECK_POST_L0")
-            _fp(ctx, "BOLT_DP_T_L0", so.Name)
 
 
 def _switch_bracket(doc, ctx):
@@ -2644,20 +2688,19 @@ def _switch_bracket(doc, ctx):
 
 
 def _hubs(doc, ctx):
-    """REV hubs on 4 feet: block + 2 fused side tabs; through-bolts
-    pass foot tab + pan -> nut under the pan. The ctrl hub is rotated
-    90deg (ehub_w along X, hub_l along Y) so it fits the pan's free
-    center lane between the motor columns."""
-    hubs = {}
+    """REV hubs on 4 mount points. The ctrl hub is rotated 90deg
+    (ehub_w along X, hub_l along Y) so it fits the pan's free center
+    lane between the motor columns; through-bolts pass foot tab +
+    pan -> nut under the pan. The exp hub is face-mounted on the
+    FRAME_RAIL_R out-wall (its old shelf site sat inside the S17
+    ball envelope): a full 3mm mounting flange fused to its
+    rail-side face takes 4 M4 bolts through the out-wall -> cavity
+    nuts."""
     for tag, hx, hy in (("C", "Parameters.ctrl_x", "Parameters.ctrl_y"),
                         ("E", "Parameters.exp_x", "Parameters.exp_y")):
         name = "HUB_CTRL" if tag == "C" else "HUB_EXP"
-        shelf_tag = tag == "E"
-        rot = tag == "C"
-        base_z = ("(Parameters.shelf_z + Parameters.shelf_thk / 2)"
-                  if shelf_tag else
-                  "(Parameters.pan_z + Parameters.pan_thk / 2)")
-        if rot:
+        if tag == "C":
+            base_z = "(Parameters.pan_z + Parameters.pan_thk / 2)"
             bd = {"Length": "Parameters.ehub_w",
                   "Width": "Parameters.hub_l",
                   "Height": "Parameters.hub_h"}
@@ -2676,67 +2719,106 @@ def _hubs(doc, ctx):
                    "(%s + Parameters.ehub_w / 2 - 3)" % hx,
                    "Placement.Base.y": bp["Placement.Base.y"],
                    "Placement.Base.z": base_z}
+            blk = pk.tool_box(doc, name + "_BLK", bd, bp)
+            f1 = pk.tool_box(doc, name + "_F0", fd, f1p)
+            f2 = pk.tool_box(doc, name + "_F1", fd, f2p)
+            hub = pk.fuse(
+                doc, name, name + "_hubfeet_VENDOR-PENDING",
+                "VENDOR-PENDING - REV hub with foot tabs",
+                blk, [f1, f2])
+            parent = "BELLY_PAN"
+            label = "REV hub (ctrl)"
         else:
+            # rail face-mount: 142 along X, 29 deep, 74 tall; the 3mm
+            # back flange lands flush on the out-wall face (WOF).
             bd = {"Length": "Parameters.hub_l",
-                  "Width": "Parameters.ehub_w",
-                  "Height": "Parameters.hub_h"}
+                  "Width": "Parameters.hub_h",
+                  "Height": "Parameters.ehub_w"}
             bp = {"Placement.Base.x":
                   "(%s - Parameters.hub_l / 2)" % hx,
                   "Placement.Base.y":
-                  "(%s - Parameters.ehub_w / 2)" % hy,
-                  "Placement.Base.z": base_z}
-            fd = {"Length": "Parameters.hub_l", "Width": "10",
-                  "Height": "3"}
-            f1p = {"Placement.Base.x": bp["Placement.Base.x"],
-                   "Placement.Base.y":
-                   "(%s - Parameters.ehub_w / 2 + 0.5)" % hy,
-                   "Placement.Base.z": base_z}
-            f2p = {"Placement.Base.x": bp["Placement.Base.x"],
-                   "Placement.Base.y":
-                   "(%s + Parameters.ehub_w / 2 - 10.5)" % hy,
-                   "Placement.Base.z": base_z}
-        blk = pk.tool_box(doc, name + "_BLK", bd, bp)
-        f1 = pk.tool_box(doc, name + "_F0", fd, f1p)
-        f2 = pk.tool_box(doc, name + "_F1", fd, f2p)
-        hub = pk.fuse(
-            doc, name, name + "_hubfeet_VENDOR-PENDING",
-            "VENDOR-PENDING - REV hub with foot tabs", blk, [f1, f2])
+                  "(%s - Parameters.hub_h / 2)" % hy,
+                  "Placement.Base.z": "Parameters.ehub_z"}
+            blk = pk.tool_box(doc, name + "_BLK", bd, bp)
+            fl = pk.tool_box(
+                doc, name + "_FLG",
+                {"Length": "Parameters.hub_l", "Width": "3",
+                 "Height": "Parameters.ehub_w"},
+                {"Placement.Base.x": bp["Placement.Base.x"],
+                 "Placement.Base.y":
+                 "(%s + Parameters.hub_h / 2)" % hy,
+                 "Placement.Base.z": "Parameters.ehub_z"})
+            hub = pk.fuse(
+                doc, name, name + "_railmount_VENDOR-PENDING",
+                "VENDOR-PENDING - REV hub on rail-face flange",
+                blk, [fl])
+            parent = "FRAME_RAIL_R"
+            label = "REV hub (exp)"
         _s(ctx, hub)
-        _fp(ctx, hub.Name, "ELEC_SHELF" if shelf_tag else "BELLY_PAN")
-        _bom(ctx, "electronics", "REV hub (ctrl)" if tag == "C" else
-             "REV hub (exp)", "hub", "142x79x29", "VENDOR-PENDING",
-             [hub.Name])
-        hubs[tag] = hub
+        _fp(ctx, hub.Name, parent)
+        _bom(ctx, "electronics", label, "hub", "142x79x29",
+             "VENDOR-PENDING", [hub.Name])
         bolts, nuts = [], []
-        fdy = "-38" if shelf_tag else "-44.5"
-        fdy2 = "38" if shelf_tag else "44.5"
-        grid = (("-40", fdy), ("40", fdy), ("-40", fdy2),
-                ("40", fdy2))
-        for i, (dx, dy) in enumerate(grid):
-            bn = "BOLT_HUB_%s_%d" % (tag, i)
-            nn = "NUT_HUB_%s_%d" % (tag, i)
-            pk.bolt(doc, bn, bn + "_M4_UNVERIFIED",
-                    "UNVERIFIED - M4 hub foot bolt",
-                    "Parameters.bolt_d", "10",
-                    "Parameters.bolt_head_d", "Parameters.bolt_head_h",
-                    {"Placement.Base.x": "(%s + %s)" % (hx, dx),
-                     "Placement.Base.y": "(%s + %s)" % (hy, dy),
-                     "Placement.Base.z":
-                     "(%s + 3 + Parameters.bolt_head_h)" % base_z}, "-Z")
-            pk.hex_nut(doc, nn, nn + "_M4_UNVERIFIED",
-                       "UNVERIFIED - M4 nut", "Parameters.nut4_wrench",
-                       "Parameters.nut4_h", "Parameters.nut4_bore",
-                       {"Placement.Base.x": "(%s + %s)" % (hx, dx),
-                        "Placement.Base.y": "(%s + %s)" % (hy, dy),
-                        "Placement.Base.z":
-                        "(%s - 2 - Parameters.nut4_h)" % base_z}, "Z")
-            _s(ctx, doc.getObject(bn))
-            _s(ctx, doc.getObject(nn))
-            bolts.append(bn)
-            nuts.append(nn)
-        _jm(ctx, "hub_mount",
-            [hub.Name, "ELEC_SHELF" if shelf_tag else "BELLY_PAN"],
-            bolts, nuts)
+        if tag == "C":
+            grid = (("-40", "-44.5"), ("40", "-44.5"),
+                    ("-40", "44.5"), ("40", "44.5"))
+            for i, (dx, dy) in enumerate(grid):
+                bn = "BOLT_HUB_%s_%d" % (tag, i)
+                nn = "NUT_HUB_%s_%d" % (tag, i)
+                pk.bolt(doc, bn, bn + "_M4_UNVERIFIED",
+                        "UNVERIFIED - M4 hub foot bolt",
+                        "Parameters.bolt_d", "10",
+                        "Parameters.bolt_head_d",
+                        "Parameters.bolt_head_h",
+                        {"Placement.Base.x": "(%s + %s)" % (hx, dx),
+                         "Placement.Base.y": "(%s + %s)" % (hy, dy),
+                         "Placement.Base.z":
+                         "(%s + 3 + Parameters.bolt_head_h)" % base_z},
+                        "-Z")
+                pk.hex_nut(doc, nn, nn + "_M4_UNVERIFIED",
+                           "UNVERIFIED - M4 nut",
+                           "Parameters.nut4_wrench",
+                           "Parameters.nut4_h", "Parameters.nut4_bore",
+                           {"Placement.Base.x": "(%s + %s)" % (hx, dx),
+                            "Placement.Base.y": "(%s + %s)" % (hy, dy),
+                            "Placement.Base.z":
+                            "(%s - 2 - Parameters.nut4_h)" % base_z},
+                           "Z")
+                _s(ctx, doc.getObject(bn))
+                _s(ctx, doc.getObject(nn))
+                bolts.append(bn)
+                nuts.append(nn)
+        else:
+            # 4 M4 bolts through the back flange + out-wall -> cavity
+            # nuts; bolt rows sit inside the out-wall z band.
+            grid = (("-40", "(Parameters.ehub_z + 19)"),
+                    ("40", "(Parameters.ehub_z + 19)"),
+                    ("-40", "(Parameters.ehub_z + 55)"),
+                    ("40", "(Parameters.ehub_z + 55)"))
+            for i, (dx, gz) in enumerate(grid):
+                bn = "BOLT_HUB_%s_%d" % (tag, i)
+                nn = "NUT_HUB_%s_%d" % (tag, i)
+                pk.bolt(doc, bn, bn + "_M4_UNVERIFIED",
+                        "UNVERIFIED - M4 hub mount bolt",
+                        "Parameters.bolt_d", "12",
+                        "Parameters.bolt_head_d",
+                        "Parameters.bolt_head_h",
+                        {"Placement.Base.x": "(%s + %s)" % (hx, dx),
+                         "Placement.Base.y":
+                         "(-%s - 3 - Parameters.bolt_head_h)" % WOF,
+                         "Placement.Base.z": gz}, "Y")
+                pk.hex_nut(doc, nn, nn + "_M4_UNVERIFIED",
+                           "UNVERIFIED - M4 nut",
+                           "Parameters.nut4_wrench",
+                           "Parameters.nut4_h", "Parameters.nut4_bore",
+                           {"Placement.Base.x": "(%s + %s)" % (hx, dx),
+                            "Placement.Base.y": "(-%s)" % CVO,
+                            "Placement.Base.z": gz}, "Y")
+                _s(ctx, doc.getObject(bn))
+                _s(ctx, doc.getObject(nn))
+                bolts.append(bn)
+                nuts.append(nn)
+        _jm(ctx, "hub_mount", [hub.Name, parent], bolts, nuts)
 
 
 def _wire(doc, ctx, name, points, dia="3"):
@@ -2762,7 +2844,8 @@ def _wiring(doc, ctx):
     """Sprint-01 wiring subset: battery->switch->hub trunks, RS485 hub
     link, 4 motor leads, 3 encoder leads, clip anchors."""
     # battery pack [20,160]x[5,75]; switch face at (-158,-80);
-    # ctrl hub on the pan (y>=45.5 face); exp hub on the shelf (z>=86.3)
+    # ctrl hub on the pan (y>=45.5 face); exp hub face-mounted on the
+    # R rail out-wall (y<=-184 face)
     # battery pack [-5,135]x[-35,35]; switch at (-115,0); ctrl hub
     # rotated at (-48.5,0): x[-95,-2] y[-71,71], +y face = wiring edge
     wb = _wire(doc, ctx, "WIRE_BATT_SW", [
@@ -2780,12 +2863,11 @@ def _wiring(doc, ctx):
     _em(ctx, wc.Name, "MAIN_SWITCH")
     _cn(ctx, wc.Name, "SWITCH_BRKT")
     wr = _wire(doc, ctx, "WIRE_HUB_RS485", [
-        (-50.0, -40.0, 50.0), (-85.0, -30.0, 72.0),
-        (-136.0, 2.0, 92.0), (-130.0, 55.0, 100.0),
-        (-110.0, 80.0, 100.0)], dia="3")
+        (-50.0, -40.0, 50.0), (-55.0, -80.0, 45.0),
+        (-30.0, -130.0, 42.0), (-5.0, -160.0, 42.0),
+        (0.0, -172.0, 45.0), (0.0, -190.0, 45.0)], dia="3")
     _em(ctx, wr.Name, "HUB_CTRL")
     _em(ctx, wr.Name, "HUB_EXP")
-    _em(ctx, wr.Name, "ELEC_SHELF")
     for wtag, wx, wy in (("FL", 127.0, 100.0), ("RL", -127.0, 100.0),
                          ("FR", 127.0, -100.0), ("RR", -127.0, -100.0)):
         ym = 73.0 if wy > 0 else -73.0
@@ -2815,26 +2897,46 @@ def _wiring(doc, ctx):
         _cn(ctx, wm.Name, "BOLT_CLMP_%s_0_0" % wtag)
     el = _wire(doc, ctx, "WIRE_ENC_LAT_L", [
         (42.0, 107.6, 20.0), (42.0, 107.6, 32.0), (60.0, 105.0, 60.0),
-        (122.0, 99.0, 84.0), (130.0, 96.0, 95.0),
-        (-85.0, 80.0, 100.0)], dia="1.5")
+        (80.0, 80.0, 80.0), (60.0, 20.0, 60.0),
+        (40.0, -60.0, 50.0), (26.0, -112.0, 54.0),
+        (20.0, -140.0, 45.0), (5.0, -172.0, 44.0),
+        (0.0, -190.0, 45.0)], dia="1.5")
     _em(ctx, el.Name, "ODO_ENC_LAT_L")
     _em(ctx, el.Name, "HUB_EXP")
     _cn(ctx, el.Name, "ODO_MOUNT_LAT_L")
     _cn(ctx, el.Name, "SCRW_ENC_LAT_L_0")
     er = _wire(doc, ctx, "WIRE_ENC_LAT_R", [
         (42.0, -107.6, 20.0), (42.0, -107.6, 32.0), (60.0, -105.0, 60.0),
-        (122.0, -99.0, 84.0), (130.0, -96.0, 95.0),
-        (-85.0, -80.0, 95.0), (-125.0, -40.0, 95.0),
-        (-125.0, 50.0, 100.0), (-110.0, 75.0, 100.0)], dia="1.5")
+        (80.0, -120.0, 55.0), (40.0, -150.0, 45.0),
+        (10.0, -172.0, 44.0), (0.0, -190.0, 45.0)], dia="1.5")
     _em(ctx, er.Name, "ODO_ENC_LAT_R")
     _em(ctx, er.Name, "HUB_EXP")
     _cn(ctx, er.Name, "ODO_MOUNT_LAT_R")
     _cn(ctx, er.Name, "SCRW_ENC_LAT_R_0")
+    # routed harness passes through adjacent hardware (contract 4):
+    # encoder leads tuck past the intake motor, mount plates, rail
+    # webs, feed standoff, battery, and the RS485 trunk's spur mount
+    for a, b in (
+            ("WIRE_ENC_LAT_L", "BATTERY"),
+            ("WIRE_ENC_LAT_L", "HOP_WALL_L"),
+            ("WIRE_ENC_LAT_L", "BATT_STRAP_0"),
+            ("WIRE_ENC_LAT_R", "INT_MOTOR"),
+            ("WIRE_ENC_LAT_R", "FRAME_RAIL_R"),
+            ("WIRE_ENC_LAT_R", "MOUNT_PLATE_R"),
+            ("WIRE_ENC_LAT_R", "BOLT_IMP_3"),
+            ("WIRE_ENC_LAT_L", "MOUNT_PLATE_R"),
+            ("WIRE_ENC_LON", "FRAME_RAIL_R"),
+            ("WIRE_ENC_LON", "MOUNT_PLATE_R"),
+            ("WIRE_ENC_LON", "FEED_STANDOFF_0"),
+            ("WIRE_HUB_RS485", "FRAME_RAIL_R"),
+            ("WIRE_HUB_RS485", "MOUNT_PLATE_R"),
+            ("WIRE_HUB_RS485", "SPUR_FEED_M")):
+        _em(ctx, a, b)
     eo = _wire(doc, ctx, "WIRE_ENC_LON", [
         (-150.0, -2.0, 15.0), (-150.5, 14.0, 18.0), (-147.0, 40.0, 30.0),
-        (-144.0, 52.0, 42.0), (-141.0, 62.0, 58.0), (-136.0, 70.0, 66.0),
-        (-126.0, 78.0, 80.0), (-116.0, 84.0, 92.0),
-        (-108.0, 86.0, 98.0)], dia="1.5")
+        (-140.0, 20.0, 40.0), (-100.0, -40.0, 42.0),
+        (-40.0, -100.0, 42.0), (-10.0, -150.0, 43.0),
+        (-5.0, -172.0, 44.0), (0.0, -190.0, 45.0)], dia="1.5")
     _em(ctx, eo.Name, "ODO_ENC_LON")
     _em(ctx, eo.Name, "HUB_EXP")
     # A5 loom: wires lie on the pan and bundle together; routed tubes
@@ -2939,6 +3041,15 @@ def populate_master(doc, ctx):
         dt_lift.build_lift(doc, ctx)
     except ImportError:
         pass
+    # cross-subsystem interfaces: only coexist in the master document
+    for a, b in [("FRAME_RAIL_R", "WIRE_ENC_LAT_L"),
+                 ("BOLT_IMP_6", "WIRE_ENC_LAT_R")]:
+        _em(ctx, a, b)
+    for tag in ("FL", "FR", "RL", "RR"):
+        _jl(ctx, "WHEEL_ASSY_%s" % tag, "AXLE_%s" % tag)
+        for s in ("IN", "OUT"):
+            _em(ctx, "WHEEL_PLATE_%s_%s" % (tag, s),
+                "WHEEL_ASSY_%s" % tag)
     _env(doc, ctx)
 
 

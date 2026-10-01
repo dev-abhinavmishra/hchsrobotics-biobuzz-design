@@ -88,8 +88,10 @@ code path with only sign flips — there is no per-corner copy-paste:
 ## Electronics — belly-tray package
 
 - `ELEC_SHELF` 2 mm tray at `shelf_z` 85.3 on four `STANDOFF_*`
-  (shelf_so joints), carrying `HUB_C`/`HUB_E` expansion + control hubs
-  (hub_mount joints).
+  (shelf_so joints). `HUB_CTRL` mounts to the belly pan; `HUB_EXP`
+  is face-mounted on the `FRAME_RAIL_R` out-wall via a fused 3 mm
+  back flange + 4 M4 bolts to cavity nuts (the shelf site sits
+  inside the S17 seat sphere envelope).
 - `BATTERY` 95×65×40 (`batt_*`) on the belly pan, strapped by
   `BATT_STRAP_0/1` (strap_pan joints + pan-side nuts).
 - `SWITCH_BRKT` on the pan face (2 pan bolts) with `MAIN_SWITCH` and 2

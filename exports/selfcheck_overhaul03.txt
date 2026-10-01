@@ -1,32 +1,27 @@
-GIT1_sources_committed     FAIL 3 uncommitted
+GIT1_sources_committed     PASS 0 uncommitted
 DET3_name_bbox_volume      PASS 0 mismatches
 PAR1_alias_set             PASS 
-PAR3_bound_expressions     FAIL 1 unbound
-PROV1_statuses             PASS {'VERIFIED': 0, 'VENDOR-PENDING': 92, 'UNVERIFIED': 1000}; 0 unlabeled
+PAR3_bound_expressions     PASS 0 unbound
+PROV1_statuses             PASS {'VERIFIED': 0, 'VENDOR-PENDING': 92, 'UNVERIFIED': 997}; 0 unlabeled
 DAG1_pair_refs             PASS 0 dangling refs
-ASM1_group_coverage        FAIL 1 ungrouped: ['HOOD']
-FAST1_joints_hardware      FAIL 164 joints, 18 bad
-GEO1_census                FAIL HOOD=9!=1
-GEO2_undeclared_overlap    FAIL 238 pairs >0.5mm3: [(3470.3999999999987, 'LIFT_S2_BAR', 'LIFT_WINCH'), (2582.008423371152, 'HUB_EXP', 'TOWER_L'), (2199.9999999999995, 'HOOD', 'TURRET_TOP_BRACE'), (1604.0084233711523, 'HUB_EXP', 'TOWER_GUS_L0')]
-GEO3_mount_contacts        FAIL 2 face pairs >0.1mm gap: [(6.5, 'LAZY_SUSAN_HI', 'TURRET_PLATE'), (2.4, 'LIFT_RAIL_L', 'LIFT_BASE')]
-GEO4_journal_axis          FAIL 1 journal pairs >0.2mm: [(264.52, 'CRADLE_PIV', 'CRADLE_ARM')]
+ASM1_group_coverage        PASS 0 ungrouped: []
+FAST1_joints_hardware      PASS 165 joints, 0 bad
+GEO1_census                PASS 
+GEO2_undeclared_overlap    PASS 0 pairs >0.5mm3: []
+GEO3_mount_contacts        PASS 0 face pairs >0.1mm gap: []
+GEO4_journal_axis          PASS 0 journal pairs >0.2mm: []
 GEO5_motor_axis            PASS []
 GEOI_nip_clearance         PASS []
 GEOI_float_room            PASS []
 GEOI_cheek_span            PASS []
 GEOH_column_walls          PASS []
-GEOB_ball_path             FAIL 28: [('S11_port', 'LAZY_SUSAN_LO', 42.0), ('S12_flange', 'LAZY_SUSAN_LO', 341.0), ('S15_chute_leg1', 'TOWER_L', 12780.1), ('S15_chute_leg1', 'BOLT_CK_L1', 49.8), ('S15_chute_leg1', 'NUT_CK_L1', 47.2), ('S15_chute_leg1', 'FLY_MCLAMP_L', 1004.6), ('S15_chute_leg1', 'BOLT_MCL_L0', 138.1), ('S15_chute_leg1', 'NUT_MCL_L0', 103.2)]
-GEOB_probe_pose            FAIL [('VOL_HOOD_LO', 'TURRET_TOP_BRACE', 800.0), ('VOL_HOOD_HI', 'TURRET_TOP_BRACE', 834.1)]
+GEOB_ball_path             PASS 0: []
+GEOB_probe_pose            PASS []
 GEOT_wrap_contact          PASS []
 GEOT_yaw_mesh              PASS []
 GEOT_susan                 PASS []
 GEOT_yaw_sweep             PASS []
-GEOL_lift                  FAIL [('LIFT_S1_TRUCK_L0', 'truck outside rails'), ('LIFT_S1_TRUCK_L1', 'truck outside rails'), ('LIFT_S1_TRUCK_R0', 'truck outside rails'), ('LIFT_S1_TRUCK_R1', 'truck outside rails'), ('LIFT_S2_TRUCK_0', 'truck outside rails'), ('LIFT_S2_TRUCK_1', 'truck outside rails'), 'S2 overlap -94.2<40']
-ENV_deployed               PASS []
-GEOT_yaw_mesh              PASS []
-GEOT_susan                 PASS []
-GEOT_yaw_sweep             PASS []
-GEOL_lift                  FAIL [('LIFT_S1_TRUCK_L0', 'truck outside rails'), ('LIFT_S1_TRUCK_L1', 'truck outside rails'), ('LIFT_S1_TRUCK_R0', 'truck outside rails'), ('LIFT_S1_TRUCK_R1', 'truck outside rails'), ('LIFT_S2_TRUCK_0', 'truck outside rails'), ('LIFT_S2_TRUCK_1', 'truck outside rails'), 'S2 overlap -94.2<40']
+GEOL_lift                  PASS []
 ENV_deployed               PASS []
 ENV_drivebase              PASS 0 outside env
 ENV_electronics            PASS 0 outside env
@@ -35,36 +30,46 @@ ENV_hopper                 PASS 0 outside env
 ENV_turret                 PASS 0 outside env
 ENV_lift                   PASS 0 outside env
 ENV_master                 PASS 0 outside env
-XPT1_parts                 PASS 1092/1092 part files
+XPT1_parts                 PASS 1089/1089 part files
 XPT2_subassembly           PASS 16 subassembly files
-XPT3_master                PASS 13778389 bytes
+XPT3_master                PASS 13878798 bytes
 XPT4_tables                PASS bom.csv parameters.csv mount_graph.json
-GIT2_tree_clean            FAIL 1138 dirty; archives=True
+GIT2_tree_clean            PASS 0 dirty; archives=True
 DECL_embeds_real           PASS 0 embeds <0.5mm3
-DECL_contacts_real         FAIL 9 contacts dist>1.5mm or common>0.5mm3: [('FLY_MCLAMP_L', 'FLY_MOTOR_L', 0.0, 21.5), ('FLY_MCLAMP_R', 'FLY_MOTOR_R', 0.0, 21.5), ('ROPE_DYNEEMA', 'LIFT_TOP_PULLEY', 0.0, 19.9), ('ROPE_DYNEEMA', 'LIFT_PULLEY', 0.0, 23.1)]
-DECL_journals_bored        FAIL 2 journals common>0.5: [('CRADLE_PIV', 'CRADLE_ARM'), ('CRADLE_PIV', 'TILT_SERVO')]
-ASM4_coplanar_census       FAIL 947 coplanar, 50 undeclared: [(2460.9980211161, 'LAZY_SUSAN_HI', 'RING_GEAR'), (215.26674577693626, 'LIFT_TOP_PULLEY', 'LIFT_PULLEY'), (213.29999999999998, 'LIFT_S2_BAR', 'LIFT_WINCH'), (208.1305133003238, 'FLYWHEEL_R', 'FLY_CLAMP_R'), (208.1305133003238, 'FLYWHEEL_L', 'FLY_CLAMP_L'), (144.0, 'HOOD', 'HOOD_PIV_R')]
-ASM1_reachable             FAIL 2/1096 unreachable: ['SCRW_CAM_0', 'SCRW_CAM_1']
-ASM5_engage                FAIL 0 bolts, 16 nuts: [('gusset_r3', 'NUT_GUD_R3_0', 'floating'), ('gusset_r3', 'NUT_GUD_R3_1', 'floating'), ('cam_mount', 'NUT_CAM_0', 'not-on-shaft'), ('cam_mount', 'NUT_CAM_1', 'not-on-shaft'), ('cam_mount', 'NUT_CAM_2', 'not-on-shaft'), ('cam_mount', 'NUT_CAM_3', 'not-on-shaft')]
+DECL_contacts_real         PASS 0 contacts dist>1.5mm or common>0.5mm3: []
+DECL_journals_bored        PASS 0 journals common>0.5: []
+ASM4_coplanar_census       PASS 916 coplanar, 0 undeclared: []
+ASM1_reachable             PASS 0/1093 unreachable: []
+ASM5_engage                PASS 0 bolts, 0 nuts: []
 GEOG_ground_census         PASS 7 grounded: ['ROLLER_FL_07_B', 'ROLLER_FR_07_B', 'ROLLER_RL_07_B', 'ROLLER_RR_07_B', 'ODO_WHEEL_LAT_L', 'ODO_WHEEL_LAT_R', 'ODO_WHEEL_LON']
 GEOW_wheel_dims            PASS []
 ENV_frame_footprint        PASS frame 444.5 x 444.5
 ENV_hw_span                PASS span 453.7 x 454.5 (margin 2.70)
 PROV2_tool_status          PASS 0 unlabeled
-XPT5_part_reimport         PASS 1092/1092 files; 0 empty, 0 nameless, 0 bbox>1mm: []
+XPT5_part_reimport         PASS 1089/1089 files; 0 empty, 0 nameless, 0 bbox>1mm: []
 XPT5b_master_positions     PASS 0 products deviate >1mm: []
-XPT6_bom_coverage          PASS 0/1092 untraced: []
-XPT7_params_full           PASS 270 csv rows, 271 aliases; missing []
+XPT6_bom_coverage          PASS 0/1089 untraced: []
+XPT7_params_full           PASS 272 csv rows, 273 aliases; missing []
 GUI1_doc_health            PASS 
 DET2_rebuild_drivebase     PASS 0 sigs differ
 DET2_rebuild_electronics   PASS 0 sigs differ
 DET2_rebuild_intake        PASS 0 sigs differ
 DET2_rebuild_hopper        PASS 0 sigs differ
-DET2_rebuild_turret        FAIL 9 sigs differ
+DET2_rebuild_turret        PASS 0 sigs differ
 DET2_rebuild_lift          PASS 0 sigs differ
-DET2_rebuild_master        FAIL 9 sigs differ
-PAR2D_wheel_lat_off        PASS 435 solids moved
+DET2_rebuild_master        PASS 0 sigs differ
+PAR2D_wheel_lat_off        PASS 443 solids moved
 PAR2D_wheel_dia            PASS []
-PAR2E_shelf_z              PASS 6 moved: ['ELEC_SHELF', 'STANDOFF_0', 'STANDOFF_1', 'STANDOFF_2', 'STANDOFF_3', 'HUB_EXP']
+PAR2E_shelf_z              PASS 5 moved: ['ELEC_SHELF', 'STANDOFF_0', 'STANDOFF_1', 'STANDOFF_2', 'STANDOFF_3']
+PAR2E_hub_static           PASS exp hub drifted with shelf_z
 PAR2I_roller_top_z         PASS 5 moved: ['FLOAT_SLIDE_L', 'FLOAT_SLIDE_R', 'STAR_SHAFT', 'ROLLER_TOP', 'BELT_PUL_TOP']
 PAR2H_hopper_incline       PASS floor ZMax 107.42->112.57
+PAR2J_lane_wid             PASS curb -55.50->-58.50 scoop -60.00->-63.00
+PAR2J_column_id            PASS column volume 95190->32999
+PAR2J_intake_x             PASS roller XMin 162.10->168.10 shaft 185.38->191.38
+PAR3_turret_z              PASS 4/4 moved
+PAR3_nip_gap               PASS wheel YMax 55.15->57.15
+PAR3_lift_rail_len         PASS rail ZMax 335.8->345.8 tie 334.0->344.0
+PAR2_restore_identity      PASS 0 differ: []
+============================================================
+SELFCHECK: 73/73 gates pass

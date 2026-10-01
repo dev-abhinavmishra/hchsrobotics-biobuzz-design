@@ -12,6 +12,7 @@ import math
 import re
 import subprocess
 import sys
+import tempfile
 import traceback
 from pathlib import Path
 
@@ -43,8 +44,9 @@ EXCLUDE_TYPES = ("App::Part", "App::Origin", "Spreadsheet::Sheet",
                  "App::DocumentObjectGroup")
 
 RESULTS = []
-LOG = open(ROOT / "exports" / "selfcheck_overhaul01.txt", "w",
-           encoding="utf-8")
+LOG_PATH = ROOT / "exports" / "selfcheck_overhaul01.txt"
+LOG_TMP = Path(tempfile.gettempdir()) / "selfcheck_overhaul01.txt"
+LOG = open(LOG_TMP, "w", encoding="utf-8")
 
 
 def gate(tag, ok, detail=""):
@@ -269,8 +271,8 @@ def main():
 
     unbound = []
     for o in solids:
-        if o.Name.startswith("WIRE_"):
-            continue          # harness geometry bakes at build time
+        if o.Name.startswith(("WIRE_", "ROPE_")):
+            continue          # harness/rigging bakes at build time
         if not bound_tree(o):
             unbound.append(o.Name)
     gate("PAR3_bound_expressions",
@@ -917,14 +919,20 @@ def main():
         sheet.set("shelf_z", repr(bsz + 10.0))
         pd.recompute(None, True, True)
         moved_e = [o.Name for o in pd.Objects
-                   if o.Name in ("ELEC_SHELF", "HUB_EXP",
+                   if o.Name in ("ELEC_SHELF",
                                  "STANDOFF_0", "STANDOFF_1",
                                  "STANDOFF_2", "STANDOFF_3")
                    and hasattr(o, "Shape") and not o.Shape.isNull()
                    and abs(gshape(o).BoundBox.ZMax
                            - base_sigs[o.Name].ZMax) > 9.0]
-        gate("PAR2E_shelf_z", len(moved_e) == 6,
+        gate("PAR2E_shelf_z", len(moved_e) == 5,
              "%d moved: %s" % (len(moved_e), moved_e[:6]))
+        # HUB_EXP is rail-face mounted (S17 clearance) and must NOT
+        # track shelf_z
+        gate("PAR2E_hub_static",
+             abs(gshape(pd.getObject("HUB_EXP")).BoundBox.ZMax
+                 - base_sigs["HUB_EXP"].ZMax) < 0.01,
+             "exp hub drifted with shelf_z")
         # restore -> identity
         sheet.set("shelf_z", repr(bsz))
         pd.recompute(None, True, True)
@@ -945,6 +953,7 @@ def main():
     print(tail)
     LOG.write(tail + "\n")
     LOG.close()
+    LOG_TMP.replace(LOG_PATH)
     if npass != len(RESULTS):
         sys.exit(1)
 

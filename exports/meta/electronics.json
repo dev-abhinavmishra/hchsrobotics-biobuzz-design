@@ -415,7 +415,7 @@
    "id": "hub_mount",
    "members": [
     "HUB_EXP",
-    "ELEC_SHELF"
+    "FRAME_RAIL_R"
    ],
    "bolts": [
     "BOLT_HUB_E_0",
@@ -502,10 +502,6 @@
    "ELEC_SHELF"
   ],
   [
-   "BOLT_SO_T_0",
-   "HUB_EXP"
-  ],
-  [
    "STANDOFF_1",
    "DECK_L"
   ],
@@ -514,24 +510,12 @@
    "ELEC_SHELF"
   ],
   [
-   "BOLT_SO_B_1",
-   "DECK_POST_L0"
-  ],
-  [
-   "BOLT_DP_T_L0",
-   "STANDOFF_1"
-  ],
-  [
    "STANDOFF_2",
    "DECK_L"
   ],
   [
    "STANDOFF_2",
    "ELEC_SHELF"
-  ],
-  [
-   "BOLT_SO_T_2",
-   "HUB_EXP"
   ],
   [
    "STANDOFF_3",
@@ -555,7 +539,7 @@
   ],
   [
    "HUB_EXP",
-   "ELEC_SHELF"
+   "FRAME_RAIL_R"
   ],
   [
    "CLIP_0",
@@ -572,22 +556,6 @@
   [
    "CLIP_3",
    "BELLY_PAN"
-  ],
-  [
-   "BOLT_SO_T_0",
-   "HUB_EXP"
-  ],
-  [
-   "BOLT_SO_T_2",
-   "HUB_EXP"
-  ],
-  [
-   "DECK_POST_L0",
-   "BOLT_SO_B_1"
-  ],
-  [
-   "BOLT_DP_T_L0",
-   "STANDOFF_1"
   ],
   [
    "BRG_OUT_FR",
@@ -841,6 +809,22 @@
   ],
   [
    "BOLT_HUB_E_0",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_HUB_E_1",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_HUB_E_2",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_HUB_E_3",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "BOLT_HUB_E_0",
    "NUT_HUB_E_0"
   ],
   [
@@ -896,6 +880,30 @@
    "HUB_EXP"
   ],
   [
+   "WIRE_ENC_LAT_R",
+   "HUB_EXP"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "BATTERY"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "BATT_STRAP_0"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "FRAME_RAIL_R"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "FRAME_RAIL_R"
+  ],
+  [
    "WIRE_ENC_LON",
    "HUB_EXP"
   ],
@@ -905,7 +913,19 @@
   ],
   [
    "WIRE_SW_CTRL",
-   "WIRE_HUB_RS485"
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_L"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "WIRE_ENC_LON"
   ],
   [
    "WIRE_MTR_FL",
@@ -916,8 +936,16 @@
    "WIRE_MTR_RR"
   ],
   [
-   "WIRE_ENC_LON",
-   "ELEC_SHELF"
+   "WIRE_ENC_LAT_L",
+   "WIRE_ENC_LAT_R"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "WIRE_ENC_LON"
   ]
  ],
  "journals": [],
@@ -995,32 +1023,20 @@
    "BELLY_PAN"
   ],
   [
-   "BOLT_HUB_E_0",
-   "ELEC_SHELF"
-  ],
-  [
-   "BOLT_HUB_E_1",
-   "ELEC_SHELF"
-  ],
-  [
-   "BOLT_HUB_E_2",
-   "ELEC_SHELF"
-  ],
-  [
-   "BOLT_HUB_E_3",
-   "ELEC_SHELF"
-  ],
-  [
-   "WIRE_ENC_LAT_R",
-   "HUB_EXP"
-  ],
-  [
    "WIRE_BATT_SW",
    "WIRE_MTR_FR"
   ],
   [
-   "WIRE_HUB_RS485",
-   "WIRE_ENC_LAT_R"
+   "WIRE_SW_CTRL",
+   "WIRE_HUB_RS485"
+  ],
+  [
+   "WIRE_MTR_FR",
+   "WIRE_ENC_LON"
+  ],
+  [
+   "WIRE_MTR_RR",
+   "WIRE_ENC_LON"
   ],
   [
    "WIRE_SW_CTRL",
@@ -1394,10 +1410,6 @@
    "INT_MOTOR"
   ],
   [
-   "WIRE_HUB_RS485",
-   "ELEC_SHELF"
-  ],
-  [
    "WIRE_MTR_FL",
    "MOTOR_FL"
   ],
@@ -1420,6 +1432,42 @@
   [
    "WIRE_ENC_LAT_R",
    "ODO_ENC_LAT_R"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "HOP_WALL_L"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "INT_MOTOR"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WIRE_ENC_LAT_R",
+   "BOLT_IMP_3"
+  ],
+  [
+   "WIRE_ENC_LAT_L",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "FEED_STANDOFF_0"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "MOUNT_PLATE_R"
+  ],
+  [
+   "WIRE_HUB_RS485",
+   "SPUR_FEED_M"
   ],
   [
    "WIRE_ENC_LON",
@@ -1511,10 +1559,6 @@
   ],
   [
    "WIRE_SW_CTRL",
-   "WIRE_ENC_LAT_L"
-  ],
-  [
-   "WIRE_SW_CTRL",
    "WIRE_ENC_LAT_R"
   ],
   [
@@ -1538,14 +1582,6 @@
    "WIRE_MTR_RR"
   ],
   [
-   "WIRE_HUB_RS485",
-   "WIRE_ENC_LAT_L"
-  ],
-  [
-   "WIRE_HUB_RS485",
-   "WIRE_ENC_LON"
-  ],
-  [
    "WIRE_MTR_FL",
    "WIRE_MTR_FR"
   ],
@@ -1578,10 +1614,6 @@
    "WIRE_ENC_LAT_R"
   ],
   [
-   "WIRE_MTR_FR",
-   "WIRE_ENC_LON"
-  ],
-  [
    "WIRE_MTR_RL",
    "WIRE_MTR_RR"
   ],
@@ -1606,28 +1638,16 @@
    "WIRE_ENC_LAT_R"
   ],
   [
-   "WIRE_MTR_RR",
-   "WIRE_ENC_LON"
-  ],
-  [
-   "WIRE_ENC_LAT_L",
-   "WIRE_ENC_LAT_R"
-  ],
-  [
-   "WIRE_ENC_LAT_L",
-   "WIRE_ENC_LON"
-  ],
-  [
-   "WIRE_ENC_LAT_R",
-   "WIRE_ENC_LON"
-  ],
-  [
    "BOLT_MPL_R_3",
    "INT_MOTOR"
   ],
   [
    "WIRE_ENC_LON",
    "MOTOR_RL"
+  ],
+  [
+   "WIRE_ENC_LON",
+   "ELEC_SHELF"
   ],
   [
    "WIRE_ENC_LON",
