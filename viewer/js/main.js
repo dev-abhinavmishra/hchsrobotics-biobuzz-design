@@ -100,7 +100,7 @@ const demo = createMatchDemo({
     const L = anim.lift;
     L.guided = null;
     L.cradle.add(L.ball);
-    L.ball.position.set(0.1, 1.08, 0);
+    L.ball.position.set(0.28, -1.5, -0.67);
     L.ball.visible = true;
     L.ball.userData.vy = 0;
     L.ballState = 'cup';
@@ -141,18 +141,18 @@ function addLabel(text, parent, pos) {
   o.visible = false;
 }
 // launcher parts live in turret-local space (turret origin at z=2.6) — offset callouts to match
-addLabel('<b>360° turret</b> · ring gear yaw', groups.launcher, [0, 10.4, 2.6]);
-addLabel('<b>dual flywheels</b> · 2.9" nip', groups.launcher, [0, 12.9, 3.15]);
-addLabel('<b>servo hood</b> · 40–65° exit', groups.launcher, [0, 13.4, 1.2]);
-addLabel('<b>star roller</b> · flexes for NECTAR', groups.intake, [0, 4.6, -7.6]);
-addLabel('<b>traction roller</b>', groups.intake, [0, 0.8, -7.6]);
+addLabel('<b>360° turret</b> · external ring mesh', groups.launcher, [0, 10.7, 2.6]);
+addLabel('<b>dual flywheels</b> · 73.7mm nip', groups.launcher, [0, 13.5, 3.15]);
+addLabel('<b>servo hood</b> · 40–65° exit', groups.launcher, [0, 14.9, 1.2]);
+addLabel('<b>star roller</b> · flexes for NECTAR', groups.intake, [0, 7.7, -6.0]);
+addLabel('<b>traction roller</b>', groups.intake, [0, 0.8, -7.8]);
 addLabel('<b>feed column</b> · through turret axis', groups.hopper, [0, 8.2, 2.6]);
 addLabel('<b>odometry pods</b> ×3', groups.drive, [0, 0.6, 6.0]);
-addLabel('<b>control + expansion hub</b>', groups.electronics, [-1.2, 2.6, 5.8]);
+addLabel('<b>control + expansion hub</b>', groups.electronics, [3.6, 3.0, 0.5]);
 addLabel('<b>96mm mecanum</b> ×4', groups.drive, [5.7, 2.2, -5.0]);
-addLabel('<b>deposit lift</b> · 2-stage, +14.6"', groups.lift, [-7.0, 13.5, 7.3]);
-addLabel('<b>deposit cradle</b> · tips at ~22"', anim.lift.s2, [-7.0, 4.6, 4.9]);
-addLabel('<b>column diverter</b> · feeds the lift', groups.lift, [-2.2, 9.9, 3.8]);
+addLabel('<b>deposit lift</b> · 2-stage, +14.6"', groups.lift, [-6.4, 13.4, 6.9]);
+addLabel('<b>deposit cradle</b> · tips at ~22"', anim.lift.s2, [-7.4, 5.6, 5.3]);
+addLabel('<b>column diverter</b> · feeds the lift', groups.lift, [-2.6, 8.6, 3.6]);
 
 /* ---------- state ---------- */
 let explodeT = 0, explodeTarget = 0;
@@ -337,7 +337,7 @@ function showDefaultInfo() {
 
 /* ---------- compliance ---------- */
 document.getElementById('compliance-body').innerHTML = [
-  ['R101 · 18" cube start', '17.5×17.5×13.3 ✓'],
+  ['R101 · 18" cube start', '17.5×17.5×14.9 ✓'],
   ['R105 · horizontal', '18×18 footprint ✓'],
   ['R105 · vertical cap', 'lift tops ~26" < 29" ✓'],
   ['Motors (max 8)', '8 — at cap'],
@@ -443,7 +443,7 @@ $('cam-preset').onchange = e => {
   const views = {
     iso: [[23, 16, -26], [0, 6, 0]], front: [[0, 9, -34], [0, 6, 0]],
     side: [[34, 9, 0], [0, 6, 0]], top: [[0.01, 44, 0.01], [0, 0, 0]],
-    intake: [[0, 4.5, -20], [0, 3.4, -6]], turret: [[11, 15.5, 12], [0, 11.2, 2.6]],
+    intake: [[0, 4.5, -20], [0, 3.4, -6]], turret: [[11, 17.5, 12], [0, 12.3, 2.6]],
   };
   if (views[p]) { camera.position.set(...views[p][0]); controls.target.set(...views[p][1]); }
 };
@@ -470,7 +470,7 @@ function launchDemo() {
   animating = true; syncBtn();
   const ball = anim.launch.ball;
   const start = new THREE.Vector3();
-  anim.turret.getWorldPosition(start); start.y = 11.9;
+  anim.turret.getWorldPosition(start); start.y = 12.2;
   const target = fieldOn ? refs.upCellBlue.clone().add(new THREE.Vector3(0, 3.4, 0))
                          : robot.localToWorld(new THREE.Vector3(0, 4, -30));
   // yaw turret toward target — the launcher exits local -Z (hood lip side)
@@ -511,8 +511,8 @@ function tick() {
     L.s2.position.y = 7.3 * liftT;
     const tip = THREE.MathUtils.smoothstep(liftT, 0.96, 1.0);
     L.cradle.rotation.x = -0.1 - tip * 1.15;
-    setRope(L.rope1, -7.0, 12.75, 7.05, -7.0, 3.3 + 7.3 * liftT, 7.05);
-    setRope(L.rope2, -7.0, 11.9 + 7.3 * liftT, 7.05, -7.0, 3.5 + 14.6 * liftT, 7.05);
+    setRope(L.rope1, -6.4, 12.66, 6.14, -6.38, 4.5 + 7.3 * liftT, 7.42);
+    setRope(L.rope2, -6.38, 11.89 + 7.3 * liftT, 7.42, -6.46, 4.8 + 14.6 * liftT, 6.73);
     const lb = L.ball;
     if (tip > 0.9 && L.ballState === 'cup') {
       const w = lb.getWorldPosition(new THREE.Vector3());
@@ -537,7 +537,7 @@ function tick() {
     }
     if (L.ballState === 'down' && liftTarget === 0 && liftT < 0.04) {
       L.cradle.add(lb);
-      lb.position.set(0.1, 1.08, 0);
+      lb.position.set(0.28, -1.5, -0.67);
       lb.visible = true;
       lb.userData.vy = 0;
       L.ballState = 'cup';
@@ -552,7 +552,7 @@ function tick() {
     if (gates.fly) for (const f of anim.fly) f.obj.rotation.y += f.speed * dt;
     if (!shot && !demo.active) anim.turret.rotation.y = Math.sin(t * 0.5) * 0.85;
     if (anim.agitator && gates.agit) anim.agitator.rotation.x += Math.sin(t * 3.1) * 2.4 * dt;
-    if (anim.hood) anim.hood.rotation.x = -0.9 + Math.sin(t * 0.8) * 0.12;
+    if (anim.hood) anim.hood.rotation.x = -0.26 + Math.sin(t * 0.8) * 0.1;
   }
 
   // hive bi-stable tilt runs unconditionally so a started tip always finishes,
