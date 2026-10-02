@@ -55,6 +55,13 @@ Y1 = "Parameters.lift_y1"   # 180 -> post R  y173..187, inner face 173
 # chute polyline (ball-path bed line -- S15/S16 ride +46.5 normals).
 # leg1 dives 32.6deg from the port so the D93 sphere clears the tower
 # slot top at the wall crossing; leg2 dives 31deg under the cup mouth.
+# NOTE: the +n*46.5 ball-center line is only the *ride* model -- valid
+# once the ball is on the bed (t>~0.35 on leg1). At the port end the
+# ball arrives on a straight ballistic transition from S12 (inside the
+# r<46.5 stack zone the declared centerline would occupy), settles onto
+# the bed by mid-leg, rides the bed to the leg-2 tip, and free-falls
+# ~40mm into the cradle mouth (the S15/S16 stations sample the ride
+# model; transit arcs are swept separately).
 CHUTE_PTS = ((-66.0, 56.0, 204.0), (-100.0, 150.0, 140.0),
              (-118.0, 178.0, 120.0))
 CHUTE_W = 97.0
@@ -872,7 +879,7 @@ def _chute(doc, ctx):
     # per-lip: the west leg-2 lip carries a single screw near its tip
     # (the whole mid-run sits inside the seat-ball sweep); the east
     # leg-2 lip carries three to keep the joint at 8 fasteners.
-    LIP_TS = ((0.5, 0.72), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
+    LIP_TS = ((0.5, 0.56), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate(LIP_TS[i]):
