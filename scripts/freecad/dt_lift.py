@@ -872,7 +872,7 @@ def _chute(doc, ctx):
     # per-lip: the west leg-2 lip carries a single screw near its tip
     # (the whole mid-run sits inside the seat-ball sweep); the east
     # leg-2 lip carries three to keep the joint at 8 fasteners.
-    LIP_TS = ((0.24, 0.39), (0.97,), (0.3, 0.7), (0.3, 0.52, 0.77))
+    LIP_TS = ((0.5, 0.72), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate(LIP_TS[i]):
@@ -891,7 +891,7 @@ def _chute(doc, ctx):
     # port ear: welded pad on the flange +Y face where the leg-1 west
     # lip exits the port mouth (x~-122 at y59); 2 bolts into the
     # flange ring annulus (r50..60)
-    ear = Part.makeBox(8, 6, 10, App.Vector(-124, 59, 190))
+    ear = Part.makeBox(8, 6, 10, App.Vector(-127.5, 59, 190))
     ear_o = _feat(doc, "CHUTE_PORT_EAR", "CHUTE_PORT_EAR_UNVERIFIED",
                   "UNVERIFIED - chute port mounting ear", ear)
     _s(ctx, ear_o)
@@ -901,7 +901,7 @@ def _chute(doc, ctx):
     for i, pz in enumerate(("193", "198")):
         bn = "BOLT_CHP_%d" % i
         _bolt(doc, ctx, bn,
-              {"Placement.Base.x": "-120.5",
+              {"Placement.Base.x": "-124",
                "Placement.Base.y": "67.4",
                "Placement.Base.z": pz},
               "-Y", "10")

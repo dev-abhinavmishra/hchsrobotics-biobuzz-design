@@ -3845,6 +3845,10 @@
    "HALL_SNSR"
   ],
   [
+   "WIRE_FLY_L",
+   "TURRET_PLATE"
+  ],
+  [
    "WIRE_FLY_R",
    "WIRE_CAM_USB"
   ],
@@ -4609,10 +4613,6 @@
   [
    "NUT_NBP_3",
    "WIRE_FLY_R"
-  ],
-  [
-   "WIRE_FLY_L",
-   "TURRET_PLATE"
   ],
   [
    "WIRE_FLY_R",
