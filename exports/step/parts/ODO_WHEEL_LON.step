@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
-FILE_NAME('Open CASCADE Shape Model','2026-09-30T03:00:18',('Author'),(
+FILE_NAME('Open CASCADE Shape Model','2026-10-02T02:50:33',('Author'),(
     ''),'Open CASCADE STEP processor 7.8','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;
@@ -70,8 +70,8 @@ DATA;
 #60 = CIRCLE('',#61,3.2);
 #61 = AXIS2_PLACEMENT_3D('',#62,#63,#64);
 #62 = CARTESIAN_POINT('',(-168.,0.,24.));
-#63 = DIRECTION('',(-1.,0.,2.2E-16));
-#64 = DIRECTION('',(-2.2E-16,0.,-1.));
+#63 = DIRECTION('',(-1.,-0.,-2.2E-16));
+#64 = DIRECTION('',(2.2E-16,0.,-1.));
 #65 = PLANE('',#66);
 #66 = AXIS2_PLACEMENT_3D('',#67,#68,#69);
 #67 = CARTESIAN_POINT('',(-168.,0.,24.));
@@ -90,8 +90,8 @@ DATA;
 #80 = CIRCLE('',#81,3.2);
 #81 = AXIS2_PLACEMENT_3D('',#82,#83,#84);
 #82 = CARTESIAN_POINT('',(-152.,0.,24.));
-#83 = DIRECTION('',(-1.,0.,2.2E-16));
-#84 = DIRECTION('',(-2.2E-16,0.,-1.));
+#83 = DIRECTION('',(-1.,-0.,-2.2E-16));
+#84 = DIRECTION('',(2.2E-16,0.,-1.));
 #85 = PLANE('',#86);
 #86 = AXIS2_PLACEMENT_3D('',#87,#88,#89);
 #87 = CARTESIAN_POINT('',(-152.,0.,24.));

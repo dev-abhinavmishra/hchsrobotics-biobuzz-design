@@ -51,7 +51,7 @@
   }
  ],
  "master_solids": 1089,
- "master_step_reimport": 1222,
+ "master_step_reimport": 1224,
  "files": [
   "AGIT_BRKT.step",
   "AGIT_HORN.step",
@@ -1160,5 +1160,5 @@
   "master_robot.step",
   "turret.step"
  ],
- "master_step_named": 1222
+ "master_step_named": 1224
 }

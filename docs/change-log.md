@@ -1,5 +1,50 @@
 # Change log - BIOBUZZ-Robot
 
+## 2026-10-01 - Design finish: ball-path relief + repo cleanup + CAD-team README
+
+Finish pass on `cloud/finish-design`, closing the open items from the
+independent eval (`docs/eval-sprint03-independent.md`, merged as PR #4)
+so the as-built model matches the verified ball corridor end to end.
+
+- **Launch-corridor wiring** — `WIRE_FLY_L`'s mid-plane crossing
+  rerouted: the old x -114 run sat ~1 mm inside the D93 sphere reach
+  (<=151 mm3 graze on the S13->S14 corridor) and a naive x -120 push
+  put it inside the nip-backplate wall. Final route swings out behind
+  the backplate (x -134), drops outside the plate rim (x -154), rests
+  on the rim top edge (keeps the declared wire-on-plate contact), and
+  returns under-plate at z ~254; `WIRE_CAM_USB` waypoints moved
+  outboard of the corridor and back inside the cheek-R face. Corridor
+  sweep now reports zero sphere contacts and no undeclared overlaps.
+- **Port-transition fasteners** — `CHUTE_PORT_EAR` + `BOLT_CHP_*`
+  shifted 3.5 mm outboard and leg-1 lip screw stations re-spaced to
+  clear both the S12->S15 transition and the S17 cradle-park sphere
+  (`LIP_TS` leg-1 0.5/0.72 -> 0.35/0.45, leg-1R 0.3/0.7 -> 0.5/0.8).
+  The straight S12->S15 transit now clears everything except a ~0.5 mm
+  brush on the `PORT_FLANGE` sill edge, which is a designed ride
+  surface (the ball exits over the sill).
+- **Ride model documented** — `CHUTE_PTS + n*46.5` is the *ride*
+  model: the ball enters leg-1 on a ballistic transition (the declared
+  centerline's first ~10 points sit inside the lazy-susan/ring stack —
+  a model artifact, since a physical sphere cannot occupy that space),
+  rides the bed, and free-falls ~40 mm off the leg-2 tip into the
+  cradle mouth. Densified sweep: launch corridor, bore descent, port
+  exit, both ride legs, and the drop are clear; residual contacts are
+  grazing brushes documented in the README (lip-tip screw, dyneema
+  line, port sill).
+- **Exports regenerated** — `export_step.py` and `make_drawings.py`
+  re-run so the committed STEP parts, subassemblies, bom/meta, and the
+  drawing manifest reflect the moved parts (580 sheets, 165 DXFs).
+- **Repo cleanup** — removed ~100 build-lane scratch files from the
+  repo root (`_probe_*.py`, `_verify*`, `_b_*.log`, gate-diff dumps,
+  `_gold/` snapshots), the superseded `selfcheck_sprint0*_results.txt`
+  transcripts, and tracked `logs/*.txt` (transient build logs; `logs/`
+  now gitignored — matches the CI exclude convention). Stale
+  `package.json` description updated.
+- **README** — new "For the CAD team (SolidWorks)" section: STEP import
+  guidance, drawings/DXF/BOM locations, the 245-UNVERIFIED /
+  24-VENDOR-PENDING measurement checklist, and the documented
+  ride-contact notes.
+
 ## 2026-10-01 - Sprint-04: viewer synced to as-built CAD, drawing pipeline + CI merged
 
 Sprint-04 (`cloud/sprint-04`): the Three.js viewer now mirrors the built

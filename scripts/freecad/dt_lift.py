@@ -879,7 +879,7 @@ def _chute(doc, ctx):
     # per-lip: the west leg-2 lip carries a single screw near its tip
     # (the whole mid-run sits inside the seat-ball sweep); the east
     # leg-2 lip carries three to keep the joint at 8 fasteners.
-    LIP_TS = ((0.5, 0.56), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
+    LIP_TS = ((0.35, 0.45), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate(LIP_TS[i]):

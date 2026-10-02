@@ -28,11 +28,18 @@ _m_log.txt
 
 _*log.txt
 
+# sprint scratch (probe/patch scripts live in eval lanes, not on main)
+/_*
+
+# transient build/gate logs
+/logs/
 
 exports/selfcheck_overhaul01.txt
 
 
 exports/selfcheck_overhaul02.txt
+
+exports/selfcheck_overhaul03.txt
 
 # generated drawing outputs — regenerated per run; only sample/ is committed
 exports/drawings/*
