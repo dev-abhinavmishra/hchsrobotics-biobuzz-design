@@ -38,8 +38,8 @@ export function createMatchDemo(ctx) {
   function mouthWorld() { return robot.localToWorld(V(0, 2.2, -8.4)); }
   function nipWorld() {
     const yawW = robot.rotation.y + anim.turret.rotation.y;
-    return robot.localToWorld(V(0, 11.9, 2.6))
-      .addScaledVector(V(-Math.sin(yawW), 0, -Math.cos(yawW)), 2.3);
+    return robot.localToWorld(V(0, 12.3, 2.6))
+      .addScaledVector(V(-Math.sin(yawW), 0, -Math.cos(yawW)), 2.6);
   }
   function aimAt(target) {
     const start = nipWorld();
@@ -223,9 +223,9 @@ export function createMatchDemo(ctx) {
       cam: fixed(46, 25, -42, 63, 21.5, -62),
       enter() {
         // ball diverts out the column port, down the load chute, into the cradle
-        const port = robot.localToWorld(V(-1.9, 9.3, 3.5));
-        const mid = robot.localToWorld(V(-4.5, 8.2, 4.5));
-        const cup = anim.lift.cradle.localToWorld(V(0.1, 1.2, 0));
+        const port = robot.localToWorld(V(-2.5, 8.0, 2.9));
+        const mid = robot.localToWorld(V(-4.6, 6.9, 3.8));
+        const cup = anim.lift.cradle.localToWorld(V(0.28, -1.2, -0.67));
         const nb = P.ball(1.8, M.nectarBlue);
         nb.position.copy(port); scene.add(nb);
         anim.lift.ball.visible = false;
@@ -382,7 +382,7 @@ export function createMatchDemo(ctx) {
       const r = rising[i];
       r.t += dt / 0.62;
       const k = Math.min(1, r.t);
-      r.ball.position.set(0, 5.0 + ease(k) * 5.9, 2.6);
+      r.ball.position.set(0, 5.0 + ease(k) * 7.0, 2.6);
       if (k >= 1) {
         scene.attach(r.ball);
         fly(r.ball, nipWorld(), r.target, r.dur, r.arcUp, r.landIn);

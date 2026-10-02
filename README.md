@@ -58,7 +58,7 @@ cinematic camera" to hand control back. Subsystem motion is gated per phase
 (intake spins only while collecting, flywheels only while shooting). Every
 scored ball stays in the cell. Click the button again to abort.
 
-Design intent: 17.5×17.5×13.3" — starts legal inside the 18" cube (R101); the
+Design intent: 17.5×17.5×14.9" — starts legal inside the 18" cube (R101); the
 deposit lift is the only expansion and tops out ~26", inside the R105 29"
 vertical cap with hard-stop collars (G416). Over/under intake → inclined
 hopper → feed column through the turret axis → dual-flywheel turret launcher
@@ -69,62 +69,75 @@ side port into the lift cradle, which deposits NECTAR into the ~4" mouth at
 
 ---
 
-FreeCAD CAD foundation for an FTC BIOBUZZ-season robot. This repository holds
-**placeholder packaging models only** — labeled volumes that reserve space for
-the drivebase, battery, electronics, wheels, mechanism concepts, and the
-game-rule envelopes. Nothing here is a finished mechanism; every assumed
-dimension is marked `UNVERIFIED` (or `VENDOR-PENDING` for goBILDA-catalog
-values) in the model and in `docs/robot-parameters.md` until it is measured
-or cited against the BIOBUZZ Competition Manual (TU01).
+FreeCAD CAD foundation for an FTC BIOBUZZ-season robot. The CAD is fully
+parametric: `scripts/freecad/build_<subsystem>.py` regenerate every
+`cad/*.FCStd` document from the shared `Parameters` spreadsheet +
+`partkit`/`dt_*` helpers, and `scripts/freecad/selfcheck_overhaul0{1,2,3}.py`
+are the regression gates (45 + 61 + 73 checks — all green on main).
+Geometry is as-built: ~1090 exportable solids across six subsystem docs plus
+the integrated `master_robot.FCStd`, with full fastener detail. Every
+dimension carries a status label — `VERIFIED` (manual-cited),
+`VENDOR-PENDING` (goBILDA catalog, awaiting datasheet), or `UNVERIFIED`
+(assumed) — see `docs/robot-parameters.md`.
 
 ## Layout
 
 ```
 cad\                  master_robot.FCStd (styled view baked in) +
-                      master_robot_view.FCStd (styled copy) +
-                      per-subsystem folders
+                      master_robot_view.FCStd (styled copy)
+cad\drivebase\        drivebase.FCStd     cad\intake\    intake.FCStd
+cad\electronics\      electronics.FCStd   cad\hopper\    hopper.FCStd
+cad\turret\           turret.FCStd        cad\lift\      lift.FCStd
 cad\archive\          timestamped backups (auto-created before overwrites)
-cad\drivebase\        drivebase_concept_v01.FCStd
-cad\intake\           intake_concept_v01.FCStd
-cad\transfer\         transfer_concept_v01.FCStd
-cad\scoring\          shooter_concept_v01.FCStd
-cad\endgame\          lifter_concept_v01.FCStd
-cad\electronics\      electronics_concept_v01.FCStd
-scripts\freecad\      parametric build scripts (run with freecadcmd.exe)
-scripts\validation\   freecadcmd probe / checks
+scripts\freecad\      build_*.py builders, selfcheck_overhaul*.py gates,
+                      partkit/dt_* helpers, export/drawing/render tools
+scripts\validation\   ci_selfcheck.sh + probes
 docs\                 project documentation (see index below)
-exports\              renders + prototype exports (PROTOTYPE-labeled)
+exports\              STEP parts/subassemblies, bom.csv, mount_graph.json,
+                      meta/, renders/, drawings/ (see exports/README.md)
+viewer\               self-contained Three.js design-review app
 .devin\               agent instructions and generator state
+.github\workflows\    cad-verify.yml — rebuild + gates on every push to main
 ```
 
 ## Quickstart
 
-```bat
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_master_robot.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_drivebase_concept.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_intake_concept.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_transfer_concept.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_shooter_concept.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_lifter_concept.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\build_electronics_concept.py
+Requires FreeCAD **1.1.3** (`freecadcmd` on PATH — AppImage extract or apt;
+gate signatures are version-sensitive, other 1.1.x builds may differ):
+
+```bash
+freecadcmd scripts/freecad/build_drivebase.py
+freecadcmd scripts/freecad/build_electronics.py
+freecadcmd scripts/freecad/build_intake.py
+freecadcmd scripts/freecad/build_hopper.py
+freecadcmd scripts/freecad/build_turret.py
+freecadcmd scripts/freecad/build_lift.py
+freecadcmd scripts/freecad/build_master_robot.py   # integrated assembly
 ```
 
 Exports + previews (regenerate after rebuilding):
 
-```bat
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\export_prototypes.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\render_views.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\render_png.py
-"C:\Program Files\FreeCAD 1.1\bin\freecadcmd.exe" scripts\freecad\make_view_copy.py
+```bash
+freecadcmd scripts/freecad/export_step.py      # STEP parts/subassemblies + bom/meta
+freecadcmd scripts/freecad/render_png.py       # exports/renders/*.png
+freecadcmd scripts/freecad/make_view_copy.py   # restyle master_robot_view.FCStd
+freecadcmd scripts/freecad/make_drawings.py    # exports/drawings/: A4 PDF+SVG
+                                               # sheets + plate DXFs + manifest
 ```
 
-These write `exports\prototype_stl\master_robot_PROTOTYPE.stl`,
-`exports\prototype_step\master_robot_PROTOTYPE.step`,
-`exports\renders\master_{front,side,top,iso}.svg` (shaded per-subsystem
-fills + visible-edge overlay; iso is orthographic az 45° / el 35.264°),
-`exports\renders\master_{front,side,top,iso}.png` (z-buffered shaded
-rasters, same views), and `exports\MANIFEST.md` — all labeled
-`PROTOTYPE / VERIFY BEFORE MANUFACTURING`.
+Regression gates (must stay green — these are the repo's contract):
+
+```bash
+bash scripts/validation/ci_selfcheck.sh   # all selfcheck_overhaul* gates,
+                                          # or run each directly:
+freecadcmd scripts/freecad/selfcheck_overhaul01.py   # 45 gates
+freecadcmd scripts/freecad/selfcheck_overhaul02.py   # 61 gates
+freecadcmd scripts/freecad/selfcheck_overhaul03.py   # 73 gates
+```
+
+The `.github/workflows/cad-verify.yml` workflow runs the same build +
+gates on every push to `main` (cached FreeCAD 1.1.3 install) and uploads
+selfcheck output + `exports/` as artifacts.
 
 Viewing in the FreeCAD GUI: just open `cad\master_robot.FCStd` (or the
 identical `cad\master_robot_view.FCStd`). The file carries baked-in view
@@ -133,10 +146,6 @@ hidden, subsystem solids are colored, and the camera opens on a fitted
 isometric. Re-run `make_view_copy.py` after any rebuild to restore that
 styling; `view_robot.py` does the same for a live session (Macro ->
 Macros -> Run).
-
-The scripts only read the FCStd files; every model's
-sha256 is unchanged by export runs. `scripts\freecad\selfcheck_sprint06.py`
-re-runs the current geometry gate (superset of the sprint-04 checks).
 
 All scripts are idempotent and resolve paths relative to their own location.
 See `docs/setup.md` for details and `docs/coordinate-system.md` for the axis
@@ -157,8 +166,9 @@ convention used by every model.
 
 ## Honesty notice
 
-All geometry in this repository is a placeholder. `VERIFIED` values are cited
-to a Competition Manual rule/section; goBILDA-catalog values are
-`VENDOR-PENDING` pending datasheet/purchase; everything else is an assumption
-labeled `UNVERIFIED`. Nothing here has been checked for legality, fit, or
-function by a human reviewer yet.
+`VERIFIED` values are cited to a Competition Manual rule/section;
+goBILDA-catalog values are `VENDOR-PENDING` pending datasheet/purchase;
+everything else is an assumption labeled `UNVERIFIED`. The selfcheck gates
+verify parametric integrity, mounting/declared-contact consistency,
+envelope fit, and rebuild determinism — but nothing here has been checked
+for legality, fit, or function by a human reviewer yet.

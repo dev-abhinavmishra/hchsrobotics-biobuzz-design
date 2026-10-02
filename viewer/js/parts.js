@@ -418,8 +418,9 @@ export function lazySusan(r = 2.6) {
   return g;
 }
 
-// ring gear: teeth on outer edge — axis Y
-export function ringGear(r = 2.9, teeth = 72, t = 0.3) {
+// ring gear: teeth on outer edge — axis Y. holeR overrides the bore radius
+// (must clear the feed column OD for the BIOBUZZ turret stack).
+export function ringGear(r = 2.9, teeth = 72, t = 0.3, holeR = r - 0.45) {
   const s = new THREE.Shape();
   const outer = r + 0.11, root = r - 0.08;
   for (let i = 0; i < teeth; i++) {
@@ -431,7 +432,7 @@ export function ringGear(r = 2.9, teeth = 72, t = 0.3) {
     s.lineTo(Math.cos(a3) * outer, Math.sin(a3) * outer);
     s.lineTo(Math.cos((i + 1) / teeth * Math.PI * 2) * root, Math.sin((i + 1) / teeth * Math.PI * 2) * root);
   }
-  const hole = new THREE.Path(); hole.absarc(0, 0, r - 0.45, 0, Math.PI * 2, true); s.holes.push(hole);
+  const hole = new THREE.Path(); hole.absarc(0, 0, holeR, 0, Math.PI * 2, true); s.holes.push(hole);
   const geo = new THREE.ExtrudeGeometry(s, { depth: t, bevelEnabled: false });
   geo.rotateX(-Math.PI / 2);
   return G(geo, M.accent);
