@@ -9526,6 +9526,11 @@
    "type": "contact"
   },
   {
+   "a": "WIRE_FLY_L",
+   "b": "TURRET_PLATE",
+   "type": "contact"
+  },
+  {
    "a": "WIRE_FLY_R",
    "b": "WIRE_CAM_USB",
    "type": "contact"

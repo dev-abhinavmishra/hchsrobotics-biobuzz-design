@@ -1338,11 +1338,17 @@ def _turret_wires(doc, ctx):
     """Baked service loops (N2): motor/servo/camera leads drop through
     the plate wire-pass bore into the r55..80 annular gap, then arc
     under the pinion plane (z<256.9) back toward the column face.
-    Nothing enters r<55; nothing rises above z~255.8 inside r<87."""
+    Nothing enters r<55; nothing rises above z~255.8 inside r<87.
+    WIRE_FLY_L additionally clears the D93 launch corridor: it swings
+    out behind the nip backplate (x<-131) across the mid-plane, rests
+    on the plate rim (declared _cn contact), and returns under-plate
+    at z~254. WIRE_CAM_USB stays east of the backplate and inside the
+    cheek-R face."""
     wl = _wire(doc, ctx, "WIRE_FLY_L", [
         (-80, 103, 302), (-82, 82, 294), (-88, 62, 276),
-        (-112, 58.5, 272), (-114, 20, 272), (-114, -48, 272),
-        (-114, -48, 255), (-105, -60, 254), (-96, -66, 253)],
+        (-112, 58.5, 272), (-134, 56, 272), (-134, -48, 272),
+        (-136, -48, 268.4), (-154, -48, 268.4), (-154, -48, 254),
+        (-105, -60, 254), (-96, -66, 253)],
         dia="2.5")
     _em(ctx, wl.Name, "FLY_MOTOR_L")
     _cn(ctx, wl.Name, "TURRET_PLATE")
@@ -1361,8 +1367,8 @@ def _turret_wires(doc, ctx):
     _em(ctx, wsv.Name, "HOOD_SERVO")
     _cn(ctx, wsv.Name, "TURRET_PLATE")
     wc = _wire(doc, ctx, "WIRE_CAM_USB", [
-        (-8, 0, 288), (-30, -30, 278), (-46, -40, 272),
-        (-50, -58, 272), (-113, -60.5, 272), (-114, -49, 272),
+        (-8, 0, 288), (-34, -38, 278), (-52, -48, 272),
+        (-52, -58, 272), (-113, -60.5, 272), (-114, -49, 272),
         (-114, -49, 255), (-104, -60, 254), (-98, -66, 253)],
         dia="3")
     _em(ctx, wc.Name, "VSN_CAM")

@@ -314,7 +314,7 @@ Check the as-built shaft tip and nut height before competition.
 | hood_piv_d | 8.0 | mm | UNVERIFIED | hood pivot axle dia |
 | cam_x | -8.0 | mm | UNVERIFIED | vision camera station on the plate rim |
 | cam_z | 286.0 | mm | UNVERIFIED | camera body height |
-| magnet_r | 78.7 | mm | UNVERIFIED | yaw index magnet radius on plate rim |
+| magnet_r | 78.7 | mm | UNVERIFIED | yaw index magnet radius on plate rim — magnet + hall sensor measure r78.735 from the turret axis |
 | lift_x | -185.4 | mm | UNVERIFIED | mast center station on the left rail |
 | lift_y0 | 144.0 | mm | UNVERIFIED | inner guide rail offset (corrected onto rail flange) |
 | lift_y1 | 180.0 | mm | UNVERIFIED | outer guide rail offset |

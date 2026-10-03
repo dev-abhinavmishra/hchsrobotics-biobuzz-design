@@ -1,9 +1,92 @@
 # BIOBUZZ-Robot
 
-## Interactive 3D design review (new)
+FTC BIOBUZZ-season robot CAD. Fully parametric FreeCAD model — Python
+builders regenerate every `cad/*.FCStd` document from a shared
+`Parameters` spreadsheet, and three selfcheck gate suites are the repo's
+regression contract (all green on main). ~1,090 exportable solids across
+six subsystem docs plus the integrated `master_robot.FCStd`, with full
+fastener detail.
 
-`viewer/` is a self-contained Three.js design-review app for the full competition
-robot concept — no CAD software needed:
+## For the CAD team (SolidWorks)
+
+**You don't need FreeCAD.** Everything manufacturable is pre-exported to
+STEP — the FCStd files are the editable sources only if you want to
+change the design itself.
+
+### What to open
+
+| You want | Use |
+|---|---|
+| The whole robot, assembled | `exports/step/master_robot.step` (one AP203 STEP, ~1,090 parts, each at its true position) |
+| One subsystem at a time | `exports/step/subassembly/{drivebase,intake,hopper,electronics,turret,lift}.step` |
+| A group of related parts | `exports/step/subassembly/GRP_*.step` (frame, pods, turret rotation, fasteners…) |
+| A single part | `exports/step/parts/<NAME>.step` — product names preserved (no anonymous Part__Feature) |
+| 2D drawings | `exports/drawings/` — one A4 sheet per unique part as PDF + SVG (TOP/FRONT/RIGHT views, overall dimensions, title block with material + qty), and `exports/drawings/dxf/` R12 flat profiles for the 165 plate parts (ready for waterjet/laser) |
+| Bill of materials | `exports/bom/bom.csv` — subsystem, description, material, spec, qty |
+| Renders | `exports/renders/*.png` — shaded orthographic previews per subsystem |
+
+### SolidWorks import notes
+
+1. `File → Open → master_robot.step`, import as **assembly** (not
+   multibody part). ~1,090 parts — give it a minute. For quicker work,
+   import a subsystem STEP instead and mate them yourself (they're in
+   world coordinates — parts land exactly where they sit in the master).
+2. Units are mm. Part names carry a status suffix (`_VERIFIED`,
+   `_VENDOR-PENDING`, `_UNVERIFIED`) — see the checklist below.
+3. Non-physical construction geometry (`TOOL_`, `VOL_`, `ENV_`, `REF_`,
+   `AXIS_` prefixes) is intentionally excluded from STEP — if you see it,
+   it came from an FCStd, not an export.
+
+### Before you cut metal: the verification checklist
+
+Every dimension carries a status label in `exports/parameters.csv`
+(and `docs/robot-parameters.md`): **3 VERIFIED** (manual-cited),
+**24 VENDOR-PENDING** (goBILDA catalog values awaiting datasheet), and
+**245 UNVERIFIED** (assumed). Nothing UNVERIFIED has been measured
+against physical hardware — the gates verify parametric integrity,
+mounting/declared-contact consistency, envelope fit, and rebuild
+determinism, **not** real-world fit.
+
+Measure/confirm before manufacturing, roughly in order of risk:
+
+- **Stock + hardware dims**: all sheet/plate thicknesses, extrusion
+  sizes, bearing bores — anything your parts physically mate to
+- **Vendor parts**: all `VENDOR-PENDING` goBILDA dims vs the actual
+  purchased parts (datasheet or calipers)
+- **Ball-path clearances**: column bore Ø99 vs your ball's true
+  diameter; chute width 97 mm; port window height
+- **Mesh/engagement**: 72T ring + 14T pinion at 72.8 mm center distance;
+  belt/chain center distances; lazy-susan race stack heights
+- **Mounts**: every fastener lands in a real declared bore (the gates
+  prove this geometrically) — but hole sizes/threads are UNVERIFIED
+- **Envelopes**: stowed 453.7×454.5×379.0 mm inside the 457.2 cube;
+  deployed lift tops 586.5 mm (inside the 609.6 reach / 736.5 height)
+
+### Known design-contact notes (intentional touches/brushes)
+
+- `PORT_FLANGE` sill: the ball rides over the port sill edge on the way
+  out (designed ride surface, ~0.5 mm brush).
+- `SCRW_CHL_1_0` (leg-2 lip tip) and `ROPE_DYNEEMA` (lift line): the
+  ball brushes these ~2–5 mm on the cradle drop — acceptable grazing
+  contact for hand-loaded parts; move the rope guide ~8 mm west if it
+  ever deflects a ball in testing.
+- `CHUTE_PTS + n·46.5` is the *ride* model only — the ball enters leg 1
+  on a ballistic transition, rides the bed, and free-falls ~40 mm into
+  the cradle mouth (see `dt_lift.py` comments).
+
+### Change the design?
+
+See "Quickstart" below — edit `scripts/freecad/robot_params.py` or the
+`dt_*.py` builders, rebuild the affected doc, re-run the gates, then
+re-export (`export_step.py`) and re-draw (`make_drawings.py`). The CI
+workflow runs all of it on every push to `main`.
+
+---
+
+## Interactive 3D design review
+
+`viewer/` is a self-contained Three.js design-review app for the full
+competition robot concept — no CAD software needed:
 
 ```bat
 cd viewer
@@ -69,17 +152,6 @@ side port into the lift cradle, which deposits NECTAR into the ~4" mouth at
 
 ---
 
-FreeCAD CAD foundation for an FTC BIOBUZZ-season robot. The CAD is fully
-parametric: `scripts/freecad/build_<subsystem>.py` regenerate every
-`cad/*.FCStd` document from the shared `Parameters` spreadsheet +
-`partkit`/`dt_*` helpers, and `scripts/freecad/selfcheck_overhaul0{1,2,3}.py`
-are the regression gates (45 + 61 + 73 checks — all green on main).
-Geometry is as-built: ~1090 exportable solids across six subsystem docs plus
-the integrated `master_robot.FCStd`, with full fastener detail. Every
-dimension carries a status label — `VERIFIED` (manual-cited),
-`VENDOR-PENDING` (goBILDA catalog, awaiting datasheet), or `UNVERIFIED`
-(assumed) — see `docs/robot-parameters.md`.
-
 ## Layout
 
 ```
@@ -91,6 +163,7 @@ cad\turret\           turret.FCStd        cad\lift\      lift.FCStd
 cad\archive\          timestamped backups (auto-created before overwrites)
 scripts\freecad\      build_*.py builders, selfcheck_overhaul*.py gates,
                       partkit/dt_* helpers, export/drawing/render tools
+scripts\freecad\legacy\  superseded pre-overhaul concept scripts
 scripts\validation\   ci_selfcheck.sh + probes
 docs\                 project documentation (see index below)
 exports\              STEP parts/subassemblies, bom.csv, mount_graph.json,
@@ -162,6 +235,8 @@ convention used by every model.
 - `docs/design-decisions.md` — why things are built the way they are
 - `docs/open-questions.md` — unresolved questions
 - `docs/change-log.md` — build history
+- `docs/eval-sprint03-independent.md` — independent adversarial eval of the
+  gates + probes (ball-path findings, since fixed)
 - `docs/initial-autonomous-build-report.md` — what the autonomous build produced
 
 ## Honesty notice
@@ -170,5 +245,5 @@ convention used by every model.
 goBILDA-catalog values are `VENDOR-PENDING` pending datasheet/purchase;
 everything else is an assumption labeled `UNVERIFIED`. The selfcheck gates
 verify parametric integrity, mounting/declared-contact consistency,
-envelope fit, and rebuild determinism — but nothing here has been checked
-for legality, fit, or function by a human reviewer yet.
+envelope fit, and rebuild determinism — the UNVERIFIED checklist above is
+what still needs a human + physical hardware.

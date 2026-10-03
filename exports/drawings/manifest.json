@@ -9107,7 +9107,7 @@
    "status": "UNVERIFIED - wire run",
    "plate": false,
    "bbox_mm": [
-    36.5,
+    76.5,
     170.5,
     51.41
    ],
@@ -9170,9 +9170,9 @@
    "status": "UNVERIFIED - wire run",
    "plate": false,
    "bbox_mm": [
-    108.73,
-    68.01,
-    37.94
+    108.75,
+    67.95,
+    37.96
    ],
    "scale": 0.5,
    "sheet_svg": "exports/drawings/turret_WIRE_CAM_USB.svg",
@@ -13897,7 +13897,7 @@
    "status": "UNVERIFIED - wire run",
    "plate": false,
    "bbox_mm": [
-    36.5,
+    76.5,
     170.5,
     51.41
    ],
@@ -13960,9 +13960,9 @@
    "status": "UNVERIFIED - wire run",
    "plate": false,
    "bbox_mm": [
-    108.73,
-    68.01,
-    37.94
+    108.75,
+    67.95,
+    37.96
    ],
    "scale": 0.5,
    "sheet_svg": "exports/drawings/master_robot_WIRE_CAM_USB.svg",

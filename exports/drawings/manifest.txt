@@ -347,10 +347,10 @@ turret | VSN_CAM                      qty=1   plate=False 28.0x28.0x14.0 -> turr
 turret | SCRW_CAM_0                   qty=2   plate=False 5.5x5.5x18.0 -> turret_SCRW_CAM_0.svg
 turret | CAM_LED                      qty=1   plate=False 6.0x4.0x2.0 -> turret_CAM_LED.svg
 turret | YAW_MAGNET                   qty=1   plate=False 6.0x6.0x13.5 -> turret_YAW_MAGNET.svg
-turret | WIRE_FLY_L                   qty=1   plate=False 36.5x170.5x51.4 -> turret_WIRE_FLY_L.svg
+turret | WIRE_FLY_L                   qty=1   plate=False 76.5x170.5x51.4 -> turret_WIRE_FLY_L.svg
 turret | WIRE_FLY_R                   qty=1   plate=False 38.5x75.5x51.4 -> turret_WIRE_FLY_R.svg
 turret | WIRE_HOOD_SV                 qty=1   plate=False 33.0x49.0x78.5 -> turret_WIRE_HOOD_SV.svg
-turret | WIRE_CAM_USB                 qty=1   plate=False 108.7x68.0x37.9 -> turret_WIRE_CAM_USB.svg
+turret | WIRE_CAM_USB                 qty=1   plate=False 108.8x68.0x38.0 -> turret_WIRE_CAM_USB.svg
 master_robot | FRAME_RAIL_L                 qty=1   plate=False 444.5x48.0x48.0 -> master_robot_FRAME_RAIL_L.svg
 master_robot | FRAME_RAIL_R                 qty=1   plate=False 444.5x48.0x48.0 -> master_robot_FRAME_RAIL_R.svg
 master_robot | FRAME_CROSS_B                qty=2   plate=False 48.0x272.0x48.0 -> master_robot_FRAME_CROSS_B.svg
@@ -535,10 +535,10 @@ master_robot | VSN_CAM                      qty=1   plate=False 28.0x28.0x14.0 -
 master_robot | SCRW_CAM_0                   qty=14  plate=False 5.5x5.5x18.0 -> master_robot_SCRW_CAM_0.svg
 master_robot | CAM_LED                      qty=1   plate=False 6.0x4.0x2.0 -> master_robot_CAM_LED.svg
 master_robot | YAW_MAGNET                   qty=1   plate=False 6.0x6.0x13.5 -> master_robot_YAW_MAGNET.svg
-master_robot | WIRE_FLY_L                   qty=1   plate=False 36.5x170.5x51.4 -> master_robot_WIRE_FLY_L.svg
+master_robot | WIRE_FLY_L                   qty=1   plate=False 76.5x170.5x51.4 -> master_robot_WIRE_FLY_L.svg
 master_robot | WIRE_FLY_R                   qty=1   plate=False 38.5x75.5x51.4 -> master_robot_WIRE_FLY_R.svg
 master_robot | WIRE_HOOD_SV                 qty=1   plate=False 33.0x49.0x78.5 -> master_robot_WIRE_HOOD_SV.svg
-master_robot | WIRE_CAM_USB                 qty=1   plate=False 108.7x68.0x37.9 -> master_robot_WIRE_CAM_USB.svg
+master_robot | WIRE_CAM_USB                 qty=1   plate=False 108.8x68.0x38.0 -> master_robot_WIRE_CAM_USB.svg
 master_robot | LIFT_BASE                    qty=1   plate=True  51.0x48.0x3.0 -> master_robot_LIFT_BASE.svg
 master_robot | LIFT_RAIL_L                  qty=1   plate=False 14.0x14.0x269.0 -> master_robot_LIFT_RAIL_L.svg
 master_robot | LIFT_FOOT_L                  qty=1   plate=True  14.4x14.0x3.0 -> master_robot_LIFT_FOOT_L.svg

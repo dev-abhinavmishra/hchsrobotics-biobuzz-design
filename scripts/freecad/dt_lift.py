@@ -55,6 +55,13 @@ Y1 = "Parameters.lift_y1"   # 180 -> post R  y173..187, inner face 173
 # chute polyline (ball-path bed line -- S15/S16 ride +46.5 normals).
 # leg1 dives 32.6deg from the port so the D93 sphere clears the tower
 # slot top at the wall crossing; leg2 dives 31deg under the cup mouth.
+# NOTE: the +n*46.5 ball-center line is only the *ride* model -- valid
+# once the ball is on the bed (t>~0.35 on leg1). At the port end the
+# ball arrives on a straight ballistic transition from S12 (inside the
+# r<46.5 stack zone the declared centerline would occupy), settles onto
+# the bed by mid-leg, rides the bed to the leg-2 tip, and free-falls
+# ~40mm into the cradle mouth (the S15/S16 stations sample the ride
+# model; transit arcs are swept separately).
 CHUTE_PTS = ((-66.0, 56.0, 204.0), (-100.0, 150.0, 140.0),
              (-118.0, 178.0, 120.0))
 CHUTE_W = 97.0
@@ -872,7 +879,7 @@ def _chute(doc, ctx):
     # per-lip: the west leg-2 lip carries a single screw near its tip
     # (the whole mid-run sits inside the seat-ball sweep); the east
     # leg-2 lip carries three to keep the joint at 8 fasteners.
-    LIP_TS = ((0.24, 0.39), (0.97,), (0.3, 0.7), (0.3, 0.52, 0.77))
+    LIP_TS = ((0.35, 0.45), (0.97,), (0.5, 0.8), (0.3, 0.52, 0.77))
     lip_bolts = []
     for i, (lo, p_s, d_, w_, n_, L_) in enumerate(lip_objs):
         for j, t in enumerate(LIP_TS[i]):
@@ -891,7 +898,7 @@ def _chute(doc, ctx):
     # port ear: welded pad on the flange +Y face where the leg-1 west
     # lip exits the port mouth (x~-122 at y59); 2 bolts into the
     # flange ring annulus (r50..60)
-    ear = Part.makeBox(8, 6, 10, App.Vector(-124, 59, 190))
+    ear = Part.makeBox(8, 6, 10, App.Vector(-127.5, 59, 190))
     ear_o = _feat(doc, "CHUTE_PORT_EAR", "CHUTE_PORT_EAR_UNVERIFIED",
                   "UNVERIFIED - chute port mounting ear", ear)
     _s(ctx, ear_o)
@@ -901,7 +908,7 @@ def _chute(doc, ctx):
     for i, pz in enumerate(("193", "198")):
         bn = "BOLT_CHP_%d" % i
         _bolt(doc, ctx, bn,
-              {"Placement.Base.x": "-120.5",
+              {"Placement.Base.x": "-124",
                "Placement.Base.y": "67.4",
                "Placement.Base.z": pz},
               "-Y", "10")

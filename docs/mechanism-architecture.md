@@ -232,8 +232,8 @@ contract's C1 clause.
 Static stack on the sprint-01 deck panels: `TOWER_L/R` 3 mm polycarb
 risers (y ±130.8, z 86.8→244) with `TOWER_GUS_*` braces →
 `TURRET_DECK` (4 mm, z244–248, Ø114 bore on the turret axis
-x −66 y 0) → `LAZY_SUSAN_LO`/`HI` split races (z248–256.5, declared
-race-pair contact is the real load path) → `RING_GEAR` (72T, PD
+x −66 y 0) → `LAZY_SUSAN_LO`/`HI` split races (z248–256.5 split at
+z252.25, declared race-pair contact is the real load path) → `RING_GEAR` (72T, PD
 121.9, external teeth, z256.5–263) → `TURRET_PLATE` (Ø170 × 4,
 z263–267, Ø114 bore + scallops) carrying the rotating launcher stack
 (`GRP_TURRET_ROT`).
@@ -241,12 +241,16 @@ z263–267, Ø114 bore + scallops) carrying the rotating launcher stack
 Yaw drive: `YAW_SERVO` under the deck at (−66,−72.8) on `YAW_TRAY`,
 `YAW_SHAFT` through the deck bore to `YAW_PINION` (14T, PD 23.7) —
 external mesh at the pinned 72.8 mm center distance (internal mesh
-rejected: the feed column occupies the inner radius). `HALL_SNSR` on
-the deck rim + `YAW_MAGNET` in the plate rim index the rotation.
+rejected: the feed column occupies the inner radius). The pinion's
+outer tip sweeps r58.9–86.7 about the turret axis, clearing the
+column's Ø110 circle entirely. `HALL_SNSR` on the deck rim +
+`YAW_MAGNET` in the plate rim index the rotation — both solids sit
+at r78.74 from the axis.
 
 ## Launcher — dual counter-rotating Ø88.9 flywheels
 
-`LAUNCH_CHEEK_L/R` at y ±66.5 carry `FLYWHEEL_L/R` (Ø88.9 compliant,
+`LAUNCH_CHEEK_L/R` at y ±66.5 (rotating-stack top z~379) carry
+`FLYWHEEL_L/R` (Ø88.9 compliant,
 face gap 73.7 → ~19% NECTAR compression) on `FLY_SHAFT_*` +
 `FLY_BRG_*` bearings, driven by `FLY_MOTOR_L/R` 5203-class cans
 (journal chain: motor stub → shaft → cheek bearing → hub clamp).
@@ -276,13 +280,14 @@ stage-1 dead-end → traveling `LIFT_PULLEY` (2× rate) → stage-2 tie
 run. `CRADLE_ARM` cantilevers `CRADLE_CUP` (Ø110 shell, Ø99 bore,
 `CRADLE_FOAM` liner) on `CRADLE_PIV`; `TILT_SERVO` tips ~65° at full
 extension. Deployed probes `VOL_S1_DEP`/`VOL_S2_DEP`/`VOL_CRADLE_DEP`
-sit inside the R105 envelope (609.6 × 736.5).
+sit inside the R105 envelope (609.6 × 736.5; as-built deployed
+top 586.5).
 
 ## Load chute — diverter port → cradle bowl
 
 `LOAD_CHUTE` is a 97 mm-wide two-leg tray centered on the pinned path
-(−66,56,204) → (−96,115,168) → (−127,178,140) — leg-1 28.5°, leg-2
-~20.3° (both ≥ 20°). `CHUTE_LIP_*` side lips flank each leg. The
+(−66,56,204) → (−100,150,140) → (−118,178,120) — leg-1 32.6°, leg-2
+31.0° (both ≥ 20°). `CHUTE_LIP_*` side lips flank each leg. The
 socket tip sits inside the Ø100 port bore; `CHUTE_PORT_EAR` welds to
 the port-flange face beside the bore (2 bolts into the ring annulus)
 and the tray passes the `TOWER_L` slot on a `CHUTE_TOWER_PAD` strap
